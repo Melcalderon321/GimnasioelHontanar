@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestra Historia | Gimnasio El Hontanar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="tour-virtual.css">
+    <link rel="stylesheet" href="nuestra-historia.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="nav-pill">
+            <a href="index.html" class="logo">
+                <img src="assets/HONTANAR logo_ (3).png" alt="Hontanar Logo">
+            </a>
+            <div class="nav-right">
+                <span class="menu-text">MENÚ</span>
+                <div class="hamburger-circle">
+                    <div class="hamburger">
+                        <span></span><span></span><span></span>
+                    </div>
+                </div>
+                <a href="#" class="btn btn-yellow btn-nav">Contáctanos <span class="arrow">&gt;</span></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sidebar Menu -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+    <nav class="sidebar-menu" id="sidebar-menu">
+        <div class="sidebar-header">
+            <img src="assets/Capa_2_xA0_Imagen.png" alt="Logo" class="sidebar-logo">
+            <button class="close-btn" id="close-sidebar">&times;</button>
+        </div>
+        <ul class="sidebar-nav">
+            <li class="has-submenu">
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-down"></i></span>
+                    <a href="#">Admisiones</a>
+                </div>
+                <ul class="submenu">
+                    <li><a href="tour-virtual.html">Tour Virtual</a></li>
+                    <li><a href="preguntas-frecuentes.html">Preguntas Frecuentes</a></li>
+                    <li><a href="por-que-estudiar.html">¿Por qué estudiar en el Gimnasio El Hontanar?</a></li>
+                    <li><a href="proceso-de-ingreso.html">Proceso de ingreso al Gimnasio El Hontanar</a></li>
+                </ul>
+            </li>
+            <li class="has-submenu expanded">
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-down"></i></span>
+                    <a href="#">Somos Hontanar</a>
+                </div>
+                <ul class="submenu">
+                    <li><a href="modelo-de-ensenanza.html">Modelo de Enseñanza</a></li>
+                    <li><a href="nuestra-historia.html" class="active">Nuestra Historia</a></li>
+                    <li><a href="filosofia-y-valores.html">Filosofía y Valores</a></li>
+                    <li><a href="sello-hontanar.html">Sello Hontanar</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-right"></i></span>
+                    <a href="#">Cultura Internacional</a>
+                </div>
+            </li>
+            <li>
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-right"></i></span>
+                    <a href="#">Vida en el Campus</a>
+                </div>
+            </li>
+            <li>
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-right"></i></span>
+                    <a href="#">TecnoSer</a>
+                </div>
+            </li>
+            <li>
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-right"></i></span>
+                    <a href="#">Infraestructura</a>
+                </div>
+            </li>
+            <li>
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-right"></i></span>
+                    <a href="#">Oferta Académica</a>
+                </div>
+            </li>
+            <li>
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-right"></i></span>
+                    <a href="#">Contacto</a>
+                </div>
+            </li>
+        </ul>
+        <div class="sidebar-footer">
+            <a href="#" class="btn-sidebar btn-s-green"><span>⚲</span> VIRTUAL</a>
+            <a href="#" class="btn-sidebar btn-s-yellow"><span>⌨</span> ADMISIONES</a>
+        </div>
+    </nav>
+
+    <!-- Script for Sidebar -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.querySelector('.hamburger-circle');
+            const menuText = document.querySelector('.menu-text');
+            const sidebar = document.getElementById('sidebar-menu');
+            const overlay = document.getElementById('sidebar-overlay');
+            const closeBtn = document.getElementById('close-sidebar');
+
+            function toggleMenu() {
+                sidebar.classList.toggle('open');
+                overlay.classList.toggle('open');
+            }
+
+            if(hamburger) hamburger.addEventListener('click', toggleMenu);
+            if(menuText) menuText.addEventListener('click', toggleMenu);
+            if(closeBtn) closeBtn.addEventListener('click', toggleMenu);
+            if(overlay) overlay.addEventListener('click', toggleMenu);
+
+            // Collapsible submenus
+            const submenus = document.querySelectorAll('.has-submenu .menu-item');
+            submenus.forEach(item => {
+                item.addEventListener('click', (e) => {
+                    // Only toggle if clicked the dropdown arrow or the item container, keeping a href working
+                    if (e.target.tagName !== 'A') {
+                        e.preventDefault();
+                        item.parentElement.classList.toggle('expanded');
+                    }
+                });
+            });
+        });
+    </script>
+
+    <!-- Page Content Container -->
+    <main class="nuestra-historia-container">
+        <!-- Unified Breadcrumbs (Height matched across all subpages) -->
+        <div class="breadcrumbs">
+            <a href="index.html">Inicio</a> &gt; <a href="#">Somos Hontanar</a> &gt; <span class="current">Nuestra Historia</span>
+        </div>
+
+        <!-- Unified Header Title Section -->
+        <div class="tour-text-content" style="text-align: center;">
+            <h4 class="kicker">SOMOS HONTANAR</h4>
+            <h1 class="main-title">Nuestra <span>Historia</span></h1>
+        </div>
+
+        <!-- 1. MINIMALIST CORE SECTION (CLEAN DARK BLUE BACKGROUND WITH TEXT FADER) -->
+        <section class="history-minimalist-section">
+            <div class="history-minimalist-container">
+                
+                <!-- Floating circular image badges modeled after the screenshot (without yellow borders & floating organically!) -->
+                <div class="badge-float bf-left bf-1">
+                    <img src="assets/Grupo 4466.jpg" alt="Preescolar circular badge">
+                </div>
+                <div class="badge-float bf-left bf-2">
+                    <img src="assets/Grupo 4471.jpg" alt="Primaria circular badge">
+                </div>
+                <div class="badge-float bf-right bf-3">
+                    <img src="assets/Grupo 4467.jpg" alt="Secundaria circular badge">
+                </div>
+                <div class="badge-float bf-right bf-4">
+                    <img src="assets/Grupo 4469.jpg" alt="Media circular badge">
+                </div>
+
+                <div class="history-fader-wrapper scroll-reveal">
+                    <div class="history-fader-container" id="history-text-fader">
+                        
+                        <!-- Slide 1: Origen y Excelencia -->
+                        <div class="history-fader-slide active" data-slide="1">
+                            <h4 class="history-mini-kicker">COLEGIO PRIVADO BILINGÜE EN BOGOTÁ CON MÁS DE TRES DÉCADAS DE HISTORIA</h4>
+                            <h2 class="history-mini-title">Una historia inspirada en <br><span>educar para la vida</span></h2>
+                            <p class="history-mini-paragraph">El <strong>Gimnasio El Hontanar</strong> nació hace más de 30 años con un propósito claro: ser un lugar donde los niños y jóvenes pudieran crecer felices, seguros de sí mismos y preparados para transformar su entorno. Desde nuestra fundación, nos hemos consolidado como uno de los mejores colegios bilingües calendario A en Bogotá y Chía, destacando por un modelo educativo que une la excelencia académica con la formación humana.</p>
+                        </div>
+
+                        <!-- Slide 2: Trayectoria e IB -->
+                        <div class="history-fader-slide" data-slide="2">
+                            <h4 class="history-mini-kicker">COLEGIO PRIVADO BILINGÜE EN BOGOTÁ CON MÁS DE TRES DÉCADAS DE HISTORIA</h4>
+                            <h2 class="history-mini-title">Una trayectoria de <br><span>evolución constante</span></h2>
+                            <p class="history-mini-paragraph">Nuestra trayectoria está marcada por la <strong>evolución constante</strong>. Fuimos de los primeros colegios privados al norte de Bogotá en integrar metodologías activas y, hoy en día, somos un <strong>Colegio del Mundo del Bachillerato Internacional (IB)</strong>, ofreciendo el Programa del Diploma. A lo largo de estas tres décadas, hemos visto graduarse a generaciones de líderes comprometidos, ciudadanos globales y profesionales íntegros que llevan el sello Hontanar en cada proyecto que emprenden.</p>
+                        </div>
+
+                    </div>
+
+                    <!-- Fader Navigation Indicator Dots -->
+                    <div class="history-fader-dots">
+                        <span class="fader-dot active" data-slide="1"></span>
+                        <span class="fader-dot" data-slide="2"></span>
+                    </div>
+                </div>
+
+                <!-- BANNER CTA (EFECTO GLASS PREMIUM) -->
+                <div class="history-mini-banner scroll-reveal">
+                    <!-- Sparkle Stars matching the mockup -->
+                    <svg class="sparkle-star star-top-left" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 0L14.6 9.4L24 12L14.6 14.6L12 24L9.4 14.6L0 12L9.4 9.4L12 0Z" fill="#F9EF6C"/>
+                    </svg>
+                    <svg class="sparkle-star star-bottom-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 0L14.6 9.4L24 12L14.6 14.6L12 24L9.4 14.6L0 12L9.4 9.4L12 0Z" fill="#F9EF6C"/>
+                    </svg>
+
+                    <div class="banner-kicker">- GIMNASIO EL HONTANAR -</div>
+                    <h3 class="history-banner-heading">Conoce más sobre nuestra <span class="banner-pill">trayectoria</span> y súmate a nuestra comunidad escolar</h3>
+                    <div class="history-banner-btn-wrap">
+                        <a href="#" class="btn btn-yellow btn-large">Súmate a nuestra comunidad <span class="arrow">&gt;</span></a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 2. ANIMATED TIMELINE SECTION (PARALLAX & GLASS EFFECTS WITH BLUR BACKGROUND) -->
+        <section class="history-timeline-section">
+            <!-- Top Transition Curve to mask cut line -->
+            <div class="timeline-curve curve-top">
+                <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                    <path d="M0,120 Q720,0 1440,120 L1440,0 L0,0 Z" fill="var(--blue)"></path>
+                </svg>
+            </div>
+
+            <div class="timeline-container">
+                
+                <div class="timeline-header">
+                    <h4 class="kicker">NUESTRA TRAYECTORIA</h4>
+                    <h2 class="title">Hitos de <span>Excelencia</span></h2>
+                </div>
+
+                <div class="timeline-track-wrapper">
+                    <!-- Progress Line representing scroll depth -->
+                    <div class="timeline-progress-line"></div>
+
+                    <!-- Milestone 1 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content-wrapper">
+                            <div class="timeline-card">
+                                <div class="timeline-date">1995</div>
+                                <h3>Fundación y Origen</h3>
+                                <p>El Gimnasio El Hontanar nace con un propósito claro y poderoso: constituir un lugar donde los niños y jóvenes crezcan felices, seguros de sí mismos y preparados para transformar su entorno.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 2 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content-wrapper">
+                            <div class="timeline-card">
+                                <div class="timeline-date">2005</div>
+                                <h3>Innovación y Metodologías Activas</h3>
+                                <p>Consolidación como uno de los primeros colegios privados al norte de Bogotá en integrar metodologías activas en el aula, promoviendo el pensamiento crítico, la creatividad y la autonomía estudiantil.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 3 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content-wrapper">
+                            <div class="timeline-card">
+                                <div class="timeline-date">2015</div>
+                                <h3>Liderazgo y Proyección Regional</h3>
+                                <p>Consolidación de nuestra excelencia como uno de los mejores colegios bilingües calendario A en Bogotá y Chía, destacando por un modelo educativo que une la excelencia académica con la profunda formación humana.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 4 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content-wrapper">
+                            <div class="timeline-card">
+                                <div class="timeline-date">Actualidad</div>
+                                <h3>Certificación Internacional (IB)</h3>
+                                <p>Certificación como Colegio del Mundo del Bachillerato Internacional (IB) y despliegue del Programa del Diploma, graduando líderes íntegros y ciudadanos globales con sello Hontanar.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Bottom Transition Curve to mask cut line -->
+            <div class="timeline-curve curve-bottom">
+                <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                    <path d="M0,0 Q720,120 1440,0 L1440,120 L0,120 Z" fill="var(--blue)"></path>
+                </svg>
+            </div>
+        </section>
+    </main>
+
+    <!-- Auto text fader and scroll animation script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Scroll Reveal Observer
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            const revealElements = document.querySelectorAll('.scroll-reveal');
+            revealElements.forEach(el => revealObserver.observe(el));
+
+            // 2. Dynamic Text Fader Controller
+            const faderContainer = document.getElementById('history-text-fader');
+            const slides = document.querySelectorAll('.history-fader-slide');
+            const dots = document.querySelectorAll('.fader-dot');
+            let currentSlideIndex = 0;
+            let faderInterval;
+
+            function updateHeight() {
+                const activeSlide = slides[currentSlideIndex];
+                if (activeSlide && faderContainer) {
+                    faderContainer.style.height = activeSlide.offsetHeight + 'px';
+                }
+            }
+
+            function showSlide(index) {
+                slides.forEach(s => s.classList.remove('active'));
+                dots.forEach(d => d.classList.remove('active'));
+
+                currentSlideIndex = index;
+                slides[currentSlideIndex].classList.add('active');
+                dots[currentSlideIndex].classList.add('active');
+                
+                updateHeight();
+            }
+
+            function nextSlide() {
+                let nextIndex = (currentSlideIndex + 1) % slides.length;
+                showSlide(nextIndex);
+            }
+
+            // Start Auto Loop (every 7 seconds)
+            function startLoop() {
+                faderInterval = setInterval(nextSlide, 7000);
+            }
+
+            function resetLoop() {
+                clearInterval(faderInterval);
+                startLoop();
+            }
+
+            // Event Listeners for dots clicking
+            dots.forEach((dot, idx) => {
+                dot.addEventListener('click', () => {
+                    showSlide(idx);
+                    resetLoop();
+                });
+            });
+
+            // Initial Height Calculation and loop start
+            setTimeout(() => {
+                updateHeight();
+                // Add trigger class on section view to show floating bubbles organic entry
+                const section = document.querySelector('.history-minimalist-section');
+                if(section) section.classList.add('visible');
+            }, 300);
+
+            window.addEventListener('resize', updateHeight);
+            window.addEventListener('load', updateHeight);
+            startLoop();
+
+            // 3. Animated Timeline Controller (Progress and Item reveal)
+            const timelineItems = document.querySelectorAll('.timeline-item');
+            const progressLine = document.querySelector('.timeline-progress-line');
+            const timelineSection = document.querySelector('.history-timeline-section');
+            const timelineTrack = document.querySelector('.timeline-track-wrapper');
+
+            function handleTimelineScroll() {
+                if (!timelineSection || !progressLine || !timelineTrack) return;
+
+                const triggerPoint = window.innerHeight * 0.85;
+                const trackRect = timelineTrack.getBoundingClientRect();
+
+                // 1. Reveal items as they scroll into view
+                timelineItems.forEach(item => {
+                    const itemRect = item.getBoundingClientRect();
+                    if (itemRect.top < triggerPoint) {
+                        item.classList.add('revealed');
+                    }
+                    
+                    // Activate dot when item is closer to center of viewport
+                    if (itemRect.top < window.innerHeight * 0.5) {
+                        item.classList.add('active-dot');
+                    } else {
+                        item.classList.remove('active-dot');
+                    }
+                });
+
+                // 2. Animate center progress bar line matching the scroll depth of the timeline
+                const trackHeight = trackRect.height;
+                const scrollDepth = (window.innerHeight * 0.5) - trackRect.top;
+
+                let progressHeight = Math.max(0, Math.min(trackHeight, scrollDepth));
+                progressLine.style.height = progressHeight + 'px';
+            }
+
+            window.addEventListener('scroll', handleTimelineScroll);
+            window.addEventListener('resize', handleTimelineScroll);
+            // Run initially after DOM settling
+            setTimeout(handleTimelineScroll, 400);
+        });
+    </script>
+
+    <!-- Social Icons Floating -->
+    <div class="social-floating">
+        <a href="#" class="social-icon green"><img src="assets/Whatsapp.png" alt="WA"></a>
+        <a href="#" class="social-icon yellow"><img src="assets/Componente 26 - 1.png" alt="MSG"></a>
+    </div>
+
+    <!-- CTA Box Overlapping the Footer Image -->
+    <div class="cta-box-wrapper cta-overlap tour-cta">
+        <div class="cta-box">
+            <h2>
+                Are you Ready to <br>
+                <span>Extraordinary</span>
+                <span class="highlight-potencial">
+                    Experience?
+                    <svg class="cta-swoosh" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 40">
+                        <path d="M 10 30 Q 150 15 280 35" fill="none" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                    </svg>
+                    <img src="assets/Trazado 21196.png" alt="Pencil" class="cta-pencil">
+                </span>
+            </h2>
+            <a href="#" class="btn btn-yellow btn-cta">Contact us <span class="btn-arrow">&gt;</span></a>
+        </div>
+        <img src="assets/ChatGPT Image 1 jul 2025, 17_28_04 (3).png" class="colibri-cta" alt="Colibri">
+    </div>
+
+    <!-- Footer Image -->
+    <section class="footer-image-section tour-footer-img">
+        <img src="assets/PHOTO-2025-07-30-09-58-52 (1).jpg" alt="Building" class="building-img">
+        <div class="curve-bottom">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path d="M0,0 Q720,240 1440,0 L1440,120 L0,120 Z" fill="#254478"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer new-footer">
+        <div class="footer-divider"></div>
+        <div class="footer-container">
+            <div class="footer-logo-col">
+                <img src="assets/Capa_2_xA0_Imagen.png" alt="Logo Footer" class="footer-shield">
+                <p>En el Gimnasio El Hontanar,<br>educamos para la vida, formando<br>ciudadanos íntegros, felices y preparados<br>para afrontar el futuro con confianza.</p>
+            </div>
+            <div class="footer-info-col">
+                <h4>DATOS DE CONTACTO</h4>
+                <ul>
+                    <li><img src="assets/whatsapp (4).png" alt="WhatsApp" class="footer-icon"> +57 316 4701496<br>+57 316 4701496</li>
+                    <li><img src="assets/telefono-inteligente (3).png" alt="Teléfono" class="footer-icon"> +57 316 4701496<br>+57 316 4701496</li>
+                    <li><img src="assets/sobre (1).png" alt="Email" class="footer-icon"> admisiones@gimnasiohontanar.edu.co<br>admisiones2@gimnasiohontanar.edu.co<br>contacto@gimnasiohontanar.edu.co</li>
+                    <li><img src="assets/_x32_0_location.png" alt="Ubicación" class="footer-icon"> Cra. 7a 300 m. antes del peaje de<br>Fusca (Sentido Chia - Bogotá), Chia, Colombia.</li>
+                </ul>
+            </div>
+            <div class="footer-social-col">
+                <h4>SÍGANOS</h4>
+                <ul>
+                    <li><img src="assets/facebook (4).png" alt="Facebook" class="footer-icon"> gimnasioelhontanar</li>
+                    <li><img src="assets/Layer 2.png" alt="Instagram" class="footer-icon"> gimnasioelhontanar</li>
+                    <li><img src="assets/logotipo-de-linkedin (3).png" alt="LinkedIn" class="footer-icon"> gimnasio-el-hontanar</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
