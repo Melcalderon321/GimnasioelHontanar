@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filosofía y Valores | Gimnasio El Hontanar</title>
+    <meta name="description" content="Conoce la filosofía educativa y los valores que fundamentan la formación integral del Gimnasio El Hontanar: respeto, autonomía, carácter y conciencia global.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="tour-virtual.css">
+    <link rel="stylesheet" href="filosofia-y-valores.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="nav-pill">
+            <a href="index.html" class="logo">
+                <img src="assets/HONTANAR logo_ (3).png" alt="Hontanar Logo">
+            </a>
+            <div class="nav-right">
+                <span class="menu-text">MENÚ</span>
+                <div class="hamburger-circle">
+                    <div class="hamburger">
+                        <span></span><span></span><span></span>
+                    </div>
+                </div>
+                <a href="#" class="btn btn-yellow btn-nav">Contáctanos <span class="arrow">&gt;</span></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sidebar Menu -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+    <nav class="sidebar-menu" id="sidebar-menu">
+        <div class="sidebar-header">
+            <img src="assets/Capa_2_xA0_Imagen.png" alt="Logo" class="sidebar-logo">
+            <button class="close-btn" id="close-sidebar">&times;</button>
+        </div>
+        <ul class="sidebar-nav">
+            <li class="has-submenu">
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-down"></i></span>
+                    <a href="#">Admisiones</a>
+                </div>
+                <ul class="submenu">
+                    <li><a href="tour-virtual.html">Tour Virtual</a></li>
+                    <li><a href="preguntas-frecuentes.html">Preguntas Frecuentes</a></li>
+                    <li><a href="por-que-estudiar.html">¿Por qué estudiar en el Gimnasio El Hontanar?</a></li>
+                    <li><a href="proceso-de-ingreso.html">Proceso de ingreso al Gimnasio El Hontanar</a></li>
+                </ul>
+            </li>
+            <li class="has-submenu expanded">
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-down"></i></span>
+                    <a href="#">Somos Hontanar</a>
+                </div>
+                <ul class="submenu">
+                    <li><a href="modelo-de-ensenanza.html">Modelo de Enseñanza</a></li>
+                    <li><a href="nuestra-historia.html">Nuestra Historia</a></li>
+                    <li><a href="filosofia-y-valores.html" class="active">Filosofía y Valores</a></li>
+                    <li><a href="sello-hontanar.html">Sello Hontanar</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-right"></i></span>
+                    <a href="#">Cultura Internacional</a>
+                </div>
+            </li>
+            <li>
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-right"></i></span>
+                    <a href="#">Vida en el Campus</a>
+                </div>
+            </li>
+            <li>
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-right"></i></span>
+                    <a href="#">TecnoSer</a>
+                </div>
+            </li>
+            <li>
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-right"></i></span>
+                    <a href="#">Infraestructura</a>
+                </div>
+            </li>
+            <li>
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-right"></i></span>
+                    <a href="#">Oferta Académica</a>
+                </div>
+            </li>
+            <li>
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-right"></i></span>
+                    <a href="#">Contacto</a>
+                </div>
+            </li>
+        </ul>
+        <div class="sidebar-footer">
+            <a href="#" class="btn-sidebar btn-s-green"><span>⚲</span> VIRTUAL</a>
+            <a href="#" class="btn-sidebar btn-s-yellow"><span>⌨</span> ADMISIONES</a>
+        </div>
+    </nav>
+
+    <!-- Script for Sidebar -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.querySelector('.hamburger-circle');
+            const menuText = document.querySelector('.menu-text');
+            const sidebar = document.getElementById('sidebar-menu');
+            const overlay = document.getElementById('sidebar-overlay');
+            const closeBtn = document.getElementById('close-sidebar');
+
+            function toggleMenu() {
+                sidebar.classList.toggle('open');
+                overlay.classList.toggle('open');
+            }
+
+            if(hamburger) hamburger.addEventListener('click', toggleMenu);
+            if(menuText) menuText.addEventListener('click', toggleMenu);
+            if(closeBtn) closeBtn.addEventListener('click', toggleMenu);
+            if(overlay) overlay.addEventListener('click', toggleMenu);
+
+            // Collapsible submenus
+            const submenus = document.querySelectorAll('.has-submenu .menu-item');
+            submenus.forEach(item => {
+                item.addEventListener('click', (e) => {
+                    if (e.target.tagName !== 'A') {
+                        e.preventDefault();
+                        item.parentElement.classList.toggle('expanded');
+                    }
+                });
+            });
+        });
+    </script>
+
+    <!-- Page Content Container -->
+    <main class="filosofia-container">
+        <!-- Unified Breadcrumbs -->
+        <div class="breadcrumbs">
+            <a href="index.html">Inicio</a> &gt; <a href="#">Somos Hontanar</a> &gt; <span class="current">Filosofía y Valores</span>
+        </div>
+
+        <!-- Unified Header Title Section -->
+        <div class="tour-text-content" style="text-align: center;">
+            <h4 class="kicker">SOMOS HONTANAR</h4>
+            <h1 class="main-title">Filosofía y <span>Valores</span></h1>
+        </div>
+
+        <!-- 1. INTRO SECTION: BENTO CARD GRID (ESTÉTICA POR-QUÉ-ESTUDIAR) -->
+        <section class="filosofia-intro-section">
+            <div class="filosofia-bento-intro">
+
+                <!-- Card 1 (Top Left): Image card with overlay text -->
+                <div class="intro-card intro-card-main filosofia-scroll-reveal">
+                    <div class="intro-card-body">
+                        <span class="intro-card-label">Filosofía y Valores</span>
+                        <h2 class="intro-card-heading">Educación que <span>transforma vidas</span></h2>
+                    </div>
+                    <a href="#" class="intro-card-arrow-btn" aria-label="Conoce más">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                </div>
+
+                <!-- Card 2 (Top Right): Glass text card -->
+                <div class="intro-card intro-card-glass filosofia-scroll-reveal">
+                    <div class="intro-card-body">
+                        <p class="intro-card-text">¿Buscas un colegio calendario A en Bogotá que prepare a los estudiantes para la vida real? En el <strong>Gimnasio El Hontanar</strong> se forman niños y jóvenes autónomos, responsables y con criterio, porque los valores, el carácter y el aprendizaje con sentido son parte del día a día.</p>
+                        <p class="intro-card-text-bold">Nuestro objetivo es que cada niño y joven deje el colegio con habilidades académicas, emocionales y sociales que transformen su vida y la de su comunidad.</p>
+                    </div>
+                    <a href="#" class="intro-card-arrow-btn" aria-label="Conoce más">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                </div>
+
+                <!-- Card 3 (Bottom Left): Yellow accent card -->
+                <div class="intro-card intro-card-yellow filosofia-scroll-reveal">
+                    <div class="intro-card-body">
+                        <h3 class="intro-card-heading">Formación <span>integral</span></h3>
+                        <p class="intro-card-text">En el <strong>Gimnasio El Hontanar</strong>, creemos en la formación integral y nuestra filosofía educativa se fundamenta en una acción pedagógica donde los valores, el carácter y el aprendizaje significativo son el centro del proceso formativo.</p>
+                    </div>
+                </div>
+
+                <!-- Card 4 (Bottom Right): Image card with overlay text -->
+                <div class="intro-card intro-card-right filosofia-scroll-reveal">
+                    <div class="intro-card-body">
+                        <span class="intro-card-label">Del Gimnasio El Hontanar</span>
+                        <p class="intro-card-text">Nuestra filosofía educativa se fundamenta en una acción pedagógica donde los <strong>valores</strong>, el <strong>carácter</strong> y el <strong>aprendizaje significativo</strong> son el centro del proceso formativo.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 2. BENTO GRID: PILARES FUNDACIONALES Y VALORES -->
+        <section class="filosofia-bento-section">
+            <div class="bento-header filosofia-scroll-reveal">
+                <h4 class="kicker">PILARES FUNDACIONALES</h4>
+                <h2 class="title">Valores que <span>inspiran</span></h2>
+            </div>
+
+            <div class="bento-grid">
+
+                <!-- CARD 1: Formación en Valores (Full Width) -->
+                <div class="bento-card card-full">
+                    <div class="card-text">
+                        <div class="card-kicker">
+                            <span class="kicker-icon">
+                                <svg viewBox="0 0 24 24" fill="none"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#F9EF6C"/></svg>
+                            </span>
+                            FILOSOFÍA Y VALORES
+                        </div>
+                        <h3 class="card-title">Formación en valores, respeto y <span>globalización</span></h3>
+                        <p class="card-paragraph">Como uno de los <strong>colegios privados en Bogotá y Chía con enfoque integral</strong>, formamos estudiantes comprometidos con la construcción de un país y un mundo mejor. Promovemos principios como el respeto, la responsabilidad, la honestidad y la empatía, entendiendo que el pensamiento condiciona la acción y que educar el carácter es educar para la vida.</p>
+                    </div>
+                    <div class="card-visual">
+                        <img src="assets/Enmascarar grupo 16.jpg" alt="Estudiantes en formación de valores">
+                    </div>
+                </div>
+
+                <!-- PILLAR BENTO CARDS ROW (3 Columnas - Estética Por Qué Estudiar) -->
+                <div class="pillar-bento-row">
+
+                    <!-- Card 1: Convivencia y KiVa (Imagen + Gradiente) -->
+                    <div class="pillar-bento-card card-convivencia filosofia-scroll-reveal">
+                        <div class="pillar-bento-body">
+                            <span class="pillar-bento-pill">Convivencia y KiVa</span>
+                            <h3 class="pillar-bento-heading">Construir comunidad<br>desde el <span>respeto</span></h3>
+                            <p class="pillar-bento-text">Nuestro proyecto educativo integra un <strong>Programa de Formación del Carácter</strong> y el <strong>Programa KiVa</strong>, enfocados en fortalecer el criterio personal, el buen trato y la sana convivencia. Estos programas permiten construir comunidad desde relaciones positivas, prevenir el acoso escolar y formar estudiantes autónomos, capaces de tomar decisiones conscientes y éticas en su entorno.<br><br><em>Si buscas un colegio donde tu hijo aprenda siendo feliz, llegaste al lugar adecuado.</em></p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Bilingüismo (Glassmorphic Premium) -->
+                    <div class="pillar-bento-card card-bilinguismo filosofia-scroll-reveal">
+                        <div class="pillar-bento-body">
+                            <span class="pillar-bento-pill">El Estudiante es Protagonista</span>
+                            <h3 class="pillar-bento-heading">Bilingüismo y experiencias<br><span>significativas</span></h3>
+                            <p class="pillar-bento-text">En el <strong>Gimnasio El Hontanar</strong>, el estudiante es el verdadero protagonista. Somos un <strong>colegio bilingüe</strong> que fomenta el multilingüismo con inglés, francés y portugués. A través de experiencias significativas, nuestros niños y jóvenes desarrollan un pensamiento crítico, gran autonomía y un excelente nivel académico para interactuar con total éxito en un mundo globalizado y competitivo.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Conciencia Ambiental (Imagen + Gradiente Verde) -->
+                    <div class="pillar-bento-card card-ambiental filosofia-scroll-reveal">
+                        <div class="pillar-bento-body">
+                            <span class="pillar-bento-pill">Cuidado del Entorno</span>
+                            <h3 class="pillar-bento-heading">Cuidado y conciencia<br><span>ambiental</span></h3>
+                            <p class="pillar-bento-text">Educar también es enseñar a cuidar nuestra casa común. Promovemos una sólida cultura de <strong>respeto por el medio ambiente</strong> y la sostenibilidad, donde cada estudiante aprende a cuidar los recursos naturales. Fomentamos el liderazgo ecológico en un campus campestre para formar ciudadanos autónomos, conscientes y profundamente comprometidos con el futuro de nuestro planeta.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- CARD 5: Huella Hontanar (Testimonial) -->
+                <div class="bento-card card-testimonial">
+                    <div class="card-text">
+                        <div class="card-kicker">
+                            <span class="kicker-icon">
+                                <svg viewBox="0 0 24 24" fill="none"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" fill="#F9EF6C" opacity="0.3" stroke="#F9EF6C" stroke-width="2"/></svg>
+                            </span>
+                            UN COLEGIO QUE DEJA HUELLA
+                        </div>
+                        <h3 class="card-title">Nuestros <span>Egresados</span></h3>
+                        <p class="card-paragraph">Nuestros estudiantes recuerdan al <strong>Gimnasio El Hontanar</strong> como un colegio que les entregó una formación humana sólida y una preparación académica competitiva, con una formación en valores que los acompaña más allá del aula.</p>
+                        <div class="testimonial-quote">
+                            El Hontanar me enseñó que uno es más que un resultado. El colegio influyó en mis decisiones y en la manera de ponerme metas y alcanzarlas con disciplina. Esa combinación de academia y humanidad sigue siendo, para mí, su mayor fortaleza.
+                        </div>
+                        <div class="testimonial-author">Paula Núñez <span>— Exalumna 2011</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Scroll Reveal & Bento Animation Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Scroll Reveal Observer for general sections
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            const scrollElements = document.querySelectorAll('.filosofia-scroll-reveal');
+            scrollElements.forEach(el => revealObserver.observe(el));
+
+            // 2. Staggered reveal for Bento Cards
+            const bentoObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        bentoObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.08 });
+
+            const bentoCards = document.querySelectorAll('.bento-card');
+            bentoCards.forEach(card => bentoObserver.observe(card));
+        });
+    </script>
+
+    <!-- Social Icons Floating -->
+    <div class="social-floating">
+        <a href="#" class="social-icon green"><img src="assets/Whatsapp.png" alt="WA"></a>
+        <a href="#" class="social-icon yellow"><img src="assets/Componente 26 - 1.png" alt="MSG"></a>
+    </div>
+
+    <!-- CTA Box Overlapping the Footer Image -->
+    <div class="cta-box-wrapper cta-overlap tour-cta">
+        <div class="cta-box">
+            <h2>
+                Are you Ready to <br>
+                <span>Extraordinary</span>
+                <span class="highlight-potencial">
+                    Experience?
+                    <svg class="cta-swoosh" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 40">
+                        <path d="M 10 30 Q 150 15 280 35" fill="none" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                    </svg>
+                    <img src="assets/Trazado 21196.png" alt="Pencil" class="cta-pencil">
+                </span>
+            </h2>
+            <a href="#" class="btn btn-yellow btn-cta">Contact us <span class="btn-arrow">&gt;</span></a>
+        </div>
+        <img src="assets/ChatGPT Image 1 jul 2025, 17_28_04 (3).png" class="colibri-cta" alt="Colibri">
+    </div>
+
+    <!-- Footer Image -->
+    <section class="footer-image-section tour-footer-img">
+        <img src="assets/PHOTO-2025-07-30-09-58-52 (1).jpg" alt="Building" class="building-img">
+        <div class="curve-bottom">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path d="M0,0 Q720,240 1440,0 L1440,120 L0,120 Z" fill="#254478"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer new-footer">
+        <div class="footer-divider"></div>
+        <div class="footer-container">
+            <div class="footer-logo-col">
+                <img src="assets/Capa_2_xA0_Imagen.png" alt="Logo Footer" class="footer-shield">
+                <p>En el Gimnasio El Hontanar,<br>educamos para la vida, formando<br>ciudadanos íntegros, felices y preparados<br>para afrontar el futuro con confianza.</p>
+            </div>
+            <div class="footer-info-col">
+                <h4>DATOS DE CONTACTO</h4>
+                <ul>
+                    <li><img src="assets/whatsapp (4).png" alt="WhatsApp" class="footer-icon"> +57 316 4701496<br>+57 316 4701496</li>
+                    <li><img src="assets/telefono-inteligente (3).png" alt="Teléfono" class="footer-icon"> +57 316 4701496<br>+57 316 4701496</li>
+                    <li><img src="assets/sobre (1).png" alt="Email" class="footer-icon"> admisiones@gimnasiohontanar.edu.co<br>admisiones2@gimnasiohontanar.edu.co<br>contacto@gimnasiohontanar.edu.co</li>
+                    <li><img src="assets/_x32_0_location.png" alt="Ubicación" class="footer-icon"> Cra. 7a 300 m. antes del peaje de<br>Fusca (Sentido Chia - Bogotá), Chia, Colombia.</li>
+                </ul>
+            </div>
+            <div class="footer-social-col">
+                <h4>SÍGANOS</h4>
+                <ul>
+                    <li><img src="assets/facebook (4).png" alt="Facebook" class="footer-icon"> gimnasioelhontanar</li>
+                    <li><img src="assets/Layer 2.png" alt="Instagram" class="footer-icon"> gimnasioelhontanar</li>
+                    <li><img src="assets/logotipo-de-linkedin (3).png" alt="LinkedIn" class="footer-icon"> gimnasio-el-hontanar</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
