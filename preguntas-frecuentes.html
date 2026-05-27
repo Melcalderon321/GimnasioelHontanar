@@ -1,0 +1,331 @@
+?<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas Frecuentes | Gimnasio El Hontanar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="tour-virtual.css">
+    <link rel="stylesheet" href="faq.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="nav-pill">
+            <a href="index.html" class="logo">
+                <img src="assets/HONTANAR logo_ (3).png" alt="Hontanar Logo">
+            </a>
+            <div class="nav-right">
+                <span class="menu-text">MENÚ</span>
+                <div class="hamburger-circle">
+                    <div class="hamburger">
+                        <span></span><span></span><span></span>
+                    </div>
+                </div>
+                <a href="#" class="btn btn-yellow btn-nav">Contáctanos <span class="arrow">&gt;</span></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sidebar Menu -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+    <nav class="sidebar-menu" id="sidebar-menu">
+        <div class="sidebar-header">
+            <img src="assets/Capa_2_xA0_Imagen.png" alt="Logo" class="sidebar-logo">
+            <button class="close-btn" id="close-sidebar">&times;</button>
+        </div>
+        <ul class="sidebar-nav">
+            <li class="has-submenu">
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-down"></i></span>
+                    <a href="#">Admisiones</a>
+                </div>
+                <ul class="submenu">
+                    <li><a href="tour-virtual.html">Tour Virtual</a></li>
+                    <li><a href="preguntas-frecuentes.html">Preguntas Frecuentes</a></li>
+                    <li><a href="por-que-estudiar.html">¿Por qué estudiar en el Gimnasio El Hontanar?</a></li>
+                    <li><a href="#">Proceso de ingreso al Gimnasio El Hontanar</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-right"></i></span>
+                    <a href="#">Somos Hontanar</a>
+                </div>
+            </li>
+            <li>
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-right"></i></span>
+                    <a href="#">Cultura Internacional</a>
+                </div>
+            </li>
+            <li>
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-right"></i></span>
+                    <a href="#">Vida en el Campus</a>
+                </div>
+            </li>
+            <li>
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-right"></i></span>
+                    <a href="#">TecnoSer</a>
+                </div>
+            </li>
+            <li>
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-right"></i></span>
+                    <a href="#">Infraestructura</a>
+                </div>
+            </li>
+            <li>
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-right"></i></span>
+                    <a href="#">Oferta Académica</a>
+                </div>
+            </li>
+            <li>
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-right"></i></span>
+                    <a href="#">Contacto</a>
+                </div>
+            </li>
+        </ul>
+        <div class="sidebar-footer">
+            <a href="#" class="btn-sidebar btn-s-green"><span>⚲</span> VIRTUAL</a>
+            <a href="#" class="btn-sidebar btn-s-yellow"><span>🖨</span> ADMISIONES</a>
+        </div>
+    </nav>
+
+    <!-- Script for Sidebar and FAQ -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.querySelector('.hamburger-circle');
+            const menuText = document.querySelector('.menu-text');
+            const sidebar = document.getElementById('sidebar-menu');
+            const overlay = document.getElementById('sidebar-overlay');
+            const closeBtn = document.getElementById('close-sidebar');
+
+            function toggleMenu() {
+                sidebar.classList.toggle('open');
+                overlay.classList.toggle('open');
+            }
+
+            if(hamburger) hamburger.addEventListener('click', toggleMenu);
+            if(menuText) menuText.addEventListener('click', toggleMenu);
+            if(closeBtn) closeBtn.addEventListener('click', toggleMenu);
+            if(overlay) overlay.addEventListener('click', toggleMenu);
+
+            // Collapsible submenus
+            const submenus = document.querySelectorAll('.has-submenu .menu-item');
+            submenus.forEach(item => {
+                item.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    item.parentElement.classList.toggle('expanded');
+                });
+            });
+
+            // Accordion FAQ
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+                    
+                    // Strict accordion (close others)
+                    faqItems.forEach(i => {
+                        i.classList.remove('active');
+                        i.querySelector('.faq-answer').style.maxHeight = null;
+                    });
+
+                    if (!isActive) {
+                        item.classList.add('active');
+                        const answer = item.querySelector('.faq-answer');
+                        answer.style.maxHeight = answer.scrollHeight + "px";
+                    }
+                });
+            });
+        });
+    </script>
+
+    <!-- FAQ Section -->
+    <section class="tour-virtual-page faq-page">
+        <!-- Breadcrumbs -->
+        <div class="breadcrumbs">
+            <a href="index.html">Inicio</a> &gt; <a href="#">Admisiones</a> &gt; <span class="current">Preguntas Frecuentes</span>
+        </div>
+
+        <!-- Text Content -->
+        <div class="tour-text-content">
+            <h4 class="kicker">ADMISIONES</h4>
+            <h1 class="main-title">Preguntas <span>Frecuentes</span></h1>
+        </div>
+
+        <!-- FAQ Accordion -->
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>¿El Gimnasio El Hontanar es un colegio bilingüe en Bogotá?</span>
+                    <i class="faq-arrow"></i>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Sí. El Gimnasio El Hontanar es un colegio 100% bilingüe, certificado con las pruebas de Cambridge English Language Assessment. Desarrollamos una propuesta educativa de cultura internacional que avanza en el multilingüismo desde edades tempranas en inglés, para después incursionar con francés y portugués. Conoce nuestro modelo de Cultura Internacional.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>¿El Hontanar ofrece IB- Bachillerato Internacional en Bogotá?</span>
+                    <i class="faq-arrow"></i>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Sí. Contamos con el Programa del Diploma del Bachillerato Internacional y mantenemos un estándar de alta calidad para los estudiantes que desean movilizarse en las universidades del mundo donde es reconocido el diploma. Hacemos parte de la red de colegios IB en Colombia. Descubre aquí más información.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>¿Qué calendario es el colegio Hontanar?</span>
+                    <i class="faq-arrow"></i>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Somos un colegio de Calendario A, mixto.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>¿Cuál es el horario escolar del Gimnasio El Hontanar?</span>
+                    <i class="faq-arrow"></i>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        El horario escolar de los estudiantes es de lunes, martes y jueves de 7:30 a.m. a 3:15 p.m. Los miércoles y viernes la jornada finaliza a las 2:30 p.m.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>¿Cómo funciona el transporte escolar en el Gimnasio El Hontanar?</span>
+                    <i class="faq-arrow"></i>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Contamos con servicio de transporte escolar propio, lo que garantiza control, mantenimiento y monitoreo satelital en tiempo real de cada una de nuestras rutas. Las monitoras y conductores reciben capacitación continua en seguridad vial y servicio al cliente.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>¿Cómo es el servicio de alimentación en el colegio Hontanar?</span>
+                    <i class="faq-arrow"></i>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        El servicio de alimentación ofrece un menú balanceado y nutritivo, supervisado por un equipo de profesionales en nutrición. Los alimentos se preparan bajo estrictos estándares de calidad e higiene en nuestras instalaciones, promoviendo hábitos de vida saludable desde la infancia.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>¿El colegio cuenta con un programa de bienestar emocional?</span>
+                    <i class="faq-arrow"></i>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Sí. Nuestro enfoque de formación integral incluye un sólido programa de bienestar emocional liderado por un equipo interdisciplinario de psicología y orientación escolar. Trabajamos de la mano con las familias para asegurar un entorno seguro y de confianza. Implementamos el programa KiVa contra el acoso escolar.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>¿Qué actividades extracurriculares ofrece el Gimnasio El Hontanar?</span>
+                    <i class="faq-arrow"></i>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Ofrecemos una amplia variedad de actividades extracurriculares que complementan la formación académica: escuelas deportivas (fútbol, baloncesto, voleibol), disciplinas artísticas (danza, artes plásticas), música (banda musical, técnica vocal) y robótica.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Icons Floating -->
+    <div class="social-floating">
+        <a href="#" class="social-icon green"><img src="assets/Whatsapp.png" alt="WA"></a>
+        <a href="#" class="social-icon yellow"><img src="assets/Componente 26 � 1.png" alt="MSG"></a>
+    </div>
+
+    <!-- CTA Box Overlapping the Footer Image -->
+    <div class="cta-box-wrapper cta-overlap tour-cta">
+        <div class="cta-box">
+            <h2>
+                Are you Ready to <br>
+                <span>Extraordinary</span>
+                <span class="highlight-potencial">
+                    Experience?
+                    <svg class="cta-swoosh" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 40">
+                        <path d="M 10 30 Q 150 15 280 35" fill="none" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                    </svg>
+                    <img src="assets/Trazado 21196.png" alt="Pencil" class="cta-pencil">
+                </span>
+            </h2>
+            <a href="#" class="btn btn-yellow btn-cta">Contact us <span class="btn-arrow">&gt;</span></a>
+        </div>
+        <img src="assets/ChatGPT Image 1 jul 2025, 17_28_04 (3).png" class="colibri-cta" alt="Colibri">
+    </div>
+
+    <!-- Footer Image -->
+    <section class="footer-image-section tour-footer-img">
+        <img src="assets/PHOTO-2025-07-30-09-58-52 (1).jpg" alt="Building" class="building-img">
+        <div class="curve-bottom">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path d="M0,0 Q720,240 1440,0 L1440,120 L0,120 Z" fill="#254478"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer new-footer">
+        <div class="footer-divider"></div>
+        <div class="footer-container">
+            <div class="footer-logo-col">
+                <img src="assets/Capa_2_xA0_Imagen.png" alt="Logo Footer" class="footer-shield">
+                <p>En el Gimnasio El Hontanar,<br>educamos para la vida, formando<br>ciudadanos íntegros, felices y preparados<br>para afrontar el futuro con confianza.</p>
+            </div>
+            <div class="footer-info-col">
+                <h4>DATOS DE CONTACTO</h4>
+                <ul>
+                    <li><img src="assets/whatsapp (4).png" alt="WhatsApp" class="footer-icon"> +57 316 4701496<br>+57 318 7170097</li>
+                    <li><img src="assets/telefono-inteligente (3).png" alt="Teléfono" class="footer-icon"> +57 316 4701496<br>+57 318 7170097</li>
+                    <li><img src="assets/sobre (1).png" alt="Email" class="footer-icon"> admisiones@gimnasiohontanar.edu.co<br>admisiones2@gimnasiohontanar.edu.co<br>contacto@gimnasiohontanar.edu.co</li>
+                    <li><img src="assets/_x32_0_location.png" alt="Ubicación" class="footer-icon"> Cra. 7a 300 m. antes del peaje de<br>Fusca (Sentido Chia - Bogotá), Chia, Colombia.</li>
+                </ul>
+            </div>
+            <div class="footer-social-col">
+                <h4>SÍGANOS</h4>
+                <ul>
+                    <li><img src="assets/facebook (4).png" alt="Facebook" class="footer-icon"> gimnasioelhontanar</li>
+                    <li><img src="assets/Layer 2.png" alt="Instagram" class="footer-icon"> gimnasioelhontanar</li>
+                    <li><img src="assets/logotipo-de-linkedin (3).png" alt="LinkedIn" class="footer-icon"> gimnasio-el-hontanar</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+

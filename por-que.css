@@ -1,0 +1,585 @@
+/* CSS for ¿Por qué estudiar en El Hontanar? */
+
+/* Base Styles */
+.por-que-page {
+    padding-top: 150px;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.pq-section-title {
+    font-family: var(--font-playfair);
+    font-size: 1.8rem;
+    font-weight: 700;
+    font-style: italic;
+    color: var(--white);
+    line-height: 1.3;
+    margin-bottom: 30px;
+}
+
+.pq-highlight {
+    font-weight: 700;
+    color: var(--yellow);
+    font-style: italic;
+}
+
+/* Glass Box Section */
+.pq-top-section {
+    position: relative;
+    padding-top: 20px;
+    margin-bottom: 80px;
+}
+
+.pq-glass-box-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+
+.pq-colibri-top {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    z-index: 10;
+}
+
+.pq-glass-box {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 60px 40px 40px; /* Extra top padding for bird */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.pq-glass-box h3 {
+    font-family: var(--font-playfair);
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.pq-glass-box p {
+    font-family: var(--font-lato);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.pq-glass-box .pq-highlight {
+    font-size: 1.1rem;
+    margin: 0;
+    display: inline-block;
+}
+
+.pq-inner-cards {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.pq-inner-card {
+    flex: 1;
+    min-width: 250px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 25px 20px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.pq-inner-card:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.pq-inner-card.full-width {
+    flex: 100%;
+    border-top: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+.pq-card-green {
+    border-top: 3px solid var(--green);
+    background-color: rgba(27, 166, 85, 0.08); /* slight green tint */
+}
+.pq-card-green:hover {
+    background-color: rgba(27, 166, 85, 0.15);
+}
+
+.pq-card-yellow {
+    border-top: 3px solid var(--yellow);
+    background-color: rgba(249, 239, 108, 0.08); /* slight yellow tint */
+}
+.pq-card-yellow:hover {
+    background-color: rgba(249, 239, 108, 0.15);
+}
+
+.pq-inner-card p {
+    margin-bottom: 0;
+    font-size: 0.95rem;
+}
+
+.pq-highlight-banner {
+    margin: 35px 0;
+}
+
+/* Stats Section */
+.pq-stats-section {
+    max-width: 900px;
+    margin: 0 auto 80px;
+    padding: 0 20px;
+}
+
+.pq-glass-accordion {
+    max-width: 900px;
+    margin: 0 auto 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+}
+
+.pq-accordion-item {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    overflow: hidden;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+.pq-accordion-item:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.pq-accordion-item.active {
+    border-radius: 30px;
+    border-color: var(--yellow);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.pq-accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 40px;
+}
+
+.pq-accordion-header h3 {
+    font-family: var(--font-playfair);
+    font-size: 1.4rem;
+    color: var(--yellow);
+    font-style: italic;
+    margin: 0;
+}
+
+.icon-toggle {
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--white);
+    transition: transform 0.3s ease;
+    line-height: 1;
+}
+
+.pq-accordion-item.active .icon-toggle {
+    transform: rotate(45deg);
+    color: var(--yellow);
+}
+
+.pq-accordion-body {
+    max-height: 0;
+    opacity: 0;
+    padding: 0 40px;
+    transition: all 0.4s ease;
+}
+
+.pq-accordion-item.active .pq-accordion-body {
+    max-height: 300px;
+    opacity: 1;
+    padding: 0 40px 30px;
+}
+
+.pq-accordion-body p {
+    font-family: var(--font-lato);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0;
+}
+
+.pq-stats-grid {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 60px;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.pq-stat-item {
+    text-align: center;
+}
+
+.pq-stat-item h3 {
+    font-family: var(--font-lato);
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: var(--yellow);
+    margin-bottom: 10px;
+    line-height: 1;
+}
+
+.pq-stat-icon {
+    height: 45px;
+    margin-bottom: 15px;
+    object-fit: contain;
+    max-width: 100%;
+}
+
+.pq-stat-icon.logos-img {
+    height: 40px; /* Slightly smaller height to balance the extreme width */
+}
+
+.pq-stat-item p {
+    font-family: var(--font-lato);
+    font-size: 0.9rem;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+/* Timeline Section */
+.pq-timeline-section {
+    position: relative;
+    padding: 100px 20px;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 0px;
+}
+
+.parallax-bg {
+    background-attachment: fixed;
+}
+
+.pq-timeline-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--blue) 0%, rgba(37, 68, 120, 0.75) 15%, rgba(37, 68, 120, 0.75) 85%, var(--blue) 100%);
+    z-index: 1;
+}
+
+.pq-timeline-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.pq-timeline-container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    padding: 0 20px;
+}
+
+.anim-step {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.anim-step.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.pq-timeline-arrow {
+    width: 60px;
+    height: auto;
+    object-fit: contain;
+    align-self: flex-start;
+    margin-top: 50px;
+    opacity: 0;
+    transform: translateX(-30px);
+}
+
+.pq-timeline-arrow.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.pq-timeline-arrow.arrow-up {
+    transform: translateX(-30px) scaleY(-1);
+}
+
+.pq-timeline-arrow.arrow-up.visible {
+    transform: translateX(0) scaleY(-1);
+}
+
+.pq-timeline-step {
+    position: relative;
+    z-index: 1;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.pq-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    height: 120px;
+}
+
+.pq-circle img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+}
+
+.pq-timeline-step h4 {
+    font-family: var(--font-playfair);
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--yellow);
+    margin-bottom: 10px;
+}
+
+.pq-timeline-step p {
+    font-family: var(--font-lato);
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.pq-highlight-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    padding: 60px 40px;
+    margin: 60px auto 0;
+    max-width: 800px;
+    text-align: center;
+    color: var(--white);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.pq-highlight-card .sparkle {
+    position: absolute;
+    color: var(--yellow);
+    font-size: 2rem;
+}
+.pq-highlight-card .sparkle.top-left {
+    top: 30px;
+    left: 40px;
+}
+.pq-highlight-card .sparkle.bottom-right {
+    bottom: 30px;
+    right: 40px;
+}
+
+.pq-card-kicker {
+    font-family: var(--font-lato);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 20px;
+}
+
+.pq-card-title {
+    font-family: var(--font-playfair);
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    color: var(--white);
+}
+
+.highlight-pill {
+    background-color: var(--yellow);
+    color: var(--blue);
+    padding: 2px 15px;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+.pq-card-subtitle {
+    font-family: var(--font-lato);
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.85);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Bento Grid Section */
+.pq-bento-section {
+    padding: 20px 0 80px 0;
+    /* Clean white/transparent background since parallax provides blue */
+}
+
+.pq-bento-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.bento-card {
+    position: relative;
+    border-radius: 20px;
+    padding: 50px 40px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 450px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.bento-card:hover {
+    transform: translateY(-5px);
+}
+
+.bento-image {
+    background-size: cover;
+    background-position: center;
+}
+
+.bento-image::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(37,68,120,0.9) 0%, rgba(37,68,120,0.2) 60%, transparent 100%);
+    z-index: 1;
+}
+
+.bento-image-content {
+    position: relative;
+    z-index: 2;
+    color: var(--white);
+}
+
+.bento-glass-yellow {
+    background: rgba(249, 239, 108, 0.95);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    color: var(--blue);
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.bento-glass-white {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    color: var(--blue);
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.bento-corner-btn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    background-color: var(--blue);
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    z-index: 3;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.bento-card:hover .bento-corner-btn {
+    background-color: var(--yellow);
+    color: var(--blue);
+}
+
+.bento-pill {
+    display: inline-block;
+    background-color: var(--yellow);
+    color: var(--blue);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-family: var(--font-lato);
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.bento-image-content h3 {
+    font-family: var(--font-playfair);
+    font-size: 2.2rem;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.bento-image-content p {
+    font-family: var(--font-lato);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.bento-glass-yellow h3, .bento-glass-white h3 {
+    font-family: var(--font-playfair);
+    font-size: 2rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.bento-glass-yellow p, .bento-glass-white p {
+    font-family: var(--font-lato);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.bento-highlight {
+    font-weight: 700;
+    font-size: 1.15rem !important;
+}
+
+.bento-highlight-line {
+    font-weight: 700;
+    display: inline-block;
+    border-bottom: 3px solid var(--blue);
+    padding-bottom: 2px;
+}
+
+@media (max-width: 768px) {
+    .pq-bento-grid {
+        grid-template-columns: 1fr;
+    }
+}
+

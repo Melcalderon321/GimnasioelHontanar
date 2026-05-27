@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Por qué estudiar en El Hontanar? | Gimnasio El Hontanar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="tour-virtual.css">
+    <link rel="stylesheet" href="por-que.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="nav-pill">
+            <a href="index.html" class="logo">
+                <img src="assets/HONTANAR logo_ (3).png" alt="Hontanar Logo">
+            </a>
+            <div class="nav-right">
+                <span class="menu-text">MENÚ</span>
+                <div class="hamburger-circle">
+                    <div class="hamburger">
+                        <span></span><span></span><span></span>
+                    </div>
+                </div>
+                <a href="#" class="btn btn-yellow btn-nav">Contáctanos <span class="arrow">&gt;</span></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sidebar Menu -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+    <nav class="sidebar-menu" id="sidebar-menu">
+        <div class="sidebar-header">
+            <img src="assets/Capa_2_xA0_Imagen.png" alt="Logo" class="sidebar-logo">
+            <button class="close-btn" id="close-sidebar">&times;</button>
+        </div>
+        <ul class="sidebar-nav">
+            <li class="has-submenu">
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-down"></i></span>
+                    <a href="#">Admisiones</a>
+                </div>
+                <ul class="submenu">
+                    <li><a href="tour-virtual.html">Tour Virtual</a></li>
+                    <li><a href="preguntas-frecuentes.html">Preguntas Frecuentes</a></li>
+                    <li><a href="por-que-estudiar.html">¿Por qué estudiar en el Gimnasio El Hontanar?</a></li>
+                    <li><a href="#">Proceso de ingreso al Gimnasio El Hontanar</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-right"></i></span>
+                    <a href="#">Somos Hontanar</a>
+                </div>
+            </li>
+            <li>
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-right"></i></span>
+                    <a href="#">Cultura Internacional</a>
+                </div>
+            </li>
+            <li>
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-right"></i></span>
+                    <a href="#">Vida en el Campus</a>
+                </div>
+            </li>
+            <li>
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-right"></i></span>
+                    <a href="#">TecnoSer</a>
+                </div>
+            </li>
+            <li>
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-right"></i></span>
+                    <a href="#">Infraestructura</a>
+                </div>
+            </li>
+            <li>
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-right"></i></span>
+                    <a href="#">Oferta Académica</a>
+                </div>
+            </li>
+            <li>
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-right"></i></span>
+                    <a href="#">Contacto</a>
+                </div>
+            </li>
+        </ul>
+        <div class="sidebar-footer">
+            <a href="#" class="btn-sidebar btn-s-green"><span>⚲</span> VIRTUAL</a>
+            <a href="#" class="btn-sidebar btn-s-yellow"><span>🖨</span> ADMISIONES</a>
+        </div>
+    </nav>
+
+    <!-- Script for Sidebar -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.querySelector('.hamburger-circle');
+            const menuText = document.querySelector('.menu-text');
+            const sidebar = document.getElementById('sidebar-menu');
+            const overlay = document.getElementById('sidebar-overlay');
+            const closeBtn = document.getElementById('close-sidebar');
+
+            function toggleMenu() {
+                sidebar.classList.toggle('open');
+                overlay.classList.toggle('open');
+            }
+
+            if(hamburger) hamburger.addEventListener('click', toggleMenu);
+            if(menuText) menuText.addEventListener('click', toggleMenu);
+            if(closeBtn) closeBtn.addEventListener('click', toggleMenu);
+            if(overlay) overlay.addEventListener('click', toggleMenu);
+
+            // Collapsible submenus
+            const submenus = document.querySelectorAll('.has-submenu .menu-item');
+            submenus.forEach(item => {
+                item.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    item.parentElement.classList.toggle('expanded');
+                });
+            });
+        });
+    </script>
+
+    <!-- Page Content Container -->
+    <main class="por-que-page">
+        <!-- Breadcrumbs -->
+        <div class="breadcrumbs">
+            <a href="index.html">Inicio</a> &gt; <a href="#">Admisiones</a> &gt; <span class="current">¿Por qué estudiar en El Hontanar?</span>
+        </div>
+
+        <!-- Top Section -->
+        <section class="pq-top-section">
+            <div class="tour-text-content">
+                <h4 class="kicker">ADMISIONES</h4>
+                <h1 class="main-title">¿Por qué estudiar en el<br><span>Gimnasio El Hontanar?</span></h1>
+            </div>
+
+            <!-- Glass Box with Bird -->
+            <div class="pq-glass-box-container">
+                <img src="assets/ChatGPT Image 1 jul 2025, 17_28_04 (3).png" alt="Colibri" class="pq-colibri-top">
+                <div class="pq-glass-box">
+                    <h3>Gimnasio El Hontanar: el lugar donde la educación transforma vidas.</h3>
+                    
+                    <div class="pq-inner-cards">
+                        <div class="pq-inner-card pq-card-green">
+                            <p>Más que un colegio, el Hontanar es una familia en la que cada estudiante se siente seguro, valorado y motivado para crecer.</p>
+                        </div>
+                        <div class="pq-inner-card pq-card-yellow">
+                            <p>No solo enseñamos, cultivamos valores, emociones y habilidades que transforman vidas, despiertan la curiosidad y la creatividad.</p>
+                        </div>
+                    </div>
+
+                    <div class="pq-highlight-banner">
+                        <p class="pq-highlight">¡Descubre lo que tu hijo puede lograr en el Gimnasio El Hontanar!</p>
+                    </div>
+
+                    <div class="pq-inner-card full-width">
+                        <p>El Gimnasio El Hontanar combina educación bilingüe, Bachillerato Internacional y un entorno seguro y feliz: es uno de los mejores colegios privados en Bogotá.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="pq-stats-section">
+            <h2 class="pq-section-title">¿Por qué elegir estudiar en uno de los mejores<br>colegios privados en Bogotá y Chía?</h2>
+            <div class="pq-glass-accordion">
+                <div class="pq-accordion-item active">
+                    <div class="pq-accordion-header">
+                        <h3>Educación Integral</h3>
+                        <span class="icon-toggle">+</span>
+                    </div>
+                    <div class="pq-accordion-body">
+                        <p>Porque en El Hontanar la educación va más allá de lo académico, ofrece un entorno seguro para disfrutar del aprendizaje y ayuda a fortalecer la gratitud, la cooperación y la confianza.</p>
+                    </div>
+                </div>
+
+                <div class="pq-accordion-item">
+                    <div class="pq-accordion-header">
+                        <h3>Proyección Internacional</h3>
+                        <span class="icon-toggle">+</span>
+                    </div>
+                    <div class="pq-accordion-body">
+                        <p>Preparamos a nuestros estudiantes para una proyección universitaria internacional, y para que enfrenten los retos del mundo globalizado con pensamiento crítico y liderazgo.</p>
+                    </div>
+                </div>
+
+                <div class="pq-accordion-item">
+                    <div class="pq-accordion-header">
+                        <h3>Excelencia Comprobada</h3>
+                        <span class="icon-toggle">+</span>
+                    </div>
+                    <div class="pq-accordion-body">
+                        <p>Destacados por Sapiens Research. Elegirnos es elegir un colegio de categoría AAA, donde la excelencia se combina con la felicidad y el bienestar de cada estudiante.</p>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    const accordionItems = document.querySelectorAll('.pq-accordion-item');
+                    accordionItems.forEach(item => {
+                        const header = item.querySelector('.pq-accordion-header');
+                        header.addEventListener('click', () => {
+                            accordionItems.forEach(other => {
+                                if (other !== item) other.classList.remove('active');
+                            });
+                            item.classList.toggle('active');
+                        });
+                    });
+                });
+            </script>
+
+            <div class="pq-stats-grid">
+                <div class="pq-stat-item">
+                    <img src="assets/AAA.png" alt="AAA" class="pq-stat-icon">
+                    <p>Categoría del Ranking<br>The Sapiens Col-Sapiens</p>
+                </div>
+                <div class="pq-stat-item">
+                    <img src="assets/+30.png" alt="+30" class="pq-stat-icon">
+                    <p>Años ofreciendo un<br>servicio educativo de calidad</p>
+                </div>
+                <div class="pq-stat-item">
+                    <img src="assets/Grupo 4266.png" alt="Certificaciones" class="pq-stat-icon logos-img">
+                    <p>Certificación internacional<br>Proyecto educativo IB</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline Section -->
+        <section class="pq-timeline-section parallax-bg" style="background-image: url('assets/Grupo 3982.jpg');">
+            <div class="pq-timeline-overlay"></div>
+            <div class="pq-timeline-content">
+                <h2 class="pq-section-title">¿Por qué El Hontanar es uno de los mejores<br>colegios en Bogotá y Chía?</h2>
+                
+                <div class="pq-timeline-container" id="timeline-anim-container">
+                    
+                    <div class="pq-timeline-step anim-step">
+                        <div class="pq-circle"><img src="assets/Grupo 4458.png" alt="Comunidad"></div>
+                        <h4>Comunidad</h4>
+                        <p>Familia y comunidad: Aquí todos se sienten parte de un proyecto común y la gratitud, el respeto y el apoyo se viven a diario.</p>
+                    </div>
+
+                    <img src="assets/Trazado 21577.png" class="pq-timeline-arrow anim-step" alt="arrow">
+
+                    <div class="pq-timeline-step anim-step">
+                        <div class="pq-circle"><img src="assets/Grupo 4457.png" alt="Innovación"></div>
+                        <h4>Innovación</h4>
+                        <p>Innovación y mejora continua: Nuestro colegio se reinventa, buscando la excelencia académica y el bienestar de los estudiantes.</p>
+                    </div>
+
+                    <!-- Arrow Down -->
+                    <img src="assets/Trazado 21577.png" class="pq-timeline-arrow arrow-up anim-step" alt="arrow">
+
+                    <div class="pq-timeline-step anim-step">
+                        <div class="pq-circle"><img src="assets/Componente 16 - 1.png" alt="Campus"></div>
+                        <h4>Campus</h4>
+                        <p>Campus campestre y ecológico: Formamos en valores ecológicos en espacios amplios y modernos para aprender sobre cuidado de recursos naturales.</p>
+                    </div>
+
+                    <img src="assets/Trazado 21577.png" class="pq-timeline-arrow anim-step" alt="arrow">
+
+                    <div class="pq-timeline-step anim-step">
+                        <div class="pq-circle"><img src="assets/Grupo 4456.png" alt="Bienestar"></div>
+                        <h4>Bienestar</h4>
+                        <p>Seguridad y felicidad: Cero tolerancia al acoso escolar y cuidado en el bienestar emocional de cada estudiante.</p>
+                    </div>
+                </div>
+
+                <script>
+                    document.addEventListener('DOMContentLoaded', () => {
+                        const observer = new IntersectionObserver((entries) => {
+                            entries.forEach(entry => {
+                                if (entry.isIntersecting) {
+                                    const elements = entry.target.querySelectorAll('.anim-step');
+                                    elements.forEach((el, index) => {
+                                        setTimeout(() => {
+                                            el.classList.add('visible');
+                                        }, index * 200); // 200ms delay between each element
+                                    });
+                                    observer.unobserve(entry.target);
+                                }
+                            });
+                        }, { threshold: 0.2 });
+
+                        const container = document.getElementById('timeline-anim-container');
+                        if(container) observer.observe(container);
+                    });
+                </script>
+
+                <div class="pq-highlight-card">
+                    <span class="sparkle top-left">✦</span>
+                    <span class="sparkle bottom-right">✦</span>
+                    <p class="pq-card-kicker">- Gimnasio El Hontanar -</p>
+                    <h3 class="pq-card-title">
+                        Nuestro colegio campestre y amigable con el <span class="highlight-pill">medio ambiente</span>, es el escenario perfecto para el aprendizaje
+                    </h3>
+                    <p class="pq-card-subtitle">
+                        Somos innovadores y dinámicos, siempre en búsqueda de la mejora continua.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bento Grid Section -->
+        <section class="pq-bento-section">
+            <div class="pq-bento-grid">
+                <!-- Card 1: Image -->
+                <div class="bento-card bento-image" style="background-image: url('assets/154.jpg');">
+                    <div class="bento-image-content">
+                        <span class="bento-pill">Experiencia</span>
+                        <h3>UN COLEGIO DONDE CADA DÍA CUENTA</h3>
+                    </div>
+                    <div class="bento-corner-btn">↗</div>
+                </div>
+
+                <!-- Card 2: Glass Yellow -->
+                <div class="bento-card bento-glass-yellow">
+                    <p>En El Hontanar, cada familia encuentra un territorio seguro en Bogotá, donde los estudiantes descubren su potencial y construyen experiencias significativas.</p>
+                    <p>Formamos parte de los mejores colegios del norte de Bogotá; ofrecemos calidad educativa y acompañamiento constante para cada etapa del desarrollo de tus hijos.</p>
+                    <p class="bento-highlight">Nuestro objetivo es que cada niño y joven deje el colegio con habilidades académicas, emocionales y sociales que transformen su vida y la de su comunidad.</p>
+                    <div class="bento-corner-btn">↗</div>
+                </div>
+
+                <!-- Card 3: Glass White -->
+                <div class="bento-card bento-glass-white">
+                    <h3>La elección ideal</h3>
+                    <p>Elegirnos es elegir un colegio internacional de categoría AAA, donde la excelencia académica se combina con la felicidad y el bienestar de cada estudiante.</p>
+                    <p class="bento-highlight-line">¡Conoce nuestro proyecto educativo y descubre por qué somos un Great Place to Study!</p>
+                    <div class="bento-corner-btn">↗</div>
+                </div>
+
+                <!-- Card 4: Image -->
+                <div class="bento-card bento-image" style="background-image: url('assets/Copia de DSC_0875.JPG');">
+                    <div class="bento-image-content">
+                        <span class="bento-pill">Admisiones</span>
+                        <p>Si buscas un colegio bilingüe en Chía y Bogotá con enfoque integral, innovador y campestre, que combine excelencia, bienestar y proyección internacional, el Gimnasio El Hontanar es la elección ideal.</p>
+                        <a href="#" class="btn btn-yellow">Agenda tu cita aquí</a>
+                    </div>
+                    <div class="bento-corner-btn">↗</div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Social Icons Floating -->
+    <div class="social-floating">
+        <a href="#" class="social-icon green"><img src="assets/Whatsapp.png" alt="WA"></a>
+        <a href="#" class="social-icon yellow"><img src="assets/Componente 26 � 1.png" alt="MSG"></a>
+    </div>
+
+    <!-- CTA Box Overlapping the Footer Image -->
+    <div class="cta-box-wrapper cta-overlap tour-cta">
+        <div class="cta-box">
+            <h2>
+                Are you Ready to <br>
+                <span>Extraordinary</span>
+                <span class="highlight-potencial">
+                    Experience?
+                    <svg class="cta-swoosh" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 40">
+                        <path d="M 10 30 Q 150 15 280 35" fill="none" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                    </svg>
+                    <img src="assets/Trazado 21196.png" alt="Pencil" class="cta-pencil">
+                </span>
+            </h2>
+            <a href="#" class="btn btn-yellow btn-cta">Contact us <span class="btn-arrow">&gt;</span></a>
+        </div>
+        <img src="assets/ChatGPT Image 1 jul 2025, 17_28_04 (3).png" class="colibri-cta" alt="Colibri">
+    </div>
+
+    <!-- Footer Image -->
+    <section class="footer-image-section tour-footer-img">
+        <img src="assets/PHOTO-2025-07-30-09-58-52 (1).jpg" alt="Building" class="building-img">
+        <div class="curve-bottom">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path d="M0,0 Q720,240 1440,0 L1440,120 L0,120 Z" fill="#254478"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer new-footer">
+        <div class="footer-divider"></div>
+        <div class="footer-container">
+            <div class="footer-logo-col">
+                <img src="assets/Capa_2_xA0_Imagen.png" alt="Logo Footer" class="footer-shield">
+                <p>En el Gimnasio El Hontanar,<br>educamos para la vida, formando<br>ciudadanos íntegros, felices y preparados<br>para afrontar el futuro con confianza.</p>
+            </div>
+            <div class="footer-info-col">
+                <h4>DATOS DE CONTACTO</h4>
+                <ul>
+                    <li><img src="assets/whatsapp (4).png" alt="WhatsApp" class="footer-icon"> +57 316 4701496<br>+57 318 7170097</li>
+                    <li><img src="assets/telefono-inteligente (3).png" alt="Teléfono" class="footer-icon"> +57 316 4701496<br>+57 318 7170097</li>
+                    <li><img src="assets/sobre (1).png" alt="Email" class="footer-icon"> admisiones@gimnasiohontanar.edu.co<br>admisiones2@gimnasiohontanar.edu.co<br>contacto@gimnasiohontanar.edu.co</li>
+                    <li><img src="assets/_x32_0_location.png" alt="Ubicación" class="footer-icon"> Cra. 7a 300 m. antes del peaje de<br>Fusca (Sentido Chia - Bogotá), Chia, Colombia.</li>
+                </ul>
+            </div>
+            <div class="footer-social-col">
+                <h4>SÍGANOS</h4>
+                <ul>
+                    <li><img src="assets/facebook (4).png" alt="Facebook" class="footer-icon"> gimnasioelhontanar</li>
+                    <li><img src="assets/Layer 2.png" alt="Instagram" class="footer-icon"> gimnasioelhontanar</li>
+                    <li><img src="assets/logotipo-de-linkedin (3).png" alt="LinkedIn" class="footer-icon"> gimnasio-el-hontanar</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+
