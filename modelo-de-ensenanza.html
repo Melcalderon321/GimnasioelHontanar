@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Enseñanza | Gimnasio El Hontanar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="tour-virtual.css">
+    <link rel="stylesheet" href="modelo-de-ensenanza.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="nav-pill">
+            <a href="index.html" class="logo">
+                <img src="assets/HONTANAR logo_ (3).png" alt="Hontanar Logo">
+            </a>
+            <div class="nav-right">
+                <span class="menu-text">MENÚ</span>
+                <div class="hamburger-circle">
+                    <div class="hamburger">
+                        <span></span><span></span><span></span>
+                    </div>
+                </div>
+                <a href="#" class="btn btn-yellow btn-nav">Contáctanos <span class="arrow">&gt;</span></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sidebar Menu -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+    <nav class="sidebar-menu" id="sidebar-menu">
+        <div class="sidebar-header">
+            <img src="assets/Capa_2_xA0_Imagen.png" alt="Logo" class="sidebar-logo">
+            <button class="close-btn" id="close-sidebar">&times;</button>
+        </div>
+        <ul class="sidebar-nav">
+            <li class="has-submenu">
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-down"></i></span>
+                    <a href="#">Admisiones</a>
+                </div>
+                <ul class="submenu">
+                    <li><a href="tour-virtual.html">Tour Virtual</a></li>
+                    <li><a href="preguntas-frecuentes.html">Preguntas Frecuentes</a></li>
+                    <li><a href="por-que-estudiar.html">¿Por qué estudiar en el Gimnasio El Hontanar?</a></li>
+                    <li><a href="proceso-de-ingreso.html">Proceso de ingreso al Gimnasio El Hontanar</a></li>
+                </ul>
+            </li>
+            <li class="has-submenu expanded">
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-right"></i></span>
+                    <a href="#">Somos Hontanar</a>
+                </div>
+                <ul class="submenu" style="display: block;">
+                    <li><a href="modelo-de-ensenanza.html" style="color: var(--yellow); font-weight: 700;">Modelo de Enseñanza</a></li>
+                    <li><a href="nuestra-historia.html">Nuestra Historia</a></li>
+                    <li><a href="filosofia-y-valores.html">Filosofía y Valores</a></li>
+                    <li><a href="sello-hontanar.html">Sello Hontanar</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-right"></i></span>
+                    <a href="#">Cultura Internacional</a>
+                </div>
+            </li>
+            <li>
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-right"></i></span>
+                    <a href="#">Vida en el Campus</a>
+                </div>
+            </li>
+            <li>
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-right"></i></span>
+                    <a href="#">TecnoSer</a>
+                </div>
+            </li>
+            <li>
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-right"></i></span>
+                    <a href="#">Infraestructura</a>
+                </div>
+            </li>
+            <li>
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-right"></i></span>
+                    <a href="#">Oferta Académica</a>
+                </div>
+            </li>
+            <li>
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-right"></i></span>
+                    <a href="#">Contacto</a>
+                </div>
+            </li>
+        </ul>
+        <div class="sidebar-footer">
+            <a href="#" class="btn-sidebar btn-s-green"><span>⚲</span> VIRTUAL</a>
+            <a href="#" class="btn-sidebar btn-s-yellow"><span>🖨</span> ADMISIONES</a>
+        </div>
+    </nav>
+
+    <!-- Script for Sidebar -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.querySelector('.hamburger-circle');
+            const menuText = document.querySelector('.menu-text');
+            const sidebar = document.getElementById('sidebar-menu');
+            const overlay = document.getElementById('sidebar-overlay');
+            const closeBtn = document.getElementById('close-sidebar');
+
+            function toggleMenu() {
+                sidebar.classList.toggle('open');
+                overlay.classList.toggle('open');
+            }
+
+            if(hamburger) hamburger.addEventListener('click', toggleMenu);
+            if(menuText) menuText.addEventListener('click', toggleMenu);
+            if(closeBtn) closeBtn.addEventListener('click', toggleMenu);
+            if(overlay) overlay.addEventListener('click', toggleMenu);
+
+            // Collapsible submenus
+            const submenus = document.querySelectorAll('.has-submenu .menu-item');
+            submenus.forEach(item => {
+                item.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    item.parentElement.classList.toggle('expanded');
+                    // Toggle submenu display
+                    const submenuList = item.parentElement.querySelector('.submenu');
+                    if(submenuList) {
+                        submenuList.style.display = submenuList.style.display === 'block' ? 'none' : 'block';
+                    }
+                });
+            });
+        });
+    </script>
+
+    <!-- Main Container -->
+    <main class="modelo-page">
+        <!-- Unified Breadcrumbs -->
+        <div class="breadcrumbs">
+            <a href="index.html">Inicio</a> &gt; <a href="#">Somos Hontanar</a> &gt; <span class="current">Modelo de Enseñanza</span>
+        </div>
+
+        <!-- Unified Kicker and Title Header -->
+        <div class="tour-text-content" style="text-align: center;">
+            <h4 class="kicker">SOMOS HONTANAR</h4>
+            <h1 class="main-title">Modelo de <span>Enseñanza</span></h1>
+        </div>
+
+        <!-- LEVEL SELECTOR (TABS) -->
+        <div class="level-selector-wrapper">
+            <button class="level-tab-btn active" data-level="level-jardin">Jardín (Preescolar)</button>
+            <button class="level-tab-btn" data-level="level-primaria">Primaria</button>
+            <button class="level-tab-btn" data-level="level-secundaria">Secundaria (Escuela Media)</button>
+            <button class="level-tab-btn" data-level="level-media">Media (Escuela Alta)</button>
+        </div>
+
+        <!-- 1. PANE: JARDÍN (PREESCOLAR) -->
+        <div class="level-pane active" id="level-jardin">
+            <div class="level-title-container">
+                <h2>Preescolar en Bogotá: <span>Aprendizaje Significativo</span> en el Gimnasio El Hontanar</h2>
+            </div>
+            
+            <div class="bento-container-wrapper">
+                <!-- Columna Izquierda -->
+                <div class="bento-col-left">
+                    <div class="bento-img-vertical-wrap">
+                        <img src="assets/Grupo 4466.jpg" alt="Niños de preescolar en círculo" class="bento-img-v">
+                    </div>
+                    <div class="bento-card-color color-pink">
+                        <span class="card-num">03</span>
+                        <h3>Aprender Haciendo</h3>
+                        <p>Creemos en el <strong>error como parte del aprendizaje</strong>, en el trabajo en equipo y en formar niños felices, seguros y sensibles que aprenden haciendo cotidianamente en sus proyectos.</p>
+                    </div>
+                </div>
+                <!-- Columna Derecha -->
+                <div class="bento-col-right">
+                    <div class="bento-row-top">
+                        <div class="bento-card-color color-blue">
+                            <span class="card-num">01</span>
+                            <h3>Amor y Juego</h3>
+                            <p>En nuestro Preescolar, el aprendizaje tiene sentido: aquí los niños comienzan su vida escolar en un espacio seguro y amoroso, formándose a través del juego, la exploración, la literatura, el arte y la experimentación.</p>
+                        </div>
+                        <div class="bento-card-color color-green">
+                            <span class="card-num">02</span>
+                            <h3>Acompañamiento</h3>
+                            <p>Desarrollamos aprendizajes significativos desde pre-kínder hasta segundo. Nuestro acompañamiento permanente, con docentes bilingües y equipo de bienestar, fomenta la autonomía y pensamiento creativo.</p>
+                        </div>
+                    </div>
+                    <div class="bento-img-horizontal-wrap">
+                        <img src="assets/preescolar-horizontal.jpg" alt="Actividad lúdica de preescolar" class="bento-img-h">
+                        <div class="bento-img-horizontal-gold"></div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <!-- 2. PANE: PRIMARIA -->
+        <div class="level-pane" id="level-primaria">
+            <div class="level-title-container">
+                <h2>Primaria en el Gimnasio El Hontanar: <span>Enfoque Integral</span></h2>
+            </div>
+            
+            <div class="bento-container-wrapper">
+                <!-- Columna Izquierda -->
+                <div class="bento-col-left">
+                    <div class="bento-img-vertical-wrap">
+                        <img src="assets/Grupo 4471.jpg" alt="Estudiantes en el salón de clase de primaria" class="bento-img-v">
+                    </div>
+                    <div class="bento-card-color color-pink">
+                        <span class="card-num">03</span>
+                        <h3>Valores y Deporte</h3>
+                        <p>El <strong>arte y el deporte</strong> acompañan el proceso como reguladores emocionales, mientras que la tecnología se integra con un uso académico y responsable. Formamos en autoestima, autogestión y autoeficacia.</p>
+                    </div>
+                </div>
+                <!-- Columna Derecha -->
+                <div class="bento-col-right">
+                    <div class="bento-row-top">
+                        <div class="bento-card-color color-blue">
+                            <span class="card-num">01</span>
+                            <h3>Sentido Humano</h3>
+                            <p>En la Primaria del Gimnasio El Hontanar, los niños dan el paso a la <strong>formalidad académica</strong> sin perder su curiosidad ni el <strong>sentido humano del aprendizaje</strong>. Formamos niños seguros de lo que son y pueden lograr.</p>
+                        </div>
+                        <div class="bento-card-color color-green">
+                            <span class="card-num">02</span>
+                            <h3>Proyectos STEM+H</h3>
+                            <p>Gracias a proyectos interdisciplinarios con <strong>enfoque STEM+H</strong>, los estudiantes conectan saberes, formulan sus propias preguntas, construyen pensamiento crítico, creatividad y liderazgo ético.</p>
+                        </div>
+                    </div>
+                    <div class="bento-img-horizontal-wrap">
+                        <img src="assets/primaria-horizontal.jpg" alt="Estudiantes compartiendo en campus campestre de primaria" class="bento-img-h">
+                        <div class="bento-img-horizontal-gold"></div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <!-- 3. PANE: SECUNDARIA (ESCUELA MEDIA) -->
+        <div class="level-pane" id="level-secundaria">
+            <div class="level-title-container">
+                <h2>Escuela Media en el Gimnasio El Hontanar: Desarrollo de la <span>Autonomía</span></h2>
+            </div>
+            
+            <div class="bento-container-wrapper">
+                <!-- Columna Izquierda -->
+                <div class="bento-col-left">
+                    <div class="bento-img-vertical-wrap">
+                        <img src="assets/Grupo 4467.jpg" alt="Estudiantes en el laboratorio de escuela media" class="bento-img-v">
+                    </div>
+                    <div class="bento-card-color color-pink">
+                        <span class="card-num">03</span>
+                        <h3>Desarrollo Socioemocional</h3>
+                        <p>Nuestro modelo combina experiencias de aprendizaje, <strong>contenidos globales y currículos activos</strong> con componentes propios al desarrollo socioemocional que forman el carácter e identidad en esta decisiva etapa de la vida.</p>
+                    </div>
+                </div>
+                <!-- Columna Derecha -->
+                <div class="bento-col-right">
+                    <div class="bento-row-top">
+                        <div class="bento-card-color color-blue">
+                            <span class="card-num">01</span>
+                            <h3>Formación y Familia</h3>
+                            <p>Acompañamos a preadolescentes y adolescentes en una etapa de grandes cambios. Hacemos un trabajo compartido y muy cercano con las familias, fortaleciendo el desarrollo integral de la persona.</p>
+                        </div>
+                        <div class="bento-card-color color-green">
+                            <span class="card-num">02</span>
+                            <h3>Enseñanza para Comprensión</h3>
+                            <p>A través de proyectos interdisciplinarios y un modelo de enseñanza para la comprensión, fortalecemos el <strong>pensamiento crítico, la capacidad de preguntar, analizar, innovar y tomar sabias decisiones</strong>.</p>
+                        </div>
+                    </div>
+                    <div class="bento-img-horizontal-wrap">
+                        <img src="assets/escuela-media-horizontal.jpg" alt="Estudiantes de escuela media interactuando en el campus" class="bento-img-h">
+                        <div class="bento-img-horizontal-gold"></div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <!-- 4. PANE: MEDIA (ESCUELA ALTA) -->
+        <div class="level-pane" id="level-media">
+            <div class="level-title-container">
+                <h2>Escuela Alta en el Gimnasio El Hontanar: <span>Proyección Universitaria</span></h2>
+            </div>
+            
+            <div class="bento-container-wrapper">
+                <!-- Columna Izquierda -->
+                <div class="bento-col-left">
+                    <div class="bento-img-vertical-wrap">
+                        <img src="assets/Grupo 4469.jpg" alt="Joven estudiante de escuela alta" class="bento-img-v">
+                    </div>
+                    <div class="bento-card-color color-pink">
+                        <span class="card-num">03</span>
+                        <h3>Programa del Diploma IB</h3>
+                        <p>En décimo y undécimo fortalecemos el aprendizaje con el <strong>Programa del Diploma IB</strong>, una preparación de excelencia internacional con autogestión, disciplina, criterio propio y un perfil preparado para el mundo.</p>
+                    </div>
+                </div>
+                <!-- Columna Derecha -->
+                <div class="bento-col-right">
+                    <div class="bento-row-top">
+                        <div class="bento-card-color color-blue">
+                            <span class="card-num">01</span>
+                            <h3>Proyecto de Vida</h3>
+                            <p>Desde noveno grado acompañamos a los jóvenes en la consolidación de su **proyecto de vida** y su preparación óptima para la educación superior; un bachillerato en Bogotá y Chía de altísima calidad académica.</p>
+                        </div>
+                        <div class="bento-card-color color-green">
+                            <span class="card-num">02</span>
+                            <h3>Retos Académicos e IB</h3>
+                            <p>Los jóvenes asumen nuevos retos académicos, desarrollan el <strong>Proyecto Personal del Bachillerato Internacional (IB)</strong> y aprenden a investigar, conectar disciplinas e indagar en sus pasiones científicas.</p>
+                        </div>
+                    </div>
+                    <div class="bento-img-horizontal-wrap">
+                        <img src="assets/escuela-alta-horizontal.jpg" alt="Estudiantes en ceremonia o biblioteca de escuela alta" class="bento-img-h">
+                        <div class="bento-img-horizontal-gold"></div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </main>
+
+    <!-- Social Icons Floating -->
+    <div class="social-floating">
+        <a href="#" class="social-icon green"><img src="assets/Whatsapp.png" alt="WA"></a>
+        <a href="#" class="social-icon yellow"><img src="assets/Componente 26 - 1.png" alt="MSG"></a>
+    </div>
+
+    <!-- CTA Box Overlapping the Footer Image -->
+    <div class="cta-box-wrapper cta-overlap tour-cta">
+        <div class="cta-box">
+            <h2>
+                Are you Ready to <br>
+                <span>Extraordinary</span>
+                <span class="highlight-potencial">
+                    Experience?
+                    <svg class="cta-swoosh" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 40">
+                        <path d="M 10 30 Q 150 15 280 35" fill="none" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                    </svg>
+                    <img src="assets/Trazado 21196.png" alt="Pencil" class="cta-pencil">
+                </span>
+            </h2>
+            <a href="#" class="btn btn-yellow btn-cta">Contact us <span class="btn-arrow">&gt;</span></a>
+        </div>
+        <img src="assets/ChatGPT Image 1 jul 2025, 17_28_04 (3).png" class="colibri-cta" alt="Colibri">
+    </div>
+
+    <!-- Footer Image -->
+    <section class="footer-image-section tour-footer-img">
+        <img src="assets/PHOTO-2025-07-30-09-58-52 (1).jpg" alt="Building" class="building-img">
+        <div class="curve-bottom">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path d="M0,0 Q720,240 1440,0 L1440,120 L0,120 Z" fill="#254478"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer new-footer">
+        <div class="footer-divider"></div>
+        <div class="footer-container">
+            <div class="footer-logo-col">
+                <img src="assets/Capa_2_xA0_Imagen.png" alt="Logo Footer" class="footer-shield">
+                <p>En el Gimnasio El Hontanar,<br>educamos para la vida, formando<br>ciudadanos íntegros, felices y preparados<br>para afrontar el futuro con confianza.</p>
+            </div>
+            <div class="footer-info-col">
+                <h4>DATOS DE CONTACTO</h4>
+                <ul>
+                    <li><img src="assets/whatsapp (4).png" alt="WhatsApp" class="footer-icon"> +57 316 4701496<br>+57 318 7170097</li>
+                    <li><img src="assets/telefono-inteligente (3).png" alt="Teléfono" class="footer-icon"> +57 316 4701496<br>+57 318 7170097</li>
+                    <li><img src="assets/sobre (1).png" alt="Email" class="footer-icon"> admisiones@gimnasiohontanar.edu.co<br>admisiones2@gimnasiohontanar.edu.co<br>contacto@gimnasiohontanar.edu.co</li>
+                    <li><img src="assets/_x32_0_location.png" alt="Ubicación" class="footer-icon"> Cra. 7a 300 m. antes del peaje de<br>Fusca (Sentido Chia - Bogotá), Chia, Colombia.</li>
+                </ul>
+            </div>
+            <div class="footer-social-col">
+                <h4>SÍGANOS</h4>
+                <ul>
+                    <li><img src="assets/facebook (4).png" alt="Facebook" class="footer-icon"> gimnasioelhontanar</li>
+                    <li><img src="assets/Layer 2.png" alt="Instagram" class="footer-icon"> gimnasioelhontanar</li>
+                    <li><img src="assets/logotipo-de-linkedin (3).png" alt="LinkedIn" class="footer-icon"> gimnasio-el-hontanar</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Level tabs script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabButtons = document.querySelectorAll('.level-tab-btn');
+            const tabPanes = document.querySelectorAll('.level-pane');
+            
+            tabButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const target = btn.getAttribute('data-level');
+                    
+                    tabButtons.forEach(b => b.classList.remove('active'));
+                    tabPanes.forEach(p => p.classList.remove('active'));
+                    
+                    btn.classList.add('active');
+                    const targetPane = document.getElementById(target);
+                    if (targetPane) targetPane.classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

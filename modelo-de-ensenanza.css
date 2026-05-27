@@ -1,0 +1,391 @@
+/* ==========================================================================
+   MODELO DE ENSEÑANZA - ESTILOS ADICIONALES PREMIUM (BENTO UNIFICADO)
+   ========================================================================== */
+
+/* Main Container spacing */
+.modelo-page {
+    padding-top: 150px;
+    padding-bottom: 120px;
+    background-color: var(--blue);
+}
+
+/* ==========================================================================
+   SELECTOR DE NIVELES (TABS SUPERIOR)
+   ========================================================================== */
+.level-selector-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 40px auto 60px auto;
+    max-width: 900px;
+    flex-wrap: wrap;
+    z-index: 10;
+    position: relative;
+}
+
+.level-tab-btn {
+    font-family: var(--font-lato);
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.75);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 12px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.level-tab-btn:hover {
+    color: var(--white);
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.level-tab-btn.active {
+    background-color: var(--yellow);
+    color: var(--blue);
+    border-color: var(--yellow);
+    box-shadow: 0 8px 25px rgba(249, 239, 108, 0.3);
+    transform: translateY(-2px);
+}
+
+.level-pane {
+    display: none;
+}
+
+.level-pane.active {
+    display: block;
+}
+
+/* Staggered high-end motion entrance animation */
+.level-pane.active .level-title-container {
+    opacity: 0;
+    animation: bentoFadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0s both;
+}
+
+.level-pane.active .bento-col-left {
+    opacity: 0;
+    animation: bentoFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.08s both;
+}
+
+.level-pane.active .bento-col-right {
+    opacity: 0;
+    animation: bentoFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.18s both;
+}
+
+@keyframes bentoFadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==========================================================================
+   CABECERA DEL NIVEL
+   ========================================================================== */
+.level-title-container {
+    text-align: center;
+    max-width: 950px;
+    margin: 0 auto 45px auto;
+    padding: 0 20px;
+}
+
+.level-title-container h2 {
+    font-family: var(--font-playfair);
+    font-size: 2.3rem;
+    font-weight: 700;
+    line-height: 1.35;
+    color: var(--white);
+}
+
+.level-title-container h2 span {
+    font-style: italic;
+    color: var(--yellow);
+}
+
+/* ==========================================================================
+   ESTRUCTURA BENTO GRID (NESTED FLEXBOX)
+   ========================================================================== */
+.bento-container-wrapper {
+    display: flex;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto 60px auto;
+    align-items: stretch;
+    padding: 0 20px;
+}
+
+/* Columnas */
+.bento-col-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.bento-col-right {
+    flex: 2.2;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.bento-row-top {
+    display: flex;
+    gap: 30px;
+}
+
+/* ==========================================================================
+   TARJETAS DE COLORES (pilares)
+   ========================================================================== */
+.bento-card-color {
+    flex: 1;
+    border-radius: 24px;
+    padding: 35px 30px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+}
+
+.bento-card-color:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+}
+
+/* Colores específicos de tarjetas */
+.bento-card-color.color-blue {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.03) 100%);
+    border: 1px solid rgba(249, 239, 108, 0.45);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+.bento-card-color.color-blue:hover {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0.06) 100%);
+    border-color: rgba(249, 239, 108, 0.7);
+}
+/* Sobrescribir colores de tipografía para la tarjeta de vidrio (glass) 1 */
+.bento-card-color.color-blue .card-num {
+    color: var(--yellow);
+    opacity: 0.95;
+}
+.bento-card-color.color-blue h3 {
+    color: var(--white);
+}
+.bento-card-color.color-blue p {
+    color: rgba(255, 255, 255, 0.9);
+}
+.bento-card-color.color-blue strong {
+    color: var(--yellow);
+}
+.bento-card-color.color-green {
+    background: rgba(249, 239, 108, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+.bento-card-color.color-green:hover {
+    background: rgba(249, 239, 108, 1);
+    border-color: rgba(255, 255, 255, 0.6);
+}
+/* Sobrescribir color de tipografía para la tarjeta 2 (ahora amarilla con letras azules) */
+.bento-card-color.color-green .card-num {
+    color: var(--blue);
+    opacity: 0.85;
+}
+.bento-card-color.color-green h3 {
+    color: var(--blue);
+}
+.bento-card-color.color-green p {
+    color: rgba(37, 68, 120, 0.92);
+}
+.bento-card-color.color-green strong {
+    color: var(--blue);
+}
+
+.bento-card-color.color-pink {
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.45);
+}
+.bento-card-color.color-pink:hover {
+    background: rgba(255, 255, 255, 1);
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Tipografía de las tarjetas */
+.card-num {
+    font-family: var(--font-lato);
+    font-size: 1.3rem;
+    font-weight: 900;
+    color: var(--blue);
+    opacity: 0.85;
+    letter-spacing: 1px;
+}
+
+.bento-card-color h3 {
+    font-family: var(--font-playfair);
+    font-size: 1.45rem;
+    font-weight: 700;
+    color: var(--blue);
+    margin: 0;
+    line-height: 1.3;
+}
+
+.bento-card-color p {
+    font-family: var(--font-lato);
+    font-size: 0.95rem;
+    color: rgba(37, 68, 120, 0.92);
+    line-height: 1.65;
+    margin: 0;
+}
+
+.bento-card-color strong {
+    color: var(--blue);
+}
+
+/* ==========================================================================
+   CONTENEDORES DE IMÁGENES
+   ========================================================================== */
+/* Imagen Vertical */
+.bento-img-vertical-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.bento-img-v {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.bento-img-vertical-wrap:hover .bento-img-v {
+    transform: scale(1.04);
+}
+
+/* Imagen Horizontal con Marco offset */
+.bento-img-horizontal-wrap {
+    position: relative;
+    width: 100%;
+    flex: 1;
+    min-height: 320px;
+}
+
+.bento-img-h {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+    position: relative;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.bento-img-horizontal-gold {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--yellow);
+    border-radius: 24px;
+    z-index: 1;
+    opacity: 0.55;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.bento-img-horizontal-wrap:hover .bento-img-h {
+    transform: translate(-4px, -4px);
+}
+
+.bento-img-horizontal-wrap:hover .bento-img-horizontal-gold {
+    transform: translate(4px, 4px);
+    opacity: 0.85;
+}
+
+/* ==========================================================================
+   BOTÓN DE ACCIÓN UNIFICADO
+   ========================================================================== */
+.bento-btn-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+/* ==========================================================================
+   DISEÑO RESPONSIVO (APILAMIENTO MOVIL)
+   ========================================================================== */
+@media (max-width: 991px) {
+    .bento-container-wrapper {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .bento-col-left, .bento-col-right {
+        flex: auto;
+        width: 100%;
+    }
+    
+    .bento-row-top {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .bento-img-vertical-wrap {
+        aspect-ratio: 16 / 10;
+    }
+    
+    .bento-img-horizontal-wrap {
+        flex: none;
+        min-height: auto;
+        aspect-ratio: 16 / 10;
+    }
+}
+
+@media (max-width: 768px) {
+    .level-selector-wrapper {
+        gap: 10px;
+        margin-bottom: 40px;
+    }
+    
+    .level-tab-btn {
+        padding: 10px 20px;
+        font-size: 0.88rem;
+        flex: 1 1 45%;
+        text-align: center;
+    }
+    
+    .level-title-container h2 {
+        font-size: 1.8rem;
+    }
+    
+    .bento-card-color {
+        padding: 30px 20px;
+    }
+    
+    .bento-card-color h3 {
+        font-size: 1.3rem;
+    }
+    
+    .bento-btn-wrap {
+        margin-top: 40px;
+    }
+}
