@@ -12,6 +12,132 @@
     <link rel="stylesheet" href="tour-virtual.css">
     <link rel="stylesheet" href="filosofia-y-valores.css">
     <link rel="stylesheet" href="vida-en-el-campus.css">
+    <style>
+        /* Custom card designs for Integracion page using user provided images */
+        .card-integracion-practica {
+            background-image: url('assets/Copia_de_DSC_0113.JPG');
+            background-size: cover;
+            background-position: center;
+        }
+        .card-integracion-practica::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(20, 30, 55, 0.96) 0%, rgba(20, 30, 55, 0.65) 55%, rgba(20, 30, 55, 0.2) 100%);
+            z-index: 1;
+        }
+        .card-integracion-practica .pillar-bento-heading {
+            color: var(--white) !important;
+        }
+        .card-integracion-practica .pillar-bento-heading span {
+            font-family: var(--font-playfair);
+            font-style: italic;
+            color: var(--yellow) !important;
+            font-weight: 600;
+        }
+        .card-integracion-practica .pillar-bento-text {
+            color: rgba(255, 255, 255, 0.9) !important;
+        }
+        .card-integracion-practica .pillar-bento-pill {
+            background-color: var(--yellow) !important;
+            color: var(--blue) !important;
+            font-weight: 700;
+        }
+
+        .card-integracion-proyectos {
+            background: var(--yellow) !important;
+            border: none !important;
+            justify-content: flex-start;
+        }
+        .card-integracion-proyectos:hover {
+            background: var(--yellow) !important;
+        }
+        .card-integracion-proyectos .pillar-bento-heading {
+            color: var(--blue) !important;
+        }
+        .card-integracion-proyectos .pillar-bento-heading span {
+            color: var(--blue) !important;
+            font-family: var(--font-playfair);
+            font-style: italic;
+            font-weight: 700;
+        }
+        .card-integracion-proyectos .pillar-bento-text {
+            color: rgba(37, 68, 120, 0.95) !important;
+            font-weight: 500;
+        }
+        .card-integracion-proyectos .pillar-bento-pill {
+            background-color: var(--blue) !important;
+            color: var(--yellow) !important;
+            font-weight: 700;
+        }
+        .card-integracion-proyectos .bento-corner-btn {
+            background-color: var(--blue) !important;
+            color: var(--white) !important;
+        }
+        .card-integracion-proyectos:hover .bento-corner-btn {
+            background-color: var(--white) !important;
+            color: var(--blue) !important;
+        }
+
+        .card-integracion-bienestar {
+            background: rgba(240, 245, 255, 0.95) !important;
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.6) !important;
+            justify-content: flex-start;
+        }
+        .card-integracion-bienestar:hover {
+            background: rgba(240, 245, 255, 1) !important;
+        }
+        .card-integracion-bienestar .pillar-bento-heading {
+            color: var(--blue) !important;
+        }
+        .card-integracion-bienestar .pillar-bento-heading span {
+            color: var(--blue) !important;
+            font-family: var(--font-playfair);
+            font-style: italic;
+            font-weight: 700;
+        }
+        .card-integracion-bienestar .pillar-bento-text {
+            color: rgba(37, 68, 120, 0.9) !important;
+            font-weight: 500;
+        }
+        .card-integracion-bienestar .pillar-bento-pill {
+            background-color: var(--blue) !important;
+            color: var(--yellow) !important;
+            font-weight: 700;
+        }
+        .card-integracion-bienestar .bento-corner-btn {
+            background-color: var(--blue) !important;
+            color: var(--white) !important;
+        }
+        .card-integracion-bienestar:hover .bento-corner-btn {
+            background-color: var(--yellow) !important;
+            color: var(--blue) !important;
+        }
+
+        .pillar-bento-card {
+            height: 380px !important;
+            min-height: auto !important;
+        }
+        /* Reducir el padding interno de las tarjetas */
+        .pillar-bento-body {
+            padding: 25px 22px !important;
+        }
+        /* Ajustar espaciados internos y tamaño de fuente para compactar */
+        .pillar-bento-heading {
+            font-size: 1.6rem !important;
+            margin-bottom: 8px !important;
+            line-height: 1.3 !important;
+        }
+        .pillar-bento-pill {
+            margin-bottom: 10px !important;
+        }
+        .pillar-bento-text {
+            font-size: 0.9rem !important;
+            line-height: 1.55 !important;
+        }
+    </style>
 </head>
 <body>
     <!-- Navbar -->
@@ -149,8 +275,7 @@
         });
     </script>
 
-    <!-- Page Content -->
-    <main class="vida-page">
+     <main class="vida-page">
         <div class="vida-container">
             <!-- Breadcrumbs -->
             <div class="breadcrumbs">
@@ -165,47 +290,84 @@
 
             <p class="vida-lead-paragraph hontanar-scroll-reveal">Cuando se integra la tecnología de manera estratégica, se convierte en un puente que <strong style="color:var(--white);">conecta todas las áreas del conocimiento</strong>. En el Gimnasio El Hontanar, una institución reconocida entre los Colegios bilingües de Bogotá, la asignatura de Tecnología no funciona de manera aislada: dialoga con ciencias, arte, educación física, matemáticas y todas las asignaturas para construir experiencias de aprendizaje interdisciplinarias.</p>
 
-            <!-- Sección 1 -->
-            <div class="vida-text-section hontanar-scroll-reveal">
-                <p>Este modelo permite que los estudiantes comprendan que el conocimiento no está dividido, pues un proyecto puede comenzar con una pregunta científica, continuar con el diseño de una solución tecnológica y finalizar con la presentación de resultados en inglés, fortaleciendo la educación bilingüe y la comunicación efectiva.</p>
+            <!-- Sección 1: Split Content (Fotografía y Aprendizaje Interdisciplinar) -->
+            <div class="split-content-grid hontanar-scroll-reveal" style="margin-top: 60px; margin-bottom: 60px;">
+                <div class="split-text-wrap" style="text-align: left;">
+                    <span class="intro-card-label">APRENDIZAJE INTERDISCIPLINARIO</span>
+                    <h2 class="vida-section-title" style="text-align: left; font-size: 2rem; line-height: 1.3; margin-bottom: 25px; font-family: var(--font-lato); font-weight: 700; font-style: normal; color: var(--white);">¿Cómo conectamos la tecnología con todas las áreas del conocimiento?</h2>
+                    <p class="vida-paragraph">Este modelo permite que los estudiantes comprendan que el conocimiento no está dividido, pues un proyecto puede comenzar con una pregunta científica, continuar con el diseño de una solución tecnológica y finalizar con la presentación de resultados en inglés, fortaleciendo la educación bilingüe y la comunicación efectiva.</p>
+                    <p class="vida-paragraph">Al integrar la tecnología de forma transversal, se propicia un espacio donde la teoría y la práctica se fusionan. Los estudiantes no solo aprenden conceptos abstractos, sino que construyen prototipos y diseñan soluciones que les permiten ver el impacto real de lo que aprenden en su entorno escolar diario.</p>
+                </div>
+                <div class="split-image-wrap">
+                    <img src="assets/smiling-caucasian-girl-having-video-call-remote-classroom-using-laptop.jpg" alt="Estudiante en aula remota con laptop" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
             </div>
 
-            <!-- Highlight Card -->
-            <div class="pq-highlight-card hontanar-scroll-reveal" style="margin-top: 60px; margin-bottom: 60px;">
+            <!-- Título de Sección Bento -->
+            <div class="vida-header hontanar-scroll-reveal" style="margin-top: 80px; margin-bottom: 20px;">
+                <h4 class="kicker">- APRENDIZAJE TRANSVERSAL Y TECNOLOGÍA -</h4>
+                <h2 class="vida-section-title" style="font-size: 2.2rem; font-family: var(--font-lato); font-weight: 700; font-style: normal; color: var(--white); line-height: 1.3;">
+                    Clases prácticas y conectadas con recursos digitales,<br>
+                    <span style="font-family: var(--font-playfair); font-style: italic; color: var(--yellow);">para un aprendizaje contextualizado e interactivo</span>
+                </h2>
+            </div>
+
+            <!-- Sección 2: Bento Grid Cards (3 Column Bento Row) -->
+            <div class="pillar-bento-row" style="margin-bottom: 80px;">
+                
+                <!-- Card 1: Práctica (Copia_de_DSC_0113.JPG bg) -->
+                <div class="pillar-bento-card card-integracion-practica hontanar-scroll-reveal">
+                    <div class="pillar-bento-body">
+                        <span class="pillar-bento-pill">Práctica</span>
+                        <h3 class="pillar-bento-heading">Competencias<br><span>aplicadas</span></h3>
+                        <p class="pillar-bento-text">Desde el uso de simuladores online para experimentar fenómenos complejos hasta el desarrollo de propuestas aplicadas al entorno escolar, la integración tecnológica convierte cada clase en una experiencia práctica, dinámica y valiosa.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2: Conexión (Solid Yellow card) -->
+                <div class="pillar-bento-card card-integracion-proyectos hontanar-scroll-reveal">
+                    <div class="pillar-bento-body">
+                        <span class="pillar-bento-pill">Conexión</span>
+                        <h3 class="pillar-bento-heading">Proyectos<br><span>comunes</span></h3>
+                        <p class="pillar-bento-text">Al integrar tecnología con distintas asignaturas, los estudiantes descubren que una solución puede requerir conocimientos de varias áreas. Por ejemplo, un proyecto puede combinar programación básica, análisis de datos y diseño creativo para resolver un reto dentro del colegio.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3: Bienestar (Glassmorphic Light card) -->
+                <div class="pillar-bento-card card-integracion-bienestar hontanar-scroll-reveal">
+                    <div class="pillar-bento-body">
+                        <span class="pillar-bento-pill">Bienestar</span>
+                        <h3 class="pillar-bento-heading">Aprendizaje<br><span>significativo</span></h3>
+                        <p class="pillar-bento-text">Esta integración contribuye directamente al bienestar de los estudiantes, ya que el aprendizaje se vuelve significativo y motivador. Cuando comprenden el propósito de lo que estudian, aumenta su seguridad, su interés y su participación activa.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Sección 3: Highlight Card -->
+            <div class="pq-highlight-card hontanar-scroll-reveal" style="margin-top: 60px; margin-bottom: 80px; text-align: center;">
                 <span class="sparkle top-left">&#10022;</span>
                 <span class="sparkle bottom-right">&#10022;</span>
                 <p class="pq-card-kicker">- TECNOSER HONTANAR -</p>
                 <h3 class="pq-card-title">
-                    Competencias integradas desde el aula con <span class="highlight-pill">metodologías apoyadas en tecnología</span>.
+                    Competencias integradas desde el aula con <span class="highlight-pill">metodologías apoyadas en tecnología</span>
                 </h3>
-                <p class="pq-card-subtitle">
-                    Los docentes trabajan de manera colaborativa para diseñar proyectos comunes que respondan a problemáticas reales.
+                <p class="pq-card-subtitle" style="font-size: 1.1rem; line-height: 1.7; max-width: 900px; margin: 20px auto 0 auto; color: rgba(255,255,255,0.9);">
+                    Los docentes trabajan de manera colaborativa para diseñar proyectos comunes que respondan a problemáticas reales, promoviendo el trabajo en equipo, la investigación y la reflexión en todos los niveles.
                 </p>
             </div>
 
-            <!-- Sección 2 -->
-            <div class="vida-text-section hontanar-scroll-reveal">
-                <h2 class="vida-section-title">Competencias integradas desde el aula con metodologías apoyadas en tecnología</h2>
-                <p>Desde el uso de simuladores online para experimentar fenómenos complejos hasta el desarrollo de propuestas aplicadas al entorno escolar, la integración tecnológica convierte cada clase en una experiencia práctica, dinámica y valiosa.</p>
-                <p>El objetivo es claro: aprender haciendo. Las herramientas tecnológicas están disponibles para todos los estudiantes, permitiendo clases interactivas que fomentan la participación activa y el pensamiento analítico. Este enfoque fortalece competencias clave del Bachillerato Internacional, como la investigación, la reflexión y la resolución de problemas desde múltiples perspectivas.</p>
-            </div>
-
-            <!-- Sección 3 -->
-            <div class="vida-text-section hontanar-scroll-reveal">
-                <h2 class="vida-section-title">Clases prácticas y conectadas con el uso pedagógico de simuladores y recursos digitales</h2>
-                <p>Al integrar tecnología con distintas asignaturas, los estudiantes descubren que una solución puede requerir conocimientos de varias áreas. Por ejemplo, un proyecto puede combinar programación básica, análisis de datos y diseño creativo para resolver un reto dentro del colegio. Este proceso interdisciplinar fortalece la autonomía y el trabajo en equipo, elementos esenciales en los mejores colegios comprometidos con la formación integral.</p>
-            </div>
-
-            <!-- Sección 4 -->
-            <div class="vida-text-section hontanar-scroll-reveal">
-                <h2 class="vida-section-title">Aprendizaje transversal y tecnología</h2>
-                <p>Esta integración contribuye directamente al bienestar de los estudiantes, ya que el aprendizaje se vuelve significativo y motivador. Cuando comprenden el propósito de lo que estudian, aumenta su seguridad, su interés y su participación.</p>
-                <p>Como uno de los colegios en Chía y de los colegios calendario A en Bogotá que promueven experiencias educativas de alto nivel, El Hontanar entiende que la tecnología no es un fin, sino un medio para formar estudiantes capaces de conectar conocimientos, proponer soluciones innovadoras y desenvolverse con confianza en un mundo global.</p>
-            </div>
-
-            <!-- CTA texto -->
-            <div class="vida-text-section hontanar-scroll-reveal" style="margin-bottom: 60px;">
-                <p>Conoce nuestro proyecto educativo, visita el Gimnasio El Hontanar y descubre por qué la Integración Tecnológica es parte de nuestra experiencia como <strong>Great Place to Study</strong>.</p>
+            <!-- Sección 4: Split Grid Invertido (CTA y Visita) -->
+            <div class="split-content-grid hontanar-scroll-reveal" style="margin-top: 60px; margin-bottom: 80px;">
+                <div class="split-image-wrap">
+                    <img src="assets/Copia_de_DSC_0186.JPG" alt="Estudiantes en el campus campestre con tecnología" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="split-text-wrap" style="text-align: left;">
+                    <span class="intro-card-label" style="background-color: var(--green); color: var(--white);">GREAT PLACE TO STUDY</span>
+                    <h2 class="vida-section-title" style="text-align: left; font-size: 2rem; line-height: 1.3; margin-bottom: 25px; font-family: var(--font-lato); font-weight: 700; font-style: normal; color: var(--white);">Ven a conocer cómo nuestra comunidad educativa avanza</h2>
+                    <p class="vida-paragraph">Como uno de los colegios en Chía y de los colegios calendario A en Bogotá que promueven experiencias educativas de alto nivel, El Hontanar entiende que la tecnología no es un fin, sino un medio para formar estudiantes capaces de proponer soluciones innovadoras y desenvolverse con confianza.</p>
+                    <p class="vida-paragraph" style="border-left: 3px solid var(--yellow); padding-left: 15px; font-style: italic; color: rgba(255,255,255,0.9);">Conoce nuestro proyecto educativo, visita el Gimnasio El Hontanar y descubre por qué la Integración Tecnológica es parte de nuestra experiencia como Great Place to Study.</p>
+                </div>
             </div>
 
         </div>
