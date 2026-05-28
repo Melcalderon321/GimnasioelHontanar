@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa IB | Gimnasio El Hontanar</title>
+    <meta name="description" content="Colegio del Mundo del Bachillerato Internacional (IB) en Bogotá. Programa de excelencia académica con proyección internacional y enfoque en pensamiento crítico.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="tour-virtual.css">
+    <link rel="stylesheet" href="programa-ib.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="nav-pill">
+            <a href="index.html" class="logo">
+                <img src="assets/HONTANAR logo_ (3).png" alt="Hontanar Logo">
+            </a>
+            <div class="nav-right">
+                <span class="menu-text">MENÚ</span>
+                <div class="hamburger-circle">
+                    <div class="hamburger">
+                        <span></span><span></span><span></span>
+                    </div>
+                </div>
+                <a href="#" class="btn btn-yellow btn-nav">Contáctanos <span class="arrow">&gt;</span></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sidebar Menu -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+    <nav class="sidebar-menu" id="sidebar-menu">
+        <div class="sidebar-header">
+            <img src="assets/Capa_2_xA0_Imagen.png" alt="Logo" class="sidebar-logo">
+            <button class="close-btn" id="close-sidebar">&times;</button>
+        </div>
+        <ul class="sidebar-nav">
+            <li class="has-submenu">
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-down"></i></span>
+                    <a href="#">Admisiones</a>
+                </div>
+                <ul class="submenu">
+                    <li><a href="tour-virtual.html">Tour Virtual</a></li>
+                    <li><a href="preguntas-frecuentes.html">Preguntas Frecuentes</a></li>
+                    <li><a href="por-que-estudiar.html">¿Por qué estudiar en el Gimnasio El Hontanar?</a></li>
+                    <li><a href="proceso-de-ingreso.html">Proceso de ingreso al Gimnasio El Hontanar</a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-right"></i></span>
+                    <a href="#">Somos Hontanar</a>
+                </div>
+                <ul class="submenu">
+                    <li><a href="modelo-de-ensenanza.html">Modelo de Enseñanza</a></li>
+                    <li><a href="nuestra-historia.html">Nuestra Historia</a></li>
+                    <li><a href="filosofia-y-valores.html">Filosofía y Valores</a></li>
+                    <li><a href="sello-hontanar.html">Sello Hontanar</a></li>
+                </ul>
+            </li>
+            <li class="has-submenu expanded">
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-down"></i></span>
+                    <a href="#">Cultura Internacional</a>
+                </div>
+                <ul class="submenu" style="display: block;">
+                    <li><a href="multilinguismo.html">Multilingüismo</a></li>
+                    <li><a href="programa-ib.html" class="active" style="color: var(--yellow); font-weight: 700;">Programa IB</a></li>
+                    <li><a href="intercambio-hontanar.html">Intercambio Hontanar</a></li>
+                    <li><a href="consejeria-internacional.html">Consejería Internacional</a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-right"></i></span>
+                    <a href="#">Vida en el Campus</a>
+                </div>
+                <ul class="submenu">
+                    <li><a href="un-dia-escolar.html">Un Día Escolar</a></li>
+                    <li><a href="formacion-integral.html">Formación Integral Más Allá del Aula</a></li>
+                    <li><a href="bienestar-emocional.html">Bienestar Emocional</a></li>
+                    <li><a href="programa-casas.html">Programa Casas</a></li>
+                    <li><a href="character-counts.html">Character Counts</a></li>
+                    <li><a href="espacio-seguro.html">Espacio Seguro</a></li>
+                    <li><a href="espacios-de-bienestar-y-naturaleza.html">Espacios de Bienestar y Naturaleza</a></li>
+                    <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-right"></i></span>
+                    <a href="#">TecnoSer</a>
+                </div>
+            </li>
+            <li>
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-right"></i></span>
+                    <a href="#">Contacto</a>
+                </div>
+            </li>
+        </ul>
+        <div class="sidebar-footer">
+            <a href="#" class="btn-sidebar btn-s-green"><span>⚲</span> VIRTUAL</a>
+            <a href="#" class="btn-sidebar btn-s-yellow"><span>⌨</span> ADMISIONES</a>
+        </div>
+    </nav>
+
+    <!-- Script for Sidebar -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.querySelector('.hamburger-circle');
+            const menuText = document.querySelector('.menu-text');
+            const sidebar = document.getElementById('sidebar-menu');
+            const overlay = document.getElementById('sidebar-overlay');
+            const closeBtn = document.getElementById('close-sidebar');
+
+            function toggleMenu() {
+                sidebar.classList.toggle('open');
+                overlay.classList.toggle('open');
+            }
+
+            if(hamburger) hamburger.addEventListener('click', toggleMenu);
+            if(menuText) menuText.addEventListener('click', toggleMenu);
+            if(closeBtn) closeBtn.addEventListener('click', toggleMenu);
+            if(overlay) overlay.addEventListener('click', toggleMenu);
+
+            // Collapsible submenus
+            const submenus = document.querySelectorAll('.has-submenu .menu-item');
+            submenus.forEach(item => {
+                item.addEventListener('click', (e) => {
+                    if (e.target.tagName !== 'A') {
+                        e.preventDefault();
+                        item.parentElement.classList.toggle('expanded');
+                        const submenuList = item.parentElement.querySelector('.submenu');
+                        if(submenuList) {
+                            submenuList.style.display = submenuList.style.display === 'block' ? 'none' : 'block';
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+
+    <!-- Page Content Container -->
+    <main class="ib-page-container">
+        <!-- Unified Breadcrumbs -->
+        <div class="breadcrumbs">
+            <a href="index.html">Inicio</a> &gt; <a href="#">Cultura Internacional</a> &gt; <span class="current">Programa IB</span>
+        </div>
+
+        <!-- Unified Header Title Section -->
+        <div class="tour-text-content hontanar-scroll-reveal" style="text-align: center; margin-bottom: 15px;">
+            <h4 class="kicker">PROGRAMA IB</h4>
+            <h1 class="main-title">El mundo completo en un <br><span>solo colegio: Programa IB</span></h1>
+            
+            <!-- Logo del Programa IB -->
+            <div class="ib-logo-wrapper">
+                <img src="assets/Grupo 4266.png" alt="Logo Bachillerato Internacional" class="ib-header-logo">
+            </div>
+            
+            <!-- Textos de Introducción Unificados (Lato Regular y del mismo tamaño) -->
+            <div class="ib-intro-clean">
+                <p class="ib-intro-lead">Formación con estándares globales en un colegio del Mundo IB en Bogotá</p>
+                <p class="ib-intro-body">En el Gimnasio El Hontanar preparamos a nuestros estudiantes para un entorno cambiante, multicultural y competitivo.<br><br>Somos un Colegio del Mundo del Bachillerato Internacional (IB), compartiendo una filosofía con instituciones de alta calidad en todo el mundo: el compromiso de mejorar la enseñanza y el aprendizaje de una comunidad escolar diversa e inclusiva, a través de programas de educación internacional de alta calidad y con marcos de evaluación rigurosos.</p>
+            </div>
+        </div>
+
+        <!-- SECCIÓN 1: MODELO PEDAGÓGICO (Estilo Imagen Referencia) -->
+        <section class="ib-pedagogy-section">
+            <div class="ib-pedagogy-card hontanar-scroll-reveal">
+                <!-- White Shines and Filigree Watermarks -->
+                <div class="pedagogy-watermark-shine"></div>
+                <div class="pedagogy-watermark-filigree">
+                    <svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="750" cy="50" r="180" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" stroke-dasharray="8 8" />
+                        <circle cx="750" cy="50" r="240" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="1" />
+                        <circle cx="750" cy="50" r="300" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1" />
+                        <path d="M-50,350 Q100,200 300,300 T700,250" fill="none" stroke="rgba(255,255,255,0.22)" stroke-width="2" />
+                        <path d="M-50,380 Q150,230 350,330 T750,280" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1" />
+                    </svg>
+                </div>
+                
+                <!-- Cabecera de la sección -->
+                <div class="ib-pedagogy-header">
+                    <h2 class="ib-pedagogy-title">
+                        Un modelo pedagógico que va más allá de la memoria: Colegios IB
+                    </h2>
+                </div>
+                
+                <!-- Retícula de 3 columnas -->
+                <div class="ib-pedagogy-grid">
+                    
+                    <!-- Item 1: Indagación y Crítica -->
+                    <div class="ib-pedagogy-item">
+                        <div class="pedagogy-img-wrapper">
+                            <img src="assets/DSC_0762_copia.jpg" alt="Indagación y pensamiento crítico" class="pedagogy-img">
+                        </div>
+                        <h3 class="pedagogy-item-title">Indagación y Crítica</h3>
+                        <p class="pedagogy-item-desc">
+                            El modelo IB no se basa en la memorización de contenidos, sino en el desarrollo de <strong>habilidades de indagación</strong>, mentalidad abierta y <strong>pensamiento crítico</strong>.
+                        </p>
+                    </div>
+
+                    <!-- Item 2: Autonomía e Investigación -->
+                    <div class="ib-pedagogy-item">
+                        <div class="pedagogy-img-wrapper">
+                            <img src="assets/Hontanar-WEB-09-2022-326-ALTA.jpg" alt="Investigación independiente y autonomía" class="pedagogy-img">
+                        </div>
+                        <h3 class="pedagogy-item-title">Autonomía e Investigación</h3>
+                        <p class="pedagogy-item-desc">
+                            A través del <strong>Programa del Diploma (PD)</strong> y sus componentes previos, los estudiantes aprenden a investigar de manera autónoma y a plantear soluciones a problemas reales.
+                        </p>
+                    </div>
+
+                    <!-- Item 3: Rigurosidad Académica -->
+                    <div class="ib-pedagogy-item">
+                        <div class="pedagogy-img-wrapper">
+                            <img src="assets/deporte-3.png" alt="Rigurosidad académica superior" class="pedagogy-img">
+                        </div>
+                        <h3 class="pedagogy-item-title">Rigurosidad Académica</h3>
+                        <p class="pedagogy-item-desc">
+                            Este enfoque les permite adquirir una <strong>rigurosidad académica superior</strong>, preparándolos con las mejores herramientas para el éxito en la educación superior.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: PERFIL DE LA COMUNIDAD IB (INTERACTIVE GRID) -->
+        <section class="ib-profile-section">
+            <div class="ib-section-header hontanar-scroll-reveal" style="margin-bottom: 50px;">
+                <h2 class="section-heading">Mentalidad internacional, ciudadanos del mundo: <br><span>descubre las ventajas del Bachillerato Internacional</span></h2>
+                <p class="ib-section-lead-centered">El programa fomenta el desarrollo de ciudadanos con <strong>mentalidad internacional</strong>, conscientes de su papel en la sociedad y con una profunda <strong>sensibilidad hacia otras culturas</strong>. Los estudiantes del Hontanar se destacan por su capacidad de argumentar con criterio, trabajar en equipo y liderar proyectos con un <strong>alto sentido ético</strong>.</p>
+            </div>
+
+            <!-- Grid de 4 tarjetas de atributos del Perfil de la Comunidad IB -->
+            <div class="ib-profile-grid">
+                
+                <!-- Atributo 1: Audaces -->
+                <div class="ib-profile-card hontanar-scroll-reveal">
+                    <div class="profile-card-glow"></div>
+                    <div class="profile-header">
+                        <div class="profile-icon-wrapper">
+                            <svg class="profile-icon-shine-svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C12 7.5 16.5 12 22 12C16.5 12 12 16.5 12 22C12 16.5 7.5 12 2 12C7.5 12 12 7.5 12 2Z"/>
+                            </svg>
+                        </div>
+                        <h3>Jóvenes Audaces</h3>
+                    </div>
+                    <div class="profile-divider"></div>
+                    <p class="profile-desc">Afrontan la incertidumbre con previsión y determinación. Trabajan de forma autónoma y colaborativa para explorar nuevas ideas y defender con valor sus convicciones.</p>
+                </div>
+
+                <!-- Atributo 2: Reflexivos -->
+                <div class="ib-profile-card hontanar-scroll-reveal">
+                    <div class="profile-card-glow"></div>
+                    <div class="profile-header">
+                        <div class="profile-icon-wrapper">
+                            <svg class="profile-icon-shine-svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C12 7.5 16.5 12 22 12C16.5 12 12 16.5 12 22C12 16.5 7.5 12 2 12C7.5 12 12 7.5 12 2Z"/>
+                            </svg>
+                        </div>
+                        <h3>Jóvenes Reflexivos</h3>
+                    </div>
+                    <div class="profile-divider"></div>
+                    <p class="profile-desc">Evalúan detenidamente su propio aprendizaje y sus fortalezas y debilidades personales a fin de apoyar su aprendizaje y desarrollo personal de manera consciente.</p>
+                </div>
+
+                <!-- Atributo 3: Buenos Comunicadores -->
+                <div class="ib-profile-card hontanar-scroll-reveal">
+                    <div class="profile-card-glow"></div>
+                    <div class="profile-header">
+                        <div class="profile-icon-wrapper">
+                            <svg class="profile-icon-shine-svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C12 7.5 16.5 12 22 12C16.5 12 12 16.5 12 22C12 16.5 7.5 12 2 12C7.5 12 12 7.5 12 2Z"/>
+                            </svg>
+                        </div>
+                        <h3>Buenos Comunicadores</h3>
+                    </div>
+                    <div class="profile-divider"></div>
+                    <p class="profile-desc">Se expresan con confianza y creatividad en diversas lenguas. Colaboran eficazmente escuchando atentamente las perspectivas de otras personas y grupos.</p>
+                </div>
+
+                <!-- Atributo 4: Íntegros -->
+                <div class="ib-profile-card hontanar-scroll-reveal">
+                    <div class="profile-card-glow"></div>
+                    <div class="profile-header">
+                        <div class="profile-icon-wrapper">
+                            <svg class="profile-icon-shine-svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C12 7.5 16.5 12 22 12C16.5 12 12 16.5 12 22C12 16.5 7.5 12 2 12C7.5 12 12 7.5 12 2Z"/>
+                            </svg>
+                        </div>
+                        <h3>Jóvenes Íntegros</h3>
+                    </div>
+                    <div class="profile-divider"></div>
+                    <p class="profile-desc">Actúan con integridad y honradez, con un profundo sentido de la equidad, la justicia y el respeto por la dignidad y los derechos de las personas en todo el mundo.</p>
+                </div>
+
+            </div>
+            
+            <div class="ib-profile-summary-pill hontanar-scroll-reveal">
+                <span>El perfil de la comunidad de aprendizaje del IB guía nuestro día a día.</span>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 3: VENTAJAS ACCESO UNIVERSITARIO (LAYOUT CARD ÚNICA premium) -->
+        <section class="ib-university-section">
+            <div class="ib-university-card hontanar-scroll-reveal">
+                
+                <!-- Cabecera Centrada -->
+                <div class="ib-university-header">
+                    <h2 class="exchange-title">Ventajas del Programa del Diploma IB <br><span class="highlight-yellow-italic">para el acceso universitario</span></h2>
+                    <p class="ib-university-lead">El Bachillerato Internacional abre las puertas a las mejores universidades de Colombia y el mundo. Los egresados desarrollan competencias críticas para el éxito en su educación superior.</p>
+                </div>
+
+                <!-- Grid de micro-tarjetas de beneficios -->
+                <div class="ib-university-grid">
+                    <div class="ib-university-pill">
+                        <span class="check-icon-premium">✓</span>
+                        <span class="pill-text">Posibilidad de homologar créditos universitarios en diversas instituciones nacionales e internacionales</span>
+                    </div>
+                    <div class="ib-university-pill">
+                        <span class="check-icon-premium">✓</span>
+                        <span class="pill-text">Desarrollo de competencias de investigación y redacción académica mediante la Monografía</span>
+                    </div>
+                    <div class="ib-university-pill">
+                        <span class="check-icon-premium">✓</span>
+                        <span class="pill-text">Preparación metodológica rigurosa que facilita la transición a la educación superior</span>
+                    </div>
+                    <div class="ib-university-pill">
+                        <span class="check-icon-premium">✓</span>
+                        <span class="pill-text">Reconocimiento global preferente en procesos de admisión de universidades de élite</span>
+                    </div>
+                </div>
+
+                <!-- Spotlight Quote Callout Centrado -->
+                <div class="ib-university-quote">
+                    <p>Un pasaporte académico global: <span class="quote-italic-highlight">la rigurosidad del Diploma IB prepara para los retos de la vida real.</span></p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Scroll Reveal Observer Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.08 });
+
+            const scrollElements = document.querySelectorAll('.hontanar-scroll-reveal');
+            scrollElements.forEach(el => revealObserver.observe(el));
+        });
+    </script>
+
+    <!-- Social Icons Floating -->
+    <div class="social-floating">
+        <a href="#" class="social-icon green"><img src="assets/Whatsapp.png" alt="WA"></a>
+        <a href="#" class="social-icon yellow"><img src="assets/Componente 26 - 1.png" alt="MSG"></a>
+    </div>
+
+    <!-- CTA Box Overlapping the Footer Image -->
+    <div class="cta-box-wrapper cta-overlap tour-cta">
+        <div class="cta-box">
+            <h2>
+                Are you Ready to <br>
+                <span>Extraordinary</span>
+                <span class="highlight-potencial">
+                    Experience?
+                    <svg class="cta-swoosh" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 40">
+                        <path d="M 10 30 Q 150 15 280 35" fill="none" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                    </svg>
+                    <img src="assets/Trazado 21196.png" alt="Pencil" class="cta-pencil">
+                </span>
+            </h2>
+            <a href="#" class="btn btn-yellow btn-cta">Contact us <span class="btn-arrow">&gt;</span></a>
+        </div>
+        <img src="assets/ChatGPT Image 1 jul 2025, 17_28_04 (3).png" class="colibri-cta" alt="Colibri">
+    </div>
+
+    <!-- Footer Image -->
+    <section class="footer-image-section tour-footer-img">
+        <img src="assets/PHOTO-2025-07-30-09-58-52 (1).jpg" alt="Building" class="building-img">
+        <div class="curve-bottom">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path d="M0,0 Q720,240 1440,0 L1440,120 L0,120 Z" fill="#254478"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer new-footer">
+        <div class="footer-divider"></div>
+        <div class="footer-container">
+            <div class="footer-logo-col">
+                <img src="assets/Capa_2_xA0_Imagen.png" alt="Logo Footer" class="footer-shield">
+                <p>En el Gimnasio El Hontanar,<br>educamos para la vida, formando<br>ciudadanos íntegros, felices y preparados<br>para afrontar el futuro con confianza.</p>
+            </div>
+            <div class="footer-info-col">
+                <h4>DATOS DE CONTACTO</h4>
+                <ul>
+                    <li><img src="assets/whatsapp (4).png" alt="WhatsApp" class="footer-icon"> +57 316 4701496<br>+57 316 4701496</li>
+                    <li><img src="assets/telefono-inteligente (3).png" alt="Teléfono" class="footer-icon"> +57 316 4701496<br>+57 316 4701496</li>
+                    <li><img src="assets/sobre (1).png" alt="Email" class="footer-icon"> admisiones@gimnasiohontanar.edu.co<br>admisiones2@gimnasiohontanar.edu.co<br>contacto@gimnasiohontanar.edu.co</li>
+                    <li><img src="assets/_x32_0_location.png" alt="Ubicación" class="footer-icon"> Cra. 7a 300 m. antes del peaje de<br>Fusca (Sentido Chia - Bogotá), Chia, Colombia.</li>
+                </ul>
+            </div>
+            <div class="footer-social-col">
+                <h4>SÍGANOS</h4>
+                <ul>
+                    <li><img src="assets/facebook (4).png" alt="Facebook" class="footer-icon"> gimnasioelhontanar</li>
+                    <li><img src="assets/Layer 2.png" alt="Instagram" class="footer-icon"> gimnasioelhontanar</li>
+                    <li><img src="assets/logotipo-de-linkedin (3).png" alt="LinkedIn" class="footer-icon"> gimnasio-el-hontanar</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sello Hontanar | Gimnasio El Hontanar</title>
-    <meta name="description" content="Conoce el Sello Hontanar: unimos la excelencia académica y la formación humana integral en un campus campestre y bilingüe en Bogotá y Chía.">
+    <title>Espacios de Bienestar y Naturaleza | Gimnasio El Hontanar</title>
+    <meta name="description" content="College Counseling en el Gimnasio El Hontanar. Guía, asesoría y conexión con universidades nacionales e internacionales desde noveno grado.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="tour-virtual.css">
-    <link rel="stylesheet" href="sello-hontanar.css">
+    <link rel="stylesheet" href="consejeria-internacional.css">
+    <link rel="stylesheet" href="vida-en-el-campus.css">
 </head>
 <body>
     <!-- Navbar -->
@@ -44,31 +45,31 @@
                     <span class="icon-circle"><i class="arrow-down"></i></span>
                     <a href="#">Admisiones</a>
                 </div>
-                <ul class="submenu">
+                <ul class="submenu" >
                     <li><a href="tour-virtual.html">Tour Virtual</a></li>
                     <li><a href="preguntas-frecuentes.html">Preguntas Frecuentes</a></li>
                     <li><a href="por-que-estudiar.html">¿Por qué estudiar en el Gimnasio El Hontanar?</a></li>
                     <li><a href="proceso-de-ingreso.html">Proceso de ingreso al Gimnasio El Hontanar</a></li>
                 </ul>
             </li>
-            <li class="has-submenu expanded">
+            <li class="has-submenu">
                 <div class="menu-item">
-                    <span class="icon-circle"><i class="arrow-down"></i></span>
+                    <span class="icon-circle"><i class="arrow-right"></i></span>
                     <a href="#">Somos Hontanar</a>
                 </div>
                 <ul class="submenu">
                     <li><a href="modelo-de-ensenanza.html">Modelo de Enseñanza</a></li>
                     <li><a href="nuestra-historia.html">Nuestra Historia</a></li>
                     <li><a href="filosofia-y-valores.html">Filosofía y Valores</a></li>
-                    <li><a href="sello-hontanar.html" class="active">Sello Hontanar</a></li>
+                    <li><a href="sello-hontanar.html">Sello Hontanar</a></li>
                 </ul>
             </li>
             <li class="has-submenu">
                 <div class="menu-item">
-                    <span class="icon-circle"><i class="arrow-down"></i></span>
+                    <span class="icon-circle"><i class="arrow-right"></i></span>
                     <a href="#">Cultura Internacional</a>
                 </div>
-                <ul class="submenu">
+                <ul class="submenu" style="display: block;">
                     <li><a href="multilinguismo.html">Multilingüismo</a></li>
                     <li><a href="programa-ib.html">Programa IB</a></li>
                     <li><a href="intercambio-hontanar.html">Intercambio Hontanar</a></li>
@@ -87,7 +88,7 @@
                     <li><a href="programa-casas.html">Programa Casas</a></li>
                     <li><a href="character-counts.html">Character Counts</a></li>
                     <li><a href="espacio-seguro.html">Espacio Seguro</a></li>
-                    <li><a href="espacios-de-bienestar-y-naturaleza.html">Espacios de Bienestar y Naturaleza</a></li>
+                    <li><a href="espacios-de-bienestar-y-naturaleza.html" class="active" style="color: var(--yellow); font-weight: 700;">Espacios de Bienestar y Naturaleza</a></li>
                     <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
                 </ul>
             </li>
@@ -136,6 +137,10 @@
                     if (e.target.tagName !== 'A') {
                         e.preventDefault();
                         item.parentElement.classList.toggle('expanded');
+                        const submenuList = item.parentElement.querySelector('.submenu');
+                        if(submenuList) {
+                            submenuList.style.display = submenuList.style.display === 'block' ? 'none' : 'block';
+                        }
                     }
                 });
             });
@@ -143,81 +148,148 @@
     </script>
 
     <!-- Page Content Container -->
-    <main class="sello-page-container">
-        <!-- Unified Breadcrumbs -->
-        <div class="breadcrumbs">
-            <a href="index.html">Inicio</a> &gt; <a href="#">Somos Hontanar</a> &gt; <span class="current">Sello Hontanar</span>
-        </div>
-
-        <!-- Unified Header Title Section -->
-        <div class="tour-text-content hontanar-scroll-reveal" style="text-align: center;">
-            <h4 class="kicker">SOMOS HONTANAR</h4>
-            <h1 class="main-title">Sello <span>Hontanar</span></h1>
-        </div>
-
-        <!-- SELLO HONTANAR MAIN SECTION -->
-        <section class="sello-hontanar-section">
-            <div class="sello-intro-text hontanar-scroll-reveal">
-                <h2 class="sello-subtitle">El Hontanar es el colegio ideal para el <br><span>futuro de tu hijo</span></h2>
-                <p>Una de las decisiones más importantes es elegir bien el colegio de nuestros hijos y algo que valoran los padres de familia del Gimnasio El Hontanar, es que unimos la excelencia académica con la formación humana. Aquí se trabaja en el carácter, los valores y el pensamiento crítico, al mismo nivel que el aprendizaje académico, y ese es nuestro sello.</p>
-                <p>Somos un colegio bilingüe en Bogotá y Chía que acompaña a los niños y jóvenes para que desarrollen su autonomía, su sensibilidad social y un proyecto de vida con sentido. No es solo un buen colegio hoy, es el mejor lugar para la educación de tus hijos.</p>
+    <main class="vida-page">
+        <div class="vida-container">
+            <!-- Unified Breadcrumbs -->
+            <div class="breadcrumbs">
+                <a href="index.html">Inicio</a> &gt; <a href="#">Vida en el Campus</a> &gt; <span class="current">Espacios de Bienestar y Naturaleza</span>
             </div>
-            <div class="sello-diagram-container hontanar-scroll-reveal">
+
+            <!-- Unified Header Title Section -->
+            <div class="vida-header hontanar-scroll-reveal">
+                <h4 class="kicker">VIDA EN EL CAMPUS</h4>
+                <h1 class="main-title">Espacios de <span>Bienestar y Naturaleza</span></h1>
+            </div>
+
+            
+            <p class="vida-lead-paragraph hontanar-scroll-reveal">
+                El Gimnasio El Hontanar cuenta con un **campus campestre de primer nivel** diseñado para conectar el conocimiento con la naturaleza. Ubicadas sobre la carrera séptima, nuestras instalaciones ofrecen el equilibrio perfecto entre infraestructura de vanguardia y extensas zonas verdes.
+            </p>
+
+            <div class="bento-counseling-grid">
                 
-                <!-- Central child circle with orbit lines -->
-                <div class="sello-center-orbit hontanar-scroll-reveal">
-                    <div class="sello-orbit-line line-1"></div>
-                    <div class="sello-orbit-line line-2"></div>
-                    <div class="sello-center-child">
-                        <img src="assets/Grupo 4191.png" alt="Niño Sello Hontanar">
+                <div class="card-glass-blue hontanar-scroll-reveal">
+                    <span class="bento-card-icon">🔬</span>
+                    <h3>Aulas y Laboratorios</h3>
+                    <p>Espacios modernos e iluminados dotados con la última tecnología académica para investigación, enfoque STEM+H y fomento de la innovación.</p>
+                </div>
+
+                <div class="card-glass-blue hontanar-scroll-reveal">
+                    <span class="bento-card-icon">🎨</span>
+                    <h3>Arte y Cultura</h3>
+                    <p>Talleres especializados de música, artes plásticas y teatro diseñados para estimular la creatividad, autogestión y sensibilidad estética de los jóvenes.</p>
+                </div>
+
+                <div class="card-glass-blue hontanar-scroll-reveal">
+                    <span class="bento-card-icon">⚽</span>
+                    <h3>Campos Deportivos</h3>
+                    <p>Canchas de fútbol y polideportivos donde el movimiento y la actividad física forjan salud, disciplina y regulación emocional permanente.</p>
+                </div>
+
+            </div>
+
+            <!-- Parallax Mid-Page Divider -->
+            <div class="parallax-divider hontanar-scroll-reveal" style="background-image: url('assets/DSC_0022.jpg');">
+                <div class="parallax-overlay"></div>
+                <div class="parallax-content">
+                    <h2>La Naturaleza como Aula Viva</h2>
+                    <p>El contacto diario con la naturaleza reduce el estrés, mejora la concentración y promueve una sólida conciencia ecológica en niños y jóvenes desde preescolar hasta bachillerato.</p>
+                </div>
+            </div>
+
+            <!-- INTERACTIVE CSS DRIVEN GALLERY SECTION -->
+            <div class="gallery-section hontanar-scroll-reveal">
+                <h2 class="vida-section-title">Galería del <span>Campus Hontanar</span></h2>
+                
+                <div class="interactive-gallery">
+                    <!-- Tab Radio Toggles -->
+                    <input type="radio" name="gallery-t" id="tab-all" class="gallery-radio" checked>
+                    <input type="radio" name="gallery-t" id="tab-campus" class="gallery-radio">
+                    <input type="radio" name="gallery-t" id="tab-aulas" class="gallery-radio">
+                    <input type="radio" name="gallery-t" id="tab-sports" class="gallery-radio">
+                    
+                    <!-- Filters Navigation Labels -->
+                    <div class="gallery-filters">
+                        <label for="tab-all" class="gallery-tab-label">Todos</label>
+                        <label for="tab-campus" class="gallery-tab-label">Campus Campestre</label>
+                        <label for="tab-aulas" class="gallery-tab-label">Aulas y Arte</label>
+                        <label for="tab-sports" class="gallery-tab-label">Deportes</label>
+                    </div>
+                    
+                    <!-- Image Grid -->
+                    <div class="gallery-grid">
+                        
+                        <div class="gallery-img-card cat-campus">
+                            <img src="assets/DSC_0022.jpg" alt="Campus">
+                            <div class="gallery-img-overlay">
+                                <h4>Campus Verde</h4>
+                                <p>Zonas campestres</p>
+                            </div>
+                        </div>
+
+                        <div class="gallery-img-card cat-aulas">
+                            <img src="assets/Grupo 4466.jpg" alt="Aulas preescolar">
+                            <div class="gallery-img-overlay">
+                                <h4>Aulas Lúdicas</h4>
+                                <p>Preescolar Hontanar</p>
+                            </div>
+                        </div>
+
+                        <div class="gallery-img-card cat-aulas">
+                            <img src="assets/Grupo 4467.jpg" alt="Laboratorio">
+                            <div class="gallery-img-overlay">
+                                <h4>Laboratorios STEM</h4>
+                                <p>Investigación aplicada</p>
+                            </div>
+                        </div>
+
+                        <div class="gallery-img-card cat-sports">
+                            <img src="assets/deporte-3.png" alt="Deportes">
+                            <div class="gallery-img-overlay">
+                                <h4>Canchas de Fútbol</h4>
+                                <p>Escuelas deportivas</p>
+                            </div>
+                        </div>
+
+                        <div class="gallery-img-card cat-campus">
+                            <img src="assets/PHOTO-2025-07-30-09-58-52 (1).jpg" alt="Edificio">
+                            <div class="gallery-img-overlay">
+                                <h4>Edificio Campestre</h4>
+                                <p>Arquitectura Hontanar</p>
+                            </div>
+                        </div>
+
+                        <div class="gallery-img-card cat-sports">
+                            <img src="assets/primaria-horizontal.jpg" alt="Primaria">
+                            <div class="gallery-img-overlay">
+                                <h4>Zonas de Recreación</h4>
+                                <p>Descanso y deporte</p>
+                            </div>
+                        </div>
+
+                        <div class="gallery-img-card cat-campus">
+                            <img src="assets/escuela-media-horizontal.jpg" alt="Escuela media">
+                            <div class="gallery-img-overlay">
+                                <h4>Senderos Ecológicos</h4>
+                                <p>Contacto campestre</p>
+                            </div>
+                        </div>
+
+                        <div class="gallery-img-card cat-aulas">
+                            <img src="assets/timeline-bg.jpg" alt="Arte">
+                            <div class="gallery-img-overlay">
+                                <h4>Aulas de Arte</h4>
+                                <p>Música y teatro</p>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
-
-                <!-- Diagram Cards -->
-                <!-- Card 1: Aprender con Criterio Propio (Top Left) -->
-                <div class="sello-diagram-card card-top-left hontanar-scroll-reveal">
-                    <h3>Aprender con Criterio Propio</h3>
-                    <p>Afianzar la reflexión, la crítica constructiva y el análisis de ideas y actos.</p>
-                </div>
-
-                <!-- Card 2: Fortalecer su Identidad (Bottom Left) -->
-                <div class="sello-diagram-card card-bottom-left hontanar-scroll-reveal">
-                    <h3>Fortalecer su Identidad</h3>
-                    <p>Reconocer cualidades, respetar y asumir responsabilidades con compromiso y honestidad.</p>
-                </div>
-
-                <!-- Card 3: Crear Conciencia Humana (Right) -->
-                <div class="sello-diagram-card card-right-center hontanar-scroll-reveal">
-                    <h3>Crear Conciencia Humana</h3>
-                    <p>Liderazgo constructivo que analiza la realidad nacional y promueve la conservación ambiental.</p>
-                </div>
-
-                <!-- Arrows (Desktop only) -->
-                <img src="assets/Trazado 21504.png" class="sello-arrow arrow-left" alt="decoración flecha">
-                <img src="assets/Trazado 21500.png" class="sello-arrow arrow-right" alt="decoración flecha">
-
             </div>
-        </section>
+
+        </div>
     </main>
 
-    <!-- Scroll Reveal Observer Script -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const revealObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        revealObserver.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.1 });
-
-            const scrollElements = document.querySelectorAll('.hontanar-scroll-reveal');
-            scrollElements.forEach(el => revealObserver.observe(el));
-        });
-    </script>
-
-    <!-- Social Icons Floating -->
     <div class="social-floating">
         <a href="#" class="social-icon green"><img src="assets/Whatsapp.png" alt="WA"></a>
         <a href="#" class="social-icon yellow"><img src="assets/Componente 26 - 1.png" alt="MSG"></a>
@@ -279,5 +351,22 @@
             </div>
         </div>
     </footer>
+
+    <!-- Scroll Reveal Observer Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.08 });
+
+            const scrollElements = document.querySelectorAll('.hontanar-scroll-reveal');
+            scrollElements.forEach(el => revealObserver.observe(el));
+        });
+    </script>
 </body>
 </html>

@@ -97,7 +97,7 @@
 }
 
 .level-title-container h2 {
-    font-family: var(--font-playfair);
+    font-family: var(--font-lato);
     font-size: 2.3rem;
     font-weight: 700;
     line-height: 1.35;
@@ -105,6 +105,7 @@
 }
 
 .level-title-container h2 span {
+    font-family: var(--font-playfair);
     font-style: italic;
     color: var(--yellow);
 }
@@ -232,7 +233,7 @@
 }
 
 .bento-card-color h3 {
-    font-family: var(--font-playfair);
+    font-family: var(--font-lato);
     font-size: 1.45rem;
     font-weight: 700;
     color: var(--blue);
@@ -387,5 +388,100 @@
     
     .bento-btn-wrap {
         margin-top: 40px;
+    }
+}
+
+/* ==========================================================================
+   ACORDEÓN INTERACTIVO: FORMACIÓN INTEGRAL MÁS ALLÁ DEL AULA
+   ========================================================================== */
+.formacion-integral-section {
+    max-width: 900px;
+    margin: 60px auto 0 auto;
+    padding: 0 20px;
+    text-align: center;
+    scroll-margin-top: 120px;
+}
+
+.accordion-container {
+    margin-top: 30px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.accordion-item {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.accordion-item.active {
+    border-color: var(--yellow);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 25px rgba(249, 239, 108, 0.15);
+}
+
+.accordion-header {
+    padding: 22px 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.2s ease;
+}
+
+.accordion-header:hover {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.accordion-header h3 {
+    font-family: var(--font-lato);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--white);
+    margin: 0;
+}
+
+.accordion-item.active .accordion-header h3 {
+    color: var(--yellow);
+}
+
+.accordion-arrow {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.6);
+    transition: color 0.2s ease;
+}
+
+.accordion-item.active .accordion-arrow {
+    color: var(--yellow);
+}
+
+.accordion-content {
+    padding: 0 28px 24px 28px;
+    display: none;
+    animation: accordionSlide 0.35s ease;
+}
+
+.accordion-content p {
+    font-family: var(--font-lato);
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+}
+
+@keyframes accordionSlide {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

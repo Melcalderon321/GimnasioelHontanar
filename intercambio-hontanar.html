@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intercambio Hontanar | Gimnasio El Hontanar</title>
+    <meta name="description" content="Aprender inglés viviendo el mundo. Programa de Intercambio del Gimnasio El Hontanar en Bogotá y Chía: inmersión cultural, enfoque académico y seguimiento personalizado.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="tour-virtual.css">
+    <link rel="stylesheet" href="intercambio-hontanar.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="nav-pill">
+            <a href="index.html" class="logo">
+                <img src="assets/HONTANAR logo_ (3).png" alt="Hontanar Logo">
+            </a>
+            <div class="nav-right">
+                <span class="menu-text">MENÚ</span>
+                <div class="hamburger-circle">
+                    <div class="hamburger">
+                        <span></span><span></span><span></span>
+                    </div>
+                </div>
+                <a href="#" class="btn btn-yellow btn-nav">Contáctanos <span class="arrow">&gt;</span></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sidebar Menu -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+    <nav class="sidebar-menu" id="sidebar-menu">
+        <div class="sidebar-header">
+            <img src="assets/Capa_2_xA0_Imagen.png" alt="Logo" class="sidebar-logo">
+            <button class="close-btn" id="close-sidebar">&times;</button>
+        </div>
+        <ul class="sidebar-nav">
+            <li class="has-submenu">
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-down"></i></span>
+                    <a href="#">Admisiones</a>
+                </div>
+                <ul class="submenu">
+                    <li><a href="tour-virtual.html">Tour Virtual</a></li>
+                    <li><a href="preguntas-frecuentes.html">Preguntas Frecuentes</a></li>
+                    <li><a href="por-que-estudiar.html">¿Por qué estudiar en el Gimnasio El Hontanar?</a></li>
+                    <li><a href="proceso-de-ingreso.html">Proceso de ingreso al Gimnasio El Hontanar</a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-right"></i></span>
+                    <a href="#">Somos Hontanar</a>
+                </div>
+                <ul class="submenu">
+                    <li><a href="modelo-de-ensenanza.html">Modelo de Enseñanza</a></li>
+                    <li><a href="nuestra-historia.html">Nuestra Historia</a></li>
+                    <li><a href="filosofia-y-valores.html">Filosofía y Valores</a></li>
+                    <li><a href="sello-hontanar.html">Sello Hontanar</a></li>
+                </ul>
+            </li>
+            <li class="has-submenu expanded">
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-down"></i></span>
+                    <a href="#">Cultura Internacional</a>
+                </div>
+                <ul class="submenu" style="display: block;">
+                    <li><a href="multilinguismo.html">Multilingüismo</a></li>
+                    <li><a href="programa-ib.html">Programa IB</a></li>
+                    <li><a href="intercambio-hontanar.html" class="active" style="color: var(--yellow); font-weight: 700;">Intercambio Hontanar</a></li>
+                    <li><a href="consejeria-internacional.html">Consejería Internacional</a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-right"></i></span>
+                    <a href="#">Vida en el Campus</a>
+                </div>
+                <ul class="submenu">
+                    <li><a href="un-dia-escolar.html">Un Día Escolar</a></li>
+                    <li><a href="formacion-integral.html">Formación Integral Más Allá del Aula</a></li>
+                    <li><a href="bienestar-emocional.html">Bienestar Emocional</a></li>
+                    <li><a href="programa-casas.html">Programa Casas</a></li>
+                    <li><a href="character-counts.html">Character Counts</a></li>
+                    <li><a href="espacio-seguro.html">Espacio Seguro</a></li>
+                    <li><a href="espacios-de-bienestar-y-naturaleza.html">Espacios de Bienestar y Naturaleza</a></li>
+                    <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-right"></i></span>
+                    <a href="#">TecnoSer</a>
+                </div>
+            </li>
+            <li>
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-right"></i></span>
+                    <a href="#">Contacto</a>
+                </div>
+            </li>
+        </ul>
+        <div class="sidebar-footer">
+            <a href="#" class="btn-sidebar btn-s-green"><span>⚲</span> VIRTUAL</a>
+            <a href="#" class="btn-sidebar btn-s-yellow"><span>⌨</span> ADMISIONES</a>
+        </div>
+    </nav>
+
+    <!-- Script for Sidebar -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.querySelector('.hamburger-circle');
+            const menuText = document.querySelector('.menu-text');
+            const sidebar = document.getElementById('sidebar-menu');
+            const overlay = document.getElementById('sidebar-overlay');
+            const closeBtn = document.getElementById('close-sidebar');
+
+            function toggleMenu() {
+                sidebar.classList.toggle('open');
+                overlay.classList.toggle('open');
+            }
+
+            if(hamburger) hamburger.addEventListener('click', toggleMenu);
+            if(menuText) menuText.addEventListener('click', toggleMenu);
+            if(closeBtn) closeBtn.addEventListener('click', toggleMenu);
+            if(overlay) overlay.addEventListener('click', toggleMenu);
+
+            // Collapsible submenus
+            const submenus = document.querySelectorAll('.has-submenu .menu-item');
+            submenus.forEach(item => {
+                item.addEventListener('click', (e) => {
+                    if (e.target.tagName !== 'A') {
+                        e.preventDefault();
+                        item.parentElement.classList.toggle('expanded');
+                        const submenuList = item.parentElement.querySelector('.submenu');
+                        if(submenuList) {
+                            submenuList.style.display = submenuList.style.display === 'block' ? 'none' : 'block';
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+
+    <!-- Page Content Container -->
+    <main class="exchange-page-container">
+        <!-- Unified Breadcrumbs -->
+        <div class="breadcrumbs">
+            <a href="index.html">Inicio</a> &gt; <a href="#">Cultura Internacional</a> &gt; <span class="current">Intercambio Hontanar</span>
+        </div>
+
+        <!-- Unified Header Title Section -->
+        <div class="tour-text-content hontanar-scroll-reveal" style="text-align: center; margin-bottom: 25px;">
+            <h4 class="kicker">INTERCAMBIO HONTANAR</h4>
+            <h1 class="main-title">Aprender inglés <br><span>viviendo el mundo</span></h1>
+            
+            <!-- Textos de Introducción Unificados -->
+            <div class="exchange-intro-clean">
+                <p class="exchange-intro-lead">Hoy, la educación internacional va mucho más allá del aula. En los colegios bilingües en Bogotá, las experiencias reales marcan la diferencia.</p>
+                <p class="exchange-intro-body">El Programa de Intercambio del Gimnasio El Hontanar ha evolucionado para ofrecer una experiencia acompañando a cada estudiante, con mayor enfoque académico, integración cultural real y seguimiento personalizado.</p>
+            </div>
+        </div>
+
+        <!-- Spotlight Callout: Inglés no se memoriza -->
+        <div class="exchange-spotlight-callout hontanar-scroll-reveal">
+            <div class="spotlight-glass-pill">
+                <p>El inglés no se memoriza: <span class="highlight-yellow-italic">se vive en un colegio bilingüe internacional</span></p>
+            </div>
+            <p class="spotlight-subtext">No se trata solo de viajar, sino de poner en práctica el conocimiento, fortalecer el carácter y formar estudiantes con visión global, alineados con la educación bilingüe y el Bachillerato Internacional (IB).</p>
+            <!-- Spotlight Featured Image (Flowing naturally without container) -->
+            <img src="assets/Gemini_Generated_Image_auvzedauvzedauvz.png" alt="Estudiantes Gimnasio El Hontanar en Intercambio" class="spotlight-img">
+        </div>
+
+        <!-- SECCIÓN 1: EVOLUCIÓN DEL INTERCAMBIO (Sin Contenedor Blanco) -->
+        <section class="exchange-evolution-section">
+            
+            <!-- Cabecera de la sección -->
+            <div class="exchange-evolution-header hontanar-scroll-reveal">
+                <h2 class="evolution-title">
+                    ¿Cómo ha evolucionado el Intercambio Hontanar?
+                </h2>
+                <p class="evolution-lead">Hoy contamos con cuatro pilares fundamentales:</p>
+            </div>
+            
+            <!-- Retícula de 4 columnas (Bento Grid) -->
+            <div class="exchange-evolution-grid hontanar-scroll-reveal">
+                
+                <!-- Item 1: Acompañamiento -->
+                <div class="evolution-item color-yellow">
+                    <div class="evolution-number">1</div>
+                    <div class="evolution-item-header">
+                        <h3 class="evolution-item-title">Acompañamiento académico y emocional</h3>
+                    </div>
+                    <div class="evolution-item-divider"></div>
+                    <p class="evolution-item-desc">
+                        Apoyo constante y especializado antes, durante y después del viaje para asegurar una experiencia formativa, equilibrada y completamente segura.
+                    </p>
+                </div>
+
+                <!-- Item 2: Seguimiento -->
+                <div class="evolution-item color-blue">
+                    <div class="evolution-number">2</div>
+                    <div class="evolution-item-header">
+                        <h3 class="evolution-item-title">Seguimiento individual al estudiante</h3>
+                    </div>
+                    <div class="evolution-item-divider"></div>
+                    <p class="evolution-item-desc">
+                        Monitoreo cercano y personalizado del bienestar de cada estudiante, adaptando la experiencia a sus necesidades y ritmo de aprendizaje.
+                    </p>
+                </div>
+
+                <!-- Item 3: Integración Cultural -->
+                <div class="evolution-item color-white">
+                    <div class="evolution-number">3</div>
+                    <div class="evolution-item-header">
+                        <h3 class="evolution-item-title">Mayor integración cultural</h3>
+                    </div>
+                    <div class="evolution-item-divider"></div>
+                    <p class="evolution-item-desc">
+                        Inmersión real y profunda compartiendo la cotidianidad, clases y dinámicas sociales en instituciones líderes a nivel global.
+                    </p>
+                </div>
+
+                <!-- Item 4: Convenios Actualizados -->
+                <div class="evolution-item color-green">
+                    <div class="evolution-number">4</div>
+                    <div class="evolution-item-header">
+                        <h3 class="evolution-item-title">Convenios actualizados</h3>
+                    </div>
+                    <div class="evolution-item-divider"></div>
+                    <p class="evolution-item-desc">
+                        Alianzas sólidas con colegios internados y familias anfitrionas que comparten los valores y el exigente enfoque educativo del Gimnasio El Hontanar.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Highlight Quote Bottom -->
+            <div class="evolution-quote-bottom hontanar-scroll-reveal">
+                <p>Todo está pensado para que la experiencia sea formativa, segura y acorde con el proyecto educativo del colegio.</p>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: DESTINOS CON PROPÓSITO: CANADÁ E INGLATERRA -->
+        <section class="exchange-destinations-section">
+            <!-- Parallax Dark Overlay -->
+            <div class="destinations-overlay"></div>
+
+            <!-- Top feathered mask curve -->
+            <div class="destinations-curve-top"></div>
+
+            <!-- Header Content -->
+            <div class="destinations-section-header hontanar-scroll-reveal">
+                <h4 class="destinations-subtitle">Viajar suma, pero crecer como persona transforma.</h4>
+                <h2 class="destinations-title">Destinos con propósito: <span>Canadá e Inglaterra</span></h2>
+            </div>
+
+            <!-- Circles Container -->
+            <div class="destinations-circles-container hontanar-scroll-reveal">
+                
+                <!-- Canada Card (Circular Graphic containing Canada text, flag, and arrow) -->
+                <div class="destination-card-wrapper destination-card-canada">
+                    <img src="assets/Grupo 4475.png" alt="Canadá" class="destination-img-graphic">
+                </div>
+
+                <!-- England Card (Circular Graphic containing England text, flag, and arrow) -->
+                <div class="destination-card-wrapper destination-card-england">
+                    <img src="assets/Grupo 4473.png" alt="Inglaterra" class="destination-img-graphic">
+                </div>
+
+            </div>
+
+            <!-- Footer Quote Centered -->
+            <div class="destinations-quote-footer hontanar-scroll-reveal">
+                <div class="destinations-glass-pill">
+                    <span>Cuando el idioma se vuelve cotidiano, la fluidez aparece.</span>
+                </div>
+            </div>
+
+            <!-- Bottom feathered mask curve -->
+            <div class="destinations-curve-bottom"></div>
+        </section>
+
+        <!-- SECCIÓN 3: HABILIDADES QUE TRASCIENDEN EL VIAJE (Interactive Star Grid) -->
+        <section class="exchange-skills-section">
+            <div class="skills-header hontanar-scroll-reveal">
+                <h2 class="section-heading">Habilidades que <br><span>trascienden el viaje</span></h2>
+                <p class="skills-lead">El intercambio desarrolla habilidades fundamentales y competencias para toda la vida:</p>
+            </div>
+
+            <!-- Orbital Skills Diagram Container -->
+            <div class="skills-diagram-container hontanar-scroll-reveal">
+                
+                <!-- Central child circle with orbit lines -->
+                <div class="skills-center-orbit hontanar-scroll-reveal">
+                    <div class="skills-orbit-line line-1"></div>
+                    <div class="skills-orbit-line line-2"></div>
+                    <div class="skills-center-child">
+                        <img src="assets/Clase_Volha_Banner.png" alt="Estudiantes Hontanar">
+                    </div>
+                </div>
+
+                <!-- Diagram Cards (Titles Only) -->
+                <!-- Card 1: Autonomía y toma de decisiones (Top Left) -->
+                <div class="skills-diagram-card card-top-left hontanar-scroll-reveal">
+                    <h3>Autonomía y toma de decisiones</h3>
+                </div>
+
+                <!-- Card 2: Comunicación real y fluida (Top Right) -->
+                <div class="skills-diagram-card card-top-right hontanar-scroll-reveal">
+                    <h3>Comunicación real y fluida</h3>
+                </div>
+
+                <!-- Card 3: Adaptación cultural (Bottom Left) -->
+                <div class="skills-diagram-card card-bottom-left hontanar-scroll-reveal">
+                    <h3>Adaptación cultural</h3>
+                </div>
+
+                <!-- Card 4: Confianza y crecimiento personal (Bottom Right) -->
+                <div class="skills-diagram-card card-bottom-right hontanar-scroll-reveal">
+                    <h3>Confianza y crecimiento personal</h3>
+                </div>
+
+                <!-- Arrows (Desktop only) -->
+                <img src="assets/Trazado 21504.png" class="skills-arrow arrow-left" alt="decoración flecha">
+                <img src="assets/Trazado 21500.png" class="skills-arrow arrow-right" alt="decoración flecha">
+
+            </div>
+
+            <!-- Cuentas e informes de colegios anfitriones -->
+            <div class="skills-highlight-banner hontanar-scroll-reveal">
+                <p>Los reportes de los colegios anfitriones destacan el **alto nivel de inglés** de los estudiantes del Hontanar y su excelente **capacidad para integrarse académica y socialmente** en los grupos de clase.</p>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 4: UN COLEGIO EN BOGOTÁ Y LA EXPERIENCIA HONTANAR (Bento Grid) -->
+        <section class="exchange-bento-section">
+            <div class="exchange-bento-grid">
+                
+                <!-- Card 1: Image - Un colegio que trae el mundo a casa -->
+                <div class="bento-card bento-image hontanar-scroll-reveal" style="background-image: url('assets/Copia_de_DSC_0113.JPG');">
+                    <div class="bento-image-content">
+                        <span class="bento-pill">Docentes</span>
+                        <h3>Un colegio en Bogotá<br><span>que trae el mundo a casa</span></h3>
+                        <p>El impacto internacional no ocurre solo cuando los estudiantes viajan. En el Gimnasio El Hontanar, el inglés se vive día a día gracias a un equipo internacional de docentes.</p>
+                    </div>
+                    <div class="bento-corner-btn">&#8599;</div>
+                </div>
+
+                <!-- Card 2: Glass Yellow - ITT Program -->
+                <div class="bento-card bento-glass-yellow hontanar-scroll-reveal">
+                    <p>A través del programa <strong>ITT (International Teachers Team)</strong>, el colegio cuenta con profesores de más de <strong>15 nacionalidades</strong>, que no solo enseñan el idioma, sino también su cultura, acentos y formas de ver el mundo.</p>
+                    <p>Desde preescolar, los estudiantes tienen un contacto natural con el inglés, lo que genera fluidez, comprensión cultural and amor por el idioma, a su propio ritmo.</p>
+                    <p class="bento-highlight">Aprender idiomas también es aprender a mirar el mundo distinto.</p>
+                    <div class="bento-corner-btn">&#8599;</div>
+                </div>
+
+                <!-- Card 3: Glass White - La Experiencia Hontanar -->
+                <div class="bento-card bento-glass-white hontanar-scroll-reveal">
+                    <h3>La Experiencia Hontanar</h3>
+                    <p>Estudiar en el Hontanar significa disfrutar el aprendizaje del inglés, desarrollar competencias reales y prepararse para un mundo globalizado.</p>
+                    <p class="bento-highlight-line">Es una propuesta para familias que buscan colegios privados en Bogotá, colegios bilingües calendario A y una educación internacional con sentido humano.</p>
+                    <div class="bento-corner-btn">&#8599;</div>
+                </div>
+
+                <!-- Card 4: Image - Agendar una cita -->
+                <div class="bento-card bento-image hontanar-scroll-reveal" style="background-image: url('assets/Copia_de_DSC_0576.JPG');">
+                    <div class="bento-image-content">
+                        <span class="bento-pill">Admisiones</span>
+                        <p>Si deseas conocer más sobre los países, programas y convenios, agenda una cita en el colegio y conoce cómo el Intercambio Hontanar complementa una formación académica y bilingüe de excelencia, en uno de los mejores colegios del norte de Bogotá y Chía.</p>
+                        <a href="#" class="btn btn-yellow">Agendar una cita</a>
+                    </div>
+                    <div class="bento-corner-btn">&#8599;</div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Scroll Reveal Observer Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.08 });
+
+            const scrollElements = document.querySelectorAll('.hontanar-scroll-reveal');
+            scrollElements.forEach(el => revealObserver.observe(el));
+        });
+    </script>
+
+    <!-- Social Icons Floating -->
+    <div class="social-floating">
+        <a href="#" class="social-icon green"><img src="assets/Whatsapp.png" alt="WA"></a>
+        <a href="#" class="social-icon yellow"><img src="assets/Componente 26 - 1.png" alt="MSG"></a>
+    </div>
+
+    <!-- CTA Box Overlapping the Footer Image -->
+    <div class="cta-box-wrapper cta-overlap tour-cta">
+        <div class="cta-box">
+            <h2>
+                Are you Ready to <br>
+                <span>Extraordinary</span>
+                <span class="highlight-potencial">
+                    Experience?
+                    <svg class="cta-swoosh" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 40">
+                        <path d="M 10 30 Q 150 15 280 35" fill="none" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                    </svg>
+                    <img src="assets/Trazado 21196.png" alt="Pencil" class="cta-pencil">
+                </span>
+            </h2>
+            <a href="#" class="btn btn-yellow btn-cta">Contact us <span class="btn-arrow">&gt;</span></a>
+        </div>
+        <img src="assets/ChatGPT Image 1 jul 2025, 17_28_04 (3).png" class="colibri-cta" alt="Colibri">
+    </div>
+
+    <!-- Footer Image -->
+    <section class="footer-image-section tour-footer-img">
+        <img src="assets/PHOTO-2025-07-30-09-58-52 (1).jpg" alt="Building" class="building-img">
+        <div class="curve-bottom">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path d="M0,0 Q720,240 1440,0 L1440,120 L0,120 Z" fill="#254478"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer new-footer">
+        <div class="footer-divider"></div>
+        <div class="footer-container">
+            <div class="footer-logo-col">
+                <img src="assets/Capa_2_xA0_Imagen.png" alt="Logo Footer" class="footer-shield">
+                <p>En el Gimnasio El Hontanar,<br>educamos para la vida, formando<br>ciudadanos íntegros, felices y preparados<br>para afrontar el futuro con confianza.</p>
+            </div>
+            <div class="footer-info-col">
+                <h4>DATOS DE CONTACTO</h4>
+                <ul>
+                    <li><img src="assets/whatsapp (4).png" alt="WhatsApp" class="footer-icon"> +57 316 4701496<br>+57 316 4701496</li>
+                    <li><img src="assets/telefono-inteligente (3).png" alt="Teléfono" class="footer-icon"> +57 316 4701496<br>+57 316 4701496</li>
+                    <li><img src="assets/sobre (1).png" alt="Email" class="footer-icon"> admisiones@gimnasiohontanar.edu.co<br>admisiones2@gimnasiohontanar.edu.co<br>contacto@gimnasiohontanar.edu.co</li>
+                    <li><img src="assets/_x32_0_location.png" alt="Ubicación" class="footer-icon"> Cra. 7a 300 m. antes del peaje de<br>Fusca (Sentido Chia - Bogotá), Chia, Colombia.</li>
+                </ul>
+            </div>
+            <div class="footer-social-col">
+                <h4>SÍGANOS</h4>
+                <ul>
+                    <li><img src="assets/facebook (4).png" alt="Facebook" class="footer-icon"> gimnasioelhontanar</li>
+                    <li><img src="assets/Layer 2.png" alt="Instagram" class="footer-icon"> gimnasioelhontanar</li>
+                    <li><img src="assets/logotipo-de-linkedin (3).png" alt="LinkedIn" class="footer-icon"> gimnasio-el-hontanar</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

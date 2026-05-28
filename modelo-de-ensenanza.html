@@ -62,34 +62,38 @@
                     <li><a href="sello-hontanar.html">Sello Hontanar</a></li>
                 </ul>
             </li>
-            <li>
+            <li class="has-submenu">
                 <div class="menu-item">
-                    <span class="icon-circle"><i class="arrow-right"></i></span>
+                    <span class="icon-circle"><i class="arrow-down"></i></span>
                     <a href="#">Cultura Internacional</a>
                 </div>
+                <ul class="submenu">
+                    <li><a href="multilinguismo.html">Multilingüismo</a></li>
+                    <li><a href="programa-ib.html">Programa IB</a></li>
+                    <li><a href="intercambio-hontanar.html">Intercambio Hontanar</a></li>
+                    <li><a href="consejeria-internacional.html">Consejería Internacional</a></li>
+                </ul>
             </li>
-            <li>
+            <li class="has-submenu">
                 <div class="menu-item">
                     <span class="icon-circle"><i class="arrow-right"></i></span>
                     <a href="#">Vida en el Campus</a>
                 </div>
+                <ul class="submenu">
+                    <li><a href="un-dia-escolar.html">Un Día Escolar</a></li>
+                    <li><a href="formacion-integral.html">Formación Integral Más Allá del Aula</a></li>
+                    <li><a href="bienestar-emocional.html">Bienestar Emocional</a></li>
+                    <li><a href="programa-casas.html">Programa Casas</a></li>
+                    <li><a href="character-counts.html">Character Counts</a></li>
+                    <li><a href="espacio-seguro.html">Espacio Seguro</a></li>
+                    <li><a href="espacios-de-bienestar-y-naturaleza.html">Espacios de Bienestar y Naturaleza</a></li>
+                    <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
+                </ul>
             </li>
             <li>
                 <div class="menu-item">
                     <span class="icon-circle"><i class="arrow-right"></i></span>
                     <a href="#">TecnoSer</a>
-                </div>
-            </li>
-            <li>
-                <div class="menu-item">
-                    <span class="icon-circle"><i class="arrow-right"></i></span>
-                    <a href="#">Infraestructura</a>
-                </div>
-            </li>
-            <li>
-                <div class="menu-item">
-                    <span class="icon-circle"><i class="arrow-right"></i></span>
-                    <a href="#">Oferta Académica</a>
                 </div>
             </li>
             <li>
@@ -323,11 +327,55 @@
                         <img src="assets/escuela-alta-horizontal.jpg" alt="Estudiantes en ceremonia o biblioteca de escuela alta" class="bento-img-h">
                         <div class="bento-img-horizontal-gold"></div>
                     </div>
+        </div>
+
+        <!-- Formación Integral Más Allá del Aula (Interactive Accordion) -->
+        <section id="formacion-integral" class="formacion-integral-section hontanar-scroll-reveal">
+            <div class="level-title-container" style="margin-top: 50px;">
+                <h2>Formación Integral <span>Más Allá del Aula</span></h2>
+            </div>
+            <p class="body-text" style="margin-bottom: 40px;">
+                En el Gimnasio El Hontanar, el aprendizaje no se detiene en las materias tradicionales. Nuestro modelo pedagógico promueve un desarrollo integral que equilibra la excelencia académica con el fortalecimiento del ser, a través de tres pilares fundamentales que enriquecen la vida escolar de nuestros estudiantes:
+            </p>
+
+            <div class="accordion-container">
+                
+                <div class="accordion-item active">
+                    <div class="accordion-header">
+                        <h3>⚽ Deportes que forman el carácter</h3>
+                        <span class="accordion-arrow">&minus;</span>
+                    </div>
+                    <div class="accordion-content" style="display: block;">
+                        <p>Más allá de la condición física, la práctica deportiva en El Hontanar enseña disciplina, resiliencia y trabajo en equipo. El colegio fomenta el deporte como una herramienta de regulación emocional y superación personal.</p>
+                    </div>
                 </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3>🎨 Arte para la expresión y la sensibilidad</h3>
+                        <span class="accordion-arrow">&plus;</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>La música, las artes plásticas y el teatro son espacios esenciales para el pensamiento creativo y la autogestión. A través del arte, los estudiantes descubren su identidad y desarrollan sensibilidad estética y cultural.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3>💻 Tecnología con sentido académico y responsable</h3>
+                        <span class="accordion-arrow">&plus;</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Integramos herramientas digitales y el enfoque STEM+H como recursos para la investigación, la innovación y la solución de problemas reales. Promovemos un uso consciente, ético y crítico de la tecnología.</p>
+                    </div>
+                </div>
+
             </div>
 
-
-        </div>
+            <p class="body-text" style="margin-top: 40px; font-style: italic; font-weight: 700;">
+                Este enfoque asegura que los estudiantes de nuestro colegio bilingüe en Bogotá desarrollen habilidades blandas e intelectuales indispensables para liderar su propio proyecto de vida.
+            </p>
+        </section>
     </main>
 
     <!-- Social Icons Floating -->
@@ -393,9 +441,10 @@
         </div>
     </footer>
 
-    <!-- Interactive Level tabs script -->
+    <!-- Interactive Level tabs and Accordion script -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // Level Tabs Toggling
             const tabButtons = document.querySelectorAll('.level-tab-btn');
             const tabPanes = document.querySelectorAll('.level-pane');
             
@@ -409,6 +458,37 @@
                     btn.classList.add('active');
                     const targetPane = document.getElementById(target);
                     if (targetPane) targetPane.classList.add('active');
+                });
+            });
+
+            // Accordion Toggling
+            const accordionHeaders = document.querySelectorAll('.accordion-header');
+            accordionHeaders.forEach(header => {
+                header.addEventListener('click', () => {
+                    const item = header.parentElement;
+                    const content = item.querySelector('.accordion-content');
+                    const arrow = header.querySelector('.accordion-arrow');
+                    
+                    // Close other items
+                    document.querySelectorAll('.accordion-item').forEach(otherItem => {
+                        if (otherItem !== item && otherItem.classList.contains('active')) {
+                            otherItem.classList.remove('active');
+                            otherItem.querySelector('.accordion-content').style.display = 'none';
+                            otherItem.querySelector('.accordion-arrow').textContent = '+';
+                        }
+                    });
+                    
+                    // Toggle current item
+                    const isActive = item.classList.contains('active');
+                    if (isActive) {
+                        item.classList.remove('active');
+                        content.style.display = 'none';
+                        arrow.textContent = '+';
+                    } else {
+                        item.classList.add('active');
+                        content.style.display = 'block';
+                        arrow.textContent = '−';
+                    }
                 });
             });
         });

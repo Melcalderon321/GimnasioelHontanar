@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multilingüismo | Gimnasio El Hontanar</title>
+    <meta name="description" content="Liderazgo en bilingüismo en Bogotá. Programa multilingüe con inglés (Cambridge), francés y portugués con profesores nativos y proyección global.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="tour-virtual.css">
+    <link rel="stylesheet" href="multilinguismo.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="nav-pill">
+            <a href="index.html" class="logo">
+                <img src="assets/HONTANAR logo_ (3).png" alt="Hontanar Logo">
+            </a>
+            <div class="nav-right">
+                <span class="menu-text">MENÚ</span>
+                <div class="hamburger-circle">
+                    <div class="hamburger">
+                        <span></span><span></span><span></span>
+                    </div>
+                </div>
+                <a href="#" class="btn btn-yellow btn-nav">Contáctanos <span class="arrow">&gt;</span></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sidebar Menu -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+    <nav class="sidebar-menu" id="sidebar-menu">
+        <div class="sidebar-header">
+            <img src="assets/Capa_2_xA0_Imagen.png" alt="Logo" class="sidebar-logo">
+            <button class="close-btn" id="close-sidebar">&times;</button>
+        </div>
+        <ul class="sidebar-nav">
+            <li class="has-submenu">
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-down"></i></span>
+                    <a href="#">Admisiones</a>
+                </div>
+                <ul class="submenu">
+                    <li><a href="tour-virtual.html">Tour Virtual</a></li>
+                    <li><a href="preguntas-frecuentes.html">Preguntas Frecuentes</a></li>
+                    <li><a href="por-que-estudiar.html">¿Por qué estudiar en el Gimnasio El Hontanar?</a></li>
+                    <li><a href="proceso-de-ingreso.html">Proceso de ingreso al Gimnasio El Hontanar</a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-right"></i></span>
+                    <a href="#">Somos Hontanar</a>
+                </div>
+                <ul class="submenu">
+                    <li><a href="modelo-de-ensenanza.html">Modelo de Enseñanza</a></li>
+                    <li><a href="nuestra-historia.html">Nuestra Historia</a></li>
+                    <li><a href="filosofia-y-valores.html">Filosofía y Valores</a></li>
+                    <li><a href="sello-hontanar.html">Sello Hontanar</a></li>
+                </ul>
+            </li>
+            <li class="has-submenu expanded">
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-down"></i></span>
+                    <a href="#">Cultura Internacional</a>
+                </div>
+                <ul class="submenu" style="display: block;">
+                    <li><a href="multilinguismo.html" class="active" style="color: var(--yellow); font-weight: 700;">Multilingüismo</a></li>
+                    <li><a href="programa-ib.html">Programa IB</a></li>
+                    <li><a href="intercambio-hontanar.html">Intercambio Hontanar</a></li>
+                    <li><a href="consejeria-internacional.html">Consejería Internacional</a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-right"></i></span>
+                    <a href="#">Vida en el Campus</a>
+                </div>
+                <ul class="submenu">
+                    <li><a href="un-dia-escolar.html">Un Día Escolar</a></li>
+                    <li><a href="formacion-integral.html">Formación Integral Más Allá del Aula</a></li>
+                    <li><a href="bienestar-emocional.html">Bienestar Emocional</a></li>
+                    <li><a href="programa-casas.html">Programa Casas</a></li>
+                    <li><a href="character-counts.html">Character Counts</a></li>
+                    <li><a href="espacio-seguro.html">Espacio Seguro</a></li>
+                    <li><a href="espacios-de-bienestar-y-naturaleza.html">Espacios de Bienestar y Naturaleza</a></li>
+                    <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-right"></i></span>
+                    <a href="#">TecnoSer</a>
+                </div>
+            </li>
+            <li>
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-right"></i></span>
+                    <a href="#">Contacto</a>
+                </div>
+            </li>
+        </ul>
+        <div class="sidebar-footer">
+            <a href="#" class="btn-sidebar btn-s-green"><span>⚲</span> VIRTUAL</a>
+            <a href="#" class="btn-sidebar btn-s-yellow"><span>⌨</span> ADMISIONES</a>
+        </div>
+    </nav>
+
+    <!-- Script for Sidebar -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.querySelector('.hamburger-circle');
+            const menuText = document.querySelector('.menu-text');
+            const sidebar = document.getElementById('sidebar-menu');
+            const overlay = document.getElementById('sidebar-overlay');
+            const closeBtn = document.getElementById('close-sidebar');
+
+            function toggleMenu() {
+                sidebar.classList.toggle('open');
+                overlay.classList.toggle('open');
+            }
+
+            if(hamburger) hamburger.addEventListener('click', toggleMenu);
+            if(menuText) menuText.addEventListener('click', toggleMenu);
+            if(closeBtn) closeBtn.addEventListener('click', toggleMenu);
+            if(overlay) overlay.addEventListener('click', toggleMenu);
+
+            // Collapsible submenus
+            const submenus = document.querySelectorAll('.has-submenu .menu-item');
+            submenus.forEach(item => {
+                item.addEventListener('click', (e) => {
+                    if (e.target.tagName !== 'A') {
+                        e.preventDefault();
+                        item.parentElement.classList.toggle('expanded');
+                        const submenuList = item.parentElement.querySelector('.submenu');
+                        if(submenuList) {
+                            submenuList.style.display = submenuList.style.display === 'block' ? 'none' : 'block';
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+
+    <!-- Page Content Container -->
+    <main class="multilinguismo-container">
+        <!-- Unified Breadcrumbs -->
+        <div class="breadcrumbs">
+            <a href="index.html">Inicio</a> &gt; <a href="#">Cultura Internacional</a> &gt; <span class="current">Multilingüismo</span>
+        </div>
+
+        <!-- Unified Header Title Section -->
+        <div class="tour-text-content hontanar-scroll-reveal" style="text-align: center; margin-bottom: 20px;">
+            <h4 class="kicker">MULTILINGÜISMO</h4>
+            <h1 class="main-title">Aprender idiomas para un <br><span>mundo globalizado</span></h1>
+        </div>
+
+
+
+        <!-- PARALLAX INTRO SECTION -->
+        <section class="multi-parallax-section parallax-bg" style="background-image: url('assets/Grupo 3982.jpg');">
+            <div class="multi-parallax-overlay"></div>
+            <div class="multi-parallax-content hontanar-scroll-reveal">
+                <p class="multi-parallax-lead">Elegir colegio no es solo pensar en materias, es pensar en cómo se forma un <strong>ciudadano global</strong>. En el Gimnasio El Hontanar, el multilingüismo más que un complemento, es parte del <strong>ADN del proyecto educativo</strong>.</p>
+
+                <p class="multi-parallax-body">En nuestro colegio, el inglés se vive todos los días: <em>más horas en inglés, más experiencias reales</em>. Todos los estudiantes reciben clases en inglés y en español, con <strong>Cambridge English Language Assessment</strong> como referente internacional y certificaciones vigentes cada año.</p>
+
+                <div class="multi-parallax-badges">
+                    <span class="multi-parallax-badge">✓ Cambridge English Assessment</span>
+                    <span class="multi-parallax-badge">✓ Certificaciones Anuales Cambridge</span>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 6 BENTO CARDS CON ANATOMÍA DE REFERENCIA (Título, Flecha, Línea horizontal, texto e imagen redondeada) -->
+        <section class="multi-bento-section">
+            <div class="multi-bento-grid">
+                
+                <!-- Card 1: Inglés desde Preescolar (Light Card) -->
+                <div class="bento-card-ref card-light hontanar-scroll-reveal">
+                    <div class="card-header-ref">
+                        <h3>Inglés desde Preescolar</h3>
+                    </div>
+                    <div class="card-divider-ref"></div>
+                    <div class="card-body-ref">
+                        <p>Desde preescolar, el inglés se vive en el aula de manera natural y progresiva: <strong>más horas en inglés, más experiencias reales</strong> todos los días.</p>
+                        <div class="card-img-wrapper">
+                            <img src="assets/preescolar-horizontal.jpg" alt="Inglés desde Preescolar" class="card-img-bottom">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Docentes Nativos (Dark Glass Card) -->
+                <div class="bento-card-ref card-dark hontanar-scroll-reveal">
+                    <div class="card-header-ref">
+                        <h3>Docentes Nativos</h3>
+                    </div>
+                    <div class="card-divider-ref"></div>
+                    <div class="card-body-ref">
+                        <p>La clave está en el equipo docente: <strong>profesores apasionados y nativos</strong> altamente calificados, que garantizan una experiencia auténtica y una inmersión completa.</p>
+                        <div class="card-img-wrapper">
+                            <img src="assets/Grupo 4467.jpg" alt="Docentes Nativos en el Hontanar" class="card-img-bottom">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Certificación Cambridge (Dark Glass Card) -->
+                <div class="bento-card-ref card-dark hontanar-scroll-reveal">
+                    <div class="card-header-ref">
+                        <h3>Certificación Cambridge</h3>
+                    </div>
+                    <div class="card-divider-ref"></div>
+                    <div class="card-body-ref">
+                        <p>Los resultados hablan por sí solos: el <strong>100% de nuestros estudiantes</strong> obtiene la certificación Cambridge, alcanzando <strong>niveles C1 y C2 en inglés</strong>.</p>
+                        <div class="card-img-wrapper">
+                            <img src="assets/Enmascarar grupo 13.jpg" alt="Certificación Cambridge de Excelencia" class="card-img-bottom">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Francés en Media y Alta (Yellow Glass Card) -->
+                <div class="bento-card-ref card-yellow hontanar-scroll-reveal">
+                    <div class="card-header-ref">
+                        <h3>Francés en Media y Alta</h3>
+                    </div>
+                    <div class="card-divider-ref"></div>
+                    <div class="card-body-ref">
+                        <p>Desde sexto hasta once, los estudiantes también aprenden <strong>francés (alcanzando nivel B1)</strong>, y cuentan con <strong>portugués como lengua electiva</strong>.</p>
+                        <div class="card-img-wrapper">
+                            <img src="assets/escuela-media-horizontal.jpg" alt="Clases de Francés y Portugués" class="card-img-bottom">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5: Literatura y Cultura (Dark Glass Card) -->
+                <div class="bento-card-ref card-dark hontanar-scroll-reveal">
+                    <div class="card-header-ref">
+                        <h3>Literatura y Cultura</h3>
+                    </div>
+                    <div class="card-divider-ref"></div>
+                    <div class="card-body-ref">
+                        <p>Nos nutrimos de dos grandes currículos internacionales, el de <strong>Estados Unidos y el de Inglaterra</strong>, para formar estudiantes con pensamiento crítico y visión global.</p>
+                        <div class="card-img-wrapper">
+                            <img src="assets/escuela-alta.jpg" alt="Literatura y Cultura del Mundo" class="card-img-bottom">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6: Expresión Multilingüe (Light Card) -->
+                <div class="bento-card-ref card-light hontanar-scroll-reveal">
+                    <div class="card-header-ref">
+                        <h3>Expresión Multilingüe</h3>
+                    </div>
+                    <div class="card-divider-ref"></div>
+                    <div class="card-body-ref">
+                        <p>El éxito está en formar estudiantes capaces de <strong>comunicarse con seguridad en la vida real</strong>, permitiendo obtener el mejor futuro sin límites.</p>
+                        <div class="card-img-wrapper">
+                            <img src="assets/5929350_Group_Friends_1920x1080.jpg" alt="Alumnos Expresión Global" class="card-img-bottom">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECCIÓN DE TRANSICIÓN "FORMACIÓN INTEGRAL" -->
+        <section class="multi-transition-section hontanar-scroll-reveal">
+            <div class="transition-container">
+                
+                <!-- Banderas Animadas Superiores (Más Pequeñas) -->
+                <div class="transition-flags-animated">
+                    <img src="assets/Grupo 4472.png" alt="Banderas de Intercambio" class="transition-mini-flags">
+                </div>
+
+                <!-- Título con Swoosh -->
+                <h2 class="transition-title">
+                    Formación Integral para <br>
+                    <span class="swoosh-text">
+                        un Mundo Globalizado
+                        <svg class="swoosh-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 20">
+                            <path d="M 5 15 Q 160 5 315 15" fill="none" stroke="#F9EF6C" stroke-width="4" stroke-linecap="round"/>
+                        </svg>
+                    </span>
+                </h2>
+
+                <!-- Botón CTA Inferior (Debajo del texto) -->
+                <a href="#" class="btn btn-yellow btn-transition-bottom">Aprende con nosotros <span class="arrow">&gt;</span></a>
+            </div>
+        </section>
+
+        <!-- INTERCAMBIO CULTURAL — Layout de Columna Única Central Premium -->
+        <section class="multi-exchange-section">
+            <div class="exchange-large-card hontanar-scroll-reveal">
+                
+                <!-- Cabecera Centrada -->
+                <div class="exchange-header-centered">
+                    <h2 class="exchange-title">Intercambio cultural con más de siete países: <br><span class="highlight-yellow-italic">somos un colegio en Bogotá que prepara para la vida real en inglés</span></h2>
+                </div>
+
+                <!-- Introducción Centrada -->
+                <p class="exchange-intro-centered">Aprender idiomas requiere <strong>conocer el mundo desde el colegio</strong>. Por eso, El Hontanar desarrolla <strong>intercambios virtuales con más de siete países</strong>, donde los estudiantes trabajan proyectos comunes, interactúan con otras culturas y presentan resultados finales en inglés.</p>
+
+                <!-- Grid de Micro-tarjetas de logros (Centrado, balanced) -->
+                <div class="exchange-grid-centered">
+                    <div class="exchange-grid-pill">
+                        <span class="check-icon-premium">✓</span>
+                        <span class="pill-text">Proyectos colaborativos con estudiantes de otros países</span>
+                    </div>
+                    <div class="exchange-grid-pill">
+                        <span class="check-icon-premium">✓</span>
+                        <span class="pill-text">Presentaciones y evaluaciones en inglés</span>
+                    </div>
+                    <div class="exchange-grid-pill">
+                        <span class="check-icon-premium">✓</span>
+                        <span class="pill-text">Experiencia desde escuela media hasta bachillerato</span>
+                    </div>
+                    <div class="exchange-grid-pill">
+                        <span class="check-icon-premium">✓</span>
+                        <span class="pill-text">El aprendizaje del idioma inicia desde preescolar</span>
+                    </div>
+                    <div class="exchange-grid-pill">
+                        <span class="check-icon-premium">✓</span>
+                        <span class="pill-text">Se fortalece en el programa IB</span>
+                    </div>
+                </div>
+
+                <!-- Spotlight Quote Callout Centrado -->
+                <div class="exchange-quote-centered">
+                    <p>Aquí el multilingüismo no se promete: <span class="quote-italic-highlight">se practica, se evalúa y se demuestra.</span></p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Scroll Reveal Observer Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            const scrollElements = document.querySelectorAll('.hontanar-scroll-reveal');
+            scrollElements.forEach(el => revealObserver.observe(el));
+        });
+    </script>
+
+    <!-- Social Icons Floating -->
+    <div class="social-floating">
+        <a href="#" class="social-icon green"><img src="assets/Whatsapp.png" alt="WA"></a>
+        <a href="#" class="social-icon yellow"><img src="assets/Componente 26 - 1.png" alt="MSG"></a>
+    </div>
+
+    <!-- CTA Box Overlapping the Footer Image -->
+    <div class="cta-box-wrapper cta-overlap tour-cta">
+        <div class="cta-box">
+            <h2>
+                Are you Ready to <br>
+                <span>Extraordinary</span>
+                <span class="highlight-potencial">
+                    Experience?
+                    <svg class="cta-swoosh" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 40">
+                        <path d="M 10 30 Q 150 15 280 35" fill="none" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                    </svg>
+                    <img src="assets/Trazado 21196.png" alt="Pencil" class="cta-pencil">
+                </span>
+            </h2>
+            <a href="#" class="btn btn-yellow btn-cta">Contact us <span class="btn-arrow">&gt;</span></a>
+        </div>
+        <img src="assets/ChatGPT Image 1 jul 2025, 17_28_04 (3).png" class="colibri-cta" alt="Colibri">
+    </div>
+
+    <!-- Footer Image -->
+    <section class="footer-image-section tour-footer-img">
+        <img src="assets/PHOTO-2025-07-30-09-58-52 (1).jpg" alt="Building" class="building-img">
+        <div class="curve-bottom">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path d="M0,0 Q720,240 1440,0 L1440,120 L0,120 Z" fill="#254478"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer new-footer">
+        <div class="footer-divider"></div>
+        <div class="footer-container">
+            <div class="footer-logo-col">
+                <img src="assets/Capa_2_xA0_Imagen.png" alt="Logo Footer" class="footer-shield">
+                <p>En el Gimnasio El Hontanar,<br>educamos para la vida, formando<br>ciudadanos íntegros, felices y preparados<br>para afrontar el futuro con confianza.</p>
+            </div>
+            <div class="footer-info-col">
+                <h4>DATOS DE CONTACTO</h4>
+                <ul>
+                    <li><img src="assets/whatsapp (4).png" alt="WhatsApp" class="footer-icon"> +57 316 4701496<br>+57 316 4701496</li>
+                    <li><img src="assets/telefono-inteligente (3).png" alt="Teléfono" class="footer-icon"> +57 316 4701496<br>+57 316 4701496</li>
+                    <li><img src="assets/sobre (1).png" alt="Email" class="footer-icon"> admisiones@gimnasiohontanar.edu.co<br>admisiones2@gimnasiohontanar.edu.co<br>contacto@gimnasiohontanar.edu.co</li>
+                    <li><img src="assets/_x32_0_location.png" alt="Ubicación" class="footer-icon"> Cra. 7a 300 m. antes del peaje de<br>Fusca (Sentido Chia - Bogotá), Chia, Colombia.</li>
+                </ul>
+            </div>
+            <div class="footer-social-col">
+                <h4>SÍGANOS</h4>
+                <ul>
+                    <li><img src="assets/facebook (4).png" alt="Facebook" class="footer-icon"> gimnasioelhontanar</li>
+                    <li><img src="assets/Layer 2.png" alt="Instagram" class="footer-icon"> gimnasioelhontanar</li>
+                    <li><img src="assets/logotipo-de-linkedin (3).png" alt="LinkedIn" class="footer-icon"> gimnasio-el-hontanar</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

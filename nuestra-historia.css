@@ -16,6 +16,18 @@
     margin-bottom: 15px;
 }
 
+.nuestra-historia-container .main-title {
+    font-family: var(--font-lato);
+    font-weight: 700;
+}
+
+.nuestra-historia-container .main-title span {
+    font-family: var(--font-playfair);
+    font-style: italic;
+    font-weight: 700;
+    color: var(--yellow);
+}
+
 .history-minimalist-section {
     padding: 15px 20px 60px 20px;
     position: relative;
@@ -49,7 +61,7 @@
 
 /* Títulos minimalistas grandes */
 .history-mini-title {
-    font-family: var(--font-playfair);
+    font-family: var(--font-lato);
     font-size: 2.8rem;
     font-weight: 700;
     color: var(--white);
@@ -58,6 +70,7 @@
 }
 
 .history-mini-title span {
+    font-family: var(--font-playfair);
     font-style: italic;
     color: var(--yellow);
 }
@@ -304,9 +317,9 @@
 }
 
 .history-banner-heading {
-    font-family: var(--font-playfair);
+    font-family: var(--font-lato);
     font-size: 2.2rem;
-    font-weight: 600;
+    font-weight: 700;
     color: var(--white);
     margin-bottom: 35px;
     line-height: 1.45;
@@ -492,13 +505,14 @@
 }
 
 .timeline-header .title {
-    font-family: var(--font-playfair);
+    font-family: var(--font-lato);
     font-size: 2.6rem;
     font-weight: 700;
     color: var(--white);
 }
 
 .timeline-header .title span {
+    font-family: var(--font-playfair);
     font-style: italic;
     color: var(--yellow);
 }
@@ -615,7 +629,7 @@
 }
 
 .timeline-card h3 {
-    font-family: var(--font-playfair);
+    font-family: var(--font-lato);
     font-size: 1.4rem;
     font-weight: 700;
     color: var(--white);

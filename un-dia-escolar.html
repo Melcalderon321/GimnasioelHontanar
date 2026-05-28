@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sello Hontanar | Gimnasio El Hontanar</title>
-    <meta name="description" content="Conoce el Sello Hontanar: unimos la excelencia académica y la formación humana integral en un campus campestre y bilingüe en Bogotá y Chía.">
+    <title>Un Día Escolar | Gimnasio El Hontanar</title>
+    <meta name="description" content="College Counseling en el Gimnasio El Hontanar. Guía, asesoría y conexión con universidades nacionales e internacionales desde noveno grado.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="tour-virtual.css">
-    <link rel="stylesheet" href="sello-hontanar.css">
+    <link rel="stylesheet" href="consejeria-internacional.css">
+    <link rel="stylesheet" href="vida-en-el-campus.css">
 </head>
 <body>
     <!-- Navbar -->
@@ -44,31 +45,31 @@
                     <span class="icon-circle"><i class="arrow-down"></i></span>
                     <a href="#">Admisiones</a>
                 </div>
-                <ul class="submenu">
+                <ul class="submenu" >
                     <li><a href="tour-virtual.html">Tour Virtual</a></li>
                     <li><a href="preguntas-frecuentes.html">Preguntas Frecuentes</a></li>
                     <li><a href="por-que-estudiar.html">¿Por qué estudiar en el Gimnasio El Hontanar?</a></li>
                     <li><a href="proceso-de-ingreso.html">Proceso de ingreso al Gimnasio El Hontanar</a></li>
                 </ul>
             </li>
-            <li class="has-submenu expanded">
+            <li class="has-submenu">
                 <div class="menu-item">
-                    <span class="icon-circle"><i class="arrow-down"></i></span>
+                    <span class="icon-circle"><i class="arrow-right"></i></span>
                     <a href="#">Somos Hontanar</a>
                 </div>
                 <ul class="submenu">
                     <li><a href="modelo-de-ensenanza.html">Modelo de Enseñanza</a></li>
                     <li><a href="nuestra-historia.html">Nuestra Historia</a></li>
                     <li><a href="filosofia-y-valores.html">Filosofía y Valores</a></li>
-                    <li><a href="sello-hontanar.html" class="active">Sello Hontanar</a></li>
+                    <li><a href="sello-hontanar.html">Sello Hontanar</a></li>
                 </ul>
             </li>
             <li class="has-submenu">
                 <div class="menu-item">
-                    <span class="icon-circle"><i class="arrow-down"></i></span>
+                    <span class="icon-circle"><i class="arrow-right"></i></span>
                     <a href="#">Cultura Internacional</a>
                 </div>
-                <ul class="submenu">
+                <ul class="submenu" style="display: block;">
                     <li><a href="multilinguismo.html">Multilingüismo</a></li>
                     <li><a href="programa-ib.html">Programa IB</a></li>
                     <li><a href="intercambio-hontanar.html">Intercambio Hontanar</a></li>
@@ -81,7 +82,7 @@
                     <a href="#">Vida en el Campus</a>
                 </div>
                 <ul class="submenu">
-                    <li><a href="un-dia-escolar.html">Un Día Escolar</a></li>
+                    <li><a href="un-dia-escolar.html" class="active" style="color: var(--yellow); font-weight: 700;">Un Día Escolar</a></li>
                     <li><a href="formacion-integral.html">Formación Integral Más Allá del Aula</a></li>
                     <li><a href="bienestar-emocional.html">Bienestar Emocional</a></li>
                     <li><a href="programa-casas.html">Programa Casas</a></li>
@@ -136,6 +137,10 @@
                     if (e.target.tagName !== 'A') {
                         e.preventDefault();
                         item.parentElement.classList.toggle('expanded');
+                        const submenuList = item.parentElement.querySelector('.submenu');
+                        if(submenuList) {
+                            submenuList.style.display = submenuList.style.display === 'block' ? 'none' : 'block';
+                        }
                     }
                 });
             });
@@ -143,81 +148,109 @@
     </script>
 
     <!-- Page Content Container -->
-    <main class="sello-page-container">
-        <!-- Unified Breadcrumbs -->
-        <div class="breadcrumbs">
-            <a href="index.html">Inicio</a> &gt; <a href="#">Somos Hontanar</a> &gt; <span class="current">Sello Hontanar</span>
-        </div>
-
-        <!-- Unified Header Title Section -->
-        <div class="tour-text-content hontanar-scroll-reveal" style="text-align: center;">
-            <h4 class="kicker">SOMOS HONTANAR</h4>
-            <h1 class="main-title">Sello <span>Hontanar</span></h1>
-        </div>
-
-        <!-- SELLO HONTANAR MAIN SECTION -->
-        <section class="sello-hontanar-section">
-            <div class="sello-intro-text hontanar-scroll-reveal">
-                <h2 class="sello-subtitle">El Hontanar es el colegio ideal para el <br><span>futuro de tu hijo</span></h2>
-                <p>Una de las decisiones más importantes es elegir bien el colegio de nuestros hijos y algo que valoran los padres de familia del Gimnasio El Hontanar, es que unimos la excelencia académica con la formación humana. Aquí se trabaja en el carácter, los valores y el pensamiento crítico, al mismo nivel que el aprendizaje académico, y ese es nuestro sello.</p>
-                <p>Somos un colegio bilingüe en Bogotá y Chía que acompaña a los niños y jóvenes para que desarrollen su autonomía, su sensibilidad social y un proyecto de vida con sentido. No es solo un buen colegio hoy, es el mejor lugar para la educación de tus hijos.</p>
+    <main class="vida-page">
+        <div class="vida-container">
+            <!-- Unified Breadcrumbs -->
+            <div class="breadcrumbs">
+                <a href="index.html">Inicio</a> &gt; <a href="#">Vida en el Campus</a> &gt; <span class="current">Un Día Escolar</span>
             </div>
-            <div class="sello-diagram-container hontanar-scroll-reveal">
+
+            <!-- Unified Header Title Section -->
+            <div class="vida-header hontanar-scroll-reveal">
+                <h4 class="kicker">VIDA EN EL CAMPUS</h4>
+                <h1 class="main-title">Un Día <span>Escolar en El Hontanar</span></h1>
+            </div>
+
+            
+            <p class="vida-lead-paragraph hontanar-scroll-reveal">
+                El día empieza a las <strong>7:30 de la mañana</strong> en el Gimnasio El Hontanar, un colegio ubicado al norte de Bogotá y Chía. Llegada, saludos y una rutina para los estudiantes con el acompañamiento de sus profesores. Antes de entrar de lleno a las clases hay un momento para encontrarse con el director de curso, revisar la agenda, entender cómo será el día y marcar el ritmo con disposición, cercanía y confianza, un momento importante dentro del <strong>modelo de enseñanza del colegio</strong>.
+            </p>
+
+            <!-- Timeline -->
+            <div class="timeline-container">
                 
-                <!-- Central child circle with orbit lines -->
-                <div class="sello-center-orbit hontanar-scroll-reveal">
-                    <div class="sello-orbit-line line-1"></div>
-                    <div class="sello-orbit-line line-2"></div>
-                    <div class="sello-center-child">
-                        <img src="assets/Grupo 4191.png" alt="Niño Sello Hontanar">
+                <div class="timeline-item hontanar-scroll-reveal">
+                    <div class="timeline-badge"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-time">7:30 AM</span>
+                        <h3>Entrada con Propósito</h3>
+                        <p>Llegada, saludos y una rutina para los estudiantes con el acompañamiento de sus profesores. Un encuentro cercano para revisar la agenda, entender cómo será el día y marcar el ritmo con disposición, cercanía y confianza.</p>
+                    </div>
+                    <div class="timeline-img-wrap">
+                        <img src="assets/152.jpg" alt="Entrada con Propósito Hontanar">
                     </div>
                 </div>
 
-                <!-- Diagram Cards -->
-                <!-- Card 1: Aprender con Criterio Propio (Top Left) -->
-                <div class="sello-diagram-card card-top-left hontanar-scroll-reveal">
-                    <h3>Aprender con Criterio Propio</h3>
-                    <p>Afianzar la reflexión, la crítica constructiva y el análisis de ideas y actos.</p>
+                <div class="timeline-item hontanar-scroll-reveal">
+                    <div class="timeline-badge"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-time">JORNADA ACTIVA</span>
+                        <h3>Aulas Vivas</h3>
+                        <p>Las aulas del Hontanar son espacios activos y participativos, donde las jornadas avanzan con preguntas que van más allá de repetir respuestas. A través de proyectos y retos, los estudiantes conectan la teoría con la vida real.</p>
+                    </div>
+                    <div class="timeline-img-wrap">
+                        <img src="assets/20241002_144246.jpg" alt="Aulas Vivas Hontanar">
+                    </div>
                 </div>
 
-                <!-- Card 2: Fortalecer su Identidad (Bottom Left) -->
-                <div class="sello-diagram-card card-bottom-left hontanar-scroll-reveal">
-                    <h3>Fortalecer su Identidad</h3>
-                    <p>Reconocer cualidades, respetar y asumir responsabilidades con compromiso y honestidad.</p>
+                <div class="timeline-item hontanar-scroll-reveal">
+                    <div class="timeline-badge"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-time">3:30 PM</span>
+                        <h3>Un Día con Propósito</h3>
+                        <p>El día escolar termina a las 3:30 de la tarde para dar paso al regreso a casa o al inicio de las escuelas de formación. Cada jornada en El Hontanar es una experiencia diseñada para que los estudiantes adquieran competencias académicas y socioemocionales.</p>
+                    </div>
+                    <div class="timeline-img-wrap">
+                        <img src="assets/20241002_144403.jpg" alt="Un Día con Propósito Hontanar">
+                    </div>
                 </div>
-
-                <!-- Card 3: Crear Conciencia Humana (Right) -->
-                <div class="sello-diagram-card card-right-center hontanar-scroll-reveal">
-                    <h3>Crear Conciencia Humana</h3>
-                    <p>Liderazgo constructivo que analiza la realidad nacional y promueve la conservación ambiental.</p>
-                </div>
-
-                <!-- Arrows (Desktop only) -->
-                <img src="assets/Trazado 21504.png" class="sello-arrow arrow-left" alt="decoración flecha">
-                <img src="assets/Trazado 21500.png" class="sello-arrow arrow-right" alt="decoración flecha">
 
             </div>
-        </section>
+
+            <!-- Desarrollo Integral en Cada Momento (Bento Card Full Width like consejeria-internacional) -->
+            <section class="counseling-profile-section" style="padding: 0;">
+                <div class="bento-card card-full hontanar-scroll-reveal">
+                    <div class="card-text">
+                        <div class="card-kicker">
+                            <span class="kicker-icon">
+                                <svg viewBox="0 0 24 24" fill="none"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#F9EF6C"/></svg>
+                            </span>
+                            DESARROLLO INTEGRAL
+                        </div>
+                        <h3 class="card-title">Desarrollo Integral <span>en Cada Momento</span></h3>
+                        <p class="card-paragraph">En El Hontanar, aprender es <strong>conectar más que memorizar</strong>, porque el aprendizaje no se queda quieto en las aulas, se aprende con el movimiento, el arte y el deporte que tienen el <strong>mismo valor que las áreas académicas</strong> en nuestro colegio en el norte de Bogotá.</p>
+                        <p class="card-paragraph" style="margin-top: 15px;">Cada espacio del colegio aporta al <strong>desarrollo integral</strong> de los estudiantes, fortaleciendo sus talentos mientras disfrutan de momentos de sano esparcimiento y descanso en <strong>zonas verdes en contacto con la naturaleza</strong>.</p>
+                    </div>
+                    <div class="card-visual">
+                        <img src="assets/Copia_de_DSC_0186.JPG" alt="Desarrollo Integral en Cada Momento">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Bento Grid Section -->
+            <section class="pq-bento-section hontanar-scroll-reveal">
+                <div class="pq-bento-grid">
+                    <!-- Left Card: Aulas Vivas -->
+                    <div class="pq-bento-card pq-bento-glass-white">
+                        <h3>Aulas Vivas: Aprender Conectando con la Vida</h3>
+                        <p>Las aulas del Hontanar son espacios activos y participativos, donde las jornadas avanzan con preguntas que van más allá de repetir respuestas. A través de proyectos y retos, los estudiantes conectan la teoría con la vida real, desarrollando <strong>pensamiento crítico, creatividad y autonomía</strong>.</p>
+                        <p class="pq-bento-highlight-line">Este enfoque se integra de manera natural al <strong>Multilingüismo</strong> y a la propuesta académica del colegio, alineada con estándares internacionales que preparan a los estudiantes para un mundo global.</p>
+                    </div>
+
+                    <!-- Right Card: Admisiones -->
+                    <div class="pq-bento-card pq-bento-image" style="background-image: url('assets/preescolar-horizontal.jpg');">
+                        <div class="pq-bento-image-content">
+                            <span class="pq-bento-pill">Admisiones</span>
+                            <p>Si deseas que tu hijo viva una experiencia educativa transformadora, contáctanos y agenda una visita personalizada con nuestro equipo de admisiones.</p>
+                            <a href="#" class="btn btn-yellow">Agenda tu cita aquí</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
     </main>
 
-    <!-- Scroll Reveal Observer Script -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const revealObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        revealObserver.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.1 });
-
-            const scrollElements = document.querySelectorAll('.hontanar-scroll-reveal');
-            scrollElements.forEach(el => revealObserver.observe(el));
-        });
-    </script>
-
-    <!-- Social Icons Floating -->
     <div class="social-floating">
         <a href="#" class="social-icon green"><img src="assets/Whatsapp.png" alt="WA"></a>
         <a href="#" class="social-icon yellow"><img src="assets/Componente 26 - 1.png" alt="MSG"></a>
@@ -279,5 +312,22 @@
             </div>
         </div>
     </footer>
+
+    <!-- Scroll Reveal Observer Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.08 });
+
+            const scrollElements = document.querySelectorAll('.hontanar-scroll-reveal');
+            scrollElements.forEach(el => revealObserver.observe(el));
+        });
+    </script>
 </body>
 </html>

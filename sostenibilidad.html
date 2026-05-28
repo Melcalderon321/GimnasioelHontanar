@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tour Virtual | Gimnasio El Hontanar</title>
+    <title>Sostenibilidad | Gimnasio El Hontanar</title>
+    <meta name="description" content="College Counseling en el Gimnasio El Hontanar. Guía, asesoría y conexión con universidades nacionales e internacionales desde noveno grado.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="tour-virtual.css">
+    <link rel="stylesheet" href="consejeria-internacional.css">
+    <link rel="stylesheet" href="vida-en-el-campus.css">
 </head>
 <body>
     <!-- Navbar -->
@@ -42,7 +45,7 @@
                     <span class="icon-circle"><i class="arrow-down"></i></span>
                     <a href="#">Admisiones</a>
                 </div>
-                <ul class="submenu">
+                <ul class="submenu" >
                     <li><a href="tour-virtual.html">Tour Virtual</a></li>
                     <li><a href="preguntas-frecuentes.html">Preguntas Frecuentes</a></li>
                     <li><a href="por-que-estudiar.html">¿Por qué estudiar en el Gimnasio El Hontanar?</a></li>
@@ -63,10 +66,10 @@
             </li>
             <li class="has-submenu">
                 <div class="menu-item">
-                    <span class="icon-circle"><i class="arrow-down"></i></span>
+                    <span class="icon-circle"><i class="arrow-right"></i></span>
                     <a href="#">Cultura Internacional</a>
                 </div>
-                <ul class="submenu">
+                <ul class="submenu" style="display: block;">
                     <li><a href="multilinguismo.html">Multilingüismo</a></li>
                     <li><a href="programa-ib.html">Programa IB</a></li>
                     <li><a href="intercambio-hontanar.html">Intercambio Hontanar</a></li>
@@ -86,7 +89,7 @@
                     <li><a href="character-counts.html">Character Counts</a></li>
                     <li><a href="espacio-seguro.html">Espacio Seguro</a></li>
                     <li><a href="espacios-de-bienestar-y-naturaleza.html">Espacios de Bienestar y Naturaleza</a></li>
-                    <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
+                    <li><a href="sostenibilidad.html" class="active" style="color: var(--yellow); font-weight: 700;">Sostenibilidad</a></li>
                 </ul>
             </li>
             <li>
@@ -103,8 +106,8 @@
             </li>
         </ul>
         <div class="sidebar-footer">
-            <a href="#" class="btn-sidebar btn-s-green"><span>âš²</span> VIRTUAL</a>
-            <a href="#" class="btn-sidebar btn-s-yellow"><span>ðŸ–¨</span> ADMISIONES</a>
+            <a href="#" class="btn-sidebar btn-s-green"><span>⚲</span> VIRTUAL</a>
+            <a href="#" class="btn-sidebar btn-s-yellow"><span>⌨</span> ADMISIONES</a>
         </div>
     </nav>
 
@@ -131,44 +134,86 @@
             const submenus = document.querySelectorAll('.has-submenu .menu-item');
             submenus.forEach(item => {
                 item.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    item.parentElement.classList.toggle('expanded');
+                    if (e.target.tagName !== 'A') {
+                        e.preventDefault();
+                        item.parentElement.classList.toggle('expanded');
+                        const submenuList = item.parentElement.querySelector('.submenu');
+                        if(submenuList) {
+                            submenuList.style.display = submenuList.style.display === 'block' ? 'none' : 'block';
+                        }
+                    }
                 });
             });
         });
     </script>
 
-    <!-- Tour Virtual Section -->
-    <section class="tour-virtual-page">
-        <!-- Breadcrumbs -->
-        <div class="breadcrumbs">
-            <a href="index.html">Inicio</a> &gt; <a href="#">Admisiones</a> &gt; <span class="current">Tour Virtual</span>
-        </div>
-
-        <!-- Text Content -->
-        <div class="tour-text-content">
-            <h4 class="kicker">ADMISIONES</h4>
-            <h1 class="main-title">Tour <span>Virtual</span></h1>
-            
-            <p class="subtitle">Gimnasio El Hontanar, colegio Bilingüe Internacional en el norte de Bogotá</p>
-            <p class="subtitle-2">Educación bilingüe y <strong>Bachillerato Internacional</strong> para formar líderes del mundo</p>
-            
-            <p class="body-text">
-                Bienvenido al Tour Virtual de las instalaciones del Gimnasio El Hontanar, uno de los mejores colegios privados en Bogotá con espacio campestre, seguro y moderno. Campus de <strong>60.000 m²</strong>, ubicado estratégicamente entre el norte de Bogotá y Chía, y diseñado para responder a las exigencias del <em>Bachillerato Internacional (IB)</em>, con infraestructura accesible y sostenible.
-            </p>
-        </div>
-
-        <!-- Video Player -->
-        <div class="video-player-container">
-            <!-- Using a fallback image for the video cover since we don't have the drawn image path -->
-            <div class="video-cover" style="background-image: url('assets/5929350_Group_Friends_1920x1080.jpg');"></div>
-            <div class="play-button">
-                <div class="play-icon">â–¶</div>
+    <!-- Page Content Container -->
+    <main class="vida-page">
+        <div class="vida-container">
+            <!-- Unified Breadcrumbs -->
+            <div class="breadcrumbs">
+                <a href="index.html">Inicio</a> &gt; <a href="#">Vida en el Campus</a> &gt; <span class="current">Sostenibilidad</span>
             </div>
-        </div>
-    </section>
 
-    <!-- Social Icons Floating -->
+            <!-- Unified Header Title Section -->
+            <div class="vida-header hontanar-scroll-reveal">
+                <h4 class="kicker">VIDA EN EL CAMPUS</h4>
+                <h1 class="main-title">Sostenibilidad <span>Ambiental y Futuro</span></h1>
+            </div>
+
+            
+            <p class="vida-lead-paragraph hontanar-scroll-reveal">
+                En el Gimnasio El Hontanar la sostenibilidad no es solo una materia de estudio, sino un **estilo de vida visible**. Como Colegio del Mundo IB, educamos ciudadanos conscientes y ecológicamente responsables capaces de proponer soluciones reales a los retos de hoy.
+            </p>
+
+            <div class="sostenibilidad-grid">
+                
+                <div class="eco-card hontanar-scroll-reveal">
+                    <h3>Gestión de Recursos</h3>
+                    <p>Implementamos reciclaje riguroso, reducción y eliminación de plásticos de un solo uso, y control eficiente del consumo de agua y energía en el campus campestre.</p>
+                </div>
+
+                <div class="eco-card hontanar-scroll-reveal">
+                    <h3>Proyectos STEM+H</h3>
+                    <p>Estudiantes desde primaria hasta bachillerato desarrollan investigaciones científicas aplicadas a energías renovables, cuidado de biodiversidad y consumo ético.</p>
+                </div>
+
+                <div class="eco-card hontanar-scroll-reveal">
+                    <h3>Naturaleza y Aula Viva</h3>
+                    <p>Convertimos nuestro campus en aulas vivas a través de siembra directa, reforestación y cuidado ambiental, estimulando la empatía por todos los seres vivos.</p>
+                </div>
+
+            </div>
+
+            <!-- Parallax Mid-Page Divider -->
+            <div class="parallax-divider hontanar-scroll-reveal" style="background-image: url('assets/parallax-proceso.jpg');">
+                <div class="parallax-overlay"></div>
+                <div class="parallax-content">
+                    <h2>Educando Líderes Conscientes</h2>
+                    <p>Fieles a nuestra filosofía, formamos jóvenes audaces, analíticos y comprometidos, capaces de liderar iniciativas que beneficien su salud, su comunidad y el medio ambiente global.</p>
+                </div>
+            </div>
+
+            <!-- Connections Box -->
+            <div class="connections-box hontanar-scroll-reveal">
+                <h2 class="vida-section-title" style="margin-bottom: 20px;">Conexiones Institucionales Hontanar</h2>
+                <p class="vida-paragraph" style="text-align: center; max-width: 760px; margin: 0 auto;">
+                    La experiencia de sostenibilidad dialoga permanentemente con nuestra **Filosofía y Valores**, nuestro **Modelo de Enseñanza** de alta calidad y la proyección global que respaldamos a través de los **Sellos Hontanar**.
+                </p>
+                
+                <div class="connections-links">
+                    <a href="modelo-de-ensenanza.html" class="connection-btn">Modelo Educativo</a>
+                    <a href="filosofia-y-valores.html" class="connection-btn">Filosofía</a>
+                    <a href="sello-hontanar.html" class="connection-btn">Sello Hontanar</a>
+                    <a href="tour-virtual.html" class="connection-btn">Tour Virtual</a>
+                    <a href="consejeria-internacional.html" class="connection-btn">Consejería</a>
+                    <a href="preguntas-frecuentes.html" class="connection-btn">FAQ</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
     <div class="social-floating">
         <a href="#" class="social-icon green"><img src="assets/Whatsapp.png" alt="WA"></a>
         <a href="#" class="social-icon yellow"><img src="assets/Componente 26 - 1.png" alt="MSG"></a>
@@ -209,19 +254,19 @@
         <div class="footer-container">
             <div class="footer-logo-col">
                 <img src="assets/Capa_2_xA0_Imagen.png" alt="Logo Footer" class="footer-shield">
-                <p>En el Gimnasio El Hontanar,<br>educamos para la vida, formando<br>ciudadanos Ã­ntegros, felices y preparados<br>para afrontar el futuro con confianza.</p>
+                <p>En el Gimnasio El Hontanar,<br>educamos para la vida, formando<br>ciudadanos íntegros, felices y preparados<br>para afrontar el futuro con confianza.</p>
             </div>
             <div class="footer-info-col">
                 <h4>DATOS DE CONTACTO</h4>
                 <ul>
-                    <li><img src="assets/whatsapp (4).png" alt="WhatsApp" class="footer-icon"> +57 316 4701496<br>+57 318 7170097</li>
-                    <li><img src="assets/telefono-inteligente (3).png" alt="TelÃ©fono" class="footer-icon"> +57 316 4701496<br>+57 318 7170097</li>
+                    <li><img src="assets/whatsapp (4).png" alt="WhatsApp" class="footer-icon"> +57 316 4701496<br>+57 316 4701496</li>
+                    <li><img src="assets/telefono-inteligente (3).png" alt="Teléfono" class="footer-icon"> +57 316 4701496<br>+57 316 4701496</li>
                     <li><img src="assets/sobre (1).png" alt="Email" class="footer-icon"> admisiones@gimnasiohontanar.edu.co<br>admisiones2@gimnasiohontanar.edu.co<br>contacto@gimnasiohontanar.edu.co</li>
-                    <li><img src="assets/_x32_0_location.png" alt="UbicaciÃ³n" class="footer-icon"> Cra. 7a 300 m. antes del peaje de<br>Fusca (Sentido Chia - BogotÃ¡), Chia, Colombia.</li>
+                    <li><img src="assets/_x32_0_location.png" alt="Ubicación" class="footer-icon"> Cra. 7a 300 m. antes del peaje de<br>Fusca (Sentido Chia - Bogotá), Chia, Colombia.</li>
                 </ul>
             </div>
             <div class="footer-social-col">
-                <h4>SÃGANOS</h4>
+                <h4>SÍGANOS</h4>
                 <ul>
                     <li><img src="assets/facebook (4).png" alt="Facebook" class="footer-icon"> gimnasioelhontanar</li>
                     <li><img src="assets/Layer 2.png" alt="Instagram" class="footer-icon"> gimnasioelhontanar</li>
@@ -230,8 +275,22 @@
             </div>
         </div>
     </footer>
+
+    <!-- Scroll Reveal Observer Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.08 });
+
+            const scrollElements = document.querySelectorAll('.hontanar-scroll-reveal');
+            scrollElements.forEach(el => revealObserver.observe(el));
+        });
+    </script>
 </body>
 </html>
-
-
-

@@ -408,7 +408,7 @@
 }
 
 .pq-card-title {
-    font-family: var(--font-playfair);
+    font-family: var(--font-lato);
     font-size: 1.8rem;
     font-weight: 700;
     line-height: 1.4;
@@ -538,8 +538,9 @@
 }
 
 .bento-image-content h3 {
-    font-family: var(--font-playfair);
+    font-family: var(--font-lato);
     font-size: 2.2rem;
+    font-weight: 700;
     line-height: 1.2;
     margin-bottom: 10px;
 }
@@ -551,9 +552,17 @@
     margin-bottom: 25px;
 }
 
-.bento-glass-yellow h3, .bento-glass-white h3 {
+.bento-glass-yellow h3 {
     font-family: var(--font-playfair);
     font-size: 2rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.bento-glass-white h3 {
+    font-family: var(--font-lato);
+    font-size: 2rem;
+    font-weight: 700;
     margin-bottom: 20px;
     line-height: 1.2;
 }

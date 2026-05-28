@@ -58,13 +58,14 @@ a {
 
 /* Typography Classes */
 .section-heading {
-    font-family: var(--font-playfair);
+    font-family: var(--font-lato);
     font-size: 2.5rem;
     text-align: center;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .section-heading span {
+    font-family: var(--font-playfair);
     color: var(--yellow);
     font-style: italic;
 }
@@ -217,17 +218,21 @@ a {
     font-family: var(--font-playfair);
     font-size: 3.5rem;
     font-weight: 600;
+    font-style: italic;
     line-height: 1.1;
 }
 
 .hero h2 {
     font-family: var(--font-playfair);
     font-size: 4rem;
-    font-weight: 400;
+    font-weight: 600;
+    font-style: italic;
     margin-bottom: 5px;
 }
 
 .happily-text {
+    font-family: var(--font-playfair);
+    font-weight: 400;
     font-style: italic;
     position: relative;
     display: inline-block;
@@ -326,9 +331,9 @@ a {
 }
 
 .bienvenidos-text .title {
-    font-family: var(--font-playfair);
+    font-family: var(--font-lato);
     font-size: 3rem;
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: 20px;
 }
 
@@ -643,7 +648,6 @@ a {
 .descubra-subtitle {
     font-family: var(--font-playfair);
     font-size: 2rem;
-    font-style: italic;
     font-weight: 400;
     color: var(--white);
     margin-bottom: 40px;
@@ -677,7 +681,7 @@ a {
 
 .cifras-title {
     font-family: var(--font-lato);
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     font-weight: 700;
     color: var(--white);
     margin-bottom: 40px;
@@ -850,7 +854,7 @@ a {
 .cta-box h2 {
     font-family: var(--font-lato);
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: 900;
     color: var(--white);
     line-height: 1.4;
 }
@@ -1418,9 +1422,9 @@ a {
 }
 
 .proceso-card-heading-3col {
-    font-family: var(--font-playfair);
+    font-family: var(--font-lato);
     font-size: 2.1rem;
-    font-weight: 400;
+    font-weight: 700;
     color: white;
     line-height: 1.4;
     margin: 0;

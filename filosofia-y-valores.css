@@ -124,7 +124,7 @@
 
 /* Card heading (large Playfair like por-que) */
 .intro-card-heading {
-    font-family: var(--font-playfair);
+    font-family: var(--font-lato);
     font-size: 2.1rem;
     font-weight: 700;
     color: var(--white);
@@ -132,6 +132,7 @@
 }
 
 .intro-card-heading span {
+    font-family: var(--font-playfair);
     font-style: italic;
     color: var(--yellow);
 }
@@ -292,7 +293,7 @@
 
 /* ---- Headings (large Playfair Display) ---- */
 .pillar-bento-heading {
-    font-family: var(--font-playfair);
+    font-family: var(--font-lato);
     font-size: 1.7rem;
     font-weight: 700;
     color: var(--white);
@@ -301,6 +302,7 @@
 }
 
 .pillar-bento-heading span {
+    font-family: var(--font-playfair);
     font-style: italic;
     color: var(--yellow);
 }
@@ -322,7 +324,7 @@
 
 /* ---- Card 1: Convivencia (background image + overlay) ---- */
 .card-convivencia {
-    background-image: url('assets/filo-bento-2.jpg');
+    background-image: url('assets/20241002_144246.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -410,13 +412,14 @@
 }
 
 .bento-header .title {
-    font-family: var(--font-playfair);
+    font-family: var(--font-lato);
     font-size: 2.6rem;
     font-weight: 700;
     color: var(--white);
 }
 
 .bento-header .title span {
+    font-family: var(--font-playfair);
     font-style: italic;
     color: var(--yellow);
 }
@@ -544,7 +547,7 @@
 }
 
 .bento-card .card-title {
-    font-family: var(--font-playfair);
+    font-family: var(--font-lato);
     font-size: 1.55rem;
     font-weight: 700;
     color: var(--white);
@@ -553,6 +556,7 @@
 }
 
 .bento-card .card-title span {
+    font-family: var(--font-playfair);
     font-style: italic;
     color: var(--yellow);
 }
