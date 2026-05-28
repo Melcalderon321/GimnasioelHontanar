@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -13,29 +13,6 @@
     <link rel="stylesheet" href="consejeria-internacional.css">
     <link rel="stylesheet" href="vida-en-el-campus.css">
     <link rel="stylesheet" href="filosofia-y-valores.css">
-    <style>
-        /* Reducir la altura de las tarjetas para que no queden tan altas */
-        .pillar-bento-card {
-            height: 380px !important;
-            min-height: auto !important;
-        }
-        /* Reducir el padding interno de las tarjetas */
-        .pillar-bento-body {
-            padding: 25px 22px !important;
-        }
-        /* Ajustar espaciados internos y tamaño de fuente para compactar */
-        .pillar-bento-heading {
-            font-size: 1.5rem !important;
-            margin-bottom: 8px !important;
-        }
-        .pillar-bento-pill {
-            margin-bottom: 10px !important;
-        }
-        .pillar-bento-text {
-            font-size: 0.9rem !important;
-            line-height: 1.5 !important;
-        }
-    </style>
 </head>
 <body>
     <!-- Navbar -->
@@ -128,11 +105,15 @@
                     <li><a href="tecnoser-robotica.html">Robótica</a></li>
                 </ul>
             </li>
-            <li>
+            <li class="has-submenu">
                 <div class="menu-item">
                     <span class="icon-circle"><i class="arrow-right"></i></span>
                     <a href="#">Contacto</a>
                 </div>
+                <ul class="submenu">
+                    <li><a href="agenda-visita.html">Agenda tu Visita</a></li>
+                    <li><a href="como-llegar.html">Cómo Llegar</a></li>
+                </ul>
             </li>
         </ul>
         <div class="sidebar-footer">

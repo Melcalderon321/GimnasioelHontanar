@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cómo Llegar | Gimnasio El Hontanar</title>
+    <meta name="description" content="Ubicación y rutas para llegar al Gimnasio El Hontanar en Chía. Encuentra indicaciones detalladas por Autopista Norte y Carrera 7, enlaces rápidos de Waze y Google Maps.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="tour-virtual.css">
+    <link rel="stylesheet" href="filosofia-y-valores.css">
+    <link rel="stylesheet" href="vida-en-el-campus.css">
+    <style>
+        /* ══════════════════════════════════════
+           CÓMO LLEGAR — Estilos específicos
+        ══════════════════════════════════════ */
+
+        /* ── Scroll Reveal System ── */
+        .hontanar-scroll-reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+            will-change: transform, opacity;
+        }
+        .hontanar-scroll-reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ── Lead Paragraph Block ── */
+        .llegar-lead-block {
+            text-align: center;
+            max-width: 880px;
+            margin: 0 auto 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .llegar-lead-block p {
+            font-family: var(--font-lato);
+            font-size: 0.95rem;
+            line-height: 1.75;
+            color: rgba(255,255,255,0.82);
+            margin: 0;
+        }
+        .llegar-lead-block p.highlight {
+            font-size: 1.12rem;
+            color: var(--white);
+            font-weight: 700;
+        }
+        .llegar-lead-block p.italic-yellow {
+            font-family: var(--font-playfair);
+            font-style: italic;
+            font-size: 1.15rem;
+            color: var(--yellow);
+            margin-top: 10px;
+        }
+
+        /* ── Split Layout: Map and Glass Info Card ── */
+        .llegar-split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 36px;
+            margin-bottom: 80px;
+            align-items: stretch;
+        }
+
+        .map-frame-wrapper {
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 15px 45px rgba(0,0,0,0.3);
+            width: 100%;
+            height: 100%;
+            min-height: 380px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .map-frame-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+
+        .contact-glass-card {
+            background: rgba(255,255,255,0.06);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1.5px solid var(--yellow);
+            border-radius: 24px;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+            height: 100%;
+            justify-content: center;
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.15);
+        }
+
+        .contact-glass-row {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            justify-content: flex-start;
+        }
+
+        .contact-glass-img {
+            object-fit: contain;
+            flex-shrink: 0;
+            transition: transform 0.3s ease;
+        }
+
+        .img-horario {
+            width: 68px;
+            height: 68px;
+            margin: -9px;
+        }
+
+        .img-mail {
+            width: 60px;
+            height: 60px;
+            margin: -4px;
+        }
+
+        .img-ubicacion {
+            width: 50px;
+            height: 50px;
+            margin: 0;
+        }
+
+        .contact-glass-row:hover .contact-glass-img {
+            transform: scale(1.1);
+        }
+
+        .map-frame-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        .map-frame-wrapper:hover img {
+            transform: scale(1.04);
+        }
+
+        .contact-glass-info {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            text-align: left;
+            flex-grow: 1;
+        }
+
+        .contact-glass-label {
+            font-family: var(--font-playfair);
+            font-style: italic;
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: var(--yellow);
+        }
+
+        .contact-glass-text {
+            font-family: var(--font-lato);
+            font-size: 0.88rem;
+            color: rgba(255,255,255,0.88);
+            line-height: 1.55;
+        }
+
+        /* ── Staggered reveal for upper blocks ── */
+        .llegar-split .map-frame-wrapper { transition-delay: 0.1s; }
+        .llegar-split .contact-glass-card { transition-delay: 0.25s; }
+
+        /* ══ FORM PREMIUM ══ */
+        .form-section {
+            border-radius: 28px;
+            overflow: hidden;
+            margin: 0 0 80px;
+            display: grid;
+            grid-template-columns: 1fr 1.45fr;
+            min-height: 680px;
+            box-shadow: 0 30px 80px rgba(0,0,0,0.45);
+        }
+
+        /* ─ Panel izquierdo (info) ─ */
+        .form-left {
+            position: relative;
+            padding: 56px 44px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow: hidden;
+        }
+        .form-left-bg {
+            position: absolute;
+            inset: 0;
+            background-image: url('assets/PHOTO-2025-07-30-09-58-52 (1).jpg');
+            background-size: cover;
+            background-position: center;
+            z-index: 0;
+        }
+        .form-left-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(160deg, rgba(10,20,55,0.92) 0%, rgba(37,68,120,0.85) 100%);
+            z-index: 1;
+        }
+        .form-left-content {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+        .form-left-logo {
+            width: 64px;
+            filter: drop-shadow(0 4px 16px rgba(0,0,0,0.4));
+        }
+        .form-left-title {
+            font-family: var(--font-playfair);
+            font-style: italic;
+            font-size: 2rem;
+            font-weight: 600;
+            color: #fff;
+            line-height: 1.25;
+        }
+        .form-left-title em {
+            color: var(--yellow);
+            font-style: italic;
+        }
+        .form-left-subtitle {
+            font-family: var(--font-lato);
+            font-size: 0.92rem;
+            color: rgba(255,255,255,0.78);
+            line-height: 1.7;
+        }
+
+        /* ─ Panel derecho (form) ─ */
+        .form-right {
+            background: linear-gradient(135deg, rgba(255,255,255,0.22) 0%, rgba(255,255,255,0.04) 100%);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-left: 1px solid var(--yellow);
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.25);
+            padding: 56px 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .form-right-kicker {
+            font-family: var(--font-lato);
+            font-size: 0.72rem;
+            font-weight: 800;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--yellow);
+            margin-bottom: 8px;
+        }
+        .form-right-title {
+            font-family: var(--font-lato);
+            font-weight: 900;
+            font-size: 1.55rem;
+            color: #fff;
+            margin-bottom: 36px;
+            line-height: 1.25;
+        }
+
+        /* Floating label fields */
+        .fl-group {
+            position: relative;
+            margin-bottom: 28px;
+        }
+        .fl-group input,
+        .fl-group select,
+        .fl-group textarea {
+            width: 100%;
+            background: transparent;
+            border: none;
+            border-bottom: 1.5px solid rgba(255,255,255,0.25);
+            border-radius: 0;
+            padding: 18px 4px 8px;
+            font-family: var(--font-lato);
+            font-size: 0.96rem;
+            color: #fff;
+            outline: none;
+            transition: border-color 0.3s;
+            -webkit-appearance: none;
+        }
+        .fl-group select {
+            cursor: pointer;
+        }
+        .fc-group select option {
+            background: #1a3060;
+            color: #fff;
+        }
+        .fl-group textarea {
+            resize: none;
+            min-height: 90px;
+            padding-top: 22px;
+        }
+        .fl-group input::placeholder,
+        .fl-group textarea::placeholder { color: transparent; }
+        .fl-group label {
+            position: absolute;
+            left: 4px;
+            top: 18px;
+            font-family: var(--font-lato);
+            font-size: 0.92rem;
+            color: rgba(255,255,255,0.5);
+            pointer-events: none;
+            transition: top 0.22s, font-size 0.22s, color 0.22s;
+        }
+        .fl-group label .req { color: var(--yellow); }
+        /* Float up when focused or has value */
+        .fl-group input:focus ~ label,
+        .fl-group input:not(:placeholder-shown) ~ label,
+        .fl-group textarea:focus ~ label,
+        .fl-group textarea:not(:placeholder-shown) ~ label,
+        .fl-group select:focus ~ label,
+        .fl-group.has-value label {
+            top: 2px;
+            font-size: 0.7rem;
+            color: var(--yellow);
+            font-weight: 700;
+            letter-spacing: 0.06em;
+        }
+        /* Animated underline */
+        .fl-group::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--yellow);
+            transition: width 0.3s cubic-bezier(0.4,0,0.2,1);
+            border-radius: 2px;
+        }
+        .fl-group:focus-within::after { width: 100%; }
+
+        /* 2-col grid for form */
+        .form-grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0 28px;
+        }
+        .form-grid-2 .fl-group.full { grid-column: 1 / -1; }
+
+        /* Submit button */
+        .form-submit-row {
+            margin-top: 16px;
+        }
+
+        /* Facade Image Container */
+        .facade-image-container {
+            border-radius: 28px;
+            overflow: hidden;
+            width: 100%;
+            height: 480px;
+            margin: 60px 0 80px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .facade-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @media (max-width: 992px) {
+            .llegar-split {
+                grid-template-columns: 1fr;
+            }
+            .map-frame-wrapper {
+                min-height: 340px;
+            }
+            .form-section {
+                grid-template-columns: 1fr;
+            }
+            .form-left {
+                min-height: 320px;
+            }
+            .facade-image-container {
+                height: 320px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="nav-pill">
+            <a href="index.html" class="logo">
+                <img src="assets/HONTANAR logo_ (3).png" alt="Hontanar Logo">
+            </a>
+            <div class="nav-right">
+                <span class="menu-text">MENÚ</span>
+                <div class="hamburger-circle">
+                    <div class="hamburger">
+                        <span></span><span></span><span></span>
+                    </div>
+                </div>
+                <a href="agenda-visita.html" class="btn btn-yellow btn-nav">Contáctanos <span class="arrow">&gt;</span></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sidebar Menu -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+    <nav class="sidebar-menu" id="sidebar-menu">
+        <div class="sidebar-header">
+            <img src="assets/Capa_2_xA0_Imagen.png" alt="Logo" class="sidebar-logo">
+            <button class="close-btn" id="close-sidebar">&times;</button>
+        </div>
+        <ul class="sidebar-nav">
+            <li class="has-submenu">
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-right"></i></span>
+                    <a href="#">Admisiones</a>
+                </div>
+                <ul class="submenu">
+                    <li><a href="tour-virtual.html">Tour Virtual</a></li>
+                    <li><a href="preguntas-frecuentes.html">Preguntas Frecuentes</a></li>
+                    <li><a href="por-que-estudiar.html">¿Por qué estudiar en el Gimnasio El Hontanar?</a></li>
+                    <li><a href="proceso-de-ingreso.html">Proceso de ingreso al Gimnasio El Hontanar</a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-right"></i></span>
+                    <a href="#">Somos Hontanar</a>
+                </div>
+                <ul class="submenu">
+                    <li><a href="modelo-de-ensenanza.html">Modelo de Enseñanza</a></li>
+                    <li><a href="nuestra-historia.html">Nuestra Historia</a></li>
+                    <li><a href="filosofia-y-valores.html">Filosofía y Valores</a></li>
+                    <li><a href="sello-hontanar.html">Sello Hontanar</a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-right"></i></span>
+                    <a href="#">Cultura Internacional</a>
+                </div>
+                <ul class="submenu">
+                    <li><a href="multilinguismo.html">Multilingüismo</a></li>
+                    <li><a href="programa-ib.html">Programa IB</a></li>
+                    <li><a href="intercambio-hontanar.html">Intercambio Hontanar</a></li>
+                    <li><a href="consejeria-internacional.html">Consejería Internacional</a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-right"></i></span>
+                    <a href="#">Vida en el Campus</a>
+                </div>
+                <ul class="submenu">
+                    <li><a href="un-dia-escolar.html">Un Día Escolar</a></li>
+                    <li><a href="formacion-integral.html">Formación Integral Más Allá del Aula</a></li>
+                    <li><a href="bienestar-emocional.html">Bienestar Emocional</a></li>
+                    <li><a href="programa-casas.html">Programa Casas</a></li>
+                    <li><a href="character-counts.html">Character Counts</a></li>
+                    <li><a href="espacio-seguro.html">Espacio Seguro</a></li>
+                    <li><a href="espacios-de-bienestar-y-naturaleza.html">Espacios de Bienestar y Naturaleza</a></li>
+                    <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-right"></i></span>
+                    <a href="#">TecnoSer</a>
+                </div>
+                <ul class="submenu">
+                    <li><a href="tecnoser-innovacion.html">Innovación</a></li>
+                    <li><a href="tecnoser-integracion.html">Integración Tecnológica</a></li>
+                    <li><a href="tecnoser-ia.html">IA (Inteligencia Artificial)</a></li>
+                    <li><a href="tecnoser-robotica.html">Robótica</a></li>
+                </ul>
+            </li>
+            <li class="has-submenu expanded">
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-down"></i></span>
+                    <a href="#">Contacto</a>
+                </div>
+                <ul class="submenu" style="display: block;">
+                    <li><a href="agenda-visita.html">Agenda tu Visita</a></li>
+                    <li><a href="como-llegar.html" class="active" style="color: var(--yellow); font-weight: 700;">Cómo Llegar</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="sidebar-footer">
+            <a href="tour-virtual.html" class="btn-sidebar btn-s-green"><span>⚲</span> VIRTUAL</a>
+            <a href="agenda-visita.html" class="btn-sidebar btn-s-yellow"><span>⌨</span> ADMISIONES</a>
+        </div>
+    </nav>
+
+    <!-- Script for Sidebar -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.querySelector('.hamburger-circle');
+            const menuText = document.querySelector('.menu-text');
+            const sidebar = document.getElementById('sidebar-menu');
+            const overlay = document.getElementById('sidebar-overlay');
+            const closeBtn = document.getElementById('close-sidebar');
+            function toggleMenu() {
+                sidebar.classList.toggle('open');
+                overlay.classList.toggle('open');
+            }
+            if(hamburger) hamburger.addEventListener('click', toggleMenu);
+            if(menuText) menuText.addEventListener('click', toggleMenu);
+            if(closeBtn) closeBtn.addEventListener('click', toggleMenu);
+            if(overlay) overlay.addEventListener('click', toggleMenu);
+            const submenus = document.querySelectorAll('.has-submenu .menu-item');
+            submenus.forEach(item => {
+                item.addEventListener('click', (e) => {
+                    if (e.target.tagName !== 'A') {
+                        e.preventDefault();
+                        item.parentElement.classList.toggle('expanded');
+                        const submenuList = item.parentElement.querySelector('.submenu');
+                        if(submenuList) {
+                            submenuList.style.display = submenuList.style.display === 'block' ? 'none' : 'block';
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+
+    <!-- Page Content -->
+    <main class="vida-page">
+        <div class="vida-container">
+            <!-- Breadcrumbs -->
+            <div class="breadcrumbs">
+                <a href="index.html">Inicio</a> &gt; <a href="#">Contacto</a> &gt; <span class="current">Cómo Llegar</span>
+            </div>
+
+            <!-- Header -->
+            <div class="vida-header hontanar-scroll-reveal" style="text-align: center;">
+                <h4 class="kicker">CÓMO LLEGAR</h4>
+                <h1 class="main-title" style="font-size: 2.8rem; line-height: 1.15;">
+                    Cómo llegar <span style="font-family: var(--font-playfair); font-style: italic; color: var(--yellow);">al Hontanar</span>
+                </h1>
+            </div>
+
+            <!-- Centered Lead Paragraph Blocks -->
+            <div class="llegar-lead-block hontanar-scroll-reveal">
+                <p class="highlight">Llegar es fácil, somos un colegio en el norte de Bogotá, con acceso directo por la carrera séptima.</p>
+                <p class="italic-yellow">¿Vienes por primera vez? Llámanos y te guiamos paso a paso para que llegues sin contratiempos a uno de los mejores colegios bilingües en Bogotá.</p>
+            </div>
+
+            <!-- Main Layout Split: Map & Glass Card -->
+            <div class="llegar-split hontanar-scroll-reveal">
+                
+                <!-- Left: Static Map Image Link to Interactive Map -->
+                <a href="https://maps.google.com/?q=Gimnasio+El+Hontanar" target="_blank" class="map-frame-wrapper hontanar-scroll-reveal" style="display: block; text-decoration: none;">
+                    <img src="assets/image (49).png" alt="Mapa Ubicación">
+                </a>
+
+                <!-- Right: Glass Contact Card -->
+                <div class="contact-glass-card hontanar-scroll-reveal">
+                    
+                    <!-- Row 1: Horario -->
+                    <div class="contact-glass-row">
+                        <img src="assets/Grupo 4219.png" alt="Horario de Atención" class="contact-glass-img img-horario">
+                        <div class="contact-glass-info">
+                            <span class="contact-glass-label">Horario de Atención</span>
+                            <span class="contact-glass-text">
+                                Lunes a Viernes 8:00 AM - 5:00 PM<br>
+                                Sábados 8:00 AM - 12:00 PM
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Row 2: Contacto -->
+                    <div class="contact-glass-row">
+                        <img src="assets/Grupo 4217.png" alt="Contacto General" class="contact-glass-img img-mail">
+                        <div class="contact-glass-info">
+                            <span class="contact-glass-label">Contacto general</span>
+                            <span class="contact-glass-text">
+                                contacto@gimnasiohontanar.edu.co
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Row 3: Dirección -->
+                    <div class="contact-glass-row">
+                        <img src="assets/Grupo 4218.png" alt="Dirección" class="contact-glass-img img-ubicacion">
+                        <div class="contact-glass-info">
+                            <span class="contact-glass-label">Dirección</span>
+                            <span class="contact-glass-text">
+                                Carrera 7ª, 300 metros antes del peaje Chía, Cundinamarca - Colombia
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Form Section Premium -->
+            <div class="form-section hontanar-scroll-reveal">
+
+                <!-- Panel izquierdo: info decorativa -->
+                <div class="form-left">
+                    <div class="form-left-bg"></div>
+                    <div class="form-left-overlay"></div>
+                    <div class="form-left-content">
+                        <img src="assets/Capa_2_xA0_Imagen.png" alt="Logo El Hontanar" class="form-left-logo">
+                        <div>
+                            <h2 class="form-left-title">
+                                ¡Agende su visita y<br>
+                                comencemos juntos<br>
+                                <em>este camino!</em>
+                            </h2>
+                        </div>
+                        <p class="form-left-subtitle">
+                            Cada visita es guiada y personalizada, porque abrir las puertas del colegio es, para nosotros, abrir las puertas de nuestra casa.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Panel derecho: formulario -->
+                <div class="form-right">
+                    <p class="form-right-kicker">Formulario de Contacto</p>
+                    <h3 class="form-right-title">Déjennos un mensaje y muy pronto<br>nos pondremos en contacto para conocernos.</h3>
+
+                    <form id="agenda-form" novalidate>
+                        <div class="form-grid-2">
+
+                            <div class="fl-group">
+                                <input type="text" id="nombre" name="nombre" placeholder=" " required autocomplete="name">
+                                <label for="nombre">Nombre completo del Padre/Madre <span class="req">*</span></label>
+                            </div>
+
+                            <div class="fl-group">
+                                <input type="email" id="email" name="email" placeholder=" " required autocomplete="email">
+                                <label for="email">Correo electrónico <span class="req">*</span></label>
+                            </div>
+
+                            <div class="fl-group">
+                                <input type="tel" id="telefono" name="telefono" placeholder=" " required autocomplete="tel">
+                                <label for="telefono">Teléfono de contacto <span class="req">*</span></label>
+                            </div>
+
+                            <div class="fl-group has-value">
+                                <select id="grado" name="grado" required>
+                                    <option value="" disabled selected></option>
+                                    <option value="preescolar">Preescolar (Pre-jardín, Jardín, Transición)</option>
+                                    <option value="primaria-baja">Primaria Baja (1° – 3°)</option>
+                                    <option value="primaria-alta">Primaria Alta (4° – 5°)</option>
+                                    <option value="secundaria">Secundaria (6° – 9°)</option>
+                                    <option value="media">Media (10° – 11°)</option>
+                                </select>
+                                <label for="grado">Grado de interés para su hijo <span class="req">*</span></label>
+                            </div>
+
+                            <div class="fl-group full">
+                                <textarea id="mensaje" name="mensaje" placeholder=" "></textarea>
+                                <label for="mensaje">Cuéntenos sobre su hijo y expectativas</label>
+                            </div>
+
+                        </div>
+
+                        <div class="form-submit-row">
+                            <button type="submit" class="btn btn-yellow" id="submit-btn" style="border: none; cursor: pointer; font-size: 1rem; padding: 12px 32px; display: inline-flex; align-items: center; gap: 10px;">
+                                Agendar mi visita <span class="arrow">&gt;</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Social Floating -->
+    <div class="social-floating">
+        <a href="https://wa.me/573164701496" target="_blank" class="social-icon green"><img src="assets/Whatsapp.png" alt="WA"></a>
+        <a href="mailto:admisiones@gimnasiohontanar.edu.co" class="social-icon yellow"><img src="assets/Componente 26 - 1.png" alt="MSG"></a>
+    </div>
+
+    <!-- CTA Box -->
+    <div class="cta-box-wrapper cta-overlap tour-cta">
+        <div class="cta-box">
+            <h2>
+                Are you Ready to <br>
+                <span>Extraordinary</span>
+                <span class="highlight-potencial">
+                    Experience?
+                    <svg class="cta-swoosh" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 40">
+                        <path d="M 10 30 Q 150 15 280 35" fill="none" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                    </svg>
+                    <img src="assets/Trazado 21196.png" alt="Pencil" class="cta-pencil">
+                </span>
+            </h2>
+            <a href="agenda-visita.html" class="btn btn-yellow btn-cta">Contact us <span class="btn-arrow">&gt;</span></a>
+        </div>
+        <img src="assets/ChatGPT Image 1 jul 2025, 17_28_04 (3).png" class="colibri-cta" alt="Colibri">
+    </div>
+
+    <!-- Footer Image -->
+    <section class="footer-image-section tour-footer-img">
+        <img src="assets/PHOTO-2025-07-30-09-58-52 (1).jpg" alt="Building" class="building-img">
+        <div class="curve-bottom">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path d="M0,0 Q720,240 1440,0 L1440,120 L0,120 Z" fill="#254478"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer new-footer">
+        <div class="footer-divider"></div>
+        <div class="footer-container">
+            <div class="footer-logo-col">
+                <img src="assets/Capa_2_xA0_Imagen.png" alt="Logo Footer" class="footer-shield">
+                <p>En el Gimnasio El Hontanar,<br>educamos para la vida, formando<br>ciudadanos íntegros, felices y preparados<br>para afrontar el futuro con confianza.</p>
+            </div>
+            <div class="footer-info-col">
+                <h4>DATOS DE CONTACTO</h4>
+                <ul>
+                    <li><img src="assets/whatsapp (4).png" alt="WhatsApp" class="footer-icon"> +57 316 4701496<br>+57 318 7170097</li>
+                    <li><img src="assets/telefono-inteligente (3).png" alt="Teléfono" class="footer-icon"> +57 316 4701496<br>+57 318 7170097</li>
+                    <li><img src="assets/sobre (1).png" alt="Email" class="footer-icon"> admisiones@gimnasiohontanar.edu.co<br>admisiones2@gimnasiohontanar.edu.co<br>contacto@gimnasiohontanar.edu.co</li>
+                    <li><img src="assets/_x32_0_location.png" alt="Ubicación" class="footer-icon"> Cra. 7a 300 m. antes del peaje de<br>Fusca (Sentido Chia - Bogotá), Chia, Colombia.</li>
+                </ul>
+            </div>
+            <div class="footer-social-col">
+                <h4>SÍGUENOS</h4>
+                <ul>
+                    <li><img src="assets/facebook (4).png" alt="Facebook" class="footer-icon"> gimnasioelhontanar</li>
+                    <li><img src="assets/Layer 2.png" alt="Instagram" class="footer-icon"> gimnasioelhontanar</li>
+                    <li><img src="assets/logotipo-de-linkedin (3).png" alt="LinkedIn" class="footer-icon"> gimnasio-el-hontanar</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script for Scroll Reveal & Form Submit -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Scroll Reveal
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.08 });
+            document.querySelectorAll('.hontanar-scroll-reveal').forEach(el => revealObserver.observe(el));
+
+            // Form submit
+            const form = document.getElementById('agenda-form');
+            if (form) {
+                form.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const btn = document.getElementById('submit-btn');
+                    btn.textContent = '¡Enviado! Te contactaremos pronto.';
+                    btn.style.background = '#1BA655';
+                    btn.style.color = '#fff';
+                    btn.disabled = true;
+                });
+            }
+        });
+    </script>
+</body>
+</html>

@@ -150,7 +150,7 @@
 .pq-accordion-item {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 50px;
+    border-radius: 16px;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     overflow: hidden;
@@ -163,7 +163,7 @@
 }
 
 .pq-accordion-item.active {
-    border-radius: 30px;
+    border-radius: 16px;
     border-color: var(--yellow);
     background: rgba(255, 255, 255, 0.08);
 }
@@ -589,6 +589,386 @@
 @media (max-width: 768px) {
     .pq-bento-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+/* ==========================================================================
+   Bento Hero Section Styles (¿Por qué estudiar?)
+   ========================================================================== */
+.pq-hero-lead-centered {
+    font-family: var(--font-playfair);
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: 500;
+    color: var(--yellow);
+    max-width: 800px;
+    margin: 25px auto 0 auto;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.pq-bento-hero-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+    max-width: 1100px;
+    margin: 60px auto 0 auto;
+    padding: 0 20px;
+}
+
+.pq-bento-card {
+    position: relative;
+    border-radius: 28px;
+    overflow: hidden;
+    min-height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
+    text-align: left;
+}
+
+.pq-bento-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 55px rgba(0, 0, 0, 0.35);
+}
+
+.pq-card-content {
+    position: relative;
+    z-index: 2;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-start;
+    flex-grow: 1;
+}
+
+/* Tag Pill styles */
+.pq-card-tag {
+    align-self: flex-start;
+    padding: 5px 14px;
+    border-radius: 12px;
+    font-family: var(--font-lato);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    border: 1px solid transparent;
+}
+
+.pq-card-tag.tag-yellow {
+    background-color: rgba(249, 239, 108, 0.1);
+    border-color: rgba(249, 239, 108, 0.25);
+    color: var(--yellow);
+}
+
+.pq-card-tag.tag-blue {
+    background-color: rgba(37, 68, 120, 0.1);
+    border-color: rgba(37, 68, 120, 0.25);
+    color: var(--blue);
+}
+
+/* Card 1 & 4: Image Overlay Cards */
+.pq-card-img-overlay {
+    background-size: cover;
+    background-position: center;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.pq-card-overlay-shade {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(20, 30, 55, 0.98) 0%, rgba(20, 30, 55, 0.5) 60%, rgba(20, 30, 55, 0.15) 100%);
+    z-index: 1;
+}
+
+.pq-card-img-overlay .pq-card-title {
+    font-family: var(--font-lato);
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.pq-card-img-overlay .pq-card-text {
+    font-family: var(--font-lato);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+}
+
+/* Card 2: Dark Blue Glass Card */
+.pq-card-dark-glass {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.pq-card-dark-glass:hover {
+    border-color: var(--yellow);
+}
+
+.pq-card-dark-glass .pq-card-title {
+    font-family: var(--font-lato);
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.pq-card-dark-glass .pq-card-text {
+    font-family: var(--font-lato);
+    font-size: 1.02rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0;
+}
+
+.pq-card-dark-glass .pq-card-text strong {
+    font-weight: 700;
+    color: var(--yellow);
+}
+
+/* Card 3: Solid Yellow Card */
+.pq-card-solid-yellow {
+    background: rgba(249, 239, 108, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.pq-card-solid-yellow:hover {
+    background: rgba(249, 239, 108, 1);
+}
+
+.pq-card-title-yellow {
+    font-family: var(--font-lato);
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--blue);
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.pq-card-title-yellow span {
+    font-family: var(--font-playfair);
+    font-style: italic;
+    font-weight: 700;
+    color: var(--blue);
+}
+
+.pq-card-text-yellow {
+    font-family: var(--font-lato);
+    font-size: 1.02rem;
+    line-height: 1.7;
+    color: var(--blue);
+    margin: 0;
+    font-weight: 400;
+}
+
+/* Responsive styles */
+@media (max-width: 990px) {
+    .pq-bento-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        max-width: 600px;
+    }
+}
+
+/* ==========================================================================
+   ROBOTICS-STYLE INTRO BENTO GRID ROW
+   ========================================================================== */
+.pq-intro-cards-container {
+    max-width: 1140px;
+    margin: 60px auto 0 auto;
+    padding: 0 20px;
+}
+
+.pillar-bento-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-top: 40px;
+    align-items: stretch;
+}
+
+.pillar-bento-card {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 380px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.pillar-bento-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 55px rgba(0, 0, 0, 0.25);
+    border-color: var(--yellow);
+}
+
+.pillar-bento-body {
+    position: relative;
+    z-index: 2;
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-start;
+    flex-grow: 1;
+}
+
+.pillar-bento-pill {
+    align-self: flex-start;
+    padding: 5px 12px;
+    border-radius: 20px;
+    background-color: var(--yellow);
+    color: var(--blue);
+    font-family: var(--font-lato);
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.pillar-bento-pill.pill-dark {
+    background-color: var(--blue);
+    color: var(--yellow);
+}
+
+.pillar-bento-heading {
+    font-family: var(--font-lato);
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--white);
+    line-height: 1.3;
+    margin: 0 0 12px 0;
+    text-align: left;
+}
+
+.pillar-bento-heading.heading-dark {
+    color: var(--blue);
+}
+
+.pillar-bento-heading span {
+    font-family: var(--font-playfair);
+    font-style: italic;
+    font-weight: 700;
+    color: var(--yellow);
+}
+
+.pillar-bento-heading.heading-dark span {
+    color: var(--blue);
+}
+
+.pillar-bento-text {
+    font-family: var(--font-lato);
+    font-size: 0.92rem;
+    line-height: 1.55;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+    text-align: left;
+}
+
+.pillar-bento-text.text-dark {
+    color: rgba(37, 68, 120, 0.85);
+}
+
+/* Card 1: Familia (assets/DSC_0022.jpg bg) */
+.pq-card-familia {
+    background-image: url('assets/DSC_0022.jpg');
+    background-size: cover;
+    background-position: center;
+    border: 2px solid rgba(255, 255, 255, 0.85) !important;
+}
+
+.pq-card-familia::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(20, 30, 55, 0.96) 0%, rgba(20, 30, 55, 0.65) 55%, rgba(20, 30, 55, 0.2) 100%);
+    z-index: 1;
+}
+
+/* Card 2: Valores (Solid White + Bird) */
+.pq-card-valores {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.pq-card-valores:hover {
+    background: rgba(255, 255, 255, 1);
+    border-color: rgba(255, 255, 255, 0.9);
+}
+
+.pq-mascot-bird {
+    position: absolute;
+    bottom: -15px;
+    right: -5px;
+    height: 140px;
+    width: auto;
+    opacity: 0.95;
+    z-index: 1;
+    pointer-events: none;
+    animation: floatColibriBird 4s ease-in-out infinite;
+    transition: transform 0.4s ease;
+}
+
+.pq-card-valores:hover .pq-mascot-bird {
+    animation: floatColibriBirdHover 4s ease-in-out infinite;
+}
+
+@keyframes floatColibriBird {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-6px) rotate(-2deg); }
+}
+
+@keyframes floatColibriBirdHover {
+    0%, 100% { transform: scale(1.08) translate(-3px, -3px) rotate(0deg); }
+    50% { transform: scale(1.08) translate(-3px, -9px) rotate(-2deg); }
+}
+
+/* Card 3: Propósito (assets/DSC_0040.JPG bg) */
+.pq-card-proposito {
+    background-image: url('assets/DSC_0040.JPG');
+    background-size: cover;
+    background-position: center;
+    border: 2px solid rgba(255, 255, 255, 0.85) !important;
+}
+
+.pq-card-proposito::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(20, 30, 55, 0.96) 0%, rgba(20, 30, 55, 0.65) 55%, rgba(20, 30, 55, 0.2) 100%);
+    z-index: 1;
+}
+
+/* Responsive grid for bento cards row */
+@media (max-width: 990px) {
+    .pillar-bento-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .pillar-bento-row {
+        grid-template-columns: 1fr;
+    }
+    .pillar-bento-card {
+        height: 350px;
     }
 }
 

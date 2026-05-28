@@ -1053,10 +1053,7 @@
    ========================================================================== */
 .multi-parallax-section {
     position: relative;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    padding: 50px 40px 60px 40px;
+    padding: 30px 40px 45px 40px;
     min-height: auto;
     display: flex;
     align-items: center;
@@ -1139,8 +1136,7 @@
 
 @media (max-width: 768px) {
     .multi-parallax-section {
-        background-attachment: scroll;
-        padding: 40px 24px 45px 24px;
+        padding: 20px 24px 30px 24px;
     }
 
     .multi-parallax-lead,
