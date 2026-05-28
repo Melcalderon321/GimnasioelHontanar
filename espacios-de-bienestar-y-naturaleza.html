@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Espacios de Bienestar y Naturaleza | Gimnasio El Hontanar</title>
-    <meta name="description" content="College Counseling en el Gimnasio El Hontanar. Guía, asesoría y conexión con universidades nacionales e internacionales desde noveno grado.">
+    <meta name="description" content="Campus campestre en Bogotá y Chía con zonas verdes, laboratorios modernos, campos deportivos y espacios culturales para el desarrollo integral de los estudiantes.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="tour-virtual.css">
-    <link rel="stylesheet" href="consejeria-internacional.css">
+    <link rel="stylesheet" href="filosofia-y-valores.css">
     <link rel="stylesheet" href="vida-en-el-campus.css">
 </head>
 <body>
@@ -45,7 +45,7 @@
                     <span class="icon-circle"><i class="arrow-down"></i></span>
                     <a href="#">Admisiones</a>
                 </div>
-                <ul class="submenu" >
+                <ul class="submenu">
                     <li><a href="tour-virtual.html">Tour Virtual</a></li>
                     <li><a href="preguntas-frecuentes.html">Preguntas Frecuentes</a></li>
                     <li><a href="por-que-estudiar.html">¿Por qué estudiar en el Gimnasio El Hontanar?</a></li>
@@ -69,19 +69,19 @@
                     <span class="icon-circle"><i class="arrow-right"></i></span>
                     <a href="#">Cultura Internacional</a>
                 </div>
-                <ul class="submenu" style="display: block;">
+                <ul class="submenu">
                     <li><a href="multilinguismo.html">Multilingüismo</a></li>
                     <li><a href="programa-ib.html">Programa IB</a></li>
                     <li><a href="intercambio-hontanar.html">Intercambio Hontanar</a></li>
                     <li><a href="consejeria-internacional.html">Consejería Internacional</a></li>
                 </ul>
             </li>
-            <li class="has-submenu">
+            <li class="has-submenu expanded">
                 <div class="menu-item">
-                    <span class="icon-circle"><i class="arrow-right"></i></span>
+                    <span class="icon-circle"><i class="arrow-down"></i></span>
                     <a href="#">Vida en el Campus</a>
                 </div>
-                <ul class="submenu">
+                <ul class="submenu" style="display: block;">
                     <li><a href="un-dia-escolar.html">Un Día Escolar</a></li>
                     <li><a href="formacion-integral.html">Formación Integral Más Allá del Aula</a></li>
                     <li><a href="bienestar-emocional.html">Bienestar Emocional</a></li>
@@ -92,11 +92,17 @@
                     <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
                 </ul>
             </li>
-            <li>
+            <li class="has-submenu">
                 <div class="menu-item">
-                    <span class="icon-circle"><i class="arrow-right"></i></span>
+                    <span class="icon-circle"><i class="arrow-down"></i></span>
                     <a href="#">TecnoSer</a>
                 </div>
+                <ul class="submenu">
+                    <li><a href="tecnoser-innovacion.html">Innovación</a></li>
+                    <li><a href="tecnoser-integracion.html">Integración Tecnológica</a></li>
+                    <li><a href="tecnoser-ia.html">IA (Inteligencia Artificial)</a></li>
+                    <li><a href="tecnoser-robotica.html">Robótica</a></li>
+                </ul>
             </li>
             <li>
                 <div class="menu-item">
@@ -130,7 +136,6 @@
             if(closeBtn) closeBtn.addEventListener('click', toggleMenu);
             if(overlay) overlay.addEventListener('click', toggleMenu);
 
-            // Collapsible submenus
             const submenus = document.querySelectorAll('.has-submenu .menu-item');
             submenus.forEach(item => {
                 item.addEventListener('click', (e) => {
@@ -150,152 +155,203 @@
     <!-- Page Content Container -->
     <main class="vida-page">
         <div class="vida-container">
-            <!-- Unified Breadcrumbs -->
+            <!-- Breadcrumbs -->
             <div class="breadcrumbs">
                 <a href="index.html">Inicio</a> &gt; <a href="#">Vida en el Campus</a> &gt; <span class="current">Espacios de Bienestar y Naturaleza</span>
             </div>
 
-            <!-- Unified Header Title Section -->
+            <!-- Header -->
             <div class="vida-header hontanar-scroll-reveal">
                 <h4 class="kicker">VIDA EN EL CAMPUS</h4>
-                <h1 class="main-title">Espacios de <span>Bienestar y Naturaleza</span></h1>
+                <h1 class="main-title">Un Campus <span>Verde para el Desarrollo Integral</span></h1>
             </div>
 
-            
             <p class="vida-lead-paragraph hontanar-scroll-reveal">
-                El Gimnasio El Hontanar cuenta con un **campus campestre de primer nivel** diseñado para conectar el conocimiento con la naturaleza. Ubicadas sobre la carrera séptima, nuestras instalaciones ofrecen el equilibrio perfecto entre infraestructura de vanguardia y extensas zonas verdes.
+                El Gimnasio El Hontanar cuenta con un <strong style="color: var(--white);">campus campestre diseñado</strong> para conectar el conocimiento con el bienestar. Ubicado estratégicamente sobre la carrera séptima, en una zona de fácil acceso entre Bogotá y Chía, nuestras instalaciones ofrecen el equilibrio perfecto entre <strong style="color: var(--white);">infraestructura moderna</strong> y amplias zonas verdes en contacto con la naturaleza.
+            </p>
+            <p class="vida-lead-paragraph hontanar-scroll-reveal" style="font-size: 1.07rem; opacity: 0.9; margin-top: -15px; margin-bottom: 50px;">
+                Creemos que el entorno físico influye en la calidad del aprendizaje. Por eso, nuestros espacios están pensados para estimular la curiosidad, fomentar el movimiento y ofrecer un respiro a la rutina escolar.
             </p>
 
-            <div class="bento-counseling-grid">
-                
-                <div class="card-glass-blue hontanar-scroll-reveal">
-                    <span class="bento-card-icon">🔬</span>
-                    <h3>Aulas y Laboratorios</h3>
-                    <p>Espacios modernos e iluminados dotados con la última tecnología académica para investigación, enfoque STEM+H y fomento de la innovación.</p>
-                </div>
-
-                <div class="card-glass-blue hontanar-scroll-reveal">
-                    <span class="bento-card-icon">🎨</span>
-                    <h3>Arte y Cultura</h3>
-                    <p>Talleres especializados de música, artes plásticas y teatro diseñados para estimular la creatividad, autogestión y sensibilidad estética de los jóvenes.</p>
-                </div>
-
-                <div class="card-glass-blue hontanar-scroll-reveal">
-                    <span class="bento-card-icon">⚽</span>
-                    <h3>Campos Deportivos</h3>
-                    <p>Canchas de fútbol y polideportivos donde el movimiento y la actividad física forjan salud, disciplina y regulación emocional permanente.</p>
-                </div>
-
+            <!-- Section Title -->
+            <div class="hontanar-scroll-reveal" style="text-align: center; margin-bottom: 35px;">
+                <h2 class="vida-section-title">Infraestructura diseñada para la <span style="font-family: var(--font-playfair); font-style: italic; color: var(--yellow);">excelencia y el bienestar</span></h2>
             </div>
 
-            <!-- Parallax Mid-Page Divider -->
-            <div class="parallax-divider hontanar-scroll-reveal" style="background-image: url('assets/DSC_0022.jpg');">
-                <div class="parallax-overlay"></div>
-                <div class="parallax-content">
-                    <h2>La Naturaleza como Aula Viva</h2>
-                    <p>El contacto diario con la naturaleza reduce el estrés, mejora la concentración y promueve una sólida conciencia ecológica en niños y jóvenes desde preescolar hasta bachillerato.</p>
-                </div>
-            </div>
+            <!-- 3 Pillar Bento Cards -->
+            <div class="pillar-bento-row">
 
-            <!-- INTERACTIVE CSS DRIVEN GALLERY SECTION -->
-            <div class="gallery-section hontanar-scroll-reveal">
-                <h2 class="vida-section-title">Galería del <span>Campus Hontanar</span></h2>
-                
-                <div class="interactive-gallery">
-                    <!-- Tab Radio Toggles -->
-                    <input type="radio" name="gallery-t" id="tab-all" class="gallery-radio" checked>
-                    <input type="radio" name="gallery-t" id="tab-campus" class="gallery-radio">
-                    <input type="radio" name="gallery-t" id="tab-aulas" class="gallery-radio">
-                    <input type="radio" name="gallery-t" id="tab-sports" class="gallery-radio">
-                    
-                    <!-- Filters Navigation Labels -->
-                    <div class="gallery-filters">
-                        <label for="tab-all" class="gallery-tab-label">Todos</label>
-                        <label for="tab-campus" class="gallery-tab-label">Campus Campestre</label>
-                        <label for="tab-aulas" class="gallery-tab-label">Aulas y Arte</label>
-                        <label for="tab-sports" class="gallery-tab-label">Deportes</label>
+                <!-- Card 1: Aulas y Laboratorios (image + blue overlay) -->
+                <div class="pillar-bento-card card-espacio-aulas hontanar-scroll-reveal">
+                    <div class="pillar-bento-body">
+                        <span class="pillar-bento-pill">Innovación Académica</span>
+                        <h3 class="pillar-bento-heading">Aulas activas y<br><span>laboratorios modernos</span></h3>
+                        <p class="pillar-bento-text">Espacios iluminados y dotados con la tecnología necesaria para el enfoque <strong>STEM+H</strong>, la investigación y el trabajo colaborativo. Cada aula es un entorno dinámico donde el aprendizaje ocurre de forma natural y significativa.</p>
                     </div>
-                    
-                    <!-- Image Grid -->
-                    <div class="gallery-grid">
-                        
-                        <div class="gallery-img-card cat-campus">
-                            <img src="assets/DSC_0022.jpg" alt="Campus">
-                            <div class="gallery-img-overlay">
-                                <h4>Campus Verde</h4>
-                                <p>Zonas campestres</p>
-                            </div>
-                        </div>
+                </div>
 
-                        <div class="gallery-img-card cat-aulas">
-                            <img src="assets/Grupo 4466.jpg" alt="Aulas preescolar">
-                            <div class="gallery-img-overlay">
-                                <h4>Aulas Lúdicas</h4>
-                                <p>Preescolar Hontanar</p>
-                            </div>
-                        </div>
+                <!-- Card 2: Arte y Cultura (white glass) -->
+                <div class="pillar-bento-card card-espacio-arte hontanar-scroll-reveal">
+                    <div class="pillar-bento-body">
+                        <span class="pillar-bento-pill">Creatividad</span>
+                        <h3 class="pillar-bento-heading">Escenarios para el<br><span>arte y la cultura</span></h3>
+                        <p class="pillar-bento-text">Salones especializados de <strong>música, artes plásticas y teatro</strong> que permiten a los estudiantes explorar su creatividad y sensibilidad. La expresión artística es parte fundamental de la formación integral en el Hontanar.</p>
+                    </div>
+                </div>
 
-                        <div class="gallery-img-card cat-aulas">
-                            <img src="assets/Grupo 4467.jpg" alt="Laboratorio">
-                            <div class="gallery-img-overlay">
-                                <h4>Laboratorios STEM</h4>
-                                <p>Investigación aplicada</p>
-                            </div>
-                        </div>
+                <!-- Card 3: Campos Deportivos (image + green overlay) -->
+                <div class="pillar-bento-card card-espacio-deporte hontanar-scroll-reveal">
+                    <div class="pillar-bento-body">
+                        <span class="pillar-bento-pill">Deporte y Salud</span>
+                        <h3 class="pillar-bento-heading">Campos deportivos y<br><span>zonas recreativas</span></h3>
+                        <p class="pillar-bento-text">Canchas de fútbol, espacios múltiples y zonas de juego donde el <strong>deporte y el movimiento</strong> fortalecen el carácter y la salud física. El movimiento y la recreación son parte esencial de cada jornada escolar.</p>
+                    </div>
+                </div>
 
-                        <div class="gallery-img-card cat-sports">
-                            <img src="assets/deporte-3.png" alt="Deportes">
-                            <div class="gallery-img-overlay">
-                                <h4>Canchas de Fútbol</h4>
-                                <p>Escuelas deportivas</p>
-                            </div>
-                        </div>
+            </div>
 
-                        <div class="gallery-img-card cat-campus">
-                            <img src="assets/PHOTO-2025-07-30-09-58-52 (1).jpg" alt="Edificio">
-                            <div class="gallery-img-overlay">
-                                <h4>Edificio Campestre</h4>
-                                <p>Arquitectura Hontanar</p>
-                            </div>
-                        </div>
+        </div><!-- fin vida-container -->
 
-                        <div class="gallery-img-card cat-sports">
-                            <img src="assets/primaria-horizontal.jpg" alt="Primaria">
-                            <div class="gallery-img-overlay">
-                                <h4>Zonas de Recreación</h4>
-                                <p>Descanso y deporte</p>
-                            </div>
-                        </div>
+        <!-- Highlight Card Banner (estilo programa-casas) -->
+        <div class="vida-container">
+            <div class="pq-highlight-card hontanar-scroll-reveal" style="margin-top: 60px; margin-bottom: 10px;">
+                <span class="sparkle top-left">&#10022;</span>
+                <span class="sparkle bottom-right">&#10022;</span>
+                <p class="pq-card-kicker">- CAMPUS HONTANAR -</p>
+                <h3 class="pq-card-title">
+                    La Naturaleza como <span class="highlight-pill">Aula Viva</span>
+                </h3>
+                <p class="pq-card-subtitle">
+                    Las amplias zonas verdes del Hontanar no son solo para el descanso; son aulas vivas. El contacto diario con la naturaleza reduce el estrés, mejora la concentración y fomenta la conciencia ambiental en los estudiantes desde preescolar hasta bachillerato.
+                </p>
+            </div>
+        </div>
 
-                        <div class="gallery-img-card cat-campus">
-                            <img src="assets/escuela-media-horizontal.jpg" alt="Escuela media">
-                            <div class="gallery-img-overlay">
-                                <h4>Senderos Ecológicos</h4>
-                                <p>Contacto campestre</p>
-                            </div>
-                        </div>
 
-                        <div class="gallery-img-card cat-aulas">
-                            <img src="assets/timeline-bg.jpg" alt="Arte">
-                            <div class="gallery-img-overlay">
-                                <h4>Aulas de Arte</h4>
-                                <p>Música y teatro</p>
-                            </div>
-                        </div>
+        <!-- HORIZONTAL ACCORDION GALLERY - Full Width -->
+        <div class="espacio-gallery-section hontanar-scroll-reveal">
 
+            <div class="espacio-gallery-header">
+                <h4 class="kicker">CAMPUS HONTANAR</h4>
+                <h2>Galería de nuestros <span>Espacios</span></h2>
+            </div>
+
+            <!-- Accordion Row 1 -->
+            <div class="haccordion">
+                <div class="hacc-item active" onclick="toggleHacc(this)">
+                    <img src="assets/espacio-campus-1.jpg" alt="Campus Verde">
+                    <div class="hacc-overlay">
+                        <span class="hacc-pill">Campus Verde</span>
+                        <h3>Zonas Campestres</h3>
+                        <p>Amplio campus rodeado de naturaleza en la vía Bogotá–Chía</p>
+                    </div>
+                </div>
+                <div class="hacc-item" onclick="toggleHacc(this)">
+                    <img src="assets/espacio-campus-3.jpg" alt="Infraestructura">
+                    <div class="hacc-overlay">
+                        <span class="hacc-pill">Infraestructura</span>
+                        <h3>Edificio Principal</h3>
+                        <p>Arquitectura campestre de primer nivel</p>
+                    </div>
+                </div>
+                <div class="hacc-item" onclick="toggleHacc(this)">
+                    <img src="assets/espacio-verde-1.jpg" alt="Zonas Verdes">
+                    <div class="hacc-overlay">
+                        <span class="hacc-pill">Naturaleza</span>
+                        <h3>Zonas Verdes</h3>
+                        <p>La naturaleza como aula viva y espacio de descanso activo</p>
+                    </div>
+                </div>
+                <div class="hacc-item" onclick="toggleHacc(this)">
+                    <img src="assets/espacio-campus-4.jpg" alt="Senderos">
+                    <div class="hacc-overlay">
+                        <span class="hacc-pill">Senderos</span>
+                        <h3>Senderos Ecológicos</h3>
+                        <p>Conexión diaria con el entorno natural del campus</p>
+                    </div>
+                </div>
+                <div class="hacc-item" onclick="toggleHacc(this)">
+                    <img src="assets/espacio-campus-2.jpg" alt="Vista Campus">
+                    <div class="hacc-overlay">
+                        <span class="hacc-pill">Campus</span>
+                        <h3>Vista del Campus</h3>
+                        <p>Espacios abiertos que inspiran el aprendizaje</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Accordion Row 2 -->
+            <div class="haccordion" style="margin-top: 10px;">
+                <div class="hacc-item active" onclick="toggleHacc(this)">
+                    <img src="assets/espacio-aulas-1.jpg" alt="Aulas">
+                    <div class="hacc-overlay">
+                        <span class="hacc-pill">Aulas</span>
+                        <h3>Aulas Activas</h3>
+                        <p>Espacios iluminados diseñados para el aprendizaje colaborativo</p>
+                    </div>
+                </div>
+                <div class="hacc-item" onclick="toggleHacc(this)">
+                    <img src="assets/espacio-aulas-2.jpg" alt="Trabajo en aula">
+                    <div class="hacc-overlay">
+                        <span class="hacc-pill">Tecnología</span>
+                        <h3>Laboratorios STEM+H</h3>
+                        <p>Investigación aplicada con tecnología de última generación</p>
+                    </div>
+                </div>
+                <div class="hacc-item" onclick="toggleHacc(this)">
+                    <img src="assets/espacio-aulas-3.jpg" alt="Laboratorios">
+                    <div class="hacc-overlay">
+                        <span class="hacc-pill">Innovación</span>
+                        <h3>Investigación Aplicada</h3>
+                        <p>Proyectos STEM desde preescolar hasta bachillerato</p>
+                    </div>
+                </div>
+                <div class="hacc-item" onclick="toggleHacc(this)">
+                    <img src="assets/espacio-deporte-1.jpg" alt="Deporte">
+                    <div class="hacc-overlay">
+                        <span class="hacc-pill">Deporte</span>
+                        <h3>Canchas Deportivas</h3>
+                        <p>Fútbol, polideportivos y zonas de recreación activa</p>
+                    </div>
+                </div>
+                <div class="hacc-item" onclick="toggleHacc(this)">
+                    <img src="assets/espacio-deporte-2.jpg" alt="Recreación">
+                    <div class="hacc-overlay">
+                        <span class="hacc-pill">Recreación</span>
+                        <h3>Recreación Activa</h3>
+                        <p>Zonas de juego que forman carácter y bienestar físico</p>
                     </div>
                 </div>
             </div>
 
         </div>
+        <!-- End Gallery -->
+
+
+        <!-- Nature Value Section -->
+        <div class="vida-container">
+            <div class="espacio-nature-section hontanar-scroll-reveal">
+                <h2>El valor pedagógico de la naturaleza</h2>
+                <p>Las amplias zonas verdes del Hontanar no son solo para el descanso; son <strong>aulas vivas</strong>. El contacto diario con la naturaleza <strong>reduce el estrés, mejora la concentración</strong> y fomenta la conciencia ambiental en los estudiantes desde preescolar hasta bachillerato. Aquí, los descansos son momentos de socialización segura, aire puro y recreación activa.</p>
+                <p>Estudiar en un entorno campestre permite a nuestros niños y jóvenes crecer en un ambiente tranquilo, propicio para el desarrollo de la <strong>autonomía y el pensamiento reflexivo</strong>.</p>
+
+                <div class="espacio-cta-quote">
+                    <p>Ven a visitarnos y descubre por qué nuestro campus es el mejor lugar para la educación de tus hijos.</p>
+                    <a href="proceso-de-ingreso.html">Agenda tu visita &rsaquo;</a>
+                </div>
+            </div>
+        </div>
+
     </main>
+
+    <!-- Lightbox -->
 
     <div class="social-floating">
         <a href="#" class="social-icon green"><img src="assets/Whatsapp.png" alt="WA"></a>
         <a href="#" class="social-icon yellow"><img src="assets/Componente 26 - 1.png" alt="MSG"></a>
     </div>
 
-    <!-- CTA Box Overlapping the Footer Image -->
+    <!-- CTA Box -->
     <div class="cta-box-wrapper cta-overlap tour-cta">
         <div class="cta-box">
             <h2>
@@ -342,7 +398,7 @@
                 </ul>
             </div>
             <div class="footer-social-col">
-                <h4>SÍGANOS</h4>
+                <h4>SÍGUENOS</h4>
                 <ul>
                     <li><img src="assets/facebook (4).png" alt="Facebook" class="footer-icon"> gimnasioelhontanar</li>
                     <li><img src="assets/Layer 2.png" alt="Instagram" class="footer-icon"> gimnasioelhontanar</li>
@@ -352,8 +408,16 @@
         </div>
     </footer>
 
-    <!-- Scroll Reveal Observer Script -->
+    <!-- Scripts -->
     <script>
+        // Horizontal Accordion
+        function toggleHacc(item) {
+            const siblings = item.parentElement.querySelectorAll('.hacc-item');
+            siblings.forEach(s => s.classList.remove('active'));
+            item.classList.add('active');
+        }
+
+        // Scroll Reveal
         document.addEventListener('DOMContentLoaded', () => {
             const revealObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
