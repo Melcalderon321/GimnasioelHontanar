@@ -757,3 +757,60 @@
         font-size: 3rem;
     }
 }
+
+/* ==========================================================================
+   ESPACIO SEGURO PILLAR CARDS (Estética Filosofía y Valores)
+   ========================================================================== */
+.card-seguro-paz {
+    background-image: url('assets/DSC_0022.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.card-seguro-paz::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(20, 30, 55, 0.96) 0%, rgba(20, 30, 55, 0.65) 55%, rgba(20, 30, 55, 0.2) 100%);
+    z-index: 1;
+}
+
+.card-seguro-docente {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    justify-content: flex-start;
+}
+.card-seguro-docente:hover {
+    background: rgba(255, 255, 255, 1);
+    border-color: rgba(255, 255, 255, 0.9);
+}
+.card-seguro-docente .pillar-bento-heading {
+    color: var(--blue);
+}
+.card-seguro-docente .pillar-bento-heading span {
+    color: var(--blue);
+}
+.card-seguro-docente .pillar-bento-text {
+    color: rgba(37, 68, 120, 0.85);
+}
+.card-seguro-docente .pillar-bento-text strong {
+    color: var(--blue);
+}
+.card-seguro-docente .pillar-bento-pill {
+    background-color: var(--blue);
+    color: var(--yellow);
+}
+
+.card-seguro-inclusivo {
+    background-image: url('assets/DSC_0603.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.card-seguro-inclusivo::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(15, 35, 25, 0.96) 0%, rgba(20, 30, 55, 0.65) 55%, rgba(20, 30, 55, 0.2) 100%);
+    z-index: 1;
+}
