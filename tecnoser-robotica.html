@@ -12,6 +12,84 @@
     <link rel="stylesheet" href="tour-virtual.css">
     <link rel="stylesheet" href="filosofia-y-valores.css">
     <link rel="stylesheet" href="vida-en-el-campus.css">
+    <style>
+        /* Custom card designs for Robotics using user provided images */
+        .card-robot-automatizada {
+            background-image: url('assets/close-up-child-making-robots.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .card-robot-automatizada::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(20, 30, 55, 0.96) 0%, rgba(20, 30, 55, 0.65) 55%, rgba(20, 30, 55, 0.2) 100%);
+            z-index: 1;
+        }
+
+        .card-robot-proposito {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            justify-content: flex-start;
+        }
+        .card-robot-proposito:hover {
+            background: rgba(255, 255, 255, 1);
+            border-color: rgba(255, 255, 255, 0.9);
+        }
+        .card-robot-proposito .pillar-bento-heading {
+            color: var(--blue);
+        }
+        .card-robot-proposito .pillar-bento-heading span {
+            color: var(--blue);
+        }
+        .card-robot-proposito .pillar-bento-text {
+            color: rgba(37, 68, 120, 0.85);
+        }
+        .card-robot-proposito .pillar-bento-text strong {
+            color: var(--blue);
+        }
+        .card-robot-proposito .pillar-bento-pill {
+            background-color: var(--blue);
+            color: var(--yellow);
+        }
+
+        .card-robot-perseverancia {
+            background-image: url('assets/four-kids-building-drone-using-electronic-parts.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .card-robot-perseverancia::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(15, 35, 25, 0.96) 0%, rgba(20, 30, 55, 0.65) 55%, rgba(20, 30, 55, 0.2) 100%);
+            z-index: 1;
+        }
+
+        /* Reducir la altura de las tarjetas para que no queden tan altas */
+        .pillar-bento-card {
+            height: 380px !important;
+            min-height: auto !important;
+        }
+        /* Reducir el padding interno de las tarjetas */
+        .pillar-bento-body {
+            padding: 25px 22px !important;
+        }
+        /* Ajustar espaciados internos y tamaño de fuente para compactar */
+        .pillar-bento-heading {
+            font-size: 1.5rem !important;
+            margin-bottom: 8px !important;
+        }
+        .pillar-bento-pill {
+            margin-bottom: 10px !important;
+        }
+        .pillar-bento-text {
+            font-size: 0.9rem !important;
+            line-height: 1.5 !important;
+        }
+    </style>
 </head>
 <body>
     <!-- Navbar -->
@@ -149,8 +227,7 @@
         });
     </script>
 
-    <!-- Page Content -->
-    <main class="vida-page">
+      <main class="vida-page">
         <div class="vida-container">
             <!-- Breadcrumbs -->
             <div class="breadcrumbs">
@@ -163,19 +240,87 @@
                 <h1 class="main-title">Robótica <span>y pensamiento computacional</span></h1>
             </div>
 
-            <p class="vida-lead-paragraph hontanar-scroll-reveal">A través de la <strong style="color:var(--white);">programación y la robótica</strong>, nuestros estudiantes desarrollan el pensamiento lógico, la perseverancia y el trabajo en equipo. Desde preescolar hasta bachillerato, cada niño aprende haciendo, creando y resolviendo.</p>
+            <p class="vida-lead-paragraph hontanar-scroll-reveal">El laboratorio de robótica del Gimnasio El Hontanar, <strong>Robotic Labs</strong>, es un espacio donde los estudiantes imaginan, diseñan, construyen y ponen en funcionamiento sus propios proyectos. Este entorno integra conocimiento, tecnología y valores para formar estudiantes capaces de resolver problemas reales con ingenio y determinación.</p>
 
-            <!-- Highlight Card -->
-            <div class="pq-highlight-card hontanar-scroll-reveal" style="margin-top: 60px; margin-bottom: 60px;">
+            <!-- Sección 1: Split Content (Fotografía y Pregunta Interactiva) -->
+            <div class="split-content-grid hontanar-scroll-reveal" style="margin-top: 60px; margin-bottom: 60px;">
+                <div class="split-text-wrap" style="text-align: left;">
+                    <span class="intro-card-label">PREGUNTA CLAVE</span>
+                    <h2 class="vida-section-title" style="text-align: left; font-size: 2rem; line-height: 1.3; margin-bottom: 25px; font-family: var(--font-lato); font-weight: 700; font-style: normal; color: var(--white);">¿Cómo desarrollar pensamiento tecnológico durante el año escolar, sin depender solo de la teoría?</h2>
+                    <p class="vida-paragraph">En mesas multipropósito organizadas para el trabajo colaborativo, los estudiantes diseñan, programan y construyen prototipos que responden a necesidades del entorno escolar. El proceso inicia con la planeación digital, que incluye diseño asistido por computador, y continúa con la fabricación mediante impresora 3D y cortadora láser, hasta lograr dispositivos funcionales que se prueban en el <strong>Maker Space</strong>, un salón creado para cumplir los objetivos del Bachillerato Internacional en el Hontanar.</p>
+                    <p class="vida-paragraph">Los proyectos parten de situaciones auténticas. Un ejemplo destacado en El Hontanar ha sido la automatización del riego del huerto escolar, donde los estudiantes desarrollaron sistemas que regulan el uso del agua. También diseñaron una motobomba tipo robot-tanque para recolectar agua en zonas verdes, idea propuesta y ejecutada por los propios estudiantes.</p>
+                </div>
+                <div class="split-image-wrap">
+                    <img src="assets/adorable-girl-being-passionate-about-robotics.jpg" alt="Maker Space Hontanar - Robótica aplicada" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+
+            <!-- Título de Sección Bento -->
+            <div class="vida-header hontanar-scroll-reveal" style="margin-top: 80px; margin-bottom: 20px;">
+                <h4 class="kicker">- HABILIDADES STEM INTEGRALES -</h4>
+                <h2 class="vida-section-title" style="font-size: 2.2rem; font-family: var(--font-lato); font-weight: 700; font-style: normal; color: var(--white); line-height: 1.3;">
+                    Fortalecemos habilidades STEM desde primaria,<br>
+                    <span style="font-family: var(--font-playfair); font-style: italic; color: var(--yellow);">sin procesos aislados entre áreas</span>
+                </h2>
+            </div>
+
+            <!-- Sección 2: Bento Grid Cards (Estilo idéntico a espacio-seguro.html usando pillar-bento-row) -->
+            <div class="pillar-bento-row" style="margin-bottom: 80px;">
+                
+                <!-- Card 1: Soluciones Automatizadas (close-up-child-making-robots.jpg bg) -->
+                <div class="pillar-bento-card card-robot-automatizada hontanar-scroll-reveal">
+                    <div class="pillar-bento-body">
+                        <span class="pillar-bento-pill">Eficiencia</span>
+                        <h3 class="pillar-bento-heading">Soluciones<br><span>automatizadas</span></h3>
+                        <p class="pillar-bento-text">En el laboratorio se crean soluciones que optimizan tareas repetitivas, incorporando sensores de movimiento y sonido para mejorar la eficiencia de procesos cotidianos.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2: Prototipos con Propósito (Glassmorphic blanca premium) -->
+                <div class="pillar-bento-card card-robot-proposito hontanar-scroll-reveal" style="position: relative; overflow: hidden;">
+                    <div class="pillar-bento-body" style="position: relative; z-index: 2;">
+                        <span class="pillar-bento-pill">Innovación</span>
+                        <h3 class="pillar-bento-heading">Prototipos con<br><span>propósito</span></h3>
+                        <p class="pillar-bento-text">Actualmente, se desarrollan prototipos como robots que transportan energía solar, modelos de drones impresos en 3D y sistemas automatizados para el servicio del comedor escolar.</p>
+                    </div>
+                    <img src="assets/Gemini_Generated_Image_rzmgx0rzmgx0rzmg_1.png" alt="Prototipos Robóticos Hontanar" style="position: absolute; bottom: -20px; right: -5px; max-height: 200px !important; width: auto !important; opacity: 0.95; z-index: 1; mix-blend-mode: multiply; pointer-events: none;">
+                </div>
+
+                <!-- Card 3: Trabajo y Perseverancia (four-kids-building-drone-using-electronic-parts.jpg bg) -->
+                <div class="pillar-bento-card card-robot-perseverancia hontanar-scroll-reveal">
+                    <div class="pillar-bento-body">
+                        <span class="pillar-bento-pill">Valores</span>
+                        <h3 class="pillar-bento-heading">Trabajo y<br><span>perseverancia</span></h3>
+                        <p class="pillar-bento-text">La robótica educativa fortalece habilidades técnicas, pero también fomenta el trabajo en equipo, la perseverancia y la responsabilidad. Cada máquina es el resultado de la colaboración y la mejora continua.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Sección 3: Highlight Card (Competencias intercolegiales y universitarias) -->
+            <div class="pq-highlight-card hontanar-scroll-reveal" style="margin-top: 60px; margin-bottom: 80px; text-align: center;">
                 <span class="sparkle top-left">&#10022;</span>
                 <span class="sparkle bottom-right">&#10022;</span>
-                <p class="pq-card-kicker">- TECNOSER HONTANAR -</p>
+                <p class="pq-card-kicker">- LIDERAZGO Y LOGROS -</p>
                 <h3 class="pq-card-title">
-                    Formamos estudiantes listos para un mundo <span class="highlight-pill">digital e impredecible</span>.
+                    Semillero de robótica de <span class="highlight-pill">alto nivel competitivo</span>
                 </h3>
-                <p class="pq-card-subtitle">
-                    Próximamente publicaremos el contenido completo de esta sección. Contáctanos para conocer más sobre nuestro programa TecnoSer.
+                <p class="pq-card-subtitle" style="font-size: 1.1rem; line-height: 1.7; max-width: 900px; margin: 20px auto 0 auto; color: rgba(255,255,255,0.9);">
+                    El semillero de robótica del colegio participa en competencias intercolegiales y universitarias de alto nivel, donde ha obtenido primeros lugares y posiciones destacadas en torneos regionales e internacionales. Estas experiencias consolidan el liderazgo académico característico del Gimnasio El Hontanar como uno de los Colegios bilingües en Bogotá y de los colegios en Chía comprometidos con la excelencia.
                 </p>
+            </div>
+
+            <!-- Sección 4: Split Grid Invertido (Maker Space y CTA de visita) -->
+            <div class="split-content-grid hontanar-scroll-reveal" style="margin-top: 60px; margin-bottom: 80px;">
+                <div class="split-image-wrap">
+                    <img src="assets/smiley-girl-doing-science-experiments.jpg" alt="Laboratorio de Robótica Seguro y Dotado" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="split-text-wrap" style="text-align: left;">
+                    <span class="intro-card-label" style="background-color: var(--green); color: var(--white);">MAKER SPACE EQUIPADO</span>
+                    <h2 class="vida-section-title" style="text-align: left; font-size: 2rem; line-height: 1.3; margin-bottom: 25px; font-family: var(--font-lato); font-weight: 700; font-style: normal; color: var(--white);">Prototipos funcionales en nuestro Maker Space equipado y seguro</h2>
+                    <p class="vida-paragraph">En Robotic Labs, cada prototipo demuestra que la tecnología puede estar al servicio del cuidado del entorno, la optimización de recursos y el bienestar colectivo. Aquí, aprender robótica no es solo programar: es imaginar, construir y comprobar que las ideas, cuando se trabajan con amor y propósito, pueden transformar la realidad.</p>
+                    <p class="vida-paragraph" style="border-left: 3px solid var(--yellow); padding-left: 15px; font-style: italic; color: rgba(255,255,255,0.9);">Ven a conocer nuestro Maker Space: un laboratorio seguro y completamente dotado donde los estudiantes desarrollan competencias tecnológicas construyendo, experimentando y programando. Agenda tu visita y vive la experiencia de aprender creando en el Hontanar.</p>
+                </div>
             </div>
 
         </div>

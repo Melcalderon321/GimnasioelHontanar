@@ -12,6 +12,84 @@
     <link rel="stylesheet" href="tour-virtual.css">
     <link rel="stylesheet" href="filosofia-y-valores.css">
     <link rel="stylesheet" href="vida-en-el-campus.css">
+    <style>
+        /* Custom card designs for IA page using user provided images */
+        .card-ia-evaluacion {
+            background-image: url('assets/Copia_de_DSC_0603_ia.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .card-ia-evaluacion::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(20, 30, 55, 0.96) 0%, rgba(20, 30, 55, 0.65) 55%, rgba(20, 30, 55, 0.2) 100%);
+            z-index: 1;
+        }
+
+        .card-ia-responsable {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            justify-content: flex-start;
+        }
+        .card-ia-responsable:hover {
+            background: rgba(255, 255, 255, 1);
+            border-color: rgba(255, 255, 255, 0.9);
+        }
+        .card-ia-responsable .pillar-bento-heading {
+            color: var(--blue);
+        }
+        .card-ia-responsable .pillar-bento-heading span {
+            color: var(--blue);
+        }
+        .card-ia-responsable .pillar-bento-text {
+            color: rgba(37, 68, 120, 0.85);
+        }
+        .card-ia-responsable .pillar-bento-text strong {
+            color: var(--blue);
+        }
+        .card-ia-responsable .pillar-bento-pill {
+            background-color: var(--blue);
+            color: var(--yellow);
+        }
+
+        .card-ia-futuro {
+            background-image: url('assets/Copia_de_DSC_0603_ia.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .card-ia-futuro::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(15, 35, 25, 0.96) 0%, rgba(20, 30, 55, 0.65) 55%, rgba(20, 30, 55, 0.2) 100%);
+            z-index: 1;
+        }
+
+        /* Reducir la altura de las tarjetas para que no queden tan altas */
+        .pillar-bento-card {
+            height: 380px !important;
+            min-height: auto !important;
+        }
+        /* Reducir el padding interno de las tarjetas */
+        .pillar-bento-body {
+            padding: 25px 22px !important;
+        }
+        /* Ajustar espaciados internos y tamaño de fuente para compactar */
+        .pillar-bento-heading {
+            font-size: 1.5rem !important;
+            margin-bottom: 8px !important;
+        }
+        .pillar-bento-pill {
+            margin-bottom: 10px !important;
+        }
+        .pillar-bento-text {
+            font-size: 0.9rem !important;
+            line-height: 1.5 !important;
+        }
+    </style>
 </head>
 <body>
     <!-- Navbar -->
@@ -163,7 +241,12 @@
                 <h1 class="main-title">Inteligencia <span>Artificial</span></h1>
             </div>
 
-            <p class="vida-lead-paragraph hontanar-scroll-reveal">Preparamos a nuestros estudiantes para <strong style="color:var(--white);">comprender, usar y cuestionar</strong> la Inteligencia Artificial de manera ética y responsable. La IA ya es parte de su mundo — les enseñamos a ser sus protagonistas, no solo sus usuarios.</p>
+            <p class="vida-lead-paragraph hontanar-scroll-reveal">La Inteligencia Artificial ha transformado el mundo, y en el Gimnasio El Hontanar su integración se realiza con un principio claro: <strong style="color:var(--white);">la tecnología apoya, pero el pensamiento humano lidera</strong>. Como Colegio Bilingüe Internacional en Bogotá y Chía, promovemos un uso consciente, ético y reflexivo de la IA para fortalecer la autonomía intelectual de nuestros estudiantes.</p>
+
+            <!-- Sección 1 -->
+            <div class="vida-text-section hontanar-scroll-reveal">
+                <p>En el aula, la IA se utiliza como una herramienta que permite analizar información, contrastar fuentes y generar nuevas preguntas. El objetivo no es automatizar el aprendizaje, sino enriquecerlo. Los estudiantes learn a identificar sesgos, reconocer errores comunes y comprender que ninguna herramienta tecnológica reemplaza el juicio humano.</p>
+            </div>
 
             <!-- Highlight Card -->
             <div class="pq-highlight-card hontanar-scroll-reveal" style="margin-top: 60px; margin-bottom: 60px;">
@@ -171,11 +254,31 @@
                 <span class="sparkle bottom-right">&#10022;</span>
                 <p class="pq-card-kicker">- TECNOSER HONTANAR -</p>
                 <h3 class="pq-card-title">
-                    Formamos estudiantes listos para un mundo <span class="highlight-pill">digital e impredecible</span>.
+                    Inteligencia artificial con <span class="highlight-pill">criterio humano</span>.
                 </h3>
                 <p class="pq-card-subtitle">
-                    Próximamente publicaremos el contenido completo de esta sección. Contáctanos para conocer más sobre nuestro programa TecnoSer.
+                    Este enfoque se alinea con la formación de ciudadanos globales propia del Bachillerato Internacional, donde argumentar con fundamento y desarrollar posturas personales informadas es esencial.
                 </p>
+            </div>
+
+            <!-- Sección 2 -->
+            <div class="vida-text-section hontanar-scroll-reveal">
+                <p>Al interactuar con sistemas de IA, los estudiantes comparan resultados digitales con observaciones reales, fortaleciendo su capacidad de análisis y su pensamiento independiente.</p>
+                <p>Un ejemplo práctico de integración tecnológica en todo el colegio es el uso de herramientas como <strong>Plickers</strong>, que permiten a los docentes evaluar la comprensión de manera inmediata. A través de tarjetas de respuesta escaneadas en tiempo real, los profesores identifican avances y detectan dudas para garantizar procesos de aprendizaje efectivos.</p>
+            </div>
+
+            <!-- Sección 3 -->
+            <div class="vida-text-section hontanar-scroll-reveal">
+                <h2 class="vida-section-title">Uso responsable de la IA: ética digital y bienestar académico</h2>
+                <p>El uso responsable de la IA también implica conversaciones abiertas sobre ética digital, privacidad y verificación de información. Este proceso contribuye al bienestar académico y fortalece la confianza de los estudiantes, ya que comprenden cómo utilizar la tecnología de forma segura y pertinente.</p>
+                <p>Integrar IA significa preparar a los estudiantes para contextos profesionales futuros sin perder el enfoque humano. En El Hontanar, la combinación entre inteligencia artificial e inteligencia emocional fortalece la creatividad, la argumentación y la toma de decisiones.</p>
+            </div>
+
+            <!-- Sección final -->
+            <div class="vida-text-section hontanar-scroll-reveal" style="margin-bottom: 60px;">
+                <p>Los estudiantes de nuestro colegio aprenden que la tecnología puede ampliar sus capacidades, siempre que esté guiada por criterio, valores y responsabilidad social.</p>
+                <p>Entendemos que el conocimiento evoluciona constantemente y que educar hoy implica aprender, probar y mejorar juntos. Por esto, invitamos a las familias del Gimnasio El Hontanar a acompañar a sus hijos y a nuestro equipo docente en este proceso de descubrimiento continuo con las nuevas tecnologías.</p>
+                <p><strong>Agenda una cita y ven a conocernos.</strong> Estamos ubicados al norte de Bogotá, en la Carrera 7°, a 300 metros antes del peaje, en la vía Bogotá–Chía.</p>
             </div>
 
         </div>
