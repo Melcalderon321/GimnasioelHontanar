@@ -124,3 +124,5 @@ git checkout main
 * Realiza confirmaciones (`git commit`) pequeñas y frecuentes para evitar conflictos complejos.
 * Mantén el sitio ordenado organizando tus hojas de estilo `.css` en sus carpetas correspondientes.
 * Antes de iniciar una jornada de código, ejecuta siempre `git pull` para asegurarte de tener la versión más actualizada.
+* Guía verificada y sincronizada correctamente con el repositorio remoto de GitHub.
+
