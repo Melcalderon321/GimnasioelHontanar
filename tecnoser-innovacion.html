@@ -1,0 +1,503 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovación | TecnoSer | Gimnasio El Hontanar</title>
+    <meta name="description" content="Cultura de innovación en el Gimnasio El Hontanar. Fomentamos el pensamiento creativo y la resolución de problemas desde preescolar hasta bachillerato.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="tour-virtual.css">
+    <link rel="stylesheet" href="filosofia-y-valores.css">
+    <link rel="stylesheet" href="vida-en-el-campus.css">
+    <style>
+        /* ══════════════════════════════════════
+           BENTO GRID 2×2 — INNOVACIÓN
+           Estilo inspirado en la referencia
+        ══════════════════════════════════════ */
+        .innov-bento-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto;
+            gap: 16px;
+            margin-bottom: 80px;
+        }
+
+        /* ── Card base ── */
+        .ib-card {
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.35s cubic-bezier(0.25,0.8,0.25,1),
+                        box-shadow 0.35s cubic-bezier(0.25,0.8,0.25,1);
+        }
+        .ib-card:hover {
+            transform: translateY(-5px) scale(1.01);
+            box-shadow: 0 24px 60px rgba(0,0,0,0.35);
+        }
+
+        /* ── Photo cards ── */
+        .ib-card-photo {
+            min-height: 340px;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+        .ib-card-photo .ib-card-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                to top,
+                rgba(12, 25, 60, 0.95) 0%,
+                rgba(12, 25, 60, 0.55) 45%,
+                rgba(12, 25, 60, 0.05) 100%
+            );
+        }
+        .ib-card-photo .ib-card-body {
+            position: relative;
+            z-index: 2;
+            padding: 28px 28px 28px 28px;
+        }
+        /* Flechas eliminadas */
+
+        /* ── Photo card images ── */
+        .ib-photo-1 { background-image: url('assets/innov-bento-1.jpg'); background-position: center 30%; }
+        .ib-photo-2 { background-image: url('assets/innov-bento-2.jpg'); background-position: center 20%; }
+
+        /* ── Category pill label ── */
+        .ib-chip {
+            display: inline-block;
+            background: var(--yellow);
+            color: var(--blue);
+            font-family: var(--font-lato);
+            font-size: 0.72rem;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 5px 14px;
+            border-radius: 999px;
+            margin-bottom: 14px;
+        }
+        .ib-chip.chip-white {
+            background: rgba(255,255,255,0.22);
+            backdrop-filter: blur(6px);
+            color: #fff;
+            border: 1px solid rgba(255,255,255,0.35);
+        }
+
+        /* ── Card title ── */
+        .ib-card-title {
+            font-family: var(--font-lato);
+            font-weight: 900;
+            font-size: 1.65rem;
+            line-height: 1.2;
+            color: #fff;
+            margin: 0;
+        }
+
+        /* ── Glass card (estilo nav-pill) ── */
+        .ib-card-blue {
+            background: linear-gradient(135deg, rgba(255,255,255,0.42) 0%, rgba(255,255,255,0.08) 100%);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border: 1px solid var(--yellow);
+            box-shadow: 0 8px 40px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.25);
+            min-height: 340px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 40px 36px;
+        }
+        .ib-card-blue .ib-chip {
+            background: var(--yellow);
+            color: var(--blue);
+            align-self: flex-start;
+        }
+        .ib-card-blue .ib-card-title {
+            font-size: 1.6rem;
+            margin-bottom: 18px;
+            color: #fff;
+            text-shadow: 0 2px 12px rgba(0,0,0,0.3);
+        }
+        .ib-card-blue .ib-card-desc {
+            font-family: var(--font-lato);
+            font-size: 0.96rem;
+            line-height: 1.7;
+            color: rgba(255,255,255,0.92);
+            margin: 0;
+        }
+        .ib-card-blue .ib-card-desc strong { color: var(--yellow); }
+
+        /* ── Yellow card ── */
+        .ib-card-yellow {
+            background: var(--yellow);
+            min-height: 340px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 36px;
+        }
+        .ib-card-yellow .ib-chip { background: var(--blue); color: var(--yellow); margin-bottom: 20px; }
+        .ib-card-yellow .ib-card-title {
+            font-size: 2rem;
+            color: var(--blue);
+            margin-bottom: 16px;
+        }
+        .ib-card-yellow .ib-card-title em {
+            font-family: var(--font-playfair);
+            font-style: italic;
+            color: var(--blue);
+        }
+        .ib-card-yellow .ib-card-desc {
+            font-family: var(--font-lato);
+            font-size: 0.95rem;
+            line-height: 1.65;
+            color: rgba(37,68,120,0.85);
+            max-width: 380px;
+        }
+
+        /* ── Photo card bottom text ── */
+        .ib-card-photo .ib-card-title { font-size: 1.7rem; }
+        .ib-card-photo .ib-card-desc {
+            font-family: var(--font-lato);
+            font-size: 0.88rem;
+            line-height: 1.6;
+            color: rgba(255,255,255,0.85);
+            margin-top: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .innov-bento-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="nav-pill">
+            <a href="index.html" class="logo">
+                <img src="assets/HONTANAR logo_ (3).png" alt="Hontanar Logo">
+            </a>
+            <div class="nav-right">
+                <span class="menu-text">MENÚ</span>
+                <div class="hamburger-circle">
+                    <div class="hamburger">
+                        <span></span><span></span><span></span>
+                    </div>
+                </div>
+                <a href="#" class="btn btn-yellow btn-nav">Contáctanos <span class="arrow">&gt;</span></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sidebar Menu -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+    <nav class="sidebar-menu" id="sidebar-menu">
+        <div class="sidebar-header">
+            <img src="assets/Capa_2_xA0_Imagen.png" alt="Logo" class="sidebar-logo">
+            <button class="close-btn" id="close-sidebar">&times;</button>
+        </div>
+        <ul class="sidebar-nav">
+            <li class="has-submenu">
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-down"></i></span>
+                    <a href="#">Admisiones</a>
+                </div>
+                <ul class="submenu">
+                    <li><a href="tour-virtual.html">Tour Virtual</a></li>
+                    <li><a href="preguntas-frecuentes.html">Preguntas Frecuentes</a></li>
+                    <li><a href="por-que-estudiar.html">¿Por qué estudiar en el Gimnasio El Hontanar?</a></li>
+                    <li><a href="proceso-de-ingreso.html">Proceso de ingreso al Gimnasio El Hontanar</a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-right"></i></span>
+                    <a href="#">Somos Hontanar</a>
+                </div>
+                <ul class="submenu">
+                    <li><a href="modelo-de-ensenanza.html">Modelo de Enseñanza</a></li>
+                    <li><a href="nuestra-historia.html">Nuestra Historia</a></li>
+                    <li><a href="filosofia-y-valores.html">Filosofía y Valores</a></li>
+                    <li><a href="sello-hontanar.html">Sello Hontanar</a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-right"></i></span>
+                    <a href="#">Cultura Internacional</a>
+                </div>
+                <ul class="submenu">
+                    <li><a href="multilinguismo.html">Multilingüismo</a></li>
+                    <li><a href="programa-ib.html">Programa IB</a></li>
+                    <li><a href="intercambio-hontanar.html">Intercambio Hontanar</a></li>
+                    <li><a href="consejeria-internacional.html">Consejería Internacional</a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-right"></i></span>
+                    <a href="#">Vida en el Campus</a>
+                </div>
+                <ul class="submenu">
+                    <li><a href="un-dia-escolar.html">Un Día Escolar</a></li>
+                    <li><a href="formacion-integral.html">Formación Integral Más Allá del Aula</a></li>
+                    <li><a href="bienestar-emocional.html">Bienestar Emocional</a></li>
+                    <li><a href="programa-casas.html">Programa Casas</a></li>
+                    <li><a href="character-counts.html">Character Counts</a></li>
+                    <li><a href="espacio-seguro.html">Espacio Seguro</a></li>
+                    <li><a href="espacios-de-bienestar-y-naturaleza.html">Espacios de Bienestar y Naturaleza</a></li>
+                    <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
+                </ul>
+            </li>
+            <li class="has-submenu expanded">
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-down"></i></span>
+                    <a href="#">TecnoSer</a>
+                </div>
+                <ul class="submenu" style="display: block;">
+                    <li><a href="tecnoser-innovacion.html" class="active" style="color: var(--yellow); font-weight: 700;">Innovación</a></li>
+                    <li><a href="tecnoser-integracion.html">Integración Tecnológica</a></li>
+                    <li><a href="tecnoser-ia.html">IA (Inteligencia Artificial)</a></li>
+                    <li><a href="tecnoser-robotica.html">Robótica</a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-right"></i></span>
+                    <a href="#">Contacto</a>
+                </div>
+                <ul class="submenu">
+                    <li><a href="agenda-visita.html">Agenda tu Visita</a></li>
+                    <li><a href="como-llegar.html">Cómo Llegar</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="sidebar-footer">
+            <a href="#" class="btn-sidebar btn-s-green"><span>⚲</span> VIRTUAL</a>
+            <a href="#" class="btn-sidebar btn-s-yellow"><span>⌨</span> ADMISIONES</a>
+        </div>
+    </nav>
+
+    <!-- Script for Sidebar -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.querySelector('.hamburger-circle');
+            const menuText = document.querySelector('.menu-text');
+            const sidebar = document.getElementById('sidebar-menu');
+            const overlay = document.getElementById('sidebar-overlay');
+            const closeBtn = document.getElementById('close-sidebar');
+            function toggleMenu() {
+                sidebar.classList.toggle('open');
+                overlay.classList.toggle('open');
+            }
+            if(hamburger) hamburger.addEventListener('click', toggleMenu);
+            if(menuText) menuText.addEventListener('click', toggleMenu);
+            if(closeBtn) closeBtn.addEventListener('click', toggleMenu);
+            if(overlay) overlay.addEventListener('click', toggleMenu);
+            const submenus = document.querySelectorAll('.has-submenu .menu-item');
+            submenus.forEach(item => {
+                item.addEventListener('click', (e) => {
+                    if (e.target.tagName !== 'A') {
+                        e.preventDefault();
+                        item.parentElement.classList.toggle('expanded');
+                        const submenuList = item.parentElement.querySelector('.submenu');
+                        if(submenuList) {
+                            submenuList.style.display = submenuList.style.display === 'block' ? 'none' : 'block';
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+
+    <!-- Page Content -->
+    <main class="vida-page">
+        <div class="vida-container">
+            <!-- Breadcrumbs -->
+            <div class="breadcrumbs">
+                <a href="index.html">Inicio</a> &gt; <a href="#">TecnoSer</a> &gt; <span class="current">Innovación</span>
+            </div>
+
+            <!-- Header -->
+            <div class="vida-header hontanar-scroll-reveal">
+                <h4 class="kicker">TECNOSER · INNOVACIÓN</h4>
+                <h1 class="main-title">Innovación <span>que transforma</span></h1>
+            </div>
+
+            <p class="vida-lead-paragraph hontanar-scroll-reveal">En el Gimnasio El Hontanar, la <strong style="color:var(--white);">innovación</strong> no es una materia: es una forma de pensar. Formamos estudiantes capaces de identificar problemas, proponer soluciones creativas y transformar su entorno con pensamiento crítico y emprendedor.</p>
+
+            <!-- Highlight Card (placeholder) -->
+            <!-- Sección 1: Split Content (Fotografía y Pregunta Clave) -->
+            <div class="split-content-grid hontanar-scroll-reveal" style="margin-top: 60px; margin-bottom: 60px;">
+                <div class="split-text-wrap" style="text-align: left;">
+                    <span class="intro-card-label">PREGUNTA CLAVE</span>
+                    <h2 class="vida-section-title" style="text-align: left; font-size: 2rem; line-height: 1.3; margin-bottom: 25px; font-family: var(--font-lato); font-weight: 700; font-style: normal; color: var(--white);">¿Cómo convertir la creatividad de los estudiantes en soluciones reales que impacten su comunidad?</h2>
+                    <p class="vida-paragraph">En el Gimnasio El Hontanar, la innovación se trabaja como un proceso estructurado: los estudiantes aprenden a identificar problemas auténticos, a idear con herramientas de design thinking y a prototipar soluciones usando tecnología disponible. El resultado no es solo un proyecto escolar, sino una experiencia de transformación real.</p>
+                    <p class="vida-paragraph">Desde preescolar hasta bachillerato, cada nivel vive la innovación de manera progresiva, adaptada a su madurez y a los contextos de su entorno. Los estudiantes de secundaria, por ejemplo, desarrollan proyectos de emprendimiento y sostenibilidad con acompañamiento docente especializado en metodologías ágiles.</p>
+                </div>
+                <div class="split-image-wrap">
+                    <img src="assets/innov-split-1.jpg" alt="Innovación educativa en el Gimnasio El Hontanar" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+
+            <!-- Título de Sección Bento -->
+            <div class="vida-header hontanar-scroll-reveal" style="margin-top: 80px; margin-bottom: 20px;">
+                <h4 class="kicker">- TRES PILARES DE NUESTRA CULTURA INNOVADORA -</h4>
+                <h2 class="vida-section-title" style="font-size: 2.2rem; font-family: var(--font-lato); font-weight: 700; font-style: normal; color: var(--white); line-height: 1.3;">
+                    Formamos mentes que crean,<br>
+                    <span style="font-family: var(--font-playfair); font-style: italic; color: var(--yellow);">no solo que repiten</span>
+                </h2>
+            </div>
+
+            <!-- Sección 2: Bento Grid 2×2 — Estilo premium referencia -->
+            <div class="innov-bento-grid hontanar-scroll-reveal">
+
+                <!-- Card 1 (top-left): Foto — Creatividad -->
+                <div class="ib-card ib-card-photo ib-photo-1">
+                    <div class="ib-card-overlay"></div>
+                    <div class="ib-card-body">
+                        <span class="ib-chip">CREATIVIDAD</span>
+                        <h3 class="ib-card-title">Pensamiento<br>creativo aplicado</h3>
+                        <p class="ib-card-desc">Nuestros estudiantes aprenden a crear con la tecnología. A través de retos de design thinking y proyectos interdisciplinarios, desarrollan una mentalidad innovadora que les permite ver oportunidades donde otros ven problemas.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 (top-right): Glass nav-style — Emprendimiento -->
+                <div class="ib-card ib-card-blue">
+                    <span class="ib-chip">EMPRENDIMIENTO</span>
+                    <h3 class="ib-card-title">Emprendimiento<br>con propósito</h3>
+                    <p class="ib-card-desc">Los proyectos de innovación en el Hontanar tienen un norte claro: generar impacto positivo. Ya sea optimizando procesos del colegio, creando apps para la comunidad o diseñando productos sostenibles, <strong>cada idea debe responder a una necesidad real</strong> y ser viable de implementar.</p>
+                </div>
+
+                <!-- Card 3 (bottom-left): Yellow — Agilidad -->
+                <div class="ib-card ib-card-yellow">
+                    <span class="ib-chip">AGILIDAD</span>
+                    <h3 class="ib-card-title">Agilidad y<br><em>adaptación</em></h3>
+                    <p class="ib-card-desc">En un mundo que cambia a velocidad exponencial, la capacidad de adaptarse es una habilidad de supervivencia. Entrenamos a nuestros estudiantes en metodologías ágiles y en la mentalidad de iterar: probar, aprender del error y mejorar sin miedo al fracaso.</p>
+                </div>
+
+                <!-- Card 4 (bottom-right): Foto — Innovación en acción -->
+                <div class="ib-card ib-card-photo ib-photo-2">
+                    <div class="ib-card-overlay"></div>
+                    <div class="ib-card-body">
+                        <span class="ib-chip">TECNOSER HONTANAR</span>
+                        <h3 class="ib-card-title">Innovación<br>en acción</h3>
+                        <p class="ib-card-desc">Cada proyecto es real, cada solución es propia. Nuestros estudiantes construyen, programan y presentan sus creaciones ante la comunidad educativa, desarrollando confianza, autonomía y pensamiento crítico.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Sección 3: Highlight Card -->
+            <div class="pq-highlight-card hontanar-scroll-reveal" style="margin-top: 60px; margin-bottom: 80px; text-align: center;">
+                <span class="sparkle top-left">&#10022;</span>
+                <span class="sparkle bottom-right">&#10022;</span>
+                <p class="pq-card-kicker">- INNOVACIÓN EN ACCIÓN -</p>
+                <h3 class="pq-card-title">
+                    Un colegio que forma <span class="highlight-pill">líderes del mañana</span>
+                </h3>
+                <p class="pq-card-subtitle" style="font-size: 1.1rem; line-height: 1.7; max-width: 900px; margin: 20px auto 0 auto; color: rgba(255,255,255,0.9);">
+                    En el Gimnasio El Hontanar, la innovación no es una asignatura optativa: es el espíritu que atraviesa todo nuestro proyecto educativo. Nuestros egresados llegan a la universidad y al mundo laboral con una ventaja real: saben identificar problemas, trabajar en equipo, usar la tecnología con criterio y proponer soluciones que otros no habían imaginado.
+                </p>
+            </div>
+
+            <!-- Sección 4: Split Grid Invertido -->
+            <div class="split-content-grid hontanar-scroll-reveal" style="margin-top: 60px; margin-bottom: 80px;">
+                <div class="split-image-wrap">
+                    <img src="assets/innov-split-2.jpg" alt="Estudiantes del Hontanar en proyectos de innovación" style="width: 100%; height: 100%; object-fit: cover; object-position: center top;">
+                </div>
+                <div class="split-text-wrap" style="text-align: left;">
+                    <span class="intro-card-label" style="background-color: var(--yellow); color: var(--blue);">ECOSISTEMA DE INNOVACIÓN</span>
+                    <h2 class="vida-section-title" style="text-align: left; font-size: 2rem; line-height: 1.3; margin-bottom: 25px; font-family: var(--font-lato); font-weight: 700; font-style: normal; color: var(--white);">Un ecosistema diseñado para que la innovación florezca en cada aula</h2>
+                    <p class="vida-paragraph">El Hontanar ha construido un ecosistema de innovación que integra espacios físicos, metodologías activas y una cultura de experimentación. Nuestro Maker Space, laboratorios de tecnología y espacios colaborativos son el escenario donde las ideas toman forma.</p>
+                    <p class="vida-paragraph" style="border-left: 3px solid var(--yellow); padding-left: 15px; font-style: italic; color: rgba(255,255,255,0.9);">Ven a conocer cómo vivimos la innovación cada día en el Hontanar. Agenda una visita y descubre un ambiente donde la curiosidad es el motor y la creatividad, la herramienta.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="social-floating">
+        <a href="#" class="social-icon green"><img src="assets/Whatsapp.png" alt="WA"></a>
+        <a href="#" class="social-icon yellow"><img src="assets/Componente 26 - 1.png" alt="MSG"></a>
+    </div>
+
+    <!-- CTA Box -->
+    <div class="cta-box-wrapper cta-overlap tour-cta">
+        <div class="cta-box">
+            <h2>
+                Are you Ready to <br>
+                <span>Extraordinary</span>
+                <span class="highlight-potencial">
+                    Experience?
+                    <svg class="cta-swoosh" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 40">
+                        <path d="M 10 30 Q 150 15 280 35" fill="none" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                    </svg>
+                    <img src="assets/Trazado 21196.png" alt="Pencil" class="cta-pencil">
+                </span>
+            </h2>
+            <a href="#" class="btn btn-yellow btn-cta">Contact us <span class="btn-arrow">&gt;</span></a>
+        </div>
+        <img src="assets/ChatGPT Image 1 jul 2025, 17_28_04 (3).png" class="colibri-cta" alt="Colibri">
+    </div>
+
+    <!-- Footer Image -->
+    <section class="footer-image-section tour-footer-img">
+        <img src="assets/PHOTO-2025-07-30-09-58-52 (1).jpg" alt="Building" class="building-img">
+        <div class="curve-bottom">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path d="M0,0 Q720,240 1440,0 L1440,120 L0,120 Z" fill="#254478"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer new-footer">
+        <div class="footer-divider"></div>
+        <div class="footer-container">
+            <div class="footer-logo-col">
+                <img src="assets/Capa_2_xA0_Imagen.png" alt="Logo Footer" class="footer-shield">
+                <p>En el Gimnasio El Hontanar,<br>educamos para la vida, formando<br>ciudadanos íntegros, felices y preparados<br>para afrontar el futuro con confianza.</p>
+            </div>
+            <div class="footer-info-col">
+                <h4>DATOS DE CONTACTO</h4>
+                <ul>
+                    <li><img src="assets/whatsapp (4).png" alt="WhatsApp" class="footer-icon"> +57 316 4701496<br>+57 316 4701496</li>
+                    <li><img src="assets/telefono-inteligente (3).png" alt="Teléfono" class="footer-icon"> +57 316 4701496<br>+57 316 4701496</li>
+                    <li><img src="assets/sobre (1).png" alt="Email" class="footer-icon"> admisiones@gimnasiohontanar.edu.co<br>admisiones2@gimnasiohontanar.edu.co<br>contacto@gimnasiohontanar.edu.co</li>
+                    <li><img src="assets/_x32_0_location.png" alt="Ubicación" class="footer-icon"> Cra. 7a 300 m. antes del peaje de<br>Fusca (Sentido Chia - Bogotá), Chia, Colombia.</li>
+                </ul>
+            </div>
+            <div class="footer-social-col">
+                <h4>SÍGUENOS</h4>
+                <ul>
+                    <li><img src="assets/facebook (4).png" alt="Facebook" class="footer-icon"> gimnasioelhontanar</li>
+                    <li><img src="assets/Layer 2.png" alt="Instagram" class="footer-icon"> gimnasioelhontanar</li>
+                    <li><img src="assets/logotipo-de-linkedin (3).png" alt="LinkedIn" class="footer-icon"> gimnasio-el-hontanar</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.08 });
+            document.querySelectorAll('.hontanar-scroll-reveal').forEach(el => revealObserver.observe(el));
+        });
+    </script>
+</body>
+</html>

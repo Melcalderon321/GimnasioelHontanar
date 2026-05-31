@@ -1,0 +1,456 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integración Tecnológica | TecnoSer | Gimnasio El Hontanar</title>
+    <meta name="description" content="Integración tecnológica en el aula en el Gimnasio El Hontanar. Herramientas digitales al servicio del aprendizaje significativo.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="tour-virtual.css">
+    <link rel="stylesheet" href="filosofia-y-valores.css">
+    <link rel="stylesheet" href="vida-en-el-campus.css">
+    <style>
+        /* Custom card designs for Integracion page using user provided images */
+        .card-integracion-practica {
+            background-image: url('assets/Copia_de_DSC_0113.JPG');
+            background-size: cover;
+            background-position: center;
+        }
+        .card-integracion-practica::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(20, 30, 55, 0.96) 0%, rgba(20, 30, 55, 0.65) 55%, rgba(20, 30, 55, 0.2) 100%);
+            z-index: 1;
+        }
+        .card-integracion-practica .pillar-bento-heading {
+            color: var(--white) !important;
+        }
+        .card-integracion-practica .pillar-bento-heading span {
+            font-family: var(--font-playfair);
+            font-style: italic;
+            color: var(--yellow) !important;
+            font-weight: 600;
+        }
+        .card-integracion-practica .pillar-bento-text {
+            color: rgba(255, 255, 255, 0.9) !important;
+        }
+        .card-integracion-practica .pillar-bento-pill {
+            background-color: var(--yellow) !important;
+            color: var(--blue) !important;
+            font-weight: 700;
+        }
+
+        .card-integracion-proyectos {
+            background: var(--yellow) !important;
+            border: none !important;
+            justify-content: flex-start;
+        }
+        .card-integracion-proyectos:hover {
+            background: var(--yellow) !important;
+        }
+        .card-integracion-proyectos .pillar-bento-heading {
+            color: var(--blue) !important;
+        }
+        .card-integracion-proyectos .pillar-bento-heading span {
+            color: var(--blue) !important;
+            font-family: var(--font-playfair);
+            font-style: italic;
+            font-weight: 700;
+        }
+        .card-integracion-proyectos .pillar-bento-text {
+            color: rgba(37, 68, 120, 0.95) !important;
+            font-weight: 500;
+        }
+        .card-integracion-proyectos .pillar-bento-pill {
+            background-color: var(--blue) !important;
+            color: var(--yellow) !important;
+            font-weight: 700;
+        }
+        .card-integracion-proyectos .bento-corner-btn {
+            background-color: var(--blue) !important;
+            color: var(--white) !important;
+        }
+        .card-integracion-proyectos:hover .bento-corner-btn {
+            background-color: var(--white) !important;
+            color: var(--blue) !important;
+        }
+
+        .card-integracion-bienestar {
+            background: rgba(240, 245, 255, 0.95) !important;
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.6) !important;
+            justify-content: flex-start;
+        }
+        .card-integracion-bienestar:hover {
+            background: rgba(240, 245, 255, 1) !important;
+        }
+        .card-integracion-bienestar .pillar-bento-heading {
+            color: var(--blue) !important;
+        }
+        .card-integracion-bienestar .pillar-bento-heading span {
+            color: var(--blue) !important;
+            font-family: var(--font-playfair);
+            font-style: italic;
+            font-weight: 700;
+        }
+        .card-integracion-bienestar .pillar-bento-text {
+            color: rgba(37, 68, 120, 0.9) !important;
+            font-weight: 500;
+        }
+        .card-integracion-bienestar .pillar-bento-pill {
+            background-color: var(--blue) !important;
+            color: var(--yellow) !important;
+            font-weight: 700;
+        }
+        .card-integracion-bienestar .bento-corner-btn {
+            background-color: var(--blue) !important;
+            color: var(--white) !important;
+        }
+        .card-integracion-bienestar:hover .bento-corner-btn {
+            background-color: var(--yellow) !important;
+            color: var(--blue) !important;
+        }
+
+        .pillar-bento-card {
+            height: 380px !important;
+            min-height: auto !important;
+        }
+        /* Reducir el padding interno de las tarjetas */
+        .pillar-bento-body {
+            padding: 25px 22px !important;
+        }
+        /* Ajustar espaciados internos y tamaño de fuente para compactar */
+        .pillar-bento-heading {
+            font-size: 1.6rem !important;
+            margin-bottom: 8px !important;
+            line-height: 1.3 !important;
+        }
+        .pillar-bento-pill {
+            margin-bottom: 10px !important;
+        }
+        .pillar-bento-text {
+            font-size: 0.9rem !important;
+            line-height: 1.55 !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="nav-pill">
+            <a href="index.html" class="logo">
+                <img src="assets/HONTANAR logo_ (3).png" alt="Hontanar Logo">
+            </a>
+            <div class="nav-right">
+                <span class="menu-text">MENÚ</span>
+                <div class="hamburger-circle">
+                    <div class="hamburger">
+                        <span></span><span></span><span></span>
+                    </div>
+                </div>
+                <a href="#" class="btn btn-yellow btn-nav">Contáctanos <span class="arrow">&gt;</span></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sidebar Menu -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+    <nav class="sidebar-menu" id="sidebar-menu">
+        <div class="sidebar-header">
+            <img src="assets/Capa_2_xA0_Imagen.png" alt="Logo" class="sidebar-logo">
+            <button class="close-btn" id="close-sidebar">&times;</button>
+        </div>
+        <ul class="sidebar-nav">
+            <li class="has-submenu">
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-down"></i></span>
+                    <a href="#">Admisiones</a>
+                </div>
+                <ul class="submenu">
+                    <li><a href="tour-virtual.html">Tour Virtual</a></li>
+                    <li><a href="preguntas-frecuentes.html">Preguntas Frecuentes</a></li>
+                    <li><a href="por-que-estudiar.html">¿Por qué estudiar en el Gimnasio El Hontanar?</a></li>
+                    <li><a href="proceso-de-ingreso.html">Proceso de ingreso al Gimnasio El Hontanar</a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-right"></i></span>
+                    <a href="#">Somos Hontanar</a>
+                </div>
+                <ul class="submenu">
+                    <li><a href="modelo-de-ensenanza.html">Modelo de Enseñanza</a></li>
+                    <li><a href="nuestra-historia.html">Nuestra Historia</a></li>
+                    <li><a href="filosofia-y-valores.html">Filosofía y Valores</a></li>
+                    <li><a href="sello-hontanar.html">Sello Hontanar</a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-right"></i></span>
+                    <a href="#">Cultura Internacional</a>
+                </div>
+                <ul class="submenu">
+                    <li><a href="multilinguismo.html">Multilingüismo</a></li>
+                    <li><a href="programa-ib.html">Programa IB</a></li>
+                    <li><a href="intercambio-hontanar.html">Intercambio Hontanar</a></li>
+                    <li><a href="consejeria-internacional.html">Consejería Internacional</a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-right"></i></span>
+                    <a href="#">Vida en el Campus</a>
+                </div>
+                <ul class="submenu">
+                    <li><a href="un-dia-escolar.html">Un Día Escolar</a></li>
+                    <li><a href="formacion-integral.html">Formación Integral Más Allá del Aula</a></li>
+                    <li><a href="bienestar-emocional.html">Bienestar Emocional</a></li>
+                    <li><a href="programa-casas.html">Programa Casas</a></li>
+                    <li><a href="character-counts.html">Character Counts</a></li>
+                    <li><a href="espacio-seguro.html">Espacio Seguro</a></li>
+                    <li><a href="espacios-de-bienestar-y-naturaleza.html">Espacios de Bienestar y Naturaleza</a></li>
+                    <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
+                </ul>
+            </li>
+            <li class="has-submenu expanded">
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-down"></i></span>
+                    <a href="#">TecnoSer</a>
+                </div>
+                <ul class="submenu" style="display: block;">
+                    <li><a href="tecnoser-innovacion.html">Innovación</a></li>
+                    <li><a href="tecnoser-integracion.html" class="active" style="color: var(--yellow); font-weight: 700;">Integración Tecnológica</a></li>
+                    <li><a href="tecnoser-ia.html">IA (Inteligencia Artificial)</a></li>
+                    <li><a href="tecnoser-robotica.html">Robótica</a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <div class="menu-item">
+                    <span class="icon-circle"><i class="arrow-right"></i></span>
+                    <a href="#">Contacto</a>
+                </div>
+                <ul class="submenu">
+                    <li><a href="agenda-visita.html">Agenda tu Visita</a></li>
+                    <li><a href="como-llegar.html">Cómo Llegar</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="sidebar-footer">
+            <a href="#" class="btn-sidebar btn-s-green"><span>⚲</span> VIRTUAL</a>
+            <a href="#" class="btn-sidebar btn-s-yellow"><span>⌨</span> ADMISIONES</a>
+        </div>
+    </nav>
+
+    <!-- Script for Sidebar -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.querySelector('.hamburger-circle');
+            const menuText = document.querySelector('.menu-text');
+            const sidebar = document.getElementById('sidebar-menu');
+            const overlay = document.getElementById('sidebar-overlay');
+            const closeBtn = document.getElementById('close-sidebar');
+            function toggleMenu() {
+                sidebar.classList.toggle('open');
+                overlay.classList.toggle('open');
+            }
+            if(hamburger) hamburger.addEventListener('click', toggleMenu);
+            if(menuText) menuText.addEventListener('click', toggleMenu);
+            if(closeBtn) closeBtn.addEventListener('click', toggleMenu);
+            if(overlay) overlay.addEventListener('click', toggleMenu);
+            const submenus = document.querySelectorAll('.has-submenu .menu-item');
+            submenus.forEach(item => {
+                item.addEventListener('click', (e) => {
+                    if (e.target.tagName !== 'A') {
+                        e.preventDefault();
+                        item.parentElement.classList.toggle('expanded');
+                        const submenuList = item.parentElement.querySelector('.submenu');
+                        if(submenuList) {
+                            submenuList.style.display = submenuList.style.display === 'block' ? 'none' : 'block';
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+
+     <main class="vida-page">
+        <div class="vida-container">
+            <!-- Breadcrumbs -->
+            <div class="breadcrumbs">
+                <a href="index.html">Inicio</a> &gt; <a href="#">TecnoSer</a> &gt; <span class="current">Integración Tecnológica</span>
+            </div>
+
+            <!-- Header -->
+            <div class="vida-header hontanar-scroll-reveal">
+                <h4 class="kicker">TECNOSER · INTEGRACIÓN TECNOLÓGICA</h4>
+                <h1 class="main-title">Integración <span>Tecnológica</span></h1>
+            </div>
+
+            <p class="vida-lead-paragraph hontanar-scroll-reveal">Cuando se integra la tecnología de manera estratégica, se convierte en un puente que <strong style="color:var(--white);">conecta todas las áreas del conocimiento</strong>. En el Gimnasio El Hontanar, una institución reconocida entre los Colegios bilingües de Bogotá, la asignatura de Tecnología no funciona de manera aislada: dialoga con ciencias, arte, educación física, matemáticas y todas las asignaturas para construir experiencias de aprendizaje interdisciplinarias.</p>
+
+            <!-- Sección 1: Split Content (Fotografía y Aprendizaje Interdisciplinar) -->
+            <div class="split-content-grid hontanar-scroll-reveal" style="margin-top: 60px; margin-bottom: 60px;">
+                <div class="split-text-wrap" style="text-align: left;">
+                    <span class="intro-card-label">APRENDIZAJE INTERDISCIPLINARIO</span>
+                    <h2 class="vida-section-title" style="text-align: left; font-size: 2rem; line-height: 1.3; margin-bottom: 25px; font-family: var(--font-lato); font-weight: 700; font-style: normal; color: var(--white);">¿Cómo conectamos la tecnología con todas las áreas del conocimiento?</h2>
+                    <p class="vida-paragraph">Este modelo permite que los estudiantes comprendan que el conocimiento no está dividido, pues un proyecto puede comenzar con una pregunta científica, continuar con el diseño de una solución tecnológica y finalizar con la presentación de resultados en inglés, fortaleciendo la educación bilingüe y la comunicación efectiva.</p>
+                    <p class="vida-paragraph">Al integrar la tecnología de forma transversal, se propicia un espacio donde la teoría y la práctica se fusionan. Los estudiantes no solo aprenden conceptos abstractos, sino que construyen prototipos y diseñan soluciones que les permiten ver el impacto real de lo que aprenden en su entorno escolar diario.</p>
+                </div>
+                <div class="split-image-wrap">
+                    <img src="assets/smiling-caucasian-girl-having-video-call-remote-classroom-using-laptop.jpg" alt="Estudiante en aula remota con laptop" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+
+            <!-- Título de Sección Bento -->
+            <div class="vida-header hontanar-scroll-reveal" style="margin-top: 80px; margin-bottom: 20px;">
+                <h4 class="kicker">- APRENDIZAJE TRANSVERSAL Y TECNOLOGÍA -</h4>
+                <h2 class="vida-section-title" style="font-size: 2.2rem; font-family: var(--font-lato); font-weight: 700; font-style: normal; color: var(--white); line-height: 1.3;">
+                    Clases prácticas y conectadas con recursos digitales,<br>
+                    <span style="font-family: var(--font-playfair); font-style: italic; color: var(--yellow);">para un aprendizaje contextualizado e interactivo</span>
+                </h2>
+            </div>
+
+            <!-- Sección 2: Bento Grid Cards (3 Column Bento Row) -->
+            <div class="pillar-bento-row" style="margin-bottom: 80px;">
+                
+                <!-- Card 1: Práctica (Copia_de_DSC_0113.JPG bg) -->
+                <div class="pillar-bento-card card-integracion-practica hontanar-scroll-reveal">
+                    <div class="pillar-bento-body">
+                        <span class="pillar-bento-pill">Práctica</span>
+                        <h3 class="pillar-bento-heading">Competencias<br><span>aplicadas</span></h3>
+                        <p class="pillar-bento-text">Desde el uso de simuladores online para experimentar fenómenos complejos hasta el desarrollo de propuestas aplicadas al entorno escolar, la integración tecnológica convierte cada clase en una experiencia práctica, dinámica y valiosa.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2: Conexión (Solid Yellow card) -->
+                <div class="pillar-bento-card card-integracion-proyectos hontanar-scroll-reveal">
+                    <div class="pillar-bento-body">
+                        <span class="pillar-bento-pill">Conexión</span>
+                        <h3 class="pillar-bento-heading">Proyectos<br><span>comunes</span></h3>
+                        <p class="pillar-bento-text">Al integrar tecnología con distintas asignaturas, los estudiantes descubren que una solución puede requerir conocimientos de varias áreas. Por ejemplo, un proyecto puede combinar programación básica, análisis de datos y diseño creativo para resolver un reto dentro del colegio.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3: Bienestar (Glassmorphic Light card) -->
+                <div class="pillar-bento-card card-integracion-bienestar hontanar-scroll-reveal">
+                    <div class="pillar-bento-body">
+                        <span class="pillar-bento-pill">Bienestar</span>
+                        <h3 class="pillar-bento-heading">Aprendizaje<br><span>significativo</span></h3>
+                        <p class="pillar-bento-text">Esta integración contribuye directamente al bienestar de los estudiantes, ya que el aprendizaje se vuelve significativo y motivador. Cuando comprenden el propósito de lo que estudian, aumenta su seguridad, su interés y su participación activa.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Sección 3: Highlight Card -->
+            <div class="pq-highlight-card hontanar-scroll-reveal" style="margin-top: 60px; margin-bottom: 80px; text-align: center;">
+                <span class="sparkle top-left">&#10022;</span>
+                <span class="sparkle bottom-right">&#10022;</span>
+                <p class="pq-card-kicker">- TECNOSER HONTANAR -</p>
+                <h3 class="pq-card-title">
+                    Competencias integradas desde el aula con <span class="highlight-pill">metodologías apoyadas en tecnología</span>
+                </h3>
+                <p class="pq-card-subtitle" style="font-size: 1.1rem; line-height: 1.7; max-width: 900px; margin: 20px auto 0 auto; color: rgba(255,255,255,0.9);">
+                    Los docentes trabajan de manera colaborativa para diseñar proyectos comunes que respondan a problemáticas reales, promoviendo el trabajo en equipo, la investigación y la reflexión en todos los niveles.
+                </p>
+            </div>
+
+            <!-- Sección 4: Split Grid Invertido (CTA y Visita) -->
+            <div class="split-content-grid hontanar-scroll-reveal" style="margin-top: 60px; margin-bottom: 80px;">
+                <div class="split-image-wrap">
+                    <img src="assets/Copia_de_DSC_0186.JPG" alt="Estudiantes en el campus campestre con tecnología" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="split-text-wrap" style="text-align: left;">
+                    <span class="intro-card-label" style="background-color: var(--green); color: var(--white);">GREAT PLACE TO STUDY</span>
+                    <h2 class="vida-section-title" style="text-align: left; font-size: 2rem; line-height: 1.3; margin-bottom: 25px; font-family: var(--font-lato); font-weight: 700; font-style: normal; color: var(--white);">Ven a conocer cómo nuestra comunidad educativa avanza</h2>
+                    <p class="vida-paragraph">Como uno de los colegios en Chía y de los colegios calendario A en Bogotá que promueven experiencias educativas de alto nivel, El Hontanar entiende que la tecnología no es un fin, sino un medio para formar estudiantes capaces de proponer soluciones innovadoras y desenvolverse con confianza.</p>
+                    <p class="vida-paragraph" style="border-left: 3px solid var(--yellow); padding-left: 15px; font-style: italic; color: rgba(255,255,255,0.9);">Conoce nuestro proyecto educativo, visita el Gimnasio El Hontanar y descubre por qué la Integración Tecnológica es parte de nuestra experiencia como Great Place to Study.</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <div class="social-floating">
+        <a href="#" class="social-icon green"><img src="assets/Whatsapp.png" alt="WA"></a>
+        <a href="#" class="social-icon yellow"><img src="assets/Componente 26 - 1.png" alt="MSG"></a>
+    </div>
+
+    <!-- CTA Box -->
+    <div class="cta-box-wrapper cta-overlap tour-cta">
+        <div class="cta-box">
+            <h2>
+                Are you Ready to <br>
+                <span>Extraordinary</span>
+                <span class="highlight-potencial">
+                    Experience?
+                    <svg class="cta-swoosh" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 40">
+                        <path d="M 10 30 Q 150 15 280 35" fill="none" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                    </svg>
+                    <img src="assets/Trazado 21196.png" alt="Pencil" class="cta-pencil">
+                </span>
+            </h2>
+            <a href="#" class="btn btn-yellow btn-cta">Contact us <span class="btn-arrow">&gt;</span></a>
+        </div>
+        <img src="assets/ChatGPT Image 1 jul 2025, 17_28_04 (3).png" class="colibri-cta" alt="Colibri">
+    </div>
+
+    <!-- Footer Image -->
+    <section class="footer-image-section tour-footer-img">
+        <img src="assets/PHOTO-2025-07-30-09-58-52 (1).jpg" alt="Building" class="building-img">
+        <div class="curve-bottom">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path d="M0,0 Q720,240 1440,0 L1440,120 L0,120 Z" fill="#254478"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer new-footer">
+        <div class="footer-divider"></div>
+        <div class="footer-container">
+            <div class="footer-logo-col">
+                <img src="assets/Capa_2_xA0_Imagen.png" alt="Logo Footer" class="footer-shield">
+                <p>En el Gimnasio El Hontanar,<br>educamos para la vida, formando<br>ciudadanos íntegros, felices y preparados<br>para afrontar el futuro con confianza.</p>
+            </div>
+            <div class="footer-info-col">
+                <h4>DATOS DE CONTACTO</h4>
+                <ul>
+                    <li><img src="assets/whatsapp (4).png" alt="WhatsApp" class="footer-icon"> +57 316 4701496<br>+57 316 4701496</li>
+                    <li><img src="assets/telefono-inteligente (3).png" alt="Teléfono" class="footer-icon"> +57 316 4701496<br>+57 316 4701496</li>
+                    <li><img src="assets/sobre (1).png" alt="Email" class="footer-icon"> admisiones@gimnasiohontanar.edu.co<br>admisiones2@gimnasiohontanar.edu.co<br>contacto@gimnasiohontanar.edu.co</li>
+                    <li><img src="assets/_x32_0_location.png" alt="Ubicación" class="footer-icon"> Cra. 7a 300 m. antes del peaje de<br>Fusca (Sentido Chia - Bogotá), Chia, Colombia.</li>
+                </ul>
+            </div>
+            <div class="footer-social-col">
+                <h4>SÍGUENOS</h4>
+                <ul>
+                    <li><img src="assets/facebook (4).png" alt="Facebook" class="footer-icon"> gimnasioelhontanar</li>
+                    <li><img src="assets/Layer 2.png" alt="Instagram" class="footer-icon"> gimnasioelhontanar</li>
+                    <li><img src="assets/logotipo-de-linkedin (3).png" alt="LinkedIn" class="footer-icon"> gimnasio-el-hontanar</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.08 });
+            document.querySelectorAll('.hontanar-scroll-reveal').forEach(el => revealObserver.observe(el));
+        });
+    </script>
+</body>
+</html>
