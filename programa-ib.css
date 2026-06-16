@@ -61,9 +61,41 @@
 /* ==========================================================================
    2. SECCIÓN 1: PEDAGOGÍA MODELO (Estilo Imagen Referencia)
    ========================================================================== */
+/* Parallax utility (shared pattern) */
+.parallax-bg {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Overlay: difuminado hacia arriba y hacia abajo, foto visible en el centro */
+.ib-section-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        #254478 0%,
+        rgba(37, 68, 120, 0.92) 18%,
+        rgba(20, 40, 80, 0.85) 35%,
+        rgba(20, 40, 80, 0.85) 65%,
+        rgba(37, 68, 120, 0.92) 82%,
+        #254478 100%
+    );
+    pointer-events: none;
+    z-index: 0;
+}
+
 .ib-pedagogy-section {
-    padding: 20px 20px 40px 20px;
+    padding: 80px 20px 100px 20px;
     position: relative;
+    max-width: 100%;
+    margin: 0;
+}
+
+/* All direct children sit above the overlay */
+.ib-pedagogy-section > *:not(.ib-section-overlay) {
+    position: relative;
+    z-index: 1;
 }
 
 .ib-pedagogy-card {
