@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -142,7 +142,6 @@
             const submenus = document.querySelectorAll('.has-submenu .menu-item');
             submenus.forEach(item => {
                 item.addEventListener('click', (e) => {
-                    // Only toggle if clicked the dropdown arrow or the item container, keeping a href working
                     if (e.target.tagName !== 'A') {
                         e.preventDefault();
                         item.parentElement.classList.toggle('expanded');
@@ -154,7 +153,7 @@
 
     <!-- Page Content Container -->
     <main class="nuestra-historia-container">
-        <!-- Unified Breadcrumbs (Height matched across all subpages) -->
+        <!-- Unified Breadcrumbs -->
         <div class="breadcrumbs">
             <a href="index.html">Inicio</a> &gt; <a href="#">Somos Hontanar</a> &gt; <span class="current">Nuestra Historia</span>
         </div>
@@ -165,27 +164,13 @@
             <h1 class="main-title">Nuestra <span>Historia</span></h1>
         </div>
 
-        <!-- 1. MINIMALIST CORE SECTION (CLEAN DARK BLUE BACKGROUND WITH TEXT FADER) -->
+        <!-- 1. MINIMALIST CORE SECTION -->
         <section class="history-minimalist-section">
             <div class="history-minimalist-container">
-                
-                <!-- Floating circular image badges modeled after the screenshot (without yellow borders & floating organically!) -->
-                <div class="badge-float bf-left bf-1">
-                    <img src="assets/Grupo 4466.jpg" alt="Preescolar circular badge">
-                </div>
-                <div class="badge-float bf-left bf-2">
-                    <img src="assets/Grupo 4471.jpg" alt="Primaria circular badge">
-                </div>
-                <div class="badge-float bf-right bf-3">
-                    <img src="assets/Grupo 4467.jpg" alt="Secundaria circular badge">
-                </div>
-                <div class="badge-float bf-right bf-4">
-                    <img src="assets/Grupo 4469.jpg" alt="Media circular badge">
-                </div>
 
                 <div class="history-fader-wrapper scroll-reveal">
                     <div class="history-fader-container" id="history-text-fader">
-                        
+
                         <!-- Slide 1: Origen y Excelencia -->
                         <div class="history-fader-slide active" data-slide="1">
                             <h4 class="history-mini-kicker">COLEGIO PRIVADO BILINGÜE EN BOGOTÁ CON MÁS DE TRES DÉCADAS DE HISTORIA</h4>
@@ -211,7 +196,6 @@
 
                 <!-- BANNER CTA (EFECTO GLASS PREMIUM) -->
                 <div class="history-mini-banner scroll-reveal">
-                    <!-- Sparkle Stars matching the mockup -->
                     <svg class="sparkle-star star-top-left" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M12 0L14.6 9.4L24 12L14.6 14.6L12 24L9.4 14.6L0 12L9.4 9.4L12 0Z" fill="#F9EF6C"/>
                     </svg>
@@ -229,9 +213,9 @@
             </div>
         </section>
 
-        <!-- 2. ANIMATED TIMELINE SECTION (PARALLAX & GLASS EFFECTS WITH BLUR BACKGROUND) -->
+        <!-- 2. ANIMATED TIMELINE SECTION -->
         <section class="history-timeline-section">
-            <!-- Top Transition Curve to mask cut line -->
+            <!-- Top Transition Curve -->
             <div class="timeline-curve curve-top">
                 <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
                     <path d="M0,120 Q720,0 1440,120 L1440,0 L0,0 Z" fill="var(--blue)"></path>
@@ -239,14 +223,14 @@
             </div>
 
             <div class="timeline-container">
-                
+
                 <div class="timeline-header">
                     <h4 class="kicker">NUESTRA TRAYECTORIA</h4>
                     <h2 class="title">Hitos de <span>Excelencia</span></h2>
                 </div>
 
                 <div class="timeline-track-wrapper">
-                    <!-- Progress Line representing scroll depth -->
+                    <!-- Progress Line -->
                     <div class="timeline-progress-line"></div>
 
                     <!-- Milestone 1 -->
@@ -301,7 +285,7 @@
 
             </div>
 
-            <!-- Bottom Transition Curve to mask cut line -->
+            <!-- Bottom Transition Curve -->
             <div class="timeline-curve curve-bottom">
                 <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
                     <path d="M0,0 Q720,120 1440,0 L1440,120 L0,120 Z" fill="var(--blue)"></path>
@@ -347,7 +331,7 @@
                 currentSlideIndex = index;
                 slides[currentSlideIndex].classList.add('active');
                 dots[currentSlideIndex].classList.add('active');
-                
+
                 updateHeight();
             }
 
@@ -356,7 +340,6 @@
                 showSlide(nextIndex);
             }
 
-            // Start Auto Loop (every 7 seconds)
             function startLoop() {
                 faderInterval = setInterval(nextSlide, 7000);
             }
@@ -366,7 +349,6 @@
                 startLoop();
             }
 
-            // Event Listeners for dots clicking
             dots.forEach((dot, idx) => {
                 dot.addEventListener('click', () => {
                     showSlide(idx);
@@ -374,10 +356,8 @@
                 });
             });
 
-            // Initial Height Calculation and loop start
             setTimeout(() => {
                 updateHeight();
-                // Add trigger class on section view to show floating bubbles organic entry
                 const section = document.querySelector('.history-minimalist-section');
                 if(section) section.classList.add('visible');
             }, 300);
@@ -386,7 +366,7 @@
             window.addEventListener('load', updateHeight);
             startLoop();
 
-            // 3. Animated Timeline Controller (Progress and Item reveal)
+            // 3. Animated Timeline Controller
             const timelineItems = document.querySelectorAll('.timeline-item');
             const progressLine = document.querySelector('.timeline-progress-line');
             const timelineSection = document.querySelector('.history-timeline-section');
@@ -398,14 +378,11 @@
                 const triggerPoint = window.innerHeight * 0.85;
                 const trackRect = timelineTrack.getBoundingClientRect();
 
-                // 1. Reveal items as they scroll into view
                 timelineItems.forEach(item => {
                     const itemRect = item.getBoundingClientRect();
                     if (itemRect.top < triggerPoint) {
                         item.classList.add('revealed');
                     }
-                    
-                    // Activate dot when item is closer to center of viewport
                     if (itemRect.top < window.innerHeight * 0.5) {
                         item.classList.add('active-dot');
                     } else {
@@ -413,17 +390,14 @@
                     }
                 });
 
-                // 2. Animate center progress bar line matching the scroll depth of the timeline
                 const trackHeight = trackRect.height;
                 const scrollDepth = (window.innerHeight * 0.5) - trackRect.top;
-
                 let progressHeight = Math.max(0, Math.min(trackHeight, scrollDepth));
                 progressLine.style.height = progressHeight + 'px';
             }
 
             window.addEventListener('scroll', handleTimelineScroll);
             window.addEventListener('resize', handleTimelineScroll);
-            // Run initially after DOM settling
             setTimeout(handleTimelineScroll, 400);
         });
     </script>
@@ -481,7 +455,7 @@
                 </ul>
             </div>
             <div class="footer-social-col">
-                <h4>SÍGANOS</h4>
+                <h4>SÍGUENOS</h4>
                 <ul>
                     <li><img src="assets/facebook (4).png" alt="Facebook" class="footer-icon"> gimnasioelhontanar</li>
                     <li><img src="assets/Layer 2.png" alt="Instagram" class="footer-icon"> gimnasioelhontanar</li>

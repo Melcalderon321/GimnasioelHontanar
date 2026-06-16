@@ -13,10 +13,36 @@
    SECCIÓN SELLO HONTANAR
    ========================================================================== */
 .sello-hontanar-section {
-    padding: 15px 20px 100px 20px;
+    padding: 80px 20px 100px 20px;
     position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 100%;
+    margin: 0;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Overlay: difuminado hacia arriba y hacia abajo, foto visible en el centro */
+.sello-section-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        #254478 0%,
+        rgba(37, 68, 120, 0.92) 18%,
+        rgba(20, 40, 80, 0.85) 35%,
+        rgba(20, 40, 80, 0.85) 65%,
+        rgba(37, 68, 120, 0.92) 82%,
+        #254478 100%
+    );
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* All direct children sit above the overlay */
+.sello-hontanar-section > *:not(.sello-section-overlay) {
+    position: relative;
+    z-index: 1;
 }
 
 .sello-page-container .tour-text-content {
