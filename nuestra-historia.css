@@ -54,9 +54,19 @@
     font-weight: 900;
     color: var(--yellow);
     letter-spacing: 2px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     text-transform: uppercase;
     line-height: 1.4;
+}
+
+/* Divisor decorativo entre kicker y título */
+.history-mini-divider-line {
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--yellow), transparent);
+    margin: 0 auto 22px auto;
+    border-radius: 2px;
+    opacity: 0.8;
 }
 
 /* Títulos minimalistas grandes */
