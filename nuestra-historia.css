@@ -465,11 +465,11 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: linear-gradient(180deg, rgba(37, 68, 120, 0.8) 0%, rgba(37, 68, 120, 0.95) 100%), url('assets/timeline-bg.jpg');
+    background-image: linear-gradient(180deg, rgba(37, 68, 120, 0.92) 0%, rgba(37, 68, 120, 0.97) 100%), url('assets/timeline-bg.jpg');
     background-attachment: scroll, fixed; /* Parallax effect for the image, scroll for overlay */
     background-size: auto, cover;
     background-position: center, center;
-    filter: blur(8px) brightness(0.45); /* Blurred and darkened behind text */
+    filter: blur(6px) brightness(0.75); /* Blurred behind text, brighter to show blue tint */
     z-index: 1;
     transform: scale(1.03); /* Eliminates white edges caused by blur filter */
 }
