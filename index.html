@@ -144,6 +144,32 @@
                     item.parentElement.classList.toggle('expanded');
                 });
             });
+
+            // Lightbox functionality for Gallery
+            const track = document.querySelector('.carousel-track');
+            const lightbox = document.getElementById('gallery-lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxClose = document.querySelector('.lightbox-close');
+
+            if (track && lightbox && lightboxImg) {
+                track.querySelectorAll('img').forEach(img => {
+                    img.addEventListener('click', () => {
+                        lightboxImg.src = img.src;
+                        lightboxImg.alt = img.alt;
+                        lightbox.classList.add('active');
+                    });
+                });
+
+                lightboxClose.addEventListener('click', () => {
+                    lightbox.classList.remove('active');
+                });
+
+                lightbox.addEventListener('click', (e) => {
+                    if (e.target === lightbox) {
+                        lightbox.classList.remove('active');
+                    }
+                });
+            }
         });
     </script>
 
@@ -154,7 +180,7 @@
         <div class="hero-content">
             <img src="assets/Grupo 3946.png" class="hero-logo-small" alt="Escudo Blanco">
             <h1>Where your child</h1>
-            <h2>learns <span class="happily-text">happily <img src="assets/Trazado 21196.png" class="pencil-icon" alt="Pencil"></span></h2>
+            <h2>learns <span class="happily-text"><svg class="happily-swoosh" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 20" preserveAspectRatio="none"><path class="swoosh-main" d="M 1 17 C 45 3, 105 3, 151 10" fill="none" stroke="var(--yellow)" stroke-width="5" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg><span class="text-content">happily</span><img src="assets/Trazado 21196.png" class="pencil-icon" alt="Pencil"></span></h2>
             <h3>Extraordinary Experience</h3>
             <p>Transforming lives of students and community through<br>extraordinary educational experiences.</p>
             <a href="#" class="btn btn-yellow btn-hero">Reserva tu cita <span class="arrow">&gt;</span></a>
@@ -311,9 +337,9 @@
             <img src="assets/Capa_2_xA0_Imagen.png" alt="Watermark">
         </div>
         
-        <div class="curve-bottom">
-            <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
-                <path d="M0,0 Q720,240 1440,0 L1440,120 L0,120 Z" fill="#254478"></path>
+        <div class="curve-bottom curve-modelo-educativo">
+            <svg viewBox="0 0 1440 680" preserveAspectRatio="none">
+                <path d="M0,0 Q720,400 1440,0 L1440,680 L0,680 Z" fill="#254478"></path>
             </svg>
         </div>
     </section>
@@ -324,7 +350,7 @@
         
         <div class="descubra-content">
             <h1 class="descubra-title">Descubra por qué somos uno de los<br>mejores colegios bilingües en Bogotá.</h1>
-            <h2 class="descubra-subtitle">Acompañe a sus hijos en el camino<br>de descubrir todo su <span class="highlight-potencial">potencial.</span></h2>
+            <h2 class="descubra-subtitle">Acompañe a sus hijos en el camino<br>de descubrir todo su <span class="highlight-potencial"><svg class="potencial-swoosh" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 20" preserveAspectRatio="none"><path class="swoosh-main" d="M 1 17 C 45 3, 105 3, 151 10" fill="none" stroke="var(--yellow)" stroke-width="5" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg><span class="text-content">potencial.</span><img src="assets/Trazado 21196.png" class="pencil-icon" alt="Pencil"></span></h2>
             <a href="#" class="btn btn-yellow btn-agende">Agende su visita &gt;</a>
 
             <h3 class="cifras-title">Cifras <span class="cifras-highlight">que nos respaldan</span></h3>
@@ -385,7 +411,7 @@
     <!-- Conexiones -->
     <section class="conexiones">
         <h2 class="section-heading">Conexiones que <span>inspiran</span></h2>
-        <p class="section-subheading">Hacemos parte de redes de excelencia que respaldan nuestro compromiso con la calidad educativa.</p>
+        <p class="section-subheading">Hacemos parte de redes de excelencia que respaldan<br>nuestro compromiso con la calidad educativa.</p>
         
         <div class="logos-row">
             <img src="assets/Grupo 4452.png" alt="Logos"> <!-- Reemplazar con logos reales si están en Grupo 4452 -->
@@ -447,6 +473,11 @@
             </div>
         </div>
     </footer>
+    <!-- Lightbox Modal for Gallery -->
+    <div id="gallery-lightbox" class="lightbox-modal">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" src="" alt="Zoomed Image">
+    </div>
 </body>
 </html>
 
