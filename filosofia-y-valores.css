@@ -1617,35 +1617,47 @@
     margin: 0;
 }
 
-/* Controls */
+/* Controls Overlay */
 .filo-carousel-controls {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 28px;
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 10;
 }
 
 .filo-carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     width: 48px;
     height: 48px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(20, 30, 55, 0.6);
     border: 1px solid rgba(255, 255, 255, 0.2);
     color: var(--white);
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: background 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+    transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    pointer-events: auto;
+}
+
+.filo-carousel-btn.prev {
+    left: 24px;
+}
+
+.filo-carousel-btn.next {
+    right: 24px;
 }
 
 .filo-carousel-btn:hover {
     background: var(--yellow);
     border-color: var(--yellow);
     color: var(--blue);
-    transform: scale(1.08);
+    transform: translateY(-50%) scale(1.1);
 }
 
 .filo-carousel-btn svg {
@@ -1654,16 +1666,21 @@
 }
 
 .filo-carousel-dots {
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     gap: 10px;
     align-items: center;
+    pointer-events: auto;
 }
 
 .filo-dot {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.4);
     border: none;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -1818,4 +1835,5 @@
     .filo-testimonial-quote { font-size: 1.05rem; }
     .filo-cta-heading { font-size: 1.4rem; }
     .filo-cta-btns { flex-direction: column; gap: 15px; }
+    .filo-carousel-btn { display: none; }
 }
