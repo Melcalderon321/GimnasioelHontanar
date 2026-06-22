@@ -265,36 +265,28 @@
             </div>
         </section>
 
-        <!-- 3. GALERÍA MASONRY -->
+        <!-- 3. GALERÍA ESTILO HOME (INFINITE SCROLL CAROUSEL) -->
         <section class="filo-gallery-section">
             <div class="filo-gallery-header filosofia-scroll-reveal">
                 <h4 class="kicker">NUESTRA COMUNIDAD</h4>
                 <h2 class="filo-section-title">La vida en el <span>Hontanar</span></h2>
             </div>
-            <div class="filo-masonry-grid filosofia-scroll-reveal">
-                <div class="filo-masonry-item tall">
+            
+            <div class="filo-galeria-carousel filosofia-scroll-reveal">
+                <div class="filo-carousel-track-scroll">
                     <img src="assets/filo-gallery-1.jpg" alt="Estudiantes Hontanar">
-                    <div class="filo-masonry-overlay"><span>Formación Integral</span></div>
-                </div>
-                <div class="filo-masonry-item">
                     <img src="assets/filo-gallery-2.jpg" alt="Comunidad escolar">
-                    <div class="filo-masonry-overlay"><span>Convivencia</span></div>
-                </div>
-                <div class="filo-masonry-item">
                     <img src="assets/filo-gallery-3.jpg" alt="Aprendizaje activo">
-                    <div class="filo-masonry-overlay"><span>Aprendizaje</span></div>
-                </div>
-                <div class="filo-masonry-item tall">
                     <img src="assets/filo-gallery-4.jpg" alt="Valores en acción">
-                    <div class="filo-masonry-overlay"><span>Valores</span></div>
-                </div>
-                <div class="filo-masonry-item">
                     <img src="assets/filo-gallery-5.jpg" alt="Campus Hontanar">
-                    <div class="filo-masonry-overlay"><span>Campus</span></div>
-                </div>
-                <div class="filo-masonry-item">
                     <img src="assets/filo-gallery-6.jpg" alt="Hontanar comunidad">
-                    <div class="filo-masonry-overlay"><span>Comunidad</span></div>
+                    <!-- Duplicadas para efecto infinito -->
+                    <img src="assets/filo-gallery-1.jpg" alt="Estudiantes Hontanar">
+                    <img src="assets/filo-gallery-2.jpg" alt="Comunidad escolar">
+                    <img src="assets/filo-gallery-3.jpg" alt="Aprendizaje activo">
+                    <img src="assets/filo-gallery-4.jpg" alt="Valores en acción">
+                    <img src="assets/filo-gallery-5.jpg" alt="Campus Hontanar">
+                    <img src="assets/filo-gallery-6.jpg" alt="Hontanar comunidad">
                 </div>
             </div>
         </section>
@@ -432,9 +424,32 @@
                 const diff = startX - e.changedTouches[0].clientX;
                 if (Math.abs(diff) > 50) { goTo(current + (diff > 0 ? 1 : -1)); resetAuto(); }
             });
-        });
-    </script>
-            bentoCards.forEach(card => bentoObserver.observe(card));
+
+            // Lightbox functionality for Gallery
+            const filoTrackScroll = document.querySelector('.filo-carousel-track-scroll');
+            const lightbox = document.getElementById('gallery-lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxClose = document.querySelector('.lightbox-close');
+
+            if (filoTrackScroll && lightbox && lightboxImg) {
+                filoTrackScroll.querySelectorAll('img').forEach(img => {
+                    img.addEventListener('click', () => {
+                        lightboxImg.src = img.src;
+                        lightboxImg.alt = img.alt;
+                        lightbox.classList.add('active');
+                    });
+                });
+
+                lightboxClose.addEventListener('click', () => {
+                    lightbox.classList.remove('active');
+                });
+
+                lightbox.addEventListener('click', (e) => {
+                    if (e.target === lightbox) {
+                        lightbox.classList.remove('active');
+                    }
+                });
+            }
         });
     </script>
 
@@ -500,5 +515,11 @@
             </div>
         </div>
     </footer>
+    
+    <!-- Lightbox Modal for Gallery -->
+    <div id="gallery-lightbox" class="lightbox-modal">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" src="" alt="Zoomed Image">
+    </div>
 </body>
 </html>

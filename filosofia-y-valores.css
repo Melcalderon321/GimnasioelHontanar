@@ -1490,71 +1490,59 @@
     margin: 0;
 }
 
-/* ---- SECTION 3: GALERÍA MASONRY ---- */
+/* ---- SECTION 3: GALERÍA ESTILO HOME ---- */
 .filo-gallery-section {
-    padding: 80px 20px;
+    padding: 80px 0;
     background: linear-gradient(180deg, var(--blue) 0%, #1c3460 100%);
+    overflow: hidden;
 }
 
 .filo-gallery-header {
     text-align: center;
     margin-bottom: 50px;
+    padding: 0 20px;
 }
 
-.filo-masonry-grid {
-    columns: 3;
-    column-gap: 16px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.filo-masonry-item {
-    position: relative;
-    break-inside: avoid;
-    border-radius: 16px;
-    overflow: hidden;
-    margin-bottom: 16px;
-    cursor: pointer;
-}
-
-.filo-masonry-item.tall img {
-    height: 400px;
-}
-
-.filo-masonry-item img {
+.filo-galeria-carousel {
     width: 100%;
-    height: 250px;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    overflow: hidden;
+    position: relative;
+    line-height: 0;
 }
 
-.filo-masonry-item:hover img {
-    transform: scale(1.06);
-}
-
-.filo-masonry-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, rgba(20, 30, 55, 0.85) 0%, transparent 55%);
+.filo-carousel-track-scroll {
     display: flex;
-    align-items: flex-end;
-    padding: 18px 20px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+    width: max-content;
+    animation: filo-scroll 30s linear infinite;
 }
 
-.filo-masonry-item:hover .filo-masonry-overlay {
-    opacity: 1;
+.filo-carousel-track-scroll:hover {
+    animation-play-state: paused;
 }
 
-.filo-masonry-overlay span {
-    font-family: var(--font-lato);
-    font-size: 0.85rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--yellow);
+.filo-carousel-track-scroll img {
+    width: 22vw;
+    height: 280px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: filter 0.3s ease, transform 0.3s ease;
+    border-radius: 16px;
+    margin: 0 10px;
+}
+
+.filo-carousel-track-scroll img:hover {
+    filter: brightness(1.1);
+    transform: scale(1.03);
+}
+
+@keyframes filo-scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        /* Width of 6 images: 6 * (22vw + 20px) */
+        transform: translateX(calc(-6 * (22vw + 20px)));
+    }
 }
 
 /* ---- SECTION 4: CARRUSEL ---- */
@@ -1802,15 +1790,27 @@
     .filo-pilares-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    .filo-masonry-grid {
-        columns: 2;
+    .filo-carousel-track-scroll img {
+        width: 35vw;
+        height: 240px;
+    }
+    @keyframes filo-scroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(calc(-6 * (35vw + 20px))); }
     }
 }
 
 @media (max-width: 768px) {
     .filo-section-title { font-size: 2rem; }
     .filo-pilares-grid { grid-template-columns: 1fr; }
-    .filo-masonry-grid { columns: 1; }
+    .filo-carousel-track-scroll img {
+        width: 60vw;
+        height: 200px;
+    }
+    @keyframes filo-scroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(calc(-6 * (60vw + 20px))); }
+    }
     .filo-carousel-slide img { height: 320px; }
     .filo-carousel-caption { padding: 25px; }
     .filo-carousel-caption p { font-size: 1rem; }
