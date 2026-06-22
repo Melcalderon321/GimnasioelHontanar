@@ -444,7 +444,7 @@
     padding: 140px 20px;
     overflow: hidden;
     color: var(--white);
-    background-color: #121c30; /* Dark fallback */
+    background-color: var(--blue); /* Dark blue fallback */
     z-index: 5;
 }
 
@@ -455,7 +455,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: linear-gradient(180deg, rgba(37, 68, 120, 0.76) 0%, rgba(18, 28, 48, 0.88) 100%), url('assets/timeline-bg.jpg');
+    background-image: linear-gradient(180deg, rgba(37, 68, 120, 0.8) 0%, rgba(37, 68, 120, 0.95) 100%), url('assets/timeline-bg.jpg');
     background-attachment: scroll, fixed; /* Parallax effect for the image, scroll for overlay */
     background-size: auto, cover;
     background-position: center, center;
