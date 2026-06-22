@@ -320,6 +320,7 @@
     font-family: var(--font-lato);
     font-size: 2.2rem;
     font-weight: 700;
+    font-style: italic;
     color: var(--white);
     margin-bottom: 35px;
     line-height: 1.45;
@@ -328,22 +329,9 @@
     margin-right: auto;
 }
 
-/* Custom Yellow Highlight Pill matching 'medio ambiente' mockup */
-.banner-pill {
-    background-color: var(--yellow);
-    color: var(--blue);
-    padding: 3px 22px;
-    border-radius: 40px;
-    font-weight: 700;
-    display: inline-block;
-    box-shadow: 0 4px 15px rgba(249, 239, 108, 0.2);
-    margin: 0 6px;
-    transform: translateY(-2px);
-    transition: transform 0.3s ease;
-}
-
-.history-mini-banner:hover .banner-pill {
-    transform: translateY(-2px) scale(1.03);
+.highlight-yellow {
+    color: var(--yellow);
+    font-weight: 900;
 }
 
 .history-banner-btn-wrap {
@@ -442,12 +430,6 @@
         margin-bottom: 30px;
     }
 
-    .banner-pill {
-        padding: 2px 14px;
-        margin: 4px 2px;
-        font-size: 1.4rem;
-        border-radius: 30px;
-    }
 
     .timeline-curve {
         height: 45px;
