@@ -1548,7 +1548,7 @@
 /* ---- SECTION 4: CARRUSEL ---- */
 .filo-carousel-section {
     padding: 80px 20px;
-    background-color: var(--blue);
+    background: linear-gradient(180deg, #1c3460 0%, var(--blue) 25%, var(--blue) 75%, #1c3460 100%);
 }
 
 .filo-carousel-header {
