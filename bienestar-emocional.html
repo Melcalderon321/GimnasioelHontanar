@@ -216,6 +216,51 @@
                 </div>
             </div>
 
+            <!-- Galería estilo filosofía -->
+            <div class="bienestar-carousel-wrapper hontanar-scroll-reveal" style="margin-top: 50px;">
+                <div class="bienestar-carousel-track" id="bienestar-carousel">
+                    <div class="bienestar-carousel-slide">
+                        <img src="assets/filo-carousel-1.jpg" alt="Momento Hontanar 1">
+                        <div class="bienestar-carousel-caption">
+                            <span class="bienestar-slide-tag">Comunidad</span>
+                            <p>Cada día en el Hontanar es una oportunidad de crecer, convivir y descubrir el mundo con otros.</p>
+                        </div>
+                    </div>
+                    <div class="bienestar-carousel-slide">
+                        <img src="assets/filo-carousel-2.jpg" alt="Momento Hontanar 2">
+                        <div class="bienestar-carousel-caption">
+                            <span class="bienestar-slide-tag">Valores</span>
+                            <p>El respeto, la responsabilidad y la empatía son el hilo conductor de nuestra propuesta educativa.</p>
+                        </div>
+                    </div>
+                    <div class="bienestar-carousel-slide">
+                        <img src="assets/filo-carousel-3.jpg" alt="Momento Hontanar 3">
+                        <div class="bienestar-carousel-caption">
+                            <span class="bienestar-slide-tag">Bienestar</span>
+                            <p>Formamos niños y jóvenes felices, seguros de sí mismos y listos para transformar su entorno.</p>
+                        </div>
+                    </div>
+                    <div class="bienestar-carousel-slide">
+                        <img src="assets/filo-bento-1.jpg" alt="Momento Hontanar 4">
+                        <div class="bienestar-carousel-caption">
+                            <span class="bienestar-slide-tag">Campus</span>
+                            <p>Nuestro campus campestre es el escenario ideal para un aprendizaje active, significativo y feliz.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controls -->
+                <div class="bienestar-carousel-controls">
+                    <button class="bienestar-carousel-btn prev" id="bienestar-prev" aria-label="Anterior">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+                    </button>
+                    <div class="bienestar-carousel-dots" id="bienestar-dots"></div>
+                    <button class="bienestar-carousel-btn next" id="bienestar-next" aria-label="Siguiente">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+                    </button>
+                </div>
+            </div>
+
             <!-- Solid Highlight Section -->
             <div class="split-content-grid hontanar-scroll-reveal" style="margin-top: 50px;">
                 <div>
@@ -297,9 +342,10 @@
         </div>
     </footer>
 
-    <!-- Scroll Reveal Observer Script -->
+    <!-- Scroll Reveal & Carousel Scripts -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // Scroll Reveal
             const revealObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -311,6 +357,51 @@
 
             const scrollElements = document.querySelectorAll('.hontanar-scroll-reveal');
             scrollElements.forEach(el => revealObserver.observe(el));
+
+            // Carousel
+            const track = document.getElementById('bienestar-carousel');
+            const slides = track ? track.querySelectorAll('.bienestar-carousel-slide') : [];
+            const dotsContainer = document.getElementById('bienestar-dots');
+            const prevBtn = document.getElementById('bienestar-prev');
+            const nextBtn = document.getElementById('bienestar-next');
+            let current = 0;
+            let autoplay;
+
+            if (slides.length > 0 && dotsContainer) {
+                // Build dots
+                slides.forEach((_, i) => {
+                    const dot = document.createElement('button');
+                    dot.className = 'bienestar-dot' + (i === 0 ? ' active' : '');
+                    dot.setAttribute('aria-label', 'Slide ' + (i + 1));
+                    dot.addEventListener('click', () => { goTo(i); resetAuto(); });
+                    dotsContainer.appendChild(dot);
+                });
+
+                function goTo(idx) {
+                    current = (idx + slides.length) % slides.length;
+                    track.style.transform = `translateX(-${current * 100}%)`;
+                    dotsContainer.querySelectorAll('.bienestar-dot').forEach((d, i) => d.classList.toggle('active', i === current));
+                }
+
+                function resetAuto() {
+                    clearInterval(autoplay);
+                    autoplay = setInterval(() => goTo(current + 1), 5000);
+                }
+
+                if (prevBtn && nextBtn) {
+                    prevBtn.addEventListener('click', () => { goTo(current - 1); resetAuto(); });
+                    nextBtn.addEventListener('click', () => { goTo(current + 1); resetAuto(); });
+                }
+                resetAuto();
+
+                // Swipe support
+                let startX = 0;
+                track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+                track.addEventListener('touchend', e => {
+                    const diff = startX - e.changedTouches[0].clientX;
+                    if (Math.abs(diff) > 50) { goTo(current + (diff > 0 ? 1 : -1)); resetAuto(); }
+                });
+            }
         });
     </script>
 </body>
