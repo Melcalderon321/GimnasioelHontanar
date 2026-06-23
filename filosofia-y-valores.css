@@ -1435,14 +1435,15 @@
 }
 
 .filo-pilar-card {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 100%);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.52) 0%, rgba(255, 255, 255, 0.35) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.65);
     border-radius: 20px;
     padding: 45px 30px;
     text-align: center;
-    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, background 0.3s ease;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.18);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1450,21 +1451,22 @@
 }
 
 .filo-pilar-card:hover {
-    transform: translateY(-6px);
-    border-color: rgba(249, 239, 108, 0.4);
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.13) 0%, rgba(255, 255, 255, 0.06) 100%);
+    transform: translateY(-7px);
+    border-color: rgba(249, 239, 108, 0.7);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.70) 0%, rgba(255, 255, 255, 0.50) 100%);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
 }
 
 .filo-pilar-card h3 {
     font-family: var(--font-lato);
     font-size: 1.35rem;
     font-weight: 700;
-    color: var(--white);
+    color: var(--blue);
     margin-bottom: 15px;
 }
 
 .filo-pilar-card h3 span {
-    color: var(--yellow);
+    color: #b8860b;
     font-family: var(--font-playfair);
     font-style: italic;
 }
@@ -1473,8 +1475,8 @@
     font-family: var(--font-lato);
     font-size: 0.95rem;
     line-height: 1.7;
-    color: rgba(255, 255, 255, 0.75);
-    font-weight: 300;
+    color: rgba(37, 68, 120, 0.82);
+    font-weight: 400;
     margin: 0;
 }
 
