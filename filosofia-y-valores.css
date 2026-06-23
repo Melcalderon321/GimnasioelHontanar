@@ -785,13 +785,31 @@
    ESPACIOS DE BIENESTAR Y NATURALEZA - PILLAR CARDS
    ========================================================================== */
 
-/* Card 1: Aulas y Laboratorios - image bg, blue overlay */
+/* Card 1: Aulas y Laboratorios - image bg */
 .card-espacio-aulas {
-    background-image: url('assets/espacio-aulas-1.jpg');
+    background-image: url('assets/espacio-aulas-new.jpg');
     background-size: cover;
     background-position: center 40%;
 }
-.card-espacio-aulas::before {
+
+/* Card 2: Arte y Cultura - image bg */
+.card-espacio-arte {
+    background-image: url('assets/espacio-arte-new.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Card 3: Campos Deportivos - image bg */
+.card-espacio-deporte {
+    background-image: url('assets/espacio-deporte-new.png');
+    background-size: cover;
+    background-position: center 30%;
+}
+
+/* Common Blue Overlay Gradient for all three cards */
+.card-espacio-aulas::before,
+.card-espacio-arte::before,
+.card-espacio-deporte::before {
     content: '';
     position: absolute;
     inset: 0;
@@ -799,47 +817,19 @@
     z-index: 1;
 }
 
-/* Card 2: Arte y Cultura - white glass */
-.card-espacio-arte {
-    background: rgba(255, 255, 255, 0.96);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.6);
-    justify-content: flex-start;
-}
-.card-espacio-arte:hover {
-    background: rgba(255, 255, 255, 1);
-}
-.card-espacio-arte .pillar-bento-heading {
-    color: var(--blue);
-}
-.card-espacio-arte .pillar-bento-heading span {
-    color: var(--blue);
-    font-style: italic;
-}
-.card-espacio-arte .pillar-bento-text {
-    color: rgba(37, 68, 120, 0.88);
-}
-.card-espacio-arte .pillar-bento-text strong {
-    color: var(--blue);
-}
-.card-espacio-arte .pillar-bento-pill {
-    background-color: var(--blue);
-    color: var(--yellow);
+/* Shortened Heights for Espacios de Bienestar y Naturaleza cards */
+.card-espacio-aulas,
+.card-espacio-arte,
+.card-espacio-deporte {
+    min-height: 380px;
 }
 
-/* Card 3: Campos Deportivos - image bg, dark green overlay */
-.card-espacio-deporte {
-    background-image: url('assets/espacio-deporte-1.jpg');
-    background-size: cover;
-    background-position: center 30%;
-}
-.card-espacio-deporte::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, rgba(12, 40, 20, 0.97) 0%, rgba(15, 50, 30, 0.70) 55%, rgba(15, 50, 30, 0.25) 100%);
-    z-index: 1;
+@media (max-width: 768px) {
+    .card-espacio-aulas,
+    .card-espacio-arte,
+    .card-espacio-deporte {
+        min-height: 340px;
+    }
 }
 
 
