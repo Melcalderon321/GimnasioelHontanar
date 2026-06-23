@@ -1466,7 +1466,7 @@
 }
 
 .filo-pilar-card h3 span {
-    color: #b8860b;
+    color: var(--blue);
     font-family: var(--font-playfair);
     font-style: italic;
 }
