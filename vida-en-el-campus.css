@@ -1805,3 +1805,46 @@
     0%   { transform: translateX(0); }
     100% { transform: translateX(calc(-25vw * 8)); }
 }
+
+/* ==========================================================================
+   CARDS PARALLAX CONTAINER (Bienestar Emocional)
+   ========================================================================== */
+.cards-parallax-container {
+    position: relative;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 36px;
+    padding: 60px 40px;
+    margin: 50px 0;
+    overflow: hidden;
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.4), 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.cards-parallax-container .parallax-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(20, 30, 55, 0.8) 0%, rgba(37, 68, 120, 0.55) 100%);
+    z-index: 1;
+}
+
+.cards-parallax-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Ensure the bento grid inside the parallax container has appropriate spacing */
+.cards-parallax-container .bento-counseling-grid {
+    margin: 0;
+    gap: 28px;
+}
+
+/* Responsive adjustment for the parallax container */
+@media (max-width: 991px) {
+    .cards-parallax-container {
+        padding: 40px 20px;
+        background-attachment: scroll; /* better mobile behavior */
+    }
+}
+
