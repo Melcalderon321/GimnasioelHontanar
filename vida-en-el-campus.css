@@ -2047,4 +2047,175 @@
     }
 }
 
+/* ==========================================================================
+   EVOLUTION ITEM CARDS (Sostenibilidad & Intercambio Style)
+   ========================================================================== */
+.evolution-item {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-radius: 28px;
+    padding: 35px 28px;
+    min-height: 270px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
+    position: relative; /* Essential for absolute positioning of evolution-number */
+    text-align: center;
+    align-items: center;
+}
+
+/* Subtle Up-and-Down Shift Staggered Layout & Arrow Connectors for Desktop */
+@media (min-width: 1025px) {
+    .evolution-item:nth-child(odd) {
+        transform: translateY(-20px);
+    }
+    .evolution-item:nth-child(even) {
+        transform: translateY(20px);
+    }
+    .evolution-item:nth-child(odd):hover {
+        transform: translateY(-30px);
+    }
+    .evolution-item:nth-child(even):hover {
+        transform: translateY(10px);
+    }
+
+    /* Arrow Connectors */
+    .evolution-item::before {
+        content: '';
+        position: absolute;
+        width: 190px;
+        height: 60px;
+        pointer-events: none;
+        z-index: 5;
+    }
+    
+    /* Arch arrow from Card 1 (high) to Card 2 (low) */
+    .evolution-item:nth-child(1)::before {
+        top: -45px;
+        right: -105px;
+        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 50" fill="none" stroke="white" stroke-width="1.2" stroke-dasharray="3,3"><path d="M5,45 Q50,5 95,45" stroke-linecap="round"/><path d="M90,35 L95,45 L85,45" fill="none" stroke-linecap="round"/></svg>') no-repeat center;
+        background-size: contain;
+    }
+    
+    /* Cup arrow from Card 2 (low) to Card 3 (high) */
+    .evolution-item:nth-child(2)::before {
+        top: -25px;
+        right: -105px;
+        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 50" fill="none" stroke="white" stroke-width="1.2" stroke-dasharray="3,3"><path d="M5,5 Q50,45 95,5" stroke-linecap="round"/><path d="M85,5 L95,5 L90,15" fill="none" stroke-linecap="round"/></svg>') no-repeat center;
+        background-size: contain;
+    }
+}
+
+.evolution-number {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    font-family: var(--font-playfair);
+    font-size: 2.1rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    z-index: 10;
+    transition: transform 0.4s ease;
+    background-color: var(--green);
+    color: var(--yellow);
+    border: none;
+}
+
+.evolution-number::after {
+    content: '';
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 11px;
+    height: 11px;
+    background-color: #ffffff;
+    clip-path: polygon(50% 0%, 63% 37%, 100% 50%, 63% 63%, 50% 100%, 37% 63%, 0% 50%, 37% 37%);
+}
+
+.evolution-item:hover .evolution-number {
+    transform: translate(-50%, -50%) scale(1.08);
+}
+
+.evolution-item-divider {
+    height: 1px;
+    width: 50px;
+    margin: 5px auto;
+}
+
+.evolution-item-title {
+    font-family: var(--font-lato);
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.evolution-item-desc {
+    font-family: var(--font-lato);
+    font-size: 0.94rem;
+    font-weight: 400;
+    line-height: 1.65;
+    margin: 0;
+}
+
+/* Colores Específicos para Sostenibilidad */
+.evolution-item.color-yellow {
+    background-color: var(--yellow);
+    border: none;
+}
+.evolution-item.color-yellow .evolution-item-title {
+    color: var(--blue);
+}
+.evolution-item.color-yellow .evolution-item-divider {
+    border-bottom: 1px solid rgba(37, 68, 120, 0.15);
+}
+.evolution-item.color-yellow .evolution-item-desc {
+    color: rgba(37, 68, 120, 0.9);
+}
+.evolution-item.color-yellow:hover {
+    box-shadow: 0 25px 50px rgba(249, 239, 108, 0.25), 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+.evolution-item.color-blue {
+    background-color: #2f4d7e;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+.evolution-item.color-blue .evolution-item-title {
+    color: #ffffff;
+}
+.evolution-item.color-blue .evolution-item-divider {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+.evolution-item.color-blue .evolution-item-desc {
+    color: rgba(255, 255, 255, 0.85);
+}
+.evolution-item.color-blue:hover {
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.35);
+}
+
+.evolution-item.color-green {
+    background-color: var(--green);
+    border: none;
+}
+.evolution-item.color-green .evolution-item-title {
+    color: #ffffff;
+}
+.evolution-item.color-green .evolution-item-divider {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+.evolution-item.color-green .evolution-item-desc {
+    color: rgba(255, 255, 255, 0.85);
+}
+.evolution-item.color-green:hover {
+    box-shadow: 0 25px 50px rgba(27, 166, 85, 0.25), 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
 
