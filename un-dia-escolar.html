@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="tour-virtual.css">
     <link rel="stylesheet" href="consejeria-internacional.css">
+    <link rel="stylesheet" href="filosofia-y-valores.css">
     <link rel="stylesheet" href="vida-en-el-campus.css">
 </head>
 <body>
@@ -233,28 +234,104 @@
 
         </div><!-- cierre vida-container -->
 
-        <!-- Galería - Infinite Scroll Carousel (igual que el home) -->
-        <section class="galeria-carousel" style="margin-top: 50px; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; width: 100vw;">
-            <div class="carousel-track">
-                    <img src="assets/152.jpg" alt="Entrada con Propósito">
-                    <img src="assets/20241002_144246.jpg" alt="Aulas Vivas">
-                    <img src="assets/espacio-campus-1.jpg" alt="Campus Hontanar">
-                    <img src="assets/espacio-deporte-1.jpg" alt="Deporte y Movimiento">
-                    <img src="assets/153.jpg" alt="Acompañamiento">
-                    <img src="assets/154.jpg" alt="Vida Escolar">
-                    <img src="assets/espacio-aulas-2.jpg" alt="Indagación y Ciencia">
-                    <img src="assets/20241002_144403.jpg" alt="Un día con Propósito">
-                    <!-- Duplicadas para efecto infinito -->
-                    <img src="assets/152.jpg" alt="Entrada con Propósito">
-                    <img src="assets/20241002_144246.jpg" alt="Aulas Vivas">
-                    <img src="assets/espacio-campus-1.jpg" alt="Campus Hontanar">
-                    <img src="assets/espacio-deporte-1.jpg" alt="Deporte y Movimiento">
-                    <img src="assets/153.jpg" alt="Acompañamiento">
-                    <img src="assets/154.jpg" alt="Vida Escolar">
-                    <img src="assets/espacio-aulas-2.jpg" alt="Indagación y Ciencia">
-                    <img src="assets/20241002_144403.jpg" alt="Un día con Propósito">
+        <!-- Galería Acordeón Horizontal (igual que espacios-de-bienestar-y-naturaleza) -->
+        <div class="espacio-gallery-section hontanar-scroll-reveal">
+
+            <div class="espacio-gallery-header">
+                <h4 class="kicker">UN DÍA ESCOLAR</h4>
+                <h2>Galería de nuestra <span>Jornada</span></h2>
             </div>
-        </section>
+
+            <!-- Accordion Row 1 -->
+            <div class="haccordion">
+                <div class="hacc-item active" onclick="toggleHacc(this)">
+                    <img src="assets/152.jpg" alt="Entrada con Propósito">
+                    <div class="hacc-overlay">
+                        <span class="hacc-pill">Inicio de Jornada</span>
+                        <h3>Entrada con Propósito</h3>
+                        <p>Llegada y encuentro con el director de curso para arrancar el día con energía</p>
+                    </div>
+                </div>
+                <div class="hacc-item" onclick="toggleHacc(this)">
+                    <img src="assets/20241002_144246.jpg" alt="Aulas Vivas">
+                    <div class="hacc-overlay">
+                        <span class="hacc-pill">Aulas Activas</span>
+                        <h3>Jornada Activa</h3>
+                        <p>Espacios participativos donde la teoría se conecta con la vida real</p>
+                    </div>
+                </div>
+                <div class="hacc-item" onclick="toggleHacc(this)">
+                    <img src="assets/espacio-campus-1.jpg" alt="Campus Hontanar">
+                    <div class="hacc-overlay">
+                        <span class="hacc-pill">Campus Verde</span>
+                        <h3>Campus Hontanar</h3>
+                        <p>Amplio campus rodeado de naturaleza entre Bogotá y Chía</p>
+                    </div>
+                </div>
+                <div class="hacc-item" onclick="toggleHacc(this)">
+                    <img src="assets/espacio-deporte-1.jpg" alt="Deporte y Movimiento">
+                    <div class="hacc-overlay">
+                        <span class="hacc-pill">Deporte</span>
+                        <h3>Movimiento y Salud</h3>
+                        <p>Canchas y zonas de recreación que forman carácter y bienestar</p>
+                    </div>
+                </div>
+                <div class="hacc-item" onclick="toggleHacc(this)">
+                    <img src="assets/153.jpg" alt="Acompañamiento">
+                    <div class="hacc-overlay">
+                        <span class="hacc-pill">Acompañamiento</span>
+                        <h3>Cercanía y Confianza</h3>
+                        <p>Docentes comprometidos con el desarrollo integral de cada estudiante</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Accordion Row 2 -->
+            <div class="haccordion" style="margin-top: 10px;">
+                <div class="hacc-item active" onclick="toggleHacc(this)">
+                    <img src="assets/154.jpg" alt="Vida Escolar">
+                    <div class="hacc-overlay">
+                        <span class="hacc-pill">Vida Escolar</span>
+                        <h3>Un Día con Propósito</h3>
+                        <p>Cada momento del día aporta al crecimiento académico y personal</p>
+                    </div>
+                </div>
+                <div class="hacc-item" onclick="toggleHacc(this)">
+                    <img src="assets/espacio-aulas-2.jpg" alt="Indagación y Ciencia">
+                    <div class="hacc-overlay">
+                        <span class="hacc-pill">STEM+H</span>
+                        <h3>Indagación y Ciencia</h3>
+                        <p>Laboratorios y proyectos que despiertan la curiosidad científica</p>
+                    </div>
+                </div>
+                <div class="hacc-item" onclick="toggleHacc(this)">
+                    <img src="assets/20241002_144403.jpg" alt="Cierre de Jornada">
+                    <div class="hacc-overlay">
+                        <span class="hacc-pill">3:30 PM</span>
+                        <h3>Cierre de Jornada</h3>
+                        <p>El día termina con aprendizajes que trascienden el aula</p>
+                    </div>
+                </div>
+                <div class="hacc-item" onclick="toggleHacc(this)">
+                    <img src="assets/espacio-campus-1.jpg" alt="Zonas Verdes">
+                    <div class="hacc-overlay">
+                        <span class="hacc-pill">Naturaleza</span>
+                        <h3>Zonas Verdes</h3>
+                        <p>Descansos al aire libre que recargan energía y fomentan la socialización</p>
+                    </div>
+                </div>
+                <div class="hacc-item" onclick="toggleHacc(this)">
+                    <img src="assets/Copia_de_DSC_0186.JPG" alt="Desarrollo Integral">
+                    <div class="hacc-overlay">
+                        <span class="hacc-pill">Integral</span>
+                        <h3>Desarrollo Integral</h3>
+                        <p>Arte, deporte y academia con el mismo valor en nuestra propuesta educativa</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- Fin Galería -->
 
         <div class="vida-container">
 
@@ -344,8 +421,16 @@
         </div>
     </footer>
 
-    <!-- Scroll Reveal Observer Script -->
+    <!-- Scripts -->
     <script>
+        // Horizontal Accordion
+        function toggleHacc(item) {
+            const siblings = item.parentElement.querySelectorAll('.hacc-item');
+            siblings.forEach(s => s.classList.remove('active'));
+            item.classList.add('active');
+        }
+
+        // Scroll Reveal
         document.addEventListener('DOMContentLoaded', () => {
             const revealObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
