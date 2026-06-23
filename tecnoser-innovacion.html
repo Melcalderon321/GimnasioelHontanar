@@ -176,6 +176,15 @@
         @media (max-width: 768px) {
             .innov-bento-grid { grid-template-columns: 1fr; }
         }
+
+        /* Custom overrides to remove arrows and adjust height of the evolution items */
+        .sostenibilidad-grid .evolution-item::before {
+            display: none !important;
+        }
+        .sostenibilidad-grid .evolution-item {
+            min-height: auto !important;
+            padding: 45px 24px 24px 24px !important;
+        }
     </style>
 </head>
 <body>
@@ -385,7 +394,7 @@
         </div><!-- Cierre vida-container para hacer el parallax de ancho completo -->
 
         <!-- Sección 1: Parallax Divider (Pregunta Clave) -->
-        <div class="parallax-divider hontanar-scroll-reveal" style="background-image: url('assets/innov-pregunta-parallax.jpg'); height: auto; padding: 90px 20px; margin-top: 60px; margin-bottom: 60px; border-radius: 0; box-shadow: none;">
+        <div class="parallax-divider hontanar-scroll-reveal" style="background-image: url('assets/innov-pregunta-parallax.jpg'); height: auto; padding: 160px 20px; margin-top: 60px; margin-bottom: 60px; border-radius: 0; box-shadow: none;">
             <div class="parallax-overlay" style="background: linear-gradient(to bottom, #254478 0%, rgba(37, 68, 120, 0.92) 18%, rgba(20, 40, 80, 0.85) 35%, rgba(20, 40, 80, 0.85) 65%, rgba(37, 68, 120, 0.92) 82%, #254478 100%);"></div>
             <div class="parallax-content" style="max-width: 1050px; text-align: center; margin: 0 auto; position: relative; z-index: 2; width: 100%;">
                 
