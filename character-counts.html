@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -222,28 +222,53 @@
 
             </div>
 
-            <!-- Parallax Mid-Page Divider -->
-            <div class="parallax-divider hontanar-scroll-reveal" style="background-image: url('assets/DSC_0762_copia.jpg');">
-                <div class="parallax-overlay"></div>
-                <div class="parallax-content">
-                    <h2>Valores en el Día a Día Escolar</h2>
-                    <p>El carácter se construye mediante elecciones conscientes. En nuestro colegio campestre los valores no se quedan en la teoría: se promueven, se evalúan y se celebran en cada etapa escolar.</p>
-                </div>
+            <!-- Section Title for the Slider -->
+            <div class="vida-header hontanar-scroll-reveal" style="margin-top: 60px; margin-bottom: 30px;">
+                <h2 class="vida-section-title">Valores en el Día a Día Escolar</h2>
             </div>
 
-            <!-- Detail Split -->
-            <div class="split-content-grid hontanar-scroll-reveal">
-                <div>
-                    <h2 class="vida-section-title" style="text-align: left;">Un Lenguaje Común</h2>
-                    <p class="vida-paragraph">
-                        Character Counts genera un <strong>puente y lenguaje común</strong> entre directivos, profesores, estudiantes y familias.
-                    </p>
-                    <p class="vida-paragraph">
-                        A través de dinámicas, reflexiones y reconocimientos públicos, formamos jóvenes <strong>autónomos y responsables</strong> con Sello Hontanar, listos para actuar con criterio ético en Bogotá, Chía y el mundo entero.
-                    </p>
+            <!-- Character Counts Manual Carousel Slider -->
+            <div class="cc-carousel-wrapper hontanar-scroll-reveal" style="margin-bottom: 60px;">
+                <div class="cc-carousel-track" id="cc-carousel">
+                    
+                    <!-- Slide 1: Valores en acción -->
+                    <div class="cc-carousel-slide">
+                        <img src="assets/DSC_0762_copia.jpg" alt="Valores en el día a día">
+                        <div class="cc-carousel-caption">
+                            <span class="cc-slide-tag">Valores</span>
+                            <p>El carácter se construye mediante elecciones conscientes. En nuestro colegio campestre los valores no se quedan en la teoría: se promueven, se evalúan y se celebran en cada etapa escolar.</p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2: Lenguaje común -->
+                    <div class="cc-carousel-slide">
+                        <img src="assets/20241002_145134.jpg" alt="Estudiantes compartiendo">
+                        <div class="cc-carousel-caption">
+                            <span class="cc-slide-tag">Un Lenguaje Común</span>
+                            <p>Character Counts genera un puente y lenguaje común entre directivos, profesores, estudiantes y familias.</p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3: Sello Hontanar -->
+                    <div class="cc-carousel-slide">
+                        <img src="assets/Copia_de_DSC_0113.JPG" alt="Estudiante en actividades">
+                        <div class="cc-carousel-caption">
+                            <span class="cc-slide-tag">Sello Hontanar</span>
+                            <p>A través de dinámicas, reflexiones y reconocimientos públicos, formamos jóvenes autónomos y responsables con Sello Hontanar, listos para actuar con criterio ético en Bogotá, Chía y el mundo entero.</p>
+                        </div>
+                    </div>
+
                 </div>
-                <div class="split-image-wrap">
-                    <img src="assets/20241002_145134.jpg" alt="Estudiantes en campus campestre">
+
+                <!-- Controls -->
+                <div class="cc-carousel-controls">
+                    <button class="cc-carousel-btn prev" id="cc-prev" aria-label="Anterior">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+                    </button>
+                    <div class="cc-carousel-dots" id="cc-dots"></div>
+                    <button class="cc-carousel-btn next" id="cc-next" aria-label="Siguiente">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+                    </button>
                 </div>
             </div>
 
@@ -312,7 +337,7 @@
         </div>
     </footer>
 
-    <!-- Scroll Reveal Observer Script -->
+    <!-- Scroll Reveal Observer & Carousel Script -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const revealObserver = new IntersectionObserver((entries) => {
@@ -326,6 +351,51 @@
 
             const scrollElements = document.querySelectorAll('.hontanar-scroll-reveal');
             scrollElements.forEach(el => revealObserver.observe(el));
+
+            // Carousel slider logic for Character Counts
+            const track = document.getElementById('cc-carousel');
+            const slides = track ? track.querySelectorAll('.cc-carousel-slide') : [];
+            const dotsContainer = document.getElementById('cc-dots');
+            const prevBtn = document.getElementById('cc-prev');
+            const nextBtn = document.getElementById('cc-next');
+            let current = 0;
+            let autoplay;
+
+            if (slides.length > 0 && dotsContainer) {
+                // Build dots
+                slides.forEach((_, i) => {
+                    const dot = document.createElement('button');
+                    dot.className = 'cc-dot' + (i === 0 ? ' active' : '');
+                    dot.setAttribute('aria-label', 'Slide ' + (i + 1));
+                    dot.addEventListener('click', () => { goTo(i); resetAuto(); });
+                    dotsContainer.appendChild(dot);
+                });
+
+                function goTo(idx) {
+                    current = (idx + slides.length) % slides.length;
+                    track.style.transform = `translateX(-${current * 100}%)`;
+                    dotsContainer.querySelectorAll('.cc-dot').forEach((d, i) => d.classList.toggle('active', i === current));
+                }
+
+                function resetAuto() {
+                    clearInterval(autoplay);
+                    autoplay = setInterval(() => goTo(current + 1), 6000);
+                }
+
+                if (prevBtn && nextBtn) {
+                    prevBtn.addEventListener('click', () => { goTo(current - 1); resetAuto(); });
+                    nextBtn.addEventListener('click', () => { goTo(current + 1); resetAuto(); });
+                }
+                resetAuto();
+
+                // Swipe support
+                let startX = 0;
+                track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+                track.addEventListener('touchend', e => {
+                    const diff = startX - e.changedTouches[0].clientX;
+                    if (Math.abs(diff) > 50) { goTo(current + (diff > 0 ? 1 : -1)); resetAuto(); }
+                });
+            }
         });
     </script>
 </body>

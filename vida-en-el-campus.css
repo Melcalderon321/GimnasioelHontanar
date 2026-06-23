@@ -1851,37 +1851,41 @@
 }
 
 /* ==========================================================================
-   BIENESTAR CAROUSEL SECTION
+   CARACTER COUNTS - MANUAL CAROUSEL
    ========================================================================== */
-.bienestar-carousel-wrapper {
+.cc-carousel-section {
+    padding: 60px 0;
+}
+
+.cc-carousel-wrapper {
     max-width: 1100px;
-    margin: 40px auto;
+    margin: 0 auto;
     position: relative;
     border-radius: 24px;
     overflow: hidden;
     box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
 }
 
-.bienestar-carousel-track {
+.cc-carousel-track {
     display: flex;
     transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
     will-change: transform;
 }
 
-.bienestar-carousel-slide {
+.cc-carousel-slide {
     min-width: 100%;
     position: relative;
     flex-shrink: 0;
 }
 
-.bienestar-carousel-slide img {
+.cc-carousel-slide img {
     width: 100%;
     height: 520px;
     object-fit: cover;
     display: block;
 }
 
-.bienestar-carousel-caption {
+.cc-carousel-caption {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -1890,7 +1894,7 @@
     background: linear-gradient(to top, rgba(20, 30, 55, 0.95) 0%, transparent 100%);
 }
 
-.bienestar-slide-tag {
+.cc-slide-tag {
     display: inline-block;
     background-color: var(--yellow);
     color: var(--blue);
@@ -1904,25 +1908,25 @@
     margin-bottom: 12px;
 }
 
-.bienestar-carousel-caption p {
+.cc-carousel-caption p {
     font-family: var(--font-lato);
     font-size: 1.15rem;
     font-weight: 400;
     color: rgba(255, 255, 255, 0.92);
     line-height: 1.6;
-    max-width: 600px;
+    max-width: 700px;
     margin: 0;
 }
 
 /* Controls Overlay */
-.bienestar-carousel-controls {
+.cc-carousel-controls {
     position: absolute;
     inset: 0;
     pointer-events: none;
     z-index: 10;
 }
 
-.bienestar-carousel-btn {
+.cc-carousel-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -1936,73 +1940,77 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.3s ease;
     pointer-events: auto;
 }
 
-.bienestar-carousel-btn.prev {
-    left: 24px;
-}
-
-.bienestar-carousel-btn.next {
-    right: 24px;
-}
-
-.bienestar-carousel-btn:hover {
+.cc-carousel-btn:hover {
     background: var(--yellow);
-    border-color: var(--yellow);
     color: var(--blue);
-    transform: translateY(-50%) scale(1.1);
+    border-color: var(--yellow);
+    transform: translateY(-50%) scale(1.05);
 }
 
-.bienestar-carousel-btn svg {
-    width: 22px;
-    height: 22px;
+.cc-carousel-btn.prev {
+    left: 25px;
 }
 
-.bienestar-carousel-dots {
+.cc-carousel-btn.next {
+    right: 25px;
+}
+
+.cc-carousel-btn svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* Dots Indicator */
+.cc-carousel-dots {
     position: absolute;
-    bottom: 24px;
+    bottom: 25px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     gap: 10px;
-    align-items: center;
+    z-index: 15;
     pointer-events: auto;
 }
 
-.bienestar-dot {
+.cc-dot {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.3);
     border: none;
     cursor: pointer;
     transition: all 0.3s ease;
-    padding: 0;
 }
 
-.bienestar-dot.active {
+.cc-dot.active {
     background: var(--yellow);
     width: 28px;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(249, 239, 108, 0.5);
 }
 
 @media (max-width: 768px) {
-    .bienestar-carousel-slide img {
-        height: 320px;
+    .cc-carousel-slide img {
+        height: 400px;
     }
-    .bienestar-carousel-caption {
-        padding: 25px;
+    .cc-carousel-caption {
+        padding: 30px 25px;
     }
-    .bienestar-carousel-caption p {
+    .cc-carousel-caption p {
         font-size: 1rem;
     }
-    .bienestar-carousel-btn {
-        display: none;
+    .cc-carousel-btn {
+        width: 38px;
+        height: 38px;
+    }
+    .cc-carousel-btn.prev {
+        left: 10px;
+    }
+    .cc-carousel-btn.next {
+        right: 10px;
     }
 }
 
