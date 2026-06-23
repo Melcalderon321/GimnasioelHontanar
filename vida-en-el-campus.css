@@ -1762,6 +1762,39 @@
     color: var(--yellow) !important;
 }
 
+/* Custom styling for Character Counts pillars cards and numbers */
+.pillars-grid .bento-card-color {
+    padding: 30px 25px 35px 25px;
+}
+
+.pillars-grid .bento-card-color .card-num {
+    font-family: var(--font-playfair);
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.pillars-grid .bento-card-color .card-num::after {
+    content: "✦";
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.pillars-grid .bento-card-color h3 {
+    margin-top: 5px;
+    font-size: 1.35rem;
+}
+
+.pillars-grid .bento-card-color h3 span {
+    font-family: var(--font-playfair) !important;
+    font-style: italic !important;
+    opacity: 0.8 !important;
+}
+
 /* Tipografía de las tarjetas */
 .card-num {
     font-family: var(--font-lato);
