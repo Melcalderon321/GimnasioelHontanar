@@ -1350,8 +1350,6 @@
 .pq-bento-highlight-line {
     font-weight: 700;
     display: inline-block;
-    border-bottom: 3px solid var(--blue);
-    padding-bottom: 2px;
     color: var(--blue);
 }
 
@@ -1794,4 +1792,16 @@
 
 .bento-card-color strong {
     color: var(--blue);
+}
+
+/* ==========================================================================
+   CAROUSEL OVERRIDE — un-dia-escolar (8 images instead of the default 4)
+   ========================================================================== */
+.vida-page .galeria-carousel .carousel-track {
+    animation: scroll-8 30s linear infinite;
+}
+
+@keyframes scroll-8 {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(calc(-25vw * 8)); }
 }
