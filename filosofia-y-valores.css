@@ -1125,40 +1125,38 @@
     font-size: 1.15rem;
 }
 
-/* CTA Quote */
-.espacio-cta-quote {
-    background: linear-gradient(135deg, rgba(37,68,120,0.8) 0%, rgba(20,40,80,0.95) 100%);
-    border: 1px solid rgba(249,239,108,0.25);
-    border-radius: 20px;
-    padding: 40px 40px;
-    margin: 20px 0 0 0;
+/* Espacios Highlight Quote (un-contained style matching screenshot) */
+.espacio-highlight-quote {
+    max-width: 820px;
+    margin: 40px auto 0 auto;
     text-align: center;
+    position: relative;
+    padding: 0 20px;
 }
-.espacio-cta-quote p {
+
+.espacio-highlight-quote .quote-icon {
     font-family: var(--font-playfair);
-    font-style: italic;
-    font-size: 1.3rem;
-    color: var(--white);
-    line-height: 1.6;
-    margin-bottom: 24px !important;
+    font-size: 4.5rem;
+    color: var(--yellow);
+    line-height: 1;
+    display: block;
+    margin-bottom: -10px;
+    opacity: 0.8;
 }
-.espacio-cta-quote a {
-    display: inline-block;
-    background: var(--yellow);
-    color: var(--blue);
-    padding: 14px 36px;
-    border-radius: 50px;
+
+.espacio-highlight-quote p {
     font-family: var(--font-lato);
-    font-weight: 900;
-    font-size: 0.9rem;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    text-decoration: none;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    font-size: 1.35rem;
+    font-style: italic;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.95);
+    margin: 0;
 }
-.espacio-cta-quote a:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 30px rgba(249,239,108,0.35);
+
+.espacio-highlight-quote p strong {
+    color: var(--yellow);
+    font-weight: 700;
+    font-style: normal;
 }
 
 /* ==========================================================================
