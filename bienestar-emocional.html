@@ -216,50 +216,32 @@
                 </div>
             </div>
 
-            <!-- Galería estilo filosofía -->
-            <div class="bienestar-carousel-wrapper hontanar-scroll-reveal" style="margin-top: 50px;">
-                <div class="bienestar-carousel-track" id="bienestar-carousel">
-                    <div class="bienestar-carousel-slide">
-                        <img src="assets/filo-carousel-1.jpg" alt="Momento Hontanar 1">
-                        <div class="bienestar-carousel-caption">
-                            <span class="bienestar-slide-tag">Comunidad</span>
-                            <p>Cada día en el Hontanar es una oportunidad de crecer, convivir y descubrir el mundo con otros.</p>
-                        </div>
-                    </div>
-                    <div class="bienestar-carousel-slide">
-                        <img src="assets/filo-carousel-2.jpg" alt="Momento Hontanar 2">
-                        <div class="bienestar-carousel-caption">
-                            <span class="bienestar-slide-tag">Valores</span>
-                            <p>El respeto, la responsabilidad y la empatía son el hilo conductor de nuestra propuesta educativa.</p>
-                        </div>
-                    </div>
-                    <div class="bienestar-carousel-slide">
-                        <img src="assets/filo-carousel-3.jpg" alt="Momento Hontanar 3">
-                        <div class="bienestar-carousel-caption">
-                            <span class="bienestar-slide-tag">Bienestar</span>
-                            <p>Formamos niños y jóvenes felices, seguros de sí mismos y listos para transformar su entorno.</p>
-                        </div>
-                    </div>
-                    <div class="bienestar-carousel-slide">
-                        <img src="assets/filo-bento-1.jpg" alt="Momento Hontanar 4">
-                        <div class="bienestar-carousel-caption">
-                            <span class="bienestar-slide-tag">Campus</span>
-                            <p>Nuestro campus campestre es el escenario ideal para un aprendizaje active, significativo y feliz.</p>
-                        </div>
-                    </div>
-                </div>
+        </div><!-- cierre vida-container -->
 
-                <!-- Controls -->
-                <div class="bienestar-carousel-controls">
-                    <button class="bienestar-carousel-btn prev" id="bienestar-prev" aria-label="Anterior">
-                        <svg viewBox="0 0 24 24" fill="none"><path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
-                    </button>
-                    <div class="bienestar-carousel-dots" id="bienestar-dots"></div>
-                    <button class="bienestar-carousel-btn next" id="bienestar-next" aria-label="Siguiente">
-                        <svg viewBox="0 0 24 24" fill="none"><path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
-                    </button>
-                </div>
+        <!-- Galería - Infinite Scroll Carousel (igual que el home) -->
+        <section class="galeria-carousel" style="margin: 50px 0; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; width: 100vw;">
+            <div class="carousel-track">
+                <img src="assets/152.jpg" alt="Entrada con Propósito">
+                <img src="assets/20241002_144246.jpg" alt="Aulas Vivas">
+                <img src="assets/espacio-campus-1.jpg" alt="Campus Hontanar">
+                <img src="assets/espacio-deporte-1.jpg" alt="Deporte y Movimiento">
+                <img src="assets/153.jpg" alt="Acompañamiento">
+                <img src="assets/154.jpg" alt="Vida Escolar">
+                <img src="assets/espacio-aulas-2.jpg" alt="Indagación y Ciencia">
+                <img src="assets/20241002_144403.jpg" alt="Un día con Propósito">
+                <!-- Duplicadas para efecto infinito -->
+                <img src="assets/152.jpg" alt="Entrada con Propósito">
+                <img src="assets/20241002_144246.jpg" alt="Aulas Vivas">
+                <img src="assets/espacio-campus-1.jpg" alt="Campus Hontanar">
+                <img src="assets/espacio-deporte-1.jpg" alt="Deporte y Movimiento">
+                <img src="assets/153.jpg" alt="Acompañamiento">
+                <img src="assets/154.jpg" alt="Vida Escolar">
+                <img src="assets/espacio-aulas-2.jpg" alt="Indagación y Ciencia">
+                <img src="assets/20241002_144403.jpg" alt="Un día con Propósito">
             </div>
+        </section>
+
+        <div class="vida-container">
 
             <!-- Solid Highlight Section -->
             <div class="split-content-grid hontanar-scroll-reveal" style="margin-top: 50px;">
@@ -342,10 +324,9 @@
         </div>
     </footer>
 
-    <!-- Scroll Reveal & Carousel Scripts -->
+    <!-- Scroll Reveal Observer Script -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Scroll Reveal
             const revealObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -357,51 +338,6 @@
 
             const scrollElements = document.querySelectorAll('.hontanar-scroll-reveal');
             scrollElements.forEach(el => revealObserver.observe(el));
-
-            // Carousel
-            const track = document.getElementById('bienestar-carousel');
-            const slides = track ? track.querySelectorAll('.bienestar-carousel-slide') : [];
-            const dotsContainer = document.getElementById('bienestar-dots');
-            const prevBtn = document.getElementById('bienestar-prev');
-            const nextBtn = document.getElementById('bienestar-next');
-            let current = 0;
-            let autoplay;
-
-            if (slides.length > 0 && dotsContainer) {
-                // Build dots
-                slides.forEach((_, i) => {
-                    const dot = document.createElement('button');
-                    dot.className = 'bienestar-dot' + (i === 0 ? ' active' : '');
-                    dot.setAttribute('aria-label', 'Slide ' + (i + 1));
-                    dot.addEventListener('click', () => { goTo(i); resetAuto(); });
-                    dotsContainer.appendChild(dot);
-                });
-
-                function goTo(idx) {
-                    current = (idx + slides.length) % slides.length;
-                    track.style.transform = `translateX(-${current * 100}%)`;
-                    dotsContainer.querySelectorAll('.bienestar-dot').forEach((d, i) => d.classList.toggle('active', i === current));
-                }
-
-                function resetAuto() {
-                    clearInterval(autoplay);
-                    autoplay = setInterval(() => goTo(current + 1), 5000);
-                }
-
-                if (prevBtn && nextBtn) {
-                    prevBtn.addEventListener('click', () => { goTo(current - 1); resetAuto(); });
-                    nextBtn.addEventListener('click', () => { goTo(current + 1); resetAuto(); });
-                }
-                resetAuto();
-
-                // Swipe support
-                let startX = 0;
-                track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
-                track.addEventListener('touchend', e => {
-                    const diff = startX - e.changedTouches[0].clientX;
-                    if (Math.abs(diff) > 50) { goTo(current + (diff > 0 ? 1 : -1)); resetAuto(); }
-                });
-            }
         });
     </script>
 </body>
