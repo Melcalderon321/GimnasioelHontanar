@@ -1813,7 +1813,7 @@
     position: relative;
     width: 100%;
     margin: 60px 0;
-    padding: 150px 0;
+    padding: 80px 0;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -1827,10 +1827,10 @@
     background: linear-gradient(
         to bottom,
         #254478 0%,
-        rgba(37, 68, 120, 0.92) 15%,
-        rgba(20, 40, 80, 0.85) 30%,
-        rgba(20, 40, 80, 0.85) 70%,
-        rgba(37, 68, 120, 0.92) 85%,
+        rgba(37, 68, 120, 0.92) 18%,
+        rgba(20, 40, 80, 0.85) 35%,
+        rgba(20, 40, 80, 0.85) 65%,
+        rgba(37, 68, 120, 0.92) 82%,
         #254478 100%
     );
     pointer-events: none;
