@@ -333,219 +333,77 @@
 }
 
 /* Base Bento Card Style - UI/UX Ref Style from multilinguismo */
-.bento-card-ref {
-    position: relative;
-    border-radius: 28px;
+/* Modern Card Layout (Same as multilinguismo) */
+.counseling-modern-card {
+    border-radius: 24px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
-    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
-    min-height: 440px;
-    text-align: left;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+    background: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.bento-card-ref:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 22px 50px rgba(0, 0, 0, 0.35);
+.counseling-modern-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.35);
 }
 
-/* Card Header: Title + Circular Arrow */
-.card-header-ref {
-    padding: 28px 24px 18px 24px;
+.counseling-modern-card .card-image-block {
+    height: 200px;
     position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 20px;
+    overflow: hidden;
 }
 
-.card-header-ref h3 {
+.counseling-modern-card .card-image-block img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    object-fit: cover;
+    border: none;
+    box-shadow: none;
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.counseling-modern-card:hover .card-image-block img {
+    transform: scale(1.06);
+}
+
+.counseling-modern-card .card-info-block {
+    padding: 30px 24px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex-grow: 1;
+    background: #ffffff;
+}
+
+.counseling-modern-card .card-info-block h3 {
     font-family: var(--font-lato);
-    font-size: 1.3rem;
+    font-size: 1.25rem;
     font-weight: 700;
+    color: var(--blue);
     margin: 0;
     line-height: 1.3;
 }
 
-/* Arrow circle badge */
-.arrow-circle-ref {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    transition: transform 0.4s ease, background-color 0.4s ease;
-}
-
-.arrow-char {
-    font-size: 1.1rem;
-    font-weight: bold;
-    line-height: 1;
-    transition: transform 0.4s ease;
-}
-
-/* Hover rotation and displacement of the arrow */
-.bento-card-ref:hover .arrow-circle-ref {
-    transform: rotate(45deg);
-}
-
-.bento-card-ref:hover .arrow-char {
-    transform: translate(1px, -1px);
-}
-
-/* Horizontal Thin divider line */
-.card-divider-ref {
-    height: 1px;
-    margin: 0 24px;
-}
-
-/* Card Body padding and structures */
-.card-body-ref {
-    padding: 18px 24px 28px 24px;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.card-body-ref p {
+.counseling-modern-card .card-info-block p {
     font-family: var(--font-lato);
-    font-size: 0.95rem;
+    font-size: 0.92rem;
     line-height: 1.6;
-    margin: 0 0 18px 0;
-}
-
-.card-body-ref p strong {
-    font-weight: 700;
-}
-
-/* Bottom rounded image wrapper */
-.card-img-wrapper {
-    width: 100%;
-    height: 140px;
-    border-radius: 16px;
-    overflow: hidden;
-    position: relative;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-    margin-top: auto;
-}
-
-.card-img-bottom {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-/* Hover effect on bottom image */
-.bento-card-ref:hover .card-img-bottom {
-    transform: scale(1.08);
-}
-
-
-/* ---- CARD STYLE VARIANTS ---- */
-
-/* 1. Card Dark (Glass Dark translúcido) */
-.agreements-grid .card-dark {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.09) 0%, rgba(255, 255, 255, 0.02) 100%);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-.agreements-grid .card-dark h3 {
-    color: var(--white);
-}
-
-.agreements-grid .card-dark .arrow-circle-ref.yellow-circle {
-    background-color: var(--yellow);
-    color: var(--blue);
-}
-
-.agreements-grid .card-dark .card-divider-ref {
-    background-color: rgba(255, 255, 255, 0.12);
-}
-
-.agreements-grid .card-dark p {
-    color: rgba(255, 255, 255, 0.85);
-    font-weight: 300;
-}
-
-.agreements-grid .card-dark p strong {
-    color: var(--yellow);
-}
-
-.agreements-grid .card-dark:hover {
-    border-color: var(--yellow);
-    box-shadow: 0 20px 45px rgba(249, 239, 108, 0.15);
-}
-
-/* 2. Card Yellow (Yellow Translúcido premium) */
-.agreements-grid .card-yellow {
-    background: rgba(249, 239, 108, 0.92);
-    border: 1px solid rgba(255, 255, 255, 0.35);
-}
-
-.agreements-grid .card-yellow h3 {
-    color: var(--blue);
-}
-
-.agreements-grid .card-yellow .arrow-circle-ref.blue-circle {
-    background-color: var(--blue);
-    color: var(--yellow);
-}
-
-.agreements-grid .card-yellow .card-divider-ref {
-    background-color: rgba(37, 68, 120, 0.15);
-}
-
-.agreements-grid .card-yellow p {
-    color: var(--blue);
+    color: rgba(37, 68, 120, 0.85);
+    margin: 0;
     font-weight: 400;
 }
 
-.agreements-grid .card-yellow p strong {
-    color: var(--blue);
-}
-
-.agreements-grid .card-yellow:hover {
-    background: rgba(249, 239, 108, 1);
-    box-shadow: 0 20px 45px rgba(249, 239, 108, 0.25);
-}
-
-/* 3. Card Light (White / Brand Blue texts and divider) */
-.agreements-grid .card-light {
-    background: #ffffff;
-    border: 1px solid rgba(0, 0, 0, 0.08);
-}
-
-.agreements-grid .card-light h3 {
-    color: var(--blue);
-}
-
-.agreements-grid .card-light .card-divider-ref {
-    background-color: var(--blue);
-    opacity: 0.15;
-}
-
-.agreements-grid .card-light p {
-    color: var(--blue);
-    font-weight: 400;
-}
-
-.agreements-grid .card-light p strong {
+.counseling-modern-card .card-info-block p strong {
     color: var(--blue);
     font-weight: 700;
-}
-
-.agreements-grid .card-light:hover {
-    background: #ffffff;
-    border-color: var(--blue);
-    box-shadow: 0 20px 45px rgba(27, 166, 85, 0.15);
 }
 
 
@@ -842,121 +700,7 @@
     border-color: #ffffff;
 }
 
-/* 2. Solid Yellow Card */
-.card-solid-yellow {
-    background: rgba(249, 239, 108, 0.95);
-    padding: 32px 24px;
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
 
-.card-solid-yellow:hover {
-    background: rgba(249, 239, 108, 1);
-}
-
-.card-solid-yellow h3 {
-    font-family: var(--font-lato);
-    font-size: 1.25rem;
-    font-weight: 800;
-    color: var(--blue);
-    margin: 0 0 12px 0;
-    line-height: 1.35;
-}
-
-.card-solid-yellow p {
-    font-family: var(--font-lato);
-    font-size: 0.92rem;
-    line-height: 1.6;
-    color: var(--blue);
-    margin: 0 0 25px 0;
-    font-weight: 400;
-}
-
-.card-solid-yellow p strong {
-    font-weight: 800;
-}
-
-.btn-card-action-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 9px 18px;
-    border-radius: 20px;
-    border: 1.5px solid var(--blue);
-    color: var(--blue);
-    font-family: var(--font-lato);
-    font-size: 0.8rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    align-self: flex-start;
-    transition: all 0.3s ease;
-    text-decoration: none;
-    margin-top: auto;
-}
-
-.btn-card-action-link:hover {
-    background-color: var(--blue);
-    color: var(--yellow);
-    box-shadow: 0 8px 18px rgba(37, 68, 120, 0.2);
-}
-
-/* 3. White Translucent Glass Card */
-.card-white-glass {
-    background: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    padding: 32px 24px;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-
-.card-white-glass:hover {
-    background: rgba(255, 255, 255, 0.14);
-    border-color: rgba(255, 255, 255, 0.28);
-}
-
-.card-white-glass h3 {
-    font-family: var(--font-lato);
-    font-size: 1.25rem;
-    font-weight: 800;
-    color: var(--white);
-    margin: 0 0 12px 0;
-    line-height: 1.35;
-}
-
-.card-white-glass p {
-    font-family: var(--font-lato);
-    font-size: 0.92rem;
-    line-height: 1.65;
-    color: rgba(255, 255, 255, 0.85);
-    font-weight: 300;
-    margin: 0 0 25px 0;
-}
-
-.card-white-glass p strong {
-    font-weight: 700;
-    color: var(--yellow);
-}
-
-.card-white-glass .arrow-circle-mini.bg-blue {
-    background: var(--yellow);
-    color: var(--blue);
-    margin-top: auto;
-    align-self: flex-start;
-}
-
-.card-white-glass:hover .arrow-circle-mini.bg-blue {
-    background: #ffffff;
-    color: var(--blue);
-    box-shadow: 0 5px 12px rgba(255, 255, 255, 0.2);
-}
 
 /* Bento Footer */
 .bento-system-footer {
