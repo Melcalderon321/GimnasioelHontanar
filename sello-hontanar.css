@@ -22,6 +22,16 @@
     background-attachment: fixed;
 }
 
+.sello-hontanar-section {
+    padding: 45px 20px 100px 20px;
+    position: relative;
+    max-width: 100%;
+    margin: 0;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
 /* Overlay: difuminado hacia arriba y hacia abajo, foto visible en el centro */
 .sello-section-overlay {
     position: absolute;
@@ -49,15 +59,25 @@
     margin-bottom: 15px;
 }
 
+/* Divisor decorativo para el header */
+.sello-header-divider {
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--yellow), transparent);
+    margin: 20px auto 0 auto;
+    border-radius: 2px;
+    opacity: 0.8;
+}
+
 .sello-subtitle {
     font-family: var(--font-lato);
-    font-size: 2.2rem;
+    font-size: 2.1rem;
     font-weight: 700;
     color: var(--white);
     text-align: center;
     max-width: 800px;
     margin: 0 auto 15px auto;
-    line-height: 1.3;
+    line-height: 1.25;
 }
 
 .sello-subtitle span {
@@ -348,6 +368,6 @@
     }
 
     .sello-subtitle {
-        font-size: 1.7rem;
+        font-size: 1.3rem;
     }
 }

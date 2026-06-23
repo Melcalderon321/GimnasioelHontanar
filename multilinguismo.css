@@ -1138,25 +1138,53 @@
     color: #ffffff;
 }
 
+.multi-parallax-logo-wrapper {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.multi-cambridge-logo {
+    max-width: 200px;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.25));
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.multi-cambridge-logo:hover {
+    transform: scale(1.06);
+}
+
 .multi-parallax-badges {
     display: flex;
     justify-content: center;
-    gap: 18px;
+    gap: 20px;
     flex-wrap: wrap;
 }
 
 .multi-parallax-badge {
-    background: rgba(249, 239, 108, 0.15);
-    border: 1px solid rgba(249, 239, 108, 0.5);
+    background: rgba(249, 239, 108, 0.2);
+    border: 1.5px solid rgba(249, 239, 108, 0.6);
     color: var(--yellow);
     font-family: var(--font-lato);
-    font-size: 0.92rem;
-    font-weight: 600;
-    letter-spacing: 0.04em;
-    padding: 10px 24px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    padding: 12px 30px;
     border-radius: 30px;
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(249, 239, 108, 0.12);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    cursor: default;
+}
+
+.multi-parallax-badge:hover {
+    background: rgba(249, 239, 108, 0.3);
+    border-color: rgba(249, 239, 108, 0.85);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(249, 239, 108, 0.35);
 }
 
 @media (max-width: 768px) {
@@ -1167,5 +1195,14 @@
     .multi-parallax-lead,
     .multi-parallax-body {
         font-size: 1.02rem;
+    }
+
+    .multi-cambridge-logo {
+        max-width: 150px;
+    }
+
+    .multi-parallax-badge {
+        font-size: 0.9rem;
+        padding: 10px 22px;
     }
 }
