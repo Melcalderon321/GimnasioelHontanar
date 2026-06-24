@@ -140,16 +140,16 @@
             if(overlay) overlay.addEventListener('click', toggleMenu);
 
             // Collapsible submenus
-            const submenus = document.querySelectorAll('.has-submenu .menu-item');
+                        const submenus = document.querySelectorAll('.has-submenu .menu-item');
             submenus.forEach(item => {
                 item.addEventListener('click', (e) => {
-                    if (e.target.tagName !== 'A') {
-                        e.preventDefault();
-                        item.parentElement.classList.toggle('expanded');
-                        const submenuList = item.parentElement.querySelector('.submenu');
-                        if(submenuList) {
-                            submenuList.style.display = submenuList.style.display === 'block' ? 'none' : 'block';
-                        }
+                    e.preventDefault();
+                    const parent = item.parentElement;
+                    parent.classList.toggle('expanded');
+                    const submenuList = parent.querySelector('.submenu');
+                    if (submenuList) {
+                        const isExpanded = parent.classList.contains('expanded');
+                        submenuList.style.display = isExpanded ? 'block' : 'none';
                     }
                 });
             });
