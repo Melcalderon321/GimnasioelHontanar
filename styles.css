@@ -68,6 +68,7 @@ a {
     font-family: var(--font-playfair);
     color: var(--yellow);
     font-style: italic;
+    font-weight: 400;
 }
 
 .section-subheading {
@@ -89,6 +90,7 @@ a {
 .curve-bottom { bottom: -1px; }
 .curve-top { top: -1px; }
 .curve-bottom svg, .curve-top svg { width: 100%; height: 120px; }
+.curve-bottom.curve-light { z-index: 8; }
 
 /* Navbar */
 .navbar {
@@ -205,29 +207,31 @@ a {
     z-index: 3;
     max-width: 800px;
     padding: 0 20px;
-    margin-top: 80px;
+    margin-top: 140px;
 }
 
 .hero-logo-small {
     height: 70px;
+    margin-top: 40px;
     margin-bottom: 20px;
     filter: brightness(0) invert(1);
 }
 
 .hero h1 {
     font-family: var(--font-playfair);
-    font-size: 3.5rem;
-    font-weight: 600;
+    font-size: 4rem;
+    font-weight: 400;
     font-style: italic;
     line-height: 1.1;
+    margin: 0 0 -15px 0;
 }
 
 .hero h2 {
     font-family: var(--font-playfair);
     font-size: 4rem;
-    font-weight: 600;
+    font-weight: 400;
     font-style: italic;
-    margin-bottom: 5px;
+    margin: 0 0 5px 0;
 }
 
 .happily-text {
@@ -396,7 +400,7 @@ a {
 
 .maestra-img {
     position: absolute;
-    bottom: -25px;
+    bottom: -70px;
     left: 50%;
     transform: translateX(-50%);
     height: 100%;
@@ -525,7 +529,7 @@ a {
 .titles h2 {
     font-family: var(--font-playfair);
     font-style: italic;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 2.2rem;
     color: var(--blue);
     margin-bottom: 0px;
@@ -586,13 +590,12 @@ a {
     position: relative;
     z-index: 6;
     overflow: visible;
-    padding-bottom: 160px;
+    padding-bottom: 110px;
 }
 
 .portrait-card {
     position: relative;
     overflow: visible;
-    border-radius: 120px;
     cursor: pointer;
     transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
@@ -600,11 +603,8 @@ a {
 /* Clip only the image inside the pill shape */
 .portrait-card > img {
     width: 100%;
-    height: 480px;
+    height: auto;
     display: block;
-    border-radius: 120px;
-    object-fit: cover;
-    object-position: top center;
     transition: transform 0.4s ease;
 }
 
@@ -1666,7 +1666,7 @@ a {
     background-color: var(--yellow);
     color: var(--blue);
     font-family: var(--font-playfair);
-    font-weight: 700;
+    font-weight: 400;
     font-style: italic;
     padding: 2px 18px;
     border-radius: 50px;
@@ -2108,4 +2108,40 @@ a {
         top: 20px;
         right: 20px;
     }
+}
+
+/* Force all Playfair Display italic text instances to be font-weight 400 (regular) across the entire site */
+em, i, .italic, 
+.section-heading span,
+.hero h1,
+.hero h2,
+.hero h3,
+.happily-text,
+.titles h2,
+.portrait-tagline,
+.testimonio-text p,
+.footer-logo-col p,
+.yellow-pill,
+.cifras-highlight,
+.descubra-subtitle,
+.cta-box h2 span,
+.pq-glass-box h3,
+.pq-accordion-header h3,
+.pq-timeline-step h4,
+.pq-hero-lead-centered,
+.pq-card-title-yellow span,
+.pillar-bento-heading span,
+.mini-card-content h3,
+.ib-profile-quote p,
+.highlight-yellow-italic,
+.ib-university-quote .quote-italic-highlight,
+.cta-message,
+.sello-subtitle span,
+.subtitle,
+.vida-section-title,
+.parallax-content h2,
+.bento-card .card-title span,
+.pillars-grid .bento-card-color h3 span,
+[style*="playfair"][style*="italic"] {
+    font-weight: 400 !important;
 }
