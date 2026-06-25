@@ -179,7 +179,7 @@ a {
 .hero {
     position: relative;
     height: 100vh;
-    min-height: 800px;
+    min-height: 650px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -207,12 +207,12 @@ a {
     z-index: 3;
     max-width: 800px;
     padding: 0 20px;
-    margin-top: 140px;
+    margin-top: 60px;
 }
 
 .hero-logo-small {
     height: 70px;
-    margin-top: 40px;
+    margin-top: 10px;
     margin-bottom: 20px;
     filter: brightness(0) invert(1);
 }
@@ -309,6 +309,28 @@ a {
 .hero-logos img {
     height: 80px;
     opacity: 0.8;
+}
+
+@media (max-height: 800px) {
+    .hero-content {
+        margin-top: 55px;
+    }
+    .hero-logo-small {
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+    .hero h1, .hero h2 {
+        font-size: 3.5rem;
+    }
+    .hero p {
+        margin-bottom: 15px;
+    }
+    .hero-logos {
+        margin-top: 15px;
+    }
+    .hero-logos img {
+        height: 50px;
+    }
 }
 
 .social-floating {
