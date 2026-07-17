@@ -1435,47 +1435,56 @@
 }
 
 .filo-pilar-card {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.52) 0%, rgba(255, 255, 255, 0.35) 100%);
-    border: 1px solid rgba(255, 255, 255, 0.65);
-    border-radius: 20px;
-    padding: 45px 30px;
-    text-align: center;
-    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    background: rgba(20, 35, 60, 0.75);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 6px;
+    padding: 35px 30px;
+    text-align: left;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 8px 28px rgba(0, 0, 0, 0.18);
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    min-height: 220px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    min-height: 250px;
 }
 
 .filo-pilar-card:hover {
-    transform: translateY(-7px);
-    border-color: rgba(249, 239, 108, 0.7);
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.70) 0%, rgba(255, 255, 255, 0.50) 100%);
-    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
+    transform: translateY(-3px);
+    background: rgba(20, 35, 60, 0.85);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.28);
+}
+
+.filo-card-icon {
+    width: 32px;
+    height: 32px;
+    color: var(--yellow); /* Yellow icon */
+    margin-bottom: 20px;
+    stroke-width: 1.35 !important;
 }
 
 .filo-pilar-card h3 {
     font-family: var(--font-lato);
-    font-size: 1.35rem;
+    font-size: 1.25rem;
     font-weight: 700;
-    color: var(--blue);
-    margin-bottom: 15px;
+    color: #ffffff;
+    margin-bottom: 12px;
 }
 
 .filo-pilar-card h3 span {
-    color: var(--blue);
     font-family: var(--font-playfair);
     font-style: italic;
+    color: var(--yellow);
+    font-weight: 700;
 }
 
 .filo-pilar-card p {
     font-family: var(--font-lato);
-    font-size: 0.95rem;
-    line-height: 1.7;
-    color: rgba(37, 68, 120, 0.82);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.88);
     font-weight: 400;
     margin: 0;
 }
@@ -1483,7 +1492,7 @@
 /* ---- SECTION 3: GALERÍA ESTILO HOME ---- */
 .filo-gallery-section {
     padding: 80px 0;
-    background: linear-gradient(180deg, var(--blue) 0%, #1c3460 100%);
+    background: #ffffff;
     overflow: hidden;
 }
 
@@ -1491,6 +1500,29 @@
     text-align: center;
     margin-bottom: 50px;
     padding: 0 20px;
+}
+
+.filo-gallery-header .kicker {
+    font-family: var(--font-lato);
+    color: var(--green);
+    font-size: 0.85rem;
+    font-weight: 900;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 5px 16px;
+    background-color: rgba(37, 120, 78, 0.05);
+    border: 1px solid rgba(37, 120, 78, 0.3);
+    border-radius: 8px;
+}
+
+.filo-gallery-header .filo-section-title {
+    color: var(--blue);
+}
+
+.filo-gallery-header .filo-section-title span {
+    color: var(--green);
 }
 
 .filo-galeria-carousel {
@@ -1516,7 +1548,7 @@
     object-fit: cover;
     cursor: pointer;
     transition: filter 0.3s ease, transform 0.3s ease;
-    border-radius: 16px;
+    border-radius: 0;
     margin: 0 10px;
 }
 
@@ -1684,75 +1716,87 @@
     box-shadow: 0 0 10px rgba(249, 239, 108, 0.5);
 }
 
-/* ---- SECTION 5: TESTIMONIO + CTA ---- */
+/* ---- SECTION 5: TESTIMONIO EN PANEL SPLIT ---- */
 .filo-testimonial-section {
-    padding: 80px 20px 100px;
-    background: linear-gradient(180deg, #1c3460 0%, var(--blue) 100%);
+    padding: 100px 20px;
+    background-color: #ffffff;
 }
 
-.filo-testimonial-inner {
-    max-width: 780px;
-    margin: 0 auto;
-    text-align: center;
+.filo-testimonial-split {
     position: relative;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: 28px;
-    padding: 70px 60px;
-    backdrop-filter: blur(16px);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    min-height: 420px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(37, 68, 120, 0.08);
 }
 
-.filo-sparkle {
+.testimonial-split-shield {
     position: absolute;
-    width: 28px;
-    height: 28px;
-    opacity: 0.8;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+    z-index: 10;
+    pointer-events: none;
 }
 
-.filo-sparkle-tl { top: 30px; left: 30px; }
-.filo-sparkle-br { bottom: 30px; right: 30px; }
+.testimonial-split-left {
+    background-color: var(--blue);
+    padding: 70px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+}
 
-.filo-testimonial-kicker {
+.testimonial-split-kicker {
     font-family: var(--font-lato);
-    font-size: 0.78rem;
-    font-weight: 700;
-    letter-spacing: 3px;
-    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.72rem;
+    font-weight: 900;
+    letter-spacing: 2.5px;
+    color: rgba(255, 255, 255, 0.6);
     text-transform: uppercase;
-    margin-bottom: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    padding-bottom: 12px;
+    width: fit-content;
 }
 
-.filo-testimonial-quote {
+.testimonial-split-quote {
     font-family: var(--font-playfair);
-    font-size: 1.2rem;
     font-style: italic;
-    line-height: 1.8;
-    color: rgba(255, 255, 255, 0.9);
-    margin: 0 0 20px;
+    font-size: 1.45rem;
+    line-height: 1.5;
+    color: var(--white);
+    margin: 0;
+    font-weight: 400;
     border: none;
     padding: 0;
 }
 
-.filo-testimonial-author {
+.testimonial-split-author {
     font-family: var(--font-lato);
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     font-weight: 700;
     color: var(--yellow);
-    letter-spacing: 1px;
-    margin-bottom: 40px;
+    letter-spacing: 0.5px;
 }
 
-.filo-testimonial-author span {
+.testimonial-split-author span {
     font-weight: 400;
-    color: rgba(255, 255, 255, 0.55);
+    color: rgba(255, 255, 255, 0.7);
+    font-style: italic;
 }
 
-.filo-testimonial-divider {
-    width: 50px;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, var(--yellow), transparent);
-    margin: 0 auto 40px;
-    border-radius: 2px;
+.testimonial-split-photo {
+    background-size: cover;
+    background-position: center;
+    min-height: 420px;
 }
 
 .filo-cta-heading {
@@ -1826,4 +1870,346 @@
     .filo-cta-heading { font-size: 1.4rem; }
     .filo-cta-btns { flex-direction: column; gap: 15px; }
     .filo-carousel-btn { display: none; }
+}
+
+/* ==========================================================================
+   WAVY IMAGE-TEXT SPLIT CARDS (Filosofía y Valores)
+   ========================================================================== */
+.filo-wavy-cards-section {
+    padding: 60px 0 100px 0;
+    background-color: #ffffff;
+}
+
+.filo-wavy-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.filo-wavy-card {
+    display: grid;
+    background-color: #ffffff;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(37, 68, 120, 0.08);
+    border-radius: 0;
+    overflow: hidden;
+    min-height: 480px;
+}
+
+.filo-wavy-card.text-left {
+    grid-template-columns: 1.15fr 0.85fr;
+}
+
+.filo-wavy-card.text-right {
+    grid-template-columns: 0.85fr 1.15fr;
+}
+
+.wavy-card-text-col {
+    padding: 60px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.wavy-card-kicker {
+    font-family: var(--font-lato);
+    font-size: 0.72rem;
+    font-weight: 900;
+    color: var(--green);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.wavy-card-title {
+    font-family: var(--font-lato);
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--blue);
+    line-height: 1.1;
+    margin: 0;
+}
+
+.wavy-card-title span {
+    font-family: var(--font-playfair);
+    font-style: italic;
+    font-weight: 700;
+    color: var(--green);
+}
+
+.wavy-card-paragraph {
+    font-family: var(--font-lato);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #4a5568;
+    margin: 0;
+}
+
+.wavy-card-paragraph strong {
+    color: var(--blue);
+}
+
+.wavy-card-paragraph-highlight {
+    font-family: var(--font-lato);
+    font-size: 0.98rem;
+    font-weight: 700;
+    line-height: 1.6;
+    color: var(--blue);
+    margin: 0;
+}
+
+.wavy-card-btn-wrap {
+    margin-top: 10px;
+}
+
+.wavy-card-btn-wrap .btn-nav {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 24px;
+    background-color: var(--yellow);
+    color: var(--blue);
+    font-family: var(--font-lato);
+    font-weight: 700;
+    font-size: 0.85rem;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.wavy-card-btn-wrap .btn-nav:hover {
+    background-color: var(--green);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+.wavy-card-btn-wrap .btn-nav .arrow {
+    font-size: 0.9rem;
+    font-weight: 700;
+    transition: transform 0.3s ease;
+}
+
+.wavy-card-btn-wrap .btn-nav:hover .arrow {
+    transform: translateX(4px);
+}
+
+/* Wavy image column */
+.wavy-card-img-col {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+.wavy-edge-svg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 70px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.wavy-edge-svg.wave-right-side {
+    left: -1px;
+}
+
+.wavy-edge-svg.wave-left-side {
+    right: -1px;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .filo-wavy-card.text-left,
+    .filo-wavy-card.text-right {
+        grid-template-columns: 1fr;
+    }
+    
+    .wavy-card-img-col {
+        min-height: 280px;
+    }
+    
+    .wavy-edge-svg {
+        display: none;
+    }
+    
+    .wavy-card-text-col {
+        padding: 40px 30px;
+    }
+}
+
+/* Wavy Section Background Circles */
+.filo-wavy-cards-section .bg-circles-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.filo-wavy-cards-section .bg-circle {
+    position: absolute;
+}
+
+.circle-wavy-1 {
+    top: 10%;
+    left: 4%;
+    width: 130px;
+    height: 130px;
+    opacity: 0.10;
+}
+
+.circle-wavy-2 {
+    top: 50%;
+    right: 3%;
+    width: 90px;
+    height: 90px;
+    opacity: 0.08;
+}
+
+.circle-wavy-3 {
+    bottom: 12%;
+    left: 8%;
+    width: 160px;
+    height: 160px;
+    opacity: 0.08;
+}
+
+/* ==========================================================================
+   SPLIT MOMENTOS SECTION (Match the design from Nuestra Historia)
+   ========================================================================== */
+.filo-split-momentos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    max-width: 100%;
+    margin: 80px 0 80px 0;
+    padding: 0;
+    align-items: stretch;
+    background-color: #ffffff;
+}
+
+.filo-split-left {
+    background-color: #ffffff;
+    padding: 80px 60px 80px calc((100vw - 1140px) / 2 + 20px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.filo-split-title {
+    font-family: var(--font-lato);
+    font-size: 2.6rem;
+    font-weight: 800;
+    color: var(--blue);
+    line-height: 1.05;
+    margin: 0 0 40px 0;
+}
+
+.filo-split-title span {
+    font-family: var(--font-playfair);
+    font-style: italic;
+    font-weight: 700;
+    color: var(--green);
+}
+
+.filo-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.filo-acc-item {
+    border-bottom: 1px solid rgba(37, 68, 120, 0.12);
+    padding-bottom: 16px;
+    transition: all 0.3s ease;
+}
+
+.filo-acc-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 8px 0;
+}
+
+.filo-acc-header h3 {
+    font-family: var(--font-lato);
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--blue);
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.filo-acc-item.active {
+    border-color: var(--green);
+}
+
+.filo-acc-item.active .filo-acc-header h3 {
+    color: var(--green);
+}
+
+.filo-acc-item.active .acc-icon {
+    color: var(--green);
+}
+
+.filo-acc-content {
+    display: none;
+    padding: 12px 0 4px 0;
+    animation: accSlideUp 0.4s ease;
+}
+
+.filo-acc-content p {
+    font-family: var(--font-lato);
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: #4a5568;
+    margin: 0;
+}
+
+.filo-acc-content p strong {
+    color: var(--blue);
+}
+
+.filo-split-right {
+    position: relative;
+    background-size: cover;
+    background-position: center top;
+    min-height: 600px;
+}
+
+.filo-corner-shape {
+    position: absolute;
+    top: -12px;
+    right: -35px;
+    width: 175px;
+    height: auto;
+    z-index: 10;
+    pointer-events: none;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .filo-split-momentos {
+        grid-template-columns: 1fr;
+    }
+    .filo-split-left {
+        padding: 60px 20px;
+    }
+    .filo-split-right {
+        min-height: 380px;
+    }
+    .filo-corner-shape {
+        width: 120px;
+        top: -8px;
+        right: -25px;
+    }
 }

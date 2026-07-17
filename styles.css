@@ -117,7 +117,10 @@ a {
 }
 
 .logo img {
-    height: 50px;
+    height: 62px;
+    margin-top: -6px;
+    margin-bottom: -6px;
+    display: block;
 }
 
 .nav-right {
@@ -153,7 +156,7 @@ a {
 .hamburger span {
     width: 20px;
     height: 2px;
-    background-color: var(--white);
+    background-color: var(--blue);
 }
 
 .btn-nav, .btn-hero {

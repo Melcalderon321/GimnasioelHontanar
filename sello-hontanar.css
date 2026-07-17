@@ -6,7 +6,7 @@
 .sello-page-container {
     padding-top: 150px;
     padding-bottom: 0;
-    background-color: var(--blue);
+    background-color: #ffffff;
 }
 
 /* ==========================================================================
@@ -104,257 +104,150 @@
     margin: 0;
 }
 
-/* ---- Diagram Wrapper ---- */
-.sello-diagram-container {
+/* ==========================================================================
+   3-COLUMN PREMIUM PHOTO GRID (REPLACES ORBIT DIAGRAM)
+   ========================================================================== */
+.sello-pillars-section {
+    background-color: #ffffff;
+}
+
+.sello-pillars-container {
     position: relative;
-    max-width: 1100px;
-    height: 580px;
-    margin: 15px auto 0 auto;
+    max-width: 1140px;
+    margin: 0 auto;
+    overflow: visible; /* to allow zig-zag decorator to overflow */
 }
 
-/* Central child circle with orbit lines */
-.sello-center-orbit {
+/* Blue zig-zag decorator on top right */
+.sello-grid-decor {
     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 320px;
-    height: 320px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 2;
-}
-
-.sello-center-child {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 4px solid rgba(255, 255, 255, 0.15);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
-    z-index: 3;
-    background-color: var(--blue);
-}
-
-.sello-center-child img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Outer orbit lines */
-.sello-orbit-line {
-    position: absolute;
-    border-radius: 50%;
+    top: -15px;
+    right: -35px;
+    width: 175px;
+    height: auto;
+    z-index: 10;
     pointer-events: none;
 }
 
-.sello-orbit-line.line-1 {
-    width: 250px;
-    height: 250px;
-    border: 2px solid rgba(249, 239, 108, 0.25);
-    animation: rotateOrbit 20s linear infinite;
+.sello-pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    gap: 0;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    border-radius: 0; /* flat edges as in the screenshot */
+    overflow: hidden;
 }
 
-.sello-orbit-line.line-2 {
-    width: 310px;
-    height: 310px;
-    border: 1px dashed rgba(255, 255, 255, 0.25);
-    animation: rotateOrbitBack 25s linear infinite;
+.sello-pillar-card {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+    cursor: pointer;
 }
 
-@keyframes rotateOrbit {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
-
-@keyframes rotateOrbitBack {
-    from { transform: rotate(360deg); }
-    to { transform: rotate(0deg); }
-}
-
-/* ---- Diagram Cards ---- */
-.sello-diagram-card {
+.sello-pillar-bg {
     position: absolute;
-    width: 270px;
-    height: 160px;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.06) 100%);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.22);
-    border-radius: 18px;
-    padding: 22px 20px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    z-index: 4;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 0;
+}
+
+.sello-pillar-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(16, 28, 48, 0.9) 0%,
+        rgba(16, 28, 48, 0.55) 25%,
+        rgba(16, 28, 48, 0) 65%
+    );
+    z-index: 1;
+    transition: background 0.4s ease;
+}
+
+.sello-pillar-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 40px;
+    z-index: 2;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-end;
 }
 
-.sello-diagram-card:hover {
-    transform: translateY(-5px) scale(1.02);
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.1) 100%);
-    border-color: var(--yellow);
-    box-shadow: 0 20px 45px rgba(249, 239, 108, 0.2);
-}
-
-.sello-diagram-card h3 {
+.sello-pillar-title {
     font-family: var(--font-lato);
-    font-size: 1.15rem;
-    font-weight: 700;
+    font-size: 1.45rem;
+    font-weight: 800;
     color: var(--white);
-    margin-bottom: 8px;
-    text-align: center;
-}
-
-.sello-diagram-card p {
-    font-family: var(--font-lato);
-    font-size: 0.88rem;
-    line-height: 1.5;
-    color: rgba(255, 255, 255, 0.88);
-    font-weight: 400;
-    text-align: center;
+    line-height: 1.25;
     margin: 0;
 }
 
-/* Card positioning on Desktop */
-.card-top-left {
-    left: 8%;
-    top: 8%;
+.sello-pillar-title span {
+    font-family: var(--font-playfair);
+    font-style: italic;
+    color: var(--yellow);
+    font-weight: 400;
 }
 
-.card-bottom-left {
-    left: 8%;
-    top: 58%;
-}
-
-.card-right-center {
-    right: 8%;
-    top: 33%;
-}
-
-/* Arrows (absolute placement) */
-.sello-arrow {
-    position: absolute;
-    width: 70px;
-    height: auto;
-    pointer-events: none;
-    z-index: 1;
-    opacity: 0.85;
-}
-
-.sello-arrow.arrow-left {
-    left: 20%;
-    top: 36%;
-}
-
-.sello-arrow.arrow-right {
-    right: 32%;
-    top: 18%;
-}
-
-/* ==========================================================================
-   SCROLL REVEAL ANIMATION
-   ========================================================================== */
-.hontanar-scroll-reveal {
+.sello-pillar-desc {
+    font-family: var(--font-lato);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+    max-height: 0;
     opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.hontanar-scroll-reveal.visible {
+/* Hover effects */
+.sello-pillar-card:hover .sello-pillar-bg {
+    transform: scale(1.06);
+}
+
+.sello-pillar-card:hover .sello-pillar-overlay {
+    background: linear-gradient(
+        to top,
+        rgba(16, 28, 48, 0.95) 0%,
+        rgba(16, 28, 48, 0.7) 35%,
+        rgba(16, 28, 48, 0) 80%
+    );
+}
+
+.sello-pillar-card:hover .sello-pillar-desc {
+    max-height: 100px;
     opacity: 1;
-    transform: translateY(0);
+    margin-top: 15px;
 }
 
-/* Staggered reveal animations for Sello Hontanar diagram components */
-.sello-center-orbit.hontanar-scroll-reveal {
-    opacity: 0;
-    transform: translate(-50%, -50%) scale(0.7);
-    transition-delay: 0.1s;
-}
-.sello-center-orbit.hontanar-scroll-reveal.visible {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-}
-
-.card-top-left.hontanar-scroll-reveal {
-    transition-delay: 0.3s;
-    transform: translateY(40px) scale(0.9);
-}
-.card-top-left.hontanar-scroll-reveal.visible {
-    transform: translateY(0) scale(1);
-}
-
-.card-right-center.hontanar-scroll-reveal {
-    transition-delay: 0.5s;
-    transform: translateY(40px) scale(0.9);
-}
-.card-right-center.hontanar-scroll-reveal.visible {
-    transform: translateY(0) scale(1);
-}
-
-.card-bottom-left.hontanar-scroll-reveal {
-    transition-delay: 0.7s;
-    transform: translateY(40px) scale(0.9);
-}
-.card-bottom-left.hontanar-scroll-reveal.visible {
-    transform: translateY(0) scale(1);
-}
-
-/* ==========================================================================
-   RESPONSIVE DESIGN (MOBILE)
-   ========================================================================== */
-@media (max-width: 900px) {
-    .sello-diagram-container {
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
-        padding-top: 20px;
+/* Responsive */
+@media (max-width: 991px) {
+    .sello-pillars-grid {
+        grid-template-columns: 1fr;
     }
-
-    .sello-center-orbit {
-        position: relative;
-        left: auto;
-        top: auto;
-        transform: none;
-        width: 240px;
-        height: 240px;
-        margin-bottom: 10px;
+    
+    .sello-pillar-card {
+        height: 380px;
     }
-
-    .sello-center-child {
-        width: 150px;
-        height: 150px;
+    
+    .sello-grid-decor {
+        width: 120px;
+        right: -15px;
+        top: -10px;
     }
-
-    .sello-orbit-line.line-1 {
-        width: 190px;
-        height: 190px;
-    }
-
-    .sello-orbit-line.line-2 {
-        width: 230px;
-        height: 230px;
-    }
-
-    .sello-diagram-card {
-        position: relative;
-        left: auto !important;
-        right: auto !important;
-        top: auto !important;
-        width: 100%;
-        max-width: 320px;
-        transform: none !important;
-    }
-
-    .sello-arrow {
-        display: none; /* Hide arrows on mobile for clean column flow */
+    
+    .sello-pillar-desc {
+        max-height: 100px;
+        opacity: 1;
+        margin-top: 15px;
     }
 }
 
@@ -369,5 +262,124 @@
 
     .sello-subtitle {
         font-size: 1.3rem;
+    }
+}
+
+/* ==========================================================================
+   SPLIT MOMENTOS SECTION (Text/Info Left, Full Image Right)
+   ========================================================================== */
+.filo-split-momentos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    max-width: 100%;
+    margin: 80px 0 80px 0;
+    padding: 0;
+    align-items: stretch;
+    background-color: transparent;
+    position: relative;
+    z-index: 2;
+}
+
+.filo-split-left {
+    background-color: transparent;
+    padding: 80px 60px 80px calc((100vw - 1140px) / 2 + 20px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.filo-split-title {
+    font-family: var(--font-lato);
+    font-size: 2.6rem;
+    font-weight: 800;
+    color: var(--blue);
+    line-height: 1.05;
+    margin: 0 0 30px 0;
+}
+
+.filo-split-title span {
+    font-family: var(--font-playfair);
+    font-style: italic;
+    font-weight: 700;
+    color: var(--green);
+}
+
+.filo-split-right {
+    position: relative;
+    background-size: cover;
+    background-position: center top;
+    min-height: 600px;
+}
+
+.filo-corner-shape {
+    position: absolute;
+    top: -12px;
+    right: -35px;
+    width: 175px;
+    height: auto;
+    z-index: 10;
+    pointer-events: none;
+}
+
+/* Background Circles for Sello Intro */
+.bg-circles-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.bg-circle {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.bg-circle-ring-yellow {
+    border: 3px solid rgba(249, 239, 108, 0.4);
+    background-color: transparent;
+}
+
+.bg-circle-solid-green {
+    background-color: rgba(37, 120, 78, 0.15);
+}
+
+.bg-circle-solid-yellow {
+    background-color: rgba(249, 239, 108, 0.15);
+}
+
+.bg-circle-solid-blue {
+    background-color: rgba(37, 68, 120, 0.1);
+}
+
+.bg-circle-ring-green {
+    border: 3px solid rgba(37, 120, 78, 0.3);
+    background-color: transparent;
+}
+
+.bg-circle-ring-blue {
+    border: 3px solid rgba(37, 68, 120, 0.2);
+    background-color: transparent;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .filo-split-momentos {
+        grid-template-columns: 1fr;
+        margin: 40px 0 40px 0;
+    }
+    .filo-split-left {
+        padding: 60px 20px;
+    }
+    .filo-split-right {
+        min-height: 380px;
+    }
+    .filo-corner-shape {
+        width: 120px;
+        top: -8px;
+        right: -25px;
     }
 }
