@@ -266,8 +266,27 @@
         });
     </script>
 
+    <!-- Banner de Encabezado Premium -->
+    <section class="inner-header-banner" style="background-image: url('assets/Hontanar-WEB-09-2022-374-ALTA.jpg');">
+        <div class="inner-header-overlay"></div>
+        <div class="inner-header-content">
+            <span class="inner-header-kicker">ADMISIONES</span>
+            <h1 class="inner-header-title">¿Por qué estudiar en el<br><span>Gimnasio El Hontanar?</span></h1>
+        </div>
+        <img src="assets/ChatGPT Image 1 jul 2025, 17_28_04 (3).png" alt="Colibrí" class="header-colibri-float">
+    </section>
+
     <!-- Page Content Container -->
     <main class="por-que-page">
+        <!-- Floating background circles -->
+        <div class="bg-circles-wrapper">
+            <div class="bg-circle bg-circle-ring-yellow circle-1"></div>
+            <div class="bg-circle bg-circle-solid-green circle-2"></div>
+            <div class="bg-circle bg-circle-ring-blue circle-3"></div>
+            <div class="bg-circle bg-circle-solid-yellow circle-4"></div>
+            <div class="bg-circle bg-circle-ring-green circle-5"></div>
+            <div class="bg-circle bg-circle-ring-yellow circle-6"></div>
+        </div>
         <!-- Breadcrumbs -->
         <div class="breadcrumbs">
             <a href="index.html">Inicio</a> &gt; <a href="#">Admisiones</a> &gt; <span class="current">¿Por qué estudiar en El Hontanar?</span>
@@ -275,28 +294,19 @@
 
         <!-- Top Section -->
         <section class="pq-top-section">
-            <div class="tour-text-content">
-                <h4 class="kicker">ADMISIONES</h4>
-                <h1 class="main-title">¿Por qué estudiar en el<br><span>Gimnasio El Hontanar?</span></h1>
-            </div>
 
             <!-- Intro Cards Section (Robotics style) -->
             <div class="pq-intro-cards-container">
                 
-                <!-- Section Header -->
-                <div class="pq-intro-header hontanar-scroll-reveal" style="text-align: center; margin-top: 40px; margin-bottom: 50px;">
-                    <p style="max-width: 900px; margin: 0 auto; line-height: 1.7; font-size: 1.1rem; color: rgba(255, 255, 255, 0.9); font-weight: 500;">
-                        El Gimnasio El Hontanar combina educación bilingüe, Bachillerato Internacional y un entorno seguro y feliz: es uno de los mejores colegios privados en Bogotá.
-                    </p>
-                </div>
+
+
 
                 <!-- 3 Bento Cards Grid Row -->
-                <div class="pillar-bento-row" style="margin-bottom: 80px;">
+                <div class="pillar-bento-row reveal-on-scroll reveal-stagger" style="margin-bottom: 80px;">
                     
                     <!-- Card 1: Familia (Image Background) -->
                     <div class="pillar-bento-card pq-card-familia hontanar-scroll-reveal">
                         <div class="pillar-bento-body">
-                            <span class="pillar-bento-pill">Familia</span>
                             <h3 class="pillar-bento-heading">Una gran<br><span>familia</span></h3>
                             <p class="pillar-bento-text">Más que un colegio, el Hontanar es una familia en la que cada estudiante se siente seguro, valorado y motivado para crecer.</p>
                         </div>
@@ -305,18 +315,19 @@
                     <!-- Card 2: Valores (Image Background) -->
                     <div class="pillar-bento-card pq-card-valores hontanar-scroll-reveal">
                         <div class="pillar-bento-body">
-                            <span class="pillar-bento-pill">Valores</span>
                             <h3 class="pillar-bento-heading">Cultivamos<br><span>valores</span></h3>
                             <p class="pillar-bento-text">No solo enseñamos, cultivamos valores, emociones y habilidades que transforman vidas, despiertan la curiosidad y la creatividad.</p>
                         </div>
                     </div>
 
                     <!-- Card 3: Propósito (Image Background) -->
-                    <div class="pillar-bento-card pq-card-proposito hontanar-scroll-reveal">
-                        <div class="pillar-bento-body">
-                            <span class="pillar-bento-pill">Propósito</span>
-                            <h3 class="pillar-bento-heading">Despierta su<br><span>potencial</span></h3>
-                            <p class="pillar-bento-text">¡Descubre lo que tu hijo puede lograr en el Gimnasio El Hontanar!</p>
+                    <div style="position: relative; display: flex; flex-direction: column;">
+                        <img src="assets/Recurso 5.svg" class="pq-card-floating-shape" alt="Decoración">
+                        <div class="pillar-bento-card pq-card-proposito hontanar-scroll-reveal" style="width: 100%; height: 100%;">
+                            <div class="pillar-bento-body">
+                                <h3 class="pillar-bento-heading">Despierta su<br><span>potencial</span></h3>
+                                <p class="pillar-bento-text">¡Descubre lo que tu hijo puede lograr en el Gimnasio El Hontanar!</p>
+                            </div>
                         </div>
                     </div>
 
@@ -325,80 +336,104 @@
             </div>
         </section>
 
-        <!-- Stats Section -->
-        <section class="pq-stats-section">
-            <h2 class="pq-section-title">¿Por qué elegir estudiar en uno de los mejores<br>colegios privados en Bogotá y Chía?</h2>
-            <div class="pq-glass-accordion">
-                <div class="pq-accordion-item active">
-                    <div class="pq-accordion-header">
-                        <h3>Educación Integral</h3>
-                        <span class="icon-toggle">+</span>
+        <!-- Stats & Accordion Split Section -->
+        <section class="pq-split-section reveal-on-scroll reveal-zoom-in">
+            <!-- Left Side: Accordion -->
+            <div class="pq-split-left">
+                <h2 class="pq-split-title">¿Por qué elegir estudiar<br>en uno de los mejores colegios<br>privados en <span style="font-weight: 900;">Bogotá y Chía?</span></h2>
+                
+                <div class="pq-split-accordion">
+                    <div class="pq-split-accordion-item active">
+                        <div class="pq-split-accordion-header">
+                            <h3>Educación Integral</h3>
+                            <span class="icon-toggle">+</span>
+                        </div>
+                        <div class="pq-split-accordion-body">
+                            <p>Porque en El Hontanar la educación va más allá de lo académico, ofrece un entorno seguro para disfrutar del aprendizaje y ayuda a fortalecer la gratitud, la cooperación y la confianza.</p>
+                        </div>
                     </div>
-                    <div class="pq-accordion-body">
-                        <p>Porque en El Hontanar la educación va más allá de lo acadámico, ofrece un entorno seguro para disfrutar del aprendizaje y ayuda a fortalecer la gratitud, la cooperación y la confianza.</p>
-                    </div>
-                </div>
 
-                <div class="pq-accordion-item">
-                    <div class="pq-accordion-header">
-                        <h3>Proyección Internacional</h3>
-                        <span class="icon-toggle">+</span>
+                    <div class="pq-split-accordion-item">
+                        <div class="pq-split-accordion-header">
+                            <h3>Proyección Internacional</h3>
+                            <span class="icon-toggle">+</span>
+                        </div>
+                        <div class="pq-split-accordion-body">
+                            <p>Preparamos a nuestros estudiantes para una proyección universitaria internacional, y para que enfrenten los retos del mundo globalizado con pensamiento crítico y liderazgo.</p>
+                        </div>
                     </div>
-                    <div class="pq-accordion-body">
-                        <p>Preparamos a nuestros estudiantes para una proyección universitaria internacional, y para que enfrenten los retos del mundo globalizado con pensamiento crítico y liderazgo.</p>
-                    </div>
-                </div>
 
-                <div class="pq-accordion-item">
-                    <div class="pq-accordion-header">
-                        <h3>Excelencia Comprobada</h3>
-                        <span class="icon-toggle">+</span>
-                    </div>
-                    <div class="pq-accordion-body">
-                        <p>Destacados por Sapiens Research. Elegirnos es elegir un colegio de categorí­a AAA, donde la excelencia se combina con la felicidad y el bienestar de cada estudiante.</p>
+                    <div class="pq-split-accordion-item">
+                        <div class="pq-split-accordion-header">
+                            <h3>Excelencia Comprobada</h3>
+                            <span class="icon-toggle">+</span>
+                        </div>
+                        <div class="pq-split-accordion-body">
+                            <p>Destacados por Sapiens Research. Elegirnos es elegir un colegio de categoría AAA, donde la excelencia se combina con la felicidad y el bienestar de cada estudiante.</p>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <script>
-                document.addEventListener('DOMContentLoaded', () => {
-                    const accordionItems = document.querySelectorAll('.pq-accordion-item');
-                    accordionItems.forEach(item => {
-                        const header = item.querySelector('.pq-accordion-header');
-                        header.addEventListener('click', () => {
-                            accordionItems.forEach(other => {
-                                if (other !== item) other.classList.remove('active');
-                            });
-                            item.classList.toggle('active');
-                        });
-                    });
-                });
-            </script>
+            <!-- Right Side: Photo and Stats Overlay -->
+            <div class="pq-split-right">
+                <div class="pq-split-yellow-accent"></div>
+                <div class="pq-split-photo-bg"></div>
+                <img src="assets/Recurso 15.svg" class="pq-split-svg-decorator" alt="Decoración">
+                
+                <!-- Floating Stats Panels (Glassmorphism) -->
+                <div class="pq-split-stats-container">
+                    <div class="pq-split-stat-card">
+                        <div class="pq-split-stat-icon-wrapper">
+                            <img src="assets/AAA.png" alt="AAA" class="pq-split-stat-icon">
+                        </div>
+                        <p>Categoría del Ranking<br>The Sapiens Col-Sapiens</p>
+                    </div>
 
-            <div class="pq-stats-grid">
-                <div class="pq-stat-item">
-                    <div class="pq-stat-icon-wrapper">
-                        <img src="assets/AAA.png" alt="AAA" class="pq-stat-icon">
+                    <div class="pq-split-stat-card">
+                        <div class="pq-split-stat-icon-wrapper">
+                            <img src="assets/+30.png" alt="+30" class="pq-split-stat-icon">
+                        </div>
+                        <p>Años ofreciendo un<br>servicio educativo de calidad</p>
                     </div>
-                    <p>Categorí­a del Ranking<br>The Sapiens Col-Sapiens</p>
-                </div>
-                <div class="pq-stat-item">
-                    <div class="pq-stat-icon-wrapper">
-                        <img src="assets/+30.png" alt="+30" class="pq-stat-icon">
+
+                    <div class="pq-split-stat-card">
+                        <div class="pq-split-stat-icon-wrapper">
+                            <img src="assets/Grupo 4266.png" alt="Certificaciones" class="pq-split-stat-icon">
+                        </div>
+                        <p>Certificación internacional<br>Proyecto educativo IB</p>
                     </div>
-                    <p>Años ofreciendo un<br>servicio educativo de calidad</p>
-                </div>
-                <div class="pq-stat-item">
-                    <div class="pq-stat-icon-wrapper">
-                        <img src="assets/Grupo 4266.png" alt="Certificaciones" class="pq-stat-icon logos-img">
-                    </div>
-                    <p>Certificación internacional<br>Proyecto educativo IB</p>
                 </div>
             </div>
         </section>
 
+        <!-- Script for Accordion Functionality -->
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const accordionItems = document.querySelectorAll('.pq-split-accordion-item');
+                accordionItems.forEach(item => {
+                    const header = item.querySelector('.pq-split-accordion-header');
+                    header.addEventListener('click', () => {
+                        accordionItems.forEach(other => {
+                            if (other !== item) other.classList.remove('active');
+                        });
+                        item.classList.toggle('active');
+                    });
+                });
+            });
+        </script>
+
         <!-- Timeline Section -->
         <section class="pq-timeline-section parallax-bg" style="background-image: url('assets/Grupo 3982.jpg');">
+            <!-- Floating background circles for Timeline Section -->
+            <div class="bg-circles-wrapper">
+                <div class="bg-circle bg-circle-ring-yellow circle-1"></div>
+                <div class="bg-circle bg-circle-solid-green circle-2"></div>
+                <div class="bg-circle bg-circle-ring-blue circle-3"></div>
+                <div class="bg-circle bg-circle-solid-yellow circle-4"></div>
+                <div class="bg-circle bg-circle-ring-green circle-5"></div>
+                <div class="bg-circle bg-circle-ring-yellow circle-6"></div>
+            </div>
             <div class="pq-timeline-overlay"></div>
             <div class="pq-timeline-content">
                 <h2 class="pq-section-title">¿Por qué El Hontanar es uno de los mejores<br>colegios en Bogotá y Chí­a?</h2>
@@ -454,57 +489,150 @@
                     });
                 </script>
 
-                <div class="pq-highlight-card">
-                    <span class="sparkle top-left">&#10022;</span>
-                    <span class="sparkle bottom-right">&#10022;</span>
-                    <p class="pq-card-kicker">- Gimnasio El Hontanar -</p>
-                    <h3 class="pq-card-title" style="font-style: italic;">
-                        Nuestro colegio campestre y amigable con el<br>
-                        <span style="color: var(--yellow); font-weight: 700; font-style: normal; display: inline-block;">Medio Ambiente</span>, es el escenario perfecto<br>
-                        para el aprendizaje
-                    </h3>
-                    <p class="pq-card-subtitle">
-                        Somos innovadores y dinámicos, siempre en búsqueda de la mejora continua.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Bento Grid Section -->
-        <section class="pq-bento-section">
-            <div class="pq-bento-grid">
-                <!-- Card 1: Image -->
-                <div class="bento-card bento-image" style="background-image: url('assets/154.jpg');">
-                    <div class="bento-image-content">
-                        <span class="bento-pill">Experiencia</span>
-                        <h3>UN COLEGIO DONDE CADA DÍA CUENTA</h3>
+                <!-- Kent Denver Style Highlight Banner -->
+                <div class="pq-kd-banner-container">
+                    <!-- Background Watermark text (Marquee scrolling) -->
+                    <div class="pq-kd-marquee-wrapper">
+                        <div class="pq-kd-marquee-track">
+                            <span>EXCELENCIA • FELICIDAD • BIENESTAR •&nbsp;</span>
+                            <span>EXCELENCIA • FELICIDAD • BIENESTAR •&nbsp;</span>
+                        </div>
                     </div>
-                </div>
-
-                <!-- Card 2: Glass Yellow -->
-                <div class="bento-card bento-glass-yellow">
-                    <p>En El Hontanar, cada familia encuentra un territorio seguro en Bogotá, donde los estudiantes descubren su potencial y construyen experiencias significativas.</p>
-                    <p>Formamos parte de los mejores colegios del norte de Bogotá; ofrecemos calidad educativa y acompañamiento constante para cada etapa del desarrollo de tus hijos.</p>
-                    <p class="bento-highlight">Nuestro objetivo es que cada niño y joven deje el colegio con habilidades académicas, emocionales y sociales que transformen su vida y la de su comunidad.</p>
-                </div>
-
-                <!-- Card 3: Glass White -->
-                <div class="bento-card bento-glass-white">
-                    <h3>La elección ideal</h3>
-                    <p>Elegirnos es elegir un colegio internacional de categoría AAA, donde la excelencia académica se combina con la felicidad y el bienestar de cada estudiante.</p>
-                    <p>¡Conoce nuestro proyecto educativo y descubre por qué somos un Great Place to Study!</p>
-                </div>
-
-                <!-- Card 4: Image -->
-                <div class="bento-card bento-image" style="background-image: url('assets/Copia de DSC_0875.JPG');">
-                    <div class="bento-image-content">
-                        <span class="bento-pill">Admisiones</span>
-                        <p>Si buscas un colegio bilingüe en Chía y Bogotá con enfoque integral, innovador y campestre, que combine excelencia, bienestar y proyección internacional, el Gimnasio El Hontanar es la elección ideal.</p>
-                        <a href="#" class="btn btn-yellow">Agenda tu cita aquí</a>
+                    
+                    <!-- Vertical grid line -->
+                    <div class="pq-kd-grid-line"></div>
+                    
+                    <!-- Centered Card -->
+                    <div class="pq-kd-card reveal-on-scroll reveal-zoom-in">
+                        <h3 class="pq-kd-title">
+                            Nuestro colegio <span class="serif-italic-yellow">campestre</span> y amigable con el<br>
+                            <span class="serif-italic-yellow">Medio Ambiente</span>, es el escenario perfecto<br>
+                            para el <span class="serif-italic-yellow">aprendizaje</span>
+                        </h3>
+                        <p class="pq-kd-subtitle">
+                            Somos innovadores y dinámicos, siempre en búsqueda de la mejora continua.
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- Interactive Split Carousel Section (Kent Denver Style) -->
+        <section class="pq-split-carousel-section reveal-on-scroll reveal-fade-in">
+            <!-- Rectangulito amarillo decorativo detrás de la foto -->
+            <div class="pq-carousel-yellow-accent"></div>
+            <!-- SVG Decorador verde mitad dentro mitad fuera en el borde superior derecho de la imagen -->
+            <svg class="pq-slider-decorator deco-green" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96.43 45.2">
+                <g>
+                    <polygon class="pq-deco-path-1" points="81.4 20.46 68.13 6.99 54.85 20.46 41.58 6.99 28.3 20.46 15.02 6.99 3.49 18.69 0 15.25 15.02 0 28.3 13.48 41.58 0 54.85 13.48 68.13 0 81.4 13.48 92.93 1.77 96.43 5.21 81.4 20.46"/>
+                    <polygon class="pq-deco-path-2" points="54.85 45.2 41.58 31.72 28.3 45.2 15.02 31.72 3.49 43.42 0 39.98 15.02 24.73 28.3 38.21 41.58 24.73 54.85 38.21 66.38 26.5 69.88 29.95 54.85 45.2"/>
+                </g>
+            </svg>
+            <!-- Left Side: Slide Images -->
+            <div class="pq-carousel-images-wrapper">
+                <div class="pq-carousel-img-slide active" style="background-image: url('assets/Hontanar-WEB-09-2022-259-ALTA.jpg');"></div>
+                <div class="pq-carousel-img-slide" style="background-image: url('assets/Hontanar-WEB-09-2022-406-ALTA.jpg');"></div>
+                <div class="pq-carousel-img-slide" style="background-image: url('assets/Hontanar-WEB-09-2022-189-ALTA.jpg');"></div>
+            </div>
+
+            <!-- Right Side: Content Panel (White background) -->
+            <div class="pq-carousel-content-panel">
+                <!-- Floating background circles for Carousel Section -->
+                <div class="bg-circles-wrapper">
+                    <div class="bg-circle bg-circle-ring-yellow circle-1"></div>
+                    <div class="bg-circle bg-circle-solid-green circle-2"></div>
+                    <div class="bg-circle bg-circle-ring-blue circle-3"></div>
+                    <div class="bg-circle bg-circle-solid-yellow circle-4"></div>
+                    <div class="bg-circle bg-circle-ring-green circle-5"></div>
+                    <div class="bg-circle bg-circle-ring-yellow circle-6"></div>
+                </div>
+                
+                <!-- Controls (Indicators & Line Separator) -->
+                <div class="pq-carousel-controls">
+                    <div class="pq-carousel-indicators">
+                        <span class="pq-indicator-dot active" data-slide="0"></span>
+                        <span class="pq-indicator-dot" data-slide="1"></span>
+                        <span class="pq-indicator-dot" data-slide="2"></span>
+                    </div>
+                </div>
+
+                <!-- Slides Content Wrapper -->
+                <div class="pq-carousel-slides-wrapper">
+                    <!-- Slide 1: Experiencia -->
+                    <div class="pq-carousel-slide active">
+                        <span class="pq-slide-kicker">Experiencia</span>
+                        <h3 class="pq-slide-title">Un colegio donde cada día cuenta</h3>
+                        <div class="pq-slide-description">
+                            <p>En El Hontanar, cada familia encuentra un territorio seguro en Bogotá, donde los estudiantes descubren su potencial y construyen experiencias significativas.</p>
+                            <p>Formamos parte de los mejores colegios del norte de Bogotá; ofrecemos calidad educativa y acompañamiento constante para cada etapa del desarrollo de tus hijos.</p>
+                            <p>Nuestro objetivo es que cada niño y joven deje el colegio con habilidades académicas, emocionales y sociales que transformen su vida y la de su comunidad.</p>
+                        </div>
+                        <a href="tour-virtual.html" class="pq-slide-cta">
+                            Conoce nuestra experiencia
+                            <span class="pq-cta-circle-arrow">
+                                <svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="3" d="M9 5l7 7-7 7"/></svg>
+                            </span>
+                        </a>
+                    </div>
+
+                    <!-- Slide 2: La elección ideal -->
+                    <div class="pq-carousel-slide">
+                        <span class="pq-slide-kicker">La elección ideal</span>
+                        <h3 class="pq-slide-title">Excelencia combinada con bienestar</h3>
+                        <div class="pq-slide-description">
+                            <p>Elegirnos es elegir un colegio internacional de categoría AAA, donde la excelencia académica se combina con la felicidad y el bienestar de cada estudiante.</p>
+                            <p>¡Conoce nuestro proyecto educativo y descubre por qué somos un Great Place to Study!</p>
+                        </div>
+                        <a href="admisiones.html" class="pq-slide-cta">
+                            Conoce nuestro proyecto educativo
+                            <span class="pq-cta-circle-arrow">
+                                <svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="3" d="M9 5l7 7-7 7"/></svg>
+                            </span>
+                        </a>
+                    </div>
+
+                    <!-- Slide 3: Admisiones -->
+                    <div class="pq-carousel-slide">
+                        <span class="pq-slide-kicker">Admisiones</span>
+                        <h3 class="pq-slide-title">Inicia tu proceso hoy</h3>
+                        <div class="pq-slide-description">
+                            <p>Si buscas un colegio bilingüe en Chía y Bogotá con enfoque integral, innovador y campestre, que combine excelencia, bienestar y proyección internacional, el Gimnasio El Hontanar es la elección ideal.</p>
+                        </div>
+                        <a href="https://wa.me/573164701496" target="_blank" class="pq-slide-cta">
+                            Agenda tu cita aquí
+                            <span class="pq-cta-circle-arrow">
+                                <svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="3" d="M9 5l7 7-7 7"/></svg>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Javascript for Carousel functionality -->
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const dots = document.querySelectorAll('.pq-indicator-dot');
+                const textSlides = document.querySelectorAll('.pq-carousel-slide');
+                const imgSlides = document.querySelectorAll('.pq-carousel-img-slide');
+
+                dots.forEach(dot => {
+                    dot.addEventListener('click', () => {
+                        const targetIndex = parseInt(dot.getAttribute('data-slide'));
+
+                        // Deactivate all
+                        dots.forEach(d => d.classList.remove('active'));
+                        textSlides.forEach(s => s.classList.remove('active'));
+                        imgSlides.forEach(i => i.classList.remove('active'));
+
+                        // Activate selected
+                        dot.classList.add('active');
+                        textSlides[targetIndex].classList.add('active');
+                        imgSlides[targetIndex].classList.add('active');
+                    });
+                });
+            });
+        </script>
 
     </main>
 
@@ -570,6 +698,76 @@
             </div>
         </div>
     </footer>
+
+    <!-- Script for Scroll Reveal and Parallax Animations -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const revealElements = document.querySelectorAll('.reveal-on-scroll');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('revealed');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+            
+            revealElements.forEach(el => {
+                observer.observe(el);
+            });
+
+            // Interactive Category Tabs
+            const tabItems = document.querySelectorAll('.pq-category-item');
+            const bentoCards = document.querySelectorAll('.pillar-bento-card');
+
+            tabItems.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // Remove active classes
+                    tabItems.forEach(t => t.classList.remove('active'));
+                    bentoCards.forEach(c => c.classList.remove('active-card'));
+
+                    // Add active class to clicked tab
+                    tab.classList.add('active');
+
+                    // Highlight the corresponding card
+                    const target = tab.getAttribute('data-target');
+                    if (target) {
+                        const targetCard = document.querySelector(`.pq-card-${target}`);
+                        if (targetCard) {
+                            targetCard.classList.add('active-card');
+                        }
+                    }
+                });
+            });
+            
+            // Scroll Parallax Effect
+            window.addEventListener('scroll', () => {
+                const scrolled = window.scrollY;
+                
+                // Parallax for Background Circles
+                const circles = document.querySelectorAll('.bg-circle');
+                circles.forEach((circle, index) => {
+                    const speed = (index + 1) * 0.15; // smooth parallax speed offset
+                    circle.style.marginTop = `${scrolled * speed * 0.4}px`;
+                });
+                
+                // Parallax and fade-out for Header Content
+                const headerContent = document.querySelector('.inner-header-content');
+                const headerColibri = document.querySelector('.header-colibri-float');
+                if (headerContent) {
+                    headerContent.style.transform = `translateY(${scrolled * 0.3}px)`;
+                    headerContent.style.opacity = Math.max(0, 1 - (scrolled * 0.0035));
+                }
+                if (headerColibri) {
+                    headerColibri.style.transform = `translateY(${scrolled * 0.2}px) rotate(${scrolled * 0.05}deg)`;
+                }
+            });
+        });
+    </script>
 </body>
 </html>
 

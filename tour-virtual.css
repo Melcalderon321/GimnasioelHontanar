@@ -2,7 +2,7 @@
 
 .tour-virtual-page {
     padding-top: 150px; /* Space for the fixed navbar */
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
     color: var(--white);
     text-align: center;
@@ -17,7 +17,7 @@
     color: rgba(255, 255, 255, 0.5);
     margin-bottom: 40px;
     text-align: left;
-    max-width: 900px;
+    max-width: 1100px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -116,11 +116,11 @@
 .video-player-container {
     position: relative;
     width: 100%;
-    max-width: 900px;
+    max-width: 1100px;
     margin: 0 auto;
-    border-radius: 20px;
+    border-radius: 0;
     overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    box-shadow: none;
     aspect-ratio: 16 / 9;
 }
 
@@ -133,7 +133,7 @@
 }
 
 .video-player-container:hover .video-cover {
-    transform: scale(1.02);
+    transform: none;
 }
 
 .play-button {
@@ -176,6 +176,228 @@
 
 .tour-footer-img {
     margin-top: 50px;
+}
+
+/* Escudo flotante sobre el reproductor de video */
+.video-player-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: visible;
+}
+
+.video-floating-shield {
+    position: absolute;
+    top: -40px; /* Centrado verticalmente sobre el borde superior */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 12;
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+}
+
+/* Contenedor de círculos flotantes de fondo */
+.bg-circles-wrapper {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 100%;
+    min-height: 800px;
+    z-index: 1;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.bg-circle {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.22; /* Un poco más notorias */
+    pointer-events: none;
+    user-select: none;
+}
+
+/* Sólidos */
+.bg-circle-solid-yellow {
+    background-color: var(--yellow);
+}
+.bg-circle-solid-green {
+    background-color: var(--green);
+}
+.bg-circle-solid-blue {
+    background-color: #5d83c2; /* Azul claro visible contra el azul oscuro */
+}
+
+/* Anillos (sin centro) */
+.bg-circle-ring-yellow {
+    border: 2px solid var(--yellow);
+}
+.bg-circle-ring-green {
+    border: 2px solid var(--green);
+}
+.bg-circle-ring-blue {
+    border: 2px solid #5d83c2;
+}
+
+/* Posiciones y tamaños específicos */
+.circle-1 {
+    width: 35px;
+    height: 35px;
+    top: 15%;
+    left: 8%;
+    animation: floatCircle1 14s ease-in-out infinite;
+}
+
+.circle-2 {
+    width: 18px;
+    height: 18px;
+    top: 25%;
+    right: 10%;
+    animation: floatCircle2 11s ease-in-out infinite;
+}
+
+.circle-3 {
+    width: 28px;
+    height: 28px;
+    top: 42%;
+    left: 12%;
+    animation: floatCircle3 16s ease-in-out infinite;
+}
+
+.circle-4 {
+    width: 14px;
+    height: 14px;
+    top: 55%;
+    right: 6%;
+    animation: floatCircle1 12s ease-in-out infinite;
+}
+
+.circle-5 {
+    width: 40px;
+    height: 40px;
+    top: 72%;
+    left: 6%;
+    animation: floatCircle2 17s ease-in-out infinite;
+}
+
+.circle-6 {
+    width: 32px;
+    height: 32px;
+    top: 85%;
+    right: 12%;
+    animation: floatCircle3 13s ease-in-out infinite;
+}
+
+/* Asegurar que el contenido interactivo y textos queden por encima */
+.breadcrumbs,
+.tour-text-content,
+.video-player-wrapper {
+    position: relative;
+    z-index: 2;
+}
+
+/* Animaciones suaves con mayor rango de movimiento */
+@keyframes floatCircle1 {
+    0% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(-28px) scale(1.08);
+    }
+    100% {
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes floatCircle2 {
+    0% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(32px) scale(0.92);
+    }
+    100% {
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes floatCircle3 {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(18px, -24px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+
+/* Scroll Reveal Base Styles */
+.reveal-on-scroll {
+    opacity: 0;
+    transition: all 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform, opacity;
+}
+
+/* Animation kinds */
+.reveal-slide-up {
+    transform: translateY(60px);
+}
+
+.reveal-zoom-in {
+    transform: scale(0.92) translateY(30px);
+}
+
+.reveal-fade-in {
+    transform: none;
+}
+
+/* Active State (Revealed) */
+.reveal-on-scroll.revealed {
+    opacity: 1;
+    transform: translate(0) scale(1);
+}
+
+/* Stagger delay for text block child items */
+.reveal-stagger > * {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.reveal-stagger.revealed > * {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-stagger.revealed > *:nth-child(1) { transition-delay: 0.15s; }
+.reveal-stagger.revealed > *:nth-child(2) { transition-delay: 0.35s; }
+.reveal-stagger.revealed > *:nth-child(3) { transition-delay: 0.55s; }
+.reveal-stagger.revealed > *:nth-child(4) { transition-delay: 0.75s; }
+
+/* --- Círculos flotantes extra (Tour Virtual) --- */
+.tv-circle-7 {
+    width: 85px;
+    height: 85px;
+    top: 12%;
+    right: 4%;
+    animation: floatCircle2 10s ease-in-out infinite;
+    opacity: 0.16;
+}
+
+.tv-circle-8 {
+    width: 50px;
+    height: 50px;
+    bottom: 25%;
+    left: 3%;
+    animation: floatCircle1 8s ease-in-out infinite 1s;
+    opacity: 0.13;
 }
 
 

@@ -265,32 +265,54 @@
         });
     </script>
 
+    <!-- Banner de Encabezado Premium -->
+    <section class="inner-header-banner" style="background-image: url('assets/5929350_Group_Friends_1920x1080.jpg');">
+        <div class="inner-header-overlay"></div>
+        <div class="inner-header-content">
+            <span class="inner-header-kicker">ADMISIONES</span>
+            <h1 class="inner-header-title">Tour <span>Virtual</span></h1>
+        </div>
+        <img src="assets/ChatGPT Image 1 jul 2025, 17_28_04 (3).png" alt="Colibrí" class="header-colibri">
+    </section>
+
     <!-- Tour Virtual Section -->
     <section class="tour-virtual-page">
+        <!-- Floating background circles -->
+        <div class="bg-circles-wrapper">
+            <div class="bg-circle bg-circle-ring-yellow circle-1"></div>
+            <div class="bg-circle bg-circle-solid-green circle-2"></div>
+            <div class="bg-circle bg-circle-ring-blue circle-3"></div>
+            <div class="bg-circle bg-circle-solid-yellow circle-4"></div>
+            <div class="bg-circle bg-circle-ring-green circle-5"></div>
+            <div class="bg-circle bg-circle-ring-yellow circle-6"></div>
+            <div class="bg-circle bg-circle-solid-green tv-circle-7"></div>
+            <div class="bg-circle bg-circle-ring-blue tv-circle-8"></div>
+        </div>
         <!-- Breadcrumbs -->
         <div class="breadcrumbs">
             <a href="index.html">Inicio</a> &gt; <a href="#">Admisiones</a> &gt; <span class="current">Tour Virtual</span>
         </div>
 
         <!-- Text Content -->
-        <div class="tour-text-content">
-            <h4 class="kicker">ADMISIONES</h4>
-            <h1 class="main-title">Tour <span>Virtual</span></h1>
-            
+        <div class="tour-text-content reveal-on-scroll reveal-stagger">
             <p class="subtitle">Gimnasio El Hontanar, colegio Bilingüe Internacional en el norte de Bogotá</p>
             <p class="subtitle-2">Educación bilingüe y <strong>Bachillerato Internacional</strong> para formar líderes del mundo</p>
             
             <p class="body-text">
-                Bienvenido al Tour Virtual de las instalaciones del Gimnasio El Hontanar, uno de los mejores colegios privados en Bogotá con espacio campestre, seguro y moderno. Campus de <strong>60.000 m²</strong>, ubicado estratégicamente entre el norte de Bogotá y Chía, y diseñado para responder a las exigencias del <em>Bachillerato Internacional (IB)</em>, con infraestructura accesible y sostenible.
+                Bienvenido al Tour Virtual de las instalaciones del Gimnasio El Hontanar, uno de los mejores colegios privados en Bogotá con espacio campestre, seguro y moderno. Campus de <strong style="color: var(--green);">60.000 m²</strong>, ubicado estratégicamente entre el norte de Bogotá y Chía, y diseñado para responder a las exigencias del <em>Bachillerato Internacional (IB)</em>, con infraestructura accesible y sostenible.
             </p>
         </div>
 
         <!-- Video Player -->
-        <div class="video-player-container">
-            <!-- Using a fallback image for the video cover since we don't have the drawn image path -->
-            <div class="video-cover" style="background-image: url('assets/5929350_Group_Friends_1920x1080.jpg');"></div>
-            <div class="play-button">
-                <div class="play-icon">&#9654;</div>
+        <div class="video-player-wrapper reveal-on-scroll reveal-zoom-in">
+            <!-- Floating Shield at top center -->
+            <img src="assets/Recurso 2@4x.png" alt="Escudo Hontanar" class="video-floating-shield">
+            <div class="video-player-container">
+                <!-- Using a fallback image for the video cover since we don't have the drawn image path -->
+                <div class="video-cover" style="background-image: url('assets/154.jpg');"></div>
+                <div class="play-button">
+                    <div class="play-icon">&#9654;</div>
+                </div>
             </div>
         </div>
     </section>
@@ -357,6 +379,53 @@
             </div>
         </div>
     </footer>
+
+    <!-- Script for Scroll Reveal and Parallax Animations -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const revealElements = document.querySelectorAll('.reveal-on-scroll');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('revealed');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+            
+            revealElements.forEach(el => {
+                observer.observe(el);
+            });
+            
+            // Scroll Parallax Effect
+            window.addEventListener('scroll', () => {
+                const scrolled = window.scrollY;
+                
+                // Parallax for Background Circles
+                const circles = document.querySelectorAll('.bg-circle');
+                circles.forEach((circle, index) => {
+                    const speed = (index + 1) * 0.15; // smooth parallax speed offset
+                    // Keep the floating animation but offset the translateY with scroll
+                    circle.style.marginTop = `${scrolled * speed * 0.4}px`;
+                });
+                
+                // Parallax and fade-out for Header Content
+                const headerContent = document.querySelector('.inner-header-content');
+                const headerColibri = document.querySelector('.header-colibri');
+                if (headerContent) {
+                    headerContent.style.transform = `translateY(${scrolled * 0.3}px)`;
+                    headerContent.style.opacity = Math.max(0, 1 - (scrolled * 0.0035));
+                }
+                if (headerColibri) {
+                    headerColibri.style.transform = `translateY(${scrolled * 0.2}px) rotate(${scrolled * 0.05}deg)`;
+                }
+            });
+        });
+    </script>
 </body>
 </html>
 

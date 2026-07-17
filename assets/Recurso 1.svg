@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_2" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 96.43 45.2">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-2 {
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="0" y1="10.23" x2="96.43" y2="10.23" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1b9ee0"/>
+      <stop offset="1" stop-color="#0b7daa"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0" y1="34.96" x2="69.88" y2="34.96" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0e4c75"/>
+      <stop offset="1" stop-color="#2278b2"/>
+    </linearGradient>
+  </defs>
+  <g id="OBJECTS">
+    <g>
+      <polygon class="cls-2" points="81.4 20.46 68.13 6.99 54.85 20.46 41.58 6.99 28.3 20.46 15.02 6.99 3.49 18.69 0 15.25 15.02 0 28.3 13.48 41.58 0 54.85 13.48 68.13 0 81.4 13.48 92.93 1.77 96.43 5.21 81.4 20.46"/>
+      <polygon class="cls-1" points="54.85 45.2 41.58 31.72 28.3 45.2 15.02 31.72 3.49 43.42 0 39.98 15.02 24.73 28.3 38.21 41.58 24.73 54.85 38.21 66.38 26.5 69.88 29.95 54.85 45.2"/>
+    </g>
+  </g>
+</svg>

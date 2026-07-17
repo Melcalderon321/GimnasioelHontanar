@@ -1060,9 +1060,9 @@ a {
     border: 1px solid var(--yellow);
     border-radius: 15px;
     padding: 30px 40px;
-    background: linear-gradient(135deg, rgba(37, 68, 120, 0.85) 0%, rgba(37, 68, 120, 0.4) 100%);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: linear-gradient(135deg, rgba(37, 68, 120, 0.98) 0%, rgba(37, 68, 120, 0.93) 100%);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -2167,3 +2167,340 @@ em, i, .italic,
 [style*="playfair"][style*="italic"] {
     font-weight: 400 !important;
 }
+
+/* ==========================================================================
+   ESTILOS DE REDISEÑO PARA PÁGINAS INTERNAS (FONDOS BLANCOS)
+   ========================================================================== */
+
+/* Fondo general blanco y texto oscuro para todas las páginas excepto el Home */
+body:not(.home-page) {
+    background-color: #ffffff !important;
+    color: #2b3b5c !important;
+}
+
+/* Contenedores principales de las subpáginas forzados a fondo blanco */
+body:not(.home-page) .vida-page,
+body:not(.home-page) .sello-page-container,
+body:not(.home-page) .ib-page-container,
+body:not(.home-page) .nuestra-historia-container,
+body:not(.home-page) .multilinguismo-container,
+body:not(.home-page) .exchange-page-container,
+body:not(.home-page) .filosofia-container,
+body:not(.home-page) .counseling-page-container,
+body:not(.home-page) .modelo-page,
+body:not(.home-page) .tour-virtual-page,
+body:not(.home-page) .proceso-ingreso-page,
+body:not(.home-page) .faq-page,
+body:not(.home-page) main {
+    background-color: #ffffff !important;
+    color: #2b3b5c !important;
+}
+
+/* Ajustes de color de textos generales en páginas blancas */
+body:not(.home-page) .tour-text-content .main-title,
+body:not(.home-page) .tour-text-content .subtitle,
+body:not(.home-page) .tour-text-content .subtitle-2,
+body:not(.home-page) .tour-text-content .body-text,
+body:not(.home-page) .section-heading,
+body:not(.home-page) .section-subheading,
+body:not(.home-page) p,
+body:not(.home-page) h1,
+body:not(.home-page) h2,
+body:not(.home-page) h3,
+body:not(.home-page) h4 {
+    /* No sobreescribir textos que ya estén en contenedores oscuros de las tarjetas (Bento, Accordions, etc.) */
+}
+
+/* Para textos que están directamente en el flujo de la página interna */
+body:not(.home-page) .tour-text-content .main-title {
+    color: var(--blue) !important;
+}
+body:not(.home-page) .tour-text-content .main-title span {
+    color: var(--green) !important;
+}
+body:not(.home-page) .tour-text-content .subtitle {
+    color: var(--green) !important;
+}
+body:not(.home-page) .tour-text-content .subtitle-2 {
+    color: #4a5568 !important;
+}
+body:not(.home-page) .tour-text-content .subtitle-2 strong {
+    color: var(--blue) !important;
+}
+body:not(.home-page) .tour-text-content .body-text {
+    color: #4a5568 !important;
+}
+
+/* ==========================================================================
+   COMPONENTE DE BANNER DE ENCABEZADO PREMIUM (.inner-header-banner)
+   ========================================================================== */
+.inner-header-banner {
+    position: relative;
+    height: 400px;
+    background-size: cover;
+    background-position: center 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 80px; /* Espacio para el navbar fijo */
+    overflow: visible; /* Permitir que el colibrí sobresalga */
+    z-index: 15;
+}
+
+.inner-header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(37, 68, 120, 0.92) 0%, rgba(37, 68, 120, 0.5) 100%);
+    z-index: 1;
+}
+
+.inner-header-content {
+    position: relative;
+    z-index: 2;
+    color: var(--white);
+    max-width: 900px;
+    width: 100%;
+    padding: 0 20px;
+    margin-top: 20px;
+}
+
+/* Migas de pan del banner */
+.inner-header-content .breadcrumbs {
+    font-family: var(--font-lato);
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 25px !important;
+    text-align: center !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.inner-header-content .breadcrumbs a {
+    color: rgba(255, 255, 255, 0.9) !important;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.inner-header-content .breadcrumbs a:hover {
+    color: var(--yellow) !important;
+}
+
+.inner-header-content .breadcrumbs .current {
+    color: var(--yellow) !important;
+    font-weight: 700;
+}
+
+/* Título principal del banner */
+.inner-header-title {
+    font-family: var(--font-lato);
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--white) !important;
+    line-height: 1.2;
+    margin: 0;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.inner-header-title span {
+    font-family: var(--font-playfair);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--yellow) !important;
+}
+
+/* Kicker/Categoría en el banner */
+.inner-header-kicker {
+    font-family: var(--font-lato);
+    color: var(--yellow) !important;
+    font-size: 0.8rem;
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 4px 14px;
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(249, 239, 108, 0.3);
+    border-radius: 6px;
+    backdrop-filter: blur(5px);
+}
+
+/* Colibrí flotando en la parte inferior del banner (sin contenedor de círculo) */
+.inner-header-banner .header-colibri,
+.inner-header-banner .header-colibri-float {
+    position: absolute;
+    bottom: -42px; /* Flota a la mitad sobre el cuerpo de la página */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    width: 85px;
+    height: 85px;
+    object-fit: contain;
+    filter: drop-shadow(0 6px 12px rgba(37, 68, 120, 0.22));
+    animation: floatColibri 3.5s ease-in-out infinite;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+}
+
+.inner-header-banner .header-colibri:hover,
+.inner-header-banner .header-colibri-float:hover {
+    transform: translateX(-50%) scale(1.15) rotate(5deg);
+}
+
+@keyframes floatColibri {
+    0% {
+        transform: translateX(-50%) translateY(0) scale(1) rotate(0deg);
+    }
+    50% {
+        transform: translateX(-50%) translateY(-6px) scale(1.05) rotate(-3deg);
+    }
+    100% {
+        transform: translateX(-50%) translateY(0) scale(1) rotate(0deg);
+    }
+}
+
+/* Corrección de espaciados en páginas internas por el nuevo header */
+body:not(.home-page) .tour-virtual-page,
+body:not(.home-page) .counseling-page-container,
+body:not(.home-page) .multilinguismo-container,
+body:not(.home-page) .sello-page-container,
+body:not(.home-page) .ib-page-container,
+body:not(.home-page) .nuestra-historia-container,
+body:not(.home-page) .exchange-page-container,
+body:not(.home-page) .filosofia-container,
+body:not(.home-page) .modelo-page,
+body:not(.home-page) .proceso-ingreso-page,
+body:not(.home-page) .faq-page,
+body:not(.home-page) .vida-page {
+    padding-top: 70px !important; /* Reducido ya que el header-banner ahora toma el espacio superior */
+}
+
+/* ==========================================================================
+   CORRECCIONES DE CONTRASTE Y LEGIBILIDAD EN PÁGINAS BLANCAS
+   ========================================================================== */
+
+/* Overrides para paneles con diseño glassmorphism translúcido */
+body:not(.home-page) .bento-card,
+body:not(.home-page) .exchange-large-card,
+body:not(.home-page) .counseling-intro-card.purpose-card,
+body:not(.home-page) .multi-modern-card,
+body:not(.home-page) .level-pane,
+body:not(.home-page) .ib-intro-card,
+body:not(.home-page) .destinations-grid .dest-card,
+body:not(.home-page) .skills-column,
+body:not(.home-page) .sello-diagram-card,
+body:not(.home-page) .history-fader-card,
+body:not(.home-page) .pq-glass-box,
+body:not(.home-page) .pq-accordion-item,
+body:not(.home-page) .faq-item {
+    background: rgba(37, 68, 120, 0.04) !important;
+    border-color: rgba(37, 68, 120, 0.12) !important;
+    box-shadow: 0 10px 30px rgba(37, 68, 120, 0.06) !important;
+}
+
+body:not(.home-page) .bento-card:hover,
+body:not(.home-page) .exchange-large-card:hover,
+body:not(.home-page) .counseling-intro-card.purpose-card:hover,
+body:not(.home-page) .multi-modern-card:hover,
+body:not(.home-page) .level-pane:hover,
+body:not(.home-page) .ib-intro-card:hover,
+body:not(.home-page) .destinations-grid .dest-card:hover,
+body:not(.home-page) .skills-column:hover,
+body:not(.home-page) .sello-diagram-card:hover,
+body:not(.home-page) .history-fader-card:hover,
+body:not(.home-page) .pq-glass-box:hover,
+body:not(.home-page) .pq-accordion-item:hover,
+body:not(.home-page) .faq-item:hover {
+    background: rgba(37, 68, 120, 0.06) !important;
+    border-color: rgba(37, 68, 120, 0.2) !important;
+    box-shadow: 0 15px 35px rgba(37, 68, 120, 0.1) !important;
+}
+
+/* Forzar que los textos y títulos de estas tarjetas sean oscuros en páginas blancas */
+body:not(.home-page) .bento-card h3,
+body:not(.home-page) .bento-card p,
+body:not(.home-page) .bento-card span,
+body:not(.home-page) .exchange-large-card h2,
+body:not(.home-page) .exchange-large-card p,
+body:not(.home-page) .exchange-large-card span,
+body:not(.home-page) .exchange-large-card strong,
+body:not(.home-page) .counseling-intro-card.purpose-card h3,
+body:not(.home-page) .counseling-intro-card.purpose-card p,
+body:not(.home-page) .ib-intro-card h3,
+body:not(.home-page) .ib-intro-card p,
+body:not(.home-page) .sello-diagram-card h3,
+body:not(.home-page) .sello-diagram-card p,
+body:not(.home-page) .dest-card h3,
+body:not(.home-page) .dest-card p,
+body:not(.home-page) .skills-column h3,
+body:not(.home-page) .skills-column p,
+body:not(.home-page) .history-fader-card h3,
+body:not(.home-page) .history-fader-card p,
+body:not(.home-page) .pq-glass-box h3,
+body:not(.home-page) .pq-glass-box p,
+body:not(.home-page) .pq-accordion-item h3,
+body:not(.home-page) .pq-accordion-item p,
+body:not(.home-page) .faq-question h3,
+body:not(.home-page) .faq-answer p {
+    color: #2b3b5c !important;
+}
+
+/* Micro-pills / check items dentro de los paneles en páginas blancas */
+body:not(.home-page) .exchange-grid-pill {
+    background-color: rgba(37, 68, 120, 0.05) !important;
+    border: 1px solid rgba(37, 68, 120, 0.15) !important;
+}
+
+body:not(.home-page) .exchange-grid-pill .pill-text {
+    color: #2b3b5c !important;
+}
+
+/* Texto destacado y span títulos */
+body:not(.home-page) .highlight-yellow-italic,
+body:not(.home-page) span.highlight-yellow-italic,
+body:not(.home-page) .exchange-title span.highlight-yellow-italic,
+body:not(.home-page) .card-title span,
+body:not(.home-page) .bento-card .card-title span,
+body:not(.home-page) .exchange-large-card h2 span {
+    color: var(--green) !important;
+}
+
+body:not(.home-page) .counseling-subtitle {
+    color: var(--blue) !important;
+}
+
+/* Migas de pan reubicadas en fondo blanco (más grandes y en azul) */
+body:not(.home-page) .breadcrumbs {
+    font-size: 0.92rem !important;
+    color: var(--blue) !important;
+    font-family: var(--font-lato);
+    font-weight: 700;
+}
+
+body:not(.home-page) .breadcrumbs a {
+    color: var(--blue) !important;
+    font-weight: 700;
+}
+
+body:not(.home-page) .breadcrumbs a:hover {
+    color: var(--green) !important;
+    text-decoration: underline;
+}
+
+body:not(.home-page) .breadcrumbs .current {
+    color: var(--blue) !important;
+    font-weight: 700;
+}
+
+/* Degradado de transición suave para el pie de foto en páginas internas (de blanco a transparente) */
+body:not(.home-page) .footer-image-section::before {
+    background: linear-gradient(to bottom, #ffffff 0%, rgba(255, 255, 255, 0) 100%) !important;
+}
+
+
