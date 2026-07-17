@@ -783,3 +783,184 @@
         line-height: 1.5;
     }
 }
+
+/* ==========================================================================
+   LIGHT THEME OVERRIDES FOR WHITE BACKGROUND (SOMOS HONTANAR / ADMISIONES STYLE)
+   ========================================================================== */
+.ib-page-container {
+    background-color: #ffffff !important;
+}
+
+/* Breadcrumbs text color */
+.ib-page-container .breadcrumbs,
+.ib-page-container .breadcrumbs a {
+    color: #4a5568 !important;
+}
+
+.ib-page-container .breadcrumbs .current {
+    color: var(--blue) !important;
+}
+
+/* Intro cards white style */
+.ib-page-container .ib-intro-mini-card {
+    background: #ffffff !important;
+    border: 1px solid rgba(37, 68, 120, 0.08) !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.04) !important;
+}
+
+.ib-page-container .ib-intro-mini-card:hover {
+    border-color: var(--green) !important;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08) !important;
+}
+
+.ib-page-container .ib-intro-mini-card.focus-card .mini-card-badge {
+    background-color: rgba(27, 166, 85, 0.08) !important;
+    border-color: var(--green) !important;
+    color: var(--green) !important;
+}
+
+.ib-page-container .ib-intro-mini-card.philosophy-card .mini-card-badge {
+    background-color: rgba(249, 239, 108, 0.1) !important;
+    border-color: var(--yellow) !important;
+    color: var(--blue) !important;
+}
+
+.ib-page-container .mini-card-content h3 {
+    color: var(--blue) !important;
+}
+
+.ib-page-container .mini-card-content p {
+    color: #4a5568 !important;
+}
+
+/* Pedagogy titles */
+.ib-page-container .ib-pedagogy-header .ib-pedagogy-title {
+    color: var(--blue) !important;
+}
+
+/* Profile grid cards white style */
+.ib-page-container .ib-profile-section {
+    background-color: #1b3259 !important;
+}
+
+.ib-page-container .ib-section-header .section-heading {
+    color: var(--blue) !important;
+}
+
+.ib-page-container .ib-section-header .section-heading span {
+    color: var(--green) !important;
+    font-family: var(--font-playfair);
+    font-style: italic;
+}
+
+.ib-page-container .ib-section-lead-centered {
+    color: #4a5568 !important;
+}
+
+.ib-page-container .ib-section-lead-centered strong {
+    color: var(--blue) !important;
+}
+
+.ib-page-container .ib-profile-card {
+    background: #ffffff !important;
+    border: 1px solid rgba(37, 68, 120, 0.08) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04) !important;
+}
+
+.ib-page-container .ib-profile-card:hover {
+    border-color: var(--green) !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08) !important;
+}
+
+.ib-page-container .ib-profile-card .profile-header h3 {
+    color: var(--blue) !important;
+}
+
+.ib-page-container .ib-profile-card .profile-divider {
+    background-color: rgba(37, 68, 120, 0.08) !important;
+}
+
+.ib-page-container .ib-profile-card .profile-desc {
+    color: #4a5568 !important;
+}
+
+.ib-page-container .profile-icon-wrapper {
+    background-color: rgba(27, 166, 85, 0.05) !important;
+    border-color: var(--green) !important;
+    color: var(--green) !important;
+}
+
+.ib-page-container .profile-icon-shine-svg {
+    color: var(--green) !important;
+    filter: drop-shadow(0 0 8px rgba(27, 166, 85, 0.4)) !important;
+}
+
+.ib-page-container .ib-profile-quote p {
+    color: #ffffff !important;
+    text-shadow: none !important;
+}
+
+/* University Section overrides */
+.ib-page-container .ib-university-section {
+    background-color: #ffffff !important;
+}
+
+.ib-page-container .ib-university-card {
+    background: #ffffff !important;
+    border: 1px solid rgba(37, 68, 120, 0.08) !important;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.04) !important;
+}
+
+.ib-page-container .ib-university-card:hover {
+    border-color: var(--green) !important;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08) !important;
+}
+
+.ib-page-container .ib-university-card .exchange-title {
+    color: var(--blue) !important;
+}
+
+.ib-page-container .ib-university-card .exchange-title span {
+    color: var(--green) !important;
+}
+
+.ib-page-container .ib-university-lead {
+    color: #4a5568 !important;
+}
+
+.ib-page-container .ib-university-pill {
+    background: rgba(27, 166, 85, 0.05) !important;
+    border: 1px solid rgba(27, 166, 85, 0.15) !important;
+}
+
+.ib-page-container .ib-university-pill .pill-text {
+    color: #334155 !important;
+}
+
+.ib-page-container .ib-university-pill .check-icon-premium {
+    background: linear-gradient(135deg, #1ba655, #12753b) !important;
+    color: #ffffff !important;
+}
+
+.ib-page-container .ib-university-quote {
+    border-color: rgba(27, 166, 85, 0.15) !important;
+    background: radial-gradient(circle, rgba(27, 166, 85, 0.04) 0%, transparent 80%) !important;
+}
+
+.ib-page-container .ib-university-quote p {
+    color: var(--blue) !important;
+}
+
+.ib-page-container .ib-university-quote .quote-italic-highlight {
+    color: var(--green) !important;
+    text-shadow: none !important;
+}
+
+/* Final CTA Section */
+.ib-page-container .ib-final-cta-section {
+    background-color: #ffffff !important;
+}
+
+.ib-page-container .ib-final-cta-section .cta-message {
+    color: #4a5568 !important;
+}

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -10,215 +10,113 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="tour-virtual.css">
+    <link rel="stylesheet" href="filosofia-y-valores.css">
+    <link rel="stylesheet" href="multilinguismo.css">
+    <link rel="stylesheet" href="por-que.css">
+    <link rel="stylesheet" href="modelo-de-ensenanza.css">
     <link rel="stylesheet" href="programa-ib.css">
     <style>
-        /* Estilos específicos para la sección Bento en Programa IB */
-        .ib-pedagogy-card {
-            background: transparent !important;
-            border: none !important;
-            box-shadow: none !important;
-            padding: 20px 0 !important;
+        /* Specific overrides for IB page */
+        .ib-logo-wrapper {
+            margin: 25px 0;
+            text-align: center;
         }
-
-        .ib-pedagogy-header {
-            text-align: center !important;
-            margin-bottom: 45px;
+        .ib-header-logo {
+            max-width: 180px;
+            height: auto;
+            filter: drop-shadow(0 8px 20px rgba(0,0,0,0.15));
+            transition: transform 0.4s ease;
         }
-
-        .ib-pedagogy-title {
-            color: #ffffff !important;
-            font-size: 2.2rem;
-            font-weight: 900;
-            line-height: 1.4;
-            margin: 0;
-            text-align: center !important;
+        .ib-header-logo:hover {
+            transform: scale(1.05);
         }
-
-        .ib-bento-row {
+        .ib-attr-card:hover {
+            background: rgba(255, 255, 255, 0.12) !important;
+            transform: translateY(-5px);
+            border-color: rgba(255, 255, 255, 0.25) !important;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+        }
+        @media (max-width: 990px) {
+            .ib-profile-container {
+                grid-template-columns: 1fr !important;
+                gap: 30px !important;
+            }
+            .ib-profile-photo-col {
+                min-height: 350px !important;
+            }
+            .ib-attributes-grid {
+                grid-template-columns: 1fr !important;
+            }
+        }
+        
+        /* CTA Custom Split Block */
+        .ib-split-cta-card {
+            max-width: 1140px;
+            margin: 60px auto 100px auto;
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-            margin-top: 40px;
-            margin-bottom: 20px;
-            align-items: stretch; /* Stretch to make all cards equal height beautifully */
-        }
-
-        .ib-bento-card {
+            grid-template-columns: 1fr 1fr;
+            background: #ffffff;
+            border-radius: 28px;
+            overflow: visible;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.08);
             position: relative;
-            border-radius: 24px;
-            overflow: hidden;
+        }
+        .ib-split-cta-left {
+            background-color: #1b3259;
+            padding: 50px 50px;
             display: flex;
             flex-direction: column;
-            justify-content: flex-start;
-            min-height: 380px;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
-            cursor: default; /* No longer clickable/expandable */
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            background: #ffffff;
-        }
-        .ib-bento-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 25px 55px rgba(0, 0, 0, 0.25);
-            border-color: var(--yellow);
-        }
-
-        /* Diseños individuales de fondo */
-        .card-ib-1 {
-            background-image: url('assets/DSC_0762_copia.jpg');
-            background-size: cover;
-            background-position: center;
-            border: 2px solid rgba(255, 255, 255, 0.85) !important;
-        }
-        .card-ib-1::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to top, rgba(20, 30, 55, 0.98) 0%, rgba(20, 30, 55, 0.7) 60%, rgba(20, 30, 55, 0.2) 100%);
-            z-index: 1;
-        }
-        .card-ib-1 .ib-bento-heading {
-            color: var(--white) !important;
-        }
-        .card-ib-1 .ib-bento-heading span {
-            font-family: var(--font-playfair);
-            font-style: italic;
-            color: var(--yellow) !important;
-        }
-        .card-ib-1 .ib-bento-text {
-            color: rgba(255, 255, 255, 0.9) !important;
-        }
-        .card-ib-1 .ib-bento-pill {
-            background-color: var(--yellow) !important;
-            color: var(--blue) !important;
-            font-weight: 700;
-        }
-
-        .card-ib-2 {
-            background: var(--yellow) !important;
-            border: none !important;
-        }
-        .card-ib-2:hover {
-            background: var(--yellow) !important;
-        }
-        .card-ib-2 .ib-bento-heading {
-            color: var(--blue) !important;
-        }
-        .card-ib-2 .ib-bento-heading span {
-            color: var(--blue) !important;
-            font-family: var(--font-playfair);
-            font-style: italic;
-            font-weight: 700;
-        }
-        .card-ib-2 .ib-bento-text {
-            color: rgba(37, 68, 120, 0.95) !important;
-            font-weight: 500;
-        }
-        .card-ib-2 .ib-bento-pill {
-            background-color: var(--blue) !important;
-            color: var(--yellow) !important;
-            font-weight: 700;
-        }
-
-        .card-ib-3 {
-            background: rgba(240, 245, 255, 0.7) !important;
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
-            border: 1px solid rgba(22, 45, 88, 0.12) !important;
-        }
-        .card-ib-3:hover {
-            background: rgba(240, 245, 255, 0.85) !important;
-        }
-        .card-ib-3 .ib-bento-heading {
-            color: var(--blue) !important;
-        }
-        .card-ib-3 .ib-bento-heading span {
-            color: var(--blue) !important;
-            font-family: var(--font-playfair);
-            font-style: italic;
-            font-weight: 700;
-        }
-        .card-ib-3 .ib-bento-text {
-            color: rgba(37, 68, 120, 0.9) !important;
-            font-weight: 500;
-        }
-        .card-ib-3 .ib-bento-pill {
-            background-color: var(--blue) !important;
-            color: var(--yellow) !important;
-            font-weight: 700;
-        }
-
-        /* Cuerpo interno y textos */
-        .ib-bento-body {
+            justify-content: center;
+            align-items: flex-start;
             position: relative;
             z-index: 2;
-            padding: 30px 24px;
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-            flex-grow: 1;
         }
-
-        .ib-bento-pill {
-            display: inline-block;
-            align-self: flex-start;
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-family: var(--font-lato);
-            font-size: 0.8rem;
-            font-weight: 700;
-            margin-bottom: 15px;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
+        .ib-split-cta-right {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 380px;
+            position: relative;
         }
-
-        .ib-bento-heading {
-            font-family: var(--font-lato);
-            font-size: 1.5rem !important;
-            margin-bottom: 12px !important;
-            line-height: 1.3 !important;
-            font-weight: 700;
-        }
-
-        .ib-bento-text {
-            font-size: 0.88rem !important;
-            line-height: 1.55 !important;
-            margin: 0;
-        }
-
-        /* Marcas de agua estilo Mockup */
-        .card-watermark {
+        .ib-split-cta-shield {
             position: absolute;
-            right: -25px;
-            bottom: -20px;
-            font-size: 11rem;
-            font-weight: 900;
-            pointer-events: none;
-            z-index: 1;
-            line-height: 1;
-            user-select: none;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 76px;
+            height: auto;
+            z-index: 10;
+            filter: drop-shadow(0 6px 15px rgba(0,0,0,0.25));
         }
-        .card-ib-2 .card-watermark {
-            color: var(--blue);
-            opacity: 0.04;
+        .ib-split-cta-text {
+            font-family: var(--font-playfair);
+            font-size: 1.65rem;
+            font-style: italic;
+            font-weight: 600;
+            color: #ffffff;
+            line-height: 1.5;
+            margin: 0;
+            text-align: left;
+            position: relative;
         }
-        .card-ib-3 .card-watermark {
-            color: var(--blue);
-            opacity: 0.03;
-        }
-
-        /* Responsive */
-        @media (max-width: 1024px) {
-            .ib-bento-row {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-        @media (max-width: 768px) {
-            .ib-bento-row {
+        @media (max-width: 990px) {
+            .ib-split-cta-card {
                 grid-template-columns: 1fr;
+                margin: 40px 20px 80px 20px;
+                overflow: hidden;
             }
-            .ib-bento-card {
-                min-height: 380px;
+            .ib-split-cta-right {
+                min-height: 300px;
+                order: 2;
+            }
+            .ib-split-cta-left {
+                order: 1;
+                padding: 40px 30px;
+            }
+            .ib-split-cta-shield {
+                left: 50%;
+                top: 0;
+                transform: translate(-50%, -50%);
             }
         }
     </style>
@@ -494,229 +392,310 @@
         </div>
         <img src="assets/ChatGPT Image 1 jul 2025, 17_28_04 (3).png" alt="ColibrÃ­" class="header-colibri-float">
     </section>
-<main class="ib-page-container">
-        <div class="breadcrumbs">
+<main class="ib-page-container" style="background-color: #ffffff !important; padding-top: 130px;">
+        <!-- Floating background circles behind content (Espejo de filosofia-y-valores.html) -->
+        <div class="bg-circles-wrapper" style="position: absolute; inset: 0; pointer-events: none; z-index: 1;">
+            <div class="bg-circle bg-circle-ring-yellow circle-1"></div>
+            <div class="bg-circle bg-circle-solid-green circle-2"></div>
+            <div class="bg-circle bg-circle-ring-blue circle-3"></div>
+            <div class="bg-circle bg-circle-solid-yellow circle-4"></div>
+            <div class="bg-circle bg-circle-ring-green circle-5"></div>
+            <div class="bg-circle bg-circle-ring-yellow circle-6"></div>
+        </div>
+
+        <div class="breadcrumbs" style="position: relative; z-index: 2;">
             <a href="index.html">Inicio</a> &gt; <a href="#">Cultura Internacional</a> &gt; <span class="current">Programa IB</span>
         </div>
-        <!-- Unified Breadcrumbs -->
-        
 
-        <!-- Unified Header Title Section -->
-        <div class="tour-text-content hontanar-scroll-reveal" style="text-align: center; margin-bottom: 15px;">
-            
-            
-            <!-- Logo del Programa IB -->
-            <div class="ib-logo-wrapper">
-                <img src="assets/Grupo 4266.png" alt="Logo Bachillerato Internacional" class="ib-header-logo">
+
+        <!-- Wavy Card Intro Section (Espejo de filosofia-y-valores.html) -->
+        <section class="hontanar-scroll-reveal" style="margin-top: 25px; margin-bottom: 60px; padding: 0 20px; position: relative; z-index: 2;">
+            <div class="filo-wavy-container" style="max-width: 1140px; margin: 0 auto; position: relative; overflow: visible;">
+                <div class="filo-wavy-card text-left" style="min-height: 380px; position: relative; overflow: hidden; background: #ffffff; border-radius: 28px; box-shadow: 0 15px 45px rgba(0,0,0,0.06); border: 1px solid rgba(37, 68, 120, 0.08); display: flex;">
+                    <div class="wavy-card-text-col" style="padding: 50px 45px; flex: 1.1; display: flex; flex-direction: column; justify-content: center; gap: 20px; text-align: left; background: #ffffff;">
+                        <h2 class="wavy-card-title" style="font-family: var(--font-lato); font-size: 2.2rem; font-weight: 900; color: var(--blue); line-height: 1.25; margin: 0;">Colegio del Mundo del <br><span style="font-family: var(--font-playfair); font-style: italic; color: var(--green); font-weight: 600;">Bachillerato Internacional</span></h2>
+                        <p class="wavy-card-paragraph" style="font-family: var(--font-lato); font-size: 1rem; line-height: 1.7; color: #4a5568; margin: 0;">En el Gimnasio El Hontanar preparamos a nuestros estudiantes para un entorno cambiante, multicultural y competitivo, brindándoles herramientas reales para liderar su futuro.</p>
+                        <p class="wavy-card-paragraph-highlight" style="font-family: var(--font-lato); font-size: 1rem; line-height: 1.5; color: var(--blue); font-weight: 700; margin: 0;">Compartimos una filosofía con instituciones de alta calidad en todo el mundo: el compromiso de mejorar la enseñanza y el aprendizaje de una comunidad escolar diversa e inclusiva, a través de rigurosos marcos de evaluación.</p>
+                    </div>
+                    <div class="wavy-card-img-col" style="background-image: url('assets/DSC_0762_copia.jpg'); background-size: cover; background-position: center; flex: 0.9; min-height: 380px; position: relative;">
+                        <!-- Wavy divider path overlapping the image from left -->
+                        <svg viewBox="0 0 100 600" preserveAspectRatio="none" class="wavy-edge-svg wave-right-side" style="position: absolute; top: 0; bottom: 0; left: -1px; width: 60px; height: 100%; z-index: 2; pointer-events: none;">
+                            <path d="M0,0 L30,0 C60,150 70,300 25,450 C10,520 0,600 0,600 Z" fill="#ffffff"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 1: MODELO PEDAGÓGICO — Tarjetas Interactivas (Espejo de modelo-de-ensenanza.html) -->
+        <section class="multi-bento-section" style="padding: 60px 20px 80px 20px; background-color: #ffffff; position: relative; z-index: 2;">
+            <!-- Cabecera de la sección -->
+            <div class="tour-text-content hontanar-scroll-reveal" style="text-align: center; margin-bottom: 50px;">
+                <h2 style="font-family: var(--font-lato); font-size: 2.2rem; font-weight: 900; color: var(--blue); line-height: 1.35; margin: 0 auto; max-width: 900px;">
+                    Un modelo pedagógico que va más allá de <br><span style="font-family: var(--font-playfair); font-style: italic; color: var(--green); font-weight: 600;">la memoria: Colegios IB en Bogotá y Chía</span>
+                </h2>
             </div>
             
-            
-            
-            <!-- Contenedor Premium de Introducción (Dos Tarjetas Asimétricas) -->
-            <div class="ib-intro-cards-row hontanar-scroll-reveal">
-                
-                <!-- Card 1: Enfoque Global -->
-                <div class="ib-intro-mini-card focus-card">
-                    <div class="mini-card-badge">ENFOQUE GLOBAL</div>
-                    <div class="mini-card-content">
-                        <h3>Formación con estándares globales</h3>
-                        <p>En el Gimnasio El Hontanar preparamos a nuestros estudiantes para un entorno cambiante, multicultural y competitivo, brindándoles herramientas reales para liderar su futuro.</p>
+            <div class="model-cards-grid" style="max-width: 1140px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; padding: 0;">
+                <!-- Card 1: Indagación y Crítica -->
+                <div class="model-card hontanar-scroll-reveal" style="background-image: url('assets/DSC_0148.JPG');">
+                    <div class="model-card-content">
+                        <span class="model-card-num">01</span>
+                        <h3 class="model-card-title">Indagación y <span>crítica</span></h3>
+                        <p class="model-card-text">El modelo IB no se basa en la memorización de contenidos, sino en el desarrollo de habilidades de indagación, mentalidad abierta y pensamiento crítico.</p>
                     </div>
                 </div>
 
-                <!-- Card 2: Filosofía IB -->
-                <div class="ib-intro-mini-card philosophy-card">
-                    <div class="mini-card-badge">FILOSOFÍA IB</div>
-                    <div class="mini-card-content">
-                        <h3>Colegio del Mundo del Bachillerato Internacional</h3>
-                        <p>Compartimos una filosofía con instituciones de alta calidad en todo el mundo: el compromiso de mejorar la enseñanza y el aprendizaje de una comunidad escolar diversa e inclusiva, a través de rigurosos marcos de evaluación.</p>
+                <!-- Card 2: Investigación y Autonomía -->
+                <div class="model-card hontanar-scroll-reveal" style="background-image: url('assets/DSC_0007.JPG');">
+                    <div class="model-card-content">
+                        <span class="model-card-num">02</span>
+                        <h3 class="model-card-title">Investigación y <span>autonomía</span></h3>
+                        <p class="model-card-text">A través del Programa del Diploma (PD) en décimo y undécimo, los estudiantes aprenden a investigar autónomamente y plantear soluciones reales.</p>
                     </div>
                 </div>
 
+                <!-- Card 3: Rigurosidad Académica -->
+                <div class="model-card hontanar-scroll-reveal" style="background-image: url('assets/Copia_de_DSC_0186.JPG');">
+                    <div class="model-card-content">
+                        <span class="model-card-num">03</span>
+                        <h3 class="model-card-title">Rigurosidad <span>académica</span></h3>
+                        <p class="model-card-text">Este enfoque les permite adquirir una rigurosidad académica superior, preparándolos con las herramientas necesarias para la educación superior.</p>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <!-- SECCIÓN 1: MODELO PEDAGÓGICO (Estilo Imagen Referencia) -->
-        <section class="ib-pedagogy-section parallax-bg" style="background-image: url('assets/DSC_0040.JPG');">
-            <div class="ib-section-overlay"></div>
-            <div class="ib-pedagogy-card hontanar-scroll-reveal">
+        <!-- SECCIÓN 2: PERFIL DE LA COMUNIDAD IB — Layout Premium Azul con Foto y Tarjetas Translúcidas -->
+        <section class="ib-profile-section" style="padding: 100px 20px; background-color: #1b3259; position: relative; z-index: 2; margin: 60px 0;">
+            <!-- Background circles wrapper -->
+            <div class="bg-circles-wrapper" style="position: absolute; inset: 0; pointer-events: none; z-index: 1; opacity: 0.15;">
+                <div class="bg-circle bg-circle-ring-yellow circle-1"></div>
+                <div class="bg-circle bg-circle-solid-green circle-2"></div>
+                <div class="bg-circle bg-circle-ring-blue circle-3"></div>
+            </div>
 
+            <div class="ib-profile-container" style="max-width: 1140px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1.25fr; gap: 50px; align-items: stretch; position: relative; z-index: 2;">
                 
-                <!-- Cabecera de la sección -->
-                <div class="ib-pedagogy-header">
-                    <h2 class="ib-pedagogy-title">
-                        Un modelo pedagógico que va más allá de <br>la memoria: Colegios IB en Bogotá y Chía
+                <!-- Left Side: Large Photo Card -->
+                <div class="ib-profile-photo-col hontanar-scroll-reveal" style="position: relative; border-radius: 0; overflow: hidden; min-height: 550px; background-image: url('assets/Copia_de_DSC_0197.JPG'); background-size: cover; background-position: center; box-shadow: 0 20px 45px rgba(0, 0, 0, 0.3);">
+                    <!-- Overlay to match dark theme -->
+                    <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(27, 50, 89, 0.6) 0%, transparent 60%); pointer-events: none;"></div>
+                    <!-- Yellow Capa 2 SVG Decorator -->
+                    <img src="assets/Recurso 5-yellow.svg" style="position: absolute; bottom: 25px; left: 25px; width: 140px; height: auto; z-index: 3;" alt="Decoración">
+                </div>
+
+                <!-- Right Side: Content and 2x2 Glass Cards Grid -->
+                <div class="ib-profile-content-col hontanar-scroll-reveal" style="display: flex; flex-direction: column; justify-content: center; text-align: left;">
+                    <h2 style="font-family: var(--font-lato); font-size: 2.2rem; font-weight: 900; color: #ffffff; line-height: 1.3; margin: 0 0 15px 0;">
+                        Mentalidad internacional, <br>
+                        ciudadanos del mundo: descubre <br>
+                        <span style="font-family: var(--font-playfair); font-style: italic; color: var(--yellow); font-weight: 600;">las ventajas del Bachillerato Internacional</span>
                     </h2>
-                </div>
-                
-                <!-- Retícula Bento Estática Premium -->
-                <div class="ib-bento-row">
                     
-                    <!-- Card 1: Indagación y Crítica -->
-                    <div class="ib-bento-card card-ib-1 hontanar-scroll-reveal">
-                        <div class="ib-bento-body">
-                            <span class="ib-bento-pill">INDAGACIÓN Y CRÍTICA</span>
-                            <h3 class="ib-bento-heading">Indagación y<br><span>crítica</span></h3>
-                            <p class="ib-bento-text">El modelo IB no se basa en la memorización de contenidos, sino en el desarrollo de habilidades de indagación, mentalidad abierta y pensamiento crítico.</p>
-                        </div>
-                    </div>
+                    <p style="font-family: var(--font-lato); font-size: 0.98rem; line-height: 1.65; color: rgba(255, 255, 255, 0.85); margin: 0 0 35px 0;">
+                        El programa fomenta el desarrollo de ciudadanos con <strong style="color: #ffffff;">mentalidad internacional</strong>, conscientes de su papel en la sociedad and con una profunda <strong style="color: #ffffff;">sensibilidad hacia otras culturas</strong>. Los estudiantes del Hontanar se destacan por su capacidad de argumentar con criterio, trabajar en equipo y liderar proyectos con un <strong style="color: #ffffff;">alto sentido ético</strong>.
+                    </p>
 
-                    <!-- Card 2: Autonomía e Investigación (Fondo Amarillo Sólido) -->
-                    <div class="ib-bento-card card-ib-2 hontanar-scroll-reveal">
-                        <!-- Marca de agua representativa (Globo Terráqueo) -->
-                        <div class="card-watermark">&#127760;</div>
-                        <div class="ib-bento-body">
-                            <span class="ib-bento-pill">AUTONOMÍA</span>
-                            <h3 class="ib-bento-heading">Investigación y<br><span>autonomía</span></h3>
-                            <p class="ib-bento-text">A través del Programa del Diploma (PD) en los grados décimo y undécimo, y los componentes previos en grados anteriores, los estudiantes aprenden a investigar de manera autónoma, conectar diferentes áreas del conocimiento y plantear soluciones a problemas reales.</p>
+                    <!-- 2x2 Grid of Glass Attribute Cards -->
+                    <div class="ib-attributes-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
+                        
+                        <!-- Card 1: Audaces -->
+                        <div class="ib-attr-card" style="background: rgba(255, 255, 255, 0.05); border: 1.5px solid rgba(255, 255, 255, 0.1); border-radius: 0; padding: 25px 22px; transition: all 0.3s ease; display: flex; flex-direction: column; gap: 15px;">
+                            <div style="display: flex; align-items: center; gap: 14px;">
+                                <div style="width: 38px; height: 38px; border-radius: 50%; background-color: rgba(249, 239, 108, 0.1); border: 1.5px solid var(--yellow); display: flex; align-items: center; justify-content: center; color: var(--yellow); flex-shrink: 0;">
+                                    <!-- Compass / Audacity Icon -->
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 18px; height: 18px;">
+                                        <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
+                                        <circle cx="12" cy="12" r="10"/>
+                                    </svg>
+                                </div>
+                                <h3 style="font-family: var(--font-lato); font-size: 1.15rem; font-weight: 700; color: #ffffff; margin: 0; line-height: 1.2;">Jóvenes Audaces</h3>
+                            </div>
+                            <p style="font-family: var(--font-lato); font-size: 0.86rem; line-height: 1.55; color: rgba(255, 255, 255, 0.75); margin: 0;">Afrontan la incertidumbre con previsión y determinación. Trabajan de forma autónoma y colaborativa para explorar nuevas ideas y defender con valor sus convicciones.</p>
                         </div>
-                    </div>
 
-                    <!-- Card 3: Rigurosidad Académica (Fondo Glassmorphic Blanco) -->
-                    <div class="ib-bento-card card-ib-3 hontanar-scroll-reveal">
-                        <!-- Marca de agua representativa (Libro) -->
-                        <div class="card-watermark">&#128214;</div>
-                        <div class="ib-bento-body">
-                            <span class="ib-bento-pill">RIGUROSIDAD</span>
-                            <h3 class="ib-bento-heading">Rigurosidad<br><span>académica</span></h3>
-                            <p class="ib-bento-text">Este enfoque les permite adquirir una rigurosidad académica superior, preparándolos con las herramientas necesarias para la educación superior.</p>
+                        <!-- Card 2: Reflexivos -->
+                        <div class="ib-attr-card" style="background: rgba(255, 255, 255, 0.05); border: 1.5px solid rgba(255, 255, 255, 0.1); border-radius: 0; padding: 25px 22px; transition: all 0.3s ease; display: flex; flex-direction: column; gap: 15px;">
+                            <div style="display: flex; align-items: center; gap: 14px;">
+                                <div style="width: 38px; height: 38px; border-radius: 50%; background-color: rgba(249, 239, 108, 0.1); border: 1.5px solid var(--yellow); display: flex; align-items: center; justify-content: center; color: var(--yellow); flex-shrink: 0;">
+                                    <!-- Brain / Reflection Icon -->
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 18px; height: 18px;">
+                                        <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.44 2.5 2.5 0 0 1 0-3.12 3 3 0 0 1 0-3.88 2.5 2.5 0 0 1 0-3.12A2.5 2.5 0 0 1 9.5 2Z"/>
+                                        <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.44 2.5 2.5 0 0 0 0-3.12 3 3 0 0 0 0-3.88 2.5 2.5 0 0 0 0-3.12A2.5 2.5 0 0 0 14.5 2Z"/>
+                                    </svg>
+                                </div>
+                                <h3 style="font-family: var(--font-lato); font-size: 1.15rem; font-weight: 700; color: #ffffff; margin: 0; line-height: 1.2;">Jóvenes Reflexivos</h3>
+                            </div>
+                            <p style="font-family: var(--font-lato); font-size: 0.86rem; line-height: 1.55; color: rgba(255, 255, 255, 0.75); margin: 0;">Evalúan detenidamente su propio aprendizaje y sus fortalezas y debilidades personales a fin de apoyar su aprendizaje y desarrollo personal de manera consciente.</p>
                         </div>
-                    </div>
 
+                        <!-- Card 3: Buenos Comunicadores -->
+                        <div class="ib-attr-card" style="background: rgba(255, 255, 255, 0.05); border: 1.5px solid rgba(255, 255, 255, 0.1); border-radius: 0; padding: 25px 22px; transition: all 0.3s ease; display: flex; flex-direction: column; gap: 15px;">
+                            <div style="display: flex; align-items: center; gap: 14px;">
+                                <div style="width: 38px; height: 38px; border-radius: 50%; background-color: rgba(249, 239, 108, 0.1); border: 1.5px solid var(--yellow); display: flex; align-items: center; justify-content: center; color: var(--yellow); flex-shrink: 0;">
+                                    <!-- Chat / Communication Icon -->
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 18px; height: 18px;">
+                                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                                    </svg>
+                                </div>
+                                <h3 style="font-family: var(--font-lato); font-size: 1.15rem; font-weight: 700; color: #ffffff; margin: 0; line-height: 1.2;">Buenos Comunicadores</h3>
+                            </div>
+                            <p style="font-family: var(--font-lato); font-size: 0.86rem; line-height: 1.55; color: rgba(255, 255, 255, 0.75); margin: 0;">Se expresan con confianza y creatividad en diversas lenguas. Colaboran eficazmente escuchando atentamente las perspectivas de otras personas y grupos.</p>
+                        </div>
+
+                        <!-- Card 4: Íntegros -->
+                        <div class="ib-attr-card" style="background: rgba(255, 255, 255, 0.05); border: 1.5px solid rgba(255, 255, 255, 0.1); border-radius: 0; padding: 25px 22px; transition: all 0.3s ease; display: flex; flex-direction: column; gap: 15px;">
+                            <div style="display: flex; align-items: center; gap: 14px;">
+                                <div style="width: 38px; height: 38px; border-radius: 50%; background-color: rgba(249, 239, 108, 0.1); border: 1.5px solid var(--yellow); display: flex; align-items: center; justify-content: center; color: var(--yellow); flex-shrink: 0;">
+                                    <!-- Shield / Integrity Icon -->
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 18px; height: 18px;">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                    </svg>
+                                </div>
+                                <h3 style="font-family: var(--font-lato); font-size: 1.15rem; font-weight: 700; color: #ffffff; margin: 0; line-height: 1.2;">Jóvenes Íntegros</h3>
+                            </div>
+                            <p style="font-family: var(--font-lato); font-size: 0.86rem; line-height: 1.55; color: rgba(255, 255, 255, 0.75); margin: 0;">Actúan con integridad y honradez, con un profundo sentido de la equidad, la justicia y el respeto por la dignidad y los derechos de las personas en todo el mundo.</p>
+                        </div>
+
+                    </div>
                 </div>
+
+            </div>
+
+            <!-- Quote Separator Box -->
+            <div class="ib-profile-quote hontanar-scroll-reveal" style="max-width: 1140px; margin: 50px auto 0 auto; padding-top: 30px; text-align: center;">
+                <p style="font-family: var(--font-playfair); font-style: italic; color: #ffffff; font-weight: 600; margin: 0;">
+                    Formamos jóvenes audaces, reflexivos, comunicadores e íntegros.
+                </p>
             </div>
         </section>
 
-        <!-- SECCIÓN 2: PERFIL DE LA COMUNIDAD IB (INTERACTIVE GRID) -->
-        <section class="ib-profile-section">
-            <div class="ib-section-header hontanar-scroll-reveal" style="margin-bottom: 50px;">
-                <h2 class="section-heading">Mentalidad internacional, ciudadanos del mundo: <br><span>descubre las ventajas del Bachillerato Internacional</span></h2>
-                <p class="ib-section-lead-centered">El programa fomenta el desarrollo de ciudadanos con <strong>mentalidad internacional</strong>, conscientes de su papel en la sociedad y con una profunda <strong>sensibilidad hacia otras culturas</strong>. Los estudiantes del Hontanar se destacan por su capacidad de argumentar con criterio, trabajar en equipo y liderar proyectos con un <strong>alto sentido ético</strong>.</p>
-            </div>
-
-            <!-- Grid de 4 tarjetas de atributos del Perfil de la Comunidad IB -->
-            <div class="ib-profile-grid">
-                
-                <!-- Atributo 1: Audaces -->
-                <div class="ib-profile-card hontanar-scroll-reveal">
-                    <div class="profile-card-glow"></div>
-                    <div class="profile-header">
-                        <div class="profile-icon-wrapper">
-                            <svg class="profile-icon-shine-svg" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 2C12 7.5 16.5 12 22 12C16.5 12 12 16.5 12 22C12 16.5 7.5 12 2 12C7.5 12 12 7.5 12 2Z"/>
-                            </svg>
-                        </div>
-                        <h3>Jóvenes <br>Audaces</h3>
-                    </div>
-                    <div class="profile-divider"></div>
-                    <p class="profile-desc">Afrontan la incertidumbre con previsión y determinación. Trabajan de forma autónoma y colaborativa para explorar nuevas ideas y defender con valor sus convicciones.</p>
-                </div>
-
-                <!-- Atributo 2: Reflexivos -->
-                <div class="ib-profile-card hontanar-scroll-reveal">
-                    <div class="profile-card-glow"></div>
-                    <div class="profile-header">
-                        <div class="profile-icon-wrapper">
-                            <svg class="profile-icon-shine-svg" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 2C12 7.5 16.5 12 22 12C16.5 12 12 16.5 12 22C12 16.5 7.5 12 2 12C7.5 12 12 7.5 12 2Z"/>
-                            </svg>
-                        </div>
-                        <h3>Jóvenes <br>Reflexivos</h3>
-                    </div>
-                    <div class="profile-divider"></div>
-                    <p class="profile-desc">Evalúan detenidamente su propio aprendizaje y sus fortalezas y debilidades personales a fin de apoyar su aprendizaje y desarrollo personal de manera consciente.</p>
-                </div>
-
-                <!-- Atributo 3: Buenos Comunicadores -->
-                <div class="ib-profile-card hontanar-scroll-reveal">
-                    <div class="profile-card-glow"></div>
-                    <div class="profile-header">
-                        <div class="profile-icon-wrapper">
-                            <svg class="profile-icon-shine-svg" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 2C12 7.5 16.5 12 22 12C16.5 12 12 16.5 12 22C12 16.5 7.5 12 2 12C7.5 12 12 7.5 12 2Z"/>
-                            </svg>
-                        </div>
-                        <h3>Buenos <br>Comunicadores</h3>
-                    </div>
-                    <div class="profile-divider"></div>
-                    <p class="profile-desc">Se expresan con confianza y creatividad en diversas lenguas. Colaboran eficazmente escuchando atentamente las perspectivas de otras personas y grupos.</p>
-                </div>
-
-                <!-- Atributo 4: Íntegros -->
-                <div class="ib-profile-card hontanar-scroll-reveal">
-                    <div class="profile-card-glow"></div>
-                    <div class="profile-header">
-                        <div class="profile-icon-wrapper">
-                            <svg class="profile-icon-shine-svg" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 2C12 7.5 16.5 12 22 12C16.5 12 12 16.5 12 22C12 16.5 7.5 12 2 12C7.5 12 12 7.5 12 2Z"/>
-                            </svg>
-                        </div>
-                        <h3>Jóvenes <br>Íntegros</h3>
-                    </div>
-                    <div class="profile-divider"></div>
-                    <p class="profile-desc">Actúan con integridad y honradez, con un profundo sentido de la equidad, la justicia y el respeto por la dignidad y los derechos de las personas en todo el mundo.</p>
-                </div>
-
-            </div>
+        <!-- SECCIÓN 3: VENTAJAS ACCESO UNIVERSITARIO — Carrusel Dividido (Espejo de multilinguismo.html) -->
+        <section class="pq-split-carousel-section hontanar-scroll-reveal" style="margin-top: 60px; margin-bottom: 80px; position: relative; z-index: 2;">
+            <!-- Rectangulito amarillo decorativo detrás de la foto -->
+            <div class="pq-carousel-yellow-accent" style="bottom: 0; left: 0;"></div>
             
-            <div class="ib-profile-quote hontanar-scroll-reveal">
-                <p>Formamos jóvenes audaces, reflexivos, comunicadores e íntegros.</p>
+            <!-- Arrowheads decorator on top of the border line -->
+            <svg class="pq-slider-decorator deco-green" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 86.71 12.86" style="position: absolute; top: -10px; right: 20px; width: 90px; z-index: 3;">
+                <g id="OBJECTS">
+                    <g>
+                        <g>
+                            <polygon class="cls-1" points="11.14 6.43 0 0 0 12.86 11.14 6.43" fill="var(--green)"/>
+                            <polygon class="cls-1" points="26.07 6.43 14.93 0 14.93 12.86 26.07 6.43" fill="var(--green)"/>
+                            <polygon class="cls-1" points="41 6.43 29.86 0 29.86 12.86 41 6.43" fill="var(--green)"/>
+                        </g>
+                        <g>
+                            <polygon class="cls-1" points="75.57 6.43 86.71 0 86.71 12.86 75.57 6.43" fill="var(--green)"/>
+                            <polygon class="cls-1" points="60.64 6.43 71.78 0 71.78 12.86 60.64 6.43" fill="var(--green)"/>
+                            <polygon class="cls-1" points="45.71 6.43 56.85 0 56.85 12.86 45.71 6.43" fill="var(--green)"/>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+
+            <!-- Left Side: Slide Images -->
+            <div class="pq-carousel-images-wrapper" style="border-radius: 28px 0 0 28px;">
+                <div class="pq-carousel-img-slide active" style="background-image: url('assets/DSC_0092.JPG'); background-position: center;"></div>
+                <div class="pq-carousel-img-slide" style="background-image: url('assets/DSC_0762_copia.jpg'); background-position: center;"></div>
             </div>
-        </section>
 
-        <!-- SECCIÓN 3: VENTAJAS ACCESO UNIVERSITARIO (LAYOUT CARD ÚNICA premium) -->
-        <section class="ib-university-section">
-            <div class="ib-university-card hontanar-scroll-reveal">
-                
-                <!-- Cabecera Centrada -->
-                <div class="ib-university-header">
-                    <h2 class="exchange-title">Ventajas del Programa del Diploma IB <br><span class="highlight-yellow-italic">para el acceso universitario</span></h2>
-                    <p class="ib-university-lead">El Bachillerato Internacional abre las puertas a las mejores universidades de Colombia y el mundo.<br><br>Los egresados del programa no solo desarrollan una alta competencia en investigación y redacción académica (gracias a componentes como la Monografía), sino que también tienen la posibilidad de homologar créditos universitarios en diversas instituciones, facilitando su transición y éxito en la educación superior.</p>
+            <!-- Right Side: Content Panel (White background) -->
+            <div class="pq-carousel-content-panel" style="border-radius: 0 28px 28px 0; padding: 60px 45px 40px 45px; display: flex; flex-direction: column; justify-content: center;">
+                <!-- Floating background circles for Carousel Section -->
+                <div class="bg-circles-wrapper" style="position: absolute; inset: 0; pointer-events: none; z-index: 1;">
+                    <div class="bg-circle bg-circle-ring-yellow circle-1"></div>
+                    <div class="bg-circle bg-circle-solid-green circle-2"></div>
+                    <div class="bg-circle bg-circle-ring-blue circle-3"></div>
                 </div>
 
-                <!-- Grid de micro-tarjetas de beneficios -->
-                <div class="ib-university-grid">
-                    <div class="ib-university-pill">
-                        <span class="check-icon-premium">✓</span>
-                        <span class="pill-text">Posibilidad de homologar créditos universitarios en diversas instituciones nacionales e internacionales</span>
-                    </div>
-                    <div class="ib-university-pill">
-                        <span class="check-icon-premium">✓</span>
-                        <span class="pill-text">Desarrollo de competencias de investigación y redacción académica mediante la Monografía</span>
-                    </div>
-                    <div class="ib-university-pill">
-                        <span class="check-icon-premium">✓</span>
-                        <span class="pill-text">Preparación metodológica rigurosa que facilita la transición a la educación superior</span>
-                    </div>
-                    <div class="ib-university-pill">
-                        <span class="check-icon-premium">✓</span>
-                        <span class="pill-text">Reconocimiento global preferente en procesos de admisión de universidades de élite</span>
+                <!-- Controls (Indicators) -->
+                <div class="pq-carousel-controls" style="margin-bottom: 25px; position: relative; z-index: 2;">
+                    <div class="pq-carousel-indicators">
+                        <span class="pq-indicator-dot active" data-slide="0"></span>
+                        <span class="pq-indicator-dot" data-slide="1"></span>
                     </div>
                 </div>
 
-                <!-- Spotlight Quote Callout Centrado -->
-                <div class="ib-university-quote">
-                    <p>Un pasaporte académico global: <span class="quote-italic-highlight">la rigurosidad del Diploma IB</span> <br><span class="quote-italic-highlight">prepara para los retos de la vida real.</span></p>
-                </div>
+                <div class="pq-carousel-slides-wrapper" style="height: auto; position: relative; z-index: 2;">
+                    <!-- Slide 1: Ventajas del Diploma IB -->
+                    <div class="pq-carousel-slide active">
+                        <h3 class="pq-slide-title" style="font-family: var(--font-playfair); font-size: 1.95rem; font-weight: 600; color: var(--blue); margin: 0 0 15px 0; text-transform: none; line-height: 1.25;">
+                            Ventajas del Diploma IB<br><span style="font-style: italic; color: var(--green); font-family: var(--font-playfair); font-weight: 600;">para el acceso universitario</span>
+                        </h3>
+                        <div class="pq-slide-description" style="color: #4a5568; line-height: 1.65; font-size: 0.94rem;">
+                            <p style="margin-bottom: 20px;">El Bachillerato Internacional abre las puertas a las mejores universidades de Colombia y del mundo. Sus estudiantes desarrollan una sólida preparación académica y metodológica que facilita su ingreso y adaptación a la educación superior.</p>
+                            
+                            <!-- Bullet lists with checkmarks -->
+                            <ul class="exchange-bullets-list" style="list-style: none; padding: 0; margin: 15px 0; display: flex; flex-direction: column; gap: 10px;">
+                                <li style="display: flex; align-items: flex-start; gap: 10px; font-family: var(--font-lato); font-size: 0.92rem; color: #4a5568;">
+                                    <span style="color: var(--green); font-weight: bold; font-size: 1.1rem; line-height: 1;">✓</span>
+                                    <span>Reconocimiento global en procesos de admisión.</span>
+                                </li>
+                                <li style="display: flex; align-items: flex-start; gap: 10px; font-family: var(--font-lato); font-size: 0.92rem; color: #4a5568;">
+                                    <span style="color: var(--green); font-weight: bold; font-size: 1.1rem; line-height: 1;">✓</span>
+                                    <span>Posibilidad de homologar créditos universitarios en instituciones nacionales e internacionales.</span>
+                                </li>
+                                <li style="display: flex; align-items: flex-start; gap: 10px; font-family: var(--font-lato); font-size: 0.92rem; color: #4a5568;">
+                                    <span style="color: var(--green); font-weight: bold; font-size: 1.1rem; line-height: 1;">✓</span>
+                                    <span>Preparación para una transición exitosa a la universidad.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
 
+                    <!-- Slide 2: Preparación para los retos de la vida real -->
+                    <div class="pq-carousel-slide">
+                        <h3 class="pq-slide-title" style="font-family: var(--font-playfair); font-size: 1.95rem; font-weight: 600; color: var(--blue); margin: 0 0 15px 0; text-transform: none; line-height: 1.25;">
+                            Preparación para los retos<br><span style="font-style: italic; color: var(--green); font-family: var(--font-playfair); font-weight: 600;">de la vida real</span>
+                        </h3>
+                        <div class="pq-slide-description" style="color: #4a5568; line-height: 1.65; font-size: 0.94rem;">
+                            <p style="margin-bottom: 20px;">El Programa IB fortalece habilidades clave para el ámbito universitario y profesional mediante una formación rigurosa.</p>
+                            
+                            <!-- Bullet lists with checkmarks -->
+                            <ul class="exchange-bullets-list" style="list-style: none; padding: 0; margin: 15px 0; display: flex; flex-direction: column; gap: 10px;">
+                                <li style="display: flex; align-items: flex-start; gap: 10px; font-family: var(--font-lato); font-size: 0.92rem; color: #4a5568;">
+                                    <span style="color: var(--green); font-weight: bold; font-size: 1.1rem; line-height: 1;">✓</span>
+                                    <span>Desarrollo de competencias de investigación y redacción académica a través de la Monografía.</span>
+                                </li>
+                                <li style="display: flex; align-items: flex-start; gap: 10px; font-family: var(--font-lato); font-size: 0.92rem; color: #4a5568;">
+                                    <span style="color: var(--green); font-weight: bold; font-size: 1.1rem; line-height: 1;">✓</span>
+                                    <span>Formación con metodología de nivel internacional.</span>
+                                </li>
+                                <li style="display: flex; align-items: flex-start; gap: 10px; font-family: var(--font-lato); font-size: 0.92rem; color: #4a5568;">
+                                    <span style="color: var(--green); font-weight: bold; font-size: 1.1rem; line-height: 1;">✓</span>
+                                    <span>Pensamiento crítico, autonomía y preparación para el futuro.</span>
+                                </li>
+                            </ul>
+
+                            <p style="font-weight: 700; color: var(--green); font-size: 0.98rem; margin-top: 15px; font-family: var(--font-playfair); font-style: italic;">Un pasaporte académico global: la rigurosidad del Diploma IB prepara para los retos de la vida real.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- Final Call to Action Section -->
-        <section class="ib-final-cta-section hontanar-scroll-reveal">
-            <!-- Escudo del Colegio -->
-            <div class="ib-final-shield-wrapper">
-                <img src="assets/Capa_2_xA0_Imagen.png" alt="Escudo Gimnasio El Hontanar" class="ib-final-shield">
+        <section class="ib-final-cta-section hontanar-scroll-reveal" style="max-width: 100%; margin: 60px 0 0 0; padding: 0 20px;">
+            <div class="ib-split-cta-card">
+                <!-- Escudo del Colegio Centrado en la Costura -->
+                <img src="assets/Capa_2_xA0_Imagen.png" alt="Escudo Gimnasio El Hontanar" class="ib-split-cta-shield">
+                
+                <!-- Left Side: Content Box -->
+                <div class="ib-split-cta-left">
+                    <blockquote class="ib-split-cta-text">
+                        "Si buscas una educación con proyección internacional, altos estándares académicos y una formación humana basada en valores, agenda una cita y conoce el proceso de admisión en el Gimnasio El Hontanar."
+                    </blockquote>
+                </div>
+
+                <!-- Right Side: Photo Box -->
+                <div class="ib-split-cta-right" style="background-image: url('assets/Copia_de_DSC_0113.JPG');"></div>
             </div>
-            
-            <p class="cta-message">
-                Si buscas una educación con proyección internacional, altos estándares académicos y una formación humana basada en valores, agenda una cita y conoce el proceso de admisión en el Gimnasio El Hontanar.
-            </p>
         </section>
 
     </main>
 
-    <!-- Scroll Reveal Observer Script -->
+    <!-- Scroll Reveal Observer Script & Carousel Controller -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const revealObserver = new IntersectionObserver((entries) => {
@@ -730,6 +709,27 @@
 
             const scrollElements = document.querySelectorAll('.hontanar-scroll-reveal');
             scrollElements.forEach(el => revealObserver.observe(el));
+
+            // Carousel Switcher Logic for Ventajas del Diploma IB Section
+            const dots = document.querySelectorAll('.pq-carousel-indicators .pq-indicator-dot');
+            const textSlides = document.querySelectorAll('.pq-carousel-slide');
+            const imgSlides = document.querySelectorAll('.pq-carousel-img-slide');
+
+            dots.forEach(dot => {
+                dot.addEventListener('click', () => {
+                    const targetIndex = parseInt(dot.getAttribute('data-slide'));
+
+                    // Deactivate all
+                    dots.forEach(d => d.classList.remove('active'));
+                    textSlides.forEach(s => s.classList.remove('active'));
+                    imgSlides.forEach(i => i.classList.remove('active'));
+
+                    // Activate selected
+                    dot.classList.add('active');
+                    textSlides[targetIndex].classList.add('active');
+                    imgSlides[targetIndex].classList.add('active');
+                });
+            });
         });
     </script>
 

@@ -1150,5 +1150,118 @@
     .exchange-evolution-grid {
         grid-template-columns: 1fr;
     }
+}
 
+/* ==========================================================================
+   LIGHT THEME OVERRIDES FOR WHITE BACKGROUND (SOMOS HONTANAR / ADMISIONES STYLE)
+   ========================================================================== */
+.exchange-page-container {
+    background-color: #ffffff !important;
+}
+
+/* Breadcrumbs text color */
+.exchange-page-container .breadcrumbs,
+.exchange-page-container .breadcrumbs a {
+    color: #4a5568 !important;
+}
+
+.exchange-page-container .breadcrumbs .current {
+    color: var(--blue) !important;
+}
+
+/* Intro Grid text color */
+.exchange-page-container .exchange-intro-left p {
+    color: var(--green) !important;
+    border-left-color: var(--green) !important;
+}
+
+.exchange-page-container .exchange-intro-right p {
+    color: #4a5568 !important;
+}
+
+/* Evolution Section */
+.exchange-page-container .exchange-evolution-section {
+    background-color: #ffffff !important;
+}
+
+.exchange-page-container .evolution-title {
+    color: var(--blue) !important;
+}
+
+.exchange-page-container .evolution-lead {
+    color: #4a5568 !important;
+}
+
+.exchange-page-container .evolution-quote-bottom p {
+    color: var(--blue) !important;
+}
+
+/* Skills section */
+.exchange-page-container .exchange-skills-section {
+    background-color: #ffffff !important;
+}
+
+.exchange-page-container .skills-header .section-heading {
+    color: var(--blue) !important;
+}
+
+.exchange-page-container .skills-header .section-heading span {
+    color: var(--green) !important;
+    font-family: var(--font-playfair);
+    font-style: italic;
+}
+
+.exchange-page-container .skills-lead {
+    color: #4a5568 !important;
+}
+
+.exchange-page-container .skills-diagram-card {
+    background: #ffffff !important;
+    border: 1px solid rgba(37, 68, 120, 0.08) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04) !important;
+}
+
+.exchange-page-container .skills-diagram-card h3 {
+    color: var(--blue) !important;
+}
+
+.exchange-page-container .skills-highlight-quote p {
+    color: var(--blue) !important;
+}
+
+/* Bento grid */
+.exchange-page-container .exchange-bento-section {
+    background-color: #ffffff !important;
+}
+
+.exchange-page-container .bento-card.bento-glass-white {
+    background: #ffffff !important;
+    border: 1px solid rgba(37, 68, 120, 0.08) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04) !important;
+}
+
+.exchange-page-container .bento-card.bento-glass-white h3 {
+    color: var(--blue) !important;
+}
+
+.exchange-page-container .bento-card.bento-glass-white p {
+    color: #4a5568 !important;
+}
+
+.exchange-page-container .bento-card.bento-glass-white .bento-highlight-line {
+    color: var(--blue) !important;
+    border-left-color: var(--green) !important;
+}
+
+.exchange-page-container .bento-card.bento-glass-yellow {
+    background: var(--yellow) !important;
+    box-shadow: 0 10px 30px rgba(249, 239, 108, 0.1) !important;
+}
+
+.exchange-page-container .bento-card.bento-glass-yellow p {
+    color: var(--blue) !important;
+}
+
+.exchange-page-container .bento-card.bento-glass-yellow .bento-highlight {
+    color: var(--blue) !important;
 }

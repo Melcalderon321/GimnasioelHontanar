@@ -925,3 +925,192 @@
         line-height: 1.6;
     }
 }
+
+/* ==========================================================================
+   LIGHT THEME OVERRIDES FOR WHITE BACKGROUND (SOMOS HONTANAR / ADMISIONES STYLE)
+   ========================================================================== */
+.counseling-page-container {
+    background-color: #ffffff !important;
+}
+
+/* Breadcrumbs text color */
+.counseling-page-container .breadcrumbs,
+.counseling-page-container .breadcrumbs a {
+    color: #4a5568 !important;
+}
+
+.counseling-page-container .breadcrumbs .current {
+    color: var(--blue) !important;
+}
+
+.counseling-subtitle {
+    color: var(--green) !important;
+}
+
+/* Intro Cards */
+.counseling-page-container .counseling-intro-card.decision-card {
+    background: #ffffff !important;
+    border: 1px solid rgba(37, 68, 120, 0.08) !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.04) !important;
+}
+
+.counseling-page-container .counseling-intro-card.purpose-card {
+    background: #ffffff !important;
+    border: 1px solid rgba(37, 68, 120, 0.08) !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.04) !important;
+}
+
+.counseling-page-container .counseling-intro-card.purpose-card .intro-card-badge {
+    background: rgba(27, 166, 85, 0.05) !important;
+    border: 1px solid var(--green) !important;
+    color: var(--green) !important;
+}
+
+.counseling-page-container .counseling-intro-card.purpose-card .intro-card-content h3 {
+    color: var(--blue) !important;
+}
+
+.counseling-page-container .counseling-intro-card.purpose-card .intro-card-content p {
+    color: #4a5568 !important;
+}
+
+/* Steps section */
+.counseling-page-container .counseling-steps-section {
+    background-color: #ffffff !important;
+}
+
+.counseling-page-container .counseling-steps-section .section-heading {
+    color: var(--blue) !important;
+}
+
+.counseling-page-container .counseling-steps-section .section-heading span {
+    color: var(--green) !important;
+    font-family: var(--font-playfair);
+    font-style: italic;
+}
+
+.counseling-page-container .steps-lead {
+    color: #4a5568 !important;
+}
+
+.counseling-page-container .step-card {
+    background: #ffffff !important;
+    border: 1px solid rgba(37, 68, 120, 0.08) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04) !important;
+}
+
+.counseling-page-container .step-card:hover {
+    border-color: var(--green) !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08) !important;
+}
+
+.counseling-page-container .step-card .step-title {
+    color: var(--blue) !important;
+}
+
+.counseling-page-container .step-card .step-desc {
+    color: #4a5568 !important;
+}
+
+/* Banner section */
+.counseling-page-container .counseling-banner-section {
+    background-color: #ffffff !important;
+}
+
+.counseling-page-container .counseling-banner-card {
+    background: #ffffff !important;
+    border: 1px solid rgba(37, 68, 120, 0.08) !important;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.04) !important;
+}
+
+.counseling-page-container .counseling-banner-card .banner-title {
+    color: var(--blue) !important;
+}
+
+.counseling-page-container .counseling-banner-card .banner-title span {
+    color: var(--green) !important;
+}
+
+.counseling-page-container .banner-desc {
+    color: #4a5568 !important;
+}
+
+.counseling-page-container .banner-quote {
+    border-color: rgba(27, 166, 85, 0.15) !important;
+    background: radial-gradient(circle, rgba(27, 166, 85, 0.04) 0%, transparent 80%) !important;
+}
+
+.counseling-page-container .banner-quote p {
+    color: var(--blue) !important;
+}
+
+.counseling-page-container .banner-quote .quote-italic-highlight {
+    color: var(--green) !important;
+    text-shadow: none !important;
+}
+
+/* Bento grid */
+.counseling-page-container .counseling-bento-section {
+    background-color: #ffffff !important;
+}
+
+.counseling-page-container .bento-card.bento-glass-white {
+    background: #ffffff !important;
+    border: 1px solid rgba(37, 68, 120, 0.08) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04) !important;
+}
+
+.counseling-page-container .bento-card.bento-glass-white h3 {
+    color: var(--blue) !important;
+}
+
+.counseling-page-container .bento-card.bento-glass-white p {
+    color: #4a5568 !important;
+}
+
+.counseling-page-container .bento-card.bento-glass-white .bento-highlight-line {
+    color: var(--blue) !important;
+    border-left-color: var(--green) !important;
+}
+
+.counseling-page-container .bento-card.bento-glass-yellow {
+    background: var(--yellow) !important;
+    box-shadow: 0 10px 30px rgba(249, 239, 108, 0.1) !important;
+}
+
+.counseling-page-container .bento-card.bento-glass-yellow p {
+    color: var(--blue) !important;
+}
+
+.counseling-page-container .bento-card.bento-glass-yellow .bento-highlight {
+    color: var(--blue) !important;
+}
+
+/* Bento card full width in counseling profile section */
+.counseling-profile-section .bento-card {
+    background: #ffffff !important;
+    border: 1px solid rgba(37, 68, 120, 0.08) !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.04) !important;
+}
+
+.counseling-profile-section .bento-card .card-title {
+    color: var(--blue) !important;
+}
+
+.counseling-profile-section .bento-card .card-title span {
+    color: var(--green) !important;
+    font-family: var(--font-playfair);
+    font-style: italic;
+}
+
+.counseling-profile-section .bento-card .card-paragraph {
+    color: #4a5568 !important;
+}
+
+.counseling-profile-section .bento-card .card-paragraph strong {
+    color: var(--blue) !important;
+}
+
+.counseling-profile-section .bento-card .card-visual {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1) !important;
+}

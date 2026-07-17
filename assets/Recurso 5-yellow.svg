@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_2" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 136.24 20.46">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient-yellow);
+      }
+    </style>
+    <linearGradient id="linear-gradient-yellow" x1="0" y1="10.23" x2="136.24" y2="10.23" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f9ef6c"/>
+      <stop offset="1" stop-color="#e9d854"/>
+    </linearGradient>
+  </defs>
+  <g id="OBJECTS">
+    <polygon class="cls-1" points="107.95 20.46 94.68 6.99 81.4 20.46 68.13 6.99 54.85 20.46 41.58 6.99 28.3 20.46 15.02 6.99 3.49 18.69 0 15.25 15.02 0 28.3 13.48 41.58 0 54.85 13.48 68.13 0 81.4 13.48 94.68 0 107.95 13.48 121.22 0 136.24 15.25 132.75 18.69 121.22 6.99 107.95 20.46"/>
+  </g>
+</svg>
