@@ -408,52 +408,102 @@
             </div>
         </section>
 
-        <!-- SECCIÓN 3 & 4: BECAS, BENEFICIOS Y PROYECCIÓN BENTO SYSTEM (Aesthetic style from Yoga screenshot) -->
-        <section class="counseling-bento-system">
+        <!-- Split Carousel Section (Estilo Intercambio Hontanar) -->
+        <section class="pq-split-carousel-section hontanar-scroll-reveal" style="margin-top: 50px; margin-bottom: 80px; width: 100%; border: none; box-shadow: none; position: relative;">
+            <!-- Rectangulito amarillo decorativo detrás de la foto -->
+            <div class="pq-carousel-yellow-accent" style="bottom: -20px; left: -20px;"></div>
             
-            <!-- Bento Hero Row (Green rich gradient banner) -->
-            <div class="bento-hero-banner hontanar-scroll-reveal">
-                
-                <!-- Left: Title, Description and Pill Button -->
-                <div class="bento-hero-left">
-                    <h2 class="bento-hero-title">Becas, beneficios y<br>proyección académica</h2>
-                    <p class="bento-hero-paragraph">A través de sus <strong>conexiones internacionales</strong>, el colegio tiene opciones de <strong>becas académicas y deportivas</strong>, así como beneficios universitarios asociados al <strong>alto nivel de inglés</strong>. Actualmente existen alianzas con instituciones en <strong>Carolina del Norte y La Florida</strong>.</p>
-                    
-                    <a href="#" class="btn btn-yellow">
-                        Agendar una cita <span class="arrow">&gt;</span>
-                    </a>
+            <!-- Arrowheads decorator on top of the border line -->
+            <svg class="pq-slider-decorator deco-green" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 86.71 12.86" style="position: absolute; top: -10px; right: 20px; width: 90px; z-index: 3;">
+                <g id="OBJECTS">
+                    <g>
+                        <g>
+                            <polygon points="11.14 6.43 0 0 0 12.86 11.14 6.43" fill="var(--green)"/>
+                            <polygon points="26.07 6.43 14.93 0 14.93 12.86 26.07 6.43" fill="var(--green)"/>
+                            <polygon points="41 6.43 29.86 0 29.86 12.86 41 6.43" fill="var(--green)"/>
+                        </g>
+                        <g>
+                            <polygon points="75.57 6.43 86.71 0 86.71 12.86 75.57 6.43" fill="var(--green)"/>
+                            <polygon points="60.64 6.43 71.78 0 71.78 12.86 60.64 6.43" fill="var(--green)"/>
+                            <polygon points="45.71 6.43 56.85 0 56.85 12.86 45.71 6.43" fill="var(--green)"/>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+
+            <!-- Left Side: Slide Images -->
+            <div class="pq-carousel-images-wrapper" style="border-radius: 0;">
+                <div class="pq-carousel-img-slide active" style="background-image: url('assets/Copia_de_DSC_0186.JPG');"></div>
+                <div class="pq-carousel-img-slide" style="background-image: url('assets/DSC_0762_copia.jpg');"></div>
+            </div>
+
+            <!-- Right Side: Content Panel -->
+            <div class="pq-carousel-content-panel" style="border-radius: 0; display: flex; flex-direction: column; justify-content: center;">
+                <!-- Floating background circles for Carousel Section -->
+                <div class="bg-circles-wrapper" style="position: absolute; inset: 0; pointer-events: none; z-index: 1;">
+                    <div class="bg-circle bg-circle-ring-yellow circle-1"></div>
+                    <div class="bg-circle bg-circle-solid-green circle-2"></div>
+                    <div class="bg-circle bg-circle-ring-blue circle-3"></div>
                 </div>
 
-                <!-- Center: Smiling student portrait cutout -->
-                <div class="bento-hero-center">
-                    <img src="assets/DSC_0762_copia.png" alt="Estudiante Hontanar Exitoso" class="student-portrait-img">
+                <!-- Controls (Indicators) -->
+                <div class="pq-carousel-controls" style="margin-bottom: 20px; position: relative; z-index: 2;">
+                    <div class="pq-carousel-indicators">
+                        <span class="pq-indicator-dot active" data-slide="0"></span>
+                        <span class="pq-indicator-dot" data-slide="1"></span>
+                    </div>
                 </div>
 
-                <!-- Right: Stats glass card -->
-                <div class="bento-hero-right">
+                <div class="pq-carousel-slides-wrapper" style="height: auto; position: relative; z-index: 2;">
                     
-                    <!-- Glass card badge -->
-                    <div class="hero-glass-badge">
-                        <div class="badge-header">
-                            <span class="badge-stat">25% - 70%</span>
+                    <!-- Slide 1 -->
+                    <div class="pq-carousel-slide active">
+                        <h3 class="pq-slide-title" style="font-family: var(--font-lato); font-size: 1.95rem; font-weight: 900; color: var(--blue); margin: 0 0 15px 0; text-transform: none; line-height: 1.25;">
+                            Becas, beneficios y<br><span style="font-style: italic; color: var(--green); font-family: var(--font-playfair); font-weight: 700;">proyección académica</span>
+                        </h3>
+                        <div class="pq-slide-description" style="color: #4a5568; line-height: 1.65; font-size: 0.94rem;">
+                            <p style="margin-bottom: 25px;">A través de sus conexiones internacionales, el colegio ofrece acceso a <strong>becas académicas y deportivas</strong>, además de beneficios universitarios asociados al alto nivel de inglés. Actualmente mantiene alianzas con instituciones en <strong>Carolina del Norte y Florida</strong>.</p>
+                            
+                            <a href="agenda-visita.html" class="btn btn-yellow btn-nav" style="align-self: flex-start; margin-top: 10px;">
+                                Agendar una cita <span class="arrow">&gt;</span>
+                            </a>
                         </div>
-                        <p class="badge-desc">De beca de excelencia académica y deportiva alcanzado por nuestros estudiantes gracias a su excelencia académica y su formación bilingüe.</p>
-                        
-                        <!-- Avatar circles row -->
-                        <div class="avatar-circles-row">
-                            <img src="assets/DSC_0762_copia.jpg" alt="Estudiante Avatar" class="avatar-circle">
-                            <img src="assets/154.jpg" alt="Estudiante Avatar" class="avatar-circle">
-                            <img src="assets/20241002_144403.jpg" alt="Estudiante Avatar" class="avatar-circle">
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="pq-carousel-slide">
+                        <h3 class="pq-slide-title" style="font-family: var(--font-lato); font-size: 1.95rem; font-weight: 900; color: var(--blue); margin: 0 0 15px 0; text-transform: none; line-height: 1.25;">
+                            Estudiantes Hontanar<br><span style="font-style: italic; color: var(--green); font-family: var(--font-playfair); font-weight: 700;">que llegan más lejos</span>
+                        </h3>
+                        <div class="pq-slide-description" style="color: #4a5568; line-height: 1.65; font-size: 0.94rem;">
+                            <!-- Stat Badge block styled exactly like multilinguismo stats but customized -->
+                            <div class="csj-stat-badge" style="margin-bottom: 20px;">
+                                <span class="csj-stat-number" style="font-size: 2.5rem; font-weight: 900; color: var(--blue); display: block; line-height: 1;">25% – 70%</span>
+                                <span class="csj-stat-label" style="font-size: 0.92rem; color: #4a5568; font-weight: 700; display: block; margin-top: 8px;">Becas de excelencia académica y deportiva</span>
+                            </div>
+                            <p style="margin-bottom: 20px;">Cada año, estudiantes del Gimnasio El Hontanar acceden a becas que cubren entre el <strong>25% y el 70%</strong> del valor de sus estudios universitarios, gracias a su excelencia académica y su formación bilingüe.</p>
+                            
+                            <!-- Avatars row -->
+                            <div class="csj-avatars" style="display: flex; gap: -8px; margin-top: 15px;">
+                                <img src="assets/DSC_0762_copia.jpg" alt="Estudiante" style="width: 44px; height: 44px; border-radius: 50%; border: 3px solid var(--white); object-fit: cover; margin-right: -10px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
+                                <img src="assets/154.jpg" alt="Estudiante" style="width: 44px; height: 44px; border-radius: 50%; border: 3px solid var(--white); object-fit: cover; margin-right: -10px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
+                                <img src="assets/20241002_144403.jpg" alt="Estudiante" style="width: 44px; height: 44px; border-radius: 50%; border: 3px solid var(--white); object-fit: cover; margin-right: -10px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
+                            </div>
                         </div>
                     </div>
 
                 </div>
-
             </div>
+        </section>
 
+        <!-- SECCIÓN 4: BENTO GRID Y ACOMPAÑAMIENTO -->
+        <section class="counseling-bento-system" style="margin-top: 80px;">
             <!-- Bento Row Headline Divider -->
-            <div class="bento-headline-divider hontanar-scroll-reveal">
-                <h2>Acompañamiento personalizado y dirección estratégica para forjar un proyecto de vida con excelencia</h2>
+            <div class="bento-headline-divider hontanar-scroll-reveal" style="max-width: 960px; margin: 0 auto 40px auto;">
+                <h2 style="font-family: var(--font-lato); font-size: 2.3rem; font-weight: 900; color: var(--blue); line-height: 1.25; text-align: center; margin: 0;">
+                    Acompañamiento personalizado y dirección estratégica <br>
+                    <span style="font-family: var(--font-playfair); font-style: italic; font-weight: 700; color: var(--green);">para forjar un proyecto de vida con excelencia</span>
+                </h2>
             </div>
 
             <!-- Bento Grid - Four elegant columns/cards -->
@@ -586,6 +636,27 @@
 
             const scrollElements = document.querySelectorAll('.hontanar-scroll-reveal');
             scrollElements.forEach(el => revealObserver.observe(el));
+
+            // Carousel Dots Click Listener for split interactive block
+            const dots = document.querySelectorAll('.pq-indicator-dot');
+            const textSlides = document.querySelectorAll('.pq-carousel-slide');
+            const imgSlides = document.querySelectorAll('.pq-carousel-img-slide');
+
+            dots.forEach(dot => {
+                dot.addEventListener('click', () => {
+                    const targetIndex = parseInt(dot.getAttribute('data-slide'));
+
+                    // Deactivate all
+                    dots.forEach(d => d.classList.remove('active'));
+                    textSlides.forEach(s => s.classList.remove('active'));
+                    imgSlides.forEach(i => i.classList.remove('active'));
+
+                    // Activate selected
+                    dot.classList.add('active');
+                    textSlides[targetIndex].classList.add('active');
+                    imgSlides[targetIndex].classList.add('active');
+                });
+            });
         });
     </script>
 </body>

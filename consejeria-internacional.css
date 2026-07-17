@@ -595,7 +595,7 @@
 
 .bento-column-card {
     position: relative;
-    border-radius: 24px;
+    border-radius: 0;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -712,7 +712,7 @@
 .counseling-highlight-quote .quote-icon {
     font-family: var(--font-playfair);
     font-size: 4.5rem;
-    color: var(--yellow);
+    color: var(--blue);
     line-height: 1;
     display: block;
     margin-bottom: -10px;
@@ -724,12 +724,12 @@
     font-size: 1.35rem;
     font-style: italic;
     line-height: 1.8;
-    color: rgba(255, 255, 255, 0.95);
+    color: var(--blue);
     margin: 0;
 }
 
 .counseling-highlight-quote p strong {
-    color: var(--yellow);
+    color: var(--blue);
     font-weight: 700;
     font-style: normal;
 }
