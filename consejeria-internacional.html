@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="tour-virtual.css">
     <link rel="stylesheet" href="consejeria-internacional.css">
+    <link rel="stylesheet" href="por-que.css">
+    <link rel="stylesheet" href="filosofia-y-valores.css">
 </head>
 <body>
     <!-- Navbar -->
@@ -309,7 +311,25 @@
                 </div>
 
                 <!-- Columna Derecha: Nuestro Propósito (Carta Translúcida) -->
-                <div class="counseling-intro-card purpose-card">
+                <div class="counseling-intro-card purpose-card" style="position: relative; overflow: visible;">
+                    <!-- SVG Recurso 14 en amarillo (borde superior derecho, mitad dentro/mitad fuera) -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 86.71 12.86" 
+                         style="position: absolute; top: -6px; right: -20px; width: 100px; height: auto; z-index: 12; pointer-events: none; opacity: 0.95;">
+                        <g id="OBJECTS">
+                            <g>
+                                <g>
+                                    <polygon points="11.14 6.43 0 0 0 12.86 11.14 6.43" fill="var(--yellow)"/>
+                                    <polygon points="26.07 6.43 14.93 0 14.93 12.86 26.07 6.43" fill="var(--yellow)"/>
+                                    <polygon points="41 6.43 29.86 0 29.86 12.86 41 6.43" fill="var(--yellow)"/>
+                                </g>
+                                <g>
+                                    <polygon points="75.57 6.43 86.71 0 86.71 12.86 75.57 6.43" fill="var(--yellow)"/>
+                                    <polygon points="60.64 6.43 71.78 0 71.78 12.86 60.64 6.43" fill="var(--yellow)"/>
+                                    <polygon points="45.71 6.43 56.85 0 56.85 12.86 45.71 6.43" fill="var(--yellow)"/>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
                     <div class="intro-card-badge">NUESTRO PROPÓSITO</div>
                     <div class="intro-card-content">
                         <h3>Guiar, asesorar y conectar desde 9°</h3>
@@ -319,17 +339,27 @@
             </div>
         </div>
 
-        <!-- SECCIÓN 1: ACOMPAÑAMIENTO INDIVIDUAL (Bento card full width layout like filosofia-y-valores) -->
-        <section class="counseling-profile-section">
-            <div class="bento-card card-full hontanar-scroll-reveal">
-                <div class="card-text">
-                    <h3 class="card-title">Acompañamiento individual y proyecto de <span>vida</span> desde el colegio</h3>
-                    <p class="card-paragraph">En El Hontanar cada estudiante recibe un <strong>seguimiento personalizado</strong> para construir su <strong>perfil de admisión</strong>.</p>
-                    <p class="card-paragraph" style="margin-top: 15px;">A través de la consejería, los jóvenes identifican sus <strong>fortalezas académicas</strong>, intereses profesionales y opciones de carrera, estructurando una postulación sólida a la educación superior.</p>
-                </div>
-                <div class="card-visual">
-                    <img src="assets/152.jpg" alt="Acompañamiento individual y proyecto de vida">
-                </div>
+        <!-- SECCIÓN 1: ACOMPAÑAMIENTO INDIVIDUAL (Split layout mirroring por-que-estudiar) -->
+        <section class="pq-split-section hontanar-scroll-reveal" style="margin-top: 50px; margin-bottom: 80px;">
+            <!-- Left Side: Content -->
+            <div class="pq-split-left" style="display: flex; flex-direction: column; justify-content: center;">
+                <h2 class="pq-split-title" style="font-family: var(--font-lato); font-size: 2.3rem; font-weight: 900; color: var(--blue); line-height: 1.25; margin-bottom: 25px;">
+                    Acompañamiento individual <br>
+                    <span style="font-family: var(--font-playfair); font-style: italic; color: var(--green); font-weight: 700;">y proyecto de vida desde el colegio</span>
+                </h2>
+                <p style="font-family: var(--font-lato); font-size: 1.05rem; line-height: 1.8; color: #4a5568; margin-bottom: 20px;">
+                    En El Hontanar cada estudiante recibe un <strong>seguimiento personalizado</strong> para construir su <strong>perfil de admisión</strong>.
+                </p>
+                <p style="font-family: var(--font-lato); font-size: 1.05rem; line-height: 1.8; color: #4a5568; margin-bottom: 0;">
+                    A través de la consejería, los jóvenes identifican sus <strong>fortalezas académicas</strong>, intereses profesionales y opciones de carrera, estructurando una postulación sólida a la educación superior.
+                </p>
+            </div>
+
+            <!-- Right Side: Photo and accents (No stats metrics) -->
+            <div class="pq-split-right">
+                <div class="pq-split-yellow-accent" style="bottom: -20px; left: -20px;"></div>
+                <div class="pq-split-photo-bg" style="background-image: url('assets/152.jpg'); background-position: center; border-radius: 0; overflow: hidden;"></div>
+                <img src="assets/Recurso 15.svg" class="pq-split-svg-decorator" alt="Decoración">
             </div>
         </section>
 
@@ -337,44 +367,42 @@
         <section class="counseling-agreements-section parallax-bg" style="background-image: url('assets/DSC_0092.JPG');">
             <div class="counseling-section-overlay"></div>
             <div class="agreements-header hontanar-scroll-reveal">
-                <h2 class="section-heading">Convenios Universitarios <br><span>en el Mundo</span></h2>
+                <h2 style="font-family: var(--font-lato); font-size: 2.3rem; font-weight: 900; color: var(--white); line-height: 1.2; margin: 0 0 15px 0;">
+                    Convenios Universitarios <br>
+                    <span style="font-family: var(--font-playfair); font-style: italic; font-weight: 700; color: var(--yellow);">en el Mundo</span>
+                </h2>
                 <p class="agreements-lead">Nuestras alianzas estratégicas abren las puertas al reconocimiento académico y la excelencia internacional:</p>
             </div>
 
-            <!-- Bento style grid wrapper -->
-            <div class="agreements-grid">
-                
+            <!-- Cards estilo filo-pilar-card -->
+            <div class="filo-pilares-grid" style="max-width: 1140px; margin: 0 auto; padding: 0 20px;">
+
                 <!-- Card 1: Alianzas IB -->
-                <div class="counseling-modern-card hontanar-scroll-reveal">
-                    <div class="card-image-block">
-                        <img src="assets/Copia_de_DSC_0186.JPG" alt="Alianzas Bachillerato Internacional">
-                    </div>
-                    <div class="card-info-block">
-                        <h3>Alianzas con el Bachillerato Internacional</h3>
-                        <p>El Gimnasio El Hontanar mantiene convenios con universidades en el mundo que tienen alianzas con el <strong>Bachillerato Internacional</strong>, facilitando procesos de admisión y ofreciendo beneficios académicos, deportivos y económicos.</p>
-                    </div>
+                <div class="filo-pilar-card hontanar-scroll-reveal">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="filo-card-icon">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12.75 3.03v.568c0 .334.148.65.405.864l1.068.89c.442.369.535 1.01.216 1.49l-.51.766a2.25 2.25 0 0 1-1.161.886l-.143.048a1.107 1.107 0 0 0-.57 1.664c.369.555.169 1.307-.427 1.605L9 13.125l.423 1.059a.956.956 0 0 1-1.652.928l-.679-.906a1.125 1.125 0 0 0-1.906.172L4.5 15.75l-.612.153M12.75 3.031a9 9 0 0 0-8.862 12.872M12.75 3.031a9 9 0 0 1 6.69 14.036m0 0-.177-.529A2.25 2.25 0 0 0 17.128 15H16.5l-.324-.324a1.453 1.453 0 0 0-2.328.377l-.036.073a1.586 1.586 0 0 1-.982.816l-.99.282c-.55.157-.894.702-.8 1.267l.073.438c.08.474.49.821.97.821.846 0 1.598.542 1.865 1.345l.215.643m5.276-3.67a9.012 9.012 0 0 1-5.276 3.67m0 0a9 9 0 0 1-10.275-4.835M15.75 9c0 .896-.393 1.7-1.016 2.25" />
+                    </svg>
+                    <h3>Alianzas con el <span>Bachillerato Internacional</span></h3>
+                    <p>El Gimnasio El Hontanar mantiene convenios con universidades en Colombia y el mundo que reconocen el Bachillerato Internacional, facilitando el acceso a oportunidades académicas y beneficios para sus estudiantes.</p>
                 </div>
 
                 <!-- Card 2: Homologación -->
-                <div class="counseling-modern-card hontanar-scroll-reveal">
-                    <div class="card-image-block">
-                        <img src="assets/Copia_de_DSC_0197.JPG" alt="Homologación y Reconocimiento">
-                    </div>
-                    <div class="card-info-block">
-                        <h3>Homologación y Reconocimiento</h3>
-                        <p>Estas alianzas amplían las posibilidades de <strong>homologación de materias</strong>, reconocimiento académico y adaptación exitosa a la vida universitaria, reduciendo tiempos y costos de estudio.</p>
-                    </div>
+                <div class="filo-pilar-card hontanar-scroll-reveal">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="filo-card-icon">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z" />
+                    </svg>
+                    <h3>Homologación y <span>Reconocimiento</span></h3>
+                    <p>Estas alianzas amplían las posibilidades de homologación de materias, reconocimiento académico y adaptación exitosa a la vida universitaria, reduciendo tiempos y costos de estudio.</p>
                 </div>
 
-                <!-- Card 3: Ferias y Opciones -->
-                <div class="counseling-modern-card hontanar-scroll-reveal">
-                    <div class="card-image-block">
-                        <img src="assets/Copia_de_DSC_0217.JPG" alt="Ferias Universitarias">
-                    </div>
-                    <div class="card-info-block">
-                        <h3>Ferias y Opciones Nacionales e Internacionales</h3>
-                        <p>Opciones en Colombia y el exterior: la consejería contempla <strong>ferias universitarias nacionales, regionales e internacionales</strong>, entendiendo que no todos los estudiantes desean salir del país.</p>
-                    </div>
+                <!-- Card 3: Ferias Universitarias -->
+                <div class="filo-pilar-card hontanar-scroll-reveal">
+                    <svg class="filo-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                    </svg>
+                    <h3>Ferias y Opciones <span>Nacionales e Internacionales</span></h3>
+                    <p>Opciones en Colombia y el exterior: la consejería contempla ferias universitarias nacionales, regionales e internacionales, entendiendo que no todos los estudiantes desean salir del país.</p>
                 </div>
 
             </div>
