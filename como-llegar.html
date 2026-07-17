@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -32,30 +32,31 @@
         /* ── Lead Paragraph Block ── */
         .llegar-lead-block {
             text-align: center;
-            max-width: 880px;
+            max-width: 920px;
             margin: 0 auto 50px;
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 16px;
         }
         .llegar-lead-block p {
             font-family: var(--font-lato);
-            font-size: 0.95rem;
-            line-height: 1.75;
-            color: rgba(255,255,255,0.82);
+            font-size: 1rem;
+            line-height: 1.8;
             margin: 0;
         }
         .llegar-lead-block p.highlight {
-            font-size: 1.12rem;
-            color: var(--white);
+            font-size: 1.25rem;
+            color: var(--blue);
             font-weight: 700;
+            letter-spacing: -0.01em;
         }
         .llegar-lead-block p.italic-yellow {
             font-family: var(--font-playfair);
             font-style: italic;
-            font-size: 1.15rem;
-            color: var(--yellow);
-            margin-top: 10px;
+            font-size: 1.25rem;
+            color: var(--green);
+            line-height: 1.7;
+            margin-top: 5px;
         }
 
         /* ── Split Layout: Map and Glass Info Card ── */
@@ -68,9 +69,9 @@
         }
 
         .map-frame-wrapper {
-            border-radius: 24px;
+            border-radius: 0;
             overflow: hidden;
-            box-shadow: 0 15px 45px rgba(0,0,0,0.3);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
             width: 100%;
             height: 100%;
             min-height: 380px;
@@ -84,18 +85,21 @@
         }
 
         .contact-glass-card {
-            background: rgba(255,255,255,0.06);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1.5px solid var(--yellow);
-            border-radius: 24px;
+            background: rgba(255, 255, 255, 0.98);
+            border: 1px solid rgba(37,68,120,0.15);
+            border-top: 4.5px solid var(--blue);
+            border-radius: 0;
             padding: 40px;
             display: flex;
             flex-direction: column;
             gap: 28px;
             height: 100%;
-            justify-content: center;
-            box-shadow: inset 0 1px 0 rgba(255,255,255,0.15);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .contact-glass-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
         }
 
         .contact-glass-row {
@@ -105,32 +109,38 @@
             justify-content: flex-start;
         }
 
-        .contact-glass-img {
-            object-fit: contain;
-            flex-shrink: 0;
-            transition: transform 0.3s ease;
-        }
-
-        .img-horario {
-            width: 68px;
-            height: 68px;
-            margin: -9px;
-        }
-
-        .img-mail {
+        .contact-glass-icon-circle {
             width: 60px;
             height: 60px;
-            margin: -4px;
+            border-radius: 50%;
+            background: rgba(27,166,85,0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: background 0.3s;
         }
-
-        .img-ubicacion {
-            width: 50px;
-            height: 50px;
-            margin: 0;
+        .contact-glass-row:hover .contact-glass-icon-circle {
+            background: rgba(27,166,85,0.15);
         }
-
-        .contact-glass-row:hover .contact-glass-img {
-            transform: scale(1.1);
+        .contact-glass-icon-inner {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--green);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
+        }
+        .contact-glass-row:hover .contact-glass-icon-inner {
+            transform: scale(1.08);
+        }
+        .contact-icon-svg {
+            width: 20px;
+            height: 20px;
+            fill: #ffffff;
+            flex-shrink: 0;
         }
 
         .map-frame-wrapper img {
@@ -156,15 +166,15 @@
         .contact-glass-label {
             font-family: var(--font-playfair);
             font-style: italic;
-            font-weight: 600;
+            font-weight: 700;
             font-size: 1.05rem;
-            color: var(--yellow);
+            color: var(--blue);
         }
 
         .contact-glass-text {
             font-family: var(--font-lato);
             font-size: 0.88rem;
-            color: rgba(255,255,255,0.88);
+            color: rgba(37,68,120,0.75);
             line-height: 1.55;
         }
 
@@ -174,7 +184,7 @@
 
         /* ══ FORM PREMIUM ══ */
         .form-section {
-            border-radius: 28px;
+            border-radius: 0;
             overflow: hidden;
             margin: 0 0 80px;
             display: grid;
@@ -238,11 +248,8 @@
 
         /* ─ Panel derecho (form) ─ */
         .form-right {
-            background: linear-gradient(135deg, rgba(255,255,255,0.22) 0%, rgba(255,255,255,0.04) 100%);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-left: 1px solid var(--yellow);
-            box-shadow: inset 0 1px 0 rgba(255,255,255,0.25);
+            background: #ffffff;
+            border-left: none;
             padding: 56px 50px;
             display: flex;
             flex-direction: column;
@@ -254,14 +261,14 @@
             font-weight: 800;
             letter-spacing: 0.12em;
             text-transform: uppercase;
-            color: var(--yellow);
+            color: var(--green);
             margin-bottom: 8px;
         }
         .form-right-title {
             font-family: var(--font-lato);
             font-weight: 900;
             font-size: 1.55rem;
-            color: #fff;
+            color: var(--blue);
             margin-bottom: 36px;
             line-height: 1.25;
         }
@@ -277,12 +284,12 @@
             width: 100%;
             background: transparent;
             border: none;
-            border-bottom: 1.5px solid rgba(255,255,255,0.25);
+            border-bottom: 1.5px solid rgba(37,68,120,0.25);
             border-radius: 0;
             padding: 18px 4px 8px;
             font-family: var(--font-lato);
             font-size: 0.96rem;
-            color: #fff;
+            color: var(--blue);
             outline: none;
             transition: border-color 0.3s;
             -webkit-appearance: none;
@@ -290,9 +297,9 @@
         .fl-group select {
             cursor: pointer;
         }
-        .fc-group select option {
-            background: #1a3060;
-            color: #fff;
+        .fl-group select option {
+            background: #ffffff;
+            color: var(--blue);
         }
         .fl-group textarea {
             resize: none;
@@ -307,11 +314,11 @@
             top: 18px;
             font-family: var(--font-lato);
             font-size: 0.92rem;
-            color: rgba(255,255,255,0.5);
+            color: rgba(37,68,120,0.45);
             pointer-events: none;
             transition: top 0.22s, font-size 0.22s, color 0.22s;
         }
-        .fl-group label .req { color: var(--yellow); }
+        .fl-group label .req { color: var(--green); }
         /* Float up when focused or has value */
         .fl-group input:focus ~ label,
         .fl-group input:not(:placeholder-shown) ~ label,
@@ -321,7 +328,7 @@
         .fl-group.has-value label {
             top: 2px;
             font-size: 0.7rem;
-            color: var(--yellow);
+            color: var(--blue);
             font-weight: 700;
             letter-spacing: 0.06em;
         }
@@ -333,7 +340,7 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: var(--yellow);
+            background: var(--blue);
             transition: width 0.3s cubic-bezier(0.4,0,0.2,1);
             border-radius: 2px;
         }
@@ -655,6 +662,18 @@
         <img src="assets/ChatGPT Image 1 jul 2025, 17_28_04 (3).png" alt="ColibrÃ­" class="header-colibri-float">
     </section>
 <main class="vida-page">
+        <!-- Floating background circles -->
+        <div class="bg-circles-wrapper">
+            <div class="bg-circle bg-circle-ring-yellow circle-1"></div>
+            <div class="bg-circle bg-circle-solid-green circle-2"></div>
+            <div class="bg-circle bg-circle-ring-blue circle-3"></div>
+            <div class="bg-circle bg-circle-solid-yellow circle-4"></div>
+            <div class="bg-circle bg-circle-ring-green circle-5"></div>
+            <div class="bg-circle bg-circle-ring-yellow circle-6"></div>
+            <div class="bg-circle bg-circle-solid-green tv-circle-7"></div>
+            <div class="bg-circle bg-circle-ring-blue tv-circle-8"></div>
+        </div>
+
         <div class="breadcrumbs">
                 <a href="index.html">Inicio</a> &gt; <a href="#">Contacto</a> &gt; <span class="current">Cómo Llegar</span>
             </div>
@@ -671,7 +690,7 @@
             <!-- Centered Lead Paragraph Blocks -->
             <div class="llegar-lead-block hontanar-scroll-reveal">
                 <p class="highlight">Llegar es fácil, somos un colegio en el norte de Bogotá, con acceso directo por la carrera séptima.</p>
-                <p class="italic-yellow">¿Vienes por primera vez? Llámanos y te guiamos paso a paso para que llegues sin contratiempos a uno de los mejores colegios bilingües en Bogotá.</p>
+                <p class="italic-yellow">¿Vienes por primera vez? Llámanos y te guiamos paso a paso para que llegues<br>sin contratiempos a uno de los mejores colegios bilingües en Bogotá.</p>
             </div>
 
             <!-- Main Layout Split: Map & Glass Card -->
@@ -687,7 +706,13 @@
                     
                     <!-- Row 1: Horario -->
                     <div class="contact-glass-row">
-                        <img src="assets/Grupo 4219.png" alt="Horario de Atención" class="contact-glass-img img-horario">
+                        <div class="contact-glass-icon-circle">
+                            <div class="contact-glass-icon-inner">
+                                <svg class="contact-icon-svg" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+                                </svg>
+                            </div>
+                        </div>
                         <div class="contact-glass-info">
                             <span class="contact-glass-label">Horario de Atención</span>
                             <span class="contact-glass-text">
@@ -699,7 +724,13 @@
 
                     <!-- Row 2: Contacto -->
                     <div class="contact-glass-row">
-                        <img src="assets/Grupo 4217.png" alt="Contacto General" class="contact-glass-img img-mail">
+                        <div class="contact-glass-icon-circle">
+                            <div class="contact-glass-icon-inner">
+                                <svg class="contact-icon-svg" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                                </svg>
+                            </div>
+                        </div>
                         <div class="contact-glass-info">
                             <span class="contact-glass-label">Contacto general</span>
                             <span class="contact-glass-text">
@@ -710,7 +741,13 @@
 
                     <!-- Row 3: Dirección -->
                     <div class="contact-glass-row">
-                        <img src="assets/Grupo 4218.png" alt="Dirección" class="contact-glass-img img-ubicacion">
+                        <div class="contact-glass-icon-circle">
+                            <div class="contact-glass-icon-inner">
+                                <svg class="contact-icon-svg" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                </svg>
+                            </div>
+                        </div>
                         <div class="contact-glass-info">
                             <span class="contact-glass-label">Dirección</span>
                             <span class="contact-glass-text">
@@ -889,6 +926,18 @@
                     btn.disabled = true;
                 });
             }
+
+            // Scroll Parallax Effect
+            window.addEventListener('scroll', () => {
+                const scrolled = window.scrollY;
+                
+                // Parallax for Background Circles
+                const circles = document.querySelectorAll('.bg-circle');
+                circles.forEach((circle, index) => {
+                    const speed = (index + 1) * 0.15; // smooth parallax speed offset
+                    circle.style.marginTop = `${scrolled * speed * 0.4}px`;
+                });
+            });
         });
     </script>
 </body>
