@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -13,6 +13,21 @@
     <link rel="stylesheet" href="consejeria-internacional.css">
     <link rel="stylesheet" href="vida-en-el-campus.css">
     <link rel="stylesheet" href="filosofia-y-valores.css">
+    <style>
+        /* Page-specific overrides for white background and flat cards */
+        body,
+        .vida-page {
+            background-color: var(--white) !important;
+            color: #334155;
+        }
+        .bento-card-color,
+        .cta-box {
+            border-radius: 0 !important;
+        }
+        .vida-section-title {
+            color: var(--blue) !important;
+        }
+    </style>
 </head>
 <body>
     <!-- Navbar -->
@@ -285,38 +300,33 @@
         </div>
         <img src="assets/ChatGPT Image 1 jul 2025, 17_28_04 (3).png" alt="ColibrÃ­" class="header-colibri-float">
     </section>
-<main class="vida-page">
-        <div class="breadcrumbs">
-                    <a href="index.html">Inicio</a> &gt; <a href="#">Vida en el Campus</a> &gt; <span class="current">Espacio Seguro</span>
-                </div>
-        <!-- Parallax Background Section for Header, Lead, and Cards -->
-        <section class="cards-parallax-section" style="background-image: url('assets/Copia_de_DSC_0576.JPG'); margin-top: -150px; padding-top: 150px; margin-bottom: 20px; padding-bottom: 40px;">
-            <div class="cards-parallax-overlay"></div>
-            <div class="vida-container" style="position: relative; z-index: 2;">
-                <!-- Unified Breadcrumbs -->
-                
-                
-                <!-- Unified Header Title Section -->
-                <div class="vida-header hontanar-scroll-reveal">
-                    
-                    
-                </div>
+<main class="vida-page" style="position: relative; overflow: hidden;">
+        <!-- Floating background circles -->
+        <div class="bg-circles-wrapper">
+            <div class="bg-circle bg-circle-ring-yellow circle-1"></div>
+            <div class="bg-circle bg-circle-solid-green circle-2"></div>
+            <div class="bg-circle bg-circle-ring-blue circle-3"></div>
+        </div>
 
-                <p class="vida-lead-paragraph hontanar-scroll-reveal">
-                    En el Gimnasio El Hontanar, entendemos que la tranquilidad de los padres de familia nace de saber que sus hijos habitan un <strong>espacio seguro</strong>. Por eso, nuestro campus ubicado al norte de Bogotá y Chía está diseñado y gestionado bajo estrictos <strong>estándares de protección, cuidado físico y bienestar emocional</strong>.
-                </p>
-                <p class="vida-lead-paragraph hontanar-scroll-reveal" style="font-size: 1.15rem; opacity: 0.95; margin-top: -15px; margin-bottom: 25px;">
-                    Un entorno seguro es la base para que el <strong>aprendizaje significativo</strong> ocurra de manera natural y los estudiantes desarrollen su autonomía y confianza con total libertad.
-                </p>
-            </div>
-        </section>
+        <div class="breadcrumbs">
+            <a href="index.html">Inicio</a> &gt; <a href="#">Vida en el Campus</a> &gt; <span class="current">Espacio Seguro</span>
+        </div>
 
         <div class="vida-container">
+            <div class="vida-lead-paragraph-wrapper hontanar-scroll-reveal" style="border-left: 4px solid var(--green); padding-left: 25px; margin: 40px auto 30px auto; max-width: 900px; text-align: left;">
+                <p style="font-family: var(--font-lato); font-size: 1.18rem; line-height: 1.85; color: var(--blue) !important; margin: 0;">
+                    En el Gimnasio El Hontanar, entendemos que la tranquilidad de los padres de familia nace de saber que sus hijos habitan un <strong style="color: var(--green); font-weight: 700;">espacio seguro</strong>. Por eso, nuestro campus ubicado al norte de Bogotá y Chía está diseñado y gestionado bajo estrictos <strong style="color: var(--green); font-weight: 700;">estándares de protección, cuidado físico y bienestar emocional</strong>.
+                </p>
+            </div>
+            
+            <p class="vida-paragraph hontanar-scroll-reveal" style="max-width: 900px; margin: 0 auto 50px auto; text-align: center; font-size: 1.1rem; line-height: 1.8; color: #4a5568;">
+                Un entorno seguro es la base para que el <strong>aprendizaje significativo</strong> ocurra de manera natural y los estudiantes desarrollen su autonomía y confianza con total libertad.
+            </p>
 
             <!-- Section: Convivencia Sana -->
             <div class="hontanar-scroll-reveal" style="text-align: center; margin-top: 50px; margin-bottom: 30px;">
-                <h2 class="vida-section-title" style="color: var(--yellow); margin-bottom: 15px;">Convivencia sana basada en el respeto y la empatía</h2>
-                <p class="vida-paragraph" style="max-width: 800px; margin: 0 auto; color: var(--white); line-height: 1.7; font-size: 1.05rem;">
+                <h2 class="vida-section-title" style="color: var(--blue) !important; margin-bottom: 15px;">Convivencia sana basada en el respeto y la empatía</h2>
+                <p class="vida-paragraph" style="max-width: 800px; margin: 0 auto; color: #4a5568; line-height: 1.7; font-size: 1.05rem;">
                     La seguridad en El Hontanar va más allá de la infraestructura; se construye desde las <strong>relaciones humanas</strong>:
                 </p>
             </div>
