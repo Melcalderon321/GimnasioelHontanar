@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -11,8 +11,61 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="tour-virtual.css">
     <link rel="stylesheet" href="consejeria-internacional.css">
+    <link rel="stylesheet" href="por-que.css">
     <link rel="stylesheet" href="filosofia-y-valores.css">
     <link rel="stylesheet" href="vida-en-el-campus.css">
+    <style>
+        /* Page-specific overrides for "Un Día Escolar" to make cards flat and premium */
+        .timeline-card,
+        .timeline-img-wrap,
+        .timeline-img-wrap img,
+        .pq-bento-card,
+        .pq-split-photo-bg,
+        .bento-card,
+        .card-visual img {
+            border-radius: 0 !important;
+        }
+        /* More white background than blue background */
+        body,
+        .vida-page,
+        .vida-container {
+            background-color: var(--white) !important;
+            color: #334155;
+        }
+        .timeline-card {
+            background-color: #f8fafc !important;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04) !important;
+            color: var(--blue) !important;
+        }
+        .timeline-card h3,
+        .timeline-card p,
+        .timeline-time {
+            color: var(--blue) !important;
+        }
+        /* Aulas Vivas Card styles */
+        .pq-bento-card.pq-bento-glass-white {
+            background-color: #f8fafc !important;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.04) !important;
+            color: #334155 !important;
+        }
+        .pq-bento-card.pq-bento-glass-white h3 {
+            color: var(--blue) !important;
+        }
+        /* Gallery Header overrides for legibility on white background */
+        .espacio-gallery-header .kicker {
+            color: var(--green) !important;
+        }
+        .espacio-gallery-header h2 {
+            color: var(--blue) !important;
+            font-weight: 900 !important;
+        }
+        .espacio-gallery-header h2 span {
+            color: var(--green) !important;
+            font-style: italic !important;
+        }
+    </style>
 </head>
 <body>
     <!-- Navbar -->
@@ -293,16 +346,11 @@
             <!-- Unified Breadcrumbs -->
             
 
-            <!-- Unified Header Title Section -->
-            <div class="vida-header hontanar-scroll-reveal">
-                
-                
+            <div class="vida-lead-paragraph-wrapper hontanar-scroll-reveal" style="border-left: 4px solid var(--green); padding-left: 25px; margin: 40px auto 60px auto; max-width: 900px; text-align: left;">
+                <p style="font-family: var(--font-lato); font-size: 1.15rem; line-height: 1.85; color: var(--blue); font-weight: 400; margin: 0;">
+                    El día empieza a las <strong>7:30 de la mañana</strong> en el Gimnasio El Hontanar, un colegio ubicado al norte de Bogotá y Chía. Llegada, saludos y una rutina para los estudiantes con el acompañamiento de sus profesores. Antes de entrar de lleno a las clases hay un momento para encontrarse con el director de curso, revisar la agenda, entender cómo será el día y marcar el ritmo con disposición, cercanía y confianza, un momento importante dentro del <strong>modelo de enseñanza del colegio</strong>.
+                </p>
             </div>
-
-            
-            <p class="vida-lead-paragraph hontanar-scroll-reveal">
-                El día empieza a las <strong>7:30 de la mañana</strong> en el Gimnasio El Hontanar, un colegio ubicado al norte de Bogotá y Chía. Llegada, saludos y una rutina para los estudiantes con el acompañamiento de sus profesores. Antes de entrar de lleno a las clases hay un momento para encontrarse con el director de curso, revisar la agenda, entender cómo será el día y marcar el ritmo con disposición, cercanía y confianza, un momento importante dentro del <strong>modelo de enseñanza del colegio</strong>.
-            </p>
 
             <!-- Timeline -->
             <div class="timeline-container">
@@ -344,22 +392,53 @@
                 </div>
 
             </div>
+        </div>
 
-            <!-- Desarrollo Integral en Cada Momento (Bento Card Full Width like consejeria-internacional) -->
-            <section class="counseling-profile-section" style="padding: 0;">
-                <div class="bento-card card-full hontanar-scroll-reveal">
-                    <div class="card-text">
-                        <h3 class="card-title">Desarrollo Integral <span>en Cada Momento</span></h3>
-                        <p class="card-paragraph">En El Hontanar, aprender es <strong>conectar más que memorizar</strong>, porque el aprendizaje no se queda quieto en las aulas, se aprende con el movimiento, el arte y el deporte que tienen el <strong>mismo valor que las áreas académicas</strong> en nuestro colegio en el norte de Bogotá.</p>
-                        <p class="card-paragraph" style="margin-top: 15px;">Cada espacio del colegio aporta al <strong>desarrollo integral</strong> de los estudiantes, fortaleciendo sus talentos mientras disfrutan de momentos de sano esparcimiento y descanso en <strong>zonas verdes en contacto con la naturaleza</strong>.</p>
+        <!-- Desarrollo Integral en Cada Momento (Split Layout con Acordeón mirroring multilinguismo) -->
+        <section class="pq-split-section hontanar-scroll-reveal" style="margin-top: 50px; margin-bottom: 80px;">
+            <!-- Left Side: Accordion -->
+            <div class="pq-split-left">
+                <h2 class="pq-split-title" style="font-family: var(--font-lato); font-size: 2.3rem; font-weight: 900; color: var(--blue); line-height: 1.25; margin-bottom: 25px;">
+                    Desarrollo Integral <br>
+                    <span style="font-family: var(--font-playfair); font-style: italic; color: var(--green); font-weight: 700;">en Cada Momento</span>
+                </h2>
+                
+                <div class="pq-split-accordion">
+                    <!-- Item 1 -->
+                    <div class="pq-split-accordion-item active">
+                        <div class="pq-split-accordion-header">
+                            <h3 style="font-family: var(--font-lato); font-size: 1.1rem; font-weight: 700; color: var(--blue); margin: 0;">Aprender es Conectar</h3>
+                            <span class="icon-toggle">−</span>
+                        </div>
+                        <div class="pq-split-accordion-body">
+                            <p style="font-family: var(--font-lato); font-size: 0.95rem; line-height: 1.6; color: #4a5568; margin: 0;">
+                                En El Hontanar, aprender es <strong>conectar más que memorizar</strong>, porque el aprendizaje no se queda quieto en las aulas, se aprende con el movimiento, el arte y el deporte que tienen el <strong>mismo valor que las áreas académicas</strong> en nuestro colegio en el norte de Bogotá.
+                            </p>
+                        </div>
                     </div>
-                    <div class="card-visual">
-                        <img src="assets/Copia_de_DSC_0186.JPG" alt="Desarrollo Integral en Cada Momento">
+
+                    <!-- Item 2 -->
+                    <div class="pq-split-accordion-item">
+                        <div class="pq-split-accordion-header">
+                            <h3 style="font-family: var(--font-lato); font-size: 1.1rem; font-weight: 700; color: var(--blue); margin: 0;">Espacios de Crecimiento</h3>
+                            <span class="icon-toggle">+</span>
+                        </div>
+                        <div class="pq-split-accordion-body">
+                            <p style="font-family: var(--font-lato); font-size: 0.95rem; line-height: 1.6; color: #4a5568; margin: 0;">
+                                Cada espacio del colegio aporta al <strong>desarrollo integral</strong> de los estudiantes, fortaleciendo sus talentos mientras disfrutan de momentos de sano esparcimiento y descanso en <strong>zonas verdes en contacto con la naturaleza</strong>.
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </section>
+            </div>
 
-        </div><!-- cierre vida-container -->
+            <!-- Right Side: Photo and accents -->
+            <div class="pq-split-right">
+                <div class="pq-split-yellow-accent" style="bottom: 0; left: 0;"></div>
+                <div class="pq-split-photo-bg" style="background-image: url('assets/Copia_de_DSC_0186.JPG'); background-position: center; border-radius: 0; overflow: hidden;"></div>
+                <img src="assets/Recurso 15.svg" class="pq-split-svg-decorator" alt="Decoración">
+            </div>
+        </section>
 
         <!-- Galería Acordeón Horizontal (igual que espacios-de-bienestar-y-naturaleza) -->
         <div class="espacio-gallery-section hontanar-scroll-reveal">
@@ -463,21 +542,21 @@
         <div class="vida-container">
 
             <!-- Bento Grid Section -->
-            <section class="pq-bento-section hontanar-scroll-reveal">
+            <section class="pq-bento-section hontanar-scroll-reveal" style="padding: 40px 0;">
                 <div class="pq-bento-grid">
                     <!-- Left Card: Aulas Vivas -->
-                    <div class="pq-bento-card pq-bento-glass-white">
-                        <h3>Aulas Vivas: Aprender Conectando con la Vida</h3>
-                        <p>Las aulas del Hontanar son espacios activos y participativos, donde las jornadas avanzan con preguntas que van más allá de repetir respuestas. A través de proyectos y retos, los estudiantes conectan la teoría con la vida real, desarrollando <strong>pensamiento crítico, creatividad y autonomía</strong>.</p>
-                        <p class="pq-bento-highlight-line">Este enfoque se integra de manera natural al <strong>Multilingüismo</strong> y a la propuesta académica del colegio, alineada con estándares internacionales que preparan a los estudiantes para un mundo global.</p>
+                    <div class="pq-bento-card pq-bento-glass-white" style="border-radius: 0; padding: 40px;">
+                        <h3 style="font-family: var(--font-lato); font-size: 1.8rem; font-weight: 900; color: var(--blue); margin-bottom: 20px;">Aulas Vivas: Aprender Conectando con la Vida</h3>
+                        <p style="font-family: var(--font-lato); line-height: 1.7; color: #4a5568;">Las aulas del Hontanar son espacios activos y participativos, donde las jornadas avanzan con preguntas que van más allá de repetir respuestas. A través de proyectos y retos, los estudiantes conectan la teoría con la vida real, desarrollando <strong>pensamiento crítico, creatividad y autonomía</strong>.</p>
+                        <p class="pq-bento-highlight-line" style="font-family: var(--font-lato); line-height: 1.7; margin-top: 15px; color: #4a5568; border-left: 3px solid var(--green); padding-left: 15px;">Este enfoque se integra de manera natural al <strong>Multilingüismo</strong> y a la propuesta académica del colegio, alineada con estándares internacionales que preparan a los estudiantes para un mundo global.</p>
                     </div>
 
                     <!-- Right Card: Admisiones -->
-                    <div class="pq-bento-card pq-bento-image" style="background-image: url('assets/preescolar-horizontal.jpg');">
-                        <div class="pq-bento-image-content">
-                            <span class="pq-bento-pill">Admisiones</span>
-                            <p>Si deseas que tu hijo viva una experiencia educativa transformadora, contáctanos y agenda una visita personalizada con nuestro equipo de admisiones.</p>
-                            <a href="#" class="btn btn-yellow">Agenda tu cita aquí</a>
+                    <div class="pq-bento-card pq-bento-image" style="background-image: url('assets/preescolar-horizontal.jpg'); border-radius: 0;">
+                        <div class="pq-bento-image-content" style="padding: 40px; display: flex; flex-direction: column; justify-content: flex-end; height: 100%;">
+                            <span class="pq-bento-pill" style="align-self: flex-start; padding: 5px 14px; border-radius: 0; font-family: var(--font-lato); font-size: 0.72rem; font-weight: 700; background-color: var(--blue); color: var(--white); text-transform: uppercase; margin-bottom: 15px;">Admisiones</span>
+                            <p style="font-family: var(--font-lato); line-height: 1.7; color: var(--white); font-weight: 700; text-shadow: 0 2px 4px rgba(0,0,0,0.6); margin-bottom: 20px;">Si deseas que tu hijo viva una experiencia educativa transformadora, contáctanos y agenda una visita personalizada con nuestro equipo de admisiones.</p>
+                            <a href="agenda-visita.html" class="btn btn-yellow btn-nav" style="align-self: flex-start;">Agenda tu cita aquí <span class="arrow">&gt;</span></a>
                         </div>
                     </div>
                 </div>
@@ -570,6 +649,22 @@
 
             const scrollElements = document.querySelectorAll('.hontanar-scroll-reveal');
             scrollElements.forEach(el => revealObserver.observe(el));
+
+            // Accordion click listener for split accordion items
+            const accItems = document.querySelectorAll('.pq-split-accordion-item');
+            accItems.forEach(item => {
+                const header = item.querySelector('.pq-split-accordion-header');
+                header.addEventListener('click', () => {
+                    accItems.forEach(other => {
+                        if (other !== item) {
+                            other.classList.remove('active');
+                            other.querySelector('.icon-toggle').textContent = '+';
+                        }
+                    });
+                    const isActive = item.classList.toggle('active');
+                    item.querySelector('.icon-toggle').textContent = isActive ? '−' : '+';
+                });
+            });
         });
     </script>
 </body>

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -11,7 +11,48 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="tour-virtual.css">
     <link rel="stylesheet" href="consejeria-internacional.css">
+    <link rel="stylesheet" href="sello-hontanar.css">
+    <link rel="stylesheet" href="por-que.css">
+    <link rel="stylesheet" href="filosofia-y-valores.css">
     <link rel="stylesheet" href="vida-en-el-campus.css">
+    <style>
+        /* Page-specific overrides for flat premium cards and white background */
+        .filo-pilar-card,
+        .pq-highlight-card,
+        .bento-card,
+        .counseling-modern-card,
+        .sello-pillar-card,
+        .sello-pillar-bg,
+        .sello-pillar-overlay,
+        .pq-split-photo-bg {
+            border-radius: 0 !important;
+        }
+        body,
+        .vida-page,
+        .vida-container {
+            background-color: var(--white) !important;
+            color: #334155;
+        }
+        /* Ensure the highlight quote block has readable contrast on white background */
+        .pq-highlight-card {
+            background: #f8fafc !important;
+            border: 1px solid #e2e8f0 !important;
+            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.04) !important;
+            color: var(--blue) !important;
+        }
+        .pq-highlight-card .pq-card-kicker {
+            color: var(--green) !important;
+        }
+        .pq-highlight-card .pq-card-title {
+            color: var(--blue) !important;
+        }
+        .pq-highlight-card strong {
+            color: var(--green) !important;
+        }
+        .pq-highlight-card .sparkle {
+            color: var(--green) !important;
+        }
+    </style>
 </head>
 <body>
     <!-- Navbar -->
@@ -299,93 +340,114 @@
             </div>
 
             
-            <p class="vida-lead-paragraph hontanar-scroll-reveal">
-                En el Gimnasio El Hontanar, el aprendizaje no se detiene en las materias tradicionales. Nuestro modelo pedagógico promueve un desarrollo integral que equilibra la excelencia académica con el fortalecimiento del ser, a través de tres pilares fundamentales que enriquecen la vida escolar de nuestros estudiantes:
-            </p>
+            <div class="vida-lead-paragraph-wrapper hontanar-scroll-reveal" style="border-left: 4px solid var(--green); padding-left: 25px; margin: 40px auto 60px auto; max-width: 900px; text-align: left;">
+                <p style="font-family: var(--font-lato); font-size: 1.15rem; line-height: 1.85; color: var(--blue) !important; font-weight: 400; margin: 0;">
+                    En el Gimnasio El Hontanar, el aprendizaje no se detiene en las materias tradicionales. Nuestro modelo pedagógico promueve un desarrollo integral que equilibra la excelencia académica con el fortalecimiento del ser, a través de tres pilares fundamentales que enriquecen la vida escolar de nuestros estudiantes:
+                </p>
+            </div>
 
-            <!-- Columns Grid for the 3 Pillars -->
-            <div class="agreements-grid">
+        </div> <!-- Close vida-container for full bleed layout -->
 
-                <!-- Card 1: Deportes -->
-                <div class="counseling-modern-card hontanar-scroll-reveal">
-                    <div class="card-image-block">
-                        <img src="assets/deporte-3.png" alt="Deportes Hontanar">
+        <!-- 3-Column Premium Photo Grid mirroring Sello Hontanar -->
+        <section class="sello-pillars-section" style="background-color: #ffffff; padding: 40px 20px 80px 20px;">
+            <div class="sello-pillars-container hontanar-scroll-reveal">
+                <!-- Green decorator shape overlaying top-right corner -->
+                <img src="assets/Recurso_15.svg" alt="Decoración" class="sello-grid-decor">
+
+                <div class="sello-pillars-grid">
+                    <!-- Column 1: Deportes -->
+                    <div class="sello-pillar-card">
+                        <div class="sello-pillar-bg" style="background-image: url('assets/deporte-3.png');"></div>
+                        <div class="sello-pillar-overlay"></div>
+                        <div class="sello-pillar-content">
+                            <h3 class="sello-pillar-title">Deportes que forman <br><span>el carácter</span></h3>
+                            <p class="sello-pillar-desc">Más allá de la condición física, la práctica deportiva en El Hontanar enseña <strong>disciplina, resiliencia y trabajo en equipo</strong>. El colegio fomenta el deporte como una herramienta de regulación emocional y superación personal.</p>
+                        </div>
                     </div>
-                    <div class="card-info-block">
-                        <h3>Deportes que forman el carácter</h3>
-                        <p>Más allá de la condición física, la práctica deportiva en El Hontanar enseña <strong>disciplina, resiliencia y trabajo en equipo</strong>. El colegio fomenta el deporte como una herramienta de regulación emocional y superación personal.</p>
+
+                    <!-- Column 2: Arte -->
+                    <div class="sello-pillar-card">
+                        <div class="sello-pillar-bg" style="background-image: url('assets/Copia_de_DSC_0113.JPG');"></div>
+                        <div class="sello-pillar-overlay"></div>
+                        <div class="sello-pillar-content">
+                            <h3 class="sello-pillar-title">Arte para la expresión <br><span>y la sensibilidad</span></h3>
+                            <p class="sello-pillar-desc">La música, las artes plásticas y el teatro son espacios esenciales para el <strong>pensamiento creativo y la autogestión</strong>. A través del arte, los estudiantes descubren su identidad y desarrollan sensibilidad estética y cultural.</p>
+                        </div>
+                    </div>
+
+                    <!-- Column 3: Tecnología -->
+                    <div class="sello-pillar-card">
+                        <div class="sello-pillar-bg" style="background-image: url('assets/20241002_144246.jpg');"></div>
+                        <div class="sello-pillar-overlay"></div>
+                        <div class="sello-pillar-content">
+                            <h3 class="sello-pillar-title">Tecnología con sentido <br><span>académico y responsable</span></h3>
+                            <p class="sello-pillar-desc">Integramos herramientas digitales y el <strong>enfoque STEM+H</strong> como recursos para la investigación, la innovación y la solución de problemas reales. Promovemos un uso consciente, ético y crítico de la tecnología.</p>
+                        </div>
                     </div>
                 </div>
-
-                <!-- Card 2: Arte -->
-                <div class="counseling-modern-card hontanar-scroll-reveal">
-                    <div class="card-image-block">
-                        <img src="assets/Copia_de_DSC_0113.JPG" alt="Arte Hontanar">
-                    </div>
-                    <div class="card-info-block">
-                        <h3>Arte para la expresión y la sensibilidad</h3>
-                        <p>La música, las artes plásticas y el teatro son espacios esenciales para el <strong>pensamiento creativo y la autogestión</strong>. A través del arte, los estudiantes descubren su identidad y desarrollan sensibilidad estética y cultural.</p>
-                    </div>
-                </div>
-
-                <!-- Card 3: Tecnología -->
-                <div class="counseling-modern-card hontanar-scroll-reveal">
-                    <div class="card-image-block">
-                        <img src="assets/20241002_144246.jpg" alt="Tecnología Hontanar">
-                    </div>
-                    <div class="card-info-block">
-                        <h3>Tecnología con sentido académico y responsable</h3>
-                        <p>Integramos herramientas digitales y el <strong>enfoque STEM+H</strong> como recursos para la investigación, la innovación y la solución de problemas reales. Promovemos un uso consciente, ético y crítico de la tecnología.</p>
-                    </div>
-                </div>
-
-        </div><!-- cierre vida-container -->
-
-        <!-- Galería instalaciones - Infinite Scroll Carousel (igual que el home) -->
-        <section class="galeria-carousel" style="margin: 50px 0; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; width: 100vw;">
-            <div class="carousel-track">
-                <img src="assets/espacio-campus-1.jpg" alt="Campus Hontanar">
-                <img src="assets/espacio-deporte-1.jpg" alt="Instalaciones Deportivas">
-                <img src="assets/espacio-aulas-2.jpg" alt="Aulas Hontanar">
-                <img src="assets/152.jpg" alt="Vida Escolar">
-                <img src="assets/Copia de DSC_0875.JPG" alt="Espacios Hontanar">
-                <img src="assets/deporte-3.png" alt="Deporte Hontanar">
-                <img src="assets/Copia_de_DSC_0113.JPG" alt="Arte Hontanar">
-                <img src="assets/20241002_144246.jpg" alt="Tecnología Hontanar">
-                <!-- Duplicadas para efecto infinito -->
-                <img src="assets/espacio-campus-1.jpg" alt="Campus Hontanar">
-                <img src="assets/espacio-deporte-1.jpg" alt="Instalaciones Deportivas">
-                <img src="assets/espacio-aulas-2.jpg" alt="Aulas Hontanar">
-                <img src="assets/152.jpg" alt="Vida Escolar">
-                <img src="assets/Copia de DSC_0875.JPG" alt="Espacios Hontanar">
-                <img src="assets/deporte-3.png" alt="Deporte Hontanar">
-                <img src="assets/Copia_de_DSC_0113.JPG" alt="Arte Hontanar">
-                <img src="assets/20241002_144246.jpg" alt="Tecnología Hontanar">
             </div>
         </section>
 
-        <div class="vida-container">
-
-            <!-- Parallax Mid-Page Divider -->
-            <div class="parallax-divider hontanar-scroll-reveal" style="background-image: url('assets/Copia de DSC_0875.JPG');">
-                <div class="parallax-overlay"></div>
-                <div class="parallax-content">
-                    <h2>Formación con Sentido Humano</h2>
-                    <p>Equilibramos la excelencia académica con la sensibilidad artística, el desarrollo físico y el uso responsable de la tecnología para formar líderes del mañana.</p>
+        <!-- 3. GALERÍA ESTILO HOME (INFINITE SCROLL CAROUSEL mirroring filosofia-y-valores) -->
+        <section class="filo-gallery-section" style="padding: 60px 0 0 0; background-color: #ffffff;">
+            <div class="filo-gallery-header hontanar-scroll-reveal" style="text-align: center; margin-bottom: 40px;">
+                <h4 class="kicker" style="font-family: var(--font-lato); color: var(--green); font-size: 0.85rem; font-weight: 900; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 14px;">NUESTRA COMUNIDAD</h4>
+                <h2 class="filo-section-title" style="font-family: var(--font-lato); font-size: 2.6rem; font-weight: 700; color: var(--blue); line-height: 1.2;">La vida en el <span>Hontanar</span></h2>
+            </div>
+            
+            <div class="filo-galeria-carousel hontanar-scroll-reveal">
+                <div class="filo-carousel-track-scroll">
+                    <img src="assets/espacio-campus-1.jpg" alt="Campus Hontanar">
+                    <img src="assets/espacio-deporte-1.jpg" alt="Instalaciones Deportivas">
+                    <img src="assets/espacio-aulas-2.jpg" alt="Aulas Hontanar">
+                    <img src="assets/152.jpg" alt="Vida Escolar">
+                    <img src="assets/Copia de DSC_0875.JPG" alt="Espacios Hontanar">
+                    <img src="assets/deporte-3.png" alt="Deporte Hontanar">
+                    <img src="assets/Copia_de_DSC_0113.JPG" alt="Arte Hontanar">
+                    <img src="assets/20241002_144246.jpg" alt="Tecnología Hontanar">
+                    <!-- Duplicadas para efecto infinito -->
+                    <img src="assets/espacio-campus-1.jpg" alt="Campus Hontanar">
+                    <img src="assets/espacio-deporte-1.jpg" alt="Instalaciones Deportivas">
+                    <img src="assets/espacio-aulas-2.jpg" alt="Aulas Hontanar">
+                    <img src="assets/152.jpg" alt="Vida Escolar">
+                    <img src="assets/Copia de DSC_0875.JPG" alt="Espacios Hontanar">
+                    <img src="assets/deporte-3.png" alt="Deporte Hontanar">
+                    <img src="assets/Copia_de_DSC_0113.JPG" alt="Arte Hontanar">
+                    <img src="assets/20241002_144246.jpg" alt="Tecnología Hontanar">
                 </div>
             </div>
+        </section>
 
-            <!-- Unified Highlight Card at the Bottom -->
-            <div class="pq-highlight-card hontanar-scroll-reveal" style="margin-top: 80px; margin-bottom: 50px;">
-                <span class="sparkle top-left">&#10022;</span>
-                <span class="sparkle bottom-right">&#10022;</span>
-                <p class="pq-card-kicker">- GIMNASIO EL HONTANAR -</p>
-                <h3 class="pq-card-title">
-                    <em>Este enfoque asegura que los estudiantes de nuestro <strong style="color: var(--yellow); font-weight: 900;">colegio bilingüe</strong> en Bogotá desarrollen habilidades blandas e intelectuales indispensables para liderar su propio proyecto de vida.</em>
-                </h3>
+        <!-- Seccion: Formación con Sentido Humano (Wavy Card Layout mirroring filosofia-y-valores) -->
+        <section class="filo-wavy-cards-section" style="position: relative; overflow: hidden; background-color: #ffffff; padding: 80px 0 60px 0; margin: 0;">
+            <!-- Floating background circles behind wavy cards -->
+            <div class="bg-circles-wrapper">
+                <div class="bg-circle bg-circle-ring-yellow circle-wavy-1"></div>
+                <div class="bg-circle bg-circle-solid-green circle-wavy-2"></div>
+                <div class="bg-circle bg-circle-ring-blue circle-wavy-3"></div>
             </div>
+            <div class="filo-wavy-container" style="position: relative; z-index: 2;">
+                
+                <!-- Card 1: Text Left, Image Right -->
+                <div class="filo-wavy-card text-left hontanar-scroll-reveal">
+                    <div class="wavy-card-text-col">
+                        <h2 class="wavy-card-title">Formación con <br><span>Sentido Humano</span></h2>
+                        <p class="wavy-card-paragraph">Equilibramos la excelencia académica con la sensibilidad artística, el desarrollo físico y el uso responsable de la tecnología para formar a los líderes del mañana.</p>
+                        <p class="wavy-card-paragraph-highlight" style="color: var(--blue); font-weight: 700; font-family: var(--font-lato); line-height: 1.65; margin: 20px 0;">Este enfoque permite que los estudiantes de nuestro colegio bilingüe en Bogotá desarrollen habilidades blandas y competencias intelectuales esenciales para liderar con éxito su propio proyecto de vida.</p>
+                        <div class="wavy-card-btn-wrap">
+                            <a href="agenda-visita.html" class="btn btn-yellow btn-nav">Conoce más <span class="arrow">&gt;</span></a>
+                        </div>
+                    </div>
+                    <div class="wavy-card-img-col" style="background-image: url('assets/Copia de DSC_0875.JPG');">
+                        <!-- Wavy divider path overlapping the image from left -->
+                        <svg viewBox="0 0 100 600" preserveAspectRatio="none" class="wavy-edge-svg wave-right-side">
+                            <path d="M0,0 L30,0 C60,150 70,300 25,450 C10,520 0,600 0,600 Z" fill="#ffffff"/>
+                        </svg>
+                    </div>
+                </div>
 
-        </div>
+            </div>
+        </section>
     </main>
 
     <div class="social-floating">
