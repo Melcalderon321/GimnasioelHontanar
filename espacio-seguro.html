@@ -357,16 +357,59 @@
 
             </div>
 
-            <!-- Parallax Mid-Page Divider -->
-            <div class="parallax-divider hontanar-scroll-reveal" style="background-image: url('assets/154.jpg'); margin-top: 20px;">
-                <div class="parallax-overlay"></div>
-                <div class="parallax-content">
-                    <h2>Infraestructura y protocolos para la tranquilidad familiar</h2>
-                    <p>Nuestro campus cuenta con sistemas de seguridad integrados, control de accesos y personal capacitado para atender cualquier eventualidad. Asimismo, el servicio de enfermería y los planes de emergencia aseguran una <strong>respuesta oportuna</strong>, garantizando que la vida escolar transcurra en un <strong>ambiente de cuidado y protección</strong>.</p>
+        </div><!-- cierre vida-container para hacer la sección dividida full-bleed -->
+
+        <!-- Stats & Accordion Split Section -->
+        <section class="pq-split-section reveal-on-scroll reveal-zoom-in">
+            <!-- Left Side: Accordion -->
+            <div class="pq-split-left">
+                <h2 class="pq-split-title">Infraestructura y protocolos para la <span style="font-weight: 900;">tranquilidad familiar</span></h2>
+                
+                <div class="pq-split-accordion">
+                    <!-- Item 1: Seguridad Integrada -->
+                    <div class="pq-split-accordion-item active">
+                        <div class="pq-split-accordion-header">
+                            <h3>Sistemas de Seguridad</h3>
+                            <span class="icon-toggle">+</span>
+                        </div>
+                        <div class="pq-split-accordion-body">
+                            <p>Nuestro campus cuenta con sistemas de seguridad integrados, control de accesos automatizados y personal capacitado para atender cualquier eventualidad en tiempo real.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 2: Cuidado y Enfermería -->
+                    <div class="pq-split-accordion-item">
+                        <div class="pq-split-accordion-header">
+                            <h3>Cuidado y Salud Oportuna</h3>
+                            <span class="icon-toggle">+</span>
+                        </div>
+                        <div class="pq-split-accordion-body">
+                            <p>El servicio de enfermería permanente y los planes de emergencia estructurados aseguran una respuesta oportuna ante cualquier eventualidad.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 3: Prevención y Convivencia -->
+                    <div class="pq-split-accordion-item">
+                        <div class="pq-split-accordion-header">
+                            <h3>Ambiente de Cuidado y Protección</h3>
+                            <span class="icon-toggle">+</span>
+                        </div>
+                        <div class="pq-split-accordion-body">
+                            <p>Garantizamos que la vida escolar transcurra en un entorno seguro y de sana convivencia, permitiendo a los niños desarrollarse con total libertad.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-        </div><!-- cierre vida-container -->
+            <!-- Right Side: Photo (WITHOUT the metrics cards overlay!) -->
+            <div class="pq-split-right">
+                <div class="pq-split-yellow-accent"></div>
+                <div class="pq-split-photo-bg" style="background-image: url('assets/154.jpg'); background-position: center; background-size: cover; border-radius: 0; overflow: hidden;"></div>
+                <img src="assets/Recurso 15.svg" class="pq-split-svg-decorator" alt="Decoración">
+            </div>
+        </section>
+
+        <div class="vida-container"><!-- reabrir vida-container -->
 
         <!-- Galería - Infinite Scroll Carousel (igual que el home) -->
         <section class="galeria-carousel" style="margin: 90px 0; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; width: 100vw;">
@@ -494,6 +537,18 @@
                         if(c !== card) c.classList.remove('active-card');
                     });
                     card.classList.toggle('active-card');
+                });
+            });
+
+            // Accordion interaction
+            const accordionItems = document.querySelectorAll('.pq-split-accordion-item');
+            accordionItems.forEach(item => {
+                const header = item.querySelector('.pq-split-accordion-header');
+                header.addEventListener('click', () => {
+                    accordionItems.forEach(i => {
+                        if(i !== item) i.classList.remove('active');
+                    });
+                    item.classList.toggle('active');
                 });
             });
         });
