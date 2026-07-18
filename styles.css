@@ -1479,6 +1479,7 @@ a {
 .btn-sidebar {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
     padding: 12px 25px;
     border-radius: 50px;
@@ -1487,7 +1488,14 @@ a {
     font-weight: 700;
     font-family: var(--font-lato);
     font-size: 0.95rem;
-    width: max-content;
+    width: 220px;
+    box-sizing: border-box;
+}
+
+.btn-sidebar svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
 }
 
 .btn-s-green {
