@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="consejeria-internacional.css">
     <link rel="stylesheet" href="vida-en-el-campus.css">
     <link rel="stylesheet" href="filosofia-y-valores.css">
+    <link rel="stylesheet" href="por-que.css">
     <style>
         /* Page-specific overrides for white background and flat cards */
         body,
@@ -324,42 +325,33 @@
             <div class="hontanar-scroll-reveal" style="text-align: center; margin-top: 50px; margin-bottom: 30px;">
                 <h2 class="vida-section-title" style="color: var(--blue) !important; margin-bottom: 15px;">Convivencia sana basada en el respeto y la empatía</h2>
                 <p class="vida-paragraph" style="max-width: 800px; margin: 0 auto; color: #4a5568; line-height: 1.7; font-size: 1.05rem;">
-                    La seguridad en El Hontanar va más allá de la infraestructura; se construye desde las <strong>relaciones humanas</strong>:
+                    La seguridad en El Hontanar va más allá de la infraestructura; se construye desde las <strong style="color: var(--blue);">relaciones humanas</strong>:
                 </p>
             </div>
 
-            <div class="agreements-grid" style="margin-bottom: 60px;">
+            <div class="pillar-bento-row" style="margin-bottom: 60px;">
                 
                 <!-- Card 1: Cultura de paz y prevención -->
-                <div class="counseling-modern-card hontanar-scroll-reveal">
-                    <div class="card-image-block">
-                        <img src="assets/DSC_0022.jpg" alt="Cultura de paz y prevención">
-                    </div>
-                    <div class="card-info-block">
-                        <h3>Cultura de paz y prevención</h3>
-                        <p>Implementamos protocolos claros de convivencia escolar enfocados en la <strong>prevención del acoso</strong>, la promoción del diálogo y la <strong>resolución pacífica</strong> de conflictos.</p>
+                <div class="pillar-bento-card hontanar-scroll-reveal" style="background-image: url('assets/DSC_0022.jpg'); background-size: cover; background-position: center;">
+                    <div class="pillar-bento-body">
+                        <h3 class="pillar-bento-heading">Cultura de paz<br><span>y prevención</span></h3>
+                        <p class="pillar-bento-text">Implementamos protocolos claros de convivencia escolar enfocados en la prevención del acoso, la promoción del diálogo y la resolución pacífica de conflictos.</p>
                     </div>
                 </div>
 
                 <!-- Card 2: Acompañamiento docente permanente -->
-                <div class="counseling-modern-card hontanar-scroll-reveal">
-                    <div class="card-image-block">
-                        <img src="assets/153.jpg" alt="Acompañamiento docente permanente">
-                    </div>
-                    <div class="card-info-block">
-                        <h3>Acompañamiento docente permanente</h3>
-                        <p>Los estudiantes cuentan con la guía y supervisión constante de sus profesores y del <strong>Equipo de Bienestar</strong> en los salones de clase, zonas recreativas, laboratorios y rutas escolares.</p>
+                <div class="pillar-bento-card hontanar-scroll-reveal" style="background-image: url('assets/153.jpg'); background-size: cover; background-position: center;">
+                    <div class="pillar-bento-body">
+                        <h3 class="pillar-bento-heading">Acompañamiento<br><span>docente permanente</span></h3>
+                        <p class="pillar-bento-text">Los estudiantes cuentan con la guía y supervisión constante de sus profesores y del Equipo de Bienestar en los salones de clase, zonas recreativas, laboratorios y rutas escolares.</p>
                     </div>
                 </div>
 
                 <!-- Card 3: Entorno inclusivo -->
-                <div class="counseling-modern-card hontanar-scroll-reveal">
-                    <div class="card-image-block">
-                        <img src="assets/DSC_0603.jpg" alt="Entorno inclusivo">
-                    </div>
-                    <div class="card-info-block">
-                        <h3>Entorno inclusivo</h3>
-                        <p>Fomentamos un ambiente donde cada niño y joven se siente <strong>aceptado, escuchado y respetado</strong> en su individualidad, fortaleciendo su autoestima y <strong>sentido de pertenencia</strong>.</p>
+                <div class="pillar-bento-card hontanar-scroll-reveal" style="background-image: url('assets/DSC_0603.jpg'); background-size: cover; background-position: center;">
+                    <div class="pillar-bento-body">
+                        <h3 class="pillar-bento-heading">Entorno<br><span>inclusivo</span></h3>
+                        <p class="pillar-bento-text">Fomentamos un ambiente donde cada niño y joven se siente aceptado, escuchado y respetado en su individualidad, fortaleciendo su autoestima y sentido de pertenencia.</p>
                     </div>
                 </div>
 
@@ -493,6 +485,17 @@
 
             const scrollElements = document.querySelectorAll('.hontanar-scroll-reveal');
             scrollElements.forEach(el => revealObserver.observe(el));
+
+            // Touch interaction for bento cards
+            const bentoCards = document.querySelectorAll('.pillar-bento-card');
+            bentoCards.forEach(card => {
+                card.addEventListener('click', () => {
+                    bentoCards.forEach(c => {
+                        if(c !== card) c.classList.remove('active-card');
+                    });
+                    card.classList.toggle('active-card');
+                });
+            });
         });
     </script>
 </body>
