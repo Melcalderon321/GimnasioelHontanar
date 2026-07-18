@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -11,7 +11,77 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="tour-virtual.css">
     <link rel="stylesheet" href="consejeria-internacional.css">
+    <link rel="stylesheet" href="multilinguismo.css">
     <link rel="stylesheet" href="vida-en-el-campus.css">
+    <style>
+        /* Page-specific overrides for white background and flat cards */
+        body,
+        .vida-page {
+            background-color: var(--white) !important;
+            color: #334155;
+            position: relative;
+        }
+        .bento-card-color,
+        .cta-box,
+        .cc-carousel-wrapper,
+        .cc-carousel-slide,
+        .cc-carousel-slide img {
+            border-radius: 0 !important;
+        }
+        .vida-section-title {
+            color: var(--blue) !important;
+        }
+
+        /* Floating background circles system */
+        .bg-circles-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+            z-index: 1;
+        }
+        .bg-circle {
+            position: absolute;
+            border-radius: 50%;
+        }
+        .bg-circle-ring-yellow {
+            border: 24px solid rgba(249, 239, 108, 0.15);
+            width: 320px;
+            height: 320px;
+        }
+        .bg-circle-solid-green {
+            background-color: rgba(27, 166, 85, 0.06);
+            width: 260px;
+            height: 260px;
+        }
+        .bg-circle-ring-blue {
+            border: 36px solid rgba(37, 68, 120, 0.08);
+            width: 420px;
+            height: 420px;
+        }
+        .circle-1 {
+            top: 15%;
+            left: -100px;
+            animation: float-circle-slow 20s infinite alternate ease-in-out;
+        }
+        .circle-2 {
+            top: 45%;
+            right: -80px;
+            animation: float-circle-slow 25s infinite alternate-reverse ease-in-out;
+        }
+        .circle-3 {
+            top: 75%;
+            left: 10%;
+            animation: float-circle-slow 30s infinite alternate ease-in-out;
+        }
+        @keyframes float-circle-slow {
+            0% { transform: translateY(0) rotate(0deg); }
+            100% { transform: translateY(-40px) rotate(180deg); }
+        }
+    </style>
 </head>
 <body>
     <!-- Navbar -->
@@ -284,7 +354,13 @@
         </div>
         <img src="assets/ChatGPT Image 1 jul 2025, 17_28_04 (3).png" alt="ColibrÃ­" class="header-colibri-float">
     </section>
-<main class="vida-page">
+<main class="vida-page" style="position: relative; overflow: hidden;">
+    <!-- Floating background circles -->
+    <div class="bg-circles-wrapper">
+        <div class="bg-circle bg-circle-ring-yellow circle-1"></div>
+        <div class="bg-circle bg-circle-solid-green circle-2"></div>
+        <div class="bg-circle bg-circle-ring-blue circle-3"></div>
+    </div>
         <div class="breadcrumbs">
                 <a href="index.html">Inicio</a> &gt; <a href="#">Vida en el Campus</a> &gt; <span class="current">Character Counts</span>
             </div>
@@ -299,51 +375,53 @@
             </div>
 
             
-            <p class="vida-lead-paragraph hontanar-scroll-reveal">
-                En el Gimnasio El Hontanar creemos que una verdadera educación debe formar no solo mentes brillantes, sino <strong style="color: var(--white);">seres humanos íntegros</strong>. Por ello, implementamos el programa <strong style="color: var(--white);">Character Counts</strong>, un marco ético de talla global que guía nuestra convivencia y enriquece nuestro modelo de enseñanza.
-            </p>
+            <div class="vida-lead-paragraph-wrapper hontanar-scroll-reveal" style="border-left: 4px solid var(--green); padding-left: 25px; margin: 40px auto 60px auto; max-width: 900px; text-align: left;">
+                <p style="font-family: var(--font-lato); font-size: 1.18rem; line-height: 1.85; color: var(--blue) !important; margin: 0;">
+                    En el Gimnasio El Hontanar creemos que una verdadera educación debe formar no solo mentes brillantes, sino <strong style="color: var(--green); font-weight: 700;">seres humanos íntegros</strong>. Por ello, implementamos el programa <strong style="color: var(--green); font-weight: 700;">Character Counts</strong>, un marco ético de talla global que guía nuestra convivencia y enriquece nuestro modelo de enseñanza.
+                </p>
+            </div>
 
             <div class="pillars-grid">
                 
                 <!-- Card 1: Confiabilidad (Trustworthiness) -->
-                <div class="bento-card-color color-blue hontanar-scroll-reveal">
-                    <span class="card-num">01</span>
-                    <h3>Confiabilidad <span style="font-size: 0.95rem; font-weight: 400; opacity: 0.75; display: block; margin-top: 4px;">Trustworthiness</span></h3>
+                <div class="multi-modern-card hontanar-scroll-reveal">
+                    <span class="multi-card-number-text" style="font-family: var(--font-lato); font-size: 1.8rem; font-weight: 700; color: var(--green); display: block; margin-bottom: 24px; line-height: 1;">01</span>
+                    <h3>Confiabilidad <br><span class="title-serif-italic">Trustworthiness</span></h3>
                     <p>Ser <strong>honestos</strong>, cumplir la palabra y tener el <strong>coraje moral</strong> de hacer lo correcto de forma constante.</p>
                 </div>
 
                 <!-- Card 2: Respeto (Respect) -->
-                <div class="bento-card-color color-green hontanar-scroll-reveal">
-                    <span class="card-num">02</span>
-                    <h3>Respeto <span style="font-size: 0.95rem; font-weight: 400; opacity: 0.75; display: block; margin-top: 4px;">Respect</span></h3>
+                <div class="multi-modern-card hontanar-scroll-reveal">
+                    <span class="multi-card-number-text" style="font-family: var(--font-lato); font-size: 1.8rem; font-weight: 700; color: var(--green); display: block; margin-bottom: 24px; line-height: 1;">02</span>
+                    <h3>Respeto <br><span class="title-serif-italic">Respect</span></h3>
                     <p>Valorar a los demás, tolerar las diferencias y resolver cualquier conflicto de manera <strong>pacífica</strong>.</p>
                 </div>
 
                 <!-- Card 3: Responsabilidad (Responsibility) -->
-                <div class="bento-card-color color-pink hontanar-scroll-reveal">
-                    <span class="card-num">03</span>
-                    <h3>Responsabilidad <span style="font-size: 0.95rem; font-weight: 400; opacity: 0.75; display: block; margin-top: 4px;">Responsibility</span></h3>
-                    <p>Asumir las consequences de nuestros actos, ser <strong>autodisciplinados</strong> y dar siempre nuestro <strong>mejor esfuerzo</strong>.</p>
+                <div class="multi-modern-card hontanar-scroll-reveal">
+                    <span class="multi-card-number-text" style="font-family: var(--font-lato); font-size: 1.8rem; font-weight: 700; color: var(--green); display: block; margin-bottom: 24px; line-height: 1;">03</span>
+                    <h3>Responsabilidad <br><span class="title-serif-italic">Responsibility</span></h3>
+                    <p>Asumir las consecuencias de nuestros actos, ser <strong>autodisciplinados</strong> y dar siempre nuestro <strong>mejor esfuerzo</strong>.</p>
                 </div>
 
                 <!-- Card 4: Justicia (Fairness) -->
-                <div class="bento-card-color color-green-brand hontanar-scroll-reveal">
-                    <span class="card-num">04</span>
-                    <h3>Justicia <span style="font-size: 0.95rem; font-weight: 400; opacity: 0.75; display: block; margin-top: 4px;">Fairness</span></h3>
+                <div class="multi-modern-card hontanar-scroll-reveal">
+                    <span class="multi-card-number-text" style="font-family: var(--font-lato); font-size: 1.8rem; font-weight: 700; color: var(--green); display: block; margin-bottom: 24px; line-height: 1;">04</span>
+                    <h3>Justicia <br><span class="title-serif-italic">Fairness</span></h3>
                     <p>Jugar bajo las <strong>reglas establecidas</strong>, ser equitativos, incluyentes y escuchar con una <strong>mente abierta</strong>.</p>
                 </div>
 
                 <!-- Card 5: Bondad (Caring) -->
-                <div class="bento-card-color color-blue hontanar-scroll-reveal">
-                    <span class="card-num">05</span>
-                    <h3>Bondad <span style="font-size: 0.95rem; font-weight: 400; opacity: 0.75; display: block; margin-top: 4px;">Caring</span></h3>
+                <div class="multi-modern-card hontanar-scroll-reveal">
+                    <span class="multi-card-number-text" style="font-family: var(--font-lato); font-size: 1.8rem; font-weight: 700; color: var(--green); display: block; margin-bottom: 24px; line-height: 1;">05</span>
+                    <h3>Bondad <br><span class="title-serif-italic">Caring</span></h3>
                     <p>Ser <strong>empáticos, compasivos</strong>, solidarios y manifestar gratitud permanente con acciones constructivas.</p>
                 </div>
 
                 <!-- Card 6: Ciudadanía (Citizenship) -->
-                <div class="bento-card-color color-green-brand hontanar-scroll-reveal">
-                    <span class="card-num">06</span>
-                    <h3>Ciudadanía <span style="font-size: 0.95rem; font-weight: 400; opacity: 0.75; display: block; margin-top: 4px;">Citizenship</span></h3>
+                <div class="multi-modern-card hontanar-scroll-reveal">
+                    <span class="multi-card-number-text" style="font-family: var(--font-lato); font-size: 1.8rem; font-weight: 700; color: var(--green); display: block; margin-bottom: 24px; line-height: 1;">06</span>
+                    <h3>Ciudadanía <br><span class="title-serif-italic">Citizenship</span></h3>
                     <p>Respetar las leyes, cuidar con esmero el <strong>medio ambiente</strong> y contribuir activamente a mejorar la <strong>comunidad</strong>.</p>
                 </div>
 
@@ -351,7 +429,7 @@
 
             <!-- Section Title for the Slider -->
             <div class="vida-header hontanar-scroll-reveal" style="margin-top: 60px; margin-bottom: 30px;">
-                <h2 class="vida-section-title">Valores en el Día a Día Escolar</h2>
+                <h2 class="vida-section-title" style="color: var(--blue) !important;">Valores en el Día a Día Escolar</h2>
             </div>
 
             <!-- Character Counts Manual Carousel Slider -->
