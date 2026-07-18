@@ -11,7 +11,33 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="tour-virtual.css">
     <link rel="stylesheet" href="consejeria-internacional.css">
+    <link rel="stylesheet" href="multilinguismo.css">
     <link rel="stylesheet" href="vida-en-el-campus.css">
+    <link rel="stylesheet" href="por-que.css">
+    <link rel="stylesheet" href="filosofia-y-valores.css">
+    <style>
+        /* Page-specific overrides for flat premium cards and white background */
+        .multi-modern-card,
+        .pq-highlight-card,
+        .bento-card,
+        .counseling-modern-card,
+        .pq-split-photo-bg {
+            border-radius: 0 !important;
+        }
+        body,
+        .vida-page,
+        .vida-container {
+            background-color: var(--white) !important;
+            color: #334155;
+        }
+        /* Style adjustments for multi-modern-card in this page context */
+        .multi-modern-card {
+            background-color: #f8fafc !important;
+            border: 1px solid #e2e8f0 !important;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03) !important;
+            padding: 40px !important;
+        }
+    </style>
 </head>
 <body>
     <!-- Navbar -->
@@ -275,118 +301,139 @@
     <!-- Page Content Container -->
     
     <!-- Banner de Encabezado Premium -->
-    <section class="inner-header-banner" style="background-image: url('assets/counseling-friendship-1.jpg');">
+    <section class="inner-header-banner" style="background-image: url('assets/Copia_de_DSC_0576.JPG');">
         <div class="inner-header-overlay"></div>
         <div class="inner-header-content">
             <span class="inner-header-kicker">VIDA EN EL CAMPUS</span>
             <h1 class="inner-header-title">Bienestar <span>Emocional y Desarrollo</span></h1>
             
         </div>
-        <img src="assets/ChatGPT Image 1 jul 2025, 17_28_04 (3).png" alt="ColibrÃ­" class="header-colibri-float">
+        <img src="assets/ChatGPT Image 1 jul 2025, 17_28_04 (3).png" alt="Colibri" class="header-colibri-float">
     </section>
 <main class="vida-page">
         <div class="breadcrumbs">
                     <a href="index.html">Inicio</a> &gt; <a href="#">Vida en el Campus</a> &gt; <span class="current">Bienestar Emocional</span>
                 </div>
-        <!-- Parallax Background Section for Header, Lead, and Cards -->
-        <section class="cards-parallax-section" style="background-image: url('assets/DSC_0092.JPG'); margin-top: -150px; padding-top: 150px; margin-bottom: 20px; padding-bottom: 40px;">
-            <div class="cards-parallax-overlay"></div>
-            <div class="vida-container" style="position: relative; z-index: 2;">
-                <!-- Unified Breadcrumbs -->
-                
-                
-                <!-- Unified Header Title Section -->
-                <div class="vida-header hontanar-scroll-reveal">
-                    
-                    
-                </div>
-
-                <p class="vida-lead-paragraph hontanar-scroll-reveal">
+        
+        <!-- Clean Layout: White Background & Premium Cards -->
+        <div class="vida-container" style="margin-top: 50px;">
+            <div class="vida-lead-paragraph-wrapper hontanar-scroll-reveal" style="border-left: 4px solid var(--green); padding-left: 25px; margin: 40px auto 60px auto; max-width: 900px; text-align: left;">
+                <p style="font-family: var(--font-lato); font-size: 1.15rem; line-height: 1.85; color: var(--blue) !important; font-weight: 400; margin: 0;">
                     En el Gimnasio El Hontanar sabemos que un estudiante aprende mejor cuando se siente <strong>feliz, seguro y valorado</strong>. Por eso, el bienestar emocional no es un programa aislado; es el eje transversal que define nuestro modelo de enseñanza para un aprendizaje con verdadero sentido.
                 </p>
-
-                <div class="bento-counseling-grid">
-                    
-                    <!-- Card 1: Blue Glass -->
-                    <div class="bento-card-color color-blue hontanar-scroll-reveal">
-                        <span class="card-num">01</span>
-                        <h3>Seguimiento Personalizado</h3>
-                        <p>Monitoreamos de forma activa y cercana el proceso académico, adaptativo y socioemocional de cada estudiante, logrando identificar y atender cualquier necesidad a tiempo.</p>
-                    </div>
-
-                    <!-- Card 2: Yellow Glass -->
-                    <div class="bento-card-color color-green hontanar-scroll-reveal">
-                        <span class="card-num">02</span>
-                        <h3>Regulación Emocional</h3>
-                        <p>Brindamos herramientas prácticas para que los niños y jóvenes reconozcan sus emociones, fortalezcan su autoestima y resuelvan conflictos con total autonomía.</p>
-                    </div>
-
-                    <!-- Card 3: White Glass -->
-                    <div class="bento-card-color color-pink hontanar-scroll-reveal">
-                        <span class="card-num">03</span>
-                        <h3>Alianza Colegio-Familia</h3>
-                        <p>Trabajamos de la mano con los padres de familia a través de talleres, asesorías continuas y canales abiertos que aseguran un entorno coherente de apoyo.</p>
-                    </div>
-
-                </div>
             </div>
-        </section>
-
-        <div class="vida-container">
-
-            <!-- Parallax Mid-Page Divider -->
-            <div class="parallax-divider hontanar-scroll-reveal" style="background-image: url('assets/20200203_091848.jpg'); margin-top: 20px;">
-                <div class="parallax-overlay"></div>
-                <div class="parallax-content">
-                    <h2>Acompañamiento Permanente y Cercano</h2>
-                    <p>Nuestro colegio campestre cuenta con un Equipo de Bienestar altamente calificado (psicólogas, orientadores y terapeutas) que brinda un cuidado permanente e individualizado desde preescolar hasta bachillerato.</p>
-                </div>
-            </div>
-
-        </div><!-- cierre vida-container -->
-
-        <!-- Galería - Infinite Scroll Carousel (igual que el home) -->
-        <section class="galeria-carousel" style="margin: 90px 0; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; width: 100vw;">
-            <div class="carousel-track">
-                <img src="assets/152.jpg" alt="Entrada con Propósito">
-                <img src="assets/20241002_144246.jpg" alt="Aulas Vivas">
-                <img src="assets/espacio-campus-1.jpg" alt="Campus Hontanar">
-                <img src="assets/espacio-deporte-1.jpg" alt="Deporte y Movimiento">
-                <img src="assets/153.jpg" alt="Acompañamiento">
-                <img src="assets/154.jpg" alt="Vida Escolar">
-                <img src="assets/espacio-aulas-2.jpg" alt="Indagación y Ciencia">
-                <img src="assets/20241002_144403.jpg" alt="Un día con Propósito">
-                <!-- Duplicadas para efecto infinito -->
-                <img src="assets/152.jpg" alt="Entrada con Propósito">
-                <img src="assets/20241002_144246.jpg" alt="Aulas Vivas">
-                <img src="assets/espacio-campus-1.jpg" alt="Campus Hontanar">
-                <img src="assets/espacio-deporte-1.jpg" alt="Deporte y Movimiento">
-                <img src="assets/153.jpg" alt="Acompañamiento">
-                <img src="assets/154.jpg" alt="Vida Escolar">
-                <img src="assets/espacio-aulas-2.jpg" alt="Indagación y Ciencia">
-                <img src="assets/20241002_144403.jpg" alt="Un día con Propósito">
-            </div>
-        </section>
-
-        <div class="vida-container">
-
-            <!-- Solid Highlight Section -->
-            <div class="split-content-grid hontanar-scroll-reveal" style="margin-top: 50px;">
-                <div>
-                    <h2 class="vida-section-title" style="text-align: left;">Formar para la Resiliencia y la Empatía</h2>
-                    <p class="vida-paragraph">
-                        A través de programas institucionales enfocados en valores y habilidades blandas, fomentamos un ambiente escolar basado en el <strong>respeto, la inclusión y el cuidado mutuo</strong>.
-                    </p>
-                    <p class="vida-paragraph">
-                        Preparamos a nuestros estudiantes para asumir desafíos cotidianos con <strong>autogestión y autoeficacia</strong>, asegurando que se conviertan en personas empáticas, seguras de sí mismas y plenamente comprometidas con su entorno.
-                    </p>
-                </div>
-                <div class="split-image-wrap">
-                    <img src="assets/Enmascarar grupo 13.jpg" alt="Familia feliz">
-                </div>
-            </div>
-
         </div>
+
+        <section class="multi-bento-section" style="padding: 40px 0; background-color: #ffffff;">
+            <div class="multi-bento-grid" style="max-width: 1140px; margin: 0 auto; padding: 0 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;">
+                
+                <!-- Card 1: Seguimiento Personalizado -->
+                <div class="multi-modern-card hontanar-scroll-reveal">
+                    <!-- SVG Icon: outline chat/orientador or follow up -->
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="multi-card-icon-svg" style="color: var(--green); width: 40px; height: 40px; margin-bottom: 20px;">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
+                    </svg>
+                    <h3 style="font-family: var(--font-lato); font-size: 1.6rem; font-weight: 900; color: var(--blue); margin-bottom: 15px;">Seguimiento<br><span class="title-serif-italic" style="font-family: var(--font-playfair); font-style: italic; color: var(--green); font-weight: 700;">Personalizado</span></h3>
+                    <p style="font-family: var(--font-lato); line-height: 1.7; color: #4a5568;">Monitoreamos de forma activa y cercana el proceso académico, adaptativo y socioemocional de cada estudiante, logrando identificar y atender cualquier necesidad a tiempo.</p>
+                </div>
+
+                <!-- Card 2: Regulación Emocional -->
+                <div class="multi-modern-card hontanar-scroll-reveal">
+                    <!-- SVG Icon: emotional self regulation / heart / mindfulness -->
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="multi-card-icon-svg" style="color: var(--green); width: 40px; height: 40px; margin-bottom: 20px;">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                    </svg>
+                    <h3 style="font-family: var(--font-lato); font-size: 1.6rem; font-weight: 900; color: var(--blue); margin-bottom: 15px;">Regulación<br><span class="title-serif-italic" style="font-family: var(--font-playfair); font-style: italic; color: var(--green); font-weight: 700;">Emocional</span></h3>
+                    <p style="font-family: var(--font-lato); line-height: 1.7; color: #4a5568;">Brindamos herramientas prácticas para que los niños y jóvenes reconozcan sus emociones, fortalezcan su autoestima y resuelvan conflictos con total autonomía.</p>
+                </div>
+
+                <!-- Card 3: Alianza Colegio-Familia -->
+                <div class="multi-modern-card hontanar-scroll-reveal">
+                    <!-- SVG Icon: family / home -->
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="multi-card-icon-svg" style="color: var(--green); width: 40px; height: 40px; margin-bottom: 20px;">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                    </svg>
+                    <h3 style="font-family: var(--font-lato); font-size: 1.6rem; font-weight: 900; color: var(--blue); margin-bottom: 15px;">Alianza<br><span class="title-serif-italic" style="font-family: var(--font-playfair); font-style: italic; color: var(--green); font-weight: 700;">Colegio-Familia</span></h3>
+                    <p style="font-family: var(--font-lato); line-height: 1.7; color: #4a5568;">Trabajamos de la mano con los padres de familia a través de talleres, asesorías continuas y canales abiertos que aseguran un entorno coherente de apoyo.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECCIÓN DE TRANSICIÓN "ACOMPAÑAMIENTO" -->
+        <div class="pq-kd-banner-container" style="margin-top: 50px; margin-bottom: 20px;">
+            <!-- Background Watermark text (Marquee scrolling) -->
+            <div class="pq-kd-marquee-wrapper">
+                <div class="pq-kd-marquee-track">
+                    <span>BIENESTAR • CUIDADO • ORIENTACIÓN • ACOMPAÑAMIENTO •&nbsp;</span>
+                    <span>BIENESTAR • CUIDADO • ORIENTACIÓN • ACOMPAÑAMIENTO •&nbsp;</span>
+                </div>
+            </div>
+            
+            <!-- Vertical grid line -->
+            <div class="pq-kd-grid-line"></div>
+            
+            <!-- Centered Card -->
+            <div class="pq-kd-card hontanar-scroll-reveal">
+                <h3 class="pq-kd-title" style="color: #ffffff !important;">
+                    Acompañamiento<br><span class="serif-italic-yellow">Permanente y Cercano</span>
+                </h3>
+                <p class="pq-kd-subtitle" style="color: #ffffff !important;">
+                    Nuestro colegio campestre cuenta con un Equipo de Bienestar altamente calificado que brinda acompañamiento individualizado a los estudiantes desde preescolar hasta bachillerato.
+                </p>
+            </div>
+        </div>
+
+        <!-- 3. GALERÍA ESTILO HOME (INFINITE SCROLL CAROUSEL mirroring filosofia-y-valores) -->
+        <section class="filo-gallery-section" style="padding: 60px 0 0 0; background-color: #ffffff;">
+            <div class="filo-gallery-header hontanar-scroll-reveal" style="text-align: center; margin-bottom: 40px;">
+                <h4 class="kicker" style="font-family: var(--font-lato); color: var(--green); font-size: 0.85rem; font-weight: 900; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 14px;">NUESTRA COMUNIDAD</h4>
+                <h2 class="filo-section-title" style="font-family: var(--font-lato); font-size: 2.6rem; font-weight: 700; color: var(--blue); line-height: 1.2;">La vida en el <span>Hontanar</span></h2>
+            </div>
+            
+            <div class="filo-galeria-carousel hontanar-scroll-reveal">
+                <div class="filo-carousel-track-scroll">
+                    <img src="assets/152.jpg" alt="Entrada con Propósito">
+                    <img src="assets/20241002_144246.jpg" alt="Aulas Vivas">
+                    <img src="assets/espacio-campus-1.jpg" alt="Campus Hontanar">
+                    <img src="assets/espacio-deporte-1.jpg" alt="Deporte y Movimiento">
+                    <img src="assets/153.jpg" alt="Acompañamiento">
+                    <img src="assets/154.jpg" alt="Vida Escolar">
+                    <img src="assets/espacio-aulas-2.jpg" alt="Indagación y Ciencia">
+                    <img src="assets/20241002_144403.jpg" alt="Un día con Propósito">
+                    <!-- Duplicadas para efecto infinito -->
+                    <img src="assets/152.jpg" alt="Entrada con Propósito">
+                    <img src="assets/20241002_144246.jpg" alt="Aulas Vivas">
+                    <img src="assets/espacio-campus-1.jpg" alt="Campus Hontanar">
+                    <img src="assets/espacio-deporte-1.jpg" alt="Deporte y Movimiento">
+                    <img src="assets/153.jpg" alt="Acompañamiento">
+                    <img src="assets/154.jpg" alt="Vida Escolar">
+                    <img src="assets/espacio-aulas-2.jpg" alt="Indagación y Ciencia">
+                    <img src="assets/20241002_144403.jpg" alt="Un día con Propósito">
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIO/DESCRIPCIÓN EN SPLIT PANEL -->
+        <section class="filo-testimonial-section" style="padding: 60px 20px 100px 20px; background-color: #ffffff;">
+            <div class="filo-testimonial-split hontanar-scroll-reveal">
+                <!-- Shield decorator -->
+                <img src="assets/Capa_2_xA0_Imagen.png" alt="Escudo Hontanar" class="testimonial-split-shield">
+                
+                <!-- Left Column: Quote and Author -->
+                <div class="testimonial-split-left">
+                    <span class="testimonial-split-kicker">Formar para la Resiliencia y la Empatía</span>
+                    <blockquote class="testimonial-split-quote">
+                        "A través de programas institucionales enfocados en valores y habilidades blandas, fomentamos un ambiente escolar basado en el respeto, la inclusión y el cuidado mutuo.
+                        <br><br>
+                        Preparamos a nuestros estudiantes para asumir desafíos cotidianos con autogestión y autoeficacia, asegurando que se conviertan en personas empáticas, seguras de sí mismas y plenamente comprometidas con su entorno."
+                    </blockquote>
+                </div>
+                
+                <!-- Right Column: Image Panel -->
+                <div class="testimonial-split-photo" style="background-image: url('assets/DSC_0889.JPG');"></div>
+            </div>
+        </section>
     </main>
 
     <div class="social-floating">
@@ -465,7 +512,43 @@
 
             const scrollElements = document.querySelectorAll('.hontanar-scroll-reveal');
             scrollElements.forEach(el => revealObserver.observe(el));
+
+            // Lightbox functionality for Gallery
+            const lightbox = document.getElementById('gallery-lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxCaption = document.getElementById('lightbox-caption');
+            const closeBtn = document.querySelector('.lightbox-close');
+            
+            const galleryImgs = document.querySelectorAll('.filo-carousel-track-scroll img');
+            galleryImgs.forEach(img => {
+                img.addEventListener('click', () => {
+                    if (lightbox && lightboxImg && lightboxCaption) {
+                        lightbox.style.display = 'block';
+                        lightboxImg.src = img.src;
+                        lightboxCaption.textContent = img.alt || '';
+                    }
+                });
+            });
+            
+            if (closeBtn && lightbox) {
+                closeBtn.addEventListener('click', () => {
+                    lightbox.style.display = 'none';
+                });
+                
+                lightbox.addEventListener('click', (e) => {
+                    if (e.target === lightbox) {
+                        lightbox.style.display = 'none';
+                    }
+                });
+            }
         });
     </script>
+
+    <!-- Lightbox Modal for Gallery -->
+    <div id="gallery-lightbox" class="lightbox-modal">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div id="lightbox-caption" class="lightbox-caption"></div>
+    </div>
 </body>
 </html>

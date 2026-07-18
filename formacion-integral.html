@@ -526,7 +526,43 @@
 
             const scrollElements = document.querySelectorAll('.hontanar-scroll-reveal');
             scrollElements.forEach(el => revealObserver.observe(el));
+
+            // Lightbox functionality for Gallery
+            const lightbox = document.getElementById('gallery-lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxCaption = document.getElementById('lightbox-caption');
+            const closeBtn = document.querySelector('.lightbox-close');
+            
+            const galleryImgs = document.querySelectorAll('.filo-carousel-track-scroll img');
+            galleryImgs.forEach(img => {
+                img.addEventListener('click', () => {
+                    if (lightbox && lightboxImg && lightboxCaption) {
+                        lightbox.style.display = 'block';
+                        lightboxImg.src = img.src;
+                        lightboxCaption.textContent = img.alt || '';
+                    }
+                });
+            });
+            
+            if (closeBtn && lightbox) {
+                closeBtn.addEventListener('click', () => {
+                    lightbox.style.display = 'none';
+                });
+                
+                lightbox.addEventListener('click', (e) => {
+                    if (e.target === lightbox) {
+                        lightbox.style.display = 'none';
+                    }
+                });
+            }
         });
     </script>
+
+    <!-- Lightbox Modal for Gallery -->
+    <div id="gallery-lightbox" class="lightbox-modal">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div id="lightbox-caption" class="lightbox-caption"></div>
+    </div>
 </body>
 </html>
