@@ -123,6 +123,10 @@ a {
     display: block;
 }
 
+body.home-page .logo img {
+    height: 52px;
+}
+
 .nav-right {
     display: flex;
     align-items: center;
@@ -157,6 +161,13 @@ a {
     width: 20px;
     height: 2px;
     background-color: var(--blue);
+}
+
+body.home-page .hamburger span {
+    background-color: #ffffff;
+}
+body.home-page .hamburger-circle {
+    border-color: #ffffff;
 }
 
 .btn-nav, .btn-hero {
