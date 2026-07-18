@@ -59,7 +59,7 @@
         }
         .espacio-gallery-header h2 {
             color: var(--blue) !important;
-            font-weight: 900 !important;
+            font-weight: 700 !important;
         }
         .espacio-gallery-header h2 span {
             color: var(--green) !important;
@@ -338,7 +338,14 @@
         </div>
         <img src="assets/ChatGPT Image 1 jul 2025, 17_28_04 (3).png" alt="ColibrÃ­" class="header-colibri-float">
     </section>
-<main class="vida-page">
+<main class="vida-page" style="position: relative; overflow: hidden;">
+        <!-- Circulitos flotantes decorativos en toda la página -->
+        <div class="bg-circles-wrapper" style="position: absolute; inset: 0; pointer-events: none; z-index: 0;">
+            <div class="bg-circle bg-circle-ring-yellow circle-1" style="top: 3%; left: -4%;"></div>
+            <div class="bg-circle bg-circle-solid-green circle-2" style="top: 30%; right: -3%;"></div>
+            <div class="bg-circle bg-circle-ring-blue circle-3" style="top: 60%; left: 5%;"></div>
+            <div class="bg-circle bg-circle-ring-yellow circle-1" style="top: 80%; right: 8%;"></div>
+        </div>
         <div class="breadcrumbs">
                 <a href="index.html">Inicio</a> &gt; <a href="#">Vida en el Campus</a> &gt; <span class="current">Un Día Escolar</span>
             </div>
@@ -398,7 +405,7 @@
         <section class="pq-split-section hontanar-scroll-reveal" style="margin-top: 50px; margin-bottom: 80px;">
             <!-- Left Side: Accordion -->
             <div class="pq-split-left">
-                <h2 class="pq-split-title" style="font-family: var(--font-lato); font-size: 2.3rem; font-weight: 900; color: var(--blue); line-height: 1.25; margin-bottom: 25px;">
+                <h2 class="pq-split-title" style="font-family: var(--font-lato); font-size: 2.3rem; font-weight: 700; color: var(--blue); line-height: 1.25; margin-bottom: 25px;">
                     Desarrollo Integral <br>
                     <span style="font-family: var(--font-playfair); font-style: italic; color: var(--green); font-weight: 700;">en Cada Momento</span>
                 </h2>
@@ -440,129 +447,96 @@
             </div>
         </section>
 
-        <!-- Galería Acordeón Horizontal (igual que espacios-de-bienestar-y-naturaleza) -->
-        <div class="espacio-gallery-section hontanar-scroll-reveal">
-
-            <div class="espacio-gallery-header">
-                <h4 class="kicker">UN DÍA ESCOLAR</h4>
-                <h2>Galería de nuestra <span>Jornada</span></h2>
-            </div>
-
-            <!-- Accordion Row 1 -->
-            <div class="haccordion">
-                <div class="hacc-item active" onclick="toggleHacc(this)">
-                    <img src="assets/152.jpg" alt="Entrada con Propósito">
-                    <div class="hacc-overlay">
-                        <span class="hacc-pill">Inicio de Jornada</span>
-                        <h3>Entrada con Propósito</h3>
-                        <p>Llegada y encuentro con el director de curso para arrancar el día con energía</p>
-                    </div>
-                </div>
-                <div class="hacc-item" onclick="toggleHacc(this)">
-                    <img src="assets/20241002_144246.jpg" alt="Aulas Vivas">
-                    <div class="hacc-overlay">
-                        <span class="hacc-pill">Aulas Activas</span>
-                        <h3>Jornada Activa</h3>
-                        <p>Espacios participativos donde la teoría se conecta con la vida real</p>
-                    </div>
-                </div>
-                <div class="hacc-item" onclick="toggleHacc(this)">
-                    <img src="assets/espacio-campus-1.jpg" alt="Campus Hontanar">
-                    <div class="hacc-overlay">
-                        <span class="hacc-pill">Campus Verde</span>
-                        <h3>Campus Hontanar</h3>
-                        <p>Amplio campus rodeado de naturaleza entre Bogotá y Chía</p>
-                    </div>
-                </div>
-                <div class="hacc-item" onclick="toggleHacc(this)">
-                    <img src="assets/espacio-deporte-1.jpg" alt="Deporte y Movimiento">
-                    <div class="hacc-overlay">
-                        <span class="hacc-pill">Deporte</span>
-                        <h3>Movimiento y Salud</h3>
-                        <p>Canchas y zonas de recreación que forman carácter y bienestar</p>
-                    </div>
-                </div>
-                <div class="hacc-item" onclick="toggleHacc(this)">
-                    <img src="assets/153.jpg" alt="Acompañamiento">
-                    <div class="hacc-overlay">
-                        <span class="hacc-pill">Acompañamiento</span>
-                        <h3>Cercanía y Confianza</h3>
-                        <p>Docentes comprometidos con el desarrollo integral de cada estudiante</p>
-                    </div>
+        <!-- SECCIÓN ADMISIONES (panel oscuro de transición) -->
+        <div class="pq-kd-banner-container" style="margin-top: 50px; margin-bottom: 20px;">
+            <!-- Background Watermark text (Marquee scrolling) -->
+            <div class="pq-kd-marquee-wrapper">
+                <div class="pq-kd-marquee-track">
+                    <span>ADMISIONES • HONTANAR • EDUCACIÓN • COMUNIDAD •&nbsp;</span>
+                    <span>ADMISIONES • HONTANAR • EDUCACIÓN • COMUNIDAD •&nbsp;</span>
                 </div>
             </div>
-
-            <!-- Accordion Row 2 -->
-            <div class="haccordion" style="margin-top: 10px;">
-                <div class="hacc-item active" onclick="toggleHacc(this)">
-                    <img src="assets/154.jpg" alt="Vida Escolar">
-                    <div class="hacc-overlay">
-                        <span class="hacc-pill">Vida Escolar</span>
-                        <h3>Un Día con Propósito</h3>
-                        <p>Cada momento del día aporta al crecimiento académico y personal</p>
-                    </div>
-                </div>
-                <div class="hacc-item" onclick="toggleHacc(this)">
-                    <img src="assets/espacio-aulas-2.jpg" alt="Indagación y Ciencia">
-                    <div class="hacc-overlay">
-                        <span class="hacc-pill">STEM+H</span>
-                        <h3>Indagación y Ciencia</h3>
-                        <p>Laboratorios y proyectos que despiertan la curiosidad científica</p>
-                    </div>
-                </div>
-                <div class="hacc-item" onclick="toggleHacc(this)">
-                    <img src="assets/20241002_144403.jpg" alt="Cierre de Jornada">
-                    <div class="hacc-overlay">
-                        <span class="hacc-pill">3:30 PM</span>
-                        <h3>Cierre de Jornada</h3>
-                        <p>El día termina con aprendizajes que trascienden el aula</p>
-                    </div>
-                </div>
-                <div class="hacc-item" onclick="toggleHacc(this)">
-                    <img src="assets/espacio-campus-1.jpg" alt="Zonas Verdes">
-                    <div class="hacc-overlay">
-                        <span class="hacc-pill">Naturaleza</span>
-                        <h3>Zonas Verdes</h3>
-                        <p>Descansos al aire libre que recargan energía y fomentan la socialización</p>
-                    </div>
-                </div>
-                <div class="hacc-item" onclick="toggleHacc(this)">
-                    <img src="assets/Copia_de_DSC_0186.JPG" alt="Desarrollo Integral">
-                    <div class="hacc-overlay">
-                        <span class="hacc-pill">Integral</span>
-                        <h3>Desarrollo Integral</h3>
-                        <p>Arte, deporte y academia con el mismo valor en nuestra propuesta educativa</p>
-                    </div>
+            <!-- Vertical grid line -->
+            <div class="pq-kd-grid-line"></div>
+            <!-- Centered Card -->
+            <div class="pq-kd-card hontanar-scroll-reveal">
+                <h3 class="pq-kd-title" style="color: #ffffff !important;">
+                    Admisiones<br><span class="serif-italic-yellow">Una experiencia que transforma</span>
+                </h3>
+                <p class="pq-kd-subtitle" style="color: #ffffff !important;">
+                    Si deseas que tu hijo viva una experiencia educativa transformadora, contáctanos y agenda una visita personalizada con nuestro equipo de admisiones.
+                </p>
+                <div style="margin-top: 30px;">
+                    <a href="agenda-visita.html" class="btn btn-yellow btn-nav">Agenda tu cita aquí <span class="arrow">&gt;</span></a>
                 </div>
             </div>
-
         </div>
+
+        <!-- Galería estilo "La vida en el Hontanar" con circulitos flotantes -->
+        <section class="filo-gallery-section hontanar-scroll-reveal" style="padding: 70px 0 0 0; background-color: #ffffff; position: relative; overflow: hidden;">
+
+            <!-- Circulitos flotantes decorativos de fondo -->
+            <div class="bg-circles-wrapper" style="position: absolute; inset: 0; pointer-events: none; z-index: 0;">
+                <div class="bg-circle bg-circle-ring-yellow circle-1" style="top: 5%; left: -5%;"></div>
+                <div class="bg-circle bg-circle-solid-green circle-2" style="top: 60%; right: -3%;"></div>
+                <div class="bg-circle bg-circle-ring-blue circle-3" style="bottom: 5%; left: 30%;"></div>
+            </div>
+
+            <!-- Header -->
+            <div class="filo-gallery-header" style="text-align: center; margin-bottom: 40px; position: relative; z-index: 1;">
+                <h4 class="kicker" style="font-family: var(--font-lato); color: var(--green); font-size: 0.85rem; font-weight: 900; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 14px; border: 1px solid var(--green); display: inline-block; padding: 4px 16px; border-radius: 20px;">NUESTRA COMUNIDAD</h4>
+                <h2 class="filo-section-title" style="font-family: var(--font-lato); font-size: 2.6rem; font-weight: 700; color: var(--blue); line-height: 1.2;">La vida en el <span style="font-family: var(--font-playfair); font-style: italic; color: var(--green);">Hontanar</span></h2>
+            </div>
+
+            <!-- Carrusel infinito -->
+            <div class="filo-galeria-carousel" style="position: relative; z-index: 1;">
+                <div class="filo-carousel-track-scroll">
+                    <img src="assets/152.jpg" alt="Entrada con Propósito">
+                    <img src="assets/20241002_144246.jpg" alt="Aulas Vivas">
+                    <img src="assets/espacio-campus-1.jpg" alt="Campus Hontanar">
+                    <img src="assets/espacio-deporte-1.jpg" alt="Deporte y Movimiento">
+                    <img src="assets/153.jpg" alt="Acompañamiento">
+                    <img src="assets/154.jpg" alt="Vida Escolar">
+                    <img src="assets/espacio-aulas-2.jpg" alt="Indagación y Ciencia">
+                    <img src="assets/20241002_144403.jpg" alt="Un día con Propósito">
+                    <!-- Duplicadas para efecto infinito -->
+                    <img src="assets/152.jpg" alt="Entrada con Propósito">
+                    <img src="assets/20241002_144246.jpg" alt="Aulas Vivas">
+                    <img src="assets/espacio-campus-1.jpg" alt="Campus Hontanar">
+                    <img src="assets/espacio-deporte-1.jpg" alt="Deporte y Movimiento">
+                    <img src="assets/153.jpg" alt="Acompañamiento">
+                    <img src="assets/154.jpg" alt="Vida Escolar">
+                    <img src="assets/espacio-aulas-2.jpg" alt="Indagación y Ciencia">
+                    <img src="assets/20241002_144403.jpg" alt="Un día con Propósito">
+                </div>
+            </div>
+        </section>
         <!-- Fin Galería -->
 
-        <div class="vida-container">
 
-            <!-- Bento Grid Section -->
-            <section class="pq-bento-section hontanar-scroll-reveal" style="padding: 40px 0;">
-                <div class="pq-bento-grid">
-                    <!-- Left Card: Aulas Vivas -->
-                    <div class="pq-bento-card pq-bento-glass-white" style="border-radius: 0; padding: 40px;">
-                        <h3 style="font-family: var(--font-lato); font-size: 1.8rem; font-weight: 900; color: var(--blue); margin-bottom: 20px;">Aulas Vivas: Aprender Conectando con la Vida</h3>
-                        <p style="font-family: var(--font-lato); line-height: 1.7; color: #4a5568;">Las aulas del Hontanar son espacios activos y participativos, donde las jornadas avanzan con preguntas que van más allá de repetir respuestas. A través de proyectos y retos, los estudiantes conectan la teoría con la vida real, desarrollando <strong>pensamiento crítico, creatividad y autonomía</strong>.</p>
-                        <p class="pq-bento-highlight-line" style="font-family: var(--font-lato); line-height: 1.7; margin-top: 15px; color: #4a5568; border-left: 3px solid var(--green); padding-left: 15px;">Este enfoque se integra de manera natural al <strong>Multilingüismo</strong> y a la propuesta académica del colegio, alineada con estándares internacionales que preparan a los estudiantes para un mundo global.</p>
-                    </div>
-
-                    <!-- Right Card: Admisiones -->
-                    <div class="pq-bento-card pq-bento-image" style="background-image: url('assets/preescolar-horizontal.jpg'); border-radius: 0;">
-                        <div class="pq-bento-image-content" style="padding: 40px; display: flex; flex-direction: column; justify-content: flex-end; height: 100%;">
-                            <span class="pq-bento-pill" style="align-self: flex-start; padding: 5px 14px; border-radius: 0; font-family: var(--font-lato); font-size: 0.72rem; font-weight: 700; background-color: var(--blue); color: var(--white); text-transform: uppercase; margin-bottom: 15px;">Admisiones</span>
-                            <p style="font-family: var(--font-lato); line-height: 1.7; color: var(--white); font-weight: 700; text-shadow: 0 2px 4px rgba(0,0,0,0.6); margin-bottom: 20px;">Si deseas que tu hijo viva una experiencia educativa transformadora, contáctanos y agenda una visita personalizada con nuestro equipo de admisiones.</p>
-                            <a href="agenda-visita.html" class="btn btn-yellow btn-nav" style="align-self: flex-start;">Agenda tu cita aquí <span class="arrow">&gt;</span></a>
+        <section class="filo-wavy-cards-section" style="padding: 60px 0 80px 0; background-color: #ffffff; position: relative;">
+            <div class="filo-wavy-container" style="position: relative; z-index: 2;">
+                <div class="filo-wavy-card text-left hontanar-scroll-reveal">
+                    <!-- Texto izquierdo -->
+                    <div class="wavy-card-text-col">
+                        <h2 class="wavy-card-title">Aulas Vivas: Aprender<br><span>Conectando con la Vida</span></h2>
+                        <p class="wavy-card-paragraph">Las aulas del Hontanar son espacios activos y participativos, donde las jornadas avanzan con preguntas que van más allá de repetir respuestas. A través de proyectos y retos, los estudiantes conectan la teoría con la vida real, desarrollando <strong>pensamiento crítico, creatividad y autonomía</strong>.</p>
+                        <p class="wavy-card-paragraph-highlight">Este enfoque se integra de manera natural al <strong>Multilingüismo</strong> y a la propuesta académica del colegio, alineada con estándares internacionales que preparan a los estudiantes para un mundo global.</p>
+                        <div class="wavy-card-btn-wrap">
+                            <a href="agenda-visita.html" class="btn btn-yellow btn-nav">Agenda tu visita <span class="arrow">&gt;</span></a>
                         </div>
                     </div>
+                    <!-- Imagen derecha con borde ondulado -->
+                    <div class="wavy-card-img-col" style="background-image: url('assets/Hontanar-WEB-09-2022-318-ALTA.jpg');">
+                        <svg viewBox="0 0 100 600" preserveAspectRatio="none" class="wavy-edge-svg wave-right-side">
+                            <path d="M0,0 L30,0 C60,150 70,300 25,450 C10,520 0,600 0,600 Z" fill="#ffffff"/>
+                        </svg>
+                    </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-        </div>
+
     </main>
 
     <div class="social-floating">

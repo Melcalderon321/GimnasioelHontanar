@@ -2168,7 +2168,7 @@ em, i, .italic,
 .bento-card .card-title span,
 .pillars-grid .bento-card-color h3 span,
 [style*="playfair"][style*="italic"] {
-    font-weight: 400 !important;
+    font-weight: 700 !important;
 }
 
 /* ==========================================================================
