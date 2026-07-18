@@ -550,33 +550,20 @@
 
         </div><!-- Cierre vida-container para hacer el parallax de ancho completo -->
 
-        <!-- SECCIÓN CAROUSEL PREGUNTA CLAVE / DE LAS IDEAS A LA ACCIÓN -->
+        <!-- Interactive Split Panel (Estilo Kent Denver, No-Slider) -->
         <section class="pq-split-carousel-section hontanar-scroll-reveal" style="margin-top: 80px; margin-bottom: 90px;">
             <!-- Rectangulito amarillo decorativo detrás de la foto -->
-            <div class="pq-carousel-yellow-accent"></div>
-            
-            <!-- Arrowheads decorator on top of the border line -->
-            <svg class="pq-slider-decorator deco-green" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 86.71 12.86">
-                <g id="OBJECTS">
-                    <g>
-                        <g>
-                            <polygon class="cls-1" points="11.14 6.43 0 0 0 12.86 11.14 6.43" fill="var(--green)"/>
-                            <polygon class="cls-1" points="26.07 6.43 14.93 0 14.93 12.86 26.07 6.43" fill="var(--green)"/>
-                            <polygon class="cls-1" points="41 6.43 29.86 0 29.86 12.86 41 6.43" fill="var(--green)"/>
-                        </g>
-                        <g>
-                            <polygon class="cls-1" points="75.57 6.43 86.71 0 86.71 12.86 75.57 6.43" fill="var(--green)"/>
-                            <polygon class="cls-1" points="60.64 6.43 71.78 0 71.78 12.86 60.64 6.43" fill="var(--green)"/>
-                            <polygon class="cls-1" points="45.71 6.43 56.85 0 56.85 12.86 45.71 6.43" fill="var(--green)"/>
-                        </g>
-                    </g>
+            <div class="pq-carousel-yellow-accent" style="left: -20px; bottom: -20px;"></div>
+            <!-- SVG Decorador verde mitad dentro mitad fuera en el borde superior derecho de la imagen -->
+            <svg class="pq-slider-decorator deco-green" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96.43 45.2" style="z-index: 3;">
+                <g>
+                    <polygon class="pq-deco-path-1" points="81.4 20.46 68.13 6.99 54.85 20.46 41.58 6.99 28.3 20.46 15.02 6.99 3.49 18.69 0 15.25 15.02 0 28.3 13.48 41.58 0 54.85 13.48 68.13 0 81.4 13.48 92.93 1.77 96.43 5.21 81.4 20.46"/>
+                    <polygon class="pq-deco-path-2" points="54.85 45.2 41.58 31.72 28.3 45.2 15.02 31.72 3.49 43.42 0 39.98 15.02 24.73 28.3 38.21 41.58 24.73 54.85 38.21 66.38 26.5 69.88 29.95 54.85 45.2"/>
                 </g>
             </svg>
-
-            <!-- Left Side: Slide Images -->
+            <!-- Left Side: Image Panel -->
             <div class="pq-carousel-images-wrapper">
                 <div class="pq-carousel-img-slide active" style="background-image: url('assets/dsc_0113_copy.jpg');"></div>
-                <div class="pq-carousel-img-slide" style="background-image: url('assets/dsc_0113_copy.jpg');"></div>
             </div>
 
             <!-- Right Side: Content Panel (White background) -->
@@ -591,34 +578,18 @@
                     <div class="bg-circle bg-circle-ring-yellow circle-6"></div>
                 </div>
 
-                <!-- Controls (Indicators & Line Separator) -->
-                <div class="pq-carousel-controls">
-                    <div class="pq-carousel-indicators">
-                        <span class="pq-indicator-dot active" data-slide="0"></span>
-                        <span class="pq-indicator-dot" data-slide="1"></span>
-                    </div>
-                    <div class="pq-carousel-line"></div>
-                </div>
-
-                <!-- Text Slider wrapper -->
-                <div class="pq-carousel-text-slider">
-                    <!-- Slide 1: Pregunta Clave -->
+                <!-- Slides Content Wrapper -->
+                <div class="pq-carousel-slides-wrapper" style="margin-top: 20px;">
+                    <!-- Content Block -->
                     <div class="pq-carousel-slide active">
-                        <span class="pq-slide-kicker">PREGUNTA CLAVE</span>
-                        <h2 class="pq-slide-title" style="font-family: var(--font-lato); font-weight: 700; color: var(--blue); text-transform: none;">
-                            Cómo convertir la creatividad de los estudiantes <span style="font-family: var(--font-playfair); font-style: italic; color: var(--green); font-weight: bold;">en soluciones reales que impacten su comunidad</span>
-                        </h2>
-                        <p class="pq-slide-desc" style="font-family: var(--font-lato); font-size: 1.02rem; line-height: 1.65; color: #4a5568;">En el Gimnasio El Hontanar, la innovación se vive como un proceso. Los estudiantes identifican problemas reales, aplican metodologías como Design Thinking y desarrollan soluciones con apoyo de la tecnología.</p>
-                    </div>
-
-                    <!-- Slide 2: De las ideas a la acción -->
-                    <div class="pq-carousel-slide">
-                        <span class="pq-slide-kicker">De las ideas a la acción</span>
-                        <h2 class="pq-slide-title" style="font-family: var(--font-lato); font-weight: 700; color: var(--blue); text-transform: none;">
-                            La innovación evoluciona <br>
-                            <span style="font-family: var(--font-playfair); font-style: italic; color: var(--green); font-weight: bold;">en cada etapa escolar</span>
-                        </h2>
-                        <p class="pq-slide-desc" style="font-family: var(--font-lato); font-size: 1.02rem; line-height: 1.65; color: #4a5568;">La innovación evoluciona en cada etapa escolar, desde preescolar hasta bachillerato. En secundaria, los estudiantes desarrollan proyectos de emprendimiento y sostenibilidad con el acompañamiento de docentes especializados, transformando sus ideas en soluciones con impacto real.</p>
+                        <span class="pq-slide-kicker" style="color: var(--green); font-weight: bold; text-transform: uppercase;">PREGUNTA CLAVE</span>
+                        <h3 class="pq-slide-title" style="font-size: 2.2rem; font-family: var(--font-lato); font-weight: 800; color: var(--blue); margin-bottom: 25px; line-height: 1.2; text-transform: none;">
+                            ¿Cómo convertir la creatividad de los estudiantes <span style="font-family: var(--font-playfair); font-style: italic; color: var(--green); font-weight: bold;">en soluciones reales que impacten su comunidad?</span>
+                        </h3>
+                        <div class="pq-slide-description" style="color: #4a5568; line-height: 1.7; font-size: 0.98rem; font-family: var(--font-lato);">
+                            <p style="margin-bottom: 16px;">En el Gimnasio El Hontanar, la innovación se vive como un proceso que evoluciona en cada etapa escolar, desde preescolar hasta bachillerato. Los estudiantes identifican problemas reales, aplican metodologías como Design Thinking y desarrollan soluciones con apoyo de la tecnología.</p>
+                            <p style="margin-bottom: 25px; border-left: 3px solid var(--yellow); padding-left: 15px; font-style: italic; color: #4a5568; font-weight: 500;">En secundaria, fortalecen estas habilidades mediante proyectos de emprendimiento y sostenibilidad, acompañados por docentes especializados, transformando sus ideas en soluciones con impacto real.</p>
+                        </div>
                     </div>
                 </div>
             </div>

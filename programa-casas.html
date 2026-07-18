@@ -155,14 +155,36 @@
                 item.addEventListener('click', (e) => {
                     e.preventDefault();
                     const parent = item.parentElement;
-                    parent.classList.toggle('expanded');
-                    const submenuList = parent.querySelector('.submenu');
-                    if (submenuList) {
-                        const isExpanded = parent.classList.contains('expanded');
-                        submenuList.style.display = isExpanded ? 'block' : 'none';
+                    const isExpanded = parent.classList.contains('expanded');
+                    
+                    // Close all other submenus first
+                    submenus.forEach(otherItem => {
+                        const otherParent = otherItem.parentElement;
+                        if (otherParent !== parent) {
+                            otherParent.classList.remove('expanded');
+                            const otherSubmenu = otherParent.querySelector('.submenu');
+                            if (otherSubmenu) {
+                                otherSubmenu.style.display = 'none';
+                            }
+                        }
+                    });
+                    
+                    // Toggle current submenu
+                    if (isExpanded) {
+                        parent.classList.remove('expanded');
+                        const submenuList = parent.querySelector('.submenu');
+                        if (submenuList) {
+                            submenuList.style.display = 'none';
+                        }
+                    } else {
+                        parent.classList.add('expanded');
+                        const submenuList = parent.querySelector('.submenu');
+                        if (submenuList) {
+                            submenuList.style.display = 'block';
+                        }
                     }
                 });
-            });
+            });;
 
                                     // Dynamic Visit Modal creation and event listeners
             const visitBtn = document.querySelector('.social-icon.yellow');

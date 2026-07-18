@@ -150,14 +150,36 @@
                 item.addEventListener('click', (e) => {
                     e.preventDefault();
                     const parent = item.parentElement;
-                    parent.classList.toggle('expanded');
-                    const submenuList = parent.querySelector('.submenu');
-                    if (submenuList) {
-                        const isExpanded = parent.classList.contains('expanded');
-                        submenuList.style.display = isExpanded ? 'block' : 'none';
+                    const isExpanded = parent.classList.contains('expanded');
+                    
+                    // Close all other submenus first
+                    submenus.forEach(otherItem => {
+                        const otherParent = otherItem.parentElement;
+                        if (otherParent !== parent) {
+                            otherParent.classList.remove('expanded');
+                            const otherSubmenu = otherParent.querySelector('.submenu');
+                            if (otherSubmenu) {
+                                otherSubmenu.style.display = 'none';
+                            }
+                        }
+                    });
+                    
+                    // Toggle current submenu
+                    if (isExpanded) {
+                        parent.classList.remove('expanded');
+                        const submenuList = parent.querySelector('.submenu');
+                        if (submenuList) {
+                            submenuList.style.display = 'none';
+                        }
+                    } else {
+                        parent.classList.add('expanded');
+                        const submenuList = parent.querySelector('.submenu');
+                        if (submenuList) {
+                            submenuList.style.display = 'block';
+                        }
                     }
                 });
-            });
+            });;
 
                                     // Dynamic Visit Modal creation and event listeners
             const visitBtn = document.querySelector('.social-icon.yellow');
@@ -407,7 +429,7 @@
                             Este enfoque se articula activamente con nuestro <strong>Modelo de Enseñanza</strong>, donde el aprendizaje significativo impulsa la toma de decisiones informadas y con base científica.
                         </p>
                         <p class="wavy-card-paragraph-highlight" style="font-family: var(--font-lato); font-size: 1.05rem; line-height: 1.7; color: var(--blue); font-weight: 700; margin: 0;">
-                            A su vez, la sostenibilidad dialoga de forma directa con la identidad institucional reflejada en nuestra <strong>Filosofía y Valores</strong>, y en los reconocimientos reales que respaldan nuestro compromiso ecológico visible: nuestros <strong>Sellos Hontanar</strong>.
+                            A su vez, la sostenibilidad se refleja en nuestra <strong>Filosofía y Valores</strong>, así como en los reconocimientos que respaldan nuestro compromiso ecológico: los <strong>Sellos Hontanar</strong>.
                         </p>
                     </div>
                 </div>
