@@ -2338,14 +2338,14 @@ body:not(.home-page) .tour-text-content .body-text {
 .inner-header-banner .header-colibri,
 .inner-header-banner .header-colibri-float {
     position: absolute;
-    bottom: -42px; /* Flota a la mitad sobre el cuerpo de la página */
+    bottom: -82px; /* Flota a la mitad sobre el cuerpo de la página */
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
-    width: 85px;
-    height: 85px;
+    width: 170px;
+    height: 170px;
     object-fit: contain;
-    filter: drop-shadow(0 6px 12px rgba(37, 68, 120, 0.22));
+    filter: drop-shadow(0 8px 16px rgba(37, 68, 120, 0.25));
     animation: floatColibri 3.5s ease-in-out infinite;
     transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     cursor: pointer;
