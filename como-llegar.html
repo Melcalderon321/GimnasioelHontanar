@@ -189,14 +189,14 @@
             margin: 0 0 80px;
             display: grid;
             grid-template-columns: 1fr 1.45fr;
-            min-height: 680px;
+            min-height: 540px;
             box-shadow: 0 30px 80px rgba(0,0,0,0.45);
         }
 
         /* ─ Panel izquierdo (info) ─ */
         .form-left {
             position: relative;
-            padding: 56px 44px;
+            padding: 36px 36px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -221,7 +221,7 @@
             z-index: 2;
             display: flex;
             flex-direction: column;
-            gap: 32px;
+            gap: 20px;
         }
         .form-left-logo {
             width: 64px;
@@ -250,7 +250,7 @@
         .form-right {
             background: #ffffff;
             border-left: none;
-            padding: 56px 50px;
+            padding: 36px 40px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -269,14 +269,21 @@
             font-weight: 900;
             font-size: 1.55rem;
             color: var(--blue);
-            margin-bottom: 36px;
+            margin-bottom: 8px;
             line-height: 1.25;
+        }
+        .form-right-subtitle {
+            font-family: var(--font-lato);
+            font-size: 0.92rem;
+            color: rgba(37,68,120,0.65);
+            margin-bottom: 20px;
+            line-height: 1.6;
         }
 
         /* Floating label fields */
         .fl-group {
             position: relative;
-            margin-bottom: 28px;
+            margin-bottom: 18px;
         }
         .fl-group input,
         .fl-group select,
@@ -303,7 +310,7 @@
         }
         .fl-group textarea {
             resize: none;
-            min-height: 90px;
+            min-height: 60px;
             padding-top: 22px;
         }
         .fl-group input::placeholder,
