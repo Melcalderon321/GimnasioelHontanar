@@ -2376,12 +2376,14 @@ body:not(.home-page) .tour-text-content .body-text {
 .inner-header-banner .header-colibri,
 .inner-header-banner .header-colibri-float {
     position: absolute;
-    bottom: -82px; /* Flota a la mitad sobre el cuerpo de la página */
-    left: 50%;
-    transform: translateX(-50%);
+    top: calc(100% - 67.5px);
+    left: calc(50% - 67.5px);
+    bottom: auto;
+    right: auto;
+    margin: 0;
     z-index: 10;
-    width: 170px;
-    height: 170px;
+    width: 135px;
+    height: 135px;
     object-fit: contain;
     filter: drop-shadow(0 8px 16px rgba(37, 68, 120, 0.25));
     animation: floatColibri 3.5s ease-in-out infinite;
@@ -2391,18 +2393,30 @@ body:not(.home-page) .tour-text-content .body-text {
 
 .inner-header-banner .header-colibri:hover,
 .inner-header-banner .header-colibri-float:hover {
-    transform: translateX(-50%) scale(1.15) rotate(5deg);
+    transform: scale(1.15) rotate(5deg);
+}
+
+/* Tamaño ligeramente incrementado exclusivo para el robot TecnoSer */
+.inner-header-banner img[src*="robot-tecnoser"] {
+    width: 155px;
+    height: 155px;
+    top: calc(100% - 77.5px);
+    left: calc(50% - 77.5px);
+}
+
+.visit-colibri[src*="robot-tecnoser"] {
+    width: 155px;
 }
 
 @keyframes floatColibri {
     0% {
-        transform: translateX(-50%) translateY(0) scale(1) rotate(0deg);
+        transform: translateY(0) scale(1) rotate(0deg);
     }
     50% {
-        transform: translateX(-50%) translateY(-6px) scale(1.05) rotate(-3deg);
+        transform: translateY(-6px) scale(1.05) rotate(-3deg);
     }
     100% {
-        transform: translateX(-50%) translateY(0) scale(1) rotate(0deg);
+        transform: translateY(0) scale(1) rotate(0deg);
     }
 }
 
@@ -2461,6 +2475,48 @@ body:not(.home-page) .faq-item:hover {
     background: rgba(37, 68, 120, 0.06) !important;
     border-color: rgba(37, 68, 120, 0.2) !important;
     box-shadow: 0 15px 35px rgba(37, 68, 120, 0.1) !important;
+}
+
+/* Tarjetas Bento (.multi-modern-card) con contorno verde difuminado y sombra moderada */
+body:not(.home-page) .multi-modern-card {
+    background: #ffffff !important;
+    border: 1.5px solid rgba(27, 166, 85, 0.35) !important;
+    box-shadow: 0 0 14px rgba(27, 166, 85, 0.15), 0 12px 30px rgba(37, 68, 120, 0.10) !important;
+    border-radius: 12px !important;
+}
+
+body:not(.home-page) .multi-modern-card:hover {
+    background: #ffffff !important;
+    border-color: rgba(27, 166, 85, 0.6) !important;
+    box-shadow: 0 0 22px rgba(27, 166, 85, 0.24), 0 18px 42px rgba(37, 68, 120, 0.15) !important;
+}
+
+/* Colibrí flotante en la esquina inferior derecha de la tarjeta de contacto (.form-section) */
+.form-section {
+    position: relative !important;
+    overflow: visible !important;
+}
+
+.form-corner-colibri {
+    position: absolute;
+    bottom: -40px;
+    right: -35px;
+    width: 145px;
+    height: 145px;
+    object-fit: contain;
+    z-index: 12;
+    filter: drop-shadow(0 12px 24px rgba(37, 68, 120, 0.28));
+    animation: floatColibri 3.5s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    .form-corner-colibri {
+        width: 100px;
+        height: 100px;
+        bottom: -25px;
+        right: -10px;
+    }
 }
 
 /* Forzar que los textos y títulos de estas tarjetas sean oscuros en páginas blancas */

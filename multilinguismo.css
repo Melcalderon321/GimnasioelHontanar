@@ -326,20 +326,21 @@
 /* Modern Card Layout */
 .multi-modern-card {
     background: #ffffff;
-    border-radius: 0;
+    border-radius: 12px;
     padding: 44px 36px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
-    box-shadow: 0 12px 35px rgba(0,0,0,0.06);
-    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
-    border: 1px solid rgba(37, 68, 120, 0.08);
+    border: 1.5px solid rgba(27, 166, 85, 0.35);
+    box-shadow: 0 0 14px rgba(27, 166, 85, 0.15), 0 12px 30px rgba(37, 68, 120, 0.10);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .multi-modern-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 45px rgba(0,0,0,0.12);
+    transform: translateY(-6px);
+    border-color: rgba(27, 166, 85, 0.6);
+    box-shadow: 0 0 22px rgba(27, 166, 85, 0.24), 0 18px 42px rgba(37, 68, 120, 0.15);
 }
 
 .multi-card-icon-svg {
