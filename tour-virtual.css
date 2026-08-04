@@ -171,7 +171,9 @@
     bottom: auto;
     transform: none;
     left: auto;
-    margin: 0 auto -150px;
+    margin: 0 auto -25px;
+    width: 90%;
+    max-width: 530px;
 }
 
 .tour-footer-img {

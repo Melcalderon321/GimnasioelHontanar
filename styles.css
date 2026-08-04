@@ -1047,10 +1047,10 @@ body.home-page .hamburger-circle {
 }
 
 .logos-row {
-    margin: 50px 0;
+    margin: 50px 0 90px 0;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     gap: 40px;
     flex-wrap: wrap;
 }
@@ -1060,14 +1060,28 @@ body.home-page .hamburger-circle {
     filter: brightness(0) invert(1);
 }
 
-.cta-overlap {
-    position: absolute;
-    bottom: -160px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    max-width: 600px;
-    z-index: 10;
+body:not(.home-page) .cta-overlap,
+body:not(.home-page) .tour-cta {
+    position: relative !important;
+    bottom: auto !important;
+    left: auto !important;
+    transform: none !important;
+    margin: 0 auto -25px auto !important;
+    width: 90% !important;
+    max-width: 530px !important;
+    z-index: 10 !important;
+}
+
+/* En la Home Page (index.html) se baja ligeramente la tarjeta CTA sobre la imagen del pie de página */
+body.home-page .cta-overlap {
+    position: absolute !important;
+    bottom: -70px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    margin: 0 !important;
+    width: 90% !important;
+    max-width: 530px !important;
+    z-index: 10 !important;
 }
 
 .cta-box {
