@@ -323,6 +323,14 @@
             <div class="bg-circle bg-circle-solid-yellow circle-4"></div>
             <div class="bg-circle bg-circle-ring-green circle-5"></div>
             <div class="bg-circle bg-circle-ring-yellow circle-6"></div>
+            
+            <!-- Additional floating circles -->
+            <div class="bg-circle bg-circle-solid-green" style="top: 25%; right: 10%; width: 25px; height: 25px;"></div>
+            <div class="bg-circle bg-circle-ring-blue" style="top: 45%; left: 5%; width: 40px; height: 40px; border-width: 8px;"></div>
+            <div class="bg-circle bg-circle-solid-yellow" style="top: 65%; right: 15%; width: 15px; height: 15px;"></div>
+            <div class="bg-circle bg-circle-ring-green" style="top: 85%; left: 12%; width: 30px; height: 30px; border-width: 6px;"></div>
+            <div class="bg-circle" style="top: 15%; left: 20%; width: 20px; height: 20px; background-color: var(--blue); border-radius: 50%; position: absolute; z-index: 1;"></div>
+            <div class="bg-circle" style="top: 75%; right: 5%; width: 35px; height: 35px; border: 6px solid #ec4899; border-radius: 50%; position: absolute; z-index: 1;"></div>
         </div>
 
         <div class="breadcrumbs">
@@ -342,132 +350,298 @@
         </div>
 
         <!-- LEVEL SELECTOR (TABS) -->
-        <div class="level-selector-wrapper">
+        <div class="level-selector-wrapper" style="margin-bottom: 50px;">
             <button class="level-tab-btn active" data-level="level-jardin">Jardín (Preescolar)</button>
             <button class="level-tab-btn" data-level="level-primaria">Primaria</button>
             <button class="level-tab-btn" data-level="level-secundaria">Secundaria</button>
             <button class="level-tab-btn" data-level="level-media">Media (Escuela Alta)</button>
         </div>
 
-        <!-- 1. PANE: JARDÍN (PREESCOLAR) -->
-        <div class="level-pane active" id="level-jardin">
-            <div class="model-cards-grid">
-                <!-- Card 1 -->
-                <div class="model-card" style="background-image: url('assets/preescolar-horizontal.jpg');">
-                    <div class="model-card-content">
-                        <span class="model-card-num">01</span>
-                        <h3 class="model-card-title">Amor y <span>Juego</span></h3>
-                        <p class="model-card-text">En nuestro Preescolar, el aprendizaje tiene sentido: aquí los niños comienzan su vida escolar en un espacio seguro y amoroso, formándose a través del juego, la exploración, la literatura, el arte y la experimentación.</p>
-                    </div>
+        <!-- 1. NIVEL: JARDÍN (PREESCOLAR) — TEXTO IZQUIERDA / FOTO DERECHA -->
+        <section class="hontanar-scroll-reveal" id="level-jardin" style="margin-top: 20px; margin-bottom: 65px; padding: 0 20px; position: relative; z-index: 2;">
+            <div class="filo-wavy-container" style="max-width: 1140px; margin: 0 auto; position: relative; overflow: visible;">
+                <!-- Cyan dots shape top left -->
+                <div style="position: absolute; top: -14px; left: -20px; z-index: 10; width: 192px; height: 28px;">
+                    <svg id="Capa_2_jardin" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192.67 28.53">
+                        <g id="OBJECTS_jardin"><g><g><path fill="#35b2d3" d="M9.33,4.67c0,2.58-2.09,4.67-4.67,4.67S0,7.24,0,4.67,2.09,0,4.67,0s4.67,2.09,4.67,4.67Z"/><path fill="#35b2d3" d="M27.67,4.67c0,2.58-2.09,4.67-4.67,4.67s-4.67-2.09-4.67-4.67S20.42,0,23,0s4.67,2.09,4.67,4.67Z"/><path fill="#35b2d3" d="M46,4.67c0,2.58-2.09,4.67-4.67,4.67s-4.67-2.09-4.67-4.67,2.09-4.67,4.67-4.67,4.67,2.09,4.67,4.67Z"/><path fill="#35b2d3" d="M64.33,4.67c0,2.58-2.09,4.67-4.67,4.67s-4.67-2.09-4.67-4.67,2.09-4.67,4.67-4.67,4.67,2.09,4.67,4.67Z"/><path fill="#35b2d3" d="M82.67,4.67c0,2.58-2.09,4.67-4.67,4.67s-4.67-2.09-4.67-4.67,2.09-4.67,4.67-4.67,4.67,2.09,4.67,4.67Z"/><path fill="#35b2d3" d="M101,4.67c0,2.58-2.09,4.67-4.67,4.67s-4.67-2.09-4.67-4.67,2.09-4.67,4.67-4.67,4.67,2.09,4.67,4.67Z"/><path fill="#35b2d3" d="M119.33,4.67c0,2.58-2.09,4.67-4.67,4.67s-4.67-2.09-4.67-4.67,2.09-4.67,4.67-4.67,4.67,2.09,4.67,4.67Z"/><path fill="#35b2d3" d="M137.67,4.67c0,2.58-2.09,4.67-4.67,4.67s-4.67-2.09-4.67-4.67,2.09-4.67,4.67-4.67,4.67,2.09,4.67,4.67Z"/><path fill="#35b2d3" d="M156,4.67c0,2.58-2.09,4.67-4.67,4.67s-4.67-2.09-4.67-4.67,2.09-4.67,4.67-4.67,4.67,2.09,4.67,4.67Z"/><path fill="#35b2d3" d="M174.33,4.67c0,2.58-2.09,4.67-4.67,4.67s-4.67-2.09-4.67-4.67,2.09-4.67,4.67-4.67,4.67,2.09,4.67,4.67Z"/><path fill="#35b2d3" d="M192.67,4.67c0,2.58-2.09,4.67-4.67,4.67s-4.67-2.09-4.67-4.67,2.09-4.67,4.67-4.67,4.67,2.09,4.67,4.67Z"/></g><g><circle fill="#35b2d3" cx="4.67" cy="23.86" r="4.67"/><path fill="#35b2d3" d="M27.67,23.86c0,2.58-2.09,4.67-4.67,4.67s-4.67-2.09-4.67-4.67,2.09-4.67,4.67-4.67,4.67,2.09,4.67,4.67Z"/><circle fill="#35b2d3" cx="41.33" cy="23.86" r="4.67"/><circle fill="#35b2d3" cx="59.67" cy="23.86" r="4.67"/><path fill="#35b2d3" d="M82.67,23.86c0,2.58-2.09,4.67-4.67,4.67s-4.67-2.09-4.67-4.67,2.09-4.67,4.67-4.67,4.67,2.09,4.67,4.67Z"/><path fill="#35b2d3" d="M101,23.86c0,2.58-2.09,4.67-4.67,4.67s-4.67-2.09-4.67-4.67,2.09-4.67,4.67-4.67,4.67,2.09,4.67,4.67Z"/><circle fill="#35b2d3" cx="114.67" cy="23.86" r="4.67"/><path fill="#35b2d3" d="M137.67,23.86c0,2.58-2.09,4.67-4.67,4.67s-4.67-2.09-4.67-4.67,2.09-4.67,4.67-4.67,4.67,2.09,4.67,4.67Z"/><path fill="#35b2d3" d="M156,23.86c0,2.58-2.09,4.67-4.67,4.67s-4.67-2.09-4.67-4.67,2.09-4.67,4.67-4.67,4.67,2.09,4.67,4.67Z"/><circle fill="#35b2d3" cx="169.67" cy="23.86" r="4.67"/><path fill="#35b2d3" d="M192.67,23.86c0,2.58-2.09,4.67-4.67,4.67s-4.67-2.09-4.67-4.67,2.09-4.67,4.67-4.67,4.67,2.09,4.67,4.67Z"/></g></g></g>
+                    </svg>
                 </div>
-                <!-- Card 2 -->
-                <div class="model-card" style="background-image: url('assets/Grupo 4466.jpg');">
-                    <div class="model-card-content">
-                        <span class="model-card-num">02</span>
-                        <h3 class="model-card-title">Cálido <span>Acompañamiento</span></h3>
-                        <p class="model-card-text">Desarrollamos aprendizajes significativos desde pre-kínder hasta segundo. Nuestro acompañamiento permanente, con docentes bilingües y equipo de bienestar, fomenta la autonomía y pensamiento creativo.</p>
+                <div class="filo-wavy-card text-left" style="min-height: 470px; position: relative; overflow: hidden; background: #ffffff; border-radius: 0; box-shadow: 0 18px 45px rgba(37,68,120,0.09); border: 1.5px solid rgba(37, 68, 120, 0.12); display: flex;">
+                    <div class="wavy-card-text-col" style="padding: 45px 50px; flex: 1.1; display: flex; flex-direction: column; justify-content: center; gap: 18px; text-align: left; background: #ffffff; position: relative;">
+                        <h2 class="wavy-card-title" style="font-family: var(--font-lato); font-size: 2.25rem; font-weight: 800; color: var(--blue); line-height: 1.25; margin: 0;">
+                            Preescolar: Amor, Juego y <br>
+                            <span style="font-family: var(--font-playfair); font-style: italic; color: var(--green); font-weight: bold;">Aprendizaje Significativo</span>
+                        </h2>
+                        <p class="wavy-card-paragraph" style="font-family: var(--font-lato); font-size: 1rem; line-height: 1.65; color: #4a5568; margin: 0;">
+                            En nuestro Preescolar, el aprendizaje tiene sentido: aquí los niños comienzan su vida escolar en un espacio seguro y amoroso, formándose a través del juego, la exploración, la literatura, el arte y la experimentación.
+                        </p>
+                        
+                        <div style="display: flex; flex-direction: column; gap: 14px; margin-top: 10px;">
+                            <!-- Scalloped Flower Badge 01 -->
+                            <div style="display: flex; align-items: center; gap: 14px;">
+                                <div style="position: relative; width: 44px; height: 44px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; filter: drop-shadow(0 4px 8px rgba(245,158,11,0.3));">
+                                    <svg width="44" height="44" viewBox="0 0 50 50">
+                                        <g fill="#F59E0B">
+                                            <circle cx="25" cy="7" r="6"/><circle cx="34" cy="9.4" r="6"/><circle cx="41" cy="16" r="6"/><circle cx="43" cy="25" r="6"/><circle cx="41" cy="34" r="6"/><circle cx="34" cy="40.6" r="6"/><circle cx="25" cy="43" r="6"/><circle cx="16" cy="40.6" r="6"/><circle cx="9" cy="34" r="6"/><circle cx="7" cy="25" r="6"/><circle cx="9" cy="16" r="6"/><circle cx="16" cy="9.4" r="6"/><circle cx="25" cy="25" r="17"/>
+                                        </g>
+                                        <text x="25" y="31" font-family="Lato, sans-serif" font-weight="900" font-size="16" fill="#ffffff" text-anchor="middle">01</text>
+                                    </svg>
+                                </div>
+                                <p style="font-family: var(--font-lato); font-size: 0.94rem; color: #334155; margin: 0; line-height: 1.45;"><strong style="color: var(--blue);">Amor y Juego:</strong> Formación a través del juego y la exploración segura y afectiva.</p>
+                            </div>
+                            <!-- Scalloped Flower Badge 02 -->
+                            <div style="display: flex; align-items: center; gap: 14px;">
+                                <div style="position: relative; width: 44px; height: 44px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; filter: drop-shadow(0 4px 8px rgba(6,182,212,0.3));">
+                                    <svg width="44" height="44" viewBox="0 0 50 50">
+                                        <g fill="#06B6D4">
+                                            <circle cx="25" cy="7" r="6"/><circle cx="34" cy="9.4" r="6"/><circle cx="41" cy="16" r="6"/><circle cx="43" cy="25" r="6"/><circle cx="41" cy="34" r="6"/><circle cx="34" cy="40.6" r="6"/><circle cx="25" cy="43" r="6"/><circle cx="16" cy="40.6" r="6"/><circle cx="9" cy="34" r="6"/><circle cx="7" cy="25" r="6"/><circle cx="9" cy="16" r="6"/><circle cx="16" cy="9.4" r="6"/><circle cx="25" cy="25" r="17"/>
+                                        </g>
+                                        <text x="25" y="31" font-family="Lato, sans-serif" font-weight="900" font-size="16" fill="#ffffff" text-anchor="middle">02</text>
+                                    </svg>
+                                </div>
+                                <p style="font-family: var(--font-lato); font-size: 0.94rem; color: #334155; margin: 0; line-height: 1.45;"><strong style="color: var(--blue);">Cálido Acompañamiento:</strong> Docentes bilingües y equipo de bienestar constante.</p>
+                            </div>
+                            <!-- Scalloped Flower Badge 03 -->
+                            <div style="display: flex; align-items: center; gap: 14px;">
+                                <div style="position: relative; width: 44px; height: 44px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; filter: drop-shadow(0 4px 8px rgba(27,166,85,0.3));">
+                                    <svg width="44" height="44" viewBox="0 0 50 50">
+                                        <g fill="#1BA655">
+                                            <circle cx="25" cy="7" r="6"/><circle cx="34" cy="9.4" r="6"/><circle cx="41" cy="16" r="6"/><circle cx="43" cy="25" r="6"/><circle cx="41" cy="34" r="6"/><circle cx="34" cy="40.6" r="6"/><circle cx="25" cy="43" r="6"/><circle cx="16" cy="40.6" r="6"/><circle cx="9" cy="34" r="6"/><circle cx="7" cy="25" r="6"/><circle cx="9" cy="16" r="6"/><circle cx="16" cy="9.4" r="6"/><circle cx="25" cy="25" r="17"/>
+                                        </g>
+                                        <text x="25" y="31" font-family="Lato, sans-serif" font-weight="900" font-size="16" fill="#ffffff" text-anchor="middle">03</text>
+                                    </svg>
+                                </div>
+                                <p style="font-family: var(--font-lato); font-size: 0.94rem; color: #334155; margin: 0; line-height: 1.45;"><strong style="color: var(--blue);">Aprender Haciendo:</strong> Autonomía, desarrollo del pensamiento y proyectos cotidianos.</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <!-- Card 3 -->
-                <div class="model-card" style="background-image: url('assets/Hontanar-WEB-09-2022-189-ALTA.jpg');">
-                    <div class="model-card-content">
-                        <span class="model-card-num">03</span>
-                        <h3 class="model-card-title">Aprender <span>Haciendo</span></h3>
-                        <p class="model-card-text">Creemos en el error como parte del aprendizaje, en el trabajo en equipo y en formar niños felices, seguros y sensibles que aprenden haciendo cotidianamente en sus proyectos.</p>
+                    <div class="wavy-card-img-col" style="background-image: url('assets/Hontanar-WEB-09-2022-189-ALTA.jpg'); background-size: cover; background-position: center; flex: 0.9; min-height: 470px; position: relative;">
+                        <!-- Floating Pill Badge -->
+                        <div style="position: absolute; top: 25px; right: 25px; z-index: 5; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(8px); padding: 10px 20px; border-radius: 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.14); display: flex; align-items: center; gap: 8px; font-family: var(--font-lato); font-size: 0.88rem; font-weight: 800; color: var(--blue);">
+                            <span style="color: #f59e0b; font-size: 1.1rem;">✦</span> Prekínder · Kínder · Transición
+                        </div>
+                        <!-- Wavy edge divider SVG path -->
+                        <svg viewBox="0 0 100 600" preserveAspectRatio="none" class="wavy-edge-svg wave-right-side" style="position: absolute; top: 0; bottom: 0; left: -1px; width: 60px; height: 100%; z-index: 2; pointer-events: none;">
+                            <path d="M0,0 L30,0 C60,150 70,300 25,450 C10,520 0,600 0,600 Z" fill="#ffffff"/>
+                        </svg>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <!-- 2. PANE: PRIMARIA -->
-        <div class="level-pane" id="level-primaria">
-            <div class="model-cards-grid">
-                <!-- Card 1 -->
-                <div class="model-card" style="background-image: url('assets/primaria-horizontal.jpg');">
-                    <div class="model-card-content">
-                        <span class="model-card-num">01</span>
-                        <h3 class="model-card-title">Sentido <span>Humano</span></h3>
-                        <p class="model-card-text">En la Primaria del Gimnasio El Hontanar, los niños dan el paso a la formalidad académica sin perder su curiosidad ni el sentido humano del aprendizaje. Formamos niños seguros de lo que son y pueden lograr.</p>
+        <!-- 2. NIVEL: PRIMARIA — FOTO IZQUIERDA / TEXTO DERECHA -->
+        <section class="hontanar-scroll-reveal" id="level-primaria" style="margin-top: 50px; margin-bottom: 65px; padding: 0 20px; position: relative; z-index: 2;">
+            <div class="filo-wavy-container" style="max-width: 1140px; margin: 0 auto; position: relative; overflow: visible;">
+                <div class="filo-wavy-card text-right" style="min-height: 470px; position: relative; overflow: hidden; background: #ffffff; border-radius: 0; box-shadow: 0 18px 45px rgba(37,68,120,0.09); border: 1.5px solid rgba(37, 68, 120, 0.12); display: flex;">
+                    <div class="wavy-card-img-col" style="flex: 0.9; min-height: 470px; position: relative; overflow: hidden;">
+                        <img src="assets/Copia de DSC_0186.JPG" alt="Primaria Hontanar" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1;">
+                        <!-- Floating Pill Badge -->
+                        <div style="position: absolute; top: 25px; left: 25px; z-index: 5; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(8px); padding: 10px 20px; border-radius: 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.14); display: flex; align-items: center; gap: 8px; font-family: var(--font-lato); font-size: 0.88rem; font-weight: 800; color: var(--blue);">
+                            <span style="color: #06b6d4; font-size: 1.1rem;">✦</span> De 1.º a 5.º
+                        </div>
+                        <!-- Wavy edge divider SVG path overlapping image from right -->
+                        <svg viewBox="0 0 100 600" preserveAspectRatio="none" class="wavy-edge-svg wave-left-side" style="position: absolute; top: 0; bottom: 0; right: -1px; width: 60px; height: 100%; z-index: 2; pointer-events: none; transform: scaleX(-1);">
+                            <path d="M0,0 L30,0 C60,150 70,300 25,450 C10,520 0,600 0,600 Z" fill="#ffffff"/>
+                        </svg>
                     </div>
-                </div>
-                <!-- Card 2 -->
-                <div class="model-card" style="background-image: url('assets/Grupo 4471.jpg');">
-                    <div class="model-card-content">
-                        <span class="model-card-num">02</span>
-                        <h3 class="model-card-title">Proyectos <span>STEM+H</span></h3>
-                        <p class="model-card-text">Gracias a proyectos interdisciplinarios con enfoque STEM+H, los estudiantes conectan saberes, formulan sus propias preguntas, construyen pensamiento crítico, creatividad y liderazgo ético.</p>
-                    </div>
-                </div>
-                <!-- Card 3 -->
-                <div class="model-card" style="background-image: url('assets/Copia_de_DSC_0186.JPG');">
-                    <div class="model-card-content">
-                        <span class="model-card-num">03</span>
-                        <h3 class="model-card-title">Valores y <span>Deporte</span></h3>
-                        <p class="model-card-text">El arte y el deporte acompañan el proceso como reguladores emocionales, mientras que la tecnología se integra con un uso académico y responsable. Formamos en autoestima, autogestión y autoeficacia.</p>
+                    <div class="wavy-card-text-col" style="padding: 45px 50px; flex: 1.1; display: flex; flex-direction: column; justify-content: center; gap: 18px; text-align: left; background: #ffffff;">
+                        <h2 class="wavy-card-title" style="font-family: var(--font-lato); font-size: 2.25rem; font-weight: 800; color: var(--blue); line-height: 1.25; margin: 0;">
+                            Primaria: Sentido Humano y <br>
+                            <span style="font-family: var(--font-playfair); font-style: italic; color: var(--green); font-weight: bold;">Proyectos STEM+H</span>
+                        </h2>
+                        <p class="wavy-card-paragraph" style="font-family: var(--font-lato); font-size: 1rem; line-height: 1.65; color: #4a5568; margin: 0;">
+                            En la Primaria del Gimnasio El Hontanar, los niños dan el paso a la formalidad académica sin perder su curiosidad ni el sentido humano del aprendizaje. Formamos niños seguros de lo que son y pueden lograr.
+                        </p>
+                        
+                        <div style="display: flex; flex-direction: column; gap: 14px; margin-top: 10px;">
+                            <!-- Scalloped Flower Badge 01 -->
+                            <div style="display: flex; align-items: center; gap: 14px;">
+                                <div style="position: relative; width: 44px; height: 44px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; filter: drop-shadow(0 4px 8px rgba(6,182,212,0.3));">
+                                    <svg width="44" height="44" viewBox="0 0 50 50">
+                                        <g fill="#06B6D4">
+                                            <circle cx="25" cy="7" r="6"/><circle cx="34" cy="9.4" r="6"/><circle cx="41" cy="16" r="6"/><circle cx="43" cy="25" r="6"/><circle cx="41" cy="34" r="6"/><circle cx="34" cy="40.6" r="6"/><circle cx="25" cy="43" r="6"/><circle cx="16" cy="40.6" r="6"/><circle cx="9" cy="34" r="6"/><circle cx="7" cy="25" r="6"/><circle cx="9" cy="16" r="6"/><circle cx="16" cy="9.4" r="6"/><circle cx="25" cy="25" r="17"/>
+                                        </g>
+                                        <text x="25" y="31" font-family="Lato, sans-serif" font-weight="900" font-size="16" fill="#ffffff" text-anchor="middle">01</text>
+                                    </svg>
+                                </div>
+                                <p style="font-family: var(--font-lato); font-size: 0.94rem; color: #334155; margin: 0; line-height: 1.45;"><strong style="color: var(--blue);">Sentido Humano:</strong> Desarrollo de la curiosidad, empatía y seguridad personal.</p>
+                            </div>
+                            <!-- Scalloped Flower Badge 02 -->
+                            <div style="display: flex; align-items: center; gap: 14px;">
+                                <div style="position: relative; width: 44px; height: 44px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; filter: drop-shadow(0 4px 8px rgba(27,166,85,0.3));">
+                                    <svg width="44" height="44" viewBox="0 0 50 50">
+                                        <g fill="#1BA655">
+                                            <circle cx="25" cy="7" r="6"/><circle cx="34" cy="9.4" r="6"/><circle cx="41" cy="16" r="6"/><circle cx="43" cy="25" r="6"/><circle cx="41" cy="34" r="6"/><circle cx="34" cy="40.6" r="6"/><circle cx="25" cy="43" r="6"/><circle cx="16" cy="40.6" r="6"/><circle cx="9" cy="34" r="6"/><circle cx="7" cy="25" r="6"/><circle cx="9" cy="16" r="6"/><circle cx="16" cy="9.4" r="6"/><circle cx="25" cy="25" r="17"/>
+                                        </g>
+                                        <text x="25" y="31" font-family="Lato, sans-serif" font-weight="900" font-size="16" fill="#ffffff" text-anchor="middle">02</text>
+                                    </svg>
+                                </div>
+                                <p style="font-family: var(--font-lato); font-size: 0.94rem; color: #334155; margin: 0; line-height: 1.45;"><strong style="color: var(--blue);">Proyectos STEM+H:</strong> Aprendizaje interdisciplinario, pensamiento crítico y creatividad.</p>
+                            </div>
+                            <!-- Scalloped Flower Badge 03 -->
+                            <div style="display: flex; align-items: center; gap: 14px;">
+                                <div style="position: relative; width: 44px; height: 44px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; filter: drop-shadow(0 4px 8px rgba(245,158,11,0.3));">
+                                    <svg width="44" height="44" viewBox="0 0 50 50">
+                                        <g fill="#F59E0B">
+                                            <circle cx="25" cy="7" r="6"/><circle cx="34" cy="9.4" r="6"/><circle cx="41" cy="16" r="6"/><circle cx="43" cy="25" r="6"/><circle cx="41" cy="34" r="6"/><circle cx="34" cy="40.6" r="6"/><circle cx="25" cy="43" r="6"/><circle cx="16" cy="40.6" r="6"/><circle cx="9" cy="34" r="6"/><circle cx="7" cy="25" r="6"/><circle cx="9" cy="16" r="6"/><circle cx="16" cy="9.4" r="6"/><circle cx="25" cy="25" r="17"/>
+                                        </g>
+                                        <text x="25" y="31" font-family="Lato, sans-serif" font-weight="900" font-size="16" fill="#ffffff" text-anchor="middle">03</text>
+                                    </svg>
+                                </div>
+                                <p style="font-family: var(--font-lato); font-size: 0.94rem; color: #334155; margin: 0; line-height: 1.45;"><strong style="color: var(--blue);">Valores y Deporte:</strong> Expresión artística, actividad física y uso ético de la tecnología.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <!-- 3. PANE: SECUNDARIA (ESCUELA MEDIA) -->
-        <div class="level-pane" id="level-secundaria">
-            <div class="model-cards-grid">
-                <!-- Card 1 -->
-                <div class="model-card" style="background-image: url('assets/escuela-media-horizontal.jpg');">
-                    <div class="model-card-content">
-                        <span class="model-card-num">01</span>
-                        <h3 class="model-card-title">Formación y <span>Familia</span></h3>
-                        <p class="model-card-text">Acompañamos a preadolescentes y adolescentes en una etapa de grandes cambios. Hacemos un trabajo compartido y muy cercano con las familias, fortaleciendo el desarrollo integral de la persona.</p>
+        <!-- 3. NIVEL: SECUNDARIA (ESCUELA MEDIA) — TEXTO IZQUIERDA / FOTO DERECHA -->
+        <section class="hontanar-scroll-reveal" id="level-secundaria" style="margin-top: 50px; margin-bottom: 65px; padding: 0 20px; position: relative; z-index: 2;">
+            <div class="filo-wavy-container" style="max-width: 1140px; margin: 0 auto; position: relative; overflow: visible;">
+                <div class="filo-wavy-card text-left" style="min-height: 470px; position: relative; overflow: hidden; background: #ffffff; border-radius: 0; box-shadow: 0 18px 45px rgba(37,68,120,0.09); border: 1.5px solid rgba(37, 68, 120, 0.12); display: flex;">
+                    <div class="wavy-card-text-col" style="padding: 45px 50px; flex: 1.1; display: flex; flex-direction: column; justify-content: center; gap: 18px; text-align: left; background: #ffffff;">
+                        <h2 class="wavy-card-title" style="font-family: var(--font-lato); font-size: 2.25rem; font-weight: 800; color: var(--blue); line-height: 1.25; margin: 0;">
+                            Secundaria: Enseñanza para la <br>
+                            <span style="font-family: var(--font-playfair); font-style: italic; color: var(--green); font-weight: bold;">Comprensión y Autonomía</span>
+                        </h2>
+                        <p class="wavy-card-paragraph" style="font-family: var(--font-lato); font-size: 1rem; line-height: 1.65; color: #4a5568; margin: 0;">
+                            Acompañamos a preadolescentes y adolescentes en una etapa de grandes cambios. Hacemos un trabajo compartido y muy cercano con las familias, fortaleciendo el desarrollo integral de la persona.
+                        </p>
+                        
+                        <div style="display: flex; flex-direction: column; gap: 14px; margin-top: 10px;">
+                            <!-- Scalloped Flower Badge 01 -->
+                            <div style="display: flex; align-items: center; gap: 14px;">
+                                <div style="position: relative; width: 44px; height: 44px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; filter: drop-shadow(0 4px 8px rgba(27,166,85,0.3));">
+                                    <svg width="44" height="44" viewBox="0 0 50 50">
+                                        <g fill="#1BA655">
+                                            <circle cx="25" cy="7" r="6"/><circle cx="34" cy="9.4" r="6"/><circle cx="41" cy="16" r="6"/><circle cx="43" cy="25" r="6"/><circle cx="41" cy="34" r="6"/><circle cx="34" cy="40.6" r="6"/><circle cx="25" cy="43" r="6"/><circle cx="16" cy="40.6" r="6"/><circle cx="9" cy="34" r="6"/><circle cx="7" cy="25" r="6"/><circle cx="9" cy="16" r="6"/><circle cx="16" cy="9.4" r="6"/><circle cx="25" cy="25" r="17"/>
+                                        </g>
+                                        <text x="25" y="31" font-family="Lato, sans-serif" font-weight="900" font-size="16" fill="#ffffff" text-anchor="middle">01</text>
+                                    </svg>
+                                </div>
+                                <p style="font-family: var(--font-lato); font-size: 0.94rem; color: #334155; margin: 0; line-height: 1.45;"><strong style="color: var(--blue);">Formación y Familia:</strong> Vínculo continuo y trabajo integrado colegio-hogar.</p>
+                            </div>
+                            <!-- Scalloped Flower Badge 02 -->
+                            <div style="display: flex; align-items: center; gap: 14px;">
+                                <div style="position: relative; width: 44px; height: 44px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; filter: drop-shadow(0 4px 8px rgba(245,158,11,0.3));">
+                                    <svg width="44" height="44" viewBox="0 0 50 50">
+                                        <g fill="#F59E0B">
+                                            <circle cx="25" cy="7" r="6"/><circle cx="34" cy="9.4" r="6"/><circle cx="41" cy="16" r="6"/><circle cx="43" cy="25" r="6"/><circle cx="41" cy="34" r="6"/><circle cx="34" cy="40.6" r="6"/><circle cx="25" cy="43" r="6"/><circle cx="16" cy="40.6" r="6"/><circle cx="9" cy="34" r="6"/><circle cx="7" cy="25" r="6"/><circle cx="9" cy="16" r="6"/><circle cx="16" cy="9.4" r="6"/><circle cx="25" cy="25" r="17"/>
+                                        </g>
+                                        <text x="25" y="31" font-family="Lato, sans-serif" font-weight="900" font-size="16" fill="#ffffff" text-anchor="middle">02</text>
+                                    </svg>
+                                </div>
+                                <p style="font-family: var(--font-lato); font-size: 0.94rem; color: #334155; margin: 0; line-height: 1.45;"><strong style="color: var(--blue);">Enseñanza para la Comprensión:</strong> Modelos activos para indagar, innovar y decidir.</p>
+                            </div>
+                            <!-- Scalloped Flower Badge 03 -->
+                            <div style="display: flex; align-items: center; gap: 14px;">
+                                <div style="position: relative; width: 44px; height: 44px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; filter: drop-shadow(0 4px 8px rgba(6,182,212,0.3));">
+                                    <svg width="44" height="44" viewBox="0 0 50 50">
+                                        <g fill="#06B6D4">
+                                            <circle cx="25" cy="7" r="6"/><circle cx="34" cy="9.4" r="6"/><circle cx="41" cy="16" r="6"/><circle cx="43" cy="25" r="6"/><circle cx="41" cy="34" r="6"/><circle cx="34" cy="40.6" r="6"/><circle cx="25" cy="43" r="6"/><circle cx="16" cy="40.6" r="6"/><circle cx="9" cy="34" r="6"/><circle cx="7" cy="25" r="6"/><circle cx="9" cy="16" r="6"/><circle cx="16" cy="9.4" r="6"/><circle cx="25" cy="25" r="17"/>
+                                        </g>
+                                        <text x="25" y="31" font-family="Lato, sans-serif" font-weight="900" font-size="16" fill="#ffffff" text-anchor="middle">03</text>
+                                    </svg>
+                                </div>
+                                <p style="font-family: var(--font-lato); font-size: 0.94rem; color: #334155; margin: 0; line-height: 1.45;"><strong style="color: var(--blue);">Desarrollo Socioemocional:</strong> Fortalecimiento de la identidad, autonomía y carácter.</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <!-- Card 2 -->
-                <div class="model-card" style="background-image: url('assets/Grupo 4467.jpg');">
-                    <div class="model-card-content">
-                        <span class="model-card-num">02</span>
-                        <h3 class="model-card-title">Enseñanza para la <span>Comprensión</span></h3>
-                        <p class="model-card-text">A través de proyectos interdisciplinarios y un modelo de enseñanza para la comprensión, fortalecemos el pensamiento crítico, la capacidad de preguntar, analizar, innovar y tomar sabias decisiones.</p>
-                    </div>
-                </div>
-                <!-- Card 3 -->
-                <div class="model-card" style="background-image: url('assets/Copia_de_DSC_0197.JPG');">
-                    <div class="model-card-content">
-                        <span class="model-card-num">03</span>
-                        <h3 class="model-card-title">Desarrollo <span>Socioemocional</span></h3>
-                        <p class="model-card-text">Nuestro modelo combina experiencias de aprendizaje, contenidos globales y currículos activos con componentes propios al desarrollo socioemocional que forman el carácter e identidad en esta decisiva etapa de la vida.</p>
+                    <div class="wavy-card-img-col" style="background-image: url('assets/Copia_de_DSC_0113.JPG'); background-size: cover; background-position: center; flex: 0.9; min-height: 470px; position: relative;">
+                        <!-- Floating Pill Badge -->
+                        <div style="position: absolute; top: 25px; right: 25px; z-index: 5; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(8px); padding: 10px 20px; border-radius: 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.14); display: flex; align-items: center; gap: 8px; font-family: var(--font-lato); font-size: 0.88rem; font-weight: 800; color: var(--blue);">
+                            <span style="color: #1ba655; font-size: 1.1rem;">✦</span> De 6.º a 9.º
+                        </div>
+                        <!-- Wavy edge divider SVG path -->
+                        <svg viewBox="0 0 100 600" preserveAspectRatio="none" class="wavy-edge-svg wave-right-side" style="position: absolute; top: 0; bottom: 0; left: -1px; width: 60px; height: 100%; z-index: 2; pointer-events: none;">
+                            <path d="M0,0 L30,0 C60,150 70,300 25,450 C10,520 0,600 0,600 Z" fill="#ffffff"/>
+                        </svg>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <!-- 4. PANE: MEDIA (ESCUELA ALTA) -->
-        <div class="level-pane" id="level-media">
-            <div class="model-cards-grid">
-                <!-- Card 1 -->
-                <div class="model-card" style="background-image: url('assets/escuela-alta-horizontal.jpg');">
-                    <div class="model-card-content">
-                        <span class="model-card-num">01</span>
-                        <h3 class="model-card-title">Proyecto de <span>Vida</span></h3>
-                        <p class="model-card-text">Desde noveno grado acompañamos a los jóvenes en la consolidación de su proyecto de vida y su preparación óptima para la educación superior; un bachillerato en Bogotá y Chía de altísima calidad académica.</p>
+        <!-- 4. NIVEL: MEDIA (ESCUELA ALTA) — FOTO IZQUIERDA / TEXTO DERECHA -->
+        <section class="hontanar-scroll-reveal" id="level-media" style="margin-top: 50px; margin-bottom: 40px; padding: 0 20px; position: relative; z-index: 2;">
+            <div class="filo-wavy-container" style="max-width: 1140px; margin: 0 auto; position: relative; overflow: visible;">
+                <div class="filo-wavy-card text-right" style="min-height: 470px; position: relative; overflow: hidden; background: #ffffff; border-radius: 0; box-shadow: 0 18px 45px rgba(37,68,120,0.09); border: 1.5px solid rgba(37, 68, 120, 0.12); display: flex;">
+                    <div class="wavy-card-img-col" style="flex: 0.9; min-height: 470px; position: relative; overflow: hidden;">
+                        <img src="assets/154.jpg" alt="Escuela Alta Hontanar" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1;">
+                        <!-- Floating Pill Badge -->
+                        <div style="position: absolute; top: 25px; left: 25px; z-index: 5; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(8px); padding: 10px 20px; border-radius: 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.14); display: flex; align-items: center; gap: 8px; font-family: var(--font-lato); font-size: 0.88rem; font-weight: 800; color: var(--blue);">
+                            <span style="color: #ec4899; font-size: 1.1rem;">✦</span> De 10.º a 11.º · Programa del Diploma IB
+                        </div>
+                        <!-- Wavy edge divider SVG path overlapping image from right -->
+                        <svg viewBox="0 0 100 600" preserveAspectRatio="none" class="wavy-edge-svg wave-left-side" style="position: absolute; top: 0; bottom: 0; right: -1px; width: 60px; height: 100%; z-index: 2; pointer-events: none; transform: scaleX(-1);">
+                            <path d="M0,0 L30,0 C60,150 70,300 25,450 C10,520 0,600 0,600 Z" fill="#ffffff"/>
+                        </svg>
+                    </div>
+                    <div class="wavy-card-text-col" style="padding: 45px 50px; flex: 1.1; display: flex; flex-direction: column; justify-content: center; gap: 18px; text-align: left; background: #ffffff;">
+                        <h2 class="wavy-card-title" style="font-family: var(--font-lato); font-size: 2.25rem; font-weight: 800; color: var(--blue); line-height: 1.25; margin: 0;">
+                            Media Alta: Proyecto de Vida y <br>
+                            <span style="font-family: var(--font-playfair); font-style: italic; color: var(--green); font-weight: bold;">Programa del Diploma IB</span>
+                        </h2>
+                        <p class="wavy-card-paragraph" style="font-family: var(--font-lato); font-size: 1rem; line-height: 1.65; color: #4a5568; margin: 0;">
+                            Desde noveno grado acompañamos a los jóvenes en la consolidación de su proyecto de vida y su preparación óptima para la educación superior; un bachillerato de altísima calidad académica.
+                        </p>
+                        
+                        <div style="display: flex; flex-direction: column; gap: 14px; margin-top: 10px;">
+                            <!-- Scalloped Flower Badge 01 -->
+                            <div style="display: flex; align-items: center; gap: 14px;">
+                                <div style="position: relative; width: 44px; height: 44px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; filter: drop-shadow(0 4px 8px rgba(236,72,153,0.3));">
+                                    <svg width="44" height="44" viewBox="0 0 50 50">
+                                        <g fill="#EC4899">
+                                            <circle cx="25" cy="7" r="6"/><circle cx="34" cy="9.4" r="6"/><circle cx="41" cy="16" r="6"/><circle cx="43" cy="25" r="6"/><circle cx="41" cy="34" r="6"/><circle cx="34" cy="40.6" r="6"/><circle cx="25" cy="43" r="6"/><circle cx="16" cy="40.6" r="6"/><circle cx="9" cy="34" r="6"/><circle cx="7" cy="25" r="6"/><circle cx="9" cy="16" r="6"/><circle cx="16" cy="9.4" r="6"/><circle cx="25" cy="25" r="17"/>
+                                        </g>
+                                        <text x="25" y="31" font-family="Lato, sans-serif" font-weight="900" font-size="16" fill="#ffffff" text-anchor="middle">01</text>
+                                    </svg>
+                                </div>
+                                <p style="font-family: var(--font-lato); font-size: 0.94rem; color: #334155; margin: 0; line-height: 1.45;"><strong style="color: var(--blue);">Proyecto de Vida:</strong> Asesoría vocacional y preparación óptima para la universidad.</p>
+                            </div>
+                            <!-- Scalloped Flower Badge 02 -->
+                            <div style="display: flex; align-items: center; gap: 14px;">
+                                <div style="position: relative; width: 44px; height: 44px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; filter: drop-shadow(0 4px 8px rgba(245,158,11,0.3));">
+                                    <svg width="44" height="44" viewBox="0 0 50 50">
+                                        <g fill="#F59E0B">
+                                            <circle cx="25" cy="7" r="6"/><circle cx="34" cy="9.4" r="6"/><circle cx="41" cy="16" r="6"/><circle cx="43" cy="25" r="6"/><circle cx="41" cy="34" r="6"/><circle cx="34" cy="40.6" r="6"/><circle cx="25" cy="43" r="6"/><circle cx="16" cy="40.6" r="6"/><circle cx="9" cy="34" r="6"/><circle cx="7" cy="25" r="6"/><circle cx="9" cy="16" r="6"/><circle cx="16" cy="9.4" r="6"/><circle cx="25" cy="25" r="17"/>
+                                        </g>
+                                        <text x="25" y="31" font-family="Lato, sans-serif" font-weight="900" font-size="16" fill="#ffffff" text-anchor="middle">02</text>
+                                    </svg>
+                                </div>
+                                <p style="font-family: var(--font-lato); font-size: 0.94rem; color: #334155; margin: 0; line-height: 1.45;"><strong style="color: var(--blue);">Retos Académicos e IB:</strong> Desarrollo del Proyecto Personal del Bachillerato Internacional.</p>
+                            </div>
+                            <!-- Scalloped Flower Badge 03 -->
+                            <div style="display: flex; align-items: center; gap: 14px;">
+                                <div style="position: relative; width: 44px; height: 44px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; filter: drop-shadow(0 4px 8px rgba(27,166,85,0.3));">
+                                    <svg width="44" height="44" viewBox="0 0 50 50">
+                                        <g fill="#1BA655">
+                                            <circle cx="25" cy="7" r="6"/><circle cx="34" cy="9.4" r="6"/><circle cx="41" cy="16" r="6"/><circle cx="43" cy="25" r="6"/><circle cx="41" cy="34" r="6"/><circle cx="43" cy="25" r="6"/><circle cx="41" cy="34" r="6"/><circle cx="34" cy="40.6" r="6"/><circle cx="25" cy="43" r="6"/><circle cx="16" cy="40.6" r="6"/><circle cx="9" cy="34" r="6"/><circle cx="7" cy="25" r="6"/><circle cx="9" cy="16" r="6"/><circle cx="16" cy="9.4" r="6"/><circle cx="25" cy="25" r="17"/>
+                                        </g>
+                                        <text x="25" y="31" font-family="Lato, sans-serif" font-weight="900" font-size="16" fill="#ffffff" text-anchor="middle">03</text>
+                                    </svg>
+                                </div>
+                                <p style="font-family: var(--font-lato); font-size: 0.94rem; color: #334155; margin: 0; line-height: 1.45;"><strong style="color: var(--blue);">Programa Diploma IB:</strong> Formación de rigor global, autogestión y perfil internacional.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <!-- Card 2 -->
-                <div class="model-card" style="background-image: url('assets/Grupo 4469.jpg');">
-                    <div class="model-card-content">
-                        <span class="model-card-num">02</span>
-                        <h3 class="model-card-title">Retos Académicos <span>e IB</span></h3>
-                        <p class="model-card-text">Los jóvenes asumen nuevos retos académicos, desarrollan el Proyecto Personal del Bachillerato Internacional (IB) y aprenden a investigar, conectar disciplinas e indagar en sus pasiones científicas.</p>
-                    </div>
-                </div>
-                <!-- Card 3 -->
-                <div class="model-card" style="background-image: url('assets/Copia_de_DSC_0576.JPG');">
-                    <div class="model-card-content">
-                        <span class="model-card-num">03</span>
-                        <h3 class="model-card-title">Programa del <span>Diploma IB</span></h3>
-                        <p class="model-card-text">En décimo y undécimo fortalecemos el aprendizaje con el Programa del Diploma IB, una preparación de excelencia internacional con autogestión, discipline, criterio propio y un perfil preparado para el mundo.</p>
-                    </div>
+                <!-- Zigzag shape bottom right -->
+                <div style="position: absolute; bottom: -10px; right: -20px; z-index: 10; width: 136px; height: 20px;">
+                    <svg id="Capa_2_media" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 136.24 20.46">
+                      <defs>
+                        <linearGradient id="linear-gradient-zigzag-media" x1="0" y1="10.23" x2="136.24" y2="10.23" gradientUnits="userSpaceOnUse">
+                          <stop offset="0" stop-color="#0e4c75"/>
+                          <stop offset="1" stop-color="#2278b2"/>
+                        </linearGradient>
+                      </defs>
+                      <g id="OBJECTS_media">
+                        <polygon fill="url(#linear-gradient-zigzag-media)" points="107.95 20.46 94.68 6.99 81.4 20.46 68.13 6.99 54.85 20.46 41.58 6.99 28.3 20.46 15.02 6.99 3.49 18.69 0 15.25 15.02 0 28.3 13.48 41.58 0 54.85 13.48 68.13 0 81.4 13.48 94.68 0 107.95 13.48 121.22 0 136.24 15.25 132.75 18.69 121.22 6.99 107.95 20.46"/>
+                      </g>
+                    </svg>
                 </div>
             </div>
-        </div>
+        </section>
     </main>
     <!-- Social Icons Floating -->
     <div class="social-floating">
@@ -545,20 +719,20 @@
                 });
             });
 
-            // Level Tabs Toggling
+            // Level Tabs Smooth Scroll Navigation
             const tabButtons = document.querySelectorAll('.level-tab-btn');
-            const tabPanes = document.querySelectorAll('.level-pane');
             
             tabButtons.forEach(btn => {
                 btn.addEventListener('click', () => {
-                    const target = btn.getAttribute('data-level');
+                    const targetId = btn.getAttribute('data-level');
+                    const targetEl = document.getElementById(targetId);
                     
                     tabButtons.forEach(b => b.classList.remove('active'));
-                    tabPanes.forEach(p => p.classList.remove('active'));
-                    
                     btn.classList.add('active');
-                    const targetPane = document.getElementById(target);
-                    if (targetPane) targetPane.classList.add('active');
+                    
+                    if (targetEl) {
+                        targetEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
                 });
             });
 
