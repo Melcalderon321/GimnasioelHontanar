@@ -50,21 +50,26 @@
             box-shadow: 0 22px 48px rgba(37, 68, 120, 0.18) !important;
             border-color: rgba(37, 68, 120, 0.45) !important;
         }
-        .pillars-grid .bento-card-color .card-num,
-        .pillars-grid .bento-card-color h3,
+        .pillars-grid .bento-card-color .card-num {
+            color: var(--green) !important;
+            opacity: 1 !important;
+        }
+        .pillars-grid .bento-card-color .card-num::after {
+            color: var(--green) !important;
+            opacity: 0.85 !important;
+        }
+        .pillars-grid .bento-card-color h3 {
+            color: var(--blue) !important;
+        }
+        .pillars-grid .bento-card-color h3 span {
+            color: var(--green) !important;
+            font-family: var(--font-playfair) !important;
+            font-style: italic !important;
+            opacity: 1 !important;
+        }
         .pillars-grid .bento-card-color p,
         .pillars-grid .bento-card-color strong {
             color: var(--blue) !important;
-        }
-        .pillars-grid .bento-card-color .card-num::after {
-            color: var(--blue) !important;
-            opacity: 0.7;
-        }
-        .pillars-grid .bento-card-color h3 span {
-            color: var(--blue) !important;
-            font-family: var(--font-playfair) !important;
-            font-style: italic !important;
-            opacity: 0.85 !important;
         }
 
         /* Floating background circles system */
