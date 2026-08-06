@@ -2491,18 +2491,20 @@ body:not(.home-page) .faq-item:hover {
     box-shadow: 0 15px 35px rgba(37, 68, 120, 0.1) !important;
 }
 
-/* Tarjetas Bento (.multi-modern-card) con contorno verde difuminado y sombra moderada */
+/* Tarjetas (.multi-modern-card) con foto superior + Badge circular flotante de icono */
 body:not(.home-page) .multi-modern-card {
     background: #ffffff !important;
-    border: 1.5px solid rgba(27, 166, 85, 0.35) !important;
-    box-shadow: 0 0 14px rgba(27, 166, 85, 0.15), 0 12px 30px rgba(37, 68, 120, 0.10) !important;
-    border-radius: 12px !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    border: 2px solid rgba(37, 68, 120, 0.22) !important;
+    box-shadow: 0 18px 45px rgba(37, 68, 120, 0.16), 0 6px 16px rgba(0, 0, 0, 0.07) !important;
 }
 
 body:not(.home-page) .multi-modern-card:hover {
     background: #ffffff !important;
     border-color: rgba(27, 166, 85, 0.6) !important;
-    box-shadow: 0 0 22px rgba(27, 166, 85, 0.24), 0 18px 42px rgba(37, 68, 120, 0.15) !important;
+    box-shadow: 0 24px 55px rgba(37, 68, 120, 0.22), 0 0 20px rgba(27, 166, 85, 0.25) !important;
 }
 
 /* Colibrí flotante en la esquina inferior derecha de la tarjeta de contacto (.form-section) */

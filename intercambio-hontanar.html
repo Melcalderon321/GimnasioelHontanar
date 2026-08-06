@@ -31,56 +31,87 @@
             padding: 0 20px;
         }
         .skills-new-card {
-            background: #ffffff;
-            border: 1.5px solid rgba(27, 166, 85, 0.35);
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 0 14px rgba(27, 166, 85, 0.15), 0 12px 30px rgba(37, 68, 120, 0.10);
+            background: #ffffff !important;
+            border-radius: 0 !important;
+            padding: 0 !important;
+            overflow: hidden !important;
+            border: 2px solid rgba(37, 68, 120, 0.22) !important;
+            box-shadow: 0 18px 45px rgba(37, 68, 120, 0.16), 0 6px 16px rgba(0, 0, 0, 0.07) !important;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            text-align: left;
             transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+        .skills-new-card:hover {
+            transform: translateY(-6px) !important;
+            box-shadow: 0 24px 55px rgba(37, 68, 120, 0.22), 0 0 20px rgba(27, 166, 85, 0.25) !important;
+            border-color: rgba(27, 166, 85, 0.6) !important;
+        }
+        .skills-card-photo-wrap {
+            height: 185px;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            background-color: #f1f5f9;
+            clip-path: ellipse(135% 100% at 50% 0%);
+        }
+        .skills-card-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        .skills-new-card:hover .skills-card-img {
+            transform: scale(1.06);
+        }
+        .skills-card-icon-circle {
+            position: relative;
+            z-index: 3;
+            width: 54px;
+            height: 54px;
+            border-radius: 50%;
+            margin-top: -27px;
+            margin-left: 22px;
+            border: 3.5px solid #ffffff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--green);
+        }
+        .skills-card-icon-circle svg {
+            width: 24px;
+            height: 24px;
+            stroke: #ffffff;
+            stroke-width: 2;
+            fill: none;
+        }
+        .skills-card-body {
+            padding: 15px 25px 30px 25px;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
         }
-        .skills-new-card:hover {
-            transform: translateY(-6px);
-            border-color: rgba(27, 166, 85, 0.6);
-            box-shadow: 0 0 22px rgba(27, 166, 85, 0.24), 0 18px 42px rgba(37, 68, 120, 0.15);
-        }
-        .skills-card-icon {
-            color: var(--green);
-            margin-bottom: 20px;
-            width: 32px;
-            height: 32px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .skills-card-icon svg {
-            width: 100%;
-            height: 100%;
-            stroke: currentColor;
-            stroke-width: 1.75;
-            fill: none;
-        }
         .skills-card-tag {
             font-family: var(--font-lato);
-            font-size: 0.75rem;
+            font-size: 0.78rem;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1.5px;
-            color: var(--blue);
-            margin-bottom: 10px;
-            opacity: 0.8;
+            color: var(--green);
+            margin-bottom: 8px;
         }
         .skills-card-title {
             font-family: var(--font-lato) !important;
-            font-size: 1.5rem;
+            font-size: 1.45rem;
             font-weight: 800;
             color: var(--blue);
-            margin: 0 0 15px 0;
-            line-height: 1.35;
+            margin: 0 0 12px 0;
+            line-height: 1.3;
             text-transform: none;
-            letter-spacing: -0.5px;
+            letter-spacing: -0.3px;
         }
         .skills-card-title span {
             font-family: var(--font-playfair) !important;
@@ -607,61 +638,77 @@
                 </p>
             </div>
 
-            <!-- Interactive 2x2 Waldorf-Style Cards Grid -->
+            <!-- Interactive 2x2 Cards Grid con foto superior + Badge circular flotante de icono (Espejo de multilinguismo.html) -->
             <div class="skills-new-grid">
-                <!-- Card 1 -->
+                <!-- Card 1: Autoliderazgo -->
                 <div class="skills-new-card hontanar-scroll-reveal">
-                    <div class="skills-card-icon">
-                        <!-- Compass / Autonomía -->
+                    <div class="skills-card-photo-wrap">
+                        <img src="assets/filo-bento-1.jpg" alt="Autoliderazgo" class="skills-card-img">
+                    </div>
+                    <div class="skills-card-icon-circle" style="background-color: #1ba655;">
                         <svg viewBox="0 0 24 24">
                             <circle cx="12" cy="12" r="10"></circle>
                             <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
                         </svg>
                     </div>
-                    <span class="skills-card-tag">Autoliderazgo</span>
-                    <h3 class="skills-card-title">Autonomía y <span>toma de decisiones</span></h3>
-                    <p class="skills-card-desc">Los estudiantes aprenden a desenvolverse por sí mismos, gestionando su rutina diaria, sus recursos y resolviendo desafíos cotidianos con responsabilidad e independencia en entornos globales.</p>
+                    <div class="skills-card-body">
+                        <span class="skills-card-tag">Autoliderazgo</span>
+                        <h3 class="skills-card-title">Autonomía y <span>toma de decisiones</span></h3>
+                        <p class="skills-card-desc">Los estudiantes aprenden a desenvolverse por sí mismos, gestionando su rutina diaria, sus recursos y resolviendo desafíos cotidianos con responsabilidad e independencia en entornos globales.</p>
+                    </div>
                 </div>
 
-                <!-- Card 2 -->
+                <!-- Card 2: Bilingüismo -->
                 <div class="skills-new-card hontanar-scroll-reveal">
-                    <div class="skills-card-icon">
-                        <!-- Speech bubbles / Comunicación -->
+                    <div class="skills-card-photo-wrap">
+                        <img src="assets/5929350_Group_Friends_1920x1080.jpg" alt="Bilingüismo" class="skills-card-img">
+                    </div>
+                    <div class="skills-card-icon-circle" style="background-color: #254478;">
                         <svg viewBox="0 0 24 24">
                             <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
                         </svg>
                     </div>
-                    <span class="skills-card-tag">Bilingüismo</span>
-                    <h3 class="skills-card-title">Comunicación <span>real y fluida</span></h3>
-                    <p class="skills-card-desc">El inglés se convierte en una herramienta viva de conexión. Los estudiantes dialogan, exponen ideas y colaboran con nativos en situaciones del día a día, desarrollando una fluidez natural.</p>
+                    <div class="skills-card-body">
+                        <span class="skills-card-tag">Bilingüismo</span>
+                        <h3 class="skills-card-title">Comunicación <span>real y fluida</span></h3>
+                        <p class="skills-card-desc">El inglés se convierte en una herramienta viva de conexión. Los estudiantes dialogan, exponen ideas y colaboran con nativos en situaciones del día a día, desarrollando una fluidez natural.</p>
+                    </div>
                 </div>
 
-                <!-- Card 3 -->
+                <!-- Card 3: Mentalidad Abierta -->
                 <div class="skills-new-card hontanar-scroll-reveal">
-                    <div class="skills-card-icon">
-                        <!-- Globe / Adaptación -->
+                    <div class="skills-card-photo-wrap">
+                        <img src="assets/Hontanar-WEB-09-2022-318-ALTA.jpg" alt="Mentalidad Abierta" class="skills-card-img">
+                    </div>
+                    <div class="skills-card-icon-circle" style="background-color: #3b82f6;">
                         <svg viewBox="0 0 24 24">
                             <circle cx="12" cy="12" r="10"></circle>
                             <line x1="2" y1="12" x2="22" y2="12"></line>
                             <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
                         </svg>
                     </div>
-                    <span class="skills-card-tag">Mentalidad Abierta</span>
-                    <h3 class="skills-card-title">Adaptación <span>cultural</span></h3>
-                    <p class="skills-card-desc">Compartir costumbres, dinámicas escolares y entornos familiares diferentes amplía la visión del mundo de los estudiantes, fomentando la tolerancia, empatía y una mentalidad global.</p>
+                    <div class="skills-card-body">
+                        <span class="skills-card-tag">Mentalidad Abierta</span>
+                        <h3 class="skills-card-title">Adaptación <span>cultural</span></h3>
+                        <p class="skills-card-desc">Compartir costumbres, dinámicas escolares y entornos familiares diferentes amplía la visión del mundo de los estudiantes, fomentando la tolerancia, empatía y una mentalidad global.</p>
+                    </div>
                 </div>
 
-                <!-- Card 4 -->
+                <!-- Card 4: Crecimiento Humano -->
                 <div class="skills-new-card hontanar-scroll-reveal">
-                    <div class="skills-card-icon">
-                        <!-- Heart / Confianza -->
+                    <div class="skills-card-photo-wrap">
+                        <img src="assets/counseling-friendship-1.jpg" alt="Crecimiento Humano" class="skills-card-img">
+                    </div>
+                    <div class="skills-card-icon-circle" style="background-color: #8b5cf6;">
                         <svg viewBox="0 0 24 24">
                             <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
                         </svg>
                     </div>
-                    <span class="skills-card-tag">Crecimiento Humano</span>
-                    <h3 class="skills-card-title">Confianza y <span>crecimiento personal</span></h3>
-                    <p class="skills-card-desc">Superar retos fuera de la zona de confort fortalece el carácter, la autoestima y la resiliencia de los estudiantes, logrando una mayor madurez personal y emocional para el futuro.</p>
+                    <div class="skills-card-body">
+                        <span class="skills-card-tag">Crecimiento Humano</span>
+                        <h3 class="skills-card-title">Confianza y <span>crecimiento personal</span></h3>
+                        <p class="skills-card-desc">Superar retos fuera de la zona de confort fortalece el carácter, la autoestima y la resiliencia de los estudiantes, logrando una mayor madurez personal y emocional para el futuro.</p>
+                    </div>
                 </div>
             </div>
 

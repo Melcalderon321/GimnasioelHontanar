@@ -323,61 +323,108 @@
     fill: #13783e !important;
 }
 
-/* Modern Card Layout */
+/* Modern Card Layout (Rediseño con foto superior + Badge circular flotante de icono) */
 .multi-modern-card {
-    background: #ffffff;
-    border-radius: 12px;
-    padding: 44px 36px;
+    background: #ffffff !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    border: 2px solid rgba(37, 68, 120, 0.22) !important;
+    box-shadow: 0 18px 45px rgba(37, 68, 120, 0.16), 0 6px 16px rgba(0, 0, 0, 0.07) !important;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
     text-align: left;
-    border: 1.5px solid rgba(27, 166, 85, 0.35);
-    box-shadow: 0 0 14px rgba(27, 166, 85, 0.15), 0 12px 30px rgba(37, 68, 120, 0.10);
-    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .multi-modern-card:hover {
-    transform: translateY(-6px);
-    border-color: rgba(27, 166, 85, 0.6);
-    box-shadow: 0 0 22px rgba(27, 166, 85, 0.24), 0 18px 42px rgba(37, 68, 120, 0.15);
+    transform: translateY(-6px) !important;
+    box-shadow: 0 24px 55px rgba(37, 68, 120, 0.22), 0 0 20px rgba(27, 166, 85, 0.25) !important;
+    border-color: rgba(27, 166, 85, 0.6) !important;
 }
 
-.multi-card-icon-svg {
-    width: 28px;
-    height: 28px;
-    stroke: var(--green); /* Green strokes */
-    stroke-width: 1.5;
-    fill: none; /* No solid fill for outline icons */
-    margin-bottom: 24px;
+/* Image Wrap */
+.multi-card-image-wrap {
+    height: 185px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-color: #f1f5f9;
+    clip-path: ellipse(135% 100% at 50% 0%);
 }
 
-.multi-modern-card h3 {
-    font-family: var(--font-lato); /* Sans-serif for regular part */
-    font-size: 1.6rem;
+.multi-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.multi-modern-card:hover .multi-card-img {
+    transform: scale(1.06);
+}
+
+/* Floating Badge Circular Icon */
+.multi-card-badge {
+    position: relative;
+    margin-top: -27px;
+    margin-left: 22px;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e07a5f;
+    border: 3.5px solid #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    z-index: 3;
+    flex-shrink: 0;
+}
+
+.multi-badge-icon {
+    width: 24px;
+    height: 24px;
+    stroke: #ffffff;
+    stroke-width: 2;
+    fill: none;
+}
+
+/* Content Body */
+.multi-card-body {
+    padding: 16px 24px 28px 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.multi-card-body h3 {
+    font-family: var(--font-lato);
+    font-size: 1.35rem;
     font-weight: 700;
     color: var(--blue);
-    margin: 0 0 16px 0;
+    margin: 0 0 12px 0;
     line-height: 1.3;
 }
 
-/* Serif Italic part of title */
-.multi-modern-card h3 span.title-serif-italic {
+.multi-card-body h3 span.title-serif-italic {
     font-family: var(--font-playfair);
     font-style: italic;
     font-weight: 600;
-    color: var(--green); /* Green italic text */
+    color: var(--green);
 }
 
-.multi-modern-card p {
+.multi-card-body p {
     font-family: var(--font-lato);
     font-size: 0.95rem;
-    line-height: 1.75;
-    color: rgba(37, 68, 120, 0.9); /* Dark blue-gray text */
+    line-height: 1.65;
+    color: #4a5568;
     margin: 0;
 }
 
-.multi-modern-card p strong {
+.multi-card-body p strong {
     color: var(--blue);
     font-weight: 700;
 }

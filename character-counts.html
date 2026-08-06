@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="consejeria-internacional.css">
     <link rel="stylesheet" href="multilinguismo.css">
     <link rel="stylesheet" href="vida-en-el-campus.css">
+    <link rel="stylesheet" href="por-que.css">
+    <link rel="stylesheet" href="filosofia-y-valores.css">
     <style>
         /* Page-specific overrides for white background and flat cards */
         body,
@@ -30,6 +32,39 @@
         }
         .vida-section-title {
             color: var(--blue) !important;
+        }
+
+        /* Tarjetas Character Counts: Fondo amarillo con texto azul y esquinas totalmente rectas */
+        .pillars-grid .bento-card-color {
+            background: var(--yellow) !important;
+            border-radius: 0 !important;
+            border: 1.5px solid rgba(37, 68, 120, 0.2) !important;
+            box-shadow: 0 14px 35px rgba(37, 68, 120, 0.11) !important;
+        }
+        .pillars-grid .bento-card-color::after {
+            display: none !important;
+            border-radius: 0 !important;
+        }
+        .pillars-grid .bento-card-color:hover {
+            transform: translateY(-6px) !important;
+            box-shadow: 0 22px 48px rgba(37, 68, 120, 0.18) !important;
+            border-color: rgba(37, 68, 120, 0.45) !important;
+        }
+        .pillars-grid .bento-card-color .card-num,
+        .pillars-grid .bento-card-color h3,
+        .pillars-grid .bento-card-color p,
+        .pillars-grid .bento-card-color strong {
+            color: var(--blue) !important;
+        }
+        .pillars-grid .bento-card-color .card-num::after {
+            color: var(--blue) !important;
+            opacity: 0.7;
+        }
+        .pillars-grid .bento-card-color h3 span {
+            color: var(--blue) !important;
+            font-family: var(--font-playfair) !important;
+            font-style: italic !important;
+            opacity: 0.85 !important;
         }
 
         /* Floating background circles system */
@@ -416,44 +451,44 @@
             <div class="pillars-grid">
                 
                 <!-- Card 1: Confiabilidad (Trustworthiness) -->
-                <div class="multi-modern-card hontanar-scroll-reveal">
-                    <span class="multi-card-number-text" style="font-family: var(--font-lato); font-size: 1.8rem; font-weight: 700; color: var(--green); display: block; margin-bottom: 24px; line-height: 1;">01</span>
-                    <h3>Confiabilidad <br><span class="title-serif-italic">Trustworthiness</span></h3>
+                <div class="bento-card-color color-blue hontanar-scroll-reveal">
+                    <span class="card-num">01</span>
+                    <h3>Confiabilidad <br><span>Trustworthiness</span></h3>
                     <p>Ser <strong>honestos</strong>, cumplir la palabra y tener el <strong>coraje moral</strong> de hacer lo correcto de forma constante.</p>
                 </div>
 
                 <!-- Card 2: Respeto (Respect) -->
-                <div class="multi-modern-card hontanar-scroll-reveal">
-                    <span class="multi-card-number-text" style="font-family: var(--font-lato); font-size: 1.8rem; font-weight: 700; color: var(--green); display: block; margin-bottom: 24px; line-height: 1;">02</span>
-                    <h3>Respeto <br><span class="title-serif-italic">Respect</span></h3>
+                <div class="bento-card-color color-green hontanar-scroll-reveal">
+                    <span class="card-num">02</span>
+                    <h3>Respeto <br><span>Respect</span></h3>
                     <p>Valorar a los demás, tolerar las diferencias y resolver cualquier conflicto de manera <strong>pacífica</strong>.</p>
                 </div>
 
                 <!-- Card 3: Responsabilidad (Responsibility) -->
-                <div class="multi-modern-card hontanar-scroll-reveal">
-                    <span class="multi-card-number-text" style="font-family: var(--font-lato); font-size: 1.8rem; font-weight: 700; color: var(--green); display: block; margin-bottom: 24px; line-height: 1;">03</span>
-                    <h3>Responsabilidad <br><span class="title-serif-italic">Responsibility</span></h3>
+                <div class="bento-card-color color-green-brand hontanar-scroll-reveal">
+                    <span class="card-num">03</span>
+                    <h3>Responsabilidad <br><span>Responsibility</span></h3>
                     <p>Asumir las consecuencias de nuestros actos, ser <strong>autodisciplinados</strong> y dar siempre nuestro <strong>mejor esfuerzo</strong>.</p>
                 </div>
 
                 <!-- Card 4: Justicia (Fairness) -->
-                <div class="multi-modern-card hontanar-scroll-reveal">
-                    <span class="multi-card-number-text" style="font-family: var(--font-lato); font-size: 1.8rem; font-weight: 700; color: var(--green); display: block; margin-bottom: 24px; line-height: 1;">04</span>
-                    <h3>Justicia <br><span class="title-serif-italic">Fairness</span></h3>
+                <div class="bento-card-color color-pink hontanar-scroll-reveal">
+                    <span class="card-num">04</span>
+                    <h3>Justicia <br><span>Fairness</span></h3>
                     <p>Jugar bajo las <strong>reglas establecidas</strong>, ser equitativos, incluyentes y escuchar con una <strong>mente abierta</strong>.</p>
                 </div>
 
                 <!-- Card 5: Bondad (Caring) -->
-                <div class="multi-modern-card hontanar-scroll-reveal">
-                    <span class="multi-card-number-text" style="font-family: var(--font-lato); font-size: 1.8rem; font-weight: 700; color: var(--green); display: block; margin-bottom: 24px; line-height: 1;">05</span>
-                    <h3>Bondad <br><span class="title-serif-italic">Caring</span></h3>
+                <div class="bento-card-color color-blue hontanar-scroll-reveal">
+                    <span class="card-num">05</span>
+                    <h3>Bondad <br><span>Caring</span></h3>
                     <p>Ser <strong>empáticos, compasivos</strong>, solidarios y manifestar gratitud permanente con acciones constructivas.</p>
                 </div>
 
                 <!-- Card 6: Ciudadanía (Citizenship) -->
-                <div class="multi-modern-card hontanar-scroll-reveal">
-                    <span class="multi-card-number-text" style="font-family: var(--font-lato); font-size: 1.8rem; font-weight: 700; color: var(--green); display: block; margin-bottom: 24px; line-height: 1;">06</span>
-                    <h3>Ciudadanía <br><span class="title-serif-italic">Citizenship</span></h3>
+                <div class="bento-card-color color-green hontanar-scroll-reveal">
+                    <span class="card-num">06</span>
+                    <h3>Ciudadanía <br><span>Citizenship</span></h3>
                     <p>Respetar las leyes, cuidar con esmero el <strong>medio ambiente</strong> y contribuir activamente a mejorar la <strong>comunidad</strong>.</p>
                 </div>
 
