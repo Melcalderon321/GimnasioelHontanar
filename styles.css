@@ -2026,6 +2026,7 @@ body.home-page .cta-overlap {
     height: auto;
     object-fit: contain;
     margin-bottom: 5px;
+    animation: floatColibri 3.5s ease-in-out infinite;
 }
 
 .visit-description {

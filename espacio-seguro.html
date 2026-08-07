@@ -21,8 +21,7 @@
             background-color: var(--white) !important;
             color: #334155;
         }
-        .bento-card-color,
-        .cta-box {
+        .bento-card-color {
             border-radius: 0 !important;
         }
         .vida-section-title {
@@ -62,7 +61,7 @@
                     <span class="icon-circle"><i class="arrow-down"></i></span>
                     <a href="#">Admisiones</a>
                 </div>
-                <ul class="submenu" >
+                <ul class="submenu">
                     <li><a href="tour-virtual.html">Tour Virtual</a></li>
                     <li><a href="preguntas-frecuentes.html">Preguntas Frecuentes</a></li>
                     <li><a href="por-que-estudiar.html">¿Por qué estudiar en el Gimnasio El Hontanar?</a></li>
@@ -132,7 +131,7 @@
                 </ul>
             </li>
         </ul>
-                <div class="sidebar-footer">
+        <div class="sidebar-footer">
             <a href="tour-virtual.html" class="btn-sidebar btn-s-green">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25" />
@@ -168,7 +167,7 @@
             if(overlay) overlay.addEventListener('click', toggleMenu);
 
             // Collapsible submenus
-                        const submenus = document.querySelectorAll('.has-submenu .menu-item');
+            const submenus = document.querySelectorAll('.has-submenu .menu-item');
             submenus.forEach(item => {
                 item.addEventListener('click', (e) => {
                     e.preventDefault();
@@ -202,9 +201,9 @@
                         }
                     }
                 });
-            });;
+            });
 
-                                    // Dynamic Visit Modal creation and event listeners
+            // Dynamic Visit Modal creation and event listeners
             const visitBtn = document.querySelector('.social-icon.yellow');
             if (visitBtn) {
                 visitBtn.addEventListener('click', (e) => {
@@ -331,9 +330,10 @@
             <h1 class="inner-header-title">Protección, Respeto y <span>Bienestar</span></h1>
             
         </div>
-        <img src="assets/ChatGPT Image 1 jul 2025, 17_28_04 (3).png" alt="ColibrÃ­" class="header-colibri-float">
+        <img src="assets/ChatGPT Image 1 jul 2025, 17_28_04 (3).png" alt="Colibrí" class="header-colibri-float">
     </section>
-<main class="vida-page" style="position: relative; overflow: hidden;">
+
+    <main class="vida-page" style="position: relative; overflow: hidden;">
         <!-- Floating background circles -->
         <div class="bg-circles-wrapper">
             <div class="bg-circle bg-circle-ring-yellow circle-1"></div>
@@ -474,7 +474,7 @@
         <a href="#" class="social-icon yellow"><img src="assets/Componente 26 - 1.png" alt="MSG"></a>
     </div>
 
-        <!-- CTA Box Overlapping the Footer Image -->
+    <!-- CTA Box Overlapping the Footer Image -->
     <div class="cta-box-wrapper cta-overlap tour-cta">
         <div class="cta-box">
             <h2>
