@@ -34,42 +34,19 @@
             color: var(--blue) !important;
         }
 
-        /* Tarjetas Character Counts: Fondo amarillo con texto azul y esquinas totalmente rectas */
-        .pillars-grid .bento-card-color {
-            background: var(--yellow) !important;
-            border-radius: 0 !important;
-            border: 1.5px solid rgba(37, 68, 120, 0.2) !important;
-            box-shadow: 0 14px 35px rgba(37, 68, 120, 0.11) !important;
+        /* Estilos de tarjetas Character Counts basados en multilinguismo.html */
+        .multi-bento-section {
+            padding: 10px 0 50px 0;
+            position: relative;
         }
-        .pillars-grid .bento-card-color::after {
-            display: none !important;
-            border-radius: 0 !important;
-        }
-        .pillars-grid .bento-card-color:hover {
-            transform: translateY(-6px) !important;
-            box-shadow: 0 22px 48px rgba(37, 68, 120, 0.18) !important;
-            border-color: rgba(37, 68, 120, 0.45) !important;
-        }
-        .pillars-grid .bento-card-color .card-num {
-            color: var(--green) !important;
-            opacity: 1 !important;
-        }
-        .pillars-grid .bento-card-color .card-num::after {
-            color: var(--green) !important;
-            opacity: 0.85 !important;
-        }
-        .pillars-grid .bento-card-color h3 {
-            color: var(--blue) !important;
-        }
-        .pillars-grid .bento-card-color h3 span {
-            color: var(--green) !important;
-            font-family: var(--font-playfair) !important;
-            font-style: italic !important;
-            opacity: 1 !important;
-        }
-        .pillars-grid .bento-card-color p,
-        .pillars-grid .bento-card-color strong {
-            color: var(--blue) !important;
+        .multi-badge-number {
+            font-family: var(--font-playfair), 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: #ffffff;
+            line-height: 1;
+            position: relative;
+            top: -2px;
         }
 
         /* Floating background circles system */
@@ -453,51 +430,95 @@
                 </p>
             </div>
 
-            <div class="pillars-grid">
-                
-                <!-- Card 1: Confiabilidad (Trustworthiness) -->
-                <div class="bento-card-color color-blue hontanar-scroll-reveal">
-                    <span class="card-num">01</span>
-                    <h3>Confiabilidad <br><span>Trustworthiness</span></h3>
-                    <p>Ser <strong>honestos</strong>, cumplir la palabra y tener el <strong>coraje moral</strong> de hacer lo correcto de forma constante.</p>
-                </div>
+            <section class="multi-bento-section">
+                <div class="multi-bento-grid">
+                    
+                    <!-- Card 1: Confiabilidad (Trustworthiness) -->
+                    <div class="multi-modern-card hontanar-scroll-reveal">
+                        <div class="multi-card-image-wrap">
+                            <img src="assets/counseling-friendship-1.jpg" alt="Confiabilidad - Trustworthiness" class="multi-card-img">
+                        </div>
+                        <div class="multi-card-badge" style="background-color: #254478;">
+                            <span class="multi-badge-number">01</span>
+                        </div>
+                        <div class="multi-card-body">
+                            <h3>Confiabilidad <span class="title-serif-italic">Trustworthiness</span></h3>
+                            <p>Ser <strong>honestos</strong>, cumplir la palabra y tener el <strong>coraje moral</strong> de hacer lo correcto de forma constante.</p>
+                        </div>
+                    </div>
 
-                <!-- Card 2: Respeto (Respect) -->
-                <div class="bento-card-color color-green hontanar-scroll-reveal">
-                    <span class="card-num">02</span>
-                    <h3>Respeto <br><span>Respect</span></h3>
-                    <p>Valorar a los demás, tolerar las diferencias y resolver cualquier conflicto de manera <strong>pacífica</strong>.</p>
-                </div>
+                    <!-- Card 2: Respeto (Respect) -->
+                    <div class="multi-modern-card hontanar-scroll-reveal">
+                        <div class="multi-card-image-wrap">
+                            <img src="assets/counseling-friendship-2.jpg" alt="Respeto - Respect" class="multi-card-img">
+                        </div>
+                        <div class="multi-card-badge" style="background-color: #1BA655;">
+                            <span class="multi-badge-number">02</span>
+                        </div>
+                        <div class="multi-card-body">
+                            <h3>Respeto <span class="title-serif-italic">Respect</span></h3>
+                            <p>Valorar a los demás, tolerar las diferencias y resolver cualquier conflicto de manera <strong>pacífica</strong>.</p>
+                        </div>
+                    </div>
 
-                <!-- Card 3: Responsabilidad (Responsibility) -->
-                <div class="bento-card-color color-green-brand hontanar-scroll-reveal">
-                    <span class="card-num">03</span>
-                    <h3>Responsabilidad <br><span>Responsibility</span></h3>
-                    <p>Asumir las consecuencias de nuestros actos, ser <strong>autodisciplinados</strong> y dar siempre nuestro <strong>mejor esfuerzo</strong>.</p>
-                </div>
+                    <!-- Card 3: Responsabilidad (Responsibility) -->
+                    <div class="multi-modern-card hontanar-scroll-reveal">
+                        <div class="multi-card-image-wrap">
+                            <img src="assets/boy-doing-his-homework-laptop-library.jpg" alt="Responsabilidad - Responsibility" class="multi-card-img">
+                        </div>
+                        <div class="multi-card-badge" style="background-color: #d97706;">
+                            <span class="multi-badge-number">03</span>
+                        </div>
+                        <div class="multi-card-body">
+                            <h3>Responsabilidad <span class="title-serif-italic">Responsibility</span></h3>
+                            <p>Asumir las consecuencias de nuestros actos, ser <strong>autodisciplinados</strong> y dar siempre nuestro <strong>mejor esfuerzo</strong>.</p>
+                        </div>
+                    </div>
 
-                <!-- Card 4: Justicia (Fairness) -->
-                <div class="bento-card-color color-pink hontanar-scroll-reveal">
-                    <span class="card-num">04</span>
-                    <h3>Justicia <br><span>Fairness</span></h3>
-                    <p>Jugar bajo las <strong>reglas establecidas</strong>, ser equitativos, incluyentes y escuchar con una <strong>mente abierta</strong>.</p>
-                </div>
+                    <!-- Card 4: Justicia (Fairness) -->
+                    <div class="multi-modern-card hontanar-scroll-reveal">
+                        <div class="multi-card-image-wrap">
+                            <img src="assets/Copia_de_post_18_Junio_deporte_3.png" alt="Justicia - Fairness" class="multi-card-img">
+                        </div>
+                        <div class="multi-card-badge" style="background-color: #3b82f6;">
+                            <span class="multi-badge-number">04</span>
+                        </div>
+                        <div class="multi-card-body">
+                            <h3>Justicia <span class="title-serif-italic">Fairness</span></h3>
+                            <p>Jugar bajo las <strong>reglas establecidas</strong>, ser equitativos, incluyentes y escuchar con una <strong>mente abierta</strong>.</p>
+                        </div>
+                    </div>
 
-                <!-- Card 5: Bondad (Caring) -->
-                <div class="bento-card-color color-blue hontanar-scroll-reveal">
-                    <span class="card-num">05</span>
-                    <h3>Bondad <br><span>Caring</span></h3>
-                    <p>Ser <strong>empáticos, compasivos</strong>, solidarios y manifestar gratitud permanente con acciones constructivas.</p>
-                </div>
+                    <!-- Card 5: Bondad (Caring) -->
+                    <div class="multi-modern-card hontanar-scroll-reveal">
+                        <div class="multi-card-image-wrap">
+                            <img src="assets/girls-female-teacher-doing-science-experiments-together.jpg" alt="Bondad - Caring" class="multi-card-img">
+                        </div>
+                        <div class="multi-card-badge" style="background-color: #e07a5f;">
+                            <span class="multi-badge-number">05</span>
+                        </div>
+                        <div class="multi-card-body">
+                            <h3>Bondad <span class="title-serif-italic">Caring</span></h3>
+                            <p>Ser <strong>empáticos, compasivos</strong>, solidarios y manifestar gratitud permanente con acciones constructivas.</p>
+                        </div>
+                    </div>
 
-                <!-- Card 6: Ciudadanía (Citizenship) -->
-                <div class="bento-card-color color-green hontanar-scroll-reveal">
-                    <span class="card-num">06</span>
-                    <h3>Ciudadanía <br><span>Citizenship</span></h3>
-                    <p>Respetar las leyes, cuidar con esmero el <strong>medio ambiente</strong> y contribuir activamente a mejorar la <strong>comunidad</strong>.</p>
-                </div>
+                    <!-- Card 6: Ciudadanía (Citizenship) -->
+                    <div class="multi-modern-card hontanar-scroll-reveal">
+                        <div class="multi-card-image-wrap">
+                            <img src="assets/watering-plants.jpg" alt="Ciudadanía - Citizenship" class="multi-card-img">
+                        </div>
+                        <div class="multi-card-badge" style="background-color: #1BA655;">
+                            <span class="multi-badge-number">06</span>
+                        </div>
+                        <div class="multi-card-body">
+                            <h3>Ciudadanía <span class="title-serif-italic">Citizenship</span></h3>
+                            <p>Respetar las leyes, cuidar con esmero el <strong>medio ambiente</strong> y contribuir activamente a mejorar la <strong>comunidad</strong>.</p>
+                        </div>
+                    </div>
 
-            </div>
+                </div>
+            </section>
 
             <!-- Section Title for the Slider -->
             <div class="vida-header hontanar-scroll-reveal" style="margin-top: 60px; margin-bottom: 30px;">
