@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Espacio Seguro | Gimnasio El Hontanar</title>
-    <meta name="description" content="College Counseling en el Gimnasio El Hontanar. Guía, asesoría y conexión con universidades nacionales e internacionales desde noveno grado.">
+    <title>Espacio Seguro: Prevención del Bullying con KiVa | Gimnasio El Hontanar</title>
+    <meta name="description" content="Espacio Seguro en el Gimnasio El Hontanar. Cuidamos la convivencia escolar con KiVa, programa líder certificado en prevención del acoso escolar en Bogotá.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="vida-en-el-campus.css">
     <link rel="stylesheet" href="filosofia-y-valores.css">
     <link rel="stylesheet" href="por-que.css">
+    <link rel="stylesheet" href="multilinguismo.css">
     <style>
         /* Page-specific overrides for white background and flat cards */
         body,
@@ -27,6 +28,106 @@
         .vida-section-title {
             color: var(--blue) !important;
         }
+        .multi-badge-number {
+            font-family: var(--font-playfair), 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: #ffffff;
+            line-height: 1;
+            position: relative;
+            top: -2px;
+        }
+        .kiva-ejes-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 24px;
+            max-width: 1200px;
+            margin: 0 auto 35px auto;
+        }
+        .kiva-ejes-container .multi-modern-card {
+            flex: 1 1 250px;
+            max-width: 280px;
+        }
+        @media (max-width: 768px) {
+            .kiva-ejes-container .multi-modern-card {
+                max-width: 100%;
+            }
+        }
+
+        /* Floating background dots */
+        .floating-dots-wrapper {
+            position: absolute !important;
+            inset: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            overflow: hidden !important;
+            pointer-events: none !important;
+            z-index: 1 !important;
+        }
+        .f-dot {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+            opacity: 0.65;
+        }
+        .dot-yellow {
+            background-color: #f59e0b;
+            box-shadow: 0 0 10px rgba(245, 158, 11, 0.4);
+        }
+        .dot-green {
+            background-color: #1ba655;
+            box-shadow: 0 0 10px rgba(27, 166, 85, 0.35);
+        }
+        .dot-cyan {
+            background-color: #0284c7;
+            box-shadow: 0 0 10px rgba(2, 132, 199, 0.35);
+        }
+        .dot-orange {
+            background-color: #ea580c;
+            box-shadow: 0 0 10px rgba(234, 88, 12, 0.35);
+        }
+        .dot-ring {
+            background: transparent !important;
+            border-width: 2.5px;
+            border-style: solid;
+        }
+        .dot-ring-yellow {
+            border-color: #f59e0b;
+            box-shadow: 0 0 8px rgba(245, 158, 11, 0.3);
+        }
+        .dot-ring-green {
+            border-color: #1ba655;
+            box-shadow: 0 0 8px rgba(27, 166, 85, 0.3);
+        }
+        .dot-ring-blue {
+            border-color: #0284c7;
+            box-shadow: 0 0 8px rgba(2, 132, 199, 0.3);
+        }
+
+        /* Floating animations */
+        @keyframes floatSlow1 {
+            0%, 100% { transform: translateY(0) translateX(0) scale(1); opacity: 0.6; }
+            50% { transform: translateY(-28px) translateX(15px) scale(1.18); opacity: 0.95; }
+        }
+        @keyframes floatSlow2 {
+            0%, 100% { transform: translateY(0) translateX(0) scale(1); opacity: 0.5; }
+            50% { transform: translateY(26px) translateX(-18px) scale(0.88); opacity: 0.9; }
+        }
+        @keyframes floatSlow3 {
+            0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.65; }
+            33% { transform: translate(14px, -20px) scale(1.12); opacity: 1; }
+            66% { transform: translate(-10px, -35px) scale(0.95); opacity: 0.75; }
+        }
+        @keyframes pulseGlow {
+            0%, 100% { transform: scale(1); opacity: 0.45; }
+            50% { transform: scale(1.35); opacity: 0.95; }
+        }
+
+        .dot-anim-1 { animation: floatSlow1 7s ease-in-out infinite; }
+        .dot-anim-2 { animation: floatSlow2 10s ease-in-out infinite; }
+        .dot-anim-3 { animation: floatSlow3 13s ease-in-out infinite; }
+        .dot-anim-pulse { animation: pulseGlow 5s ease-in-out infinite; }
     </style>
 </head>
 <body>
@@ -326,8 +427,7 @@
         <div class="inner-header-overlay"></div>
         <div class="inner-header-content">
             <span class="inner-header-kicker">VIDA EN EL CAMPUS</span>
-            <h1 class="inner-header-title">Protección, Respeto y <span>Bienestar</span></h1>
-            
+            <h1 class="inner-header-title">Cuidamos la Convivencia Escolar<br><span>con un Programa Líder en Prevención del Bullying</span></h1>
         </div>
         <img src="assets/ChatGPT Image 1 jul 2025, 17_28_04 (3).png" alt="Colibrí" class="header-colibri-float">
     </section>
@@ -340,69 +440,50 @@
             <div class="bg-circle bg-circle-ring-blue circle-3"></div>
         </div>
 
+        <!-- Floating background dots -->
+        <div class="floating-dots-wrapper" aria-hidden="true">
+            <span class="f-dot dot-yellow dot-anim-1" style="width: 14px; height: 14px; top: 5%; left: 4%;"></span>
+            <span class="f-dot dot-green dot-anim-3" style="width: 18px; height: 18px; top: 11%; right: 5%;"></span>
+            <span class="f-dot dot-ring dot-ring-yellow dot-anim-2" style="width: 24px; height: 24px; top: 19%; left: 3%;"></span>
+            <span class="f-dot dot-cyan dot-anim-1" style="width: 13px; height: 13px; top: 29%; right: 6%;"></span>
+            <span class="f-dot dot-orange dot-anim-pulse" style="width: 15px; height: 15px; top: 38%; left: 5%;"></span>
+            <span class="f-dot dot-green dot-anim-2" style="width: 16px; height: 16px; top: 50%; right: 4%;"></span>
+            <span class="f-dot dot-ring dot-ring-blue dot-anim-3" style="width: 26px; height: 26px; top: 62%; left: 3%;"></span>
+            <span class="f-dot dot-yellow dot-anim-1" style="width: 14px; height: 14px; top: 74%; right: 5%;"></span>
+            <span class="f-dot dot-cyan dot-anim-2" style="width: 13px; height: 13px; top: 85%; left: 4%;"></span>
+            <span class="f-dot dot-ring dot-ring-green dot-anim-pulse" style="width: 22px; height: 22px; top: 94%; right: 6%;"></span>
+        </div>
+
         <div class="breadcrumbs">
             <a href="index.html">Inicio</a> &gt; <a href="#">Vida en el Campus</a> &gt; <span class="current">Espacio Seguro</span>
         </div>
 
         <div class="vida-container">
-            <div class="vida-lead-paragraph-wrapper hontanar-scroll-reveal" style="border-left: 4px solid var(--green); padding-left: 25px; margin: 40px auto 30px auto; max-width: 900px; text-align: left;">
-                <p style="font-family: var(--font-lato); font-size: 1.18rem; line-height: 1.85; color: var(--blue) !important; margin: 0;">
-                    En el Gimnasio El Hontanar, entendemos que la tranquilidad de los padres de familia nace de saber que sus hijos habitan un <strong style="color: var(--green); font-weight: 700;">espacio seguro</strong>. Por eso, nuestro campus ubicado al norte de Bogotá y Chía está diseñado y gestionado bajo estrictos <strong style="color: var(--green); font-weight: 700;">estándares de protección, cuidado físico y bienestar emocional</strong>.
+            <!-- Lead Paragraph -->
+            <div class="vida-lead-paragraph-wrapper hontanar-scroll-reveal" style="border-left: 4px solid var(--green); padding-left: 25px; margin: 40px auto 35px auto; max-width: 920px; text-align: left;">
+                <p style="font-family: var(--font-lato); font-size: 1.15rem; line-height: 1.85; color: var(--blue) !important; margin-bottom: 18px;">
+                    En el Gimnasio El Hontanar creemos que un <strong>espacio seguro</strong> se construye todos los días, con acciones claras y respuestas oportunas. Por eso, incorporamos <strong>KiVa</strong>, un programa certificado de prevención del acoso escolar, como parte esencial de nuestro currículo formativo.
+                </p>
+                <p style="font-family: var(--font-playfair); font-style: italic; font-size: 1.12rem; line-height: 1.8; color: var(--blue) !important; margin: 0;">
+                    No podemos negar que los conflictos existen, pero debemos saber cómo actuar cuando aparecen y en el Hontanar lo hacemos de manera pedagógica, responsable y a tiempo.
                 </p>
             </div>
+        </div><!-- cierre vida-container temporal para sección split full-bleed -->
 
-
-            <!-- Section: Convivencia Sana -->
-            <div class="hontanar-scroll-reveal" style="text-align: center; margin-top: 50px; margin-bottom: 30px;">
-                <h2 class="vida-section-title" style="color: var(--blue) !important; margin-bottom: 15px;">Convivencia sana basada en el respeto y la empatía</h2>
-                <p class="vida-paragraph" style="max-width: 800px; margin: 0 auto; color: #4a5568; line-height: 1.7; font-size: 1.05rem;">
-                    La seguridad en El Hontanar va más allá de la infraestructura; se construye desde las <strong style="color: var(--blue);">relaciones humanas</strong>:
-                </p>
-            </div>
-
-            <div class="pillar-bento-row" style="margin-bottom: 60px;">
-                
-                <!-- Card 1: Cultura de paz y prevención -->
-                <div class="pillar-bento-card hontanar-scroll-reveal" style="background-image: url('assets/DSC_0022.jpg'); background-size: cover; background-position: center;">
-                    <div class="pillar-bento-body">
-                        <h3 class="pillar-bento-heading">Cultura de paz<br><span>y prevención</span></h3>
-                        <p class="pillar-bento-text">Implementamos protocolos claros de convivencia escolar enfocados en la prevención del acoso, la promoción del diálogo y la resolución pacífica de conflictos.</p>
-                    </div>
-                </div>
-
-                <!-- Card 2: Acompañamiento docente permanente -->
-                <div class="pillar-bento-card hontanar-scroll-reveal" style="background-image: url('assets/153.jpg'); background-size: cover; background-position: center;">
-                    <div class="pillar-bento-body">
-                        <h3 class="pillar-bento-heading">Acompañamiento<br><span>docente permanente</span></h3>
-                        <p class="pillar-bento-text">Los estudiantes cuentan con la guía y supervisión constante de sus profesores y del Equipo de Bienestar en los salones de clase, zonas recreativas, laboratorios y rutas escolares.</p>
-                    </div>
-                </div>
-
-                <!-- Card 3: Entorno inclusivo -->
-                <div class="pillar-bento-card hontanar-scroll-reveal" style="background-image: url('assets/DSC_0603.jpg'); background-size: cover; background-position: center;">
-                    <div class="pillar-bento-body">
-                        <h3 class="pillar-bento-heading">Entorno<br><span>inclusivo</span></h3>
-                        <p class="pillar-bento-text">Fomentamos un ambiente donde cada niño y joven se siente aceptado, escuchado y respetado en su individualidad, fortaleciendo su autoestima y sentido de pertenencia.</p>
-                    </div>
-                </div>
-
-            </div>
-
-        </div><!-- cierre vida-container -->
-
-        <!-- Section: Infraestructura y protocolos (split layout - fuera del contenedor para bleed completo) -->
-        <section class="pq-split-section hontanar-scroll-reveal" style="margin-top: 60px; margin-bottom: 80px;">
+        <!-- Section: Prevenimos el acoso escolar con KiVa (split layout) -->
+        <section class="pq-split-section hontanar-scroll-reveal" style="margin-top: 50px; margin-bottom: 75px;">
             <!-- Left Side: Content -->
             <div class="pq-split-left" style="display: flex; flex-direction: column; justify-content: center;">
-                <h2 class="pq-split-title" style="font-family: var(--font-lato); font-size: 2.3rem; font-weight: 900; color: var(--blue); line-height: 1.25; margin-bottom: 25px;">
-                    Infraestructura y protocolos <br>
-                    <span style="font-family: var(--font-playfair); font-style: italic; color: var(--green); font-weight: 700;">para la tranquilidad familiar</span>
+                <h2 class="pq-split-title" style="font-family: var(--font-lato) !important; font-style: normal !important; font-size: 2.35rem; font-weight: 800; color: var(--blue); line-height: 1.25; margin-bottom: 22px;">
+                    Prevenimos el acoso escolar <br>
+                    <span style="font-family: var(--font-playfair); font-style: italic; color: #1BA655; font-weight: 700;">con KiVa</span>
+                    <span style="display: block; font-family: var(--font-lato) !important; font-style: normal !important; font-size: 0.88rem; font-weight: 700; color: var(--blue) !important; text-transform: uppercase; letter-spacing: 1.2px; line-height: 1.45; margin-top: 14px;">UNA EXPERIENCIA REAL EN UNO DE LOS MEJORES COLEGIOS PRIVADOS DE BOGOTÁ</span>
                 </h2>
-                <p style="font-family: var(--font-lato); font-size: 1.05rem; line-height: 1.8; color: #4a5568; margin-bottom: 20px;">
-                    Nuestro campus cuenta con <strong>sistemas de seguridad integrados</strong>, control de accesos y personal capacitado para atender cualquier eventualidad.
+                <p style="font-family: var(--font-lato); font-size: 1.02rem; line-height: 1.8; color: #4a5568; margin-bottom: 18px;">
+                    <strong>KiVa</strong> es un programa integral de prevención de la violencia escolar que involucra a toda la comunidad educativa: <strong>estudiantes, docentes y familias</strong>, a través de clases estructuradas, seguimiento constante e intervención clara en los casos que lo requieren, fortaleciendo la convivencia, la empatía y el bienestar emocional dentro del colegio.
                 </p>
-                <p style="font-family: var(--font-lato); font-size: 1.05rem; line-height: 1.8; color: #4a5568; margin-bottom: 0;">
-                    Asimismo, el servicio de enfermería y los planes de emergencia aseguran una <strong>respuesta oportuna</strong>, garantizando que la vida escolar transcurra en un <strong>ambiente de cuidado y protección</strong>.
+                <p style="font-family: var(--font-lato); font-size: 1rem; line-height: 1.75; color: #4a5568; margin-bottom: 0; border-left: 3px solid var(--yellow); padding-left: 16px; font-style: italic;">
+                    Su enfoque está basado en <strong>evidencia científica</strong>, con resultados comprobados que muestran una <strong>reducción del bullying entre el 30 % y el 50 %</strong> en el primer año de implementación, además de mejoras en el clima escolar y en la motivación por asistir al colegio.
                 </p>
             </div>
 
@@ -414,54 +495,177 @@
             </div>
         </section>
 
-        <!-- Galería estilo "La vida en el Hontanar" -->
-        <section class="filo-gallery-section" style="padding: 60px 0 0 0; background-color: #ffffff;">
-            <div class="filo-gallery-header hontanar-scroll-reveal" style="text-align: center; margin-bottom: 40px;">
-                <h4 class="kicker" style="font-family: var(--font-lato); color: var(--green); font-size: 0.85rem; font-weight: 900; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 14px;">NUESTRA COMUNIDAD</h4>
-                <h2 class="filo-section-title" style="font-family: var(--font-lato); font-size: 2.6rem; font-weight: 700; color: var(--blue); line-height: 1.2;">La vida en el <span>Hontanar</span></h2>
-            </div>
-
-            <div class="filo-galeria-carousel hontanar-scroll-reveal">
-                <div class="filo-carousel-track-scroll">
-                    <img src="assets/espacio-campus-1.jpg" alt="Campus Seguro">
-                    <img src="assets/DSC_0762_copia.jpg" alt="Instalaciones Hontanar">
-                    <img src="assets/20241002_145134.jpg" alt="Convivencia y Actividades">
-                    <img src="assets/PHOTO-2025-07-30-09-58-52 (1).jpg" alt="Edificio Principal">
-                    <img src="assets/espacio-deporte-1.jpg" alt="Zonas Deportivas Seguras">
-                    <img src="assets/espacio-aulas-2.jpg" alt="Aulas Hontanar">
-                    <img src="assets/Copia_de_DSC_0576.JPG" alt="Vida en el Campus">
-                    <img src="assets/154.jpg" alt="Cuidado y Protección">
-                    <!-- Duplicadas para efecto infinito -->
-                    <img src="assets/espacio-campus-1.jpg" alt="Campus Seguro">
-                    <img src="assets/DSC_0762_copia.jpg" alt="Instalaciones Hontanar">
-                    <img src="assets/20241002_145134.jpg" alt="Convivencia y Actividades">
-                    <img src="assets/PHOTO-2025-07-30-09-58-52 (1).jpg" alt="Edificio Principal">
-                    <img src="assets/espacio-deporte-1.jpg" alt="Zonas Deportivas Seguras">
-                    <img src="assets/espacio-aulas-2.jpg" alt="Aulas Hontanar">
-                    <img src="assets/Copia_de_DSC_0576.JPG" alt="Vida en el Campus">
-                    <img src="assets/154.jpg" alt="Cuidado y Protección">
-                </div>
-            </div>
-        </section>
-
         <div class="vida-container">
-
-        <section class="filo-wavy-cards-section" style="padding: 60px 0 80px 0; background-color: #ffffff; position: relative;">
-            <div class="filo-wavy-card text-right hontanar-scroll-reveal">
-                <!-- Imagen izquierda con borde ondulado -->
-                <div class="wavy-card-img-col" style="background-image: url('assets/Copia_de_DSC_0875.JPG');">
-                    <svg viewBox="0 0 100 600" preserveAspectRatio="none" class="wavy-edge-svg wave-left-side">
-                        <path d="M100,0 L70,0 C40,150 30,300 75,450 C90,520 100,600 100,600 Z" fill="#ffffff"/>
-                    </svg>
+            <!-- Section: ¿Cómo se vive KiVa en el Colegio El Hontanar? -->
+            <div class="hontanar-scroll-reveal" style="text-align: center; margin-top: 40px; margin-bottom: 35px;">
+                <div style="margin-bottom: 20px;">
+                    <img src="assets/kiva-logo.png" alt="KiVa Anti-bullying Program" style="max-height: 85px; width: auto; display: inline-block; object-fit: contain;">
                 </div>
-                <!-- Texto derecho -->
-                <div class="wavy-card-text-col">
-                    <span class="wavy-card-kicker">- GIMNASIO EL HONTANAR -</span>
-                    <h2 class="wavy-card-title">En El Hontanar nos tomamos<br><span>en serio el bienestar de tu familia</span></h2>
-                    <p class="wavy-card-paragraph">Creando un <strong>segundo hogar</strong> donde aprender es una experiencia <strong>segura y feliz</strong>.</p>
-                    <p class="wavy-card-paragraph-highlight">Contáctanos para que te acompañemos en este proceso de ingreso a uno de los mejores colegios privados en Bogotá.</p>
-                    <div class="wavy-card-btn-wrap">
-                        <a href="agenda-visita.html" class="btn btn-yellow btn-nav">Agenda tu visita <span class="arrow">&gt;</span></a>
+                <h2 class="vida-section-title" style="font-family: var(--font-lato) !important; font-style: normal !important; font-weight: 800; color: var(--blue) !important; font-size: 2.3rem; margin-bottom: 15px;">
+                    ¿Cómo se vive KiVa en el <br>
+                    <span style="font-family: var(--font-playfair); font-style: italic; color: #1BA655; font-weight: bold;">Colegio El Hontanar?</span>
+                </h2>
+                <p class="vida-paragraph" style="max-width: 880px; margin: 0 auto; color: #4a5568; line-height: 1.8; font-size: 1.05rem;">
+                    KiVa hace parte del desarrollo curricular del <strong style="color: #1BA655; font-weight: 700;">eje de formación afectiva</strong>, orientado a la prevención de la violencia escolar. Los estudiantes participan en clases diseñadas por nivel, desde primero hasta grado once, donde aprenden a:
+                </p>
+            </div>
+
+            <div class="kiva-ejes-container">
+                <!-- Eje 1: Identificar situaciones de bullying -->
+                <div class="multi-modern-card hontanar-scroll-reveal">
+                    <div class="multi-card-image-wrap">
+                        <img src="assets/boy-doing-his-homework-laptop-library.jpg" alt="Identificar situaciones de bullying" class="multi-card-img">
+                    </div>
+                    <div class="multi-card-badge" style="background-color: #254478;">
+                        <span class="multi-badge-number">01</span>
+                    </div>
+                    <div class="multi-card-body">
+                        <h3 style="margin-bottom: 0;">Identificar <br>situaciones <br><span class="title-serif-italic">de bullying</span></h3>
+                    </div>
+                </div>
+
+                <!-- Eje 2: Prevenir conductas de acoso -->
+                <div class="multi-modern-card hontanar-scroll-reveal">
+                    <div class="multi-card-image-wrap">
+                        <img src="assets/kiva-card-0186.jpg" alt="Prevenir conductas de acoso" class="multi-card-img">
+                    </div>
+                    <div class="multi-card-badge" style="background-color: #1BA655;">
+                        <span class="multi-badge-number">02</span>
+                    </div>
+                    <div class="multi-card-body">
+                        <h3 style="margin-bottom: 0;">Prevenir <br>conductas <br><span class="title-serif-italic">de acoso</span></h3>
+                    </div>
+                </div>
+
+                <!-- Eje 3: Saber qué hacer cuando se presenta -->
+                <div class="multi-modern-card hontanar-scroll-reveal">
+                    <div class="multi-card-image-wrap">
+                        <img src="assets/DSC_0762_copia.jpg" alt="Saber qué hacer cuando se presenta" class="multi-card-img">
+                    </div>
+                    <div class="multi-card-badge" style="background-color: #d97706;">
+                        <span class="multi-badge-number">03</span>
+                    </div>
+                    <div class="multi-card-body">
+                        <h3 style="margin-bottom: 0;">Saber qué hacer <br>cuando <br><span class="title-serif-italic">se presenta</span></h3>
+                    </div>
+                </div>
+
+                <!-- Eje 4: Acompañar y actuar como grupo -->
+                <div class="multi-modern-card hontanar-scroll-reveal">
+                    <div class="multi-card-image-wrap">
+                        <img src="assets/kiva-card-0576.jpg" alt="Acompañar y actuar como grupo" class="multi-card-img">
+                    </div>
+                    <div class="multi-card-badge" style="background-color: #0284c7;">
+                        <span class="multi-badge-number">04</span>
+                    </div>
+                    <div class="multi-card-body">
+                        <h3 style="margin-bottom: 0;">Acompañar <br>y actuar <br><span class="title-serif-italic">como grupo</span></h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Subtexto de cierre del bloque: no se queda en el aula -->
+            <div class="hontanar-scroll-reveal" style="background: #f8fafc; border-left: 4px solid var(--green); padding: 22px 28px; max-width: 950px; margin: 0 auto 60px auto;">
+                <p style="font-family: var(--font-lato); font-size: 1.05rem; line-height: 1.75; color: var(--blue); margin: 0; font-weight: 600;">
+                    El programa no se queda en el aula. Hemos establecido <strong>mecanismos de detección, atención y seguimiento de los casos</strong>, siempre desde una mirada formativa y restaurativa.
+                </p>
+            </div>
+
+            <!-- Sección: Comunidad y Familia / Liderazgo Certificado (Cards Onduladas) -->
+            <section class="filo-wavy-cards-section" style="position: relative; overflow: hidden; background-color: #ffffff; padding: 20px 0 50px 0; margin: 0 0 20px 0;">
+                <!-- Puntitos flotando en el fondo de las tarjetas onduladas -->
+                <div class="floating-dots-wrapper" aria-hidden="true">
+                    <span class="f-dot dot-yellow dot-anim-1" style="width: 15px; height: 15px; top: 10%; left: 3%;"></span>
+                    <span class="f-dot dot-ring dot-ring-green dot-anim-2" style="width: 22px; height: 22px; top: 22%; right: 4%;"></span>
+                    <span class="f-dot dot-cyan dot-anim-3" style="width: 12px; height: 12px; top: 58%; left: 2%;"></span>
+                    <span class="f-dot dot-orange dot-anim-pulse" style="width: 14px; height: 14px; top: 76%; right: 3%;"></span>
+                </div>
+                <div class="filo-wavy-container" style="position: relative; z-index: 2; display: flex; flex-direction: column; gap: 50px;">
+                    
+                    <!-- Card 1: Comunidad y Familia (Text Left, Image Right) -->
+                    <div class="filo-wavy-card text-left hontanar-scroll-reveal">
+                        <div class="wavy-card-text-col">
+                            <h2 class="wavy-card-title">Acompañamiento profesional <br><span>y trabajo con familias</span></h2>
+                            <p class="wavy-card-paragraph">La implementación de <strong>KiVa</strong> cuenta con un <strong>equipo de profesionales capacitado</strong> específicamente en el programa. Además, los padres de familia hacen parte activa del proceso, con <strong>espacios de información y orientación</strong> para saber cómo actuar y acompañar a sus hijos frente a situaciones de acoso escolar.</p>
+                            <div class="wavy-card-btn-wrap">
+                                <a href="agenda-visita.html" class="btn btn-yellow btn-nav">Agenda tu visita <span class="arrow">&gt;</span></a>
+                            </div>
+                        </div>
+                        <div class="wavy-card-img-col" style="background-image: url('assets/Hontanar-WEB-09-2022-326-ALTA.jpg');">
+                            <!-- Borde ondulado desde la izquierda -->
+                            <svg viewBox="0 0 100 600" preserveAspectRatio="none" class="wavy-edge-svg wave-right-side">
+                                <path d="M0,0 L30,0 C60,150 70,300 25,450 C10,520 0,600 0,600 Z" fill="#ffffff"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Liderazgo Certificado (Image Left, Text Right) -->
+                    <div class="filo-wavy-card text-right hontanar-scroll-reveal">
+                        <div class="wavy-card-img-col" style="background-image: url('assets/Hontanar-WEB-09-2022-318-ALTA.jpg');">
+                            <!-- Borde ondulado desde la derecha -->
+                            <svg viewBox="0 0 100 600" preserveAspectRatio="none" class="wavy-edge-svg wave-left-side">
+                                <path d="M100,0 L70,0 C40,150 30,300 75,450 C90,520 100,600 100,600 Z" fill="#ffffff"/>
+                            </svg>
+                        </div>
+                        <div class="wavy-card-text-col">
+                            <h2 class="wavy-card-title">Un paso adelante <br><span style="color: #1BA655;">en convivencia escolar</span></h2>
+                            <p class="wavy-card-paragraph">Somos uno de los <strong>primeros colegios en Colombia</strong> en implementar KiVa como programa curricular certificado. Es una apuesta clara por la prevención del bullying, la atención oportuna y la construcción de entornos escolares más seguros, conscientes y humanos.</p>
+                            <p class="wavy-card-paragraph-highlight" style="font-family: var(--font-playfair); font-style: italic; color: var(--blue); font-weight: 600; border-left: 3.5px solid var(--yellow); padding-left: 14px; margin-top: 10px;">
+                                En El Hontanar no prometemos que los conflictos no existan, prometemos estar preparados para responder cuando ocurren.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </div><!-- cierre vida-container -->
+
+
+        <!-- Interactive Split Panel: Construimos un entorno escolar seguro y protegido -->
+        <section class="pq-split-carousel-section hontanar-scroll-reveal" style="margin-top: 60px; margin-bottom: 90px;">
+            <!-- Rectangulito amarillo decorativo detrás de la foto -->
+            <div class="pq-carousel-yellow-accent" style="left: -20px; bottom: -20px;"></div>
+            <!-- SVG Decorador verde mitad dentro mitad fuera en el borde superior derecho de la imagen -->
+            <svg class="pq-slider-decorator deco-green" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96.43 45.2" style="z-index: 3;">
+                <g>
+                    <polygon class="pq-deco-path-1" points="81.4 20.46 68.13 6.99 54.85 20.46 41.58 6.99 28.3 20.46 15.02 6.99 3.49 18.69 0 15.25 15.02 0 28.3 13.48 41.58 0 54.85 13.48 68.13 0 81.4 13.48 92.93 1.77 96.43 5.21 81.4 20.46"/>
+                    <polygon class="pq-deco-path-2" points="54.85 45.2 41.58 31.72 28.3 45.2 15.02 31.72 3.49 43.42 0 39.98 15.02 24.73 28.3 38.21 41.58 24.73 54.85 38.21 66.38 26.5 69.88 29.95 54.85 45.2"/>
+                </g>
+            </svg>
+            <!-- Left Side: Image Panel -->
+            <div class="pq-carousel-images-wrapper">
+                <div class="pq-carousel-img-slide active" style="background-image: url('assets/kiva-cierre-0875.jpg');"></div>
+            </div>
+
+            <!-- Right Side: Content Panel (White background) -->
+            <div class="pq-carousel-content-panel">
+                <!-- Floating background circles for Carousel Section -->
+                <div class="bg-circles-wrapper">
+                    <div class="bg-circle bg-circle-ring-yellow circle-1"></div>
+                    <div class="bg-circle bg-circle-solid-green circle-2"></div>
+                    <div class="bg-circle bg-circle-ring-blue circle-3"></div>
+                </div>
+
+                <!-- Slides Content Wrapper -->
+                <div class="pq-carousel-slides-wrapper" style="margin-top: 10px;">
+                    <!-- Content Block -->
+                    <div class="pq-carousel-slide active">
+                        <h3 class="pq-slide-title" style="font-size: 2.2rem; font-family: var(--font-lato); font-weight: 800; color: var(--blue); margin-bottom: 25px; line-height: 1.2; text-transform: none;">
+                            Construimos un entorno <br>
+                            <span style="font-family: var(--font-playfair); font-style: italic; color: #1BA655; font-weight: bold;">escolar seguro y protegido</span>
+                        </h3>
+                        <div class="pq-slide-description" style="color: #4a5568; line-height: 1.75; font-size: 0.98rem; font-family: var(--font-lato);">
+                            <p style="margin-bottom: 18px;">
+                                <strong>KiVa</strong> es un programa creado en Finlandia, probado y aplicado en miles de colegios en el mundo, con resultados reales en la prevención del acoso escolar. En el Gimnasio El Hontanar lo integramos como parte de una propuesta educativa sólida, alineada con la educación bilingüe, el Bachillerato Internacional y los estándares que buscan hoy las familias en los mejores colegios en Bogotá. Te invitamos a conocer de cerca cómo cuidamos a nuestros estudiantes y construimos un entorno escolar seguro.
+                            </p>
+                            <p style="margin-bottom: 24px; border-left: 3px solid var(--yellow); padding-left: 15px; font-style: italic; color: var(--blue); font-weight: 600; font-family: var(--font-playfair); font-size: 1.08rem;">
+                                Agenda tu visita y vive la experiencia Hontanar.
+                            </p>
+                            <div style="margin-top: 20px;">
+                                <a href="agenda-visita.html" class="btn btn-yellow btn-nav">Agenda tu visita <span class="arrow">&gt;</span></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
