@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Documento Estratégico de Diseño Web - Gimnasio El Hontanar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <style>
+        @page {
+            size: A4;
+            margin: 1.6cm 1.4cm 1.6cm 1.4cm;
+        }
+
+        :root {
+            --blue: #254478;
+            --blue-dark: #1a3158;
+            --yellow: #F9EF6C;
+            --yellow-dark: #d6ca27;
+            --green: #1BA655;
+            --light-bg: #f4f7fa;
+            --text-main: #2c3e50;
+            --text-muted: #596978;
+            --border-color: #dbe2ea;
+            --font-lato: 'Lato', sans-serif;
+            --font-playfair: 'Playfair Display', serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-lato);
+            color: var(--text-main);
+            background-color: #ffffff;
+            line-height: 1.5;
+            font-size: 10pt;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        .header-container {
+            border-bottom: 3px solid var(--blue);
+            padding-bottom: 14px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .header-title-box h1 {
+            font-family: var(--font-playfair);
+            color: var(--blue);
+            font-size: 20pt;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 4px;
+        }
+
+        .header-title-box h1 span {
+            color: #bfa116;
+            font-style: italic;
+        }
+
+        .header-title-box .subtitle {
+            font-size: 10.5pt;
+            color: var(--text-muted);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+        }
+
+        .header-meta {
+            text-align: right;
+            font-size: 8.5pt;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+
+        .header-meta strong {
+            color: var(--blue);
+        }
+
+        .badge-tag {
+            display: inline-block;
+            background-color: var(--blue);
+            color: #ffffff;
+            font-size: 7.5pt;
+            font-weight: 700;
+            padding: 3px 9px;
+            border-radius: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+
+        .section-block {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-family: var(--font-playfair);
+            color: var(--blue);
+            font-size: 13.5pt;
+            border-bottom: 1.5px solid var(--border-color);
+            padding-bottom: 5px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        h2 .num {
+            background-color: var(--yellow);
+            color: var(--blue);
+            font-family: var(--font-lato);
+            font-weight: 900;
+            font-size: 9.5pt;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h3 {
+            font-family: var(--font-lato);
+            color: var(--blue-dark);
+            font-size: 10.5pt;
+            font-weight: 700;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        p {
+            margin-bottom: 8px;
+            text-align: justify;
+        }
+
+        ul {
+            margin-left: 18px;
+            margin-bottom: 10px;
+        }
+
+        li {
+            margin-bottom: 4px;
+        }
+
+        /* Color Palette Table */
+        .color-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+            font-size: 9pt;
+        }
+
+        .color-table th {
+            background-color: var(--blue);
+            color: #ffffff;
+            text-align: left;
+            padding: 7px 10px;
+            font-size: 8.5pt;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .color-table td {
+            padding: 7px 10px;
+            border-bottom: 1px solid var(--border-color);
+            vertical-align: middle;
+        }
+
+        .color-swatch {
+            width: 24px;
+            height: 24px;
+            border-radius: 5px;
+            display: inline-block;
+            box-shadow: inset 0 0 0 1px rgba(0,0,0,0.15);
+        }
+
+        /* IA Grid Box */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin: 10px 0;
+        }
+
+        .card-box {
+            background-color: var(--light-bg);
+            border-left: 4px solid var(--blue);
+            padding: 10px 12px;
+            border-radius: 0 6px 6px 0;
+        }
+
+        .card-box.accent-yellow {
+            border-left-color: #d6ca27;
+            background-color: #fffdf0;
+        }
+
+        .card-box.accent-green {
+            border-left-color: var(--green);
+            background-color: #f0faf4;
+        }
+
+        .card-box h4 {
+            font-size: 10pt;
+            color: var(--blue);
+            margin-bottom: 3px;
+            font-weight: 700;
+        }
+
+        .card-box p {
+            font-size: 8.5pt;
+            color: var(--text-muted);
+            margin-bottom: 0;
+            text-align: left;
+        }
+
+        /* Highlight Boxes */
+        .highlight-box {
+            background: linear-gradient(135deg, #f0f4f9 0%, #e6ecf5 100%);
+            border: 1px solid #cbd6e2;
+            border-radius: 8px;
+            padding: 12px 14px;
+            margin: 12px 0;
+        }
+
+        .highlight-box h4 {
+            color: var(--blue);
+            font-size: 10.5pt;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .whatsapp-badge {
+            background-color: #25D366;
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 8pt;
+            padding: 2px 7px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+
+        .cta-pill-demo {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--yellow);
+            color: var(--blue);
+            font-weight: 900;
+            font-size: 8.5pt;
+            padding: 5px 14px;
+            border-radius: 18px;
+            margin-top: 5px;
+        }
+
+        .footer-note {
+            margin-top: 20px;
+            border-top: 1px solid var(--border-color);
+            padding-top: 8px;
+            text-align: center;
+            font-size: 8pt;
+            color: var(--text-muted);
+        }
+
+        .page-break {
+            page-break-before: always;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Documento -->
+    <div class="header-container">
+        <div class="header-title-box">
+            <span class="badge-tag">Documento Estratégico Directivo</span>
+            <h1>Gimnasio El Hontanar <span>Estrategia Web</span></h1>
+            <div class="subtitle">Decisiones de Branding, Arquitectura, Validación y Admisiones</div>
+        </div>
+        <div class="header-meta">
+            <div><strong>Proyecto:</strong> Rediseño Web Oficial</div>
+            <div><strong>Institución:</strong> Gimnasio El Hontanar</div>
+            <div><strong>Enfoque:</strong> Branding, IA & Conversión</div>
+            <div><strong>Fecha:</strong> Agosto 2026</div>
+        </div>
+    </div>
+
+    <!-- Sección 1 -->
+    <div class="section-block">
+        <h2><span class="num">1</span> Visión y Posicionamiento de Marca (Branding Strategy)</h2>
+        <p>
+            El nuevo portal del <strong>Gimnasio El Hontanar</strong> proyecta la excelencia académica, el prestigio internacional y la calidez humana que caracterizan a la institución. No es solo un sitio informativo, sino una experiencia de marca inmersiva orientada a generar confianza inmediata en padres de familia prospecto.
+        </p>
+
+        <h3>1.1 Paleta Cromática y Psicología del Color</h3>
+        <p>
+            La selección cromática responde a un equilibrio entre tradición académica, vitalidad juvenil y conexión con la naturaleza:
+        </p>
+
+        <table class="color-table">
+            <thead>
+                <tr>
+                    <th style="width: 15%;">Color</th>
+                    <th style="width: 18%;">Código Hex</th>
+                    <th style="width: 25%;">Rol en la Interfaz</th>
+                    <th>Estrategia & Psicología de Marca</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="color-swatch" style="background-color: #254478;"></span></td>
+                    <td><strong>#254478</strong><br><small>Azul Hontanar</small></td>
+                    <td>Fondo principal, headers, títulos clave</td>
+                    <td>Transmite serenidad, rigor académico, seguridad institucional y alta reputación. Es el ancla de confianza para los padres.</td>
+                </tr>
+                <tr>
+                    <td><span class="color-swatch" style="background-color: #F9EF6C;"></span></td>
+                    <td><strong>#F9EF6C</strong><br><small>Amarillo Creador</small></td>
+                    <td>Botones de acción (CTAs), acentos, iconos</td>
+                    <td>Simboliza la luz, la creatividad, el descubrimiento y la vitalidad. Destaca quirúrgicamente los puntos de conversión.</td>
+                </tr>
+                <tr>
+                    <td><span class="color-swatch" style="background-color: #1BA655;"></span></td>
+                    <td><strong>#1BA655</strong><br><small>Verde Vida</small></td>
+                    <td>Secciones de bienestar, badges, ecología</td>
+                    <td>Representa la conexión con el entorno natural de la sabana, la sostenibilidad y la salud emocional de los estudiantes.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>1.2 Estrategia Tipográfica (Maridaje de Fuentes)</h3>
+        <ul>
+            <li><strong>Playfair Display (Serif Elegante / Accents):</strong> Aplicada en acentos itálicos de títulos (`.section-heading span`) y conceptos clave. Proyecta el carácter editorial y la distinción global del <em>Bachillerato Internacional (IB)</em>.</li>
+            <li><strong>Lato (Sans-Serif Limpia / Accesibilidad):</strong> Presente en el cuerpo de texto, menús y títulos. Garantiza una lectura fluida, moderna y accesible en cualquier pantalla.</li>
+        </ul>
+
+        <h3>1.3 Morfología y Lenguaje Visual Moderno</h3>
+        <ul>
+            <li><strong>Navbar Flotante "Pill" con Glassmorphism (`backdrop-filter: blur`):</strong> Genera un impacto visual innovador de alta gama ("feel" de aplicación premium), manteniendo la navegación accesible en todo momento.</li>
+            <li><strong>Transiciones SVG Orgánicas (`.curve-bottom`):</strong> Sustituyen los cortes rectos por formas onduladas suaves que imitan la naturaleza del campus y eliminan la sensación corporativa rígida.</li>
+        </ul>
+    </div>
+
+    <!-- Sección 2 -->
+    <div class="section-block">
+        <h2><span class="num">2</span> Arquitectura de Información y Estructura Ecosistémica</h2>
+        <p>
+            La información se organiza en <strong>5 ejes cardinales</strong> diseñados según el viaje de decisión de las familias, permitiendo encontrar respuestas en menos de 2 clics:
+        </p>
+
+        <div class="grid-container">
+            <div class="card-box accent-yellow">
+                <h4>1. Admisiones & Conversión</h4>
+                <p>Tour Virtual 360, Proceso de Ingreso etapa por etapa, Preguntas Frecuentes y ventajas diferenciales.</p>
+            </div>
+            <div class="card-box">
+                <h4>2. Somos Hontanar</h4>
+                <p>Modelo de enseñanza pedagógico, Historia, Filosofía, Valores y el Sello distintivo institucional.</p>
+            </div>
+            <div class="card-box">
+                <h4>3. Cultura Internacional</h4>
+                <p>Acreditación del Programa IB, Multilingüismo, programas de Intercambio y Consejería Universitaria.</p>
+            </div>
+            <div class="card-box accent-green">
+                <h4>4. Vida en el Campus</h4>
+                <p>Bienestar emocional, Formación integral, Programa de Casas, Character Counts, Espacios verdes y Sostenibilidad.</p>
+            </div>
+        </div>
+
+        <div class="card-box" style="margin-top: 4px; border-left-color: var(--blue-dark);">
+            <h4>5. TecnoSer (Innovación & Futuro)</h4>
+            <p>Sección dedicada a proyectar la vanguardia educativa: Integración Tecnológica, Aulas de Inteligencia Artificial (IA), Robótica y Pensamiento Computacional.</p>
+        </div>
+
+        <h3>Navegación Off-Canvas (Sidebar Lateral)</h3>
+        <p>
+            Un menú desplegable lateral optimizado para móviles y escritorio que clasifica submenús colapsables. Mantiene limpio el portal mientras ofrece acceso inmediato a más de 20 subpáginas especializadas.
+        </p>
+    </div>
+
+    <!-- Salto de página para el PDF -->
+    <div class="page-break"></div>
+
+    <!-- Header reducido segunda página -->
+    <div class="header-container" style="padding-bottom: 8px; margin-bottom: 16px;">
+        <div class="header-title-box">
+            <h1 style="font-size: 15pt;">Gimnasio El Hontanar — <span>Estrategia Web</span></h1>
+        </div>
+        <div class="header-meta">
+            <div>Validación Social & Embudo de Admisiones / WhatsApp</div>
+        </div>
+    </div>
+
+    <!-- Sección 3 -->
+    <div class="section-block">
+        <h2><span class="num">3</span> Validación Institucional, Confianza y Prueba Social</h2>
+        <p>
+            Para acelerar la toma de decisión de los padres, la interfaz web integra múltiples elementos de <strong>validación y prueba de valor institucional</strong>:
+        </p>
+
+        <div class="highlight-box">
+            <h4>🏅 Elementos Clave de Validación Visual e Institucional</h4>
+            <ul style="margin-bottom: 0; margin-left: 16px;">
+                <li><strong>Acreditación IB (Bachillerato Internacional):</strong> Destacada en Cultura Internacional como sello de rigor global y visión universitaria.</li>
+                <li><strong>Pabellón TecnoSer (IA & Robótica):</strong> Posiciona al colegio a la vanguardia tecnológica frente a alternativas tradicionales.</li>
+                <li><strong>Bienestar Emocional & Character Counts:</strong> Evidencia el enfoque en valores humanos, salud mental y entorno seguro.</li>
+                <li><strong>Tour Virtual 360 Inmersivo:</strong> Permite a familias locales e internacionales recorrer el campus sin desplazarse, construyendo certeza previa a la visita presencial.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Sección 4 -->
+    <div class="section-block">
+        <h2><span class="num">4</span> Embudo de Admisiones e Integración WhatsApp Directa</h2>
+        <p>
+            El objetivo de conversión principal del sitio web es transformar visitantes casuales en <strong>familias en proceso de admisión o visitas agendadas al campus</strong>.
+        </p>
+
+        <h3>4.1 Puntos de Contacto y Botones Persistentes (CTAs)</h3>
+        <p>
+            Los llamados a la acción están estratégicamente presentes durante todo el recorrido:
+        </p>
+        <ul>
+            <li><strong>Navbar Principal:</strong> Botón <em>"Contáctanos >"</em> en amarillo de alto contraste presente en todo momento.</li>
+            <li><strong>Pie del Menú Sidebar:</strong> Botón flotante continuo de <strong>"ADMISIONES"</strong> y <strong>"TOUR VIRTUAL"</strong>.</li>
+            <li><strong>Formulario de Agenda tu Visita:</strong> Campos optimizados para concertar citas guiadas al colegio.</li>
+        </ul>
+
+        <div class="highlight-box" style="border-left: 5px solid #25D366; background: #f2fcf6;">
+            <h4><span class="whatsapp-badge">WhatsApp Directo</span> Acceso Inmediato al Canal de Admisiones</h4>
+            <p>
+                Se implementa la integración directa de accesos a <strong>WhatsApp en un solo clic</strong> desde los botones de "Contáctanos" y "Admisiones".
+            </p>
+            <ul style="margin-bottom: 6px; margin-left: 16px;">
+                <li><strong>Cero Fricción Cognitiva:</strong> Los padres no tienen que copiar números ni llenar extensos formularios si prefieren chatear de inmediato.</li>
+                <li><strong>Mensaje Pre-configurado:</strong> Al hacer clic en el botón de WhatsApp, el chat se abre automáticamente con un saludo personalizado (ej: <em>"Hola, deseo recibir información sobre admisiones para el Gimnasio El Hontanar"</em>).</li>
+                <li><strong>Atención en Tiempo Real:</strong> Conecta directamente al visitante con el equipo de admisiones, aumentando significativamente la velocidad de prospección.</li>
+            </ul>
+            <div style="text-align: center; margin-top: 8px;">
+                <span class="cta-pill-demo">📱 Botón Directo: Contáctanos vía WhatsApp &gt;</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección 5 -->
+    <div class="section-block">
+        <h2><span class="num">5</span> Resumen de Beneficios Estratégicos</h2>
+        <table class="color-table" style="margin-top: 6px;">
+            <thead>
+                <tr>
+                    <th style="width: 30%;">Dimensión</th>
+                    <th>Impacto Estratégico en la Institución</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Branding e Imagen</strong></td>
+                    <td>Proyecta un colegio internacional, moderno, verde y tecnológicamente avanzado.</td>
+                </tr>
+                <tr>
+                    <td><strong>Experiencia de Usuario (UX)</strong></td>
+                    <td>Navegación limpia, intuitiva y rápida, adaptada al comportamiento digital de los padres.</td>
+                </tr>
+                <tr>
+                    <td><strong>Prueba de Valor</strong></td>
+                    <td>Resalta el sello IB, la infraestructura natural y el programa TecnoSer como diferenciadores.</td>
+                </tr>
+                <tr>
+                    <td><strong>Conversión de Admisiones</strong></td>
+                    <td>Captura prospectos de forma continua mediante el Tour Virtual y la atención inmediata por WhatsApp.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="footer-note">
+        Documento Ejecutivo de Estrategia Digital y Diseño Web &bull; Gimnasio El Hontanar &bull; 2026
+    </div>
+
+</body>
+</html>
