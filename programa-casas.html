@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Programa Casas | Gimnasio El Hontanar</title>
-    <meta name="description" content="College Counseling en el Gimnasio El Hontanar. Guía, asesoría y conexión con universidades nacionales e internacionales desde noveno grado.">
+    <meta name="description" content="Programa Casas en el Gimnasio El Hontanar. Fraternidad, raíces ambientales, liderazgo e integración desde Prekínder hasta Undécimo en un colegio bilingüe IB al norte de Bogotá.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
@@ -24,6 +24,248 @@
         .casa-card {
             border-radius: 0 !important;
         }
+
+        /* 5-Column Responsive Grid for Casas */
+        .casas-grid {
+            display: grid !important;
+            grid-template-columns: repeat(5, 1fr) !important;
+            gap: 22px !important;
+            margin: 45px 0 !important;
+            align-items: stretch !important;
+        }
+        @media (max-width: 1180px) {
+            .casas-grid {
+                grid-template-columns: repeat(3, 1fr) !important;
+            }
+        }
+        @media (max-width: 768px) {
+            .casas-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+        }
+        @media (max-width: 480px) {
+            .casas-grid {
+                grid-template-columns: 1fr !important;
+            }
+        }
+        .casa-crest-wrap {
+            width: 180px !important;
+            height: 180px !important;
+            margin: 0 auto 20px auto !important;
+        }
+        .casa-mascot-img {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: contain !important;
+            filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5)) !important;
+        }
+        .casa-card {
+            padding: 38px 20px 32px 20px !important;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            justify-content: center !important;
+            text-align: center !important;
+            border-radius: 0 !important;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+        }
+        .casa-card h3 {
+            font-size: 1.55rem !important;
+            font-weight: 900 !important;
+            margin-bottom: 10px !important;
+            letter-spacing: 0.5px !important;
+        }
+        .casa-card .casa-tag {
+            font-size: 0.95rem !important;
+            font-weight: 800 !important;
+            padding: 7px 20px !important;
+            border-radius: 20px !important;
+            letter-spacing: 1px !important;
+            margin-bottom: 0 !important;
+            display: inline-block !important;
+        }
+        .casa-card:hover .casa-crest-wrap {
+            transform: scale(1.1) translateY(-6px) !important;
+        }
+
+        /* Color Schemes for the 5 Casas */
+        /* Bambú (Verde Esmeralda) */
+        .casa-card.bambu {
+            border: 2px solid rgba(42, 157, 143, 0.45);
+        }
+        .casa-card.bambu h3 { color: #2ec4b6; }
+        .casa-card.bambu .casa-tag {
+            background: #ffffff;
+            color: #1ba655;
+            box-shadow: 0 2px 8px rgba(27, 166, 85, 0.25);
+        }
+        .casa-card.bambu:hover {
+            border-color: #2ec4b6;
+            background: rgba(42, 157, 143, 0.12);
+            box-shadow: 0 15px 45px rgba(46, 196, 182, 0.35);
+            transform: translateY(-8px);
+        }
+        .casa-card.bambu:hover .casa-mascot-img {
+            filter: drop-shadow(0 12px 25px rgba(46, 196, 182, 0.85));
+        }
+
+        /* Ciprés (Verde Pino / Bosque) */
+        .casa-card.cipres {
+            border: 2px solid rgba(30, 111, 92, 0.5);
+        }
+        .casa-card.cipres h3 { color: #52b788; }
+        .casa-card.cipres .casa-tag {
+            background: #ffffff;
+            color: #1e6f5c;
+            box-shadow: 0 2px 8px rgba(30, 111, 92, 0.25);
+        }
+        .casa-card.cipres:hover {
+            border-color: #52b788;
+            background: rgba(30, 111, 92, 0.12);
+            box-shadow: 0 15px 45px rgba(82, 183, 136, 0.35);
+            transform: translateY(-8px);
+        }
+        .casa-card.cipres:hover .casa-mascot-img {
+            filter: drop-shadow(0 12px 25px rgba(82, 183, 136, 0.85));
+        }
+
+        /* Arrayán (Azul Cobalto / Índigo) */
+        .casa-card.arrayan {
+            border: 2px solid rgba(67, 97, 238, 0.45);
+        }
+        .casa-card.arrayan h3 { color: #4cc9f0; }
+        .casa-card.arrayan .casa-tag {
+            background: #ffffff;
+            color: #4361ee;
+            box-shadow: 0 2px 8px rgba(67, 97, 238, 0.25);
+        }
+        .casa-card.arrayan:hover {
+            border-color: #4cc9f0;
+            background: rgba(67, 97, 238, 0.12);
+            box-shadow: 0 15px 45px rgba(76, 201, 240, 0.35);
+            transform: translateY(-8px);
+        }
+        .casa-card.arrayan:hover .casa-mascot-img {
+            filter: drop-shadow(0 12px 25px rgba(76, 201, 240, 0.85));
+        }
+
+        /* Nogal (Ámbar / Naranja Cálido) */
+        .casa-card.nogal {
+            border: 2px solid rgba(247, 127, 0, 0.45);
+        }
+        .casa-card.nogal h3 { color: #fcbf49; }
+        .casa-card.nogal .casa-tag {
+            background: #ffffff;
+            color: #d97706;
+            box-shadow: 0 2px 8px rgba(217, 119, 6, 0.25);
+        }
+        .casa-card.nogal:hover {
+            border-color: #fcbf49;
+            background: rgba(247, 127, 0, 0.12);
+            box-shadow: 0 15px 45px rgba(252, 191, 73, 0.35);
+            transform: translateY(-8px);
+        }
+        .casa-card.nogal:hover .casa-mascot-img {
+            filter: drop-shadow(0 12px 25px rgba(252, 191, 73, 0.85));
+        }
+
+        /* Sauce (Dorado / Lima Brillante) */
+        .casa-card.sauce {
+            border: 2px solid rgba(163, 230, 53, 0.45);
+        }
+        .casa-card.sauce h3 { color: #bef264; }
+        .casa-card.sauce .casa-tag {
+            background: #ffffff;
+            color: #65a30d;
+            box-shadow: 0 2px 8px rgba(101, 163, 13, 0.25);
+        }
+        .casa-card.sauce:hover {
+            border-color: #bef264;
+            background: rgba(163, 230, 53, 0.12);
+            box-shadow: 0 15px 45px rgba(190, 242, 100, 0.35);
+            transform: translateY(-8px);
+        }
+        .casa-card.sauce:hover .casa-mascot-img {
+            filter: drop-shadow(0 12px 25px rgba(190, 242, 100, 0.85));
+        }
+
+        /* Puntitos flotando en el fondo */
+        .floating-dots-wrapper {
+            position: absolute !important;
+            inset: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            overflow: hidden !important;
+            pointer-events: none !important;
+            z-index: 1 !important;
+        }
+        .f-dot {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+            opacity: 0.65;
+        }
+        .dot-yellow {
+            background-color: #f59e0b;
+            box-shadow: 0 0 10px rgba(245, 158, 11, 0.4);
+        }
+        .dot-green {
+            background-color: #1ba655;
+            box-shadow: 0 0 10px rgba(27, 166, 85, 0.35);
+        }
+        .dot-cyan {
+            background-color: #0284c7;
+            box-shadow: 0 0 10px rgba(2, 132, 199, 0.35);
+        }
+        .dot-orange {
+            background-color: #ea580c;
+            box-shadow: 0 0 10px rgba(234, 88, 12, 0.35);
+        }
+        .dot-lime {
+            background-color: #65a30d;
+            box-shadow: 0 0 10px rgba(101, 163, 13, 0.35);
+        }
+        .dot-ring {
+            background: transparent !important;
+            border-width: 2.5px;
+            border-style: solid;
+        }
+        .dot-ring-yellow {
+            border-color: #f59e0b;
+            box-shadow: 0 0 8px rgba(245, 158, 11, 0.3);
+        }
+        .dot-ring-green {
+            border-color: #1ba655;
+            box-shadow: 0 0 8px rgba(27, 166, 85, 0.3);
+        }
+        .dot-ring-blue {
+            border-color: #0284c7;
+            box-shadow: 0 0 8px rgba(2, 132, 199, 0.3);
+        }
+
+        /* Floating animations */
+        @keyframes floatSlow1 {
+            0%, 100% { transform: translateY(0) translateX(0) scale(1); opacity: 0.6; }
+            50% { transform: translateY(-28px) translateX(15px) scale(1.18); opacity: 0.95; }
+        }
+        @keyframes floatSlow2 {
+            0%, 100% { transform: translateY(0) translateX(0) scale(1); opacity: 0.5; }
+            50% { transform: translateY(26px) translateX(-18px) scale(0.88); opacity: 0.9; }
+        }
+        @keyframes floatSlow3 {
+            0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.65; }
+            33% { transform: translate(14px, -20px) scale(1.12); opacity: 1; }
+            66% { transform: translate(-10px, -35px) scale(0.95); opacity: 0.75; }
+        }
+        @keyframes pulseGlow {
+            0%, 100% { transform: scale(1); opacity: 0.45; }
+            50% { transform: scale(1.35); opacity: 0.95; }
+        }
+
+        .dot-anim-1 { animation: floatSlow1 7s ease-in-out infinite; }
+        .dot-anim-2 { animation: floatSlow2 10s ease-in-out infinite; }
+        .dot-anim-3 { animation: floatSlow3 13s ease-in-out infinite; }
+        .dot-anim-pulse { animation: pulseGlow 5s ease-in-out infinite; }
     </style>
 </head>
 <body>
@@ -312,104 +554,114 @@
         });
     </script>
 
-    <!-- Page Content Container -->
-    
-    <!-- Banner de Encabezado Premium -->
+    <!--    <!-- Banner de Encabezado Premium -->
     <section class="inner-header-banner" style="background-image: url('assets/Hontanar-WEB-09-2022-406-ALTA.jpg');">
         <div class="inner-header-overlay"></div>
         <div class="inner-header-content">
             <span class="inner-header-kicker">VIDA EN EL CAMPUS</span>
-            <h1 class="inner-header-title">Programa Casas: Identidad, <br><span>Liderazgo y Trabajo en Equipo</span></h1>
-            
+            <h1 class="inner-header-title">Programa Casas Hontanar:<br><span>Crecer Juntos y Liderar con Sentido</span></h1>
         </div>
-        <img src="assets/ChatGPT Image 1 jul 2025, 17_28_04 (3).png" alt="ColibrÃ­" class="header-colibri-float">
+        <img src="assets/ChatGPT Image 1 jul 2025, 17_28_04 (3).png" alt="Colibrí" class="header-colibri-float">
     </section>
 <main class="vida-page">
         <div class="breadcrumbs">
                 <a href="index.html">Inicio</a> &gt; <a href="#">Vida en el Campus</a> &gt; <span class="current">Programa Casas</span>
             </div>
         <div class="vida-container">
-            <!-- Unified Breadcrumbs -->
-            
-
-            <!-- Unified Header Title Section -->
-            <div class="vida-header hontanar-scroll-reveal">
-                
-                
-            </div>
-
-            
-            <div class="vida-lead-paragraph-wrapper hontanar-scroll-reveal" style="border-left: 4px solid var(--green); padding-left: 25px; margin: 40px auto 60px auto; max-width: 900px; text-align: left;">
-                <p style="font-family: var(--font-lato); font-size: 1.18rem; line-height: 1.85; color: var(--blue) !important; margin: 0;">
-                    El Programa Casas es una de las tradiciones más queridas y dinámicas de la vida escolar en el Gimnasio El Hontanar. Inspirado en modelos educativos globales, este programa divide a toda la comunidad escolar —estudiantes, docentes y personal administrativo— en cuatro grandes grupos o "Casas", fomentando la integración entre diferentes grados, la sana competencia y un profundo sentido de pertenencia.
+            <!-- Lead Paragraph -->
+            <div class="vida-lead-paragraph-wrapper hontanar-scroll-reveal" style="border-left: 4px solid var(--green); padding-left: 25px; margin: 40px auto 60px auto; max-width: 900px; text-align: left; position: relative; z-index: 2;">
+                <p style="font-family: var(--font-lato); font-size: 1.15rem; line-height: 1.85; color: var(--blue) !important; margin: 0;">
+                    En el Gimnasio El Hontanar, educar es formar personas íntegras, seguras y preparadas para un mundo global. El Programa Casas es uno de los pilares de nuestra cultura institucional, un modelo de fraternidad que integra a los estudiantes desde Prekínder hasta Undécimo, en un colegio bilingüe, certificado por el <a href="programa-ib.html" style="color: var(--green); font-weight: 700; text-decoration: underline;">IB</a>, Calendario A, que fortalece el sentido de pertenencia y el liderazgo en toda la comunidad educativa.
                 </p>
             </div>
 
         </div><!-- cierre vida-container para hacer la sección de las casas full-bleed -->
 
         <!-- SECCIÓN DE LAS CASAS CON FONDO PARALLAX Y OVERLAY -->
-        <section class="cards-parallax-section" style="background-image: url('assets/Copia_de_DSC_0875.JPG'); margin: 40px 0 0 0;">
+        <section class="cards-parallax-section" style="background-image: url('assets/Copia_de_DSC_0875.JPG'); margin: 40px 0 0 0; padding: 70px 0 80px 0; position: relative; overflow: hidden;">
             <div class="cards-parallax-overlay"></div>
-            <div class="vida-container" style="position: relative; z-index: 2;">
+            <div class="vida-container" style="position: relative; z-index: 2; max-width: 1280px;">
                 
-                <div class="vida-header hontanar-scroll-reveal" style="margin-top: 0; margin-bottom: 30px;">
-                    <h2 class="vida-section-title">Las cuatro casas del Hontanar: valores en acción</h2>
+                <div class="vida-header hontanar-scroll-reveal" style="margin-top: 0; margin-bottom: 35px; text-align: center;">
+                    <h2 class="vida-section-title" style="color: #ffffff; font-size: 2.35rem; line-height: 1.25; margin-bottom: 15px;">
+                        Cinco ramas, un solo hogar en uno de los mejores colegios <br>
+                        <span style="color: var(--yellow); font-family: var(--font-playfair); font-style: italic;">bilingües al norte de Bogotá</span>
+                    </h2>
+                    <p style="font-family: var(--font-lato); font-size: 1.05rem; line-height: 1.8; color: rgba(255, 255, 255, 0.92); max-width: 920px; margin: 0 auto;">
+                        El Programa Casas se construye con trabajo en equipo, responsabilidad y raíces ambientales: cinco casas, cinco valores, un solo propósito. Las casas llevan nombres de árboles que hablan de nuestro compromiso con la naturaleza y la formación humana:
+                    </p>
                 </div>
 
                 <div class="casas-grid">
                     
-                    <div class="casa-card gryphon hontanar-scroll-reveal">
+                    <!-- Casa 1: Bambú -->
+                    <div class="casa-card bambu hontanar-scroll-reveal">
                         <div class="casa-crest-wrap">
-                            <img src="assets/Gryphon_mascot.png" alt="Gryphon Mascot" class="casa-mascot-img">
+                            <img src="assets/casa-bambu.png" alt="Bambú" class="casa-mascot-img">
                         </div>
-                        <h3>Gryphon</h3>
-                        <span class="casa-tag">Fuerza y Liderazgo</span>
-                        <p>Simboliza la fuerza, el coraje y el liderazgo. Guía a los estudiantes a actuar con valentía y a motivar a otros en cada reto escolar.</p>
+                        <h3>Bambú</h3>
+                        <span class="casa-tag">Responsabilidad</span>
                     </div>
 
-                    <div class="casa-card phoenix hontanar-scroll-reveal">
+                    <!-- Casa 2: Ciprés -->
+                    <div class="casa-card cipres hontanar-scroll-reveal">
                         <div class="casa-crest-wrap">
-                            <img src="assets/Phoenix_mascot.png" alt="Phoenix Mascot" class="casa-mascot-img">
+                            <img src="assets/casa-cipres.png" alt="Ciprés" class="casa-mascot-img">
                         </div>
-                        <h3>Phoenix</h3>
+                        <h3>Ciprés</h3>
                         <span class="casa-tag">Resiliencia</span>
-                        <p>Representa la resiliencia, la renovación y la superación personal. Enseña a levantarse ante la dificultad y aprender de cada paso.</p>
                     </div>
 
-                    <div class="casa-card kraken hontanar-scroll-reveal">
+                    <!-- Casa 3: Arrayán -->
+                    <div class="casa-card arrayan hontanar-scroll-reveal">
                         <div class="casa-crest-wrap">
-                            <img src="assets/Kraken_mascot.png" alt="Kraken Mascot" class="casa-mascot-img">
+                            <img src="assets/casa-arrayan.png" alt="Arrayán" class="casa-mascot-img">
                         </div>
-                        <h3>Kraken</h3>
-                        <span class="casa-tag">Perseverancia</span>
-                        <p>Evoca la perseverancia, la estrategia y el trabajo en equipo. Demuestra que la planificación y la colaboración conquistan cualquier meta.</p>
+                        <h3>Arrayán</h3>
+                        <span class="casa-tag">Autonomía</span>
                     </div>
 
-                    <div class="casa-card pegasus hontanar-scroll-reveal">
+                    <!-- Casa 4: Nogal -->
+                    <div class="casa-card nogal hontanar-scroll-reveal">
                         <div class="casa-crest-wrap">
-                            <img src="assets/Pegasus_mascot.png" alt="Pegasus Mascot" class="casa-mascot-img">
+                            <img src="assets/casa-nogal.png" alt="Nogal" class="casa-mascot-img">
                         </div>
-                        <h3>Pegasus</h3>
-                        <span class="casa-tag">Excelencia</span>
-                        <p>Encarna la creatividad, la sabiduría y la búsqueda constante de la excelencia. Fomenta la innovación y el Sello Hontanar visible.</p>
+                        <h3>Nogal</h3>
+                        <span class="casa-tag">Respeto</span>
                     </div>
 
+                    <!-- Casa 5: Sauce -->
+                    <div class="casa-card sauce hontanar-scroll-reveal">
+                        <div class="casa-crest-wrap">
+                            <img src="assets/casa-sauce.png" alt="Sauce" class="casa-mascot-img">
+                        </div>
+                        <h3>Sauce</h3>
+                        <span class="casa-tag">Honestidad</span>
+                    </div>
+
+                </div>
+
+                <!-- Párrafo de integración comunitaria de las casas -->
+                <div class="hontanar-scroll-reveal" style="text-align: center; max-width: 980px; margin: 40px auto 0 auto;">
+                    <p style="font-family: var(--font-playfair); font-style: italic; font-size: 1.35rem; line-height: 1.8; color: #ffffff; margin: 0; text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);">
+                        Cada casa tiene color, mascota y una identidad que une la vida académica, deportiva y artística del estudiante. Tenemos una comunidad que acompaña y no deja a nadie por fuera, desde los más pequeños hasta los jóvenes de 17–18 años, junto a todos los docentes que participan activamente en este programa.
+                    </p>
                 </div>
 
             </div>
         </section>
 
-        <!-- SECCIÓN DE TRANSICIÓN "PERTENENCIA" -->
+        <!-- SECCIÓN DE TRANSICIÓN "ESTRUCTURA Y LIDERAZGO" -->
         <div class="pq-kd-banner-container" style="margin-top: 0; margin-bottom: 0;">
-            <!-- Background Watermark text (Marquee scrolling - 2 líneas en Playfair Display) -->
+            <!-- Background Watermark text (Marquee scrolling) -->
             <div class="pq-kd-marquee-wrapper">
                 <div class="pq-kd-marquee-track line-1">
-                    <span>Programa Casas • Sana Competencia • Pertenencia Hontanar • Identidad •&nbsp;</span>
-                    <span>Programa Casas • Sana Competencia • Pertenencia Hontanar • Identidad •&nbsp;</span>
+                    <span>Bambú • Ciprés • Arrayán • Nogal • Sauce • Programa Casas • Fraternidad • Liderazgo •&nbsp;</span>
+                    <span>Bambú • Ciprés • Arrayán • Nogal • Sauce • Programa Casas • Fraternidad • Liderazgo •&nbsp;</span>
                 </div>
                 <div class="pq-kd-marquee-track line-2 track-reverse">
-                    <span>Comunidad Escolar • Liderazgo Joven • Integración Escolar • Tradición Hontanar •&nbsp;</span>
-                    <span>Comunidad Escolar • Liderazgo Joven • Integración Escolar • Tradición Hontanar •&nbsp;</span>
+                    <span>Responsabilidad • Resiliencia • Autonomía • Respeto • Honestidad • Sello Hontanar •&nbsp;</span>
+                    <span>Responsabilidad • Resiliencia • Autonomía • Respeto • Honestidad • Sello Hontanar •&nbsp;</span>
                 </div>
             </div>
             
@@ -419,32 +671,44 @@
             <!-- Centered Card -->
             <div class="pq-kd-card hontanar-scroll-reveal">
                 <h3 class="pq-kd-title">
-                    Comunidad, sana competencia<br><span class="serif-italic-yellow">y pertenencia Hontanar</span>
+                    Estructura y Liderazgo:<br><span class="serif-italic-yellow">Oportunidades Reales</span>
                 </h3>
                 <p class="pq-kd-subtitle">
-                    Cada estudiante es asignado a una Casa desde su ingreso al colegio, una identidad que lo acompañará a lo largo de su historia en la institución y que comparte con orgullo junto a compañeros de preescolar, primaria y bachillerato.
+                    Cada casa está liderada por un <strong>prefecto de grado 11, un viceprefecto de grado 10 y un docente líder</strong>, quienes orientan los procesos de formación, participación y liderazgo. Este enfoque permite que los estudiantes mayores apadrinen a los más pequeños, generando vínculos intergeneracionales que fortalecen la empatía, la cooperación y el sentido de comunidad.
                 </p>
             </div>
         </div>
 
-        <!-- SECCIÓN: LIDERAZGO Y APRENDIZAJE SIGNIFICATIVO (Wavy Card Layout mirroring filosofia-y-valores) -->
+        <!-- SECCIÓN: HABILIDADES CLAVE Y VÍNCULO FAMILIAR -->
         <section class="filo-wavy-cards-section" style="position: relative; overflow: hidden; background-color: #ffffff; padding: 80px 0; margin: 0;">
-            <!-- Floating background circles behind wavy cards -->
-            <div class="bg-circles-wrapper">
-                <div class="bg-circle bg-circle-ring-yellow circle-wavy-1"></div>
-                <div class="bg-circle bg-circle-solid-green circle-wavy-2"></div>
-                <div class="bg-circle bg-circle-ring-blue circle-wavy-3"></div>
+            <!-- Puntitos flotando en el fondo (Habilidades clave y Líder desde pequeño) -->
+            <div class="floating-dots-wrapper" aria-hidden="true">
+                <!-- Zona superior (Desarrollo de habilidades clave) -->
+                <span class="f-dot dot-yellow dot-anim-1" style="width: 14px; height: 14px; top: 8%; left: 5%;"></span>
+                <span class="f-dot dot-green dot-anim-3" style="width: 15px; height: 15px; top: 16%; right: 7%;"></span>
+                <span class="f-dot dot-ring dot-ring-yellow dot-anim-1" style="width: 22px; height: 22px; top: 28%; left: 6%;"></span>
+                <span class="f-dot dot-cyan dot-anim-2" style="width: 11px; height: 11px; top: 38%; right: 9%;"></span>
+
+                <!-- Zona inferior (¿Quieres que tu hijo sea líder desde pequeño?) -->
+                <span class="f-dot dot-yellow dot-anim-1" style="width: 15px; height: 15px; top: 56%; right: 6%;"></span>
+                <span class="f-dot dot-green dot-anim-2" style="width: 13px; height: 13px; top: 66%; left: 8%;"></span>
+                <span class="f-dot dot-ring dot-ring-blue dot-anim-3" style="width: 22px; height: 22px; top: 78%; right: 9%;"></span>
+                <span class="f-dot dot-orange dot-anim-pulse" style="width: 12px; height: 12px; bottom: 8%; left: 6%;"></span>
             </div>
             <div class="filo-wavy-container" style="position: relative; z-index: 2;">
                 
                 <!-- Card 1: Text Left, Image Right -->
                 <div class="filo-wavy-card text-left hontanar-scroll-reveal">
                     <div class="wavy-card-text-col">
-                        <h2 class="wavy-card-title">Liderazgo, colaboración <br><span>y puntos por el esfuerzo</span></h2>
-                        <p class="wavy-card-paragraph">A lo largo del año escolar, las Casas compiten en actividades académicas, deportivas, artísticas y de convivencia. El programa premia no solo la victoria, sino el esfuerzo, la solidaridad, el buen comportamiento y el Sello Hontanar reflejado en las acciones cotidianas.</p>
-                        <p class="wavy-card-paragraph-highlight">Los estudiantes de los grados superiores asumen roles de liderazgo como capitanes de sus Casas, desarrollando habilidades organizativas, motivación de equipos y responsabilidad. Al final del año, la Casa con mayor puntaje recibe la copa institucional, un reconocimiento al esfuerzo colectivo y al compromiso.</p>
+                        <h2 class="wavy-card-title">Desarrollo de habilidades clave <br><span>y sana competencia</span></h2>
+                        <p class="wavy-card-paragraph">
+                            El Programa Casas promueve el desarrollo de habilidades clave: liderazgo, trabajo en equipo, comunicación, responsabilidad social y emocional. A través de una sana y equilibrada competencia, las casas suman puntos en distintas líneas: académica, deportiva, cultural, artística y formativa, reflejando la visión de educación integral que caracteriza al Hontanar.
+                        </p>
+                        <p class="wavy-card-paragraph-highlight">
+                            Las competencias se organizan por grados y secciones, permitiendo que todos los estudiantes tengan oportunidades de participación y reconocimiento.
+                        </p>
                         <div class="wavy-card-btn-wrap">
-                            <a href="contactanos.html" class="btn btn-yellow btn-nav">Conoce más <span class="arrow">&gt;</span></a>
+                            <a href="modelo-de-ensenanza.html" class="btn btn-yellow btn-nav">Modelo de enseñanza <span class="arrow">&gt;</span></a>
                         </div>
                     </div>
                     <div class="wavy-card-img-col" style="background-image: url('assets/Copia_de_DSC_0217.JPG');">
@@ -464,10 +728,13 @@
                         </svg>
                     </div>
                     <div class="wavy-card-text-col">
-                        <span class="wavy-card-kicker">- GIMNASIO EL HONTANAR -</span>
-                        <h2 class="wavy-card-title">Aprendizaje <br><span>Significativo y Valores</span></h2>
-                        <p class="wavy-card-paragraph">El Programa Casas transforma la rutina en una experiencia de aprendizaje significativo, donde el trabajo colaborativo demuestra que <strong>juntos somos más fuertes</strong>.</p>
-                        <p class="wavy-card-paragraph-highlight">Agenda una visita y conoce de cerca cómo se vive la energía y la comunidad en nuestro colegio.</p>
+                        <h2 class="wavy-card-title">¿Quieres que tu hijo sea <br><span>líder desde pequeño?</span></h2>
+                        <p class="wavy-card-paragraph">
+                            Cuando un pequeño de Prekínder ve su color y su mascota por primera vez, decide que quiere ser grande aquí. Los niños y niñas se sienten parte activa del Programa Casas, sueñan con asumir responsabilidades y, en su adolescencia, convertirse en líderes de sus casas. Este proceso fortalece la autoestima, la autonomía y el compromiso.
+                        </p>
+                        <p class="wavy-card-paragraph-highlight">
+                            Momentos como el Open Campus o el Día de la Familia hacen visible esta experiencia: colores, mascotas, actividades intercasas y espacios donde padres e hijos participan juntos, lo que refuerza los lazos entre colegio y familia. Los docentes integran actividades desde sus áreas para fortalecer liderazgo y cooperación: proyectos STEM+H, talleres artísticos, jornadas deportivas y acciones de cuidado ambiental.
+                        </p>
                         <div class="wavy-card-btn-wrap">
                             <a href="agenda-visita.html" class="btn btn-yellow btn-nav">Agenda tu visita <span class="arrow">&gt;</span></a>
                         </div>
@@ -477,7 +744,45 @@
             </div>
         </section>
 
-        <div class="vida-container"><!-- reabrir vida-container -->
+        <!-- SECCIÓN DE CIERRE: VIVIR EL COLEGIO -->
+        <section class="filo-testimonial-section" style="padding: 60px 20px 100px 20px; background-color: #ffffff; position: relative; overflow: hidden;">
+            <!-- Puntitos flotando en el fondo (Una forma de vivir el colegio) -->
+            <div class="floating-dots-wrapper" aria-hidden="true">
+                <span class="f-dot dot-yellow dot-anim-1" style="width: 14px; height: 14px; top: 14%; left: 5%;"></span>
+                <span class="f-dot dot-green dot-anim-2" style="width: 12px; height: 12px; top: 24%; right: 6%;"></span>
+                <span class="f-dot dot-ring dot-ring-yellow dot-anim-3" style="width: 22px; height: 22px; top: 48%; left: 4%;"></span>
+                <span class="f-dot dot-ring dot-ring-blue dot-anim-1" style="width: 20px; height: 20px; bottom: 18%; right: 5%;"></span>
+                <span class="f-dot dot-yellow dot-anim-3" style="width: 12px; height: 12px; bottom: 12%; left: 7%;"></span>
+            </div>
+            <div class="filo-testimonial-split hontanar-scroll-reveal">
+                <!-- Shield decorator -->
+                <img src="assets/Capa_2_xA0_Imagen.png" alt="Escudo Hontanar" class="testimonial-split-shield">
+                
+                <!-- Left Column: Content -->
+                <div class="testimonial-split-left" style="padding: 55px 50px;">
+                    <h2 style="font-family: var(--font-lato); font-size: 2.2rem; font-weight: 800; color: #ffffff; margin-bottom: 20px; line-height: 1.25;">
+                        Una forma de vivir el colegio: <br>
+                        <span style="font-family: var(--font-playfair); font-style: italic; color: var(--yellow); font-weight: bold;">crecer, liderar y dejar huella</span>
+                    </h2>
+                    <p style="font-family: var(--font-lato); font-size: 1.02rem; line-height: 1.8; color: rgba(255, 255, 255, 0.92); margin-bottom: 20px;">
+                        En el Hontanar, el Programa Casas es una forma de vivir el colegio. Este es un espacio donde cada estudiante encuentra apoyo, retos y oportunidades para desarrollar su mejor versión, en un entorno seguro y alineado con una formación internacional de alto nivel.
+                    </p>
+                    <div style="border-left: 3px solid var(--yellow); padding-left: 18px; margin-bottom: 25px; background: rgba(255, 255, 255, 0.08); padding-top: 14px; padding-bottom: 14px; padding-right: 18px;">
+                        <p style="font-family: var(--font-lato); font-size: 1.02rem; line-height: 1.75; color: #ffffff; margin: 0; font-weight: 700;">
+                            Ven a vivirlo en nuestro próximo Open Campus y descubre por qué en el Hontanar los niños sueñan con crecer, liderar y dejar huella.
+                        </p>
+                    </div>
+                    <div>
+                        <a href="agenda-visita.html" class="btn btn-yellow btn-nav" style="display: inline-flex; align-items: center; gap: 8px;">
+                            Agenda tu visita <span class="arrow">&gt;</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Right Column: Photo -->
+                <div class="testimonial-split-photo" style="background-image: url('assets/DSC_0148.JPG');"></div>
+            </div>
+        </section>
     </main>
 
     <div class="social-floating">
