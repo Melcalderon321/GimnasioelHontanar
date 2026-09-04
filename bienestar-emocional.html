@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bienestar Emocional | Gimnasio El Hontanar</title>
-    <meta name="description" content="College Counseling en el Gimnasio El Hontanar. Guía, asesoría y conexión con universidades nacionales e internacionales desde noveno grado.">
+    <meta name="description" content="Bienestar Emocional en el Gimnasio El Hontanar. Educación integral, gimnasio emocional y formación del carácter en un colegio bilingüe al norte de Bogotá y Chía.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
@@ -29,12 +29,75 @@
             background-color: var(--white) !important;
             color: #334155;
         }
+        /* Eliminar pills amarillas de sobretítulos */
+        .kicker,
+        h4.kicker {
+            border: none !important;
+            background: transparent !important;
+            padding: 0 !important;
+            border-radius: 0 !important;
+            backdrop-filter: none !important;
+            box-shadow: none !important;
+        }
         /* Style adjustments for multi-modern-card in this page context */
         .multi-modern-card {
             background-color: #f8fafc !important;
             border: 1px solid #e2e8f0 !important;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03) !important;
             padding: 40px !important;
+        }
+        /* 5-Card Competencies Responsive Flex Grid */
+        .competencias-bento-grid {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 28px;
+        }
+        .competencias-bento-grid .multi-modern-card {
+            flex: 1 1 320px;
+            max-width: 350px;
+            display: flex;
+            flex-direction: column;
+        }
+        .competencias-bento-grid .multi-card-body {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        @media (max-width: 768px) {
+            .competencias-bento-grid .multi-modern-card {
+                max-width: 100%;
+            }
+        }
+        /* Split Section Alternating (Reverse Layout: Photo Left, Text Right) */
+        .pq-split-reverse {
+            grid-template-columns: 0.95fr 1.05fr !important;
+        }
+        .pq-split-reverse .pq-split-left {
+            padding: 60px calc((100vw - 1140px) / 2 + 20px) 60px 50px !important;
+        }
+        @media (max-width: 1200px) {
+            .pq-split-reverse .pq-split-left {
+                padding-right: 50px !important;
+                padding-left: 40px !important;
+            }
+        }
+        @media (max-width: 900px) {
+            .pq-split-reverse {
+                display: flex !important;
+                flex-direction: column !important;
+            }
+            .pq-split-reverse .pq-split-text-col {
+                order: 1 !important;
+                padding: 40px 25px !important;
+            }
+            .pq-split-reverse .pq-split-photo-col {
+                order: 2 !important;
+                min-height: 420px !important;
+            }
         }
     </style>
 </head>
@@ -108,7 +171,6 @@
                 <ul class="submenu">
                     <li><a href="un-dia-escolar.html">Un Día Escolar</a></li>
                     <li><a href="modelo-de-ensenanza.html">Modelo de Enseñanza</a></li>
-                    <li><a href="formacion-integral.html">Formación Integral Más Allá del Aula</a></li>
                     <li><a href="bienestar-emocional.html" class="active" style="color: var(--yellow); font-weight: 700;">Bienestar Emocional</a></li>
                     <li><a href="programa-casas.html">Programa Casas</a></li>
                     <li><a href="character-counts.html">Character Counts</a></li>
@@ -336,41 +398,130 @@
         <div class="inner-header-overlay"></div>
         <div class="inner-header-content">
             <span class="inner-header-kicker">VIDA EN EL CAMPUS</span>
-            <h1 class="inner-header-title">Bienestar <span>Emocional y Desarrollo</span></h1>
-            
+            <h1 class="inner-header-title">Bienestar <span>Emocional</span></h1>
         </div>
         <img src="assets/ChatGPT Image 1 jul 2025, 17_28_04 (3).png" alt="Colibri" class="header-colibri-float">
     </section>
-<main class="vida-page">
+
+    <main class="vida-page">
         <div class="breadcrumbs">
-                    <a href="index.html">Inicio</a> &gt; <a href="#">Vida en el Campus</a> &gt; <span class="current">Bienestar Emocional</span>
-                </div>
+            <a href="index.html">Inicio</a> &gt; <a href="#">Vida en el Campus</a> &gt; <span class="current">Bienestar Emocional</span>
+        </div>
         
-        <!-- Clean Layout: White Background & Premium Cards -->
-        <div class="vida-container" style="margin-top: 50px;">
-            <div class="vida-lead-paragraph-wrapper hontanar-scroll-reveal" style="border-left: 4px solid var(--green); padding-left: 25px; margin: 40px auto 60px auto; max-width: 900px; text-align: left;">
-                <p style="font-family: var(--font-lato); font-size: 1.15rem; line-height: 1.85; color: var(--blue) !important; font-weight: 400; margin: 0;">
-                    En el Gimnasio El Hontanar sabemos que un estudiante aprende mejor cuando se siente <strong>feliz, seguro y valorado</strong>. Por eso, el bienestar emocional no es un programa aislado; es el eje transversal que define nuestro modelo de enseñanza para un aprendizaje con verdadero sentido.
+        <!-- SECCIÓN 1: La educación para la vida empieza con el bienestar emocional (Layout Dividido con Acordeón) -->
+        <section class="pq-split-section hontanar-scroll-reveal" style="margin-top: 30px; margin-bottom: 70px;">
+            <!-- Left Side: Accordion -->
+            <div class="pq-split-left">
+                <span style="font-family: var(--font-lato); color: var(--green); font-size: 0.85rem; font-weight: 900; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 12px; display: inline-block;">WHERE YOUR CHILD LEARNS HAPPILY</span>
+                <h2 class="pq-split-title" style="font-family: var(--font-lato); font-size: 2.15rem; font-weight: 800; color: var(--blue); line-height: 1.2; text-transform: none; margin-bottom: 25px;">
+                    La educación para la vida empieza<br>
+                    <span style="font-family: var(--font-playfair); font-style: italic; color: var(--green); font-weight: bold;">con el bienestar emocional</span>
+                </h2>
+                
+                <div class="pq-split-accordion">
+                    <!-- Item 1: Educación Integral y Enfoque Internacional -->
+                    <div class="pq-split-accordion-item active">
+                        <div class="pq-split-accordion-header">
+                            <h3 style="font-family: var(--font-lato); font-size: 1.1rem; font-weight: 700; color: var(--blue); margin: 0;">Educación Integral y Enfoque Internacional</h3>
+                            <span class="icon-toggle">−</span>
+                        </div>
+                        <div class="pq-split-accordion-body">
+                            <p style="font-family: var(--font-lato); font-size: 0.98rem; line-height: 1.7; color: #4a5568; margin: 0;">
+                                En el Gimnasio El Hontanar, un colegio privado bilingüe en Bogotá con enfoque internacional, formamos líderes con valores, pensamiento crítico y pasión por aprender, a través de una educación integral que equilibra la excelencia académica, el bienestar emocional y el compromiso social.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Item 2: Acompañamiento y Bachillerato Internacional (IB) -->
+                    <div class="pq-split-accordion-item">
+                        <div class="pq-split-accordion-header">
+                            <h3 style="font-family: var(--font-lato); font-size: 1.1rem; font-weight: 700; color: var(--blue); margin: 0;">Acompañamiento y Bachillerato Internacional (IB)</h3>
+                            <span class="icon-toggle">+</span>
+                        </div>
+                        <div class="pq-split-accordion-body">
+                            <p style="font-family: var(--font-lato); font-size: 0.98rem; line-height: 1.7; color: #4a5568; margin: 0;">
+                                Desde preescolar hasta grado once, acompañamos a nuestros estudiantes para que enfrenten los retos del mundo con responsabilidad, creatividad y confianza, todo esto alineado con los principios del <a href="programa-ib.html" style="color: var(--green); font-weight: 700; text-decoration: underline;">Bachillerato Internacional (IB)</a>.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Item 3: Aprendizaje Más Allá del Aula -->
+                    <div class="pq-split-accordion-item">
+                        <div class="pq-split-accordion-header">
+                            <h3 style="font-family: var(--font-lato); font-size: 1.1rem; font-weight: 700; color: var(--blue); margin: 0;">Aprendizaje Más Allá del Aula</h3>
+                            <span class="icon-toggle">+</span>
+                        </div>
+                        <div class="pq-split-accordion-body">
+                            <p style="font-family: var(--font-lato); font-size: 0.98rem; line-height: 1.7; color: #4a5568; margin: 0;">
+                                Nuestro proyecto educativo entiende que el aprendizaje va más allá del aula. Por eso, el bienestar emocional se articula de manera transversal con nuestro <a href="modelo-de-ensenanza.html" style="color: var(--green); font-weight: 700; text-decoration: underline;">modelo de enseñanza</a>, los espacios de convivencia, el desarrollo del carácter y la relación con la naturaleza; aspectos que nos posicionan entre los mejores colegios en Bogotá.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Photo and accents -->
+            <div class="pq-split-right">
+                <div class="pq-split-yellow-accent" style="bottom: -20px; left: -20px;"></div>
+                <div class="pq-split-photo-bg" style="background-image: url('assets/DSC_0889.JPG'); background-position: center; border-radius: 0; overflow: hidden;"></div>
+                <img src="assets/Recurso 15.svg" class="pq-split-svg-decorator" alt="Decoración">
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: Un compromiso real con el bienestar equilibrado (Foto Izquierda, Texto Derecha) -->
+        <section class="pq-split-section pq-split-reverse hontanar-scroll-reveal" style="margin-top: 0; margin-bottom: 80px;">
+            <!-- Left Side on Desktop: Photo and accents -->
+            <div class="pq-split-right pq-split-photo-col">
+                <div class="pq-split-yellow-accent" style="bottom: -20px; right: -20px; left: auto;"></div>
+                <div class="pq-split-photo-bg" style="background-image: url('assets/Hontanar-WEB-09-2022-318-ALTA.jpg'); background-position: center 70%; border-radius: 0; overflow: hidden;"></div>
+                <img src="assets/Recurso 15.svg" class="pq-split-svg-decorator" style="top: -14px; left: -40px; right: auto;" alt="Decoración">
+            </div>
+
+            <!-- Right Side on Desktop: Content -->
+            <div class="pq-split-left pq-split-text-col" style="display: flex; flex-direction: column; justify-content: center;">
+                <h2 class="pq-split-title" style="font-family: var(--font-lato); font-size: 2.25rem; font-weight: 800; color: var(--blue); line-height: 1.2; margin-bottom: 25px;">
+                    Un compromiso real con el <br>
+                    <span style="font-family: var(--font-playfair); font-style: italic; color: var(--green); font-weight: bold;">bienestar equilibrado</span>
+                </h2>
+                <p style="font-family: var(--font-lato); font-size: 1.02rem; line-height: 1.8; color: #4a5568; margin-bottom: 18px;">
+                    En el Hontanar concebimos el bienestar como un equilibrio, cercano a lo que cada estudiante entiende como felicidad. La vida escolar está compuesta por múltiples dimensiones, la académica, la emocional, la social y la familiar, y nuestro compromiso es acompañar a los estudiantes en todas ellas, fortaleciendo su seguridad emocional y su sentido de confianza.
+                </p>
+                <div style="border-left: 3px solid var(--yellow); padding-left: 18px; margin-top: 15px;">
+                    <p style="font-family: var(--font-lato); font-size: 0.98rem; line-height: 1.75; color: #4a5568; font-style: italic; font-weight: 500; margin: 0;">
+                        Este enfoque se complementa con la construcción de un <a href="espacio-seguro.html" style="color: var(--blue); font-weight: 700; text-decoration: underline;">espacio seguro</a>, donde cada niño y joven se siente escuchado, respetado y valorado. Un entorno que promueve relaciones sanas y favorece el aprendizaje auténtico.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CINCO COMPETENCIAS SOCIOEMOCIONALES QUE FORMAN PARA LA VIDA -->
+        <section class="multi-bento-section" style="padding: 20px 0 50px 0; background-color: #ffffff;">
+            <div class="hontanar-scroll-reveal" style="text-align: center; max-width: 900px; margin: 0 auto 40px auto; padding: 0 20px;">
+                <h2 style="font-family: var(--font-lato); font-size: 2.25rem; font-weight: 800; color: var(--blue); line-height: 1.25; margin-bottom: 15px;">
+                    Cinco competencias socioemocionales que <br>
+                    <span style="font-family: var(--font-playfair); font-style: italic; color: var(--green); font-weight: bold;">forman para la vida</span>
+                </h2>
+                <p style="font-family: var(--font-lato); font-size: 1.02rem; line-height: 1.7; color: #4a5568; margin: 0;">
+                    Nuestro proyecto educativo se fundamenta en el desarrollo de cinco competencias socioemocionales que se articulan con el programa del colegio para formar el carácter:
                 </p>
             </div>
-        </div>
 
-        <section class="multi-bento-section" style="padding: 40px 0; background-color: #ffffff;">
-            <div class="multi-bento-grid" style="max-width: 1140px; margin: 0 auto; padding: 0 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;">
+            <div class="competencias-bento-grid">
                 
-                <!-- Card 1: Seguimiento Personalizado -->
+                <!-- Card 1: Conciencia Emocional -->
                 <div class="multi-modern-card hontanar-scroll-reveal">
                     <div class="multi-card-image-wrap">
-                        <img src="assets/counseling-friendship-1.jpg" alt="Seguimiento Personalizado" class="multi-card-img">
+                        <img src="assets/counseling-friendship-1.jpg" alt="Conciencia Emocional" class="multi-card-img">
                     </div>
                     <div class="multi-card-badge" style="background-color: #1ba655;">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="white" class="multi-badge-icon">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                         </svg>
                     </div>
                     <div class="multi-card-body">
-                        <h3>Seguimiento <span class="title-serif-italic">Personalizado</span></h3>
-                        <p>Monitoreamos de forma activa y cercana el proceso académico, adaptativo y socioemocional de cada estudiante, logrando identificar y atender cualquier necesidad a tiempo.</p>
+                        <h3>Conciencia <span class="title-serif-italic">Emocional</span></h3>
+                        <p>Para reconocer y comprender lo que sentimos.</p>
                     </div>
                 </div>
 
@@ -386,40 +537,102 @@
                     </div>
                     <div class="multi-card-body">
                         <h3>Regulación <span class="title-serif-italic">Emocional</span></h3>
-                        <p>Brindamos herramientas prácticas para que los niños y jóvenes reconozcan sus emociones, fortalezcan su autoestima y resuelvan conflictos con total autonomía.</p>
+                        <p>Para gestionar las emociones de forma saludable.</p>
                     </div>
                 </div>
 
-                <!-- Card 3: Alianza Colegio-Familia -->
+                <!-- Card 3: Autonomía Emocional -->
                 <div class="multi-modern-card hontanar-scroll-reveal">
                     <div class="multi-card-image-wrap">
-                        <img src="assets/153.jpg" alt="Alianza Colegio-Familia" class="multi-card-img">
+                        <img src="assets/153.jpg" alt="Autonomía Emocional" class="multi-card-img">
                     </div>
                     <div class="multi-card-badge" style="background-color: #254478;">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="white" class="multi-badge-icon">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456Z" />
                         </svg>
                     </div>
                     <div class="multi-card-body">
-                        <h3>Alianza <span class="title-serif-italic">Colegio-Familia</span></h3>
-                        <p>Trabajamos de la mano con los padres de familia a través de talleres, asesorías continuas y canales abiertos que aseguran un entorno coherente de apoyo.</p>
+                        <h3>Autonomía <span class="title-serif-italic">Emocional</span></h3>
+                        <p>Para tomar decisiones con seguridad y criterio propio.</p>
+                    </div>
+                </div>
+
+                <!-- Card 4: Competencia Social -->
+                <div class="multi-modern-card hontanar-scroll-reveal">
+                    <div class="multi-card-image-wrap">
+                        <img src="assets/154.jpg" alt="Competencia Social" class="multi-card-img">
+                    </div>
+                    <div class="multi-card-badge" style="background-color: #b45309;">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="white" class="multi-badge-icon">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
+                        </svg>
+                    </div>
+                    <div class="multi-card-body">
+                        <h3>Competencia <span class="title-serif-italic">Social</span></h3>
+                        <p>Para relacionarse con empatía y respeto.</p>
+                    </div>
+                </div>
+
+                <!-- Card 5: Habilidades para la Vida y el Bienestar -->
+                <div class="multi-modern-card hontanar-scroll-reveal">
+                    <div class="multi-card-image-wrap">
+                        <img src="assets/espacio-campus-1.jpg" alt="Habilidades para la Vida y el Bienestar" class="multi-card-img">
+                    </div>
+                    <div class="multi-card-badge" style="background-color: #0e7490;">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="white" class="multi-badge-icon">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
+                        </svg>
+                    </div>
+                    <div class="multi-card-body">
+                        <h3>Habilidades para la Vida <span class="title-serif-italic">y el Bienestar</span></h3>
+                        <p>Esenciales para desenvolverse en contextos locales y globales.</p>
                     </div>
                 </div>
 
             </div>
+
+            <!-- Follow-up banner text -->
+            <div class="hontanar-scroll-reveal" style="max-width: 920px; margin: 40px auto 0 auto; padding: 0 20px;">
+                <div style="border-left: 4px solid var(--green); padding: 16px 25px; background: rgba(27, 166, 85, 0.05); text-align: left;">
+                    <p style="font-family: var(--font-lato); font-size: 1.02rem; line-height: 1.75; color: #4a5568; margin: 0;">
+                        Estas competencias se trabajan de manera intencionada y acorde con nuestro <a href="modelo-de-ensenanza.html" style="color: var(--green); font-weight: 700; text-decoration: underline;">modelo de enseñanza</a>, preparando a los estudiantes para los desafíos académicos y humanos del <a href="programa-ib.html" style="color: var(--green); font-weight: 700; text-decoration: underline;">Bachillerato Internacional</a>.
+                    </p>
+                </div>
+            </div>
         </section>
 
-        <!-- SECCIÓN DE TRANSICIÓN "ACOMPAÑAMIENTO" -->
-        <div class="pq-kd-banner-container" style="margin-top: 50px; margin-bottom: 20px;">
-            <!-- Background Watermark text (Marquee scrolling - 2 líneas en Playfair Display) -->
+        <!-- GIMNASIO EMOCIONAL Y ESPACIOS DE BIENESTAR EN EL CAMPUS -->
+        <section class="hontanar-scroll-reveal" style="padding: 40px 20px 60px 20px; background-color: #ffffff;">
+            <div style="max-width: 1140px; margin: 0 auto; background: #f8fafc; border: 1.5px solid #e2e8f0; display: flex; flex-wrap: wrap; overflow: hidden; box-shadow: 0 12px 35px rgba(37,68,120,0.06);">
+                <div style="flex: 1 1 450px; padding: 50px 45px; text-align: left; display: flex; flex-direction: column; justify-content: center;">
+                    <h3 style="font-family: var(--font-lato); font-size: 2.1rem; font-weight: 800; color: var(--blue); margin-bottom: 20px; line-height: 1.25;">
+                        Gimnasio Emocional y Espacios de Bienestar <br>
+                        <span style="font-family: var(--font-playfair); font-style: italic; color: var(--green); font-weight: bold;">en el Campus del Colegio al Norte de Bogotá y Chía</span>
+                    </h3>
+                    <p style="font-family: var(--font-lato); font-size: 1rem; line-height: 1.8; color: #4a5568; margin-bottom: 18px;">
+                        Como parte de este enfoque, El Hontanar cuenta con un <strong>Gimnasio Emocional</strong>, un espacio innovador donde los estudiantes entrenan su vida emocional del mismo modo en que desarrollan habilidades académicas o deportivas, porque el bienestar se vive y se fortalece.
+                    </p>
+                    <div style="border-left: 3px solid var(--yellow); padding-left: 16px;">
+                        <p style="font-family: var(--font-lato); font-size: 0.98rem; line-height: 1.75; color: #4a5568; font-style: italic; font-weight: 500; margin: 0;">
+                            Este trabajo se potencia a través de <a href="espacios-de-bienestar-y-naturaleza.html" style="color: var(--blue); font-weight: 700; text-decoration: underline;">espacios de bienestar y naturaleza</a>, que favorecen la autorregulación, la conexión con el entorno y el equilibrio emocional, reforzando una experiencia educativa armónica y consciente.
+                        </p>
+                    </div>
+                </div>
+                <div style="flex: 1 1 420px; min-height: 380px; background-image: url('assets/espacio-campus-1.jpg'); background-size: cover; background-position: center;"></div>
+            </div>
+        </section>
+
+        <!-- ACOMPAÑAMIENTO INTERDISCIPLINARIO, EDUCACIÓN INTEGRAL -->
+        <div class="pq-kd-banner-container" style="margin-top: 20px; margin-bottom: 30px;">
+            <!-- Background Watermark text (Marquee scrolling) -->
             <div class="pq-kd-marquee-wrapper">
                 <div class="pq-kd-marquee-track line-1">
-                    <span>Bienestar Emocional • Acompañamiento Permanente • Cuidado Integral • Hontanar •&nbsp;</span>
-                    <span>Bienestar Emocional • Acompañamiento Permanente • Cuidado Integral • Hontanar •&nbsp;</span>
+                    <span>Acompañamiento Interdisciplinario • Psicología • Medicina Preventiva • Enfermería • Bienestar Estudiantil •&nbsp;</span>
+                    <span>Acompañamiento Interdisciplinario • Psicología • Medicina Preventiva • Enfermería • Bienestar Estudiantil •&nbsp;</span>
                 </div>
                 <div class="pq-kd-marquee-track line-2 track-reverse">
-                    <span>Orientación Cercana • Salud Mental • Regulación Emocional • Equipo de Bienestar •&nbsp;</span>
-                    <span>Orientación Cercana • Salud Mental • Regulación Emocional • Equipo de Bienestar •&nbsp;</span>
+                    <span>Cuidado Integral • Salud Escolar • Formación con Propósito • Familias Hontanar •&nbsp;</span>
+                    <span>Cuidado Integral • Salud Escolar • Formación con Propósito • Familias Hontanar •&nbsp;</span>
                 </div>
             </div>
             
@@ -429,10 +642,10 @@
             <!-- Centered Card -->
             <div class="pq-kd-card hontanar-scroll-reveal">
                 <h3 class="pq-kd-title">
-                    Acompañamiento<br><span class="serif-italic-yellow">Permanente y Cercano</span>
+                    Acompañamiento Interdisciplinario,<br><span class="serif-italic-yellow">Educación Integral</span>
                 </h3>
                 <p class="pq-kd-subtitle">
-                    Nuestro colegio campestre cuenta con un Equipo de Bienestar altamente calificado que brinda acompañamiento individualizado a los estudiantes desde preescolar hasta bachillerato.
+                    El equipo de bienestar estudiantil lidera toda la línea formativa del colegio y está conformado por profesionales de diferentes áreas de <strong>Psicología, Medicina Preventiva y Enfermería</strong>. Este acompañamiento garantiza una mirada integral del estudiante y un trabajo articulado con las familias.
                 </p>
             </div>
         </div>
@@ -440,7 +653,7 @@
         <!-- 3. GALERÍA ESTILO HOME (INFINITE SCROLL CAROUSEL mirroring filosofia-y-valores) -->
         <section class="filo-gallery-section" style="padding: 60px 0 0 0; background-color: #ffffff;">
             <div class="filo-gallery-header hontanar-scroll-reveal" style="text-align: center; margin-bottom: 40px;">
-                <h4 class="kicker" style="font-family: var(--font-lato); color: var(--green); font-size: 0.85rem; font-weight: 900; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 14px;">NUESTRA COMUNIDAD</h4>
+                <h4 style="font-family: var(--font-lato); color: var(--green); font-size: 0.85rem; font-weight: 900; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 14px;">NUESTRA COMUNIDAD</h4>
                 <h2 class="filo-section-title" style="font-family: var(--font-lato); font-size: 2.6rem; font-weight: 700; color: var(--blue); line-height: 1.2;">La vida en el <span>Hontanar</span></h2>
             </div>
             
@@ -467,24 +680,41 @@
             </div>
         </section>
 
-        <!-- TESTIMONIO/DESCRIPCIÓN EN SPLIT PANEL -->
+        <!-- UNA COMUNIDAD QUE INSPIRA Y FORMA PARA EL FUTURO -->
         <section class="filo-testimonial-section" style="padding: 60px 20px 100px 20px; background-color: #ffffff;">
             <div class="filo-testimonial-split hontanar-scroll-reveal">
                 <!-- Shield decorator -->
                 <img src="assets/Capa_2_xA0_Imagen.png" alt="Escudo Hontanar" class="testimonial-split-shield">
                 
-                <!-- Left Column: Quote and Author -->
-                <div class="testimonial-split-left">
-                    <span class="testimonial-split-kicker">Formar para la Resiliencia y la Empatía</span>
-                    <blockquote class="testimonial-split-quote">
-                        "A través de programas institucionales enfocados en valores y habilidades blandas, fomentamos un ambiente escolar basado en el respeto, la inclusión y el cuidado mutuo.
-                        <br><br>
-                        Preparamos a nuestros estudiantes para asumir desafíos cotidianos con autogestión y autoeficacia, asegurando que se conviertan en personas empáticas, seguras de sí mismas y plenamente comprometidas con su entorno."
-                    </blockquote>
+                <!-- Left Column: Content -->
+                <div class="testimonial-split-left" style="padding: 55px 50px;">
+                    <h2 style="font-family: var(--font-lato); font-size: 2.2rem; font-weight: 800; color: #ffffff; margin-bottom: 20px; line-height: 1.25;">
+                        Una comunidad que inspira<br>
+                        <span style="font-family: var(--font-playfair); font-style: italic; color: var(--yellow); font-weight: bold;">y forma para el futuro</span>
+                    </h2>
+                    <p style="font-family: var(--font-lato); font-size: 1.02rem; line-height: 1.8; color: rgba(255, 255, 255, 0.92); margin-bottom: 22px;">
+                        En el Gimnasio El Hontanar educamos con propósito. Nuestra propuesta integra excelencia académica, bienestar emocional y formación en valores, consolidándonos como uno de los colegios privados y colegios bilingües en Bogotá que prepara a sus estudiantes para una vida global, consciente y feliz.
+                    </p>
+                    <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 25px; padding: 18px 22px; background: rgba(255, 255, 255, 0.08); border-left: 3px solid var(--yellow);">
+                        <div style="font-family: var(--font-lato); font-size: 0.98rem; font-weight: 700; color: #ffffff; display: flex; align-items: center; gap: 10px;">
+                            <span style="color: var(--yellow); font-size: 1.1rem;">✦</span> Ven y conoce nuestro Gimnasio Emocional.
+                        </div>
+                        <div style="font-family: var(--font-lato); font-size: 0.98rem; font-weight: 700; color: #ffffff; display: flex; align-items: center; gap: 10px;">
+                            <span style="color: var(--yellow); font-size: 1.1rem;">✦</span> Vive de cerca la educación con propósito en el Gimnasio El Hontanar.
+                        </div>
+                        <div style="font-family: var(--font-lato); font-size: 0.95rem; font-weight: 900; letter-spacing: 2px; text-transform: uppercase; color: var(--yellow); margin-top: 6px;">
+                            WHERE YOUR CHILD LEARNS HAPPILY.
+                        </div>
+                    </div>
+                    <div>
+                        <a href="agenda-visita.html" class="btn btn-yellow btn-nav" style="display: inline-flex; align-items: center; gap: 8px;">
+                            Agenda tu visita <span class="arrow">&gt;</span>
+                        </a>
+                    </div>
                 </div>
                 
                 <!-- Right Column: Image Panel -->
-                <div class="testimonial-split-photo" style="background-image: url('assets/DSC_0889.JPG');"></div>
+                <div class="testimonial-split-photo" style="background-image: url('assets/DSC_0762_copia.jpg');"></div>
             </div>
         </section>
     </main>
@@ -594,6 +824,27 @@
                     }
                 });
             }
+
+            // Accordion Toggle Listener for split leadership section
+            const accordionItems = document.querySelectorAll('.pq-split-accordion-item');
+            accordionItems.forEach(item => {
+                const header = item.querySelector('.pq-split-accordion-header');
+                if (header) {
+                    header.addEventListener('click', () => {
+                        const isActive = item.classList.contains('active');
+                        accordionItems.forEach(i => {
+                            i.classList.remove('active');
+                            const toggle = i.querySelector('.icon-toggle');
+                            if (toggle) toggle.textContent = '+';
+                        });
+                        if (!isActive) {
+                            item.classList.add('active');
+                            const toggle = item.querySelector('.icon-toggle');
+                            if (toggle) toggle.textContent = '−';
+                        }
+                    });
+                }
+            });
         });
     </script>
 

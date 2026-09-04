@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="tour-virtual.css">
+    <link rel="stylesheet" href="por-que.css">
     <link rel="stylesheet" href="modelo-de-ensenanza.css">
 </head>
 <body>
@@ -81,7 +82,6 @@
                 <ul class="submenu" style="display: block;">
                     <li><a href="un-dia-escolar.html">Un Día Escolar</a></li>
                     <li><a href="modelo-de-ensenanza.html" style="color: var(--yellow); font-weight: 700;">Modelo de Enseñanza</a></li>
-                    <li><a href="formacion-integral.html">Formación Integral Más Allá del Aula</a></li>
                     <li><a href="bienestar-emocional.html">Bienestar Emocional</a></li>
                     <li><a href="programa-casas.html">Programa Casas</a></li>
                     <li><a href="character-counts.html">Character Counts</a></li>
@@ -343,12 +343,22 @@
         </div>
 
         <!-- LEVEL SELECTOR (TABS) -->
-        <div class="level-selector-wrapper" style="margin-bottom: 50px;">
-            <button class="level-tab-btn active" data-level="level-jardin">Preescolar</button>
-            <button class="level-tab-btn" data-level="level-primaria">Primaria</button>
-            <button class="level-tab-btn" data-level="level-secundaria">Bachillerato - Escuela Media (Middle School)</button>
-            <button class="level-tab-btn" data-level="level-media">Bachillerato - Escuela Alta (High School)</button>
+        <div class="level-selector-wrapper" style="margin-bottom: 45px;">
+            <button class="level-tab-btn active" data-tab="pane-modelo">Modelo de Enseñanza</button>
+            <button class="level-tab-btn" data-tab="pane-academia">Academia</button>
+            <button class="level-tab-btn" data-tab="pane-arte">Arte y Cultura</button>
+            <button class="level-tab-btn" data-tab="pane-deporte">Deporte</button>
         </div>
+
+        <!-- PESTAÑA 1: MODELO DE ENSEÑANZA -->
+        <div class="model-tab-pane" id="pane-modelo" style="display: block;">
+            <!-- Sub-bar de etapas dentro de Modelo de Enseñanza -->
+            <div style="display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin: -10px auto 45px auto; max-width: 950px; padding: 0 15px;">
+                <a href="#level-jardin" class="stage-pill-link">Preescolar</a>
+                <a href="#level-primaria" class="stage-pill-link">Primaria</a>
+                <a href="#level-secundaria" class="stage-pill-link">Bachillerato - Escuela Media (Middle School)</a>
+                <a href="#level-media" class="stage-pill-link">Bachillerato - Escuela Alta (High School)</a>
+            </div>
 
         <!-- 1. NIVEL: JARDÍN (PREESCOLAR) — TEXTO IZQUIERDA / FOTO DERECHA -->
         <section class="hontanar-scroll-reveal" id="level-jardin" style="margin-top: 20px; margin-bottom: 65px; padding: 0 20px; position: relative; z-index: 2;">
@@ -514,6 +524,172 @@
                 </div>
             </div>
         </section>
+        </div> <!-- Fin #pane-modelo -->
+
+        <!-- PESTAÑA 2: ACADEMIA -->
+        <div class="model-tab-pane" id="pane-academia" style="display: none;">
+            <section class="pq-split-carousel-section hontanar-scroll-reveal" style="margin-top: 25px; margin-bottom: 70px;">
+                <!-- Rectangulito amarillo decorativo detrás de la foto -->
+                <div class="pq-carousel-yellow-accent" style="left: -20px; bottom: -20px;"></div>
+                <!-- SVG Decorador verde mitad dentro mitad fuera en el borde superior derecho de la imagen -->
+                <svg class="pq-slider-decorator deco-green" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96.43 45.2" style="z-index: 3;">
+                    <g>
+                        <polygon class="pq-deco-path-1" points="81.4 20.46 68.13 6.99 54.85 20.46 41.58 6.99 28.3 20.46 15.02 6.99 3.49 18.69 0 15.25 15.02 0 28.3 13.48 41.58 0 54.85 13.48 68.13 0 81.4 13.48 92.93 1.77 96.43 5.21 81.4 20.46"/>
+                        <polygon class="pq-deco-path-2" points="54.85 45.2 41.58 31.72 28.3 45.2 15.02 31.72 3.49 43.42 0 39.98 15.02 24.73 28.3 38.21 41.58 24.73 54.85 38.21 66.38 26.5 69.88 29.95 54.85 45.2"/>
+                    </g>
+                </svg>
+                <!-- Left Side: Image Panel -->
+                <div class="pq-carousel-images-wrapper">
+                    <div class="pq-carousel-img-slide active" style="background-image: url('assets/dsc_0113_copy.jpg'); background-position: center;"></div>
+                </div>
+
+                <!-- Right Side: Content Panel (White background) -->
+                <div class="pq-carousel-content-panel">
+                    <!-- Floating background circles -->
+                    <div class="bg-circles-wrapper">
+                        <div class="bg-circle bg-circle-ring-yellow circle-1"></div>
+                        <div class="bg-circle bg-circle-solid-green circle-2"></div>
+                        <div class="bg-circle bg-circle-ring-blue circle-3"></div>
+                        <div class="bg-circle bg-circle-solid-yellow circle-4"></div>
+                        <div class="bg-circle bg-circle-ring-green circle-5"></div>
+                        <div class="bg-circle bg-circle-ring-yellow circle-6"></div>
+                    </div>
+
+                    <!-- Slides Content Wrapper -->
+                    <div class="pq-carousel-slides-wrapper" style="margin-top: 15px;">
+                        <div class="pq-carousel-slide active">
+                            <span class="pq-slide-kicker" style="color: var(--green); font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; font-size: 0.82rem; margin-bottom: 12px; display: inline-block;">FORMACIÓN ACADÉMICA</span>
+                            <h3 class="pq-slide-title" style="font-size: 2.15rem; font-family: var(--font-lato); font-weight: 800; color: var(--blue); margin-bottom: 22px; line-height: 1.25; text-transform: none;">
+                                Aprender con sentido es <span style="font-family: var(--font-playfair); font-style: italic; color: var(--green); font-weight: bold;">comprender para la vida</span>
+                            </h3>
+                            <div class="pq-slide-description" style="color: #4a5568; line-height: 1.75; font-size: 0.98rem; font-family: var(--font-lato);">
+                                <p style="margin-bottom: 16px;">
+                                    En El Hontanar la formación académica es interdisciplinaria y bilingüe, orientada al <strong>pensamiento crítico y a la comprensión</strong>. Aprender con sentido es comprender para la vida.
+                                </p>
+                                <p style="margin-bottom: 25px; border-left: 3px solid var(--yellow); padding-left: 16px; font-style: italic; color: #4a5568; font-weight: 500; line-height: 1.7;">
+                                    Nuestros estudiantes aprenden a conectar el conocimiento con la vida real, fortaleciendo competencias importantes para su futuro académico y personal, convirtiéndose en protagonistas de su proceso educativo.
+                                </p>
+                                <div style="margin-top: 25px;">
+                                    <a href="agenda-visita.html" class="btn btn-yellow btn-nav" style="display: inline-flex; align-items: center; gap: 8px;">
+                                        Agenda tu visita <span class="arrow">&gt;</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- PESTAÑA 3: ARTE Y CULTURA -->
+        <div class="model-tab-pane" id="pane-arte" style="display: none;">
+            <section class="pq-split-carousel-section hontanar-scroll-reveal" style="margin-top: 25px; margin-bottom: 70px;">
+                <!-- Rectangulito amarillo decorativo detrás de la foto -->
+                <div class="pq-carousel-yellow-accent" style="left: -20px; bottom: -20px;"></div>
+                <!-- SVG Decorador verde mitad dentro mitad fuera en el borde superior derecho de la imagen -->
+                <svg class="pq-slider-decorator deco-green" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96.43 45.2" style="z-index: 3;">
+                    <g>
+                        <polygon class="pq-deco-path-1" points="81.4 20.46 68.13 6.99 54.85 20.46 41.58 6.99 28.3 20.46 15.02 6.99 3.49 18.69 0 15.25 15.02 0 28.3 13.48 41.58 0 54.85 13.48 68.13 0 81.4 13.48 92.93 1.77 96.43 5.21 81.4 20.46"/>
+                        <polygon class="pq-deco-path-2" points="54.85 45.2 41.58 31.72 28.3 45.2 15.02 31.72 3.49 43.42 0 39.98 15.02 24.73 28.3 38.21 41.58 24.73 54.85 38.21 66.38 26.5 69.88 29.95 54.85 45.2"/>
+                    </g>
+                </svg>
+                <!-- Left Side: Image Panel -->
+                <div class="pq-carousel-images-wrapper">
+                    <div class="pq-carousel-img-slide active" style="background-image: url('assets/arte-cultura-0995.jpg'); background-position: center;"></div>
+                </div>
+
+                <!-- Right Side: Content Panel (White background) -->
+                <div class="pq-carousel-content-panel">
+                    <!-- Floating background circles -->
+                    <div class="bg-circles-wrapper">
+                        <div class="bg-circle bg-circle-ring-yellow circle-1"></div>
+                        <div class="bg-circle bg-circle-solid-green circle-2"></div>
+                        <div class="bg-circle bg-circle-ring-blue circle-3"></div>
+                        <div class="bg-circle bg-circle-solid-yellow circle-4"></div>
+                        <div class="bg-circle bg-circle-ring-green circle-5"></div>
+                        <div class="bg-circle bg-circle-ring-yellow circle-6"></div>
+                    </div>
+
+                    <!-- Slides Content Wrapper -->
+                    <div class="pq-carousel-slides-wrapper" style="margin-top: 15px;">
+                        <div class="pq-carousel-slide active">
+                            <span class="pq-slide-kicker" style="color: var(--green); font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; font-size: 0.82rem; margin-bottom: 12px; display: inline-block;">EXPRESIÓN INTEGRAL</span>
+                            <h3 class="pq-slide-title" style="font-size: 2.15rem; font-family: var(--font-lato); font-weight: 800; color: var(--blue); margin-bottom: 22px; line-height: 1.25; text-transform: none;">
+                                El arte como parte esencial <span style="font-family: var(--font-playfair); font-style: italic; color: var(--green); font-weight: bold;">del aprendizaje y la sensibilidad</span>
+                            </h3>
+                            <div class="pq-slide-description" style="color: #4a5568; line-height: 1.75; font-size: 0.98rem; font-family: var(--font-lato);">
+                                <p style="margin-bottom: 16px;">
+                                    El arte es parte esencial del aprendizaje. A través de proyectos especiales en <strong>música, teatro, artes visuales y espacios culturales</strong>, los estudiantes desarrollan la creatividad, la expresión y su sensibilidad, habilidades fundamentales en los mejores colegios privados de Bogotá con enfoque integral.
+                                </p>
+                                <p style="margin-bottom: 25px; border-left: 3px solid var(--yellow); padding-left: 16px; font-style: italic; color: #4a5568; font-weight: 500; line-height: 1.7;">
+                                    En el Gimnasio El Hontanar vemos a cada estudiante como un creador en potencia.
+                                </p>
+                                <div style="margin-top: 25px;">
+                                    <a href="agenda-visita.html" class="btn btn-yellow btn-nav" style="display: inline-flex; align-items: center; gap: 8px;">
+                                        Agenda tu visita <span class="arrow">&gt;</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- PESTAÑA 4: DEPORTE -->
+        <div class="model-tab-pane" id="pane-deporte" style="display: none;">
+            <section class="pq-split-carousel-section hontanar-scroll-reveal" style="margin-top: 25px; margin-bottom: 70px;">
+                <!-- Rectangulito amarillo decorativo detrás de la foto -->
+                <div class="pq-carousel-yellow-accent" style="left: -20px; bottom: -20px;"></div>
+                <!-- SVG Decorador verde mitad dentro mitad fuera en el borde superior derecho de la imagen -->
+                <svg class="pq-slider-decorator deco-green" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96.43 45.2" style="z-index: 3;">
+                    <g>
+                        <polygon class="pq-deco-path-1" points="81.4 20.46 68.13 6.99 54.85 20.46 41.58 6.99 28.3 20.46 15.02 6.99 3.49 18.69 0 15.25 15.02 0 28.3 13.48 41.58 0 54.85 13.48 68.13 0 81.4 13.48 92.93 1.77 96.43 5.21 81.4 20.46"/>
+                        <polygon class="pq-deco-path-2" points="54.85 45.2 41.58 31.72 28.3 45.2 15.02 31.72 3.49 43.42 0 39.98 15.02 24.73 28.3 38.21 41.58 24.73 54.85 38.21 66.38 26.5 69.88 29.95 54.85 45.2"/>
+                    </g>
+                </svg>
+                <!-- Left Side: Image Panel -->
+                <div class="pq-carousel-images-wrapper">
+                    <div class="pq-carousel-img-slide active" style="background-image: url('assets/espacio-deporte-1.jpg'); background-position: center;"></div>
+                </div>
+
+                <!-- Right Side: Content Panel (White background) -->
+                <div class="pq-carousel-content-panel">
+                    <!-- Floating background circles -->
+                    <div class="bg-circles-wrapper">
+                        <div class="bg-circle bg-circle-ring-yellow circle-1"></div>
+                        <div class="bg-circle bg-circle-solid-green circle-2"></div>
+                        <div class="bg-circle bg-circle-ring-blue circle-3"></div>
+                        <div class="bg-circle bg-circle-solid-yellow circle-4"></div>
+                        <div class="bg-circle bg-circle-ring-green circle-5"></div>
+                        <div class="bg-circle bg-circle-ring-yellow circle-6"></div>
+                    </div>
+
+                    <!-- Slides Content Wrapper -->
+                    <div class="pq-carousel-slides-wrapper" style="margin-top: 15px;">
+                        <div class="pq-carousel-slide active">
+                            <span class="pq-slide-kicker" style="color: var(--green); font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; font-size: 0.82rem; margin-bottom: 12px; display: inline-block;">VIDA ACTIVA & SALUDABLE</span>
+                            <h3 class="pq-slide-title" style="font-size: 2.15rem; font-family: var(--font-lato); font-weight: 800; color: var(--blue); margin-bottom: 22px; line-height: 1.25; text-transform: none;">
+                                El deporte como formador de carácter, <span style="font-family: var(--font-playfair); font-style: italic; color: var(--green); font-weight: bold;">disciplina y confianza personal</span>
+                            </h3>
+                            <div class="pq-slide-description" style="color: #4a5568; line-height: 1.75; font-size: 0.98rem; font-family: var(--font-lato);">
+                                <p style="margin-bottom: 16px;">
+                                    El deporte forma carácter. En El Hontanar pensamos en <strong>fortalecer la disciplina, el liderazgo y el trabajo en equipo</strong>, promoviendo hábitos saludables y confianza personal en un entorno respetuoso e inclusivo.
+                                </p>
+                                <p style="margin-bottom: 25px; border-left: 3px solid var(--yellow); padding-left: 16px; font-style: italic; color: #4a5568; font-weight: 500; line-height: 1.7;">
+                                    Más que competir, buscamos que cada estudiante fortalezca su confianza y descubra el valor del esfuerzo compartido.
+                                </p>
+                                <div style="margin-top: 25px;">
+                                    <a href="agenda-visita.html" class="btn btn-yellow btn-nav" style="display: inline-flex; align-items: center; gap: 8px;">
+                                        Agenda tu visita <span class="arrow">&gt;</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
     <!-- Social Icons Floating -->
     <div class="social-floating">
@@ -591,22 +767,61 @@
                 });
             });
 
-            // Level Tabs Smooth Scroll Navigation
+            // Tab switching logic for Modelo de Enseñanza, Academia, Arte y Cultura, Deporte
             const tabButtons = document.querySelectorAll('.level-tab-btn');
+            const tabPanes = document.querySelectorAll('.model-tab-pane');
             
+            function activateTab(tabId) {
+                tabButtons.forEach(btn => {
+                    if (btn.getAttribute('data-tab') === tabId) {
+                        btn.classList.add('active');
+                    } else {
+                        btn.classList.remove('active');
+                    }
+                });
+                
+                tabPanes.forEach(pane => {
+                    if (pane.id === tabId) {
+                        pane.style.display = 'block';
+                    } else {
+                        pane.style.display = 'none';
+                    }
+                });
+            }
+
             tabButtons.forEach(btn => {
                 btn.addEventListener('click', () => {
-                    const targetId = btn.getAttribute('data-level');
-                    const targetEl = document.getElementById(targetId);
-                    
-                    tabButtons.forEach(b => b.classList.remove('active'));
-                    btn.classList.add('active');
-                    
-                    if (targetEl) {
-                        targetEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    const targetTab = btn.getAttribute('data-tab');
+                    if (targetTab) {
+                        activateTab(targetTab);
                     }
                 });
             });
+
+            // Smooth scroll for sub-level pills inside Modelo de Enseñanza
+            const stageLinks = document.querySelectorAll('.stage-pill-link');
+            stageLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetId = link.getAttribute('href');
+                    const targetEl = document.querySelector(targetId);
+                    if (targetEl) {
+                        targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
+            });
+
+            // Hash detection if visiting e.g. #level-jardin or #level-primaria
+            const currentHash = window.location.hash;
+            if (currentHash && currentHash.startsWith('#level-')) {
+                activateTab('pane-modelo');
+                setTimeout(() => {
+                    const targetEl = document.querySelector(currentHash);
+                    if (targetEl) {
+                        targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                }, 150);
+            }
 
             // Accordion Toggling
             const accordionHeaders = document.querySelectorAll('.accordion-header');
