@@ -226,6 +226,17 @@
     text-align: left;
 }
 
+.faq-answer-content a {
+    color: var(--green);
+    text-decoration: underline;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.faq-answer-content a:hover {
+    color: #148a43;
+}
+
 /* Columna Derecha: Foto full-bleed al borde */
 .faq-split-right {
     position: relative;
