@@ -7,3 +7,5 @@
 - **No lanzar el servidor de desarrollo ni abrir el navegador** para validar cambios de frontend salvo que el usuario lo solicite explícitamente.
 - El usuario trabaja sobre **maquetas de diseño independientes del responsive**: priorizar velocidad de edición sobre validación automática.
 - Solo realizar comprobaciones de frontend (capturas, preview en navegador, lighthouse, etc.) cuando el usuario lo pida de forma explícita en el mensaje.
+- **NUNCA modificar el CTA del footer**. En todas las páginas debe ser siempre exactamente:
+  `Are you Ready For Another An Extraordinary Experience?` con el botón `Contact us >`. No sustituirlo nunca por otros llamados a la acción de secciones internas.

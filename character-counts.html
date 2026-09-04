@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Character Counts | Gimnasio El Hontanar</title>
-    <meta name="description" content="College Counseling en el Gimnasio El Hontanar. Guía, asesoría y conexión con universidades nacionales e internacionales desde noveno grado.">
+    <title>Character Counts: Formación del Carácter | Gimnasio El Hontanar</title>
+    <meta name="description" content="Character Counts en el Gimnasio El Hontanar. Formación del carácter, valores que se transforman en habilidades para la vida y toma de decisiones consciente.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
@@ -46,6 +46,23 @@
             line-height: 1;
             position: relative;
             top: -2px;
+        }
+        .cc-ejes-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 28px;
+            max-width: 1160px;
+            margin: 0 auto;
+        }
+        .cc-ejes-container .multi-modern-card {
+            flex: 1 1 330px;
+            max-width: 360px;
+        }
+        @media (max-width: 768px) {
+            .cc-ejes-container .multi-modern-card {
+                max-width: 100%;
+            }
         }
 
         /* Floating background circles system */
@@ -96,6 +113,104 @@
         @keyframes float-circle-slow {
             0% { transform: translateY(0) rotate(0deg); }
             100% { transform: translateY(-40px) rotate(180deg); }
+        }
+
+        /* Split Cards estilo Kent Denver / Modelo de Enseñanza */
+        .cc-split-card-section {
+            position: relative;
+            margin: 40px 0 85px 0;
+        }
+        .cc-split-card {
+            display: grid;
+            grid-template-columns: 0.95fr 1.05fr;
+            width: 100%;
+            min-height: 560px;
+            background-color: var(--white);
+            align-items: stretch;
+            position: relative;
+            box-shadow: 0 18px 45px rgba(37, 68, 120, 0.08);
+        }
+        .cc-split-card.reverse {
+            grid-template-columns: 1.05fr 0.95fr;
+        }
+        .cc-split-card .cc-split-image-col {
+            position: relative;
+            z-index: 2;
+            overflow: hidden;
+            min-height: 480px;
+            background-color: #101c31;
+            background-size: cover;
+            background-position: center;
+        }
+        .cc-split-card.reverse .cc-split-image-col {
+            order: 2;
+        }
+        .cc-split-card .cc-split-content-col {
+            position: relative;
+            background-color: var(--white);
+            padding: 55px 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: left;
+            overflow: hidden;
+            z-index: 1;
+        }
+        .cc-split-card.reverse .cc-split-content-col {
+            order: 1;
+            padding: 55px 60px;
+        }
+        .cc-split-card .pq-carousel-yellow-accent {
+            position: absolute;
+            bottom: -20px;
+            left: -20px;
+            width: 280px;
+            height: 90px;
+            background-color: var(--yellow);
+            z-index: 0;
+        }
+        .cc-split-card.reverse .pq-carousel-yellow-accent {
+            left: auto;
+            right: -20px;
+        }
+        .cc-split-card .pq-slider-decorator {
+            position: absolute;
+            width: 110px;
+            height: auto;
+            z-index: 10;
+            pointer-events: none;
+            top: 8px;
+            left: 47.5%;
+            transform: translateX(-50%);
+        }
+        .cc-split-card.reverse .pq-slider-decorator {
+            left: 52.5%;
+        }
+        @media (max-width: 990px) {
+            .cc-split-card,
+            .cc-split-card.reverse {
+                grid-template-columns: 1fr;
+                min-height: unset;
+            }
+            .cc-split-card.reverse .cc-split-image-col {
+                order: 1;
+            }
+            .cc-split-card.reverse .cc-split-content-col {
+                order: 2;
+            }
+            .cc-split-card .cc-split-image-col {
+                min-height: 330px;
+            }
+            .cc-split-card .cc-split-content-col,
+            .cc-split-card.reverse .cc-split-content-col {
+                padding: 40px 24px;
+            }
+            .cc-split-card .pq-slider-decorator {
+                display: none;
+            }
+            .cc-split-card .pq-carousel-yellow-accent {
+                display: none;
+            }
         }
     </style>
 </head>
@@ -389,17 +504,14 @@
         });
     </script>
 
-    <!-- Page Content Container -->
-    
     <!-- Banner de Encabezado Premium -->
     <section class="inner-header-banner" style="background-image: url('assets/Copia_de_DSC_0576.JPG');">
         <div class="inner-header-overlay"></div>
         <div class="inner-header-content">
             <span class="inner-header-kicker">VIDA EN EL CAMPUS</span>
-            <h1 class="inner-header-title">Character <span>Counts: Formar el Carácter</span></h1>
-            
+            <h1 class="inner-header-title">Character Counts:<br><span>Formación del Carácter en el GH</span></h1>
         </div>
-        <img src="assets/ChatGPT Image 1 jul 2025, 17_28_04 (3).png" alt="ColibrÃ­" class="header-colibri-float">
+        <img src="assets/ChatGPT Image 1 jul 2025, 17_28_04 (3).png" alt="Colibrí" class="header-colibri-float">
     </section>
 <main class="vida-page" style="position: relative; overflow: hidden;">
     <!-- Floating background circles -->
@@ -412,163 +524,234 @@
                 <a href="index.html">Inicio</a> &gt; <a href="#">Vida en el Campus</a> &gt; <span class="current">Character Counts</span>
             </div>
         <div class="vida-container">
-            <!-- Unified Breadcrumbs -->
-            
-
-            <!-- Unified Header Title Section -->
-            <div class="vida-header hontanar-scroll-reveal">
-                
-                
+            <!-- Lead Paragraph -->
+            <div class="vida-lead-paragraph-wrapper hontanar-scroll-reveal" style="border-left: 4px solid var(--green); padding-left: 25px; margin: 40px auto 45px auto; max-width: 920px; text-align: left;">
+                <p style="font-family: var(--font-lato); font-size: 1.15rem; line-height: 1.85; color: var(--blue) !important; margin-bottom: 18px;">
+                    En el Gimnasio El Hontanar, el desarrollo del carácter es una experiencia curricular, estructurada y conectada con la cotidianidad de niños y jóvenes. <strong>Character Counts</strong> es una clase integrada al horario escolar que une estrategias y recursos formativos para fortalecer el carácter, las habilidades socioemocionales y académicas de los estudiantes, promoviendo una cultura escolar responsable y una toma de decisiones consciente.
+                </p>
+                <p style="font-family: var(--font-playfair); font-style: italic; font-size: 1.12rem; line-height: 1.8; color: var(--blue) !important; margin: 0;">
+                    En nuestro colegio, los valores se entienden como una práctica cotidiana, se expresan en acciones, conversaciones y aprendizajes que fortalecen el bienestar personal, la convivencia y la responsabilidad individual.
+                </p>
             </div>
 
-            
-            <div class="vida-lead-paragraph-wrapper hontanar-scroll-reveal" style="border-left: 4px solid var(--green); padding-left: 25px; margin: 40px auto 60px auto; max-width: 900px; text-align: left;">
-                <p style="font-family: var(--font-lato); font-size: 1.18rem; line-height: 1.85; color: var(--blue) !important; margin: 0;">
-                    En el Gimnasio El Hontanar creemos que una verdadera educación debe formar no solo mentes brillantes, sino <strong style="color: var(--green); font-weight: 700;">seres humanos íntegros</strong>. Por ello, implementamos el programa <strong style="color: var(--green); font-weight: 700;">Character Counts</strong>, un marco ético de talla global que guía nuestra convivencia y enriquece nuestro modelo de enseñanza.
+            <!-- Sección: Valores que se transforman en habilidades para la vida -->
+            <div class="vida-header hontanar-scroll-reveal" style="margin-top: 40px; margin-bottom: 35px; text-align: center;">
+                <h2 class="vida-section-title" style="font-family: var(--font-lato) !important; font-style: normal !important; font-weight: 800; color: var(--blue) !important; font-size: 2.3rem; margin-bottom: 15px;">
+                    Valores que se transforman en <br>
+                    <span style="color: var(--green); font-family: var(--font-playfair); font-style: italic; font-weight: bold;">Habilidades para la Vida</span>
+                </h2>
+                <p style="font-family: var(--font-lato); font-size: 1.05rem; line-height: 1.8; color: #475569; max-width: 920px; margin: 0 auto;">
+                    El programa parte de valores fundamentales y los articula con competencias socioemocionales, desarrolladas de forma progresiva con cada etapa escolar. A partir de esta base, Character Counts trabaja ejes formativos directamente relacionados con la realidad actual de las familias y del entorno educativo:
                 </p>
             </div>
 
             <section class="multi-bento-section">
-                <div class="multi-bento-grid">
+                <div class="cc-ejes-container">
                     
-                    <!-- Card 1: Confiabilidad (Trustworthiness) -->
+                    <!-- Eje 1: Hábitos de estudio y organización personal -->
                     <div class="multi-modern-card hontanar-scroll-reveal">
                         <div class="multi-card-image-wrap">
-                            <img src="assets/counseling-friendship-1.jpg" alt="Confiabilidad - Trustworthiness" class="multi-card-img">
+                            <img src="assets/boy-doing-his-homework-laptop-library.jpg" alt="Hábitos de estudio y organización personal" class="multi-card-img">
                         </div>
                         <div class="multi-card-badge" style="background-color: #254478;">
                             <span class="multi-badge-number">01</span>
                         </div>
                         <div class="multi-card-body">
-                            <h3>Confiabilidad <br><span class="title-serif-italic">Trustworthiness</span></h3>
-                            <p>Ser <strong>honestos</strong>, cumplir la palabra y tener el <strong>coraje moral</strong> de hacer lo correcto de forma constante.</p>
+                            <h3>Hábitos de estudio <br><span class="title-serif-italic">y organización personal</span></h3>
+                            <p>Desarrollo de rutinas efectivas, autodisciplina y gestión del tiempo para consolidar la autonomía y el rendimiento escolar.</p>
                         </div>
                     </div>
 
-                    <!-- Card 2: Respeto (Respect) -->
+                    <!-- Eje 2: Cuidado del cuerpo, las emociones y las relaciones -->
                     <div class="multi-modern-card hontanar-scroll-reveal">
                         <div class="multi-card-image-wrap">
-                            <img src="assets/counseling-friendship-2.jpg" alt="Respeto - Respect" class="multi-card-img">
+                            <img src="assets/counseling-friendship-1.jpg" alt="Cuidado del cuerpo, las emociones y las relaciones" class="multi-card-img">
                         </div>
                         <div class="multi-card-badge" style="background-color: #1BA655;">
                             <span class="multi-badge-number">02</span>
                         </div>
                         <div class="multi-card-body">
-                            <h3>Respeto <br><span class="title-serif-italic">Respect</span></h3>
-                            <p>Valorar a los demás, tolerar las diferencias y resolver cualquier conflicto de manera <strong>pacífica</strong>.</p>
+                            <h3>Cuidado del cuerpo, <br><span class="title-serif-italic">emociones y relaciones</span></h3>
+                            <p>Autocuidado físico y mental, empatía, escucha activa y resolución pacífica y asertiva de los vínculos interpersonales.</p>
                         </div>
                     </div>
 
-                    <!-- Card 3: Responsabilidad (Responsibility) -->
+                    <!-- Eje 3: Prevención de conductas de riesgo y adicciones -->
                     <div class="multi-modern-card hontanar-scroll-reveal">
                         <div class="multi-card-image-wrap">
-                            <img src="assets/boy-doing-his-homework-laptop-library.jpg" alt="Responsabilidad - Responsibility" class="multi-card-img">
+                            <img src="assets/DSC_0762_copia.jpg" alt="Prevención de conductas de riesgo y adicciones" class="multi-card-img">
                         </div>
                         <div class="multi-card-badge" style="background-color: #d97706;">
                             <span class="multi-badge-number">03</span>
                         </div>
                         <div class="multi-card-body">
-                            <h3>Responsabilidad <br><span class="title-serif-italic">Responsibility</span></h3>
-                            <p>Asumir las consecuencias de nuestros actos, ser <strong>autodisciplinados</strong> y dar siempre nuestro <strong>mejor esfuerzo</strong>.</p>
+                            <h3>Prevención de conductas <br><span class="title-serif-italic">de riesgo y adicciones</span></h3>
+                            <p>Orientación reflexiva y preventiva frente a los retos del entorno actual, impulsando decisiones seguras y conscientes.</p>
                         </div>
                     </div>
 
-                    <!-- Card 4: Justicia (Fairness) -->
+                    <!-- Eje 4: Construcción del proyecto de vida -->
                     <div class="multi-modern-card hontanar-scroll-reveal">
                         <div class="multi-card-image-wrap">
-                            <img src="assets/Copia_de_post_18_Junio_deporte_3.png" alt="Justicia - Fairness" class="multi-card-img">
+                            <img src="assets/counseling-friendship-2.jpg" alt="Construcción del proyecto de vida" class="multi-card-img">
                         </div>
-                        <div class="multi-card-badge" style="background-color: #3b82f6;">
+                        <div class="multi-card-badge" style="background-color: #0284c7;">
                             <span class="multi-badge-number">04</span>
                         </div>
                         <div class="multi-card-body">
-                            <h3>Justicia <br><span class="title-serif-italic">Fairness</span></h3>
-                            <p>Jugar bajo las <strong>reglas establecidas</strong>, ser equitativos, incluyentes y escuchar con una <strong>mente abierta</strong>.</p>
+                            <h3>Construcción del <br><span class="title-serif-italic">proyecto de vida</span></h3>
+                            <p>Exploración vocacional, metas, talentos propios y propósito individual para proyectarse con seguridad hacia el futuro.</p>
                         </div>
                     </div>
 
-                    <!-- Card 5: Bondad (Caring) -->
+                    <!-- Eje 5: Desarrollo de competencias socioemocionales -->
                     <div class="multi-modern-card hontanar-scroll-reveal">
                         <div class="multi-card-image-wrap">
-                            <img src="assets/girls-female-teacher-doing-science-experiments-together.jpg" alt="Bondad - Caring" class="multi-card-img">
+                            <img src="assets/girls-female-teacher-doing-science-experiments-together.jpg" alt="Desarrollo de competencias socioemocionales" class="multi-card-img">
                         </div>
-                        <div class="multi-card-badge" style="background-color: #e07a5f;">
+                        <div class="multi-card-badge" style="background-color: #8b5cf6;">
                             <span class="multi-badge-number">05</span>
                         </div>
                         <div class="multi-card-body">
-                            <h3>Bondad <br><span class="title-serif-italic">Caring</span></h3>
-                            <p>Ser <strong>empáticos, compasivos</strong>, solidarios y manifestar gratitud permanente con acciones constructivas.</p>
-                        </div>
-                    </div>
-
-                    <!-- Card 6: Ciudadanía (Citizenship) -->
-                    <div class="multi-modern-card hontanar-scroll-reveal">
-                        <div class="multi-card-image-wrap">
-                            <img src="assets/watering-plants.jpg" alt="Ciudadanía - Citizenship" class="multi-card-img">
-                        </div>
-                        <div class="multi-card-badge" style="background-color: #1BA655;">
-                            <span class="multi-badge-number">06</span>
-                        </div>
-                        <div class="multi-card-body">
-                            <h3>Ciudadanía <br><span class="title-serif-italic">Citizenship</span></h3>
-                            <p>Respetar las leyes, cuidar con esmero el <strong>medio ambiente</strong> y contribuir activamente a mejorar la <strong>comunidad</strong>.</p>
+                            <h3>Desarrollo de competencias <br><span class="title-serif-italic">socioemocionales</span></h3>
+                            <p>Fortalecimiento del autoconocimiento, la resiliencia y el liderazgo positivo para responder a los retos del mundo global.</p>
                         </div>
                     </div>
 
                 </div>
             </section>
+        </div><!-- cierre vida-container para sección de transición full-bleed -->
 
-            <!-- Section Title for the Slider -->
-            <div class="vida-header hontanar-scroll-reveal" style="margin-top: 60px; margin-bottom: 30px;">
-                <h2 class="vida-section-title" style="color: var(--blue) !important;">Valores en el Día a Día Escolar</h2>
-            </div>
-
-            <!-- Character Counts Manual Carousel Slider -->
-            <div class="cc-carousel-wrapper hontanar-scroll-reveal" style="margin-bottom: 60px;">
-                <div class="cc-carousel-track" id="cc-carousel">
-                    
-                    <!-- Slide 1: Valores en acción -->
-                    <div class="cc-carousel-slide">
-                        <img src="assets/DSC_0762_copia.jpg" alt="Valores en el día a día">
-                        <div class="cc-carousel-caption">
-                            <span class="cc-slide-tag">Valores</span>
-                            <p>El carácter se construye mediante elecciones conscientes. En nuestro colegio campestre los valores no se quedan en la teoría: se promueven, se evalúan y se celebran en cada etapa escolar.</p>
-                        </div>
-                    </div>
-
-                    <!-- Slide 2: Lenguaje común -->
-                    <div class="cc-carousel-slide">
-                        <img src="assets/20241002_145134.jpg" alt="Estudiantes compartiendo">
-                        <div class="cc-carousel-caption">
-                            <span class="cc-slide-tag">Un Lenguaje Común</span>
-                            <p>Character Counts genera un puente y lenguaje común entre directivos, profesores, estudiantes y familias.</p>
-                        </div>
-                    </div>
-
-                    <!-- Slide 3: Sello Hontanar -->
-                    <div class="cc-carousel-slide">
-                        <img src="assets/Copia_de_DSC_0113.JPG" alt="Estudiante en actividades">
-                        <div class="cc-carousel-caption">
-                            <span class="cc-slide-tag">Sello Hontanar</span>
-                            <p>A través de dinámicas, reflexiones y reconocimientos públicos, formamos jóvenes autónomos y responsables con Sello Hontanar, listos para actuar con criterio ético en Bogotá, Chía y el mundo entero.</p>
-                        </div>
-                    </div>
-
+        <!-- SECCIÓN DE TRANSICIÓN: SITUACIONES COTIDIANAS -->
+        <div class="pq-kd-banner-container" style="margin-top: 40px; margin-bottom: 40px;">
+            <!-- Background Watermark text (Marquee scrolling) -->
+            <div class="pq-kd-marquee-wrapper">
+                <div class="pq-kd-marquee-track line-1">
+                    <span>Hábitos de Estudio • Cuidado del Cuerpo • Prevención • Proyecto de Vida • Competencias Socioemocionales • Character Counts •&nbsp;</span>
+                    <span>Hábitos de Estudio • Cuidado del Cuerpo • Prevención • Proyecto de Vida • Competencias Socioemocionales • Character Counts •&nbsp;</span>
                 </div>
-
-                <!-- Controls -->
-                <div class="cc-carousel-controls">
-                    <button class="cc-carousel-btn prev" id="cc-prev" aria-label="Anterior">
-                        <svg viewBox="0 0 24 24" fill="none"><path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
-                    </button>
-                    <div class="cc-carousel-dots" id="cc-dots"></div>
-                    <button class="cc-carousel-btn next" id="cc-next" aria-label="Siguiente">
-                        <svg viewBox="0 0 24 24" fill="none"><path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
-                    </button>
+                <div class="pq-kd-marquee-track line-2 track-reverse">
+                    <span>Criterio • Autonomía • Reflexión • Valores Hontanar • Acompañamiento Pedagógico y Emocional • Formación del Carácter •&nbsp;</span>
+                    <span>Criterio • Autonomía • Reflexión • Valores Hontanar • Acompañamiento Pedagógico y Emocional • Formación del Carácter •&nbsp;</span>
                 </div>
             </div>
-
+            
+            <!-- Vertical grid line -->
+            <div class="pq-kd-grid-line"></div>
+            
+            <!-- Centered Card -->
+            <div class="pq-kd-card hontanar-scroll-reveal">
+                <h3 class="pq-kd-title">
+                    Situaciones Cotidianas:<br><span class="serif-italic-yellow">Criterio, Autonomía y Reflexión</span>
+                </h3>
+                <p class="pq-kd-subtitle">
+                    Estos ejes se trabajan desde situaciones cotidianas, lo que permite que los estudiantes fortalezcan su <strong>criterio</strong>, su <strong>autonomía</strong> y su <strong>capacidad de reflexión</strong>, con acompañamiento pedagógico y emocional.
+                </p>
+            </div>
         </div>
+
+        <div class="vida-container">
+
+            <!-- Card 1: Una clase semanal con aprendizaje aplicado (Imagen a la izquierda) -->
+            <section class="cc-split-card-section hontanar-scroll-reveal" style="margin-top: 50px; margin-bottom: 75px;">
+                <div class="cc-split-card">
+                    <!-- Rectangulito amarillo decorativo detrás de la foto -->
+                    <div class="pq-carousel-yellow-accent" style="left: -20px; bottom: -20px;"></div>
+                    <!-- SVG Decorador verde mitad dentro mitad fuera en el borde superior derecho de la imagen -->
+                    <svg class="pq-slider-decorator deco-green" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96.43 45.2" style="z-index: 3;">
+                        <g>
+                            <polygon class="pq-deco-path-1" points="81.4 20.46 68.13 6.99 54.85 20.46 41.58 6.99 28.3 20.46 15.02 6.99 3.49 18.69 0 15.25 15.02 0 28.3 13.48 41.58 0 54.85 13.48 68.13 0 81.4 13.48 92.93 1.77 96.43 5.21 81.4 20.46"/>
+                            <polygon class="pq-deco-path-2" points="54.85 45.2 41.58 31.72 28.3 45.2 15.02 31.72 3.49 43.42 0 39.98 15.02 24.73 28.3 38.21 41.58 24.73 54.85 38.21 66.38 26.5 69.88 29.95 54.85 45.2"/>
+                        </g>
+                    </svg>
+                    <!-- Left Side: Image Panel -->
+                    <div class="cc-split-image-col" style="background-image: url('assets/arte-cultura-0995.jpg');"></div>
+
+                    <!-- Right Side: Content Panel -->
+                    <div class="cc-split-content-col">
+                        <!-- Floating background circles -->
+                        <div class="bg-circles-wrapper">
+                            <div class="bg-circle bg-circle-ring-yellow circle-1"></div>
+                            <div class="bg-circle bg-circle-solid-green circle-2"></div>
+                            <div class="bg-circle bg-circle-ring-blue circle-3"></div>
+                            <div class="bg-circle bg-circle-solid-yellow circle-4"></div>
+                            <div class="bg-circle bg-circle-ring-green circle-5"></div>
+                            <div class="bg-circle bg-circle-yellow circle-6"></div>
+                        </div>
+
+                        <h3 class="pq-slide-title" style="font-size: 2.15rem; font-family: var(--font-lato) !important; font-style: normal !important; font-weight: 800; color: var(--blue); margin-bottom: 22px; line-height: 1.25; text-transform: none;">
+                            Una Clase Semanal con <br><span style="font-family: var(--font-playfair); font-style: italic; color: #1BA655 !important; font-weight: bold;">Aprendizaje Aplicado</span>
+                        </h3>
+                        <div class="pq-slide-description" style="color: #4a5568; line-height: 1.75; font-size: 0.98rem; font-family: var(--font-lato); position: relative; z-index: 2;">
+                            <p style="margin-bottom: 16px;">
+                                <strong>Character Counts</strong> se desarrolla en una clase semanal, centrada en el <strong>diálogo</strong>, el análisis de <strong>experiencias reales</strong> y el <strong>aprendizaje práctico</strong>. El enfoque promueve la comprensión, el pensamiento crítico y la toma de decisiones conscientes, favoreciendo procesos formativos sostenibles en el tiempo.
+                            </p>
+                            <p style="margin-bottom: 25px; border-left: 3px solid var(--yellow); padding-left: 16px; font-style: italic; color: #4a5568; font-weight: 500; line-height: 1.7;">
+                                Su modalidad transversal facilita conexiones con otras áreas como ciencias, deporte, arte y espacios de tutoría, fortaleciendo una mirada integral del aprendizaje.
+                            </p>
+                            <div style="margin-top: 25px;">
+                                <a href="agenda-visita.html" class="btn btn-yellow btn-nav" style="display: inline-flex; align-items: center; gap: 8px;">
+                                    Agenda tu visita <span class="arrow">&gt;</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Card 2: Acompañamiento profesional y mirada integral (Imagen a la derecha) -->
+            <section class="cc-split-card-section hontanar-scroll-reveal" style="margin-top: 0; margin-bottom: 90px;">
+                <div class="cc-split-card reverse">
+                    <!-- Rectangulito amarillo decorativo detrás de la foto (lado derecho) -->
+                    <div class="pq-carousel-yellow-accent" style="right: -20px; bottom: -20px; left: auto;"></div>
+                    <!-- SVG Decorador verde mitad dentro mitad fuera en el borde superior de la división -->
+                    <svg class="pq-slider-decorator deco-green" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96.43 45.2" style="z-index: 3;">
+                        <g>
+                            <polygon class="pq-deco-path-1" points="81.4 20.46 68.13 6.99 54.85 20.46 41.58 6.99 28.3 20.46 15.02 6.99 3.49 18.69 0 15.25 15.02 0 28.3 13.48 41.58 0 54.85 13.48 68.13 0 81.4 13.48 92.93 1.77 96.43 5.21 81.4 20.46"/>
+                            <polygon class="pq-deco-path-2" points="54.85 45.2 41.58 31.72 28.3 45.2 15.02 31.72 3.49 43.42 0 39.98 15.02 24.73 28.3 38.21 41.58 24.73 54.85 38.21 66.38 26.5 69.88 29.95 54.85 45.2"/>
+                        </g>
+                    </svg>
+
+                    <!-- Left Side: Content Panel -->
+                    <div class="cc-split-content-col">
+                        <!-- Floating background circles -->
+                        <div class="bg-circles-wrapper">
+                            <div class="bg-circle bg-circle-ring-yellow circle-1"></div>
+                            <div class="bg-circle bg-circle-solid-green circle-2"></div>
+                            <div class="bg-circle bg-circle-ring-blue circle-3"></div>
+                            <div class="bg-circle bg-circle-solid-yellow circle-4"></div>
+                            <div class="bg-circle bg-circle-ring-green circle-5"></div>
+                            <div class="bg-circle bg-circle-yellow circle-6"></div>
+                        </div>
+
+                        <h3 class="pq-slide-title" style="font-size: 2.15rem; font-family: var(--font-lato) !important; font-style: normal !important; font-weight: 800; color: var(--blue); margin-bottom: 22px; line-height: 1.25; text-transform: none;">
+                            Acompañamiento Profesional <br><span style="font-family: var(--font-playfair); font-style: italic; color: #1BA655 !important; font-weight: bold;">y Mirada Integral</span>
+                        </h3>
+                        <div class="pq-slide-description" style="color: #4a5568; line-height: 1.75; font-size: 0.98rem; font-family: var(--font-lato); position: relative; z-index: 2;">
+                            <p style="margin-bottom: 14px;">
+                                El programa cuenta con el respaldo del <strong>equipo de bienestar</strong> del colegio, conformado por profesionales en psicología, salud y educación. Este trabajo interdisciplinario asegura coherencia, seguimiento y cuidado en cada proceso formativo.
+                            </p>
+                            <p style="margin-bottom: 20px;">
+                                Character Counts hace parte de la propuesta educativa del <strong>Gimnasio El Hontanar</strong>, reconocido entre los colegios privados y colegios bilingües en Bogotá, con una formación integral alineada al <strong>Bachillerato Internacional</strong> y a las necesidades reales de las familias de hoy.
+                            </p>
+                            <div style="margin-bottom: 25px; border-left: 3px solid var(--yellow); padding-left: 16px; font-style: italic; color: #4a5568; font-weight: 500; line-height: 1.7;">
+                                <p style="font-family: var(--font-lato); font-weight: 700; font-style: normal; color: var(--blue); font-size: 1.05rem; margin-bottom: 6px;">¿Quieres conocer cómo se vive esta clase en el día a día?</p>
+                                <p style="margin: 0;">Descubre una experiencia formativa que fortalece el carácter con intención y respeto. Agenda tu visita y vive de primera mano una propuesta educativa pensada para formar personas íntegras.</p>
+                            </div>
+                            <div style="margin-top: 25px;">
+                                <a href="agenda-visita.html" class="btn btn-yellow btn-nav" style="display: inline-flex; align-items: center; gap: 8px;">
+                                    Agenda tu visita <span class="arrow">&gt;</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Side: Image Panel -->
+                    <div class="cc-split-image-col" style="background-image: url('assets/Copia_de_DSC_0875.JPG');"></div>
+                </div>
+            </section>
+
+        </div><!-- cierre vida-container -->
     </main>
 
     <div class="social-floating">
@@ -576,7 +759,7 @@
         <a href="#" class="social-icon yellow"><img src="assets/Componente 26 - 1.png" alt="MSG"></a>
     </div>
 
-        <!-- CTA Box Overlapping the Footer Image -->
+    <!-- CTA Box Overlapping the Footer Image -->
     <div class="cta-box-wrapper cta-overlap tour-cta">
         <div class="cta-box">
             <h2>
@@ -647,51 +830,6 @@
 
             const scrollElements = document.querySelectorAll('.hontanar-scroll-reveal');
             scrollElements.forEach(el => revealObserver.observe(el));
-
-            // Carousel slider logic for Character Counts
-            const track = document.getElementById('cc-carousel');
-            const slides = track ? track.querySelectorAll('.cc-carousel-slide') : [];
-            const dotsContainer = document.getElementById('cc-dots');
-            const prevBtn = document.getElementById('cc-prev');
-            const nextBtn = document.getElementById('cc-next');
-            let current = 0;
-            let autoplay;
-
-            if (slides.length > 0 && dotsContainer) {
-                // Build dots
-                slides.forEach((_, i) => {
-                    const dot = document.createElement('button');
-                    dot.className = 'cc-dot' + (i === 0 ? ' active' : '');
-                    dot.setAttribute('aria-label', 'Slide ' + (i + 1));
-                    dot.addEventListener('click', () => { goTo(i); resetAuto(); });
-                    dotsContainer.appendChild(dot);
-                });
-
-                function goTo(idx) {
-                    current = (idx + slides.length) % slides.length;
-                    track.style.transform = `translateX(-${current * 100}%)`;
-                    dotsContainer.querySelectorAll('.cc-dot').forEach((d, i) => d.classList.toggle('active', i === current));
-                }
-
-                function resetAuto() {
-                    clearInterval(autoplay);
-                    autoplay = setInterval(() => goTo(current + 1), 6000);
-                }
-
-                if (prevBtn && nextBtn) {
-                    prevBtn.addEventListener('click', () => { goTo(current - 1); resetAuto(); });
-                    nextBtn.addEventListener('click', () => { goTo(current + 1); resetAuto(); });
-                }
-                resetAuto();
-
-                // Swipe support
-                let startX = 0;
-                track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
-                track.addEventListener('touchend', e => {
-                    const diff = startX - e.changedTouches[0].clientX;
-                    if (Math.abs(diff) > 50) { goTo(current + (diff > 0 ? 1 : -1)); resetAuto(); }
-                });
-            }
         });
     </script>
 </body>
