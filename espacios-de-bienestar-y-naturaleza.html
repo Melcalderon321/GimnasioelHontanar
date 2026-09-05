@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Espacios de Bienestar y Naturaleza | Gimnasio El Hontanar</title>
-    <meta name="description" content="Campus campestre en Bogotá y Chía con zonas verdes, laboratorios modernos, campos deportivos y espacios culturales para el desarrollo integral de los estudiantes.">
+    <meta name="description" content="Espacios de Bienestar y Naturaleza en el Gimnasio El Hontanar. Educación ambiental, proyecto PRAE, campus campestre al norte de Bogotá y formación de líderes sostenibles.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
@@ -15,6 +15,81 @@
     <link rel="stylesheet" href="consejeria-internacional.css">
     <link rel="stylesheet" href="por-que.css">
     <link rel="stylesheet" href="vida-en-el-campus.css">
+    <style>
+        /* Floating background dots */
+        .floating-dots-wrapper {
+            position: absolute !important;
+            inset: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            overflow: hidden !important;
+            pointer-events: none !important;
+            z-index: 1 !important;
+        }
+        .f-dot {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+            opacity: 0.65;
+        }
+        .dot-yellow {
+            background-color: #f59e0b;
+            box-shadow: 0 0 10px rgba(245, 158, 11, 0.4);
+        }
+        .dot-green {
+            background-color: #1ba655;
+            box-shadow: 0 0 10px rgba(27, 166, 85, 0.35);
+        }
+        .dot-cyan {
+            background-color: #0284c7;
+            box-shadow: 0 0 10px rgba(2, 132, 199, 0.35);
+        }
+        .dot-orange {
+            background-color: #ea580c;
+            box-shadow: 0 0 10px rgba(234, 88, 12, 0.35);
+        }
+        .dot-ring {
+            background: transparent !important;
+            border-width: 2.5px;
+            border-style: solid;
+        }
+        .dot-ring-yellow {
+            border-color: #f59e0b;
+            box-shadow: 0 0 8px rgba(245, 158, 11, 0.3);
+        }
+        .dot-ring-green {
+            border-color: #1ba655;
+            box-shadow: 0 0 8px rgba(27, 166, 85, 0.3);
+        }
+        .dot-ring-blue {
+            border-color: #0284c7;
+            box-shadow: 0 0 8px rgba(2, 132, 199, 0.3);
+        }
+
+        /* Floating animations */
+        @keyframes floatSlow1 {
+            0%, 100% { transform: translateY(0) translateX(0) scale(1); opacity: 0.6; }
+            50% { transform: translateY(-28px) translateX(15px) scale(1.18); opacity: 0.95; }
+        }
+        @keyframes floatSlow2 {
+            0%, 100% { transform: translateY(0) translateX(0) scale(1); opacity: 0.5; }
+            50% { transform: translateY(26px) translateX(-18px) scale(0.88); opacity: 0.9; }
+        }
+        @keyframes floatSlow3 {
+            0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.65; }
+            33% { transform: translate(14px, -20px) scale(1.12); opacity: 1; }
+            66% { transform: translate(-10px, -35px) scale(0.95); opacity: 0.75; }
+        }
+        @keyframes pulseGlow {
+            0%, 100% { transform: scale(1); opacity: 0.45; }
+            50% { transform: scale(1.35); opacity: 0.95; }
+        }
+
+        .dot-anim-1 { animation: floatSlow1 7s ease-in-out infinite; }
+        .dot-anim-2 { animation: floatSlow2 10s ease-in-out infinite; }
+        .dot-anim-3 { animation: floatSlow3 13s ease-in-out infinite; }
+        .dot-anim-pulse { animation: pulseGlow 5s ease-in-out infinite; }
+    </style>
 </head>
 <body>
     <!-- Navbar -->
@@ -307,157 +382,173 @@
     <section class="inner-header-banner" style="background-image: url('assets/DSC_0040.JPG');">
         <div class="inner-header-overlay"></div>
         <div class="inner-header-content">
-            <span class="inner-header-kicker">VIDA EN EL CAMPUS</span>
-            <h1 class="inner-header-title" style="font-family: var(--font-lato); font-weight: 700; color: #ffffff; text-shadow: 0 2px 10px rgba(0,0,0,0.3);">Un Campus Verde <br><span style="font-family: var(--font-playfair); font-style: italic; color: var(--yellow); font-weight: bold;">para el Desarrollo Integral</span></h1>
-            
+            <span class="inner-header-kicker">ESPACIOS DE BIENESTAR Y NATURALEZA</span>
+            <h1 class="inner-header-title" style="font-family: var(--font-lato); font-weight: 800; color: #ffffff; text-shadow: 0 2px 10px rgba(0,0,0,0.3);">
+                En El Hontanar activamos la educación <br>
+                ambiental para formar <br>
+                <span style="font-family: var(--font-playfair); font-style: italic; color: var(--yellow); font-weight: bold;">líderes felices y responsables</span>
+            </h1>
         </div>
-        <img src="assets/ChatGPT Image 1 jul 2025, 17_28_04 (3).png" alt="ColibrÃ­" class="header-colibri-float">
+        <img src="assets/ChatGPT Image 1 jul 2025, 17_28_04 (3).png" alt="Colibrí" class="header-colibri-float">
     </section>
-<main class="vida-page">
+<main class="vida-page" style="position: relative; overflow: hidden;">
+        <!-- Floating background dots -->
+        <div class="floating-dots-wrapper" aria-hidden="true">
+            <span class="f-dot dot-yellow dot-anim-1" style="width: 14px; height: 14px; top: 4%; left: 4%;"></span>
+            <span class="f-dot dot-green dot-anim-3" style="width: 18px; height: 18px; top: 9%; right: 5%;"></span>
+            <span class="f-dot dot-ring dot-ring-yellow dot-anim-2" style="width: 24px; height: 24px; top: 16%; left: 3%;"></span>
+            <span class="f-dot dot-cyan dot-anim-1" style="width: 13px; height: 13px; top: 25%; right: 6%;"></span>
+            <span class="f-dot dot-orange dot-anim-pulse" style="width: 15px; height: 15px; top: 35%; left: 5%;"></span>
+            <span class="f-dot dot-green dot-anim-2" style="width: 16px; height: 16px; top: 48%; right: 4%;"></span>
+            <span class="f-dot dot-ring dot-ring-blue dot-anim-3" style="width: 26px; height: 26px; top: 60%; left: 3%;"></span>
+            <span class="f-dot dot-yellow dot-anim-1" style="width: 14px; height: 14px; top: 72%; right: 5%;"></span>
+            <span class="f-dot dot-cyan dot-anim-2" style="width: 13px; height: 13px; top: 84%; left: 4%;"></span>
+            <span class="f-dot dot-ring dot-ring-green dot-anim-pulse" style="width: 22px; height: 22px; top: 93%; right: 6%;"></span>
+        </div>
         <div class="breadcrumbs">
-                <a href="index.html">Inicio</a> &gt; <a href="#">Vida en el Campus</a> &gt; <span class="current">Espacios de Bienestar y Naturaleza</span>
-            </div>
+            <a href="index.html">Inicio</a> &gt; <a href="#">Vida en el Campus</a> &gt; <span class="current">Espacios de Bienestar y Naturaleza</span>
+        </div>
         <div class="vida-container">
-            <!-- Breadcrumbs -->
-            
-
-            <!-- Header -->
-            <div class="vida-header hontanar-scroll-reveal">
-                
-                
-            </div>
-
-            <div class="vida-lead-paragraph-wrapper hontanar-scroll-reveal" style="border-left: 4px solid var(--green); padding-left: 25px; margin: 40px auto 60px auto; max-width: 900px; text-align: left;">
+            <!-- Lead Paragraph -->
+            <div class="vida-lead-paragraph-wrapper hontanar-scroll-reveal" style="border-left: 4px solid var(--green); padding-left: 25px; margin: 40px auto 55px auto; max-width: 900px; text-align: left;">
                 <p style="font-family: var(--font-lato); font-size: 1.15rem; line-height: 1.85; color: var(--blue); font-weight: 400; margin: 0;">
-                    El Gimnasio El Hontanar cuenta con un campus campestre ubicado estratégicamente entre Bogotá y Chía, donde la infraestructura moderna y las amplias zonas verdes crean un entorno ideal para aprender. Nuestros espacios están diseñados para estimular la curiosidad, fomentar el movimiento y promover el bienestar de los estudiantes.
+                    En el Gimnasio El Hontanar aprender también significa cuidar el mundo que habitamos. Aquí, <em>Where your child learns happily</em> cobra sentido todos los días con experiencias reales que conectan naturaleza, ciencia y valores. Si buscas uno de los mejores colegios en Bogotá o colegios al norte de Bogotá que integren bienestar, excelencia académica y propósito, estás en el lugar indicado, aquí encontrarás que nuestro modelo convierte cada jornada escolar en una oportunidad para formar estudiantes conscientes y comprometidos con la naturaleza.
                 </p>
             </div>
 
-
-            <!-- Section Title -->
-            <div class="hontanar-scroll-reveal" style="text-align: center; margin-bottom: 50px;">
-                <h2 style="font-family: var(--font-lato); font-size: 2.3rem; font-weight: 700 !important; color: var(--blue); line-height: 1.25; margin-bottom: 25px; text-align: center; font-style: normal;">
-                    Infraestructura diseñada para la <br>
-                    <span style="font-family: var(--font-playfair); font-style: italic; color: var(--green); font-weight: bold;">excelencia y el bienestar</span>
+            <!-- Section Title & Intro -->
+            <div class="hontanar-scroll-reveal" style="text-align: center; margin-bottom: 35px;">
+                <h2 style="font-family: var(--font-lato); font-size: 2.3rem; font-weight: 800 !important; color: var(--blue); line-height: 1.25; margin-bottom: 20px; text-align: center; font-style: normal;">
+                    Transformamos hábitos desde el aula y <br>
+                    <span style="font-family: var(--font-playfair); font-style: italic; color: var(--green); font-weight: bold;">fortalecemos ciudadanos ambientalmente responsables</span>
                 </h2>
+                <p style="font-family: var(--font-lato); font-size: 1.05rem; line-height: 1.8; color: #4a5568; max-width: 880px; margin: 0 auto 20px auto;">
+                    El <strong>PRAE (Proyecto Ambiental Escolar)</strong> es el marco que guía la cultura ambiental del colegio. Su objetivo es educar estudiantes capaces de comprender su impacto y actuar de manera responsable. Este enfoque se desarrolla a través de tres pilares:
+                </p>
             </div>
 
             <!-- 3 Pillar Model Cards Grid -->
-            <div class="model-cards-grid" style="margin-bottom: 40px;">
+            <div class="model-cards-grid" style="margin-bottom: 35px;">
                 
-                <!-- Card 1: Innovación Académica -->
-                <div class="model-card hontanar-scroll-reveal" style="background-image: url('assets/espacio-aulas-new.jpg'); border-radius: 0; background-position: center 40%;">
+                <!-- Card 1: Educación Ambiental -->
+                <div class="model-card hontanar-scroll-reveal" style="background-image: url('assets/espacio-verde-1.jpg'); border-radius: 0; background-position: center;">
                     <div class="model-card-content">
                         <span class="model-card-num">01</span>
-                        <h3 class="model-card-title">Innovación <span>Académica</span></h3>
-                        <p class="model-card-text">Espacios iluminados y dotados con la tecnología necesaria para el enfoque STEM+H, la investigación y el trabajo colaborativo. Cada aula es un entorno dinámico donde el aprendizaje ocurre de forma natural y significativa.</p>
+                        <h3 class="model-card-title">Educación <span>Ambiental</span></h3>
+                        <p class="model-card-text">Integración transversal de la conciencia ecológica, conectando la ciencia con valores y hábitos cotidianos para comprender el impacto individual y colectivo.</p>
                     </div>
                 </div>
 
-                <!-- Card 2: Creatividad -->
-                <div class="model-card hontanar-scroll-reveal" style="background-image: url('assets/espacio-arte-new.jpg'); border-radius: 0; background-position: center;">
+                <!-- Card 2: Manejo y Minimización de Residuos -->
+                <div class="model-card hontanar-scroll-reveal" style="background-image: url('assets/espacio-campus-4.jpg'); border-radius: 0; background-position: center;">
                     <div class="model-card-content">
                         <span class="model-card-num">02</span>
-                        <h3 class="model-card-title">Creatividad y <span>Cultura</span></h3>
-                        <p class="model-card-text">Salones especializados de música, artes plásticas y teatro que permiten a los estudiantes explorar su creatividad and sensibilidad. La expresión artística es parte fundamental de la formación integral en el Hontanar.</p>
+                        <h3 class="model-card-title">Manejo y <span>Residuos</span></h3>
+                        <p class="model-card-text">Prácticas activas de separación en la fuente, reciclaje y minimización de residuos que fomentan una cultura de consumo responsable en toda la comunidad.</p>
                     </div>
                 </div>
 
-                <!-- Card 3: Deporte y Salud -->
-                <div class="model-card hontanar-scroll-reveal" style="background-image: url('assets/espacio-deporte-new.png'); border-radius: 0; background-position: center 30%;">
+                <!-- Card 3: Adaptación al Cambio Climático -->
+                <div class="model-card hontanar-scroll-reveal" style="background-image: url('assets/espacio-campus-1.jpg'); border-radius: 0; background-position: center;">
                     <div class="model-card-content">
                         <span class="model-card-num">03</span>
-                        <h3 class="model-card-title">Deporte y <span>Salud</span></h3>
-                        <p class="model-card-text">Canchas de fútbol, espacios múltiples y zonas de juego donde el deporte y el movimiento fortalecen el carácter y la salud física. El movimiento y la recreación son parte esencial de cada jornada escolar.</p>
+                        <h3 class="model-card-title">Adaptación al <span>Cambio Climático</span></h3>
+                        <p class="model-card-text">Estrategias pedagógicas y proyectos vivenciales que forman criterios sólidos para tomar decisiones sostenibles y liderar la protección del entorno.</p>
                     </div>
                 </div>
 
+            </div>
+
+            <!-- Estrategias pedagógicas PRAE -->
+            <div class="hontanar-scroll-reveal" style="background: #f8fafc; border-left: 4px solid var(--green); padding: 22px 28px; max-width: 900px; margin: 0 auto 50px auto;">
+                <p style="font-family: var(--font-lato); font-size: 1.02rem; line-height: 1.75; color: #4a5568; margin: 0;">
+                    Promovemos estrategias pedagógicas como <strong>campañas institucionales, prácticas de consumo responsable y proyectos interdisciplinarios</strong> que permiten que los estudiantes integren el cuidado de la naturaleza a su vida diaria. La meta es que los niños y jóvenes puedan formar criterios sólidos para tomar decisiones sostenibles para el medio ambiente.
+                </p>
             </div>
 
         </div><!-- fin vida-container -->
 
-        <!-- SECCIÓN DE TRANSICIÓN "CAMPUS VERDE" -->
-        <div class="pq-kd-banner-container" style="margin-top: 60px; margin-bottom: 40px;">
-            <!-- Background Watermark text (Marquee scrolling) -->
-            <div class="pq-kd-marquee-wrapper">
-                <div class="pq-kd-marquee-track line-1">
-                    <span>Espacios de Bienestar • Naturaleza • Aula Viva • Campus Campestre •&nbsp;</span>
-                    <span>Espacios de Bienestar • Naturaleza • Aula Viva • Campus Campestre •&nbsp;</span>
-                </div>
-                <div class="pq-kd-marquee-track line-2 track-reverse">
-                    <span>Conciencia Ambiental • Aire Puro • Zonas Verdes • Gimnasio El Hontanar •&nbsp;</span>
-                    <span>Conciencia Ambiental • Aire Puro • Zonas Verdes • Gimnasio El Hontanar •&nbsp;</span>
-                </div>
-            </div>
-            
-            <!-- Vertical grid line -->
-            <div class="pq-kd-grid-line"></div>
-            
-            <!-- Centered Card -->
-            <div class="pq-kd-card hontanar-scroll-reveal">
-                <h3 class="pq-kd-title">
-                    La Naturaleza como <br><span class="serif-italic-yellow">Aula Viva</span>
-                </h3>
-                <p class="pq-kd-subtitle">
-                    Las amplias zonas verdes del Hontanar no son solo para el descanso; son aulas vivas. El contacto diario con la naturaleza reduce el estrés, mejora la concentración y fortalece la conciencia ambiental de los estudiantes, desde preescolar hasta bachillerato.
+        <!-- Section: Conectamos naturaleza, bienestar y excelencia académica en un campus que inspira (Split layout: Foto derecha) -->
+        <section class="pq-split-section hontanar-scroll-reveal" style="margin-top: 50px; margin-bottom: 75px;">
+            <!-- Left Side: Content -->
+            <div class="pq-split-left" style="display: flex; flex-direction: column; justify-content: center;">
+                <h2 class="pq-split-title" style="font-family: var(--font-lato) !important; font-style: normal !important; font-size: 2.2rem; font-weight: 800; color: var(--blue); line-height: 1.25; margin-bottom: 22px;">
+                    Conectamos naturaleza, bienestar y excelencia académica <br>
+                    <span style="font-family: var(--font-playfair); font-style: italic; color: #1BA655; font-weight: 700;">en un campus que inspira</span>
+                </h2>
+                <p style="font-family: var(--font-lato); font-size: 1.02rem; line-height: 1.8; color: #4a5568; margin-bottom: 18px;">
+                    El entorno natural del Hontanar, un colegio en el norte de Bogotá, con amplias zonas verdes, convierte el campus en un <strong>laboratorio vivo</strong>. Esta relación directa con el territorio fortalece el sentido de pertenencia y posiciona al colegio como una opción relevante para las familias que buscan <strong>colegios en Chía o alternativas de alta calidad en los colegios en Bogotá</strong>, que integran bienestar, naturaleza y excelencia académica.
+                </p>
+                <p style="font-family: var(--font-lato); font-size: 1rem; line-height: 1.75; color: #4a5568; margin-bottom: 0; border-left: 3px solid var(--yellow); padding-left: 16px; font-style: italic;">
+                    La propuesta ambiental del Hontanar se articula con el <strong>Bachillerato Internacional</strong> a través del componente <strong>CAS</strong>, donde creatividad, actividad y servicio se traducen en proyectos que impactan la comunidad. Además, tenemos la asignatura <strong>Sistemas Ambientales y Sociedades</strong> que desarrolla el pensamiento crítico y habilidades del siglo XXI como la <a href="sostenibilidad.html" style="color: #1BA655; font-weight: 700; text-decoration: underline; text-underline-offset: 3px;">sostenibilidad</a>.
                 </p>
             </div>
-        </div>
 
-
-        <!-- 3. GALERÍA ESTILO HOME (INFINITE SCROLL CAROUSEL) -->
-        <section class="filo-gallery-section" style="padding: 60px 0; background-color: #ffffff;">
-            <div class="filo-gallery-header hontanar-scroll-reveal" style="text-align: center; margin-bottom: 40px;">
-                <h4 class="kicker" style="font-family: var(--font-lato); color: var(--green); font-size: 0.85rem; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 14px; text-align: center;">NUESTRA COMUNIDAD</h4>
-                <h2 class="filo-section-title" style="font-family: var(--font-lato); font-size: 2.6rem; font-weight: 700; color: var(--blue); line-height: 1.2; text-align: center;">La vida en el <span>Hontanar</span></h2>
-            </div>
-            
-            <div class="filo-galeria-carousel hontanar-scroll-reveal">
-                <div class="filo-carousel-track-scroll">
-                    <img src="assets/espacio-campus-1.jpg" alt="Campus Verde">
-                    <img src="assets/espacio-campus-3.jpg" alt="Edificio Principal">
-                    <img src="assets/espacio-verde-1.jpg" alt="Zonas Verdes">
-                    <img src="assets/espacio-campus-4.jpg" alt="Senderos Ecológicos">
-                    <img src="assets/espacio-campus-2.jpg" alt="Vista Campus">
-                    <img src="assets/espacio-aulas-1.jpg" alt="Aulas Activas">
-                    <img src="assets/espacio-aulas-2.jpg" alt="Laboratorios STEM+H">
-                    <img src="assets/espacio-aulas-3.jpg" alt="Investigación">
-                    <img src="assets/espacio-deporte-1.jpg" alt="Canchas Deportivas">
-                    <img src="assets/espacio-deporte-2.jpg" alt="Recreación Activa">
-                    <!-- Duplicadas para efecto infinito -->
-                    <img src="assets/espacio-campus-1.jpg" alt="Campus Verde">
-                    <img src="assets/espacio-campus-3.jpg" alt="Edificio Principal">
-                    <img src="assets/espacio-verde-1.jpg" alt="Zonas Verdes">
-                    <img src="assets/espacio-campus-4.jpg" alt="Senderos Ecológicos">
-                    <img src="assets/espacio-campus-2.jpg" alt="Vista Campus">
-                    <img src="assets/espacio-aulas-1.jpg" alt="Aulas Activas">
-                    <img src="assets/espacio-aulas-2.jpg" alt="Laboratorios STEM+H">
-                    <img src="assets/espacio-aulas-3.jpg" alt="Investigación">
-                    <img src="assets/espacio-deporte-1.jpg" alt="Canchas Deportivas">
-                    <img src="assets/espacio-deporte-2.jpg" alt="Recreación Activa">
-                </div>
+            <!-- Right Side: Photo and accents -->
+            <div class="pq-split-right">
+                <div class="pq-split-yellow-accent" style="bottom: -20px; left: -20px;"></div>
+                <div class="pq-split-photo-bg" style="background-image: url('assets/Hontanar-WEB-09-2022-326-ALTA.jpg'); background-position: center; border-radius: 0; overflow: hidden;"></div>
+                <img src="assets/Recurso 15.svg" class="pq-split-svg-decorator" alt="Decoración">
             </div>
         </section>
 
 
-        <!-- TESTIMONIO/DESCRIPCIÓN EN SPLIT PANEL -->
-        <section class="filo-testimonial-section" style="padding: 60px 20px 100px 20px; background-color: #ffffff;">
+
+
+        <!-- Section: Integramos educación bilingüe, sostenibilidad y visión global (Split layout: Foto izquierda) -->
+        <section class="pq-split-section pq-split-reverse hontanar-scroll-reveal" style="margin-top: 0; margin-bottom: 85px;">
+            <!-- Left Side: Content (ubicado a la derecha por pq-split-reverse) -->
+            <div class="pq-split-left" style="display: flex; flex-direction: column; justify-content: center;">
+                <h2 class="pq-split-title" style="font-family: var(--font-lato) !important; font-style: normal !important; font-size: 2.2rem; font-weight: 800; color: var(--blue); line-height: 1.25; margin-bottom: 22px;">
+                    Integramos educación bilingüe, <br>
+                    <span style="font-family: var(--font-playfair); font-style: italic; color: #1BA655; font-weight: 700;">sostenibilidad y visión global</span>
+                </h2>
+                <p style="font-family: var(--font-lato); font-size: 1.02rem; line-height: 1.8; color: #4a5568; margin-bottom: 18px;">
+                    En un contexto donde los padres valoran una educación bilingüe con enfoque ético, el Hontanar consolida un modelo de <strong>Colegio Bilingüe Internacional</strong> que conecta ciencia, conciencia ambiental y formación integral durante todo el proceso académico, resaltando su valor entre los colegios calendario A de Bogotá.
+                </p>
+                <p style="font-family: var(--font-lato); font-size: 1rem; line-height: 1.75; color: #4a5568; margin-bottom: 0; border-left: 3px solid var(--yellow); padding-left: 16px; font-style: italic;">
+                    Las iniciativas del PRAE evolucionan cada año, incorporando acciones relacionadas con el <strong>cuidado del río Bogotá, la gestión eficiente de recursos</strong> y la participación activa de toda la comunidad educativa. El resultado es un ambiente donde los estudiantes se sienten felices, seguros y responsables de preservar su entorno natural cercano.
+                </p>
+            </div>
+
+            <!-- Right Side (ubicado a la izquierda por pq-split-reverse): Foto y acentos -->
+            <div class="pq-split-right">
+                <div class="pq-split-yellow-accent" style="bottom: -20px; right: -20px; left: auto;"></div>
+                <div class="pq-split-photo-bg" style="background-image: url('assets/Hontanar-WEB-09-2022-318-ALTA.jpg'); background-position: center 20%; border-radius: 0; overflow: hidden;"></div>
+                <img src="assets/Recurso 15.svg" class="pq-split-svg-decorator" style="top: -14px; left: -40px; right: auto;" alt="Decoración">
+            </div>
+        </section>
+
+        <!-- Section: Cierre / Agenda tu visita (Panel con Escudo Hontanar) -->
+        <section class="filo-testimonial-section" style="padding: 40px 20px 100px 20px; background-color: #ffffff; position: relative; overflow: hidden;">
+            <!-- Floating dots background around shield section -->
+            <div class="floating-dots-wrapper" aria-hidden="true">
+                <span class="f-dot dot-yellow dot-anim-1" style="width: 14px; height: 14px; top: 14%; left: 5%;"></span>
+                <span class="f-dot dot-green dot-anim-2" style="width: 12px; height: 12px; top: 24%; right: 6%;"></span>
+                <span class="f-dot dot-ring dot-ring-yellow dot-anim-3" style="width: 22px; height: 22px; top: 48%; left: 4%;"></span>
+                <span class="f-dot dot-ring dot-ring-blue dot-anim-1" style="width: 20px; height: 20px; bottom: 18%; right: 5%;"></span>
+                <span class="f-dot dot-yellow dot-anim-3" style="width: 12px; height: 12px; bottom: 12%; left: 7%;"></span>
+                <span class="f-dot dot-cyan dot-anim-2" style="width: 10px; height: 10px; top: 75%; right: 8%;"></span>
+            </div>
             <div class="filo-testimonial-split hontanar-scroll-reveal">
                 <!-- Shield decorator -->
                 <img src="assets/Capa_2_xA0_Imagen.png" alt="Escudo Hontanar" class="testimonial-split-shield">
                 
-                <!-- Left Column: Quote and Author -->
-                <div class="testimonial-split-left">
-                    <span class="testimonial-split-kicker">El valor pedagógico de la naturaleza</span>
-                    <blockquote class="testimonial-split-quote" style="font-size: 1.05rem; line-height: 1.65;">
-                        "Las amplias zonas verdes del Hontanar no son solo para el descanso; son aulas vivas. El contacto diario con la naturaleza reduce el estrés, mejora la concentración y fortalece la conciencia ambiental desde preescolar hasta bachillerato. Aquí, los descansos son espacios de socialización, aire puro y recreación activa.
-                        <br><br>
-                        Estudiar en un entorno campestre permite a niños y jóvenes desarrollarse en un ambiente tranquilo que favorece la autonomía y el pensamiento reflexivo."
-                    </blockquote>
+                <!-- Left Column: Content -->
+                <div class="testimonial-split-left" style="padding: 48px 50px; background-color: var(--blue); display: flex; flex-direction: column; justify-content: center; gap: 14px;">
+                    <p style="font-family: var(--font-lato); font-size: 0.98rem; line-height: 1.65; color: rgba(255, 255, 255, 0.95); margin: 0;">
+                        Elegir El Hontanar significa optar por uno de los <strong>mejores colegios de Bogotá</strong>, que entiende que pequeñas acciones generan grandes cambios y que la excelencia académica también se mide por formar ciudadanos capaces de liderar un futuro sostenible.
+                    </p>
+                    <p style="font-family: var(--font-playfair); font-style: italic; font-size: 1.02rem; line-height: 1.6; color: #ffffff; margin: 0; border-left: 3px solid var(--yellow); padding-left: 15px; font-weight: 600;">
+                        <a href="agenda-visita.html" style="color: var(--yellow); font-weight: 700; text-decoration: underline; text-underline-offset: 3px;">Agenda tu visita</a> al Gimnasio El Hontanar y descubre cómo nuestros estudiantes aprenden a cuidar el planeta con prácticas de <a href="sostenibilidad.html" style="color: var(--yellow); font-weight: 700; text-decoration: underline; text-underline-offset: 3px;">sostenibilidad</a>. Una experiencia que forma líderes conscientes y felices.
+                    </p>
+                    <div style="margin-top: 6px;">
+                        <a href="agenda-visita.html" class="btn btn-yellow btn-nav" style="display: inline-flex; align-items: center; gap: 8px; padding: 12px 28px; font-weight: 700;">Agenda tu visita <span class="arrow">&gt;</span></a>
+                    </div>
                 </div>
                 
                 <!-- Right Column: Image -->
-                <div class="testimonial-split-photo" style="background-image: url('assets/Hontanar-WEB-09-2022-318-ALTA.jpg'); background-position: center 20%;">
+                <div class="testimonial-split-photo" style="background-image: url('assets/kiva-cierre-0875.jpg'); background-position: center;">
                 </div>
             </div>
         </section>

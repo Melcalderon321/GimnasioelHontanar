@@ -1075,6 +1075,40 @@
     }
 }
 
+/* Split Section Variante Reversa (Foto a la izquierda, Texto a la derecha) */
+.pq-split-section.pq-split-reverse {
+    grid-template-columns: 0.95fr 1.05fr;
+}
+
+.pq-split-section.pq-split-reverse .pq-split-left {
+    order: 2;
+    padding: 60px calc((100vw - 1140px) / 2 + 20px) 60px 50px;
+}
+
+.pq-split-section.pq-split-reverse .pq-split-right {
+    order: 1;
+}
+
+@media (max-width: 1200px) {
+    .pq-split-section.pq-split-reverse .pq-split-left {
+        padding-right: 50px;
+        padding-left: 40px;
+    }
+}
+
+@media (max-width: 900px) {
+    .pq-split-section.pq-split-reverse {
+        grid-template-columns: 1fr;
+    }
+    .pq-split-section.pq-split-reverse .pq-split-left {
+        order: 1;
+        padding: 40px 25px;
+    }
+    .pq-split-section.pq-split-reverse .pq-split-right {
+        order: 2;
+    }
+}
+
 .pq-split-title {
     font-family: var(--font-lato);
     font-size: 1.95rem;
