@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -15,6 +15,80 @@
     <link rel="stylesheet" href="multilinguismo.css">
     <link rel="stylesheet" href="vida-en-el-campus.css">
     <style>
+        /* Floating background dots */
+        .floating-dots-wrapper {
+            position: absolute !important;
+            inset: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            overflow: hidden !important;
+            pointer-events: none !important;
+            z-index: 1 !important;
+        }
+        .f-dot {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+            opacity: 0.65;
+        }
+        .dot-yellow {
+            background-color: #f59e0b;
+            box-shadow: 0 0 10px rgba(245, 158, 11, 0.4);
+        }
+        .dot-green {
+            background-color: #1ba655;
+            box-shadow: 0 0 10px rgba(27, 166, 85, 0.35);
+        }
+        .dot-cyan {
+            background-color: #0284c7;
+            box-shadow: 0 0 10px rgba(2, 132, 199, 0.35);
+        }
+        .dot-orange {
+            background-color: #ea580c;
+            box-shadow: 0 0 10px rgba(234, 88, 12, 0.35);
+        }
+        .dot-ring {
+            background: transparent !important;
+            border-width: 2.5px;
+            border-style: solid;
+        }
+        .dot-ring-yellow {
+            border-color: #f59e0b;
+            box-shadow: 0 0 8px rgba(245, 158, 11, 0.3);
+        }
+        .dot-ring-green {
+            border-color: #1ba655;
+            box-shadow: 0 0 8px rgba(27, 166, 85, 0.3);
+        }
+        .dot-ring-blue {
+            border-color: #0284c7;
+            box-shadow: 0 0 8px rgba(2, 132, 199, 0.3);
+        }
+
+        /* Floating animations */
+        @keyframes floatSlow1 {
+            0%, 100% { transform: translateY(0) translateX(0) scale(1); opacity: 0.6; }
+            50% { transform: translateY(-28px) translateX(15px) scale(1.18); opacity: 0.95; }
+        }
+        @keyframes floatSlow2 {
+            0%, 100% { transform: translateY(0) translateX(0) scale(1); opacity: 0.5; }
+            50% { transform: translateY(26px) translateX(-18px) scale(0.88); opacity: 0.9; }
+        }
+        @keyframes floatSlow3 {
+            0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.65; }
+            33% { transform: translate(14px, -20px) scale(1.12); opacity: 1; }
+            66% { transform: translate(-10px, -35px) scale(0.95); opacity: 0.75; }
+        }
+        @keyframes pulseGlow {
+            0%, 100% { transform: scale(1); opacity: 0.45; }
+            50% { transform: scale(1.35); opacity: 0.95; }
+        }
+
+        .dot-anim-1 { animation: floatSlow1 7s ease-in-out infinite; }
+        .dot-anim-2 { animation: floatSlow2 10s ease-in-out infinite; }
+        .dot-anim-3 { animation: floatSlow3 13s ease-in-out infinite; }
+        .dot-anim-pulse { animation: pulseGlow 5s ease-in-out infinite; }
+
         /* ══════════════════════════════════════
            BENTO GRID 2×2 — INNOVACIÓN
            Estilo inspirado en la referencia
@@ -55,9 +129,9 @@
             background: linear-gradient(
                 to top,
                 rgba(12, 25, 60, 0.98) 0%,
-                rgba(12, 25, 60, 0.8) 22%,
-                rgba(12, 25, 60, 0.25) 45%,
-                rgba(12, 25, 60, 0) 70%
+                rgba(12, 25, 60, 0.90) 45%,
+                rgba(12, 25, 60, 0.45) 75%,
+                rgba(12, 25, 60, 0.1) 100%
             );
         }
         .ib-card-photo .ib-card-body {
@@ -82,7 +156,7 @@
         }
 
         .ib-card-photo.pilar-card {
-            min-height: 480px;
+            min-height: 560px;
             border-radius: 0 !important;
         }
 
@@ -91,15 +165,15 @@
             opacity: 0;
             margin-top: 0 !important;
             overflow: hidden;
-            transition: max-height 0.45s cubic-bezier(0.25, 0.8, 0.25, 1), 
+            transition: max-height 0.5s cubic-bezier(0.25, 0.8, 0.25, 1), 
                         opacity 0.4s ease, 
-                        margin-top 0.45s cubic-bezier(0.25, 0.8, 0.25, 1);
+                        margin-top 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
         }
 
         .pilar-card:hover .ib-card-desc {
-            max-height: 180px;
+            max-height: 450px;
             opacity: 1;
-            margin-top: 12px !important;
+            margin-top: 14px !important;
         }
 
         /* ── Category pill label ── */
@@ -491,97 +565,35 @@
         <div class="inner-header-overlay"></div>
         <div class="inner-header-content">
             <span class="inner-header-kicker">TECNOSER</span>
-            <h1 class="inner-header-title">Innovación <span>que transforma</span></h1>
-            
+            <h1 class="inner-header-title">Educación innovadora <br><span style="font-family: var(--font-playfair); font-style: italic; color: var(--yellow); font-weight: bold;">aplicada en la experiencia diaria</span></h1>
         </div>
         <img src="assets/robot-tecnoser.png" alt="Robot TecnoSer" class="header-colibri-float">
     </section>
 <main class="vida-page">
         <div class="breadcrumbs">
-                <a href="index.html">Inicio</a> &gt; <a href="#">TecnoSer</a> &gt; <span class="current">Innovación</span>
-            </div>
-            <div class="hontanar-scroll-reveal" style="display: grid; grid-template-columns: 1.25fr 1fr; gap: 50px; text-align: left; max-width: 1100px; margin: 40px auto 60px auto; align-items: start; padding: 0 20px;">
-                <!-- Left Column: Title -->
-                <h2 style="font-family: var(--font-lato); font-size: 2.4rem; font-weight: 700; color: var(--blue); line-height: 1.25; margin: 0;">
-                    La innovación no es una materia: <br>
-                    <span style="font-family: var(--font-playfair); font-style: italic; color: var(--green); font-weight: bold;">es una forma de pensar</span>
-                </h2>
-                
-                <!-- Right Column: Description -->
-                <p style="font-family: var(--font-lato); font-size: 1.15rem; line-height: 1.75; color: #4a5568; margin: 0; padding-top: 6px;">
-                    En el Gimnasio El Hontanar formamos ciudadanos capaces de identificar problemas auténticos, proponer soluciones creativas y transformar su entorno con un profundo sentido crítico.
+            <a href="index.html">Inicio</a> &gt; <a href="#">TecnoSer</a> &gt; <span class="current">Innovación</span>
+        </div>
+        
+        <div class="hontanar-scroll-reveal" style="max-width: 1100px; margin: 40px auto 30px auto; text-align: left; padding: 0 20px;">
+            <h2 style="font-family: var(--font-lato); font-size: 2.15rem; font-weight: 700; color: var(--blue); line-height: 1.3; margin: 0;">
+                Tecnología educativa con propósito <span style="font-family: var(--font-playfair); font-style: italic; color: var(--green); font-weight: bold;">en El Hontanar</span>, <br>
+                uno de los mejores Colegios en Bogotá y Chía
+            </h2>
+        </div>
+
+        <div class="vida-container">
+            <div class="vida-lead-paragraph-wrapper hontanar-scroll-reveal" style="border-left: 4px solid var(--green); padding-left: 25px; margin: 0 auto 50px auto; max-width: 1100px; text-align: left;">
+                <p style="font-family: var(--font-lato); font-size: 1.12rem; line-height: 1.8; color: var(--blue); font-weight: 400; margin: 0; margin-bottom: 14px;">
+                    En el Gimnasio El Hontanar, la innovación es una experiencia que se vive cada día y que transforma el aula en un espacio de descubrimiento, bienestar y crecimiento personal. Como uno de los Colegios privados en Bogotá que ofrece una formación integral, entendemos que la tecnología educativa debe estar al servicio de la <strong style="color: var(--green); font-weight: bold;">curiosidad, la felicidad y la salud mental</strong> de nuestros estudiantes.
+                </p>
+                <p style="font-family: var(--font-lato); font-size: 1.05rem; line-height: 1.8; color: #4a5568; margin: 0;">
+                    Cada proyecto nace de una pregunta cercana a su realidad: ¿cómo mejorar el entorno escolar? ¿Cómo aportar soluciones al cuidado del medio ambiente? ¿Qué herramientas pueden facilitar la vida diaria de su comunidad? Desde estas inquietudes, niños, niñas y jóvenes <strong style="color: var(--blue); font-weight: bold;">desarrollan aplicaciones, diseñan dispositivos y construyen prototipos</strong> que conectan el aprendizaje con la vida real.
                 </p>
             </div>
-        <div class="vida-container">
-            <!-- Breadcrumbs -->
-            
-
-            <!-- Header -->
-            <div class="vida-header hontanar-scroll-reveal">
-                
-                
-            </div>
-
-            <div class="hontanar-scroll-reveal" style="max-width: 1140px; margin: 0 auto 50px auto; padding: 0 20px;">
-                <!-- Modern Bento Grid layout from multilinguismo -->
-                <div class="multi-bento-grid" style="grid-template-columns: repeat(3, 1fr); gap: 25px; margin-top: 40px; text-align: left;">
-                    
-                    <!-- Card 1: Identificar -->
-                    <div class="multi-modern-card hontanar-scroll-reveal">
-                        <div class="multi-card-image-wrap">
-                            <img src="assets/espacio-aulas-2.jpg" alt="Identificar problemas" class="multi-card-img">
-                        </div>
-                        <div class="multi-card-badge" style="background-color: #1ba655;">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="white" class="multi-badge-icon">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-                            </svg>
-                        </div>
-                        <div class="multi-card-body">
-                            <h3>Identificar <span class="title-serif-italic">problemas</span></h3>
-                            <p>Problemas reales de su entorno y comunidad para proponer soluciones aplicables.</p>
-                        </div>
-                    </div>
-
-                    <!-- Card 2: Idear -->
-                    <div class="multi-modern-card hontanar-scroll-reveal">
-                        <div class="multi-card-image-wrap">
-                            <img src="assets/espacio-aulas-3.jpg" alt="Idear soluciones" class="multi-card-img">
-                        </div>
-                        <div class="multi-card-badge" style="background-color: #f59e0b;">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="white" class="multi-badge-icon">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
-                            </svg>
-                        </div>
-                        <div class="multi-card-body">
-                            <h3>Idear <span class="title-serif-italic">soluciones</span></h3>
-                            <p>Soluciones creativas con herramientas de metodologías ágiles como <strong>Design Thinking</strong>.</p>
-                        </div>
-                    </div>
-
-                    <!-- Card 3: Prototipar -->
-                    <div class="multi-modern-card hontanar-scroll-reveal">
-                        <div class="multi-card-image-wrap">
-                            <img src="assets/espacio-deporte-2.jpg" alt="Prototipar proyectos" class="multi-card-img">
-                        </div>
-                        <div class="multi-card-badge" style="background-color: #254478;">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="white" class="multi-badge-icon">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.43l-1.003.828c-.293.241-.438.613-.43.992a7.723 7.723 0 0 1 0 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.43l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 0 1 0-.255c.007-.378-.138-.75-.43-.991l-1.004-.827a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.28Z" />
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-                            </svg>
-                        </div>
-                        <div class="multi-card-body">
-                            <h3>Prototipar <span class="title-serif-italic">proyectos</span></h3>
-                            <p>Proyectos reales y funcionales usando la tecnología e infraestructura disponible.</p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
         </div><!-- Cierre vida-container para hacer el parallax de ancho completo -->
 
         <!-- Interactive Split Panel (Estilo Kent Denver, No-Slider) -->
-        <section class="pq-split-carousel-section hontanar-scroll-reveal" style="margin-top: 80px; margin-bottom: 90px;">
+        <section class="pq-split-carousel-section hontanar-scroll-reveal" style="margin-top: 60px; margin-bottom: 85px;">
             <!-- Rectangulito amarillo decorativo detrás de la foto -->
             <div class="pq-carousel-yellow-accent" style="left: -20px; bottom: -20px;"></div>
             <!-- SVG Decorador verde mitad dentro mitad fuera en el borde superior derecho de la imagen -->
@@ -609,16 +621,16 @@
                 </div>
 
                 <!-- Slides Content Wrapper -->
-                <div class="pq-carousel-slides-wrapper" style="margin-top: 20px;">
+                <div class="pq-carousel-slides-wrapper" style="margin-top: 15px;">
                     <!-- Content Block -->
                     <div class="pq-carousel-slide active">
-                        <span class="pq-slide-kicker" style="color: var(--green); font-weight: bold; text-transform: uppercase;">PREGUNTA CLAVE</span>
-                        <h3 class="pq-slide-title" style="font-size: 2.2rem; font-family: var(--font-lato); font-weight: 800; color: var(--blue); margin-bottom: 25px; line-height: 1.2; text-transform: none;">
-                            ¿Cómo convertir la creatividad de los estudiantes <span style="font-family: var(--font-playfair); font-style: italic; color: var(--green); font-weight: bold;">en soluciones reales que impacten su comunidad?</span>
+                        <span class="pq-slide-kicker" style="color: var(--green); font-weight: bold; text-transform: uppercase;">METODOLOGÍAS ACTIVAS</span>
+                        <h3 class="pq-slide-title" style="font-size: 2.1rem; font-family: var(--font-lato); font-weight: 800; color: var(--blue); margin-bottom: 22px; line-height: 1.25; text-transform: none;">
+                            Innovación que se convierte en <br><span style="font-family: var(--font-playfair); font-style: italic; color: var(--green); font-weight: bold;">aprendizaje con propósito</span>
                         </h3>
-                        <div class="pq-slide-description" style="color: #4a5568; line-height: 1.7; font-size: 0.98rem; font-family: var(--font-lato);">
-                            <p style="margin-bottom: 16px;">En el Gimnasio El Hontanar, la innovación se vive como un proceso que evoluciona en cada etapa escolar, desde preescolar hasta bachillerato. Los estudiantes identifican problemas reales, aplican metodologías como Design Thinking y desarrollan soluciones con apoyo de la tecnología.</p>
-                            <p style="margin-bottom: 25px; border-left: 3px solid var(--yellow); padding-left: 15px; font-style: italic; color: #4a5568; font-weight: 500;">En secundaria, fortalecen estas habilidades mediante proyectos de emprendimiento y sostenibilidad, acompañados por docentes especializados, transformando sus ideas en soluciones con impacto real.</p>
+                        <div class="pq-slide-description" style="color: #4a5568; line-height: 1.75; font-size: 0.98rem; font-family: var(--font-lato);">
+                            <p style="margin-bottom: 16px;">La innovación se materializa en metodologías activas que integran el pensamiento crítico, la creatividad y el trabajo colaborativo, habilidades que se enseñan en los mejores colegios en Bogotá y Chía. A través de proyectos interdisciplinarios, los estudiantes aprenden a investigar, planear, probar y mejorar sus ideas, entendiendo que el error también hace parte del proceso de descubrimiento.</p>
+                            <p style="margin-bottom: 0; border-left: 3px solid var(--yellow); padding-left: 15px; font-style: italic; color: #254478; font-weight: 600;">En el Gimnasio El Hontanar, la innovación transforma el aula en un espacio dinámico donde los estudiantes participan activamente en su aprendizaje. Reconocemos que cada estudiante tiene intereses y ritmos distintos, por lo que el colegio fortalece sus estrategias pedagógicas para potenciar la motivación, el bienestar y el buen desempeño académico, en sintonía con las necesidades del contexto educativo colombiano.</p>
                         </div>
                     </div>
                 </div>
@@ -628,119 +640,91 @@
         <div class="vida-container">
 
             <!-- Título de Sección Bento -->
-            <div class="vida-header hontanar-scroll-reveal" style="margin-top: 80px; margin-bottom: 20px; text-align: center;">
-                <span class="ib-chip" style="background: rgba(46, 117, 89, 0.05); border: 1.5px solid var(--green); color: var(--green); font-family: var(--font-lato); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; padding: 6px 16px; border-radius: 999px; display: inline-block; margin-bottom: 16px;">TRES PILARES DE NUESTRA CULTURA INNOVADORA</span>
+            <div class="vida-header hontanar-scroll-reveal" style="margin-top: 50px; margin-bottom: 25px; text-align: center;">
+                <span class="ib-chip" style="background: rgba(46, 117, 89, 0.05); border: 1.5px solid var(--green); color: var(--green); font-family: var(--font-lato); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; padding: 6px 16px; border-radius: 999px; display: inline-block; margin-bottom: 16px;">TECNOLOGÍA EDUCATIVA</span>
                 <h2 class="vida-section-title" style="font-size: 2.2rem; font-family: var(--font-lato); font-weight: 700; font-style: normal; color: var(--blue); line-height: 1.3; text-align: center;">
-                    Formamos mentes que crean,<br>
-                    <span style="font-family: var(--font-playfair); font-style: italic; color: var(--green); font-weight: bold;">no solo que repiten</span>
+                    Tecnología educativa para resolver <br>
+                    <span style="font-family: var(--font-playfair); font-style: italic; color: var(--green); font-weight: bold;">retos dentro del colegio</span>
                 </h2>
             </div>
 
-            <!-- Sección 2: Tres Pilares de Nuestra Cultura Innovadora -->
+            <!-- Sección 2: Tres Pilares -->
             <div class="innov-bento-grid hontanar-scroll-reveal">
 
-                <!-- Card 1: Creatividad -->
+                <!-- Card 1: Tecnología con propósito humano -->
                 <div class="ib-card ib-card-photo pilar-card ib-photo-1">
                     <div class="ib-card-overlay"></div>
                     <div class="ib-card-body">
                         <span class="pilar-number">01</span>
-                        <h3 class="ib-card-title" style="font-family: var(--font-lato); font-weight: 700; color: #fff; line-height: 1.2; font-size: 1.6rem; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">
-                            Pensamiento <br>
-                            <span style="font-family: var(--font-playfair); font-style: italic; color: var(--yellow); font-weight: bold;">creativo aplicado</span>
+                        <h3 class="ib-card-title" style="font-family: var(--font-lato); font-weight: 700; color: #fff; line-height: 1.2; font-size: 1.55rem; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">
+                            Tecnología con <br>
+                            <span style="font-family: var(--font-playfair); font-style: italic; color: var(--yellow); font-weight: bold;">propósito humano</span>
                         </h3>
-                        <p class="ib-card-desc" style="font-family: var(--font-lato); font-size: 0.88rem; line-height: 1.5; color: rgba(255,255,255,0.9); margin-top: 12px; text-shadow: 0 1px 2px rgba(0,0,0,0.4);">
-                            Nuestros estudiantes aprenden a crear con la tecnología. A través de retos de design thinking y proyectos interdisciplinarios, desarrollan una mentalidad innovadora que les permite ver oportunidades donde otros ven problemas.
+                        <p class="ib-card-desc" style="font-family: var(--font-lato); font-size: 0.88rem; line-height: 1.5; color: rgba(255,255,255,0.95); margin-top: 12px; text-shadow: 0 1px 2px rgba(0,0,0,0.4);">
+                            La tecnología en el aula no reemplaza la experiencia humana: la potencia. Docentes expertos acompañan cada etapa para que el uso de herramientas digitales sea consciente, ético y orientado a resultados con impacto social. Así, los estudiantes no solo adquieren conocimientos técnicos, sino que desarrollan sensibilidad frente a su entorno y confianza en sus capacidades.
                         </p>
                     </div>
                 </div>
 
-                <!-- Card 2: Emprendimiento -->
+                <!-- Card 2: Bilingüismo y visión global -->
                 <div class="ib-card ib-card-photo pilar-card ib-photo-2">
                     <div class="ib-card-overlay"></div>
                     <div class="ib-card-body">
                         <span class="pilar-number">02</span>
-                        <h3 class="ib-card-title" style="font-family: var(--font-lato); font-weight: 700; color: #fff; line-height: 1.2; font-size: 1.6rem; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">
-                            Emprendimiento <br>
-                            <span style="font-family: var(--font-playfair); font-style: italic; color: var(--yellow); font-weight: bold;">con propósito</span>
+                        <h3 class="ib-card-title" style="font-family: var(--font-lato); font-weight: 700; color: #fff; line-height: 1.2; font-size: 1.55rem; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">
+                            Bilingüismo y <br>
+                            <span style="font-family: var(--font-playfair); font-style: italic; color: var(--yellow); font-weight: bold;">enfoque internacional</span>
                         </h3>
-                        <p class="ib-card-desc" style="font-family: var(--font-lato); font-size: 0.88rem; line-height: 1.5; color: rgba(255,255,255,0.9); margin-top: 12px; text-shadow: 0 1px 2px rgba(0,0,0,0.4);">
-                            Los proyectos de innovación en el Hontanar tienen un norte claro: generar impacto positivo. Ya sea optimizando procesos del colegio, creando apps para la comunidad o diseñando productos sostenibles, cada idea debe responder a una necesidad real y ser viable de implementar.
+                        <p class="ib-card-desc" style="font-family: var(--font-lato); font-size: 0.88rem; line-height: 1.5; color: rgba(255,255,255,0.95); margin-top: 12px; text-shadow: 0 1px 2px rgba(0,0,0,0.4);">
+                            La innovación educativa se integra con la propuesta de educación bilingüe y el enfoque internacional del colegio, permitiendo que los estudiantes comuniquen sus proyectos en distintos contextos culturales y académicos. La combinación entre tecnología, bienestar y valores fortalece un ambiente de aprendizaje motivador, donde cada logro es una experiencia significativa.
                         </p>
                     </div>
                 </div>
 
-                <!-- Card 3: Agilidad -->
+                <!-- Card 3: Transformación educativa -->
                 <div class="ib-card ib-card-photo pilar-card ib-photo-3">
                     <div class="ib-card-overlay"></div>
                     <div class="ib-card-body">
                         <span class="pilar-number">03</span>
-                        <h3 class="ib-card-title" style="font-family: var(--font-lato); font-weight: 700; color: #fff; line-height: 1.2; font-size: 1.6rem; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">
-                            Agilidad y <br>
-                            <span style="font-family: var(--font-playfair); font-style: italic; color: var(--yellow); font-weight: bold;">adaptación</span>
+                        <h3 class="ib-card-title" style="font-family: var(--font-lato); font-weight: 700; color: #fff; line-height: 1.2; font-size: 1.55rem; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">
+                            Transformación <br>
+                            <span style="font-family: var(--font-playfair); font-style: italic; color: var(--yellow); font-weight: bold;">educativa</span>
                         </h3>
-                        <p class="ib-card-desc" style="font-family: var(--font-lato); font-size: 0.88rem; line-height: 1.5; color: rgba(255,255,255,0.9); margin-top: 12px; text-shadow: 0 1px 2px rgba(0,0,0,0.4);">
-                            En un mundo que cambia a velocidad exponencial, la capacidad de adaptarse es una habilidad de supervivencia. Entrenamos a nuestros estudiantes en metodologías ágiles y en la mentalidad de iterar: probar, aprender del error y mejorar sin miedo al fracaso.
+                        <p class="ib-card-desc" style="font-family: var(--font-lato); font-size: 0.88rem; line-height: 1.5; color: rgba(255,255,255,0.95); margin-top: 12px; text-shadow: 0 1px 2px rgba(0,0,0,0.4);">
+                            Somos uno de los Colegios al norte de Bogotá, bilingüe, con <a href="programa-ib.html" style="color: var(--yellow); font-weight: 700; text-decoration: underline; text-underline-offset: 3px;">Bachillerato Internacional</a> que lideran procesos de transformación educativa; sabemos que innovar implica formar ciudadanos capaces de crear soluciones pertinentes y creativas. En El Hontanar, cada proyecto tecnológico es una oportunidad para que los estudiantes descubran que sus ideas pueden generar cambios reales, mientras desarrollan seguridad emocional, autonomía y sentido de propósito.
                         </p>
                     </div>
                 </div>
 
             </div>
 
-            <!-- Sección 3: Highlight Card (Estilo pq-kd-banner de bienestar-emocional) -->
-            <div class="pq-kd-banner-container" style="margin-top: 60px; margin-bottom: 80px;">
-                <!-- Background Watermark text (Marquee scrolling - 2 líneas en Playfair Display) -->
+            <!-- Sección 3: Highlight Card (Estilo pq-kd-banner) -->
+            <div class="pq-kd-banner-container" style="margin-top: 50px; margin-bottom: 70px;">
                 <div class="pq-kd-marquee-wrapper">
                     <div class="pq-kd-marquee-track line-1">
-                        <span>Ecosistema de Innovación • Líderes del Mañana • Desarrollo de Soluciones •&nbsp;</span>
-                        <span>Ecosistema de Innovación • Líderes del Mañana • Desarrollo de Soluciones •&nbsp;</span>
+                        <span>Soluciones Reales • Liderazgo Tecnológico • Aprendizaje con Propósito •&nbsp;</span>
+                        <span>Soluciones Reales • Liderazgo Tecnológico • Aprendizaje con Propósito •&nbsp;</span>
                     </div>
                     <div class="pq-kd-marquee-track line-2 track-reverse">
-                        <span>TecnoSer • Pensamiento Crítico • Proyectos Reales • Gimnasio El Hontanar •&nbsp;</span>
-                        <span>TecnoSer • Pensamiento Crítico • Proyectos Reales • Gimnasio El Hontanar •&nbsp;</span>
+                        <span>TecnoSer • Pensamiento Crítico • Gimnasio El Hontanar • Transformación Educativa •&nbsp;</span>
+                        <span>TecnoSer • Pensamiento Crítico • Gimnasio El Hontanar • Transformación Educativa •&nbsp;</span>
                     </div>
                 </div>
                 
-                <!-- Vertical grid line -->
                 <div class="pq-kd-grid-line"></div>
                 
-                <!-- Centered Card -->
                 <div class="pq-kd-card hontanar-scroll-reveal">
                     <h3 class="pq-kd-title">
-                        Un ecosistema de innovación<br><span class="serif-italic-yellow">para formar líderes del mañana</span>
+                        En el Gimnasio El Hontanar formamos hoy a quienes <br><span class="serif-italic-yellow">crean soluciones para mañana.</span>
                     </h3>
                     <p class="pq-kd-subtitle">
-                        La innovación hace parte de todo nuestro proyecto educativo. Formamos estudiantes capaces de identificar desafíos, trabajar en equipo y desarrollar soluciones con impacto.
+                        <a href="agenda-visita.html" style="color: var(--yellow); font-weight: 700; text-decoration: underline; text-underline-offset: 3px;">Visítanos</a> y conoce de cerca nuestro <a href="modelo-de-ensenanza.html" style="color: var(--yellow); font-weight: 700; text-decoration: underline; text-underline-offset: 3px;">modelo de enseñanza</a>. <br>
+                        <span style="display: inline-block; margin-top: 8px; font-weight: 700; color: #ffffff;">¡En el GH te estamos esperando!</span>
                     </p>
                 </div>
             </div>
 
-        <!-- WAVY CARD SECTION "ECOSISTEMA DE INNOVACIÓN" -->
-        <section class="hontanar-scroll-reveal" style="margin-top: 50px; margin-bottom: 80px; padding: 0 20px; position: relative; z-index: 2;">
-            <div class="filo-wavy-container" style="max-width: 1140px; margin: 0 auto; position: relative; overflow: visible;">
-                <div class="filo-wavy-card text-right" style="min-height: 400px; position: relative; overflow: hidden; background: #ffffff; border-radius: 0; box-shadow: 0 15px 45px rgba(0,0,0,0.06); border: 1px solid rgba(37, 68, 120, 0.08); display: flex;">
-                    <div class="wavy-card-img-col" style="flex: 0.9; min-height: 400px; position: relative; overflow: hidden;">
-                        <img src="assets/deporte-post.png" alt="Ecosistema de Innovación" style="position: absolute; top: -20px; left: -20px; width: calc(100% + 40px); height: calc(100% + 70px); object-fit: cover; z-index: 1;">
-                        <!-- Wavy edge divider SVG path overlapping image from right -->
-                        <svg viewBox="0 0 100 600" preserveAspectRatio="none" class="wavy-edge-svg wave-left-side" style="position: absolute; top: 0; bottom: 0; right: -1px; width: 60px; height: 100%; z-index: 2; pointer-events: none; transform: scaleX(-1);">
-                            <path d="M0,0 L30,0 C60,150 70,300 25,450 C10,520 0,600 0,600 Z" fill="#ffffff"/>
-                        </svg>
-                    </div>
-                    <div class="wavy-card-text-col" style="padding: 45px 45px; flex: 1.1; display: flex; flex-direction: column; justify-content: center; gap: 15px; text-align: left; background: #ffffff;">
-                        <h2 class="wavy-card-title" style="font-family: var(--font-lato); font-size: 2.2rem; font-weight: 700; color: var(--blue); line-height: 1.25; margin: 0;">
-                            Un ecosistema diseñado <br>
-                            <span style="font-family: var(--font-playfair); font-style: italic; color: var(--green); font-weight: bold;">para que la innovación <br> florezca en cada aula</span>
-                        </h2>
-                        <p class="wavy-card-paragraph" style="font-family: var(--font-lato); font-size: 0.98rem; line-height: 1.6; color: #4a5568; margin: 0;">
-                            El Hontanar ha construido un ecosistema de innovación que integra espacios físicos, metodologías activas y una cultura de experimentación. Nuestro Maker Space, laboratorios de tecnología y espacios colaborativos son el escenario donde las ideas toman forma.
-                        </p>
-                        <p class="wavy-card-paragraph-highlight" style="font-family: var(--font-lato); font-size: 0.98rem; line-height: 1.6; color: var(--blue); font-weight: 700; margin: 0; border-left: 3px solid var(--green); padding-left: 15px; font-style: italic;">
-                            Agenda una visita y descubre cómo la curiosidad y la creatividad impulsan la innovación en el Hontanar.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        </div>
+        </div><!-- fin vida-container -->
     </main>
 
     <div class="social-floating">
