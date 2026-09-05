@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IA · Inteligencia Artificial | TecnoSer | Gimnasio El Hontanar</title>
+    <title>Inteligencia Artificial con Criterio Humano | TecnoSer | Gimnasio El Hontanar</title>
     <meta name="description" content="Educación en Inteligencia Artificial en el Gimnasio El Hontanar. Preparamos a nuestros estudiantes para entender y aprovechar la IA de forma ética y responsable.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,6 +14,111 @@
     <link rel="stylesheet" href="vida-en-el-campus.css">
     <link rel="stylesheet" href="por-que.css">
     <style>
+        /* Floating background dots */
+        .floating-dots-wrapper {
+            position: absolute !important;
+            inset: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            overflow: hidden !important;
+            pointer-events: none !important;
+            z-index: 1 !important;
+        }
+        .f-dot {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+            opacity: 0.65;
+        }
+        .dot-yellow {
+            background-color: #f59e0b;
+            box-shadow: 0 0 10px rgba(245, 158, 11, 0.4);
+        }
+        .dot-green {
+            background-color: #1ba655;
+            box-shadow: 0 0 10px rgba(27, 166, 85, 0.35);
+        }
+        .dot-cyan {
+            background-color: #0284c7;
+            box-shadow: 0 0 10px rgba(2, 132, 199, 0.35);
+        }
+        .dot-orange {
+            background-color: #ea580c;
+            box-shadow: 0 0 10px rgba(234, 88, 12, 0.35);
+        }
+        .dot-ring {
+            background: transparent !important;
+            border-width: 2.5px;
+            border-style: solid;
+        }
+        .dot-ring-yellow {
+            border-color: #f59e0b;
+            box-shadow: 0 0 8px rgba(245, 158, 11, 0.3);
+        }
+        .dot-ring-green {
+            border-color: #1ba655;
+            box-shadow: 0 0 8px rgba(27, 166, 85, 0.3);
+        }
+        .dot-ring-blue {
+            border-color: #0284c7;
+            box-shadow: 0 0 8px rgba(2, 132, 199, 0.3);
+        }
+
+        /* Floating animations */
+        @keyframes floatSlow1 {
+            0%, 100% { transform: translateY(0) translateX(0) scale(1); opacity: 0.6; }
+            50% { transform: translateY(-28px) translateX(15px) scale(1.18); opacity: 0.95; }
+        }
+        @keyframes floatSlow2 {
+            0%, 100% { transform: translateY(0) translateX(0) scale(1); opacity: 0.5; }
+            50% { transform: translateY(26px) translateX(-18px) scale(0.88); opacity: 0.9; }
+        }
+        @keyframes floatSlow3 {
+            0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.65; }
+            33% { transform: translate(14px, -20px) scale(1.12); opacity: 1; }
+            66% { transform: translate(-10px, -35px) scale(0.95); opacity: 0.75; }
+        }
+        @keyframes pulseGlow {
+            0%, 100% { transform: scale(1); opacity: 0.45; }
+            50% { transform: scale(1.35); opacity: 0.95; }
+        }
+
+        .dot-anim-1 { animation: floatSlow1 7s ease-in-out infinite; }
+        .dot-anim-2 { animation: floatSlow2 10s ease-in-out infinite; }
+        .dot-anim-3 { animation: floatSlow3 13s ease-in-out infinite; }
+        .dot-anim-pulse { animation: pulseGlow 5s ease-in-out infinite; }
+
+        @media (min-width: 860px) {
+            .pq-kd-single-line {
+                white-space: nowrap;
+                display: inline-block;
+            }
+        }
+
+        /* Asegurar que la imagen del Wavy Card cubra el 100% de la altura sin dejar espacio blanco abajo */
+        .filo-wavy-card.text-left {
+            display: grid !important;
+            grid-template-columns: 1.15fr 0.85fr !important;
+            align-items: stretch !important;
+        }
+        .filo-wavy-card.text-left .wavy-card-img-col {
+            width: 100% !important;
+            height: 100% !important;
+            min-height: 100% !important;
+            align-self: stretch !important;
+            background-size: cover !important;
+            background-position: center !important;
+        }
+        @media (max-width: 991px) {
+            .filo-wavy-card.text-left {
+                display: flex !important;
+                flex-direction: column !important;
+            }
+            .filo-wavy-card.text-left .wavy-card-img-col {
+                min-height: 350px !important;
+            }
+        }
+
         /* Bento/Pilar Grid style matching tecnoser-innovacion.html */
         .innov-bento-grid {
             display: grid;
@@ -504,53 +609,63 @@
         <div class="inner-header-overlay"></div>
         <div class="inner-header-content">
             <span class="inner-header-kicker">TECNOSER</span>
-            <h1 class="inner-header-title">Inteligencia <span>Artificial</span></h1>
-            
+            <h1 class="inner-header-title">Inteligencia Artificial <br><span style="font-family: var(--font-playfair); font-style: italic; color: var(--yellow); font-weight: bold; white-space: nowrap;">con criterio humano</span></h1>
         </div>
         <img src="assets/robot-tecnoser.png" alt="Robot TecnoSer" class="header-colibri-float">
     </section>
-<main class="vida-page">
+    <main class="vida-page" style="position: relative; overflow: hidden;">
+        <!-- Floating background dots -->
+        <div class="floating-dots-wrapper" aria-hidden="true">
+            <span class="f-dot dot-yellow dot-anim-1" style="width: 14px; height: 14px; top: 4%; left: 4%;"></span>
+            <span class="f-dot dot-green dot-anim-3" style="width: 18px; height: 18px; top: 9%; right: 5%;"></span>
+            <span class="f-dot dot-ring dot-ring-yellow dot-anim-2" style="width: 24px; height: 24px; top: 16%; left: 3%;"></span>
+            <span class="f-dot dot-cyan dot-anim-1" style="width: 13px; height: 13px; top: 25%; right: 6%;"></span>
+            <span class="f-dot dot-orange dot-anim-pulse" style="width: 15px; height: 15px; top: 35%; left: 5%;"></span>
+            <span class="f-dot dot-green dot-anim-2" style="width: 16px; height: 16px; top: 48%; right: 4%;"></span>
+            <span class="f-dot dot-ring dot-ring-blue dot-anim-3" style="width: 26px; height: 26px; top: 60%; left: 3%;"></span>
+            <span class="f-dot dot-yellow dot-anim-1" style="width: 14px; height: 14px; top: 72%; right: 5%;"></span>
+            <span class="f-dot dot-cyan dot-anim-2" style="width: 13px; height: 13px; top: 84%; left: 4%;"></span>
+            <span class="f-dot dot-ring dot-ring-green dot-anim-pulse" style="width: 22px; height: 22px; top: 93%; right: 6%;"></span>
+        </div>
         <div class="breadcrumbs">
-                <a href="index.html">Inicio</a> &gt; <a href="#">TecnoSer</a> &gt; <span class="current">IA (Inteligencia Artificial)</span>
-            </div>
+            <a href="index.html">Inicio</a> &gt; <a href="#">TecnoSer</a> &gt; <span class="current">Inteligencia Artificial</span>
+        </div>
+
+        <div class="hontanar-scroll-reveal" style="max-width: 1100px; margin: 40px auto 25px auto; text-align: left; padding: 0 20px;">
+            <h2 style="font-family: var(--font-lato); font-size: 2.15rem; font-weight: 700; color: var(--blue); line-height: 1.3; margin: 0;">
+                Uso responsable de IA en el colegio <br>
+                <span style="font-family: var(--font-playfair); font-style: italic; color: var(--green); font-weight: bold;">para potenciar el pensamiento crítico</span>
+            </h2>
+        </div>
+
         <div class="vida-container">
-            <!-- Breadcrumbs -->
-            
-
-            <!-- Header -->
-            <div class="vida-header hontanar-scroll-reveal">
-                
-                
-            </div>
-
-            <div class="vida-lead-paragraph-wrapper hontanar-scroll-reveal" style="border-left: 4px solid var(--green); padding-left: 25px; margin: 40px auto 30px auto; max-width: 900px; text-align: left;">
-                <p style="font-family: var(--font-lato); font-size: 1.18rem; line-height: 1.85; color: var(--blue) !important; margin: 0;">
-                    La Inteligencia Artificial ha transformado el mundo, y en el Gimnasio El Hontanar su integración se realiza con un principio claro: <strong style="color: var(--green); font-weight: 700;">la tecnología apoya, pero el pensamiento humano lidera</strong>. Como Colegio Bilingüe Internacional en Bogotá y Chía, promovemos un <strong style="color: var(--green); font-weight: 700;">uso consciente, ético y reflexivo de la IA</strong> para fortalecer la autonomía intelectual de nuestros estudiantes.
+            <div class="vida-lead-paragraph-wrapper hontanar-scroll-reveal" style="border-left: 4px solid var(--green); padding-left: 25px; margin: 0 auto 40px auto; max-width: 1100px; text-align: left;">
+                <p style="font-family: var(--font-lato); font-size: 1.15rem; line-height: 1.85; color: var(--blue); margin: 0;">
+                    La Inteligencia Artificial ha transformado el mundo, y en el Gimnasio El Hontanar su integración se realiza con un principio claro: <strong style="color: var(--green); font-weight: 700;">la tecnología apoya, pero el pensamiento humano lidera</strong>. Como Colegio Bilingüe Internacional en Bogotá y Chía, promovemos un <strong style="color: var(--blue); font-weight: 700;">uso consciente, ético y reflexivo de la IA</strong> para fortalecer la autonomía intelectual de nuestros estudiantes.
                 </p>
             </div>
-
         </div> <!-- Close .vida-container for full-bleed section -->
 
         <!-- WAVY CARD SECTION "CRITERIO HUMANO" -->
         <section class="hontanar-scroll-reveal" style="margin-top: 80px; padding: 100px 20px; position: relative; z-index: 2; background-image: linear-gradient(rgba(37, 68, 120, 0.88), rgba(37, 68, 120, 0.88)), url('assets/20240801_095532.jpg'); background-size: cover; background-position: center; background-attachment: fixed;">
             <div class="filo-wavy-container" style="max-width: 1140px; margin: 0 auto; position: relative; overflow: visible;">
-                <div class="filo-wavy-card text-left" style="min-height: 440px; position: relative; overflow: hidden; background: #ffffff; border-radius: 0; box-shadow: 0 20px 50px rgba(0,0,0,0.15); border: none; display: flex;">
+                <div class="filo-wavy-card text-left" style="min-height: 480px; position: relative; overflow: hidden; background: #ffffff; border-radius: 0; box-shadow: 0 20px 50px rgba(0,0,0,0.15); border: none;">
                     <!-- Left Column: White Text Block -->
                     <div class="wavy-card-text-col" style="padding: 50px 50px; flex: 1.15; display: flex; flex-direction: column; justify-content: center; gap: 15px; text-align: left; background: #ffffff;">
                         <h2 class="wavy-card-title" style="font-family: var(--font-lato); font-size: 2rem; font-weight: 800; color: var(--blue); line-height: 1.25; margin: 0;">
-                            ¿Cómo interactuar con sistemas de IA para potenciar el pensamiento crítico, <br>
-                            <span style="font-family: var(--font-playfair); font-style: italic; color: var(--green); font-weight: 700;">sin automatizar el aprendizaje?</span>
+                            Pensamiento humano que lidera: <br>
+                            <span style="font-family: var(--font-playfair); font-style: italic; color: var(--green); font-weight: 700;">enriquecer el aprendizaje sin automatizarlo</span>
                         </h2>
                         <p class="wavy-card-paragraph" style="font-family: var(--font-lato); font-size: 0.96rem; line-height: 1.65; color: #4a5568; margin: 0;">
-                            En el aula, la IA se utiliza para analizar información, contrastar fuentes y generar preguntas. Más allá de automatizar el aprendizaje, se busca enriquecerlo; los estudiantes aprenden a identificar sesgos y a comprender que la tecnología no reemplaza el juicio humano.
+                            En el aula, la IA se utiliza como una herramienta que permite analizar información, contrastar fuentes y generar nuevas preguntas. El objetivo no es automatizar el aprendizaje, sino enriquecerlo. Los estudiantes aprenden a identificar sesgos, reconocer errores comunes y comprender que ninguna herramienta tecnológica reemplaza el juicio humano.
                         </p>
                         <p class="wavy-card-paragraph-highlight" style="font-family: var(--font-lato); font-size: 0.96rem; line-height: 1.65; color: var(--blue); font-weight: 700; margin: 0; border-left: 3.5px solid var(--green); padding-left: 15px; font-style: italic;">
-                            Al interactuar con estos sistemas, contrastan resultados digitales con observaciones reales, fortaleciendo su pensamiento independiente de acuerdo con el perfil de ciudadanos globales del Bachillerato Internacional.
+                            Este enfoque se alinea con la formación de ciudadanos globales propia del Bachillerato Internacional, donde argumentar con fundamento y desarrollar posturas personales informadas es esencial. Al interactuar con sistemas de IA, los estudiantes comparan resultados digitales con observaciones reales, fortaleciendo su capacidad de análisis y su pensamiento independiente.
                         </p>
                     </div>
 
                     <!-- Right Column: Image Block with Wavy Edge -->
-                    <div class="wavy-card-img-col" style="background-image: url('assets/young-little-girl-sitting-table-doing-homework-with-laptop.jpg'); background-size: cover; background-position: center; flex: 0.85; min-height: 440px; position: relative;">
+                    <div class="wavy-card-img-col" style="background-image: url('assets/young-little-girl-sitting-table-doing-homework-with-laptop.jpg'); background-size: cover; background-position: center; position: relative; width: 100%; height: 100%; min-height: 100%;">
                         <!-- Wavy edge divider SVG path -->
                         <svg viewBox="0 0 100 600" preserveAspectRatio="none" class="wavy-edge-svg wave-right-side" style="position: absolute; top: 0; bottom: 0; left: -1px; width: 60px; height: 100%; z-index: 2; pointer-events: none;">
                             <path d="M0,0 L30,0 C60,150 70,300 25,450 C10,520 0,600 0,600 Z" fill="#ffffff"/>
@@ -582,10 +697,10 @@
                             <span class="pilar-number">01</span>
                             <h3 class="ib-card-title">
                                 Integración práctica <br>
-                                <span>Evaluación</span>
+                                <span>Evaluación inmediata</span>
                             </h3>
                             <p class="ib-card-desc">
-                                Un ejemplo práctico de integración tecnológica en todo el colegio es el uso de herramientas como Plickers, que permiten a los docentes evaluar la comprensión de manera inmediata. A través de tarjetas de respuesta escaneadas en tiempo real, los profesores identifican avances y detectan dudas para garantizar procesos de aprendizaje efectivos.
+                                Un ejemplo práctico de integración tecnológica en todo el colegio es el uso de herramientas como Plickers, que permiten a los docentes evaluar la comprensión de manera inmediata, a través de tarjetas de respuesta escaneadas en tiempo real, los profesores identifican avances y detectan dudas para garantizar procesos de aprendizaje efectivos.
                             </p>
                         </div>
                     </div>
@@ -597,7 +712,7 @@
                             <span class="pilar-number">02</span>
                             <h3 class="ib-card-title">
                                 Uso responsable <br>
-                                <span>Ética</span>
+                                <span>Ética y privacidad</span>
                             </h3>
                             <p class="ib-card-desc">
                                 El uso responsable de la IA también implica conversaciones abiertas sobre ética digital, privacidad y verificación de información. Este proceso contribuye al bienestar académico y fortalece la confianza de los estudiantes, ya que comprenden cómo utilizar la tecnología de forma segura y pertinente.
@@ -605,17 +720,17 @@
                         </div>
                     </div>
 
-                    <!-- Card 3: Liderazgo y valores -->
+                    <!-- Card 3: Enfoque humano -->
                     <div class="ib-card ib-card-photo pilar-card" style="background-image: url('assets/schoolgirl-studies-online-home-girl-is-typing-laptop-keyboard.jpg');">
                         <div class="ib-card-overlay"></div>
                         <div class="ib-card-body">
                             <span class="pilar-number">03</span>
                             <h3 class="ib-card-title">
-                                Liderazgo y valores <br>
-                                <span>Futuro</span>
+                                Enfoque humano <br>
+                                <span>Contextos profesionales</span>
                             </h3>
                             <p class="ib-card-desc">
-                                Integrar IA significa preparar a los estudiantes para contexts profesionales futuros sin perder el enfoque humano. En El Hontanar, la combinación entre inteligencia artificial e inteligencia emocional fortalece la creatividad, la argumentación y la toma de decisiones.
+                                Integrar IA significa preparar a los estudiantes para contextos profesionales futuros sin perder el enfoque humano. En El Hontanar, la combinación entre inteligencia artificial e inteligencia emocional fortalece la creatividad, la argumentación y la toma de decisiones.
                             </p>
                         </div>
                     </div>
@@ -623,9 +738,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- Cierre vida-container para hacer el marquee card de ancho completo -->
-        </div>
 
         <!-- Sección 3: Highlight Card (Estilo pq-kd-banner de bienestar-emocional) -->
         <div class="pq-kd-banner-container" style="margin-top: 60px; margin-bottom: 80px;">
@@ -646,16 +758,13 @@
             
             <!-- Centered Card -->
             <div class="pq-kd-card hontanar-scroll-reveal">
-                <h3 class="pq-kd-title">
-                    Tecnología guiada por<br><span class="serif-italic-yellow">valores y criterio</span>
+                <h3 class="pq-kd-title" style="font-size: 1.65rem; line-height: 1.4; margin: 0 auto; max-width: 780px;">
+                    Los estudiantes de nuestro colegio aprenden que la tecnología puede ampliar sus <br>
+                    <span class="serif-italic-yellow">capacidades, siempre que esté guiada por criterio, valores y responsabilidad social.</span>
                 </h3>
-                <p class="pq-kd-subtitle">
-                    Los estudiantes aprenden que la tecnología amplía sus capacidades cuando está guiada por criterio, valores y responsabilidad social. Entendemos que el conocimiento evoluciona constantemente y que educar hoy implica aprender, experimentar y mejorar juntos.
-                </p>
             </div>
         </div>
 
-        <!-- Reabrir vida-container para el resto de la página -->
         <!-- Interactive Split Panel (Estilo Kent Denver, No-Slider) -->
         <section class="pq-split-carousel-section hontanar-scroll-reveal" style="margin-top: 60px; margin-bottom: 80px;">
             <!-- Rectangulito amarillo decorativo detrás de la foto -->
@@ -688,14 +797,14 @@
                 <div class="pq-carousel-slides-wrapper" style="margin-top: 20px;">
                     <!-- Content Block: Visita el campus -->
                     <div class="pq-carousel-slide active">
-                        <span class="pq-slide-kicker" style="color: var(--green); font-weight: bold; text-transform: uppercase;">VISITA EL CAMPUS</span>
-                        <h3 class="pq-slide-title" style="font-size: 2.2rem; font-family: var(--font-lato); font-weight: 800; color: var(--blue); margin-bottom: 25px; line-height: 1.2; text-transform: none;">Agenda una cita y ven a conocer nuestro modelo de enseñanza</h3>
+                        <span class="pq-slide-kicker" style="color: var(--green); font-weight: bold; text-transform: uppercase;">COMUNIDAD EDUCATIVA</span>
+                        <h3 class="pq-slide-title" style="font-size: 2.2rem; font-family: var(--font-lato); font-weight: 800; color: var(--blue); margin-bottom: 25px; line-height: 1.2; text-transform: none;">Descubrimiento continuo con las nuevas tecnologías</h3>
                         <div class="pq-slide-description" style="color: #4a5568; line-height: 1.7; font-size: 0.98rem; font-family: var(--font-lato);">
-                            <p style="margin-bottom: 16px;">Invitamos a las familias del Gimnasio El Hontanar a acompañar a sus hijos y a nuestro equipo docente en este proceso de descubrimiento continuo con las nuevas tecnologías. Agenda tu cita y ven a conocer cómo nuestra comunidad educativa avanza frente a los retos de la IA.</p>
-                            <p style="margin-bottom: 25px; border-left: 3px solid var(--yellow); padding-left: 15px; font-style: italic; color: #4a5568; font-weight: 500;">Estamos ubicados al norte de Bogotá, en la Carrera 7°, a 300 metros antes del peaje, en la vía Bogotá–Chía. Agenda una cita y ven a conocer cómo nuestra comunidad educativa avanza frente a los retos de la IA.</p>
+                            <p style="margin-bottom: 16px;">Entendemos que el conocimiento evoluciona constantemente y que educar hoy implica aprender, probar y mejorar juntos. Por esto, invitamos a las familias del Gimnasio El Hontanar a acompañar a sus hijos y a nuestro equipo docente en este proceso de descubrimiento continuo con las nuevas tecnologías.</p>
+                            <p style="margin-bottom: 25px; border-left: 3px solid var(--yellow); padding-left: 15px; font-style: italic; color: #254478; font-weight: 600;">Agenda una cita y ven a conocer cómo nuestra comunidad educativa avanza frente a los retos de la IA. Estamos ubicados al norte de Bogotá, en la Carrera 7°, a 300 metros antes del peaje, en la vía Bogotá–Chía.</p>
                         </div>
                         <a href="agenda-visita.html" class="pq-slide-cta">
-                            Conoce nuestra experiencia
+                            Agenda tu cita
                             <span class="pq-cta-circle-arrow">
                                 <svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="3" d="M9 5l7 7-7 7"/></svg>
                             </span>

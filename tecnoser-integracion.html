@@ -14,6 +14,80 @@
     <link rel="stylesheet" href="por-que.css">
     <link rel="stylesheet" href="vida-en-el-campus.css">
     <style>
+        /* Floating background dots */
+        .floating-dots-wrapper {
+            position: absolute !important;
+            inset: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            overflow: hidden !important;
+            pointer-events: none !important;
+            z-index: 1 !important;
+        }
+        .f-dot {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+            opacity: 0.65;
+        }
+        .dot-yellow {
+            background-color: #f59e0b;
+            box-shadow: 0 0 10px rgba(245, 158, 11, 0.4);
+        }
+        .dot-green {
+            background-color: #1ba655;
+            box-shadow: 0 0 10px rgba(27, 166, 85, 0.35);
+        }
+        .dot-cyan {
+            background-color: #0284c7;
+            box-shadow: 0 0 10px rgba(2, 132, 199, 0.35);
+        }
+        .dot-orange {
+            background-color: #ea580c;
+            box-shadow: 0 0 10px rgba(234, 88, 12, 0.35);
+        }
+        .dot-ring {
+            background: transparent !important;
+            border-width: 2.5px;
+            border-style: solid;
+        }
+        .dot-ring-yellow {
+            border-color: #f59e0b;
+            box-shadow: 0 0 8px rgba(245, 158, 11, 0.3);
+        }
+        .dot-ring-green {
+            border-color: #1ba655;
+            box-shadow: 0 0 8px rgba(27, 166, 85, 0.3);
+        }
+        .dot-ring-blue {
+            border-color: #0284c7;
+            box-shadow: 0 0 8px rgba(2, 132, 199, 0.3);
+        }
+
+        /* Floating animations */
+        @keyframes floatSlow1 {
+            0%, 100% { transform: translateY(0) translateX(0) scale(1); opacity: 0.6; }
+            50% { transform: translateY(-28px) translateX(15px) scale(1.18); opacity: 0.95; }
+        }
+        @keyframes floatSlow2 {
+            0%, 100% { transform: translateY(0) translateX(0) scale(1); opacity: 0.5; }
+            50% { transform: translateY(26px) translateX(-18px) scale(0.88); opacity: 0.9; }
+        }
+        @keyframes floatSlow3 {
+            0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.65; }
+            33% { transform: translate(14px, -20px) scale(1.12); opacity: 1; }
+            66% { transform: translate(-10px, -35px) scale(0.95); opacity: 0.75; }
+        }
+        @keyframes pulseGlow {
+            0%, 100% { transform: scale(1); opacity: 0.45; }
+            50% { transform: scale(1.35); opacity: 0.95; }
+        }
+
+        .dot-anim-1 { animation: floatSlow1 7s ease-in-out infinite; }
+        .dot-anim-2 { animation: floatSlow2 10s ease-in-out infinite; }
+        .dot-anim-3 { animation: floatSlow3 13s ease-in-out infinite; }
+        .dot-anim-pulse { animation: pulseGlow 5s ease-in-out infinite; }
+
         /* Parallax Cards Styles */
         .white-parallax-card {
             background: rgba(255, 255, 255, 0.98);
@@ -459,7 +533,20 @@
         </div>
         <img src="assets/robot-tecnoser.png" alt="Robot TecnoSer" class="header-colibri-float">
     </section>
-<main class="vida-page">
+    <main class="vida-page" style="position: relative; overflow: hidden;">
+        <!-- Floating background dots -->
+        <div class="floating-dots-wrapper" aria-hidden="true">
+            <span class="f-dot dot-yellow dot-anim-1" style="width: 14px; height: 14px; top: 4%; left: 4%;"></span>
+            <span class="f-dot dot-green dot-anim-3" style="width: 18px; height: 18px; top: 9%; right: 5%;"></span>
+            <span class="f-dot dot-ring dot-ring-yellow dot-anim-2" style="width: 24px; height: 24px; top: 16%; left: 3%;"></span>
+            <span class="f-dot dot-cyan dot-anim-1" style="width: 13px; height: 13px; top: 25%; right: 6%;"></span>
+            <span class="f-dot dot-orange dot-anim-pulse" style="width: 15px; height: 15px; top: 35%; left: 5%;"></span>
+            <span class="f-dot dot-green dot-anim-2" style="width: 16px; height: 16px; top: 48%; right: 4%;"></span>
+            <span class="f-dot dot-ring dot-ring-blue dot-anim-3" style="width: 26px; height: 26px; top: 60%; left: 3%;"></span>
+            <span class="f-dot dot-yellow dot-anim-1" style="width: 14px; height: 14px; top: 72%; right: 5%;"></span>
+            <span class="f-dot dot-cyan dot-anim-2" style="width: 13px; height: 13px; top: 84%; left: 4%;"></span>
+            <span class="f-dot dot-ring dot-ring-green dot-anim-pulse" style="width: 22px; height: 22px; top: 93%; right: 6%;"></span>
+        </div>
         <div class="breadcrumbs">
             <a href="index.html">Inicio</a> &gt; <a href="#">TecnoSer</a> &gt; <span class="current">Integración Tecnológica</span>
         </div>
