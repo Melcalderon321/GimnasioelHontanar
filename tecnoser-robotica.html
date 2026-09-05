@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -15,6 +15,80 @@
     <link rel="stylesheet" href="por-que.css">
     <link rel="stylesheet" href="multilinguismo.css">
     <style>
+        /* Floating background dots */
+        .floating-dots-wrapper {
+            position: absolute !important;
+            inset: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            overflow: hidden !important;
+            pointer-events: none !important;
+            z-index: 1 !important;
+        }
+        .f-dot {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+            opacity: 0.65;
+        }
+        .dot-yellow {
+            background-color: #f59e0b;
+            box-shadow: 0 0 10px rgba(245, 158, 11, 0.4);
+        }
+        .dot-green {
+            background-color: #1ba655;
+            box-shadow: 0 0 10px rgba(27, 166, 85, 0.35);
+        }
+        .dot-cyan {
+            background-color: #0284c7;
+            box-shadow: 0 0 10px rgba(2, 132, 199, 0.35);
+        }
+        .dot-orange {
+            background-color: #ea580c;
+            box-shadow: 0 0 10px rgba(234, 88, 12, 0.35);
+        }
+        .dot-ring {
+            background: transparent !important;
+            border-width: 2.5px;
+            border-style: solid;
+        }
+        .dot-ring-yellow {
+            border-color: #f59e0b;
+            box-shadow: 0 0 8px rgba(245, 158, 11, 0.3);
+        }
+        .dot-ring-green {
+            border-color: #1ba655;
+            box-shadow: 0 0 8px rgba(27, 166, 85, 0.3);
+        }
+        .dot-ring-blue {
+            border-color: #0284c7;
+            box-shadow: 0 0 8px rgba(2, 132, 199, 0.3);
+        }
+
+        /* Floating animations */
+        @keyframes floatSlow1 {
+            0%, 100% { transform: translateY(0) translateX(0) scale(1); opacity: 0.6; }
+            50% { transform: translateY(-28px) translateX(15px) scale(1.18); opacity: 0.95; }
+        }
+        @keyframes floatSlow2 {
+            0%, 100% { transform: translateY(0) translateX(0) scale(1); opacity: 0.5; }
+            50% { transform: translateY(26px) translateX(-18px) scale(0.88); opacity: 0.9; }
+        }
+        @keyframes floatSlow3 {
+            0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.65; }
+            33% { transform: translate(14px, -20px) scale(1.12); opacity: 1; }
+            66% { transform: translate(-10px, -35px) scale(0.95); opacity: 0.75; }
+        }
+        @keyframes pulseGlow {
+            0%, 100% { transform: scale(1); opacity: 0.45; }
+            50% { transform: scale(1.35); opacity: 0.95; }
+        }
+
+        .dot-anim-1 { animation: floatSlow1 7s ease-in-out infinite; }
+        .dot-anim-2 { animation: floatSlow2 10s ease-in-out infinite; }
+        .dot-anim-3 { animation: floatSlow3 13s ease-in-out infinite; }
+        .dot-anim-pulse { animation: pulseGlow 5s ease-in-out infinite; }
+
         /* Parallax Cards Styles */
         .white-parallax-card {
             background: rgba(255, 255, 255, 0.98);
@@ -436,27 +510,38 @@
         <div class="inner-header-overlay"></div>
         <div class="inner-header-content">
             <span class="inner-header-kicker">TECNOSER</span>
-            <h1 class="inner-header-title">Robótica <span>y pensamiento computacional</span></h1>
-            
+            <h1 class="inner-header-title">La robótica en El Hontanar <br><span style="font-family: var(--font-playfair); font-style: italic; color: var(--yellow); font-weight: bold; white-space: nowrap;">es capacidad de acción</span></h1>
         </div>
         <img src="assets/robot-tecnoser.png" alt="Robot TecnoSer" class="header-colibri-float">
     </section>
-<main class="vida-page">
+    <main class="vida-page" style="position: relative; overflow: hidden;">
+        <!-- Floating background dots -->
+        <div class="floating-dots-wrapper" aria-hidden="true">
+            <span class="f-dot dot-yellow dot-anim-1" style="width: 14px; height: 14px; top: 4%; left: 4%;"></span>
+            <span class="f-dot dot-green dot-anim-3" style="width: 18px; height: 18px; top: 9%; right: 5%;"></span>
+            <span class="f-dot dot-ring dot-ring-yellow dot-anim-2" style="width: 24px; height: 24px; top: 16%; left: 3%;"></span>
+            <span class="f-dot dot-cyan dot-anim-1" style="width: 13px; height: 13px; top: 25%; right: 6%;"></span>
+            <span class="f-dot dot-orange dot-anim-pulse" style="width: 15px; height: 15px; top: 35%; left: 5%;"></span>
+            <span class="f-dot dot-green dot-anim-2" style="width: 16px; height: 16px; top: 48%; right: 4%;"></span>
+            <span class="f-dot dot-ring dot-ring-blue dot-anim-3" style="width: 26px; height: 26px; top: 60%; left: 3%;"></span>
+            <span class="f-dot dot-yellow dot-anim-1" style="width: 14px; height: 14px; top: 72%; right: 5%;"></span>
+            <span class="f-dot dot-cyan dot-anim-2" style="width: 13px; height: 13px; top: 84%; left: 4%;"></span>
+            <span class="f-dot dot-ring dot-ring-green dot-anim-pulse" style="width: 22px; height: 22px; top: 93%; right: 6%;"></span>
+        </div>
         <div class="breadcrumbs">
-                <a href="index.html">Inicio</a> &gt; <a href="#">TecnoSer</a> &gt; <span class="current">Robótica</span>
-            </div>
+            <a href="index.html">Inicio</a> &gt; <a href="#">TecnoSer</a> &gt; <span class="current">Robótica</span>
+        </div>
+
+        <div class="hontanar-scroll-reveal" style="max-width: 1100px; margin: 40px auto 25px auto; text-align: left; padding: 0 20px;">
+            <h2 style="font-family: var(--font-lato); font-size: 2.15rem; font-weight: 700; color: var(--blue); line-height: 1.3; margin: 0;">
+                Robotic Labs: aprendizaje aplicado <br>
+                <span style="font-family: var(--font-playfair); font-style: italic; color: var(--green); font-weight: bold;">en uno de los mejores colegios al norte de Bogotá</span>
+            </h2>
+        </div>
+
         <div class="vida-container">
-            <!-- Breadcrumbs -->
-            
-
-            <!-- Header -->
-            <div class="vida-header hontanar-scroll-reveal">
-                
-                
-            </div>
-
-            <div class="vida-lead-paragraph-wrapper hontanar-scroll-reveal" style="border-left: 4px solid var(--green); padding-left: 25px; margin: 40px auto 30px auto; max-width: 900px; text-align: left;">
-                <p style="font-family: var(--font-lato); font-size: 1.18rem; line-height: 1.85; color: var(--blue) !important; margin: 0;">
+            <div class="vida-lead-paragraph-wrapper hontanar-scroll-reveal" style="border-left: 4px solid var(--green); padding-left: 25px; margin: 0 auto 40px auto; max-width: 1100px; text-align: left;">
+                <p style="font-family: var(--font-lato); font-size: 1.15rem; line-height: 1.85; color: var(--blue) !important; margin: 0;">
                     El laboratorio de robótica del Gimnasio El Hontanar, <strong style="color: var(--green); font-weight: 700;">Robotic Labs</strong>, es un espacio donde los estudiantes <strong style="color: var(--green); font-weight: 700;">imaginan, diseñan, construyen y ponen en funcionamiento</strong> sus propios proyectos. Este entorno integra conocimiento, tecnología y valores para formar estudiantes capaces de resolver problemas reales con ingenio y determinación.
                 </p>
             </div>
@@ -467,17 +552,17 @@
         <section class="pq-split-section hontanar-scroll-reveal" style="margin-top: 0; margin-bottom: 60px;">
             <!-- Left Column: Text & Information -->
             <div class="pq-split-left">
-                <h2 class="pq-split-title">¿Cómo desarrollar pensamiento tecnológico durante el año escolar, <span>sin depender solo de la teoría?</span></h2>
+                <h2 class="pq-split-title">¿Cómo desarrollar pensamiento <br>tecnológico durante el año escolar, <br><span>sin depender solo de la teoría?</span></h2>
                 <div style="margin-bottom: 30px;">
                     <p style="font-family: var(--font-lato); font-size: 0.98rem; line-height: 1.75; color: #4a5568; margin-bottom: 20px;">
-                        En mesas multipropósito para el trabajo colaborativo, los estudiantes diseñan, programan y construyen prototipos. El proceso va desde la planeación digital —con diseño asistido por computador— hasta la fabricación con impresora 3D y cortadora láser, hasta lograr dispositivos funcionales en el Maker Space.
+                        En mesas multipropósito organizadas para el trabajo colaborativo, los estudiantes diseñan, programan y construyen prototipos que responden a necesidades del entorno escolar. El proceso inicia con la planeación digital, que incluye diseño asistido por computador, y continúa con la fabricación mediante impresora 3D y cortadora láser, hasta lograr dispositivos funcionales que se prueban en el Maker Space, un salón creado para cumplir los objetivos del Bachillerato Internacional en el Hontanar.
                     </p>
                     <p style="font-family: var(--font-lato); font-size: 0.98rem; line-height: 1.75; color: #4a5568; margin-bottom: 0;">
-                        Los proyectos parten de situaciones auténticas: automatización del riego del huerto, robots-tanque para recolectar agua y drones impresos en 3D, todos ideados y ejecutados por los propios estudiantes.
+                        Los proyectos parten de situaciones auténticas. Un ejemplo destacado en El Hontanar ha sido la automatización del riego del huerto escolar, donde los estudiantes desarrollaron sistemas que regulan el uso del agua. También diseñaron una motobomba tipo robot-tanque para recolectar agua en zonas verdes, idea propuesta y ejecutada por los propios estudiantes.
                     </p>
                 </div>
                 <div>
-                    <a href="contactanos.html" class="btn btn-yellow btn-nav">Conoce más <span class="arrow">&gt;</span></a>
+                    <a href="agenda-visita.html" class="btn btn-yellow btn-nav">Conoce más <span class="arrow">&gt;</span></a>
                 </div>
             </div>
 
@@ -493,12 +578,12 @@
         <div class="hontanar-scroll-reveal" style="display: grid; grid-template-columns: 1.25fr 1fr; gap: 50px; text-align: left; max-width: 1100px; margin: 110px auto 40px auto; align-items: start; padding: 0 20px;">
             <!-- Left Column: Title -->
             <h2 style="font-family: var(--font-lato); font-size: 2.3rem; font-weight: 700; color: var(--blue); line-height: 1.25; margin: 0;">
-                Fortalecemos habilidades STEM desde primaria: <span style="font-family: var(--font-playfair); font-style: italic; color: var(--green); font-weight: bold;">sin procesos aislados entre áreas</span>
+                Fortalecemos habilidades STEM desde primaria, <span style="font-family: var(--font-playfair); font-style: italic; color: var(--green); font-weight: bold;">sin procesos aislados entre áreas</span>
             </h2>
             
             <!-- Right Column: Description -->
             <p style="font-family: var(--font-lato); font-size: 1.12rem; line-height: 1.7; color: #4a5568; margin: 0; padding-top: 6px;">
-                En el laboratorio se desarrollan proyectos integrados de ciencia, tecnología, ingeniería y matemáticas que dotan de sentido práctico y propósito real a cada línea de código y diseño.
+                En el laboratorio se desarrollan proyectos integrados de ciencia, tecnología, ingeniería y matemáticas que dotan de sentido práctico y propósito real a cada prototipo.
             </p>
         </div>
 
@@ -519,7 +604,7 @@
                         </div>
                         <div class="multi-card-body">
                             <h3>Soluciones <span class="title-serif-italic">automatizadas</span></h3>
-                            <p>En el laboratorio se crean soluciones que optimizan tareas repetitivas, incorporando sensores de movimiento y sonido para mejorar la eficiencia de procesos cotidianos dentro del colegio.</p>
+                            <p>En el laboratorio se crean soluciones que optimizan tareas repetitivas, incorporando sensores de movimiento y sonido para mejorar la eficiencia de procesos cotidianos.</p>
                         </div>
                     </div>
 
@@ -535,7 +620,7 @@
                         </div>
                         <div class="multi-card-body">
                             <h3>Prototipos <span class="title-serif-italic">con propósito</span></h3>
-                            <p>Se desarrollan robots que transportan energía solar, modelos de drones impresos en 3D y sistemas automatizados para el servicio del comedor escolar, todos propuestos por los propios estudiantes.</p>
+                            <p>Actualmente, se desarrollan prototipos como robots que transportan energía solar, modelos de drones, impresos en 3D y sistemas automatizados para el servicio del comedor escolar.</p>
                         </div>
                     </div>
 
@@ -551,7 +636,7 @@
                         </div>
                         <div class="multi-card-body">
                             <h3>Trabajo <span class="title-serif-italic">y perseverancia</span></h3>
-                            <p>La robótica educativa fortalece habilidades técnicas, pero también fomenta el trabajo en equipo, la perseverancia y la responsabilidad. Cada máquina es el resultado de la colaboración y la mejora continua.</p>
+                            <p>La robótica educativa fortalece habilidades técnicas, pero también fomenta el trabajo en equipo, la perseverancia y la responsabilidad. Los estudiantes comprenden que cada máquina es el resultado de la colaboración y la mejora continua, elementos esenciales en la formación de ciudadanos íntegros.</p>
                         </div>
                     </div>
 
@@ -583,8 +668,8 @@
                 <h3 class="pq-kd-title">
                     Semillero de robótica de<br><span class="serif-italic-yellow">alto nivel competitivo</span>
                 </h3>
-                <p class="pq-kd-subtitle">
-                    El semillero de robótica participa en competencias intercolegiales y universitarias de alto nivel, obteniendo destacados resultados en torneos regionales e internacionales. Estas experiencias fortalecen el liderazgo académico del Gimnasio El Hontanar.
+                <p class="pq-kd-subtitle" style="font-size: 1.05rem; line-height: 1.8; max-width: 860px; margin: 0 auto; color: #ffffff;">
+                    El semillero de robótica del colegio participa en competencias intercolegiales y universitarias de alto nivel, donde ha obtenido primeros lugares y posiciones destacadas en torneos regionales e internacionales. Estas experiencias consolidan el liderazgo académico característico del Gimnasio El Hontanar como uno de los Colegios bilingües en Bogotá y de los colegios en Chía comprometidos con la excelencia.
                 </p>
             </div>
         </div>
@@ -621,14 +706,14 @@
                 <div class="pq-carousel-slides-wrapper" style="margin-top: 20px;">
                     <!-- Content Block: Maker Space -->
                     <div class="pq-carousel-slide active">
-                        <span class="pq-slide-kicker" style="color: var(--green); font-weight: bold; text-transform: uppercase;">MAKER SPACE EQUIPADO</span>
-                        <h3 class="pq-slide-title" style="font-size: 2.2rem; font-family: var(--font-lato); font-weight: 800; color: var(--blue); margin-bottom: 25px; line-height: 1.2; text-transform: none;">Prototipos funcionales en nuestro Maker Space equipado y seguro</h3>
-                        <div class="pq-slide-description" style="color: #4a5568; line-height: 1.7; font-size: 0.98rem; font-family: var(--font-lato);">
-                            <p style="margin-bottom: 16px;">En Robotic Labs, cada prototipo demuestra que la tecnología puede estar al servicio del cuidado del entorno, la optimización de recursos y el bienestar colectivo. Aquí, aprender robótica no es solo programar: es imaginar, construir y comprobar que las ideas transforman la realidad.</p>
-                            <p style="margin-bottom: 25px; border-left: 3px solid var(--yellow); padding-left: 15px; font-style: italic; color: #4a5568; font-weight: 500;">Ven a conocer nuestro Maker Space: un laboratorio seguro y completamente dotado donde los estudiantes desarrollan competencias tecnológicas construyendo, experimentando y programando.</p>
+                        <span class="pq-slide-kicker" style="color: var(--green); font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">EQUIPADO Y SEGURO</span>
+                        <h3 class="pq-slide-title" style="font-size: 2.2rem; font-family: var(--font-lato); font-weight: 800; color: var(--blue); margin-bottom: 25px; line-height: 1.2; text-transform: none;">Prototipos funcionales en nuestro Maker Space</h3>
+                        <div class="pq-slide-description" style="color: #4a5568; line-height: 1.75; font-size: 0.98rem; font-family: var(--font-lato);">
+                            <p style="margin-bottom: 18px;">En Robotic Labs, cada prototipo demuestra que la tecnología puede estar al servicio del cuidado del entorno, la optimización de recursos y el bienestar colectivo. Aquí, aprender robótica no es solo programar: es imaginar, construir y comprobar que las ideas, cuando se trabajan con amor y propósito, pueden transformar la realidad.</p>
+                            <p style="margin-bottom: 25px; border-left: 3px solid var(--yellow); padding-left: 15px; font-style: italic; color: #4a5568; font-weight: 500;">Ven a conocer nuestro Maker Space: un laboratorio seguro y completamente dotado donde los estudiantes desarrollan competencias tecnológicas construyendo, experimentando y programando. Agenda tu visita y vive la experiencia de aprender creando en el Hontanar.</p>
                         </div>
-                        <a href="contactanos.html" class="pq-slide-cta">
-                            Laboratorio de Robótica Seguro y Dotado
+                        <a href="agenda-visita.html" class="pq-slide-cta">
+                            Agenda tu visita
                             <span class="pq-cta-circle-arrow">
                                 <svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="3" d="M9 5l7 7-7 7"/></svg>
                             </span>
