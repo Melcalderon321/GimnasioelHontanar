@@ -637,9 +637,9 @@
 
 .timeline-card p {
     font-family: var(--font-lato);
-    font-size: 0.88rem;
-    line-height: 1.55;
-    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.88);
 }
 
 /* Decorative corner lines inside cards */
