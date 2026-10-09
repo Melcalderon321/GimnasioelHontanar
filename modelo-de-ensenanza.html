@@ -9,6 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="tour-virtual.css">
+    <link rel="stylesheet" href="filosofia-y-valores.css">
+    <link rel="stylesheet" href="secciones.css">
     <link rel="stylesheet" href="por-que.css">
     <link rel="stylesheet" href="modelo-de-ensenanza.css">
 </head>
@@ -75,6 +77,7 @@
                     <li><a href="multilinguismo.html">Multilingüismo</a></li>
                     <li><a href="programa-ib.html">Programa IB</a></li>
                     <li><a href="intercambio-hontanar.html">Intercambio Hontanar</a></li>
+                    <li><a href="equipo-internacional.html">Equipo Internacional</a></li>
                     <li><a href="consejeria-internacional.html">Consejería Internacional</a></li>
                 </ul>
             </li>
@@ -85,7 +88,14 @@
                 </div>
                 <ul class="submenu" style="display: block;">
                     <li><a href="un-dia-escolar.html">Un Día Escolar</a></li>
-                    <li><a href="modelo-de-ensenanza.html" style="color: var(--yellow); font-weight: 700;">Modelo de Enseñanza</a></li>
+                    <li class="has-sub-submenu">
+                        <a href="modelo-de-ensenanza.html" style="color: var(--yellow); font-weight: 700;">Modelo de Enseñanza</a>
+                        <ul class="sub-submenu">
+                            <li><a href="modelo-de-ensenanza.html#modal-academia" data-open-modal="modal-academia">Academia</a></li>
+                            <li><a href="modelo-de-ensenanza.html#modal-arte" data-open-modal="modal-arte">Arte y Cultura</a></li>
+                            <li><a href="modelo-de-ensenanza.html#modal-deportes" data-open-modal="modal-deportes">Deporte</a></li>
+                        </ul>
+                    </li>
                     <li><a href="bienestar-emocional.html">Bienestar Emocional</a></li>
                     <li><a href="programa-casas.html">Programa Casas</a></li>
                     <li><a href="character-counts.html">Character Counts</a></li>
@@ -341,105 +351,128 @@
             <a href="index.html">Inicio</a> &gt; <a href="#">Vida en el Campus</a> &gt; <span class="current">Modelo de Enseñanza</span>
         </div>
 
-        <!-- Header Title Section -->
-        <div class="model-header-container" style="display: block; margin: 45px auto 45px auto;">
-            <h2 class="model-header-title">Un modelo de enseñanza para <span>cada etapa</span></h2>
-        </div>
-
-        <!-- LEVEL SELECTOR (TABS) -->
-        <div class="level-selector-wrapper" style="margin-bottom: 45px;">
-            <button class="level-tab-btn active" data-tab="pane-modelo">Modelo de Enseñanza</button>
-            <button class="level-tab-btn" data-tab="pane-academia">Academia</button>
-            <button class="level-tab-btn" data-tab="pane-arte">Arte y Cultura</button>
-            <button class="level-tab-btn" data-tab="pane-deporte">Deporte</button>
-        </div>
-
-        <!-- PESTAÑA 1: MODELO DE ENSEÑANZA -->
-        <div class="model-tab-pane" id="pane-modelo" style="display: block;">
-            <!-- Introducción Modelo de Enseñanza -->
-            <div class="model-intro-card" style="max-width: 1140px; margin: 0 auto 45px auto; padding: 45px 50px; background: #ffffff; border: 1.5px solid rgba(37, 68, 120, 0.12); box-shadow: 0 18px 45px rgba(37,68,120,0.09);">
-                <span style="font-family: var(--font-lato); color: var(--green); font-size: 0.85rem; font-weight: 900; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 12px; display: inline-block;">EDUCACIÓN CON PROPÓSITO, BIENESTAR Y FORMACIÓN INTEGRAL</span>
-                <h3 style="font-family: var(--font-lato); font-size: 2rem; font-weight: 800; color: var(--blue); line-height: 1.25; margin: 0 0 18px 0;">
+        <!-- ==========================================================================
+             SECCIÓN 1: MODELO DE ENSEÑANZA (Layout Dividido con Acordeón estilo Bienestar Emocional)
+             ========================================================================== -->
+        <section class="pq-split-section hontanar-scroll-reveal" id="seccion-modelo-ensenanza" style="margin-top: 20px; margin-bottom: 70px;">
+            <!-- Left Side: Content -->
+            <div class="pq-split-left" style="display: flex; flex-direction: column; justify-content: center;">
+                <h2 class="pq-split-title" style="font-family: var(--font-lato); font-size: 2.15rem; font-weight: 800; color: var(--blue); line-height: 1.25; margin-bottom: 22px; text-transform: none;">
+                    Educación con propósito,<br>
+                    <span style="font-family: var(--font-playfair); font-style: italic; color: var(--green); font-weight: bold; text-transform: none;">bienestar y formación integral</span>
+                </h2>
+                
+                <p style="font-family: var(--font-lato); font-size: 1.15rem; font-weight: 800; color: var(--blue); line-height: 1.45; margin: 0 0 18px 0;">
                     <strong>Gimnasio El Hontanar, uno de los mejores colegios en Bogotá con Bachillerato Internacional</strong>
-                </h3>
-                <p style="font-family: var(--font-lato); font-size: 0.98rem; line-height: 1.75; color: #4a5568; margin-bottom: 18px;">
+                </p>
+                
+                <p style="font-family: var(--font-lato); font-size: 1.02rem; line-height: 1.75; color: #4a5568; margin: 0;">
                     En nuestro colegio creemos que aprender debe ser una <strong>experiencia significativa</strong>, feliz y <strong>transformadora</strong>. Nuestro modelo de enseñanza está diseñado para que cada estudiante comprenda lo que aprende, <strong>viva lo aprendido</strong> y descubra su <strong>máximo potencial</strong>, en un entorno de bienestar, armonía y acompañamiento constante.
                 </p>
-                <h4 style="font-family: var(--font-lato); font-size: 1.2rem; font-weight: 800; color: var(--blue); margin: 20px 0 10px 0;">
-                    <strong>Educación integral con propósito</strong>: <br>
-                    <span style="font-family: var(--font-playfair); font-style: italic; color: var(--green);"><strong>Aprender haciendo, comprender para la vida</strong></span>
-                </h4>
-                <p style="font-family: var(--font-lato); font-size: 0.98rem; line-height: 1.75; color: #4a5568; margin-bottom: 18px;">
-                    El proceso de enseñanza y aprendizaje se construye a partir de experiencias que integran el <strong>conocimiento interdisciplinario</strong>, el <strong>uso consciente de la tecnología</strong> y el <strong>desarrollo emocional</strong>. Nuestros estudiantes no repiten contenidos: <strong>piensan, crean, se expresan y participan activamente</strong> de su propio aprendizaje. Esa es la clave para mantener viva la curiosidad, la motivación y el <strong>gusto por aprender</strong>.
+            </div>
+
+            <!-- Right Side: Photo and accents -->
+            <div class="pq-split-right">
+                <div class="pq-split-yellow-accent" style="bottom: -20px; left: -20px;"></div>
+                <div class="pq-split-photo-bg" style="background-image: url('assets/DSC_0889.JPG'); background-position: center; border-radius: 0; overflow: hidden;"></div>
+                <img src="assets/Recurso 15.svg" class="pq-split-svg-decorator" alt="Decoración">
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+             SECCIÓN 2: EDUCACIÓN INTEGRAL CON PROPÓSITO (Layout Reverso: Foto Izquierda, Texto Derecha)
+             ========================================================================== -->
+        <section class="pq-split-section pq-split-reverse hontanar-scroll-reveal" style="margin-top: 0; margin-bottom: 80px;">
+            <!-- Left Side on Desktop: Photo and accents -->
+            <div class="pq-split-right pq-split-photo-col">
+                <div class="pq-split-yellow-accent" style="bottom: -20px; right: -20px; left: auto;"></div>
+                <div class="pq-split-photo-bg" style="background-image: url('assets/Hontanar-WEB-09-2022-318-ALTA.jpg'); background-position: center 70%; border-radius: 0; overflow: hidden;"></div>
+                <img src="assets/Recurso 15.svg" class="pq-split-svg-decorator" style="top: -14px; left: -40px; right: auto;" alt="Decoración">
+            </div>
+
+            <!-- Right Side on Desktop: Content -->
+            <div class="pq-split-left pq-split-text-col" style="display: flex; flex-direction: column; justify-content: center;">
+                <h2 class="pq-split-title" style="font-family: var(--font-lato); font-size: 2.25rem; font-weight: 800; color: var(--blue); line-height: 1.2; margin-bottom: 25px;">
+                    Educación integral con<br>
+                    propósito: Aprender haciendo,<br>
+                    <span style="font-family: var(--font-playfair); font-style: italic; color: var(--green); font-weight: bold;">comprender para la vida</span>
+                </h2>
+                <p style="font-family: var(--font-lato); font-size: 1.02rem; line-height: 1.8; color: #4a5568; margin-bottom: 18px;">
+                    El proceso de enseñanza y aprendizaje se construye a partir de experiencias que integran el <strong>conocimiento interdisciplinario</strong>, el <strong>uso consciente de la tecnología</strong> y el <strong>desarrollo emocional</strong>.
                 </p>
-                <div style="background: #f8fafc; border-left: 4px solid var(--blue); padding: 20px 24px; margin: 22px 0;">
-                    <h5 style="font-family: var(--font-lato); font-size: 1.05rem; font-weight: 800; color: var(--blue); margin: 0 0 10px 0; text-transform: uppercase; letter-spacing: 1px;">
-                        UN MODELO EDUCATIVO QUE POTENCIA TALENTOS Y VALORES PARA LA VIDA
-                    </h5>
-                    <p style="font-family: var(--font-lato); font-size: 0.96rem; line-height: 1.7; color: #4a5568; margin: 0;">
-                        Nuestro enfoque se sostiene en un <strong>triángulo pedagógico</strong>: <strong>Inteligencias Múltiples</strong>, <strong>Enseñanza para la Comprensión</strong> y <strong>desarrollo de Competencias</strong>. Esto nos permite reconocer que cada niño aprende de manera distinta, acompañarlo en ese proceso y brindarle <strong>herramientas reales para la vida</strong> y para los <strong>desafíos del futuro global</strong>.
-                    </p>
-                </div>
-                <div style="background: #f8fafc; border-left: 4px solid var(--green); padding: 20px 24px; margin: 22px 0;">
-                    <h5 style="font-family: var(--font-lato); font-size: 1.05rem; font-weight: 800; color: var(--green); margin: 0 0 10px 0; text-transform: uppercase; letter-spacing: 1px;">
-                        EDUCACIÓN INTEGRAL EN UN COLEGIO BILINGÜE CALENDARIO A EN BOGOTÁ
-                    </h5>
-                    <p style="font-family: var(--font-lato); font-size: 0.96rem; line-height: 1.7; color: #4a5568; margin: 0 0 12px 0;">
-                        El arte, la cultura, el deporte, los idiomas, los <strong>proyectos interdisciplinarios</strong> y <strong>los programas internacionales</strong> no son un complemento: son parte esencial de nuestra propuesta educativa. En El Hontanar, <strong>los niños crecen siendo felices</strong>, seguros de sí mismos y conscientes de su lugar en el mundo.
-                    </p>
-                    <p style="font-family: var(--font-playfair); font-style: italic; font-size: 1.05rem; color: var(--blue); font-weight: 600; margin: 0;">
-                        Educar no es sólo enseñar contenidos, es formar personas íntegras, creativas y con propósito.
-                    </p>
-                </div>
-                <div style="margin-top: 25px;">
-                    <p style="font-family: var(--font-lato); font-size: 1rem; color: #4a5568; margin: 0;">
-                        <a href="agenda-visita.html" style="color: var(--green, #1BA655); font-weight: 800; text-decoration: underline; text-underline-offset: 3px;">Agenda una visita</a> personalizada y descubre uno de los mejores colegios bilingües del norte de Bogotá.
+                <div style="border-left: 3px solid var(--yellow); padding-left: 18px; margin-top: 15px;">
+                    <p style="font-family: var(--font-lato); font-size: 0.98rem; line-height: 1.75; color: #4a5568; font-style: italic; font-weight: 500; margin: 0;">
+                        Nuestros estudiantes no repiten contenidos: <strong>piensan, crean, se expresan y participan activamente</strong> de su propio aprendizaje. Esa es la clave para mantener viva la <strong>curiosidad</strong>, la <strong>motivación</strong> y el <strong>gusto por aprender</strong>.
                     </p>
                 </div>
             </div>
+        </section>
 
-            <!-- Sub-bar de etapas dentro de Modelo de Enseñanza -->
-            <div style="display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin: -10px auto 45px auto; max-width: 950px; padding: 0 15px;">
-                <a href="#level-jardin" class="stage-pill-link">Preescolar</a>
-                <a href="#level-primaria" class="stage-pill-link">Primaria</a>
-                <a href="#level-secundaria" class="stage-pill-link">Bachillerato - Escuela Media (Middle School)</a>
-                <a href="#level-media" class="stage-pill-link">Bachillerato - Escuela Alta (High School)</a>
-            </div>
-
-        <!-- 1. NIVEL: JARDÍN (PREESCOLAR) — TEXTO IZQUIERDA / FOTO DERECHA -->
-        <section class="hontanar-scroll-reveal" id="level-jardin" style="margin-top: 20px; margin-bottom: 65px; padding: 0 20px; position: relative; z-index: 2;">
-            <div class="filo-wavy-container" style="max-width: 1140px; margin: 0 auto; position: relative; overflow: visible;">
-                <!-- Cyan dots shape top left -->
-                <div style="position: absolute; top: -14px; left: -20px; z-index: 10; width: 192px; height: 28px;">
-                    <svg id="Capa_2_jardin" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192.67 28.53">
-                        <g id="OBJECTS_jardin"><g><g><path fill="#35b2d3" d="M9.33,4.67c0,2.58-2.09,4.67-4.67,4.67S0,7.24,0,4.67,2.09,0,4.67,0s4.67,2.09,4.67,4.67Z"/><path fill="#35b2d3" d="M27.67,4.67c0,2.58-2.09,4.67-4.67,4.67s-4.67-2.09-4.67-4.67S20.42,0,23,0s4.67,2.09,4.67,4.67Z"/><path fill="#35b2d3" d="M46,4.67c0,2.58-2.09,4.67-4.67,4.67s-4.67-2.09-4.67-4.67,2.09-4.67,4.67-4.67,4.67,2.09,4.67,4.67Z"/><path fill="#35b2d3" d="M64.33,4.67c0,2.58-2.09,4.67-4.67,4.67s-4.67-2.09-4.67-4.67,2.09-4.67,4.67-4.67,4.67,2.09,4.67,4.67Z"/><path fill="#35b2d3" d="M82.67,4.67c0,2.58-2.09,4.67-4.67,4.67s-4.67-2.09-4.67-4.67,2.09-4.67,4.67-4.67,4.67,2.09,4.67,4.67Z"/><path fill="#35b2d3" d="M101,4.67c0,2.58-2.09,4.67-4.67,4.67s-4.67-2.09-4.67-4.67,2.09-4.67,4.67-4.67,4.67,2.09,4.67,4.67Z"/><path fill="#35b2d3" d="M119.33,4.67c0,2.58-2.09,4.67-4.67,4.67s-4.67-2.09-4.67-4.67,2.09-4.67,4.67-4.67,4.67,2.09,4.67,4.67Z"/><path fill="#35b2d3" d="M137.67,4.67c0,2.58-2.09,4.67-4.67,4.67s-4.67-2.09-4.67-4.67,2.09-4.67,4.67-4.67,4.67,2.09,4.67,4.67Z"/><path fill="#35b2d3" d="M156,4.67c0,2.58-2.09,4.67-4.67,4.67s-4.67-2.09-4.67-4.67,2.09-4.67,4.67-4.67,4.67,2.09,4.67,4.67Z"/><path fill="#35b2d3" d="M174.33,4.67c0,2.58-2.09,4.67-4.67,4.67s-4.67-2.09-4.67-4.67,2.09-4.67,4.67-4.67,4.67,2.09,4.67,4.67Z"/><path fill="#35b2d3" d="M192.67,4.67c0,2.58-2.09,4.67-4.67,4.67s-4.67-2.09-4.67-4.67,2.09-4.67,4.67-4.67,4.67,2.09,4.67,4.67Z"/></g><g><circle fill="#35b2d3" cx="4.67" cy="23.86" r="4.67"/><path fill="#35b2d3" d="M27.67,23.86c0,2.58-2.09,4.67-4.67,4.67s-4.67-2.09-4.67-4.67,2.09-4.67,4.67-4.67,4.67,2.09,4.67,4.67Z"/><circle fill="#35b2d3" cx="41.33" cy="23.86" r="4.67"/><circle fill="#35b2d3" cx="59.67" cy="23.86" r="4.67"/><path fill="#35b2d3" d="M82.67,23.86c0,2.58-2.09,4.67-4.67,4.67s-4.67-2.09-4.67-4.67,2.09-4.67,4.67-4.67,4.67,2.09,4.67,4.67Z"/><path fill="#35b2d3" d="M101,23.86c0,2.58-2.09,4.67-4.67,4.67s-4.67-2.09-4.67-4.67,2.09-4.67,4.67-4.67,4.67,2.09,4.67,4.67Z"/><circle fill="#35b2d3" cx="114.67" cy="23.86" r="4.67"/><path fill="#35b2d3" d="M137.67,23.86c0,2.58-2.09,4.67-4.67,4.67s-4.67-2.09-4.67-4.67,2.09-4.67,4.67-4.67,4.67,2.09,4.67,4.67Z"/><path fill="#35b2d3" d="M156,23.86c0,2.58-2.09,4.67-4.67,4.67s-4.67-2.09-4.67-4.67,2.09-4.67,4.67-4.67,4.67,2.09,4.67,4.67Z"/><circle fill="#35b2d3" cx="169.67" cy="23.86" r="4.67"/><path fill="#35b2d3" d="M192.67,23.86c0,2.58-2.09,4.67-4.67,4.67s-4.67-2.09-4.67-4.67,2.09-4.67,4.67-4.67,4.67,2.09,4.67,4.67Z"/></g></g></g>
-                    </svg>
+        <!-- ==========================================================================
+             SECCIÓN 3: UN MODELO EDUCATIVO QUE POTENCIA TALENTOS Y VALORES PARA LA VIDA (Panel con Escudo Hontanar)
+             ========================================================================== -->
+        <section class="filo-testimonial-section" style="padding: 10px 20px 80px 20px; background-color: #ffffff; position: relative; overflow: visible;">
+            <div class="filo-testimonial-split hontanar-scroll-reveal" style="max-width: 1100px; margin: 0 auto; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08); border: 1px solid rgba(37, 68, 120, 0.08);">
+                <!-- Shield decorator -->
+                <img src="assets/Capa_2_xA0_Imagen.png" alt="Escudo Hontanar" class="testimonial-split-shield">
+                
+                <!-- Left Column: Content -->
+                <div class="testimonial-split-left" style="padding: 48px 50px; background-color: var(--blue); display: flex; flex-direction: column; justify-content: center; gap: 16px;">
+                    <h3 style="font-family: var(--font-lato); font-size: 1.35rem; font-weight: 800; color: #ffffff; line-height: 1.35; margin: 0; text-transform: none;">
+                        Un modelo educativo que potencia talentos y valores para la vida
+                    </h3>
+                    <p style="font-family: var(--font-lato); font-size: 0.98rem; line-height: 1.7; color: rgba(255, 255, 255, 0.95); margin: 0;">
+                        Nuestro enfoque se sostiene en un <strong>triángulo pedagógico</strong>: <strong>Inteligencias Múltiples</strong>, <strong>Enseñanza para la Comprensión</strong> y <strong>desarrollo de Competencias</strong>.
+                    </p>
+                    <div style="border-left: 3px solid var(--yellow); padding-left: 16px; margin: 2px 0;">
+                        <p style="font-family: var(--font-playfair); font-style: italic; font-size: 1.02rem; line-height: 1.65; color: #ffffff; margin: 0; font-weight: 600;">
+                            Esto nos permite reconocer que cada niño aprende de manera distinta, acompañarlo en ese proceso y brindarle <strong>herramientas reales para la vida</strong> y para los <strong>desafíos del futuro global</strong>.
+                        </p>
+                    </div>
+                    <div style="margin-top: 6px;">
+                        <a href="agenda-visita.html" class="btn btn-yellow btn-nav" style="display: inline-flex; align-items: center; gap: 8px; padding: 12px 28px; font-weight: 700;">
+                            Agenda tu cita aquí <span class="arrow">&gt;</span>
+                        </a>
+                    </div>
                 </div>
-                <div class="filo-wavy-card text-left" style="min-height: 470px; position: relative; overflow: hidden; background: #ffffff; border-radius: 0; box-shadow: 0 18px 45px rgba(37,68,120,0.09); border: 1.5px solid rgba(37, 68, 120, 0.12); display: flex;">
-                    <div class="wavy-card-text-col" style="padding: 45px 50px; flex: 1.1; display: flex; flex-direction: column; justify-content: center; gap: 14px; text-align: left; background: #ffffff; position: relative;">
-                        <h2 class="wavy-card-title" style="font-family: var(--font-lato); font-size: 2.1rem; font-weight: 800; color: var(--blue); line-height: 1.25; margin: 0;">
-                            Preescolar en Bogotá: <br>
-                            <span style="font-family: var(--font-playfair); font-style: italic; color: var(--green); font-weight: bold;">Aprendizaje Significativo en El Hontanar</span>
+                
+                <!-- Right Column: Image -->
+                <div class="testimonial-split-photo" style="background-image: url('assets/kiva-cierre-0875.jpg'); background-position: center; min-height: 420px;">
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+             SECCIÓN 4: EDUCACIÓN INTEGRAL EN UN COLEGIO BILINGÜE CALENDARIO A (Wavy Card)
+             ========================================================================== -->
+        <section class="filo-wavy-cards-section" style="padding: 10px 0 70px 0; background-color: #ffffff; position: relative; overflow: hidden;">
+            <div class="filo-wavy-container">
+                <div class="filo-wavy-card text-left hontanar-scroll-reveal">
+                    <!-- Left Column: Content -->
+                    <div class="wavy-card-text-col" style="padding: 50px 42px;">
+                        <h2 class="wavy-card-title" style="font-size: clamp(1.65rem, 2.2vw, 1.95rem); line-height: 1.25;">
+                            <strong>Educación integral en un colegio <br>
+                            bilingüe <span>Calendario A en Bogotá</span></strong>
                         </h2>
-                        <p style="font-family: var(--font-lato); font-size: 0.92rem; font-weight: 700; color: var(--blue); margin: 0;">
-                            Aprender es crecer con alegría
+                        <p class="wavy-card-paragraph">
+                            El arte, la cultura, el deporte, los idiomas, los <strong>proyectos interdisciplinarios</strong> y los <strong>programas internacionales</strong> no son un complemento: son parte esencial de nuestra propuesta educativa. En El Hontanar, los niños crecen siendo <strong>felices, seguros de sí mismos y conscientes de su lugar en el mundo</strong>.
                         </p>
-                        <p class="wavy-card-paragraph" style="font-family: var(--font-lato); font-size: 0.94rem; line-height: 1.65; color: #4a5568; margin: 0;">
-                            En nuestro Preescolar, el aprendizaje tiene sentido: aquí los niños comienzan su vida escolar en un espacio seguro y amoroso formándose a través del juego, la exploración, la literatura, el arte y la experimentación. En el Hontanar desarrollamos aprendizajes significativos desde pre-kínder hasta segundo. Nuestro acompañamiento permanente, con docentes bilingües y un equipo especializado en bienestar, fomenta la autonomía, la confianza y el pensamiento creativo. Creemos en el error como parte del aprendizaje, en el trabajo en equipo y en formar niños felices, seguros y sensibles que aprenden haciendo.
+                        <p class="wavy-card-paragraph-highlight" style="font-family: var(--font-playfair); font-style: italic; font-size: 1.05rem; line-height: 1.5; color: var(--blue); font-weight: 600; border-left: 3px solid var(--yellow); padding-left: 14px; margin: 0;">
+                            "Educar no es sólo enseñar contenidos, es formar personas íntegras, creativas y con propósito."
                         </p>
-                        <div>
-                            <a href="https://wa.me/573164701496" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-lato); font-size: 0.94rem; font-weight: 800; color: var(--green); text-decoration: none; transition: all 0.2s ease;">
-                                Agenda una visita y conoce uno de los mejores colegios privados en Bogotá para preescolar <span style="font-size: 1.15rem;">&rarr;</span>
+                        <p class="wavy-card-paragraph" style="font-size: 0.95rem; color: #4a5568;">
+                            Agenda una visita personalizada y descubre uno de los mejores colegios bilingües del norte de Bogotá.
+                        </p>
+                        <div class="wavy-card-btn-wrap">
+                            <a href="agenda-visita.html" class="btn btn-yellow btn-nav">
+                                Conocer más <span class="arrow">&gt;</span>
                             </a>
                         </div>
                     </div>
-                    <div class="wavy-card-img-col" style="background-image: url('assets/Hontanar-WEB-09-2022-189-ALTA.jpg'); background-size: cover; background-position: center; flex: 0.9; min-height: 470px; position: relative;">
-                        <!-- Floating Pill Badge -->
-                        <div style="position: absolute; top: 25px; right: 25px; z-index: 5; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(8px); padding: 10px 20px; border-radius: 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.14); display: flex; align-items: center; gap: 8px; font-family: var(--font-lato); font-size: 0.88rem; font-weight: 800; color: var(--blue);">
-                            <span style="color: #f59e0b; font-size: 1.1rem;">✦</span> Pre kínder - Segundo
-                        </div>
-                        <!-- Wavy edge divider SVG path -->
-                        <svg viewBox="0 0 100 600" preserveAspectRatio="none" class="wavy-edge-svg wave-right-side" style="position: absolute; top: 0; bottom: 0; left: -1px; width: 60px; height: 100%; z-index: 2; pointer-events: none;">
+
+                    <!-- Right Column: Image with Wavy Divider -->
+                    <div class="wavy-card-img-col" style="background-image: url('assets/Hontanar-WEB-09-2022-259-ALTA.jpg');">
+                        <svg viewBox="0 0 100 600" preserveAspectRatio="none" class="wavy-edge-svg wave-right-side">
                             <path d="M0,0 L30,0 C60,150 70,300 25,450 C10,520 0,600 0,600 Z" fill="#ffffff"/>
                         </svg>
                     </div>
@@ -447,313 +480,152 @@
             </div>
         </section>
 
-        <!-- 2. NIVEL: PRIMARIA — FOTO IZQUIERDA / TEXTO DERECHA -->
-        <section class="hontanar-scroll-reveal" id="level-primaria" style="margin-top: 50px; margin-bottom: 65px; padding: 0 20px; position: relative; z-index: 2;">
-            <div class="filo-wavy-container" style="max-width: 1140px; margin: 0 auto; position: relative; overflow: visible;">
-                <div class="filo-wavy-card text-right" style="min-height: 470px; position: relative; overflow: hidden; background: #ffffff; border-radius: 0; box-shadow: 0 18px 45px rgba(37,68,120,0.09); border: 1.5px solid rgba(37, 68, 120, 0.12); display: flex;">
-                    <div class="wavy-card-img-col" style="flex: 0.9; min-height: 470px; position: relative; overflow: hidden;">
-                        <img src="assets/Copia de DSC_0186.JPG" alt="Primaria Hontanar" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1;">
-                        <!-- Floating Pill Badge -->
-                        <div style="position: absolute; top: 25px; left: 25px; z-index: 5; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(8px); padding: 10px 20px; border-radius: 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.14); display: flex; align-items: center; gap: 8px; font-family: var(--font-lato); font-size: 0.88rem; font-weight: 800; color: var(--blue);">
-                            <span style="color: #06b6d4; font-size: 1.1rem;">✦</span> Tercero - Quinto
-                        </div>
-                        <!-- Wavy edge divider SVG path overlapping image from right -->
-                        <svg viewBox="0 0 100 600" preserveAspectRatio="none" class="wavy-edge-svg wave-left-side" style="position: absolute; top: 0; bottom: 0; right: -1px; width: 60px; height: 100%; z-index: 2; pointer-events: none; transform: scaleX(-1);">
-                            <path d="M0,0 L30,0 C60,150 70,300 25,450 C10,520 0,600 0,600 Z" fill="#ffffff"/>
-                        </svg>
-                    </div>
-                    <div class="wavy-card-text-col" style="padding: 45px 50px; flex: 1.1; display: flex; flex-direction: column; justify-content: center; gap: 14px; text-align: left; background: #ffffff;">
-                        <h2 class="wavy-card-title" style="font-family: var(--font-lato); font-size: 2.1rem; font-weight: 800; color: var(--blue); line-height: 1.25; margin: 0;">
-                            Primaria en el Gimnasio El Hontanar: <br>
-                            <span style="font-family: var(--font-playfair); font-style: italic; color: var(--green); font-weight: bold;">Un Colegio Privado en Bogotá con Enfoque Integral</span>
-                        </h2>
-                        <p style="font-family: var(--font-lato); font-size: 0.92rem; font-weight: 700; color: var(--blue); margin: 0;">
-                            Niños seguros de lo que son y de lo que pueden lograr.
-                        </p>
-                        <p class="wavy-card-paragraph" style="font-family: var(--font-lato); font-size: 0.95rem; line-height: 1.65; color: #4a5568; margin: 0;">
-                            En la Primaria del Gimnasio El Hontanar, los niños dan el paso a la formalidad académica sin perder su curiosidad ni el sentido humano del aprendizaje. Gracias a proyectos interdisciplinarios con enfoque STEM+H, los estudiantes conectan saberes, formulan sus propias preguntas, construyen pensamiento crítico, creatividad y liderazgo. Aquí aprenden a organizar su tiempo y asumir responsabilidades mientras fortalecen valores éticos, identidad y solidaridad. El arte y el deporte acompañan el proceso como reguladores emocionales, mientras que la tecnología se integra con un uso académico y responsable. Con el acompañamiento de docentes y del equipo de bienestar, formamos estudiantes en autoestima, autogestión y autoeficacia, preparados no solo para el bachillerato, sino para la vida.
-                        </p>
-                        <div>
-                            <a href="https://wa.me/573164701496" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-lato); font-size: 0.94rem; font-weight: 800; color: var(--green); text-decoration: none; transition: all 0.2s ease;">
-                                Agenda una visita y conoce nuestra Primaria calendario A <span style="font-size: 1.15rem;">&rarr;</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+        <!-- ==========================================================================
+             SECCIÓN 5: FORMACIÓN INTEGRAL MÁS ALLÁ DEL AULA (SUBSECCIONES COMO POP UP)
+             ========================================================================== -->
+        <section class="hontanar-scroll-reveal" id="formacion-integral-seccion" style="margin: 30px auto 70px auto; padding: 0 20px; max-width: 1140px; position: relative; z-index: 2;">
+            <!-- Encabezado de la Sección -->
+            <div style="text-align: center; max-width: 920px; margin: 0 auto 40px auto;">
+                <span style="font-family: var(--font-lato); color: var(--green); font-size: 0.85rem; font-weight: 900; letter-spacing: 2.5px; text-transform: uppercase; margin-bottom: 12px; display: inline-block;">
+                    FORMACIÓN INTEGRAL MÁS ALLÁ DEL AULA
+                </span>
+                <h2 style="font-family: var(--font-lato); font-size: 2.2rem; font-weight: 800; color: var(--blue); line-height: 1.25; margin: 0;">
+                    Academia, Arte, Cultura y Deporte <span style="font-family: var(--font-playfair); font-style: italic; color: var(--green);">en uno de los mejores colegios bilingües de Bogotá</span>
+                </h2>
             </div>
-        </section>
 
-        <!-- ENCABEZADO SECCIÓN BACHILLERATO -->
-        <div class="hontanar-scroll-reveal" style="text-align: center; max-width: 950px; margin: 70px auto 35px auto; padding: 0 20px;">
-            <span style="font-family: var(--font-lato); color: var(--green); font-size: 0.85rem; font-weight: 900; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 14px; display: inline-block;">
-                BACHILLERATO EN EL GIMNASIO EL HONTANAR
-            </span>
-            <h2 style="font-family: var(--font-lato); font-size: 1.85rem; font-weight: 800; color: var(--blue); line-height: 1.25; margin: 0 0 14px 0;">
-                FORMACIÓN INTEGRAL, BILINGÜE E INTERNACIONAL
-            </h2>
-            <p style="font-family: var(--font-playfair); font-style: italic; font-size: 1.25rem; font-weight: 600; color: var(--blue); line-height: 1.6; margin: 0;">
-                Bachillerato en uno de los mejores colegios privados en Bogotá
-            </p>
-        </div>
-
-        <!-- 3. NIVEL: SECUNDARIA (ESCUELA MEDIA) — TEXTO IZQUIERDA / FOTO DERECHA -->
-        <section class="hontanar-scroll-reveal" id="level-secundaria" style="margin-top: 50px; margin-bottom: 65px; padding: 0 20px; position: relative; z-index: 2;">
-            <div class="filo-wavy-container" style="max-width: 1140px; margin: 0 auto; position: relative; overflow: visible;">
-                <div class="filo-wavy-card text-left" style="min-height: 470px; position: relative; overflow: hidden; background: #ffffff; border-radius: 0; box-shadow: 0 18px 45px rgba(37,68,120,0.09); border: 1.5px solid rgba(37, 68, 120, 0.12); display: flex;">
-                    <div class="wavy-card-text-col" style="padding: 45px 50px; flex: 1.1; display: flex; flex-direction: column; justify-content: center; gap: 14px; text-align: left; background: #ffffff;">
-                        <h2 class="wavy-card-title" style="font-family: var(--font-lato); font-size: 2.1rem; font-weight: 800; color: var(--blue); line-height: 1.25; margin: 0;">
-                            Escuela Media (6° a 8°): <br>
-                            <span style="font-family: var(--font-playfair); font-style: italic; color: var(--green); font-weight: bold;">Formación Académica y Desarrollo de la Autonomía</span>
-                        </h2>
-                        <p style="font-family: var(--font-lato); font-size: 0.92rem; font-weight: 700; color: var(--blue); margin: 0;">
-                            Bachillerato bilingüe con acompañamiento socioemocional
-                        </p>
-                        <p class="wavy-card-paragraph" style="font-family: var(--font-lato); font-size: 0.94rem; line-height: 1.65; color: #4a5568; margin: 0;">
-                            En la Escuela Media del Gimnasio El Hontanar acompañamos a preadolescentes y adolescentes en una etapa decisiva de su formación académica y personal, un trabajo compartido con la familia. A través de proyectos interdisciplinarios y un modelo de enseñanza para la comprensión, fortalecemos el pensamiento crítico, la capacidad de preguntar, analizar y tomar decisiones. Los estudiantes aprenden a pensar, innovar, colaborar, hacer y comunicar, descubriendo sus intereses y habilidades para orientar su camino hacia la Escuela Alta. Nuestro modelo combina experiencia de aprendizaje, contenidos globales, currículos activos y dinámicos, con componentes propios al desarrollo socioemocional que forman el carácter en esta etapa de la vida.
-                        </p>
-                        <div>
-                            <a href="https://wa.me/573164701496" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-lato); font-size: 0.94rem; font-weight: 800; color: var(--green); text-decoration: none; transition: all 0.2s ease;">
-                                Contáctanos para conocer más de nuestro colegio al norte de Bogotá <span style="font-size: 1.15rem;">&rarr;</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="wavy-card-img-col" style="background-image: url('assets/Copia_de_DSC_0113.JPG'); background-size: cover; background-position: center; flex: 0.9; min-height: 470px; position: relative;">
-                        <!-- Floating Pill Badge -->
-                        <div style="position: absolute; top: 25px; right: 25px; z-index: 5; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(8px); padding: 10px 20px; border-radius: 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.14); display: flex; align-items: center; gap: 8px; font-family: var(--font-lato); font-size: 0.88rem; font-weight: 800; color: var(--blue);">
-                            <span style="color: #1ba655; font-size: 1.1rem;">✦</span> Sexto - Octavo
-                        </div>
-                        <!-- Wavy edge divider SVG path -->
-                        <svg viewBox="0 0 100 600" preserveAspectRatio="none" class="wavy-edge-svg wave-right-side" style="position: absolute; top: 0; bottom: 0; left: -1px; width: 60px; height: 100%; z-index: 2; pointer-events: none;">
-                            <path d="M0,0 L30,0 C60,150 70,300 25,450 C10,520 0,600 0,600 Z" fill="#ffffff"/>
-                        </svg>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 4. NIVEL: MEDIA (ESCUELA ALTA) — FOTO IZQUIERDA / TEXTO DERECHA -->
-        <section class="hontanar-scroll-reveal" id="level-media" style="margin-top: 50px; margin-bottom: 40px; padding: 0 20px; position: relative; z-index: 2;">
-            <div class="filo-wavy-container" style="max-width: 1140px; margin: 0 auto; position: relative; overflow: visible;">
-                <div class="filo-wavy-card text-right" style="min-height: 470px; position: relative; overflow: hidden; background: #ffffff; border-radius: 0; box-shadow: 0 18px 45px rgba(37,68,120,0.09); border: 1.5px solid rgba(37, 68, 120, 0.12); display: flex;">
-                    <div class="wavy-card-img-col" style="flex: 0.9; min-height: 470px; position: relative; overflow: hidden;">
-                        <img src="assets/154.jpg" alt="Escuela Alta Hontanar" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1;">
-                        <!-- Floating Pill Badge -->
-                        <div style="position: absolute; top: 25px; left: 25px; z-index: 5; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(8px); padding: 10px 20px; border-radius: 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.14); display: flex; align-items: center; gap: 8px; font-family: var(--font-lato); font-size: 0.88rem; font-weight: 800; color: var(--blue);">
-                            <span style="color: #ec4899; font-size: 1.1rem;">✦</span> Noveno - Once · Programa del Diploma IB
-                        </div>
-                        <!-- Wavy edge divider SVG path overlapping image from right -->
-                        <svg viewBox="0 0 100 600" preserveAspectRatio="none" class="wavy-edge-svg wave-left-side" style="position: absolute; top: 0; bottom: 0; right: -1px; width: 60px; height: 100%; z-index: 2; pointer-events: none; transform: scaleX(-1);">
-                            <path d="M0,0 L30,0 C60,150 70,300 25,450 C10,520 0,600 0,600 Z" fill="#ffffff"/>
-                        </svg>
-                    </div>
-                    <div class="wavy-card-text-col" style="padding: 45px 50px; flex: 1.1; display: flex; flex-direction: column; justify-content: center; gap: 14px; text-align: left; background: #ffffff;">
-                        <h2 class="wavy-card-title" style="font-family: var(--font-lato); font-size: 2.1rem; font-weight: 800; color: var(--blue); line-height: 1.25; margin: 0;">
-                            Escuela Alta (9° a 11°): Proyección Universitaria y <br>
-                            <span style="font-family: var(--font-playfair); font-style: italic; color: var(--green); font-weight: bold;">Proyecto de Vida</span>
-                        </h2>
-                        <p style="font-family: var(--font-lato); font-size: 0.92rem; font-weight: 700; color: var(--blue); margin: 0;">
-                            Bachillerato Internacional en Bogotá con proyección global
-                        </p>
-                        <p class="wavy-card-paragraph" style="font-family: var(--font-lato); font-size: 0.94rem; line-height: 1.65; color: #4a5568; margin: 0;">
-                            Desde noveno grado acompañamos a los estudiantes en la consolidación de su proyecto de vida y su preparación para la educación superior; un bachillerato en Bogotá de alta calidad. Aquí, los jóvenes asumen nuevos retos académicos, desarrollan el Proyecto Personal del Bachillerato Internacional (IB) y aprenden a investigar, conectar disciplinas y profundizar en sus intereses. En décimo y undécimo, fortalecen su formación con el Programa del Diploma IB, la preparación exitosa de nuestros estudiantes para el acceso a la educación superior, construyendo una mentalidad de excelencia basada en la disciplina y la autogestión. Formamos estudiantes seguros, capaces de enfrentar grandes desafíos con criterio propio, responsabilidad y confianza.
-                        </p>
-                        <p style="font-family: var(--font-lato); font-size: 0.92rem; color: #64748b; margin: 0; line-height: 1.5;">
-                            El Gimnasio El Hontanar es uno de los mejores colegios en Chía y Bogotá. Nos encontramos sobre la carrera séptima, a 300 metros del peaje.
-                        </p>
-                        <div>
-                            <a href="https://wa.me/573164701496" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-lato); font-size: 0.94rem; font-weight: 800; color: var(--green); text-decoration: none; transition: all 0.2s ease;">
-                                Llámanos para darte más información <span style="font-size: 1.15rem;">&rarr;</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Zigzag shape bottom right -->
-                <div style="position: absolute; bottom: -10px; right: -20px; z-index: 10; width: 136px; height: 20px;">
-                    <svg id="Capa_2_media" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 136.24 20.46">
-                      <defs>
-                        <linearGradient id="linear-gradient-zigzag-media" x1="0" y1="10.23" x2="136.24" y2="10.23" gradientUnits="userSpaceOnUse">
-                          <stop offset="0" stop-color="#0e4c75"/>
-                          <stop offset="1" stop-color="#2278b2"/>
-                        </linearGradient>
-                      </defs>
-                      <g id="OBJECTS_media">
-                        <polygon fill="url(#linear-gradient-zigzag-media)" points="107.95 20.46 94.68 6.99 81.4 20.46 68.13 6.99 54.85 20.46 41.58 6.99 28.3 20.46 15.02 6.99 3.49 18.69 0 15.25 15.02 0 28.3 13.48 41.58 0 54.85 13.48 68.13 0 81.4 13.48 94.68 0 107.95 13.48 121.22 0 136.24 15.25 132.75 18.69 121.22 6.99 107.95 20.46"/>
-                      </g>
-                    </svg>
-                </div>
-            </div>
-        </section>
-        </div> <!-- Fin #pane-modelo -->
-
-        <!-- PESTAÑA 2: ACADEMIA -->
-        <div class="model-tab-pane" id="pane-academia" style="display: none;">
-            <section class="pq-split-carousel-section hontanar-scroll-reveal" style="margin-top: 25px; margin-bottom: 70px;">
-                <!-- Rectangulito amarillo decorativo detrás de la foto -->
-                <div class="pq-carousel-yellow-accent" style="left: -20px; bottom: -20px;"></div>
-                <!-- SVG Decorador verde mitad dentro mitad fuera en el borde superior derecho de la imagen -->
-                <svg class="pq-slider-decorator deco-green" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96.43 45.2" style="z-index: 3;">
-                    <g>
-                        <polygon class="pq-deco-path-1" points="81.4 20.46 68.13 6.99 54.85 20.46 41.58 6.99 28.3 20.46 15.02 6.99 3.49 18.69 0 15.25 15.02 0 28.3 13.48 41.58 0 54.85 13.48 68.13 0 81.4 13.48 92.93 1.77 96.43 5.21 81.4 20.46"/>
-                        <polygon class="pq-deco-path-2" points="54.85 45.2 41.58 31.72 28.3 45.2 15.02 31.72 3.49 43.42 0 39.98 15.02 24.73 28.3 38.21 41.58 24.73 54.85 38.21 66.38 26.5 69.88 29.95 54.85 45.2"/>
-                    </g>
-                </svg>
-                <!-- Left Side: Image Panel -->
-                <div class="pq-carousel-images-wrapper">
-                    <div class="pq-carousel-img-slide active" style="background-image: url('assets/dsc_0113_copy.jpg'); background-position: center;"></div>
-                </div>
-
-                <!-- Right Side: Content Panel (White background) -->
-                <div class="pq-carousel-content-panel">
-                    <!-- Floating background circles -->
-                    <div class="bg-circles-wrapper">
-                        <div class="bg-circle bg-circle-ring-yellow circle-1"></div>
-                        <div class="bg-circle bg-circle-solid-green circle-2"></div>
-                        <div class="bg-circle bg-circle-ring-blue circle-3"></div>
-                        <div class="bg-circle bg-circle-solid-yellow circle-4"></div>
-                        <div class="bg-circle bg-circle-ring-green circle-5"></div>
-                        <div class="bg-circle bg-circle-ring-yellow circle-6"></div>
-                    </div>
-
-                    <!-- Slides Content Wrapper -->
-                    <div class="pq-carousel-slides-wrapper" style="margin-top: 15px;">
-                        <div class="pq-carousel-slide active">
-                            <span class="pq-slide-kicker" style="color: var(--green); font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; font-size: 0.82rem; margin-bottom: 12px; display: inline-block;"><strong>ACADEMIA</strong></span>
-                            <h3 class="pq-slide-title" style="font-size: 2.15rem; font-family: var(--font-lato); font-weight: 800; color: var(--blue); margin-bottom: 22px; line-height: 1.25; text-transform: none;">
-                                <strong>Aprender con sentido</strong> es <span style="font-family: var(--font-playfair); font-style: italic; color: var(--green); font-weight: bold;">comprender para la vida</span>
-                            </h3>
-                            <div class="pq-slide-description" style="color: #4a5568; line-height: 1.75; font-size: 0.98rem; font-family: var(--font-lato);">
-                                <p style="margin-bottom: 16px;">
-                                    En <strong>El Hontanar</strong> la <strong>formación académica</strong> es <strong>interdisciplinaria y bilingüe</strong>, orientada al pensamiento crítico y a la comprensión. <strong>Aprender con sentido</strong> es comprender para la vida.
-                                </p>
-                                <p style="margin-bottom: 25px; border-left: 3px solid var(--yellow); padding-left: 16px; font-style: italic; color: #4a5568; font-weight: 500; line-height: 1.7;">
-                                    Nuestros estudiantes aprenden a conectar el conocimiento con la vida real, fortaleciendo competencias importantes para su futuro académico y personal, convirtiéndose en <strong>protagonistas</strong> <strong>de su proceso educativo</strong>.
-                                </p>
-                                <div style="margin-top: 25px;">
-                                    <a href="agenda-visita.html" class="btn btn-yellow btn-nav" style="display: inline-flex; align-items: center; gap: 8px;">
-                                        Agendar visita <span class="arrow">&gt;</span>
-                                    </a>
-                                </div>
+            <!-- Grid de 3 Cards Interactivas que activan Pop-ups -->
+            <div class="formacion-cards-grid">
+                <!-- Card 1: Academia -->
+                <div class="formacion-interactive-card" data-modal="modal-academia" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Abrir información sobre Academia">
+                    <div class="formacion-card-media" style="background-image: url('assets/dsc_0113_copy.jpg');">
+                        <div class="formacion-card-overlay">
+                            <h3 class="formacion-card-title">Academia</h3>
+                            <p class="formacion-card-sub">Formación interdisciplinaria y bilingüe orientada a la comprensión</p>
+                            <div class="formacion-card-trigger-btn">
+                                <span>Conoce más</span>
+                                <span class="trigger-plus">+</span>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
-        </div>
 
-        <!-- PESTAÑA 3: ARTE Y CULTURA -->
-        <div class="model-tab-pane" id="pane-arte" style="display: none;">
-            <section class="pq-split-carousel-section hontanar-scroll-reveal" style="margin-top: 25px; margin-bottom: 70px;">
-                <!-- Rectangulito amarillo decorativo detrás de la foto -->
-                <div class="pq-carousel-yellow-accent" style="left: -20px; bottom: -20px;"></div>
-                <!-- SVG Decorador verde mitad dentro mitad fuera en el borde superior derecho de la imagen -->
-                <svg class="pq-slider-decorator deco-green" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96.43 45.2" style="z-index: 3;">
-                    <g>
-                        <polygon class="pq-deco-path-1" points="81.4 20.46 68.13 6.99 54.85 20.46 41.58 6.99 28.3 20.46 15.02 6.99 3.49 18.69 0 15.25 15.02 0 28.3 13.48 41.58 0 54.85 13.48 68.13 0 81.4 13.48 92.93 1.77 96.43 5.21 81.4 20.46"/>
-                        <polygon class="pq-deco-path-2" points="54.85 45.2 41.58 31.72 28.3 45.2 15.02 31.72 3.49 43.42 0 39.98 15.02 24.73 28.3 38.21 41.58 24.73 54.85 38.21 66.38 26.5 69.88 29.95 54.85 45.2"/>
-                    </g>
-                </svg>
-                <!-- Left Side: Image Panel -->
-                <div class="pq-carousel-images-wrapper">
-                    <div class="pq-carousel-img-slide active" style="background-image: url('assets/arte-cultura-0995.jpg'); background-position: center;"></div>
-                </div>
-
-                <!-- Right Side: Content Panel (White background) -->
-                <div class="pq-carousel-content-panel">
-                    <!-- Floating background circles -->
-                    <div class="bg-circles-wrapper">
-                        <div class="bg-circle bg-circle-ring-yellow circle-1"></div>
-                        <div class="bg-circle bg-circle-solid-green circle-2"></div>
-                        <div class="bg-circle bg-circle-ring-blue circle-3"></div>
-                        <div class="bg-circle bg-circle-solid-yellow circle-4"></div>
-                        <div class="bg-circle bg-circle-ring-green circle-5"></div>
-                        <div class="bg-circle bg-circle-ring-yellow circle-6"></div>
-                    </div>
-
-                    <!-- Slides Content Wrapper -->
-                    <div class="pq-carousel-slides-wrapper" style="margin-top: 15px;">
-                        <div class="pq-carousel-slide active">
-                            <span class="pq-slide-kicker" style="color: var(--green); font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; font-size: 0.82rem; margin-bottom: 12px; display: inline-block;"><strong>ARTE Y CULTURA</strong></span>
-                            <h3 class="pq-slide-title" style="font-size: 2.15rem; font-family: var(--font-lato); font-weight: 800; color: var(--blue); margin-bottom: 22px; line-height: 1.25; text-transform: none;">
-                                <strong>Arte y Cultura</strong>: el arte como parte esencial <span style="font-family: var(--font-playfair); font-style: italic; color: var(--green); font-weight: bold;">del aprendizaje y la sensibilidad</span>
-                            </h3>
-                            <div class="pq-slide-description" style="color: #4a5568; line-height: 1.75; font-size: 0.98rem; font-family: var(--font-lato);">
-                                <p style="margin-bottom: 16px;">
-                                    El arte es parte esencial del aprendizaje. A través de proyectos especiales en <strong>música</strong>, <strong>teatro</strong>, <strong>artes visuales</strong> y <strong>espacios culturales</strong>, los estudiantes desarrollan la creatividad, la expresión y su sensibilidad, <strong>habilidades</strong> fundamentales en los mejores colegios privados de Bogotá con enfoque integral.
-                                </p>
-                                <p style="margin-bottom: 25px; border-left: 3px solid var(--yellow); padding-left: 16px; font-style: italic; color: #4a5568; font-weight: 500; line-height: 1.7;">
-                                    En el <strong>Gimnasio El Hontanar</strong> vemos a cada estudiante como un <strong>creador en potencia</strong>.
-                                </p>
-                                <div style="margin-top: 25px;">
-                                    <a href="agenda-visita.html" class="btn btn-yellow btn-nav" style="display: inline-flex; align-items: center; gap: 8px;">
-                                        Agendar visita <span class="arrow">&gt;</span>
-                                    </a>
-                                </div>
+                <!-- Card 2: Arte y Cultura -->
+                <div class="formacion-interactive-card" data-modal="modal-arte" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Abrir información sobre Arte y Cultura">
+                    <div class="formacion-card-media" style="background-image: url('assets/arte-cultura-0995.jpg');">
+                        <div class="formacion-card-overlay">
+                            <h3 class="formacion-card-title">Arte y Cultura</h3>
+                            <p class="formacion-card-sub">Creatividad, expresión y sensibilidad en proyectos artísticos</p>
+                            <div class="formacion-card-trigger-btn">
+                                <span>Conoce más</span>
+                                <span class="trigger-plus">+</span>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
-        </div>
 
-        <!-- PESTAÑA 4: DEPORTE -->
-        <div class="model-tab-pane" id="pane-deporte" style="display: none;">
-            <section class="pq-split-carousel-section hontanar-scroll-reveal" style="margin-top: 25px; margin-bottom: 70px;">
-                <!-- Rectangulito amarillo decorativo detrás de la foto -->
-                <div class="pq-carousel-yellow-accent" style="left: -20px; bottom: -20px;"></div>
-                <!-- SVG Decorador verde mitad dentro mitad fuera en el borde superior derecho de la imagen -->
-                <svg class="pq-slider-decorator deco-green" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96.43 45.2" style="z-index: 3;">
-                    <g>
-                        <polygon class="pq-deco-path-1" points="81.4 20.46 68.13 6.99 54.85 20.46 41.58 6.99 28.3 20.46 15.02 6.99 3.49 18.69 0 15.25 15.02 0 28.3 13.48 41.58 0 54.85 13.48 68.13 0 81.4 13.48 92.93 1.77 96.43 5.21 81.4 20.46"/>
-                        <polygon class="pq-deco-path-2" points="54.85 45.2 41.58 31.72 28.3 45.2 15.02 31.72 3.49 43.42 0 39.98 15.02 24.73 28.3 38.21 41.58 24.73 54.85 38.21 66.38 26.5 69.88 29.95 54.85 45.2"/>
-                    </g>
-                </svg>
-                <!-- Left Side: Image Panel -->
-                <div class="pq-carousel-images-wrapper">
-                    <div class="pq-carousel-img-slide active" style="background-image: url('assets/espacio-deporte-1.jpg'); background-position: center;"></div>
-                </div>
-
-                <!-- Right Side: Content Panel (White background) -->
-                <div class="pq-carousel-content-panel">
-                    <!-- Floating background circles -->
-                    <div class="bg-circles-wrapper">
-                        <div class="bg-circle bg-circle-ring-yellow circle-1"></div>
-                        <div class="bg-circle bg-circle-solid-green circle-2"></div>
-                        <div class="bg-circle bg-circle-ring-blue circle-3"></div>
-                        <div class="bg-circle bg-circle-solid-yellow circle-4"></div>
-                        <div class="bg-circle bg-circle-ring-green circle-5"></div>
-                        <div class="bg-circle bg-circle-ring-yellow circle-6"></div>
-                    </div>
-
-                    <!-- Slides Content Wrapper -->
-                    <div class="pq-carousel-slides-wrapper" style="margin-top: 15px;">
-                        <div class="pq-carousel-slide active">
-                            <span class="pq-slide-kicker" style="color: var(--green); font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; font-size: 0.82rem; margin-bottom: 12px; display: inline-block;"><strong>DEPORTES</strong></span>
-                            <h3 class="pq-slide-title" style="font-size: 2.15rem; font-family: var(--font-lato); font-weight: 800; color: var(--blue); margin-bottom: 22px; line-height: 1.25; text-transform: none;">
-                                <strong>Deportes</strong>: formación de carácter, <span style="font-family: var(--font-playfair); font-style: italic; color: var(--green); font-weight: bold;">disciplina y confianza personal</span>
-                            </h3>
-                            <div class="pq-slide-description" style="color: #4a5568; line-height: 1.75; font-size: 0.98rem; font-family: var(--font-lato);">
-                                <p style="margin-bottom: 16px;">
-                                    El deporte <strong>forma carácter</strong>. En El Hontanar pensamos en <strong>fortalecer la disciplina</strong>, <strong>el liderazgo</strong> y <strong>el trabajo en equipo</strong>, promoviendo hábitos saludables y confianza personal en un <strong>entorno respetuoso</strong> e inclusivo.
-                                </p>
-                                <p style="margin-bottom: 25px; border-left: 3px solid var(--yellow); padding-left: 16px; font-style: italic; color: #4a5568; font-weight: 500; line-height: 1.7;">
-                                    Más que competir, buscamos que cada estudiante fortalezca su confianza y descubra el valor del <strong>esfuerzo compartido</strong>.
-                                </p>
-                                <div style="margin-top: 25px;">
-                                    <a href="agenda-visita.html" class="btn btn-yellow btn-nav" style="display: inline-flex; align-items: center; gap: 8px;">
-                                        Agendar visita <span class="arrow">&gt;</span>
-                                    </a>
-                                </div>
+                <!-- Card 3: Deportes -->
+                <div class="formacion-interactive-card" data-modal="modal-deportes" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Abrir información sobre Deportes">
+                    <div class="formacion-card-media" style="background-image: url('assets/espacio-deporte-1.jpg');">
+                        <div class="formacion-card-overlay">
+                            <h3 class="formacion-card-title">Deportes</h3>
+                            <p class="formacion-card-sub">Formación de carácter, disciplina, liderazgo y trabajo en equipo</p>
+                            <div class="formacion-card-trigger-btn">
+                                <span>Conoce más</span>
+                                <span class="trigger-plus">+</span>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
+
+
+        <!-- ==========================================================================
+             POP-UP MODALS (SUBSECCIONES DEL MODELO DE ENSEÑANZA)
+             ========================================================================== -->
+        <!-- 1. Modal Academia -->
+        <div class="hontanar-modal-backdrop" id="modal-academia" role="dialog" aria-modal="true" aria-labelledby="modal-academia-title">
+            <div class="hontanar-modal-card">
+                <button class="hontanar-modal-close-btn" aria-label="Cerrar modal">&times;</button>
+                <div class="hontanar-modal-hero" style="background-image: url('assets/dsc_0113_copy.jpg');">
+                    <div class="hontanar-modal-hero-overlay">
+                        <h3 class="hontanar-modal-title" id="modal-academia-title">Academia</h3>
+                    </div>
+                </div>
+                <div class="hontanar-modal-body">
+                    <h4 style="font-family: var(--font-lato); font-size: 1.15rem; font-weight: 800; color: var(--blue); margin: 0 0 14px 0;">
+                        Academia en El Hontanar
+                    </h4>
+                    <p class="hontanar-modal-lead">
+                        En El Hontanar la formación académica es interdisciplinaria y bilingüe, orientada al pensamiento crítico y a la comprensión. Aprender con sentido es comprender para la vida. Nuestros estudiantes aprenden a conectar el conocimiento con la vida real, fortaleciendo competencias importantes para su futuro académico y personal, convirtiéndose en protagonistas de su proceso educativo.
+                    </p>
+                    <div class="hontanar-modal-footer">
+                        <a href="agenda-visita.html" class="btn btn-yellow btn-nav" style="padding: 10px 24px; font-size: 0.92rem; font-weight: 800; text-transform: none;">
+                            Agendar visita <span class="arrow">&gt;</span>
+                        </a>
+                        <button class="modal-secondary-close-btn" type="button">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. Modal Arte y Cultura -->
+        <div class="hontanar-modal-backdrop" id="modal-arte" role="dialog" aria-modal="true" aria-labelledby="modal-arte-title">
+            <div class="hontanar-modal-card">
+                <button class="hontanar-modal-close-btn" aria-label="Cerrar modal">&times;</button>
+                <div class="hontanar-modal-hero" style="background-image: url('assets/arte-cultura-0995.jpg');">
+                    <div class="hontanar-modal-hero-overlay">
+                        <h3 class="hontanar-modal-title" id="modal-arte-title">Arte y Cultura</h3>
+                    </div>
+                </div>
+                <div class="hontanar-modal-body">
+                    <h4 style="font-family: var(--font-lato); font-size: 1.15rem; font-weight: 800; color: var(--blue); margin: 0 0 14px 0;">
+                        Arte y Cultura en El Hontanar
+                    </h4>
+                    <p class="hontanar-modal-lead">
+                        El arte es parte esencial del aprendizaje. A través de proyectos especiales en música, teatro, artes visuales y espacios culturales, los estudiantes desarrollan la creatividad, la expresión y su sensibilidad, habilidades fundamentales en los mejores colegios privados de Bogotá con enfoque integral. En el Gimnasio El Hontanar vemos a cada estudiante como un creador en potencia.
+                    </p>
+                    <div class="hontanar-modal-footer">
+                        <a href="agenda-visita.html" class="btn btn-yellow btn-nav" style="padding: 10px 24px; font-size: 0.92rem; font-weight: 800; text-transform: none;">
+                            Agendar visita <span class="arrow">&gt;</span>
+                        </a>
+                        <button class="modal-secondary-close-btn" type="button">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. Modal Deportes -->
+        <div class="hontanar-modal-backdrop" id="modal-deportes" role="dialog" aria-modal="true" aria-labelledby="modal-deportes-title">
+            <div class="hontanar-modal-card">
+                <button class="hontanar-modal-close-btn" aria-label="Cerrar modal">&times;</button>
+                <div class="hontanar-modal-hero" style="background-image: url('assets/espacio-deporte-1.jpg');">
+                    <div class="hontanar-modal-hero-overlay">
+                        <h3 class="hontanar-modal-title" id="modal-deportes-title">Deportes</h3>
+                    </div>
+                </div>
+                <div class="hontanar-modal-body">
+                    <h4 style="font-family: var(--font-lato); font-size: 1.15rem; font-weight: 800; color: var(--blue); margin: 0 0 14px 0;">
+                        Deportes en El Hontanar
+                    </h4>
+                    <p class="hontanar-modal-lead">
+                        El deporte forma carácter. En El Hontanar pensamos en fortalecer la disciplina, el liderazgo y el trabajo en equipo, promoviendo hábitos saludables y confianza personal en un entorno respetuoso e inclusivo. Más que competir, buscamos que cada estudiante fortalezca su confianza y descubra el valor del esfuerzo compartido.
+                    </p>
+                    <div class="hontanar-modal-footer">
+                        <a href="agenda-visita.html" class="btn btn-yellow btn-nav" style="padding: 10px 24px; font-size: 0.92rem; font-weight: 800; text-transform: none;">
+                            Agendar visita <span class="arrow">&gt;</span>
+                        </a>
+                        <button class="modal-secondary-close-btn" type="button">Cerrar</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
     <!-- Social Icons Floating -->
     <div class="social-floating">
-        <a href="#" class="social-icon green"><img src="assets/Whatsapp.png" alt="WA"></a>
-        <a href="#" class="social-icon yellow"><img src="assets/Componente 26 - 1.png" alt="MSG"></a>
+        <a href="https://wa.me/573164701496" target="_blank" class="social-icon green"><img src="assets/Whatsapp.png" alt="WhatsApp"></a>
+        <a href="agenda-visita.html" class="social-icon yellow"><img src="assets/Componente 26 - 1.png" alt="Agendar"></a>
     </div>
 
         <!-- CTA Box Overlapping the Footer Image -->
@@ -813,7 +685,7 @@
         </div>
     </footer>
 
-    <!-- Interactive Level tabs and Accordion script -->
+    <!-- Interactive Pop-up Modals, Parallax and Scroll Reveal Script -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // Scroll Parallax for Background Circles
@@ -826,91 +698,143 @@
                 });
             });
 
-            // Tab switching logic for Modelo de Enseñanza, Academia, Arte y Cultura, Deporte
-            const tabButtons = document.querySelectorAll('.level-tab-btn');
-            const tabPanes = document.querySelectorAll('.model-tab-pane');
-            
-            function activateTab(tabId) {
-                tabButtons.forEach(btn => {
-                    if (btn.getAttribute('data-tab') === tabId) {
-                        btn.classList.add('active');
-                    } else {
-                        btn.classList.remove('active');
+            // Scroll Reveal Observer
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        revealObserver.unobserve(entry.target);
                     }
                 });
-                
-                tabPanes.forEach(pane => {
-                    if (pane.id === tabId) {
-                        pane.style.display = 'block';
-                    } else {
-                        pane.style.display = 'none';
-                    }
-                });
-            }
+            }, { threshold: 0.12 });
 
-            tabButtons.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    const targetTab = btn.getAttribute('data-tab');
-                    if (targetTab) {
-                        activateTab(targetTab);
-                    }
-                });
+            document.querySelectorAll('.hontanar-scroll-reveal').forEach(el => {
+                revealObserver.observe(el);
             });
 
-            // Smooth scroll for sub-level pills inside Modelo de Enseñanza
-            const stageLinks = document.querySelectorAll('.stage-pill-link');
-            stageLinks.forEach(link => {
-                link.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    const targetId = link.getAttribute('href');
-                    const targetEl = document.querySelector(targetId);
-                    if (targetEl) {
-                        targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    }
-                });
-            });
-
-            // Hash detection if visiting e.g. #level-jardin or #level-primaria
-            const currentHash = window.location.hash;
-            if (currentHash && currentHash.startsWith('#level-')) {
-                activateTab('pane-modelo');
-                setTimeout(() => {
-                    const targetEl = document.querySelector(currentHash);
-                    if (targetEl) {
-                        targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    }
-                }, 150);
-            }
-
-            // Accordion Toggling
-            const accordionHeaders = document.querySelectorAll('.accordion-header');
-            accordionHeaders.forEach(header => {
-                header.addEventListener('click', () => {
-                    const item = header.parentElement;
-                    const content = item.querySelector('.accordion-content');
-                    const arrow = header.querySelector('.accordion-arrow');
-                    
-                    // Close other items
-                    document.querySelectorAll('.accordion-item').forEach(otherItem => {
-                        if (otherItem !== item && otherItem.classList.contains('active')) {
-                            otherItem.classList.remove('active');
-                            otherItem.querySelector('.accordion-content').style.display = 'none';
-                            otherItem.querySelector('.accordion-arrow').textContent = '+';
+            // Accordion Toggle Listener for split section
+            const accordionItems = document.querySelectorAll('.pq-split-accordion-item');
+            accordionItems.forEach(item => {
+                const header = item.querySelector('.pq-split-accordion-header');
+                if (header) {
+                    header.addEventListener('click', () => {
+                        const isActive = item.classList.contains('active');
+                        accordionItems.forEach(i => {
+                            i.classList.remove('active');
+                            const toggle = i.querySelector('.icon-toggle');
+                            if (toggle) toggle.textContent = '+';
+                        });
+                        if (!isActive) {
+                            item.classList.add('active');
+                            const toggle = item.querySelector('.icon-toggle');
+                            if (toggle) toggle.textContent = '−';
                         }
                     });
-                    
-                    // Toggle current item
-                    const isActive = item.classList.contains('active');
-                    if (isActive) {
-                        item.classList.remove('active');
-                        content.style.display = 'none';
-                        arrow.textContent = '+';
-                    } else {
-                        item.classList.add('active');
-                        content.style.display = 'block';
-                        arrow.textContent = '−';
+                }
+            });
+
+            // Pop-up Modal Handlers
+            const modalTriggers = document.querySelectorAll('.formacion-interactive-card');
+            const modalBackdrops = document.querySelectorAll('.hontanar-modal-backdrop');
+
+            function openModal(modalId) {
+                const targetModal = document.getElementById(modalId);
+                if (targetModal) {
+                    targetModal.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                }
+            }
+
+            function closeModal(modal) {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+                if (window.location.hash && window.location.hash.includes('modal-')) {
+                    history.replaceState(null, '', window.location.pathname + window.location.search);
+                }
+            }
+
+            modalTriggers.forEach(card => {
+                card.addEventListener('click', () => {
+                    const modalId = card.getAttribute('data-modal');
+                    if (modalId) {
+                        openModal(modalId);
+                        history.pushState(null, '', '#' + modalId);
                     }
                 });
+                card.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        const modalId = card.getAttribute('data-modal');
+                        if (modalId) {
+                            openModal(modalId);
+                            history.pushState(null, '', '#' + modalId);
+                        }
+                    }
+                });
+            });
+
+            // Submenu modal triggers from sidebar
+            const subModalLinks = document.querySelectorAll('.sub-submenu [data-open-modal]');
+            subModalLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const modalId = link.getAttribute('data-open-modal');
+                    const sidebar = document.getElementById('sidebar-menu');
+                    const overlay = document.getElementById('sidebar-overlay');
+                    if (sidebar) sidebar.classList.remove('open');
+                    if (overlay) overlay.classList.remove('open');
+                    if (modalId) {
+                        openModal(modalId);
+                        const section = document.getElementById('formacion-integral-seccion');
+                        if (section) section.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        history.pushState(null, '', '#' + modalId);
+                    }
+                });
+            });
+
+            // Auto-open modal on page load if hash or parameter is present
+            function checkUrlForModal() {
+                const hash = window.location.hash.replace('#', '');
+                const urlParams = new URLSearchParams(window.location.search);
+                const queryModal = urlParams.get('modal') || urlParams.get('open');
+                
+                let targetId = null;
+                if (hash && (hash === 'modal-academia' || hash === 'modal-arte' || hash === 'modal-deportes')) {
+                    targetId = hash;
+                } else if (hash && (hash === 'academia' || hash === 'arte' || hash === 'deporte' || hash === 'deportes')) {
+                    targetId = 'modal-' + (hash === 'deporte' ? 'deportes' : hash);
+                } else if (queryModal) {
+                    targetId = queryModal.startsWith('modal-') ? queryModal : 'modal-' + (queryModal === 'deporte' ? 'deportes' : queryModal);
+                }
+
+                if (targetId && document.getElementById(targetId)) {
+                    setTimeout(() => {
+                        openModal(targetId);
+                        const section = document.getElementById('formacion-integral-seccion');
+                        if (section) section.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }, 350);
+                }
+            }
+
+            checkUrlForModal();
+            window.addEventListener('hashchange', checkUrlForModal);
+
+            modalBackdrops.forEach(modal => {
+                const closeBtn = modal.querySelector('.hontanar-modal-close-btn');
+                const secCloseBtn = modal.querySelector('.modal-secondary-close-btn');
+                if (closeBtn) closeBtn.addEventListener('click', () => closeModal(modal));
+                if (secCloseBtn) secCloseBtn.addEventListener('click', () => closeModal(modal));
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) closeModal(modal);
+                });
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    modalBackdrops.forEach(modal => {
+                        if (modal.classList.contains('active')) closeModal(modal);
+                    });
+                }
             });
         });
     </script>

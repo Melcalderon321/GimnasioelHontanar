@@ -4,9 +4,9 @@
 
 /* Main Container spacing */
 .modelo-page {
-    padding-top: 150px;
-    padding-bottom: 120px;
-    background-color: var(--blue);
+    padding-top: 40px;
+    padding-bottom: 60px;
+    background-color: #ffffff;
 }
 
 /* ==========================================================================
@@ -456,4 +456,355 @@ body:not(.home-page) .level-pane.active {
         padding: 40px 25px;
     }
 }
+
+/* ==========================================================================
+   CARDS INTERACTIVAS: FORMACIÓN INTEGRAL (TRIGGERS DE POP-UP)
+   ========================================================================== */
+.formacion-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-top: 35px;
+}
+
+.formacion-interactive-card {
+    border-radius: 0;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 14px 35px rgba(37, 68, 120, 0.12);
+    border: 1.5px solid rgba(37, 68, 120, 0.12);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+    background: #ffffff;
+    outline: none;
+    position: relative;
+}
+
+.formacion-interactive-card:hover,
+.formacion-interactive-card:focus-visible {
+    transform: translateY(-8px);
+    box-shadow: 0 22px 50px rgba(37, 68, 120, 0.22);
+    border-color: var(--green);
+}
+
+.formacion-card-media {
+    height: 440px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 24px;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.formacion-interactive-card:hover .formacion-card-media {
+    transform: scale(1.03);
+}
+
+.formacion-card-pill {
+    align-self: flex-start;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    color: var(--blue);
+    font-family: var(--font-lato);
+    font-size: 0.82rem;
+    font-weight: 800;
+    padding: 7px 18px;
+    border-radius: 20px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    z-index: 3;
+    position: relative;
+}
+
+.formacion-card-overlay {
+    background: linear-gradient(to top, rgba(14, 30, 60, 0.96) 0%, rgba(14, 30, 60, 0.72) 55%, transparent 100%);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 30px 24px 26px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    z-index: 2;
+}
+
+.formacion-card-title {
+    font-family: var(--font-lato);
+    font-size: 1.85rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.formacion-card-sub {
+    font-family: var(--font-lato);
+    font-size: 0.92rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.88);
+    margin: 0;
+}
+
+.formacion-card-trigger-btn {
+    margin-top: 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--yellow);
+    font-family: var(--font-lato);
+    font-size: 0.92rem;
+    font-weight: 800;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: gap 0.2s ease, color 0.2s ease;
+}
+
+.formacion-card-trigger-btn .trigger-plus {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: var(--yellow);
+    color: var(--blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.15rem;
+    font-weight: 900;
+    transition: transform 0.3s ease;
+}
+
+.formacion-interactive-card:hover .formacion-card-trigger-btn .trigger-plus {
+    transform: rotate(90deg);
+}
+
+@media (max-width: 960px) {
+    .formacion-cards-grid {
+        grid-template-columns: 1fr;
+        max-width: 460px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .formacion-card-media {
+        height: 380px;
+    }
+}
+
+/* ==========================================================================
+   POP-UP MODALS STYLES (FORMACIÓN INTEGRAL)
+   ========================================================================== */
+.hontanar-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 22, 45, 0.78);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.hontanar-modal-backdrop.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.hontanar-modal-card {
+    background: #ffffff;
+    border-radius: 20px;
+    max-width: 660px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+    border: 1.5px solid rgba(37, 68, 120, 0.15);
+    transform: translateY(25px) scale(0.97);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hontanar-modal-backdrop.active .hontanar-modal-card {
+    transform: translateY(0) scale(1);
+}
+
+.hontanar-modal-close-btn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.95);
+    border: none;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.18);
+    transition: all 0.2s ease;
+    line-height: 1;
+}
+
+.hontanar-modal-close-btn:hover {
+    background: var(--yellow);
+    color: var(--blue);
+    transform: rotate(90deg) scale(1.08);
+}
+
+.hontanar-modal-hero {
+    position: relative;
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+}
+
+.hontanar-modal-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(37, 68, 120, 0.9) 0%, rgba(37, 68, 120, 0.25) 60%, transparent 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 24px 30px;
+}
+
+.hontanar-modal-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--yellow);
+    color: var(--blue);
+    font-family: var(--font-lato);
+    font-size: 0.78rem;
+    font-weight: 800;
+    padding: 5px 14px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: fit-content;
+    margin-bottom: 8px;
+}
+
+.hontanar-modal-title {
+    font-family: var(--font-lato);
+    font-size: 1.9rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.hontanar-modal-body {
+    padding: 32px 30px;
+    background: #ffffff;
+}
+
+.hontanar-modal-lead {
+    font-family: var(--font-lato);
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #4a5568;
+    margin: 0 0 24px 0;
+}
+
+.hontanar-modal-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    border-top: 1px solid #e2e8f0;
+    margin-top: 10px;
+}
+
+.modal-secondary-close-btn {
+    background: #f1f5f9;
+    border: none;
+    color: #64748b;
+    font-family: var(--font-lato);
+    font-size: 0.9rem;
+    font-weight: 700;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.modal-secondary-close-btn:hover {
+    background: #e2e8f0;
+    color: var(--blue);
+}
+
+/* ==========================================================================
+   SPLIT SECTION (Estilo Bienestar Emocional)
+   ========================================================================== */
+.pq-split-photo-bg {
+    border-radius: 0 !important;
+}
+
+.pq-split-accordion-item.active .pq-split-accordion-body {
+    max-height: 500px !important;
+}
+
+/* Split Section Alternating (Reverse Layout: Photo Left, Text Right) */
+.pq-split-reverse {
+    grid-template-columns: 0.95fr 1.05fr !important;
+}
+
+.pq-split-reverse .pq-split-left {
+    padding: 60px calc((100vw - 1140px) / 2 + 20px) 60px 50px !important;
+}
+
+@media (max-width: 1200px) {
+    .pq-split-reverse .pq-split-left {
+        padding-right: 50px !important;
+        padding-left: 40px !important;
+    }
+}
+
+@media (max-width: 900px) {
+    .pq-split-reverse {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    .pq-split-reverse .pq-split-text-col {
+        order: 1 !important;
+        padding: 40px 25px !important;
+    }
+    .pq-split-reverse .pq-split-photo-col {
+        order: 2 !important;
+        min-height: 420px !important;
+    }
+}
+
+/* Panel con Escudo (Filo Testimonial Split) */
+@media (max-width: 900px) {
+    .filo-testimonial-split {
+        grid-template-columns: 1fr !important;
+    }
+    .testimonial-split-shield {
+        display: none !important;
+    }
+    .testimonial-split-left {
+        padding: 40px 25px !important;
+    }
+    .testimonial-split-photo {
+        min-height: 320px !important;
+    }
+}
+
+
+
+
 

@@ -1521,6 +1521,46 @@ body.home-page .cta-overlap {
     color: var(--yellow);
 }
 
+/* Sub-submenu de nivel 2 (ej. Modelo de Enseñanza) */
+.sub-submenu {
+    list-style: none;
+    padding-left: 14px;
+    margin-top: 8px;
+    margin-bottom: 12px;
+    border-left: 2px solid rgba(254, 209, 65, 0.45);
+}
+
+.sub-submenu li {
+    margin-bottom: 8px;
+}
+
+.sub-submenu li:last-child {
+    margin-bottom: 0;
+}
+
+.sub-submenu a {
+    font-size: 0.88rem;
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    transition: all 0.2s ease;
+}
+
+.sub-submenu a::before {
+    content: '•';
+    color: var(--yellow);
+    font-size: 1rem;
+    line-height: 1;
+}
+
+.sub-submenu a:hover {
+    color: var(--yellow);
+    text-decoration: underline;
+    transform: translateX(3px);
+}
+
 /* Sidebar Footer Buttons */
 .sidebar-footer {
     margin-top: 40px;

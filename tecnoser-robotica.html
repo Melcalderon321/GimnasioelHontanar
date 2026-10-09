@@ -281,6 +281,7 @@
                     <li><a href="multilinguismo.html">Multilingüismo</a></li>
                     <li><a href="programa-ib.html">Programa IB</a></li>
                     <li><a href="intercambio-hontanar.html">Intercambio Hontanar</a></li>
+                    <li><a href="equipo-internacional.html">Equipo Internacional</a></li>
                     <li><a href="consejeria-internacional.html">Consejería Internacional</a></li>
                 </ul>
             </li>
@@ -291,7 +292,14 @@
                 </div>
                 <ul class="submenu">
                     <li><a href="un-dia-escolar.html">Un Día Escolar</a></li>
-                    <li><a href="modelo-de-ensenanza.html">Modelo de Enseñanza</a></li>
+                    <li class="has-sub-submenu">
+                        <a href="modelo-de-ensenanza.html">Modelo de Enseñanza</a>
+                        <ul class="sub-submenu">
+                            <li><a href="modelo-de-ensenanza.html#modal-academia">Academia</a></li>
+                            <li><a href="modelo-de-ensenanza.html#modal-arte">Arte y Cultura</a></li>
+                            <li><a href="modelo-de-ensenanza.html#modal-deportes">Deporte</a></li>
+                        </ul>
+                    </li>
                     <li><a href="bienestar-emocional.html">Bienestar Emocional</a></li>
                     <li><a href="programa-casas.html">Programa Casas</a></li>
                     <li><a href="character-counts.html">Character Counts</a></li>
@@ -679,7 +687,7 @@
         </div>
 
         <!-- Interactive Split Panel (Estilo Kent Denver, No-Slider) -->
-        <section class="pq-split-carousel-section hontanar-scroll-reveal" style="margin-top: 60px; margin-bottom: 80px;">
+        <section class="pq-split-carousel-section hontanar-scroll-reveal" style="margin-top: 60px; margin-bottom: 80px; height: auto; min-height: 600px;">
             <!-- Rectangulito amarillo decorativo detrás de la foto -->
             <div class="pq-carousel-yellow-accent" style="left: -20px; bottom: -20px;"></div>
             <!-- SVG Decorador verde mitad dentro mitad fuera en el borde superior derecho de la imagen -->
@@ -695,7 +703,7 @@
             </div>
 
             <!-- Right Side: Content Panel (White background) -->
-            <div class="pq-carousel-content-panel">
+            <div class="pq-carousel-content-panel" style="padding-top: 35px; padding-bottom: 35px; justify-content: center;">
                 <!-- Floating background circles for Carousel Section -->
                 <div class="bg-circles-wrapper">
                     <div class="bg-circle bg-circle-ring-yellow circle-1"></div>
@@ -707,21 +715,20 @@
                 </div>
 
                 <!-- Slides Content Wrapper -->
-                <div class="pq-carousel-slides-wrapper" style="margin-top: 20px;">
+                <div class="pq-carousel-slides-wrapper" style="margin-top: 0;">
                     <!-- Content Block: Maker Space -->
                     <div class="pq-carousel-slide active">
-                        <span class="pq-slide-kicker" style="color: var(--green); font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">EQUIPADO Y SEGURO</span>
-                        <h3 class="pq-slide-title" style="font-size: 2.2rem; font-family: var(--font-lato); font-weight: 800; color: var(--blue); margin-bottom: 25px; line-height: 1.2; text-transform: none;">Prototipos funcionales en nuestro Maker Space</h3>
-                        <div class="pq-slide-description" style="color: #4a5568; line-height: 1.75; font-size: 0.98rem; font-family: var(--font-lato);">
-                            <p style="margin-bottom: 18px;">En Robotic Labs, cada prototipo demuestra que la tecnología puede estar al servicio del cuidado del entorno, la optimización de recursos y el bienestar colectivo. Aquí, aprender robótica no es solo programar: es imaginar, construir y comprobar que las ideas, cuando se trabajan con amor y propósito, pueden transformar la realidad.</p>
-                            <p style="margin-bottom: 25px; border-left: 3px solid var(--yellow); padding-left: 15px; font-style: italic; color: #4a5568; font-weight: 500;">Ven a conocer nuestro Maker Space: un laboratorio seguro y completamente dotado donde los estudiantes desarrollan competencias tecnológicas construyendo, experimentando y programando. Agenda tu visita y vive la experiencia de aprender creando en el Hontanar.</p>
+                        <h3 class="pq-slide-title" style="font-size: 2.1rem; font-family: var(--font-lato); font-weight: 800; color: var(--blue); margin-top: 0; margin-bottom: 15px; line-height: 1.2; text-transform: none;">Prototipos funcionales en nuestro Maker Space</h3>
+                        <div class="pq-slide-description" style="color: #4a5568; line-height: 1.6; font-size: 0.95rem; font-family: var(--font-lato);">
+                            <p style="margin-bottom: 12px;">En Robotic Labs, cada prototipo demuestra que la tecnología puede estar al servicio del cuidado del entorno, la optimización de recursos y el bienestar colectivo. Aquí, aprender robótica no es solo programar: es imaginar, construir y comprobar que las ideas, cuando se trabajan con amor y propósito, pueden transformar la realidad.</p>
+                            <p style="margin-bottom: 14px; border-left: 3px solid var(--yellow); padding: 4px 0 4px 14px; font-style: italic; color: #4a5568; font-weight: 500;">Ven a conocer nuestro Maker Space: un laboratorio seguro y completamente dotado donde los estudiantes desarrollan competencias tecnológicas construyendo, experimentando y programando. Agenda tu visita y vive la experiencia de aprender creando en el Hontanar.</p>
+                            <p style="margin-bottom: 20px; color: #4a5568;"><strong>Conoce nuestro proyecto educativo, visita el Gimnasio El Hontanar y descubre por qué la Integración Tecnológica es parte de nuestra experiencia como Great Place to Study.</strong></p>
                         </div>
-                        <a href="agenda-visita.html" class="pq-slide-cta">
-                            Agendar visita
-                            <span class="pq-cta-circle-arrow">
-                                <svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="3" d="M9 5l7 7-7 7"/></svg>
-                            </span>
-                        </a>
+                        <div>
+                            <a href="agenda-visita.html" class="btn btn-yellow btn-nav" style="display: inline-flex; align-items: center; gap: 8px;">
+                                Agendar visita <span class="arrow">&gt;</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
