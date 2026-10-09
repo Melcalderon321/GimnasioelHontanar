@@ -302,31 +302,33 @@
     <!-- Script de navegación -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const hamburgerCircle = document.querySelector('.hamburger-circle');
-            const hamburger = document.querySelector('.hamburger');
+            const hamburger = document.querySelector('.hamburger-circle');
+            const menuText = document.querySelector('.menu-text');
             const sidebar = document.getElementById('sidebar-menu');
             const overlay = document.getElementById('sidebar-overlay');
             const closeBtn = document.getElementById('close-sidebar');
 
             function toggleMenu() {
-                hamburger.classList.toggle('active');
-                sidebar.classList.toggle('active');
-                overlay.classList.toggle('active');
-                document.body.style.overflow = sidebar.classList.contains('active') ? 'hidden' : '';
+                sidebar.classList.toggle('open');
+                overlay.classList.toggle('open');
             }
 
-            if (hamburgerCircle) hamburgerCircle.addEventListener('click', toggleMenu);
-            if (closeBtn) closeBtn.addEventListener('click', toggleMenu);
-            if (overlay) overlay.addEventListener('click', toggleMenu);
+            if(hamburger) hamburger.addEventListener('click', toggleMenu);
+            if(menuText) menuText.addEventListener('click', toggleMenu);
+            if(closeBtn) closeBtn.addEventListener('click', toggleMenu);
+            if(overlay) overlay.addEventListener('click', toggleMenu);
 
-            const menuItems = document.querySelectorAll('.sidebar-nav .has-submenu .menu-item');
-            menuItems.forEach(item => {
+            // Collapsible submenus
+            const submenus = document.querySelectorAll('.has-submenu .menu-item');
+            submenus.forEach(item => {
                 item.addEventListener('click', (e) => {
                     e.preventDefault();
                     const parent = item.parentElement;
                     const isExpanded = parent.classList.contains('expanded');
                     
-                    document.querySelectorAll('.sidebar-nav .has-submenu').forEach(otherParent => {
+                    // Close all other submenus first
+                    submenus.forEach(otherItem => {
+                        const otherParent = otherItem.parentElement;
                         if (otherParent !== parent) {
                             otherParent.classList.remove('expanded');
                             const otherSubmenu = otherParent.querySelector('.submenu');
@@ -336,6 +338,7 @@
                         }
                     });
                     
+                    // Toggle current submenu
                     if (isExpanded) {
                         parent.classList.remove('expanded');
                         const submenuList = parent.querySelector('.submenu');
