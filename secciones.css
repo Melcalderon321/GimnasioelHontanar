@@ -1,0 +1,271 @@
+/* ==========================================================================
+   SECCIONES ACADÉMICAS - ESTILOS PREMIUM (PREESCOLAR, PRIMARIA, BACHILLERATO)
+   Gimnasio El Hontanar
+   ========================================================================== */
+
+/* Page container */
+.seccion-page-container {
+    padding-top: 40px;
+    padding-bottom: 0;
+    background-color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Scroll reveal animations */
+.hontanar-scroll-reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hontanar-scroll-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stage Navigation Pills Bar (Used in Bachillerato) */
+.stage-nav-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin: 20px auto 45px auto;
+    max-width: 950px;
+    padding: 0 20px;
+    position: relative;
+    z-index: 5;
+}
+
+.stage-nav-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 26px;
+    background: #ffffff;
+    color: var(--blue);
+    font-family: var(--font-lato);
+    font-weight: 800;
+    font-size: 0.95rem;
+    border-radius: 50px;
+    border: 2px solid var(--blue);
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(37, 68, 120, 0.08);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.stage-nav-pill:hover,
+.stage-nav-pill.active {
+    background: var(--blue);
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(37, 68, 120, 0.2);
+}
+
+.stage-nav-pill .pill-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--yellow);
+    display: inline-block;
+}
+
+/* Section Header Separator */
+.seccion-header-block {
+    text-align: center;
+    max-width: 920px;
+    margin: 60px auto 35px auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.seccion-kicker-badge {
+    font-family: var(--font-lato);
+    color: var(--green);
+    font-size: 0.85rem;
+    font-weight: 900;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    display: inline-block;
+}
+
+.seccion-block-title {
+    font-family: var(--font-lato);
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--blue);
+    line-height: 1.25;
+    margin: 0 0 14px 0;
+}
+
+.seccion-block-subtitle {
+    font-family: var(--font-playfair);
+    font-style: italic;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--blue);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Feature Bento Grid (Pilares de cada sección) */
+.seccion-pillars-section {
+    max-width: 1140px;
+    margin: 40px auto 80px auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.seccion-pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+    margin-top: 30px;
+}
+
+.seccion-pillar-card {
+    background: #ffffff;
+    border: 1.5px solid rgba(37, 68, 120, 0.12);
+    border-radius: 18px;
+    padding: 32px 28px;
+    box-shadow: 0 12px 30px rgba(37, 68, 120, 0.05);
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.seccion-pillar-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 45px rgba(37, 68, 120, 0.12);
+    border-color: rgba(37, 68, 120, 0.25);
+}
+
+.seccion-pillar-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--blue);
+    transition: background 0.3s ease;
+}
+
+.seccion-pillar-card.accent-yellow::before {
+    background: #f59e0b;
+}
+
+.seccion-pillar-card.accent-green::before {
+    background: var(--green);
+}
+
+.seccion-pillar-card.accent-cyan::before {
+    background: #06b6d4;
+}
+
+.seccion-pillar-card.accent-pink::before {
+    background: #ec4899;
+}
+
+.pillar-icon-box {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    background: rgba(37, 68, 120, 0.06);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.pillar-icon-box.yellow-bg {
+    background: #fef3c7;
+    color: #d97706;
+}
+
+.pillar-icon-box.green-bg {
+    background: #dcfce7;
+    color: var(--green);
+}
+
+.pillar-icon-box.cyan-bg {
+    background: #cffafe;
+    color: #0891b2;
+}
+
+.pillar-icon-box.pink-bg {
+    background: #fce7f3;
+    color: #db2777;
+}
+
+.seccion-pillar-card h3 {
+    font-family: var(--font-lato);
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--blue);
+    margin: 0 0 10px 0;
+    line-height: 1.35;
+}
+
+.seccion-pillar-card p {
+    font-family: var(--font-lato);
+    font-size: 0.94rem;
+    color: #4a5568;
+    line-height: 1.65;
+    margin: 0;
+}
+
+/* Intermediate Highlights Quote Box */
+.seccion-quote-box {
+    background: linear-gradient(135deg, rgba(37, 68, 120, 0.04) 0%, rgba(27, 166, 85, 0.05) 100%);
+    border-left: 5px solid var(--green);
+    border-radius: 0 16px 16px 0;
+    padding: 24px 30px;
+    margin: 30px 0;
+}
+
+.seccion-quote-box p {
+    font-family: var(--font-playfair);
+    font-style: italic;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--blue);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    .filo-wavy-card {
+        flex-direction: column !important;
+    }
+
+    .wavy-card-img-col {
+        min-height: 320px !important;
+        flex: none !important;
+    }
+
+    .wavy-edge-svg {
+        display: none !important;
+    }
+
+    .wavy-card-text-col {
+        padding: 35px 25px !important;
+    }
+
+    .seccion-block-title {
+        font-size: 1.8rem;
+    }
+
+    .seccion-pillars-grid {
+        grid-template-columns: 1fr;
+    }
+}
