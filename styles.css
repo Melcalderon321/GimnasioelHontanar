@@ -1072,6 +1072,54 @@ body.home-page .hamburger-circle {
     filter: brightness(0) invert(1);
 }
 
+/* Carrusel de logos (Conexiones que inspiran) */
+.logos-carousel {
+    margin: 50px auto 90px;
+    max-width: 1100px;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 12%, #000 88%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, #000 12%, #000 88%, transparent 100%);
+}
+
+.logos-carousel-track {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    animation: logos-scroll 30s linear infinite;
+}
+
+.logos-carousel:hover .logos-carousel-track {
+    animation-play-state: paused;
+}
+
+.logo-slide {
+    flex: 0 0 auto;
+    width: 160px;
+    height: 80px;
+    margin: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-slide img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
+@keyframes logos-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .logos-carousel-track { animation: none; }
+}
+
 body:not(.home-page) .cta-overlap,
 body:not(.home-page) .tour-cta {
     position: relative !important;
@@ -2843,11 +2891,11 @@ body:not(.home-page) .footer-image-section::before {
 
     /* Conexiones + CTA */
     body.home-page .conexiones { padding: 40px 20px 0; }
-    body.home-page .logos-row { margin: 40px 0 50px; gap: 30px; }
-    body.home-page .logos-row img {
-        max-width: 100%;
-        height: auto !important;
-        max-height: 90px;
+    body.home-page .logos-carousel { margin: 40px -20px 50px; }
+    body.home-page .logo-slide {
+        width: 120px;
+        height: 60px;
+        margin: 0 20px;
     }
     body.home-page .cta-overlap {
         position: relative !important;

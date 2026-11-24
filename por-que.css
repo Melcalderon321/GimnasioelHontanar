@@ -2176,3 +2176,103 @@
         min-height: 280px;
     }
 }
+
+/* ==========================================
+   Carrusel dividido: el alto se adapta al texto (evita que se corte)
+   Todas las diapositivas ocupan la misma celda para que el bloque
+   tome el alto de la más larga y no salte al cambiar de diapositiva.
+   ========================================== */
+.pq-split-carousel-section {
+    height: auto;
+}
+
+.pq-carousel-slides-wrapper {
+    display: grid;
+    min-height: 0;
+}
+
+.pq-carousel-slides-wrapper > .pq-carousel-slide {
+    grid-area: 1 / 1;
+    position: relative;
+    inset: auto;
+    width: 100%;
+}
+
+@media (max-width: 990px) {
+    .pq-split-carousel-section {
+        min-height: 0;
+        margin: 60px 0;
+    }
+}
+
+/* ==========================================
+   ¿Por qué El Hontanar...? — carrusel en tablet y móvil
+   ========================================== */
+.pq-timeline-dots {
+    display: none;
+}
+
+@media (max-width: 990px) {
+    .pq-timeline-container {
+        justify-content: flex-start;
+        gap: 16px;
+        margin: 40px -20px 20px;
+        padding: 10px 20px 15px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-padding: 0 20px;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+    }
+    .pq-timeline-container::-webkit-scrollbar {
+        display: none;
+    }
+    .pq-timeline-arrow {
+        display: none;
+    }
+    .pq-timeline-step {
+        flex: 0 0 calc(50% - 8px);
+        scroll-snap-align: center;
+        text-align: center;
+    }
+    .pq-timeline-step p {
+        font-size: 0.95rem;
+    }
+    .pq-timeline-dots {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 50px;
+    }
+    .pq-timeline-dot {
+        width: 10px;
+        height: 10px;
+        padding: 0;
+        border-radius: 50%;
+        border: 1.5px solid var(--yellow);
+        background-color: transparent;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    .pq-timeline-dot.active {
+        background-color: var(--yellow);
+        transform: scale(1.15);
+    }
+}
+
+@media (max-width: 600px) {
+    .pq-timeline-step {
+        flex-basis: 78%;
+    }
+}
+
+/* Decoraciones que se salían del ancho de la pantalla en móvil (solo esta página) */
+@media (max-width: 768px) {
+    body.por-que-page .pq-card-floating-shape { right: -10px; width: 120px; }
+    body.por-que-page .pq-split-svg-decorator { right: -10px; width: 130px; }
+    body.por-que-page .pq-split-yellow-accent,
+    body.por-que-page .pq-carousel-yellow-accent { left: 0; }
+    body.por-que-page .social-floating { right: 20px; bottom: 20px; }
+    body.por-que-page .social-icon img { width: 52px; }
+    body.por-que-page .colibri-cta { right: -15px; top: -45px; width: 90px; }
+}
