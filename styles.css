@@ -16,11 +16,16 @@
     box-sizing: border-box;
 }
 
+html {
+    overflow-x: clip;
+}
+
 body {
     font-family: var(--font-lato);
     color: var(--white);
     background-color: var(--blue);
     overflow-x: hidden;
+    overflow-x: clip;
 }
 
 a {
@@ -1470,11 +1475,28 @@ body.home-page .cta-overlap {
     right: 0;
 }
 
+/* El menú siempre alineado a la izquierda, sin importar el text-align de la página */
+.sidebar-menu,
+.sidebar-menu .sidebar-nav,
+.sidebar-menu .submenu,
+.sidebar-menu .sub-submenu,
+.sidebar-menu li {
+    text-align: left;
+}
+
 .sidebar-header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 50px;
+    /* El botón de cerrar queda siempre visible al hacer scroll en el menú */
+    position: sticky;
+    top: -40px;
+    z-index: 5;
+    margin-top: -40px;
+    padding-top: 40px;
+    padding-bottom: 15px;
+    background-color: var(--blue);
 }
 
 .sidebar-logo {
@@ -2943,4 +2965,12 @@ body:not(.home-page) .footer-image-section::before {
 @keyframes scroll-home-mobile {
     0% { transform: translateX(0); }
     100% { transform: translateX(calc(-50vw * 4)); }
+}
+
+/* Migas de pan: margen lateral en móvil para que no queden pegadas al borde */
+@media (max-width: 768px) {
+    body:not(.home-page) .breadcrumbs {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }

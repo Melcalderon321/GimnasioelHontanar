@@ -2268,11 +2268,11 @@
 
 /* Decoraciones que se salían del ancho de la pantalla en móvil (solo esta página) */
 @media (max-width: 768px) {
-    body.por-que-page .pq-card-floating-shape { right: -10px; width: 120px; }
-    body.por-que-page .pq-split-svg-decorator { right: -10px; width: 130px; }
-    body.por-que-page .pq-split-yellow-accent,
-    body.por-que-page .pq-carousel-yellow-accent { left: 0; }
-    body.por-que-page .social-floating { right: 20px; bottom: 20px; }
-    body.por-que-page .social-icon img { width: 52px; }
-    body.por-que-page .colibri-cta { right: -15px; top: -45px; width: 90px; }
+    body.pq-estudiar-body .pq-card-floating-shape { right: -10px; width: 120px; }
+    body.pq-estudiar-body .pq-split-svg-decorator { right: -10px; width: 130px; }
+    body.pq-estudiar-body .pq-split-yellow-accent,
+    body.pq-estudiar-body .pq-carousel-yellow-accent { left: 0; }
+    body.pq-estudiar-body .social-floating { right: 20px; bottom: 20px; }
+    body.pq-estudiar-body .social-icon img { width: 52px; }
+    body.pq-estudiar-body .colibri-cta { right: -15px; top: -45px; width: 90px; }
 }
